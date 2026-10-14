@@ -17,12 +17,13 @@ El diario se actualiza durante el trabajo, sin necesitar una petición nueva par
 - Implementados: grabación local, transcripción posterior, alineamiento textual, seguimiento simulado por prefijos y comparación con ventanas solapadas.
 - Probados por el usuario: grabación/transcripción, alineamiento, seguimiento por prefijos y comparación de ventanas de 6 y 10 s.
 - Probado también por el usuario: experimento ampliado de ventanas, con tres rondas sobre el mismo audio.
-- Pendientes: nuevas grabaciones con pausas/relecturas y referencia temporal de posición.
-- Publicación autorizada: comparación ampliada, resultados de dos rondas del desarrollador y tres rondas del usuario, y diario hasta E012. El commit de esta entrega se consulta en el historial de Git.
-- Próximo trabajo local: nuevas grabaciones con pausas/relecturas y referencia temporal; todavía no ejecutado.
+- Probada por el usuario: grabación con pausa de unos 8 s y revisión humana del ruido de pájaros al final.
+- Pendientes: lecturas lenta y con relectura, y referencia temporal de posición.
+- Publicación autorizada: prueba de pausa, WAV, resultados y diario hasta E015. El commit de esta entrega se consulta en el historial de Git.
+- Próximo trabajo local: lectura lenta del mismo cuento, comparando ventanas de 4 y 8 s; todavía no ejecutada.
 - Candidato principal provisional: ventana de 4 s tras la reproducción del usuario; conservar 8 s como alternativa con más contexto y 6 s como referencia. Actualización cada 2 s. El modo por defecto sigue siendo prefijo completo.
 - No implementados: subrayado visual, captura con seguimiento en directo y diagnóstico fiable de errores lectores.
-- Datos actuales: dos lecturas de un mismo adulto, con un cuento de 56 palabras. No permiten conclusiones sobre lectura infantil ni generalización a otros textos.
+- Datos actuales: tres lecturas de un mismo adulto (normal, desviaciones y pausa), con un cuento de 56 palabras. No permiten conclusiones sobre lectura infantil ni generalización a otros textos.
 
 ## E001 · Del informe al primer prototipo
 
@@ -240,9 +241,58 @@ El diario se actualiza durante el trabajo, sin necesitar una petición nueva par
 
 **Estado.** Protocolo propuesto; audios nuevos y resultados todavía inexistentes. La futura implementación y sus resultados se mantendrán locales hasta revisión y nueva autorización para publicar.
 
+## E013 · Nueva grabación con pausa de unos ocho segundos
+
+**Fecha:** 14/10/2026. Ejecutado por el usuario; salida aportada y JSON locales revisados. Sin autorización nueva para publicar.
+
+**Configuración.** Nuevo WAV adulto lectura_20261014_111454_984161, duración 60 s. El usuario informa una pausa de 8 s tras flor. Ventanas de 4 y 8 s, bloque de 2 s, tres rondas por configuración. Se mantienen ASR, VAD y seguidor.
+
+**Evidencia.** [Informe](../resultados/comparaciones/20261014_111548_094194/resumen.md) y seis historiales JSON de esa carpeta. Los instantes exactos de inicio/fin de pausa no tienen todavía anotación humana.
+
+| Ventana | Total medio inferencia (s) | Rango entre rondas (s) | Inferencias >2 s | Media de cola máxima simulada (s) |
+|---|---:|---|---:|---:|
+| 4 s | 32,01 | 31,37–32,54 | 12/90 | 0,15 |
+| 8 s | 39,60 | 38,72–40,44 | 30/90 | 1,34 |
+
+**Posición observada.** En las seis ejecuciones se mantiene flor (27) en los cortes de 12, 14, 16, 18, 20 y 22 s. En el corte de 24 s se reconoce Ana llamó a su hermano para que pudiera verla y avanza a verla (36). Al corte de 32 s llega a cuaderno (56). No hay retrocesos. Cada ventana reproduce sus posiciones entre rondas; salvo el corte de 10 s (4 s llega a despacio, 8 s queda en voló), las secuencias de ambas ventanas coinciden.
+
+**Interpretación.** No se pierde la posición cuando desaparece la voz del contexto acústico, y ambas ventanas vuelven a localizar la continuación. Esto no permite medir retraso exacto al retomar: los cortes de audio disponible no son tiempos de respuesta visual y falta referencia humana de reanudación.
+
+**Incidencia nueva.** Aparece Suscríbete, ajeno al cuento: con ventana 4 en el corte de 20 s y en 36/38 s, y con ventana 8 en 40/42 s. Se repite en todas las rondas (15 actualizaciones en total). No mueve la posición en estos casos. Sin escuchar esos tramos y confirmar posibles voces de fondo, no se afirma su origen: si no está en el audio, es una alucinación del ASR. El VAD activo no basta en esta ejecución para evitar la salida ajena al cuento. No corregir ni borrar las hipótesis originales.
+
+**Decisión provisional.** Mantener 4 s como candidato principal por menor coste y cola en esta prueba. Se retira cualquier interpretación de que garantice inferencias inferiores a 2 s: aquí 12 de 90 las superan. El largo silencio final influye en estadísticas globales; no confundir media o mediana global con rendimiento durante voz continua.
+
+**Pendientes.** Confirmar por escucha la salida Suscríbete, anotar aproximadamente los límites de pausa/reanudación y continuar con lecturas lenta y con relectura. No se modifica código ni se publica en esta revisión.
+
+## E014 · Revisión humana del ruido de pájaros al final
+
+**Fecha:** 14/10/2026. Confirmación del lector tras escuchar la grabación.
+
+**Observación del usuario.** En el tramo final donde el reconocedor devuelve Suscríbete solo se oye el trino de los pájaros. No hay una persona pronunciando esa palabra en ese tramo, según su escucha.
+
+**Actualización de E013.** La salida Suscríbete del final se clasifica como texto inventado por el ASR sobre audio ambiente con pájaros, respaldado por la revisión humana del usuario. Es una confirmación de ausencia de habla en ese fragmento, no un experimento que aísle causalmente el trino ni una escucha independiente del desarrollador.
+
+**Alcance.** La confirmación se refiere al final: cortes 36/38 s en ventana 4 y 40/42 s en ventana 8. La aparición en el corte de 20 s durante la pausa requiere revisión específica. Estos cortes identifican las ventanas procesadas; no son tiempos humanos del canto ni una localización acústica precisa de la palabra inventada.
+
+**Consecuencia.** El procesamiento con VAD activo ha permitido una salida textual sobre un tramo sin habla humana confirmada por el usuario. El seguidor no movió la posición en esos registros, lo que no garantiza rechazo de otras salidas falsas. Conservar audio e hipótesis originales para futuras pruebas de habla frente a ambiente.
+
+**Pendiente.** Incorporar el final revisado como caso de ruido ambiental al evaluar cambios de detección de voz/ASR. No atribuir qué componente falló ni ajustar umbrales antes de inspeccionar su evidencia. No se modifica código ni se publica en esta entrada.
+
+## E015 · Publicación de la pausa y preparación de lectura lenta
+
+**Fecha:** 14/10/2026.
+
+**Autorización.** El usuario pide guardar en GitHub la prueba de pausa y sus resultados y avanzar a la siguiente. Se prepara la publicación del WAV lectura_20261014_111454_984161, seis ejecuciones, resúmenes, protocolo actualizado y confirmación humana sobre los pájaros.
+
+**Siguiente prueba.** Nueva lectura adulta del mismo cuento a ritmo más lento, sin pausa prolongada, relecturas ni errores deliberados. Orientación: unos 40–50 s para el cuento, sin separar artificialmente cada palabra. Grabar 60 s; si hace falta más, 90 s. Comparar ventanas 4 y 8 s, bloque 2 s, tres rondas, ASR y seguidor sin cambios.
+
+**Pregunta.** ¿La ventana de 4 s aporta suficientes palabras para mantener el seguimiento cuando disminuye el ritmo, o la de 8 s ofrece mejor continuidad? Revisar posiciones e intervalos sin avance durante voz; distinguirlos del silencio final y de falta de evidencia tras una palabra aislada.
+
+**Estado.** Lectura lenta propuesta; aún no hay un nuevo WAV ni resultados. Se registrarán incidencias y desviaciones reales que comunique el usuario. Los nuevos archivos quedarán locales hasta su revisión y autorización para publicar.
+
 ## Formato de futuras entradas (plantilla)
 
-### E013 · Título del siguiente cambio o experimento
+### E016 · Título del siguiente cambio o experimento
 
 - Fecha y estado: propuesta / implementado / probado localmente / revisado por el usuario / publicado.
 - Objetivo o pregunta.
