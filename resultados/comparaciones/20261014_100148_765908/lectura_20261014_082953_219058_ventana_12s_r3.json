@@ -1,0 +1,2425 @@
+{
+  "schema_version": 1,
+  "audio_file": "lectura_20261014_082953_219058.wav",
+  "story_file": "lectura_01.txt",
+  "story_words": [
+    "Una",
+    "mañana",
+    "Ana",
+    "salió",
+    "al",
+    "jardín",
+    "de",
+    "su",
+    "casa",
+    "Cerca",
+    "de",
+    "un",
+    "árbol",
+    "encontró",
+    "una",
+    "mariposa",
+    "azul",
+    "La",
+    "mariposa",
+    "voló",
+    "despacio",
+    "y",
+    "se",
+    "posó",
+    "sobre",
+    "una",
+    "flor",
+    "Ana",
+    "llamó",
+    "a",
+    "su",
+    "hermano",
+    "para",
+    "que",
+    "pudiera",
+    "verla",
+    "Los",
+    "dos",
+    "se",
+    "quedaron",
+    "en",
+    "silencio",
+    "mirando",
+    "sus",
+    "alas",
+    "Después",
+    "volvieron",
+    "a",
+    "casa",
+    "y",
+    "dibujaron",
+    "la",
+    "mariposa",
+    "en",
+    "un",
+    "cuaderno"
+  ],
+  "audio_seconds": 30.0,
+  "block_seconds": 2.0,
+  "audio_window_seconds": 12.0,
+  "overlap_seconds": 10.0,
+  "model": "Systran/faster-whisper-small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "versions": {
+    "faster-whisper": "1.2.1",
+    "av": "16.0.1",
+    "ctranslate2": "4.8.3"
+  },
+  "model_load_seconds": 0.9112354000099003,
+  "position_convention": "última palabra del cuento apoyada por coincidencia textual en la hipótesis",
+  "recognition": "ventana acústica limitada",
+  "asr_parameters": {
+    "language": "es",
+    "beam_size": 5,
+    "vad_filter": true,
+    "condition_on_previous_text": false
+  },
+  "notice": "Simulación posterior, no streaming nativo ni medida de latencia visual. Tiempos ASR estimados. Posiciones provisionales, sin valoración lectora.",
+  "updates": [
+    {
+      "audio_available_seconds": 2.0,
+      "processing_seconds": 1.5984620000235736,
+      "audio_window_start_seconds": 0.0,
+      "audio_window_end_seconds": 2.0,
+      "audio_reprocessed_seconds": 2.0,
+      "sequential_ready_seconds_simulated": 3.5984620000235736,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [],
+      "previous_position": 0,
+      "position": null,
+      "word": null,
+      "movement": 0,
+      "mode": "hipotesis_sin_cambios",
+      "evidence": {}
+    },
+    {
+      "audio_available_seconds": 4.0,
+      "processing_seconds": 1.551924099912867,
+      "audio_window_start_seconds": 0.0,
+      "audio_window_end_seconds": 4.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 5.551924099912867,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [
+        {
+          "word": "Una",
+          "start": 1.3,
+          "end": 1.92,
+          "probability": 0.6366441088418165
+        },
+        {
+          "word": "mañana",
+          "start": 1.92,
+          "end": 2.34,
+          "probability": 0.9768512845039368
+        },
+        {
+          "word": "Ana",
+          "start": 2.82,
+          "end": 3.08,
+          "probability": 0.7677345275878906
+        },
+        {
+          "word": "Ana",
+          "start": 3.66,
+          "end": 3.98,
+          "probability": 0.839825451374054
+        }
+      ],
+      "previous_position": 0,
+      "position": 3,
+      "word": "Ana",
+      "movement": 3,
+      "mode": "local",
+      "evidence": {
+        "position": 3,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          1,
+          24
+        ],
+        "exact_matches": 3,
+        "hypothesis_words": 4,
+        "edit_cost": 1
+      }
+    },
+    {
+      "audio_available_seconds": 6.0,
+      "processing_seconds": 2.1135858001653105,
+      "audio_window_start_seconds": 0.0,
+      "audio_window_end_seconds": 6.0,
+      "audio_reprocessed_seconds": 6.0,
+      "sequential_ready_seconds_simulated": 8.11358580016531,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [
+        {
+          "word": "Una",
+          "start": 1.3,
+          "end": 1.9,
+          "probability": 0.5583673119544983
+        },
+        {
+          "word": "mañana",
+          "start": 1.9,
+          "end": 2.36,
+          "probability": 0.9729413390159607
+        },
+        {
+          "word": "Ana",
+          "start": 2.36,
+          "end": 3.1,
+          "probability": 0.4561839699745178
+        },
+        {
+          "word": "Ana",
+          "start": 3.66,
+          "end": 4.06,
+          "probability": 0.857292652130127
+        },
+        {
+          "word": "salió",
+          "start": 4.06,
+          "end": 4.74,
+          "probability": 0.9267617762088776
+        },
+        {
+          "word": "al",
+          "start": 4.74,
+          "end": 4.84,
+          "probability": 0.9744914770126343
+        },
+        {
+          "word": "jardín",
+          "start": 4.84,
+          "end": 5.14,
+          "probability": 0.9936652779579163
+        },
+        {
+          "word": "de",
+          "start": 5.14,
+          "end": 5.22,
+          "probability": 0.997481644153595
+        },
+        {
+          "word": "su",
+          "start": 5.22,
+          "end": 5.36,
+          "probability": 0.9915327429771423
+        },
+        {
+          "word": "casa",
+          "start": 5.36,
+          "end": 5.64,
+          "probability": 0.9988086223602295
+        }
+      ],
+      "previous_position": 3,
+      "position": 9,
+      "word": "casa",
+      "movement": 6,
+      "mode": "local",
+      "evidence": {
+        "position": 9,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          1,
+          27
+        ],
+        "exact_matches": 7,
+        "hypothesis_words": 8,
+        "edit_cost": 1
+      }
+    },
+    {
+      "audio_available_seconds": 8.0,
+      "processing_seconds": 1.7788605000823736,
+      "audio_window_start_seconds": 0.0,
+      "audio_window_end_seconds": 8.0,
+      "audio_reprocessed_seconds": 8.0,
+      "sequential_ready_seconds_simulated": 9.892446300247684,
+      "backlog_seconds_simulated": 0.1135858001653105,
+      "hypothesis": [
+        {
+          "word": "Una",
+          "start": 1.3,
+          "end": 1.9,
+          "probability": 0.5797567963600159
+        },
+        {
+          "word": "mañana",
+          "start": 1.9,
+          "end": 2.36,
+          "probability": 0.962192952632904
+        },
+        {
+          "word": "Ana",
+          "start": 2.36,
+          "end": 3.1,
+          "probability": 0.419973760843277
+        },
+        {
+          "word": "Ana",
+          "start": 3.6,
+          "end": 4.08,
+          "probability": 0.7268887758255005
+        },
+        {
+          "word": "salió",
+          "start": 4.08,
+          "end": 4.74,
+          "probability": 0.9050034880638123
+        },
+        {
+          "word": "al",
+          "start": 4.74,
+          "end": 4.84,
+          "probability": 0.9678518176078796
+        },
+        {
+          "word": "jardín",
+          "start": 4.84,
+          "end": 5.14,
+          "probability": 0.9951317310333252
+        },
+        {
+          "word": "de",
+          "start": 5.14,
+          "end": 5.22,
+          "probability": 0.9975897073745728
+        },
+        {
+          "word": "su",
+          "start": 5.22,
+          "end": 5.36,
+          "probability": 0.9926441311836243
+        },
+        {
+          "word": "casa",
+          "start": 5.36,
+          "end": 5.7,
+          "probability": 0.9985404014587402
+        },
+        {
+          "word": "cerca",
+          "start": 6.02,
+          "end": 6.3,
+          "probability": 0.9901818633079529
+        },
+        {
+          "word": "de",
+          "start": 6.3,
+          "end": 6.52,
+          "probability": 0.994576096534729
+        },
+        {
+          "word": "un",
+          "start": 6.52,
+          "end": 6.62,
+          "probability": 0.9937443137168884
+        },
+        {
+          "word": "árbol",
+          "start": 6.62,
+          "end": 6.92,
+          "probability": 0.9958037734031677
+        },
+        {
+          "word": "encontró",
+          "start": 6.92,
+          "end": 7.42,
+          "probability": 0.8157097399234772
+        },
+        {
+          "word": "una",
+          "start": 7.42,
+          "end": 7.56,
+          "probability": 0.9230367541313171
+        },
+        {
+          "word": "mariposa",
+          "start": 7.56,
+          "end": 7.98,
+          "probability": 0.9903242190678915
+        }
+      ],
+      "previous_position": 9,
+      "position": 16,
+      "word": "mariposa",
+      "movement": 7,
+      "mode": "local",
+      "evidence": {
+        "position": 16,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          1,
+          33
+        ],
+        "exact_matches": 8,
+        "hypothesis_words": 8,
+        "edit_cost": 0
+      }
+    },
+    {
+      "audio_available_seconds": 10.0,
+      "processing_seconds": 1.8189061000011861,
+      "audio_window_start_seconds": 0.0,
+      "audio_window_end_seconds": 10.0,
+      "audio_reprocessed_seconds": 10.0,
+      "sequential_ready_seconds_simulated": 11.818906100001186,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [
+        {
+          "word": "Una",
+          "start": 1.3,
+          "end": 1.9,
+          "probability": 0.4187793731689453
+        },
+        {
+          "word": "mañana",
+          "start": 1.9,
+          "end": 2.4,
+          "probability": 0.9664952754974365
+        },
+        {
+          "word": "Ana",
+          "start": 2.4,
+          "end": 3.1,
+          "probability": 0.43872812390327454
+        },
+        {
+          "word": "Ana",
+          "start": 3.66,
+          "end": 4.08,
+          "probability": 0.6248833537101746
+        },
+        {
+          "word": "salió",
+          "start": 4.08,
+          "end": 4.74,
+          "probability": 0.8674352765083313
+        },
+        {
+          "word": "al",
+          "start": 4.74,
+          "end": 4.84,
+          "probability": 0.9624267816543579
+        },
+        {
+          "word": "jardín",
+          "start": 4.84,
+          "end": 5.14,
+          "probability": 0.9931627213954926
+        },
+        {
+          "word": "de",
+          "start": 5.14,
+          "end": 5.22,
+          "probability": 0.9976714253425598
+        },
+        {
+          "word": "su",
+          "start": 5.22,
+          "end": 5.38,
+          "probability": 0.9916604161262512
+        },
+        {
+          "word": "casa",
+          "start": 5.38,
+          "end": 5.7,
+          "probability": 0.9985270500183105
+        },
+        {
+          "word": "cerca",
+          "start": 5.7,
+          "end": 6.28,
+          "probability": 0.22398655116558075
+        },
+        {
+          "word": "de",
+          "start": 6.28,
+          "end": 6.52,
+          "probability": 0.9952107071876526
+        },
+        {
+          "word": "un",
+          "start": 6.52,
+          "end": 6.62,
+          "probability": 0.9968704581260681
+        },
+        {
+          "word": "árbol",
+          "start": 6.62,
+          "end": 6.92,
+          "probability": 0.9966551959514618
+        },
+        {
+          "word": "encontró",
+          "start": 6.92,
+          "end": 7.42,
+          "probability": 0.830886721611023
+        },
+        {
+          "word": "una",
+          "start": 7.42,
+          "end": 7.56,
+          "probability": 0.9652156233787537
+        },
+        {
+          "word": "mariposa",
+          "start": 7.56,
+          "end": 7.98,
+          "probability": 0.9943702419598898
+        },
+        {
+          "word": "azul",
+          "start": 7.98,
+          "end": 8.3,
+          "probability": 0.953010082244873
+        },
+        {
+          "word": "La",
+          "start": 8.88,
+          "end": 9.16,
+          "probability": 0.9320685863494873
+        },
+        {
+          "word": "mariposa",
+          "start": 9.16,
+          "end": 9.66,
+          "probability": 0.997774581114451
+        },
+        {
+          "word": "voló",
+          "start": 9.66,
+          "end": 9.98,
+          "probability": 0.9947253167629242
+        }
+      ],
+      "previous_position": 16,
+      "position": 20,
+      "word": "voló",
+      "movement": 4,
+      "mode": "local",
+      "evidence": {
+        "position": 20,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          5,
+          40
+        ],
+        "exact_matches": 8,
+        "hypothesis_words": 8,
+        "edit_cost": 0
+      }
+    },
+    {
+      "audio_available_seconds": 12.0,
+      "processing_seconds": 2.013848799979314,
+      "audio_window_start_seconds": 0.0,
+      "audio_window_end_seconds": 12.0,
+      "audio_reprocessed_seconds": 12.0,
+      "sequential_ready_seconds_simulated": 14.013848799979314,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [
+        {
+          "word": "Una",
+          "start": 1.3,
+          "end": 1.9,
+          "probability": 0.6866710782051086
+        },
+        {
+          "word": "mañana",
+          "start": 1.9,
+          "end": 2.42,
+          "probability": 0.9691905975341797
+        },
+        {
+          "word": "Ana",
+          "start": 2.86,
+          "end": 3.12,
+          "probability": 0.6898546814918518
+        },
+        {
+          "word": "salió",
+          "start": 3.12,
+          "end": 4.74,
+          "probability": 0.6116335466504097
+        },
+        {
+          "word": "al",
+          "start": 4.74,
+          "end": 4.84,
+          "probability": 0.9609031677246094
+        },
+        {
+          "word": "jardín",
+          "start": 4.84,
+          "end": 5.14,
+          "probability": 0.9945411384105682
+        },
+        {
+          "word": "de",
+          "start": 5.14,
+          "end": 5.22,
+          "probability": 0.9971394538879395
+        },
+        {
+          "word": "su",
+          "start": 5.22,
+          "end": 5.38,
+          "probability": 0.9899131059646606
+        },
+        {
+          "word": "casa",
+          "start": 5.38,
+          "end": 5.7,
+          "probability": 0.9986748695373535
+        },
+        {
+          "word": "cerca",
+          "start": 6.02,
+          "end": 6.3,
+          "probability": 0.9946122169494629
+        },
+        {
+          "word": "de",
+          "start": 6.3,
+          "end": 6.52,
+          "probability": 0.9957820177078247
+        },
+        {
+          "word": "un",
+          "start": 6.52,
+          "end": 6.62,
+          "probability": 0.9929119944572449
+        },
+        {
+          "word": "árbol",
+          "start": 6.62,
+          "end": 6.92,
+          "probability": 0.9973440766334534
+        },
+        {
+          "word": "encontró",
+          "start": 6.92,
+          "end": 7.42,
+          "probability": 0.8240354955196381
+        },
+        {
+          "word": "una",
+          "start": 7.42,
+          "end": 7.56,
+          "probability": 0.9780111312866211
+        },
+        {
+          "word": "mariposa",
+          "start": 7.56,
+          "end": 8.0,
+          "probability": 0.9940952857335409
+        },
+        {
+          "word": "azul",
+          "start": 8.0,
+          "end": 8.28,
+          "probability": 0.9775036573410034
+        },
+        {
+          "word": "La",
+          "start": 9.04,
+          "end": 9.16,
+          "probability": 0.9879059791564941
+        },
+        {
+          "word": "mariposa",
+          "start": 9.16,
+          "end": 9.66,
+          "probability": 0.999129076798757
+        },
+        {
+          "word": "voló",
+          "start": 9.66,
+          "end": 10.08,
+          "probability": 0.9947110116481781
+        },
+        {
+          "word": "y",
+          "start": 10.08,
+          "end": 10.26,
+          "probability": 0.9611514806747437
+        },
+        {
+          "word": "se",
+          "start": 10.26,
+          "end": 10.38,
+          "probability": 0.9976118803024292
+        },
+        {
+          "word": "posó",
+          "start": 10.38,
+          "end": 10.72,
+          "probability": 0.9750695824623108
+        },
+        {
+          "word": "sobre",
+          "start": 10.72,
+          "end": 10.92,
+          "probability": 0.9952877759933472
+        },
+        {
+          "word": "una",
+          "start": 10.92,
+          "end": 11.1,
+          "probability": 0.9946900606155396
+        },
+        {
+          "word": "flor",
+          "start": 11.1,
+          "end": 11.34,
+          "probability": 0.9980218410491943
+        }
+      ],
+      "previous_position": 20,
+      "position": 27,
+      "word": "flor",
+      "movement": 7,
+      "mode": "local",
+      "evidence": {
+        "position": 27,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          9,
+          44
+        ],
+        "exact_matches": 8,
+        "hypothesis_words": 8,
+        "edit_cost": 1
+      }
+    },
+    {
+      "audio_available_seconds": 14.0,
+      "processing_seconds": 2.168828399851918,
+      "audio_window_start_seconds": 2.0,
+      "audio_window_end_seconds": 14.0,
+      "audio_reprocessed_seconds": 12.0,
+      "sequential_ready_seconds_simulated": 16.182677199831232,
+      "backlog_seconds_simulated": 0.013848799979314208,
+      "hypothesis": [
+        {
+          "word": "mañana",
+          "start": 2.0,
+          "end": 2.48,
+          "probability": 0.432782918214798
+        },
+        {
+          "word": "Ana",
+          "start": 2.48,
+          "end": 3.06,
+          "probability": 0.49347540736198425
+        },
+        {
+          "word": "Ana",
+          "start": 3.56,
+          "end": 4.04,
+          "probability": 0.798063337802887
+        },
+        {
+          "word": "salió",
+          "start": 4.04,
+          "end": 4.74,
+          "probability": 0.9124842882156372
+        },
+        {
+          "word": "al",
+          "start": 4.74,
+          "end": 4.82,
+          "probability": 0.8518314957618713
+        },
+        {
+          "word": "jardín",
+          "start": 4.82,
+          "end": 5.140000000000001,
+          "probability": 0.9949491620063782
+        },
+        {
+          "word": "de",
+          "start": 5.140000000000001,
+          "end": 5.220000000000001,
+          "probability": 0.9985305070877075
+        },
+        {
+          "word": "su",
+          "start": 5.220000000000001,
+          "end": 5.359999999999999,
+          "probability": 0.9923766255378723
+        },
+        {
+          "word": "casa",
+          "start": 5.359999999999999,
+          "end": 5.68,
+          "probability": 0.9980176687240601
+        },
+        {
+          "word": "cerca",
+          "start": 5.68,
+          "end": 6.28,
+          "probability": 0.5773664712905884
+        },
+        {
+          "word": "de",
+          "start": 6.28,
+          "end": 6.52,
+          "probability": 0.9959585070610046
+        },
+        {
+          "word": "un",
+          "start": 6.52,
+          "end": 6.62,
+          "probability": 0.9983322024345398
+        },
+        {
+          "word": "árbol",
+          "start": 6.62,
+          "end": 6.92,
+          "probability": 0.9982492327690125
+        },
+        {
+          "word": "encontró",
+          "start": 6.92,
+          "end": 7.42,
+          "probability": 0.9160415232181549
+        },
+        {
+          "word": "una",
+          "start": 7.42,
+          "end": 7.56,
+          "probability": 0.965107262134552
+        },
+        {
+          "word": "mariposa",
+          "start": 7.56,
+          "end": 7.98,
+          "probability": 0.9948716759681702
+        },
+        {
+          "word": "azul",
+          "start": 7.98,
+          "end": 8.3,
+          "probability": 0.969277024269104
+        },
+        {
+          "word": "la",
+          "start": 8.3,
+          "end": 9.14,
+          "probability": 0.40173181891441345
+        },
+        {
+          "word": "mariposa",
+          "start": 9.14,
+          "end": 9.66,
+          "probability": 0.9984201192855835
+        },
+        {
+          "word": "voló",
+          "start": 9.66,
+          "end": 10.1,
+          "probability": 0.9937483370304108
+        },
+        {
+          "word": "y",
+          "start": 10.1,
+          "end": 10.26,
+          "probability": 0.9962469935417175
+        },
+        {
+          "word": "se",
+          "start": 10.26,
+          "end": 10.38,
+          "probability": 0.9991129040718079
+        },
+        {
+          "word": "posó",
+          "start": 10.38,
+          "end": 10.72,
+          "probability": 0.9631853997707367
+        },
+        {
+          "word": "sobre",
+          "start": 10.72,
+          "end": 10.92,
+          "probability": 0.9991138577461243
+        },
+        {
+          "word": "una",
+          "start": 10.92,
+          "end": 11.1,
+          "probability": 0.9954599738121033
+        },
+        {
+          "word": "flor",
+          "start": 11.1,
+          "end": 11.38,
+          "probability": 0.9970434308052063
+        },
+        {
+          "word": "Ana",
+          "start": 11.38,
+          "end": 12.46,
+          "probability": 0.5139911770820618
+        },
+        {
+          "word": "llamó",
+          "start": 12.46,
+          "end": 12.82,
+          "probability": 0.9523642361164093
+        },
+        {
+          "word": "a",
+          "start": 12.82,
+          "end": 12.86,
+          "probability": 0.9652695059776306
+        },
+        {
+          "word": "su",
+          "start": 12.86,
+          "end": 12.96,
+          "probability": 0.9980319142341614
+        },
+        {
+          "word": "hermano",
+          "start": 12.96,
+          "end": 13.34,
+          "probability": 0.9945371747016907
+        },
+        {
+          "word": "para",
+          "start": 13.34,
+          "end": 13.5,
+          "probability": 0.9958896040916443
+        },
+        {
+          "word": "que",
+          "start": 13.5,
+          "end": 13.66,
+          "probability": 0.9981092214584351
+        },
+        {
+          "word": "pudiera",
+          "start": 13.66,
+          "end": 13.98,
+          "probability": 0.9926687180995941
+        }
+      ],
+      "previous_position": 27,
+      "position": 35,
+      "word": "pudiera",
+      "movement": 8,
+      "mode": "local",
+      "evidence": {
+        "position": 35,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          16,
+          51
+        ],
+        "exact_matches": 8,
+        "hypothesis_words": 8,
+        "edit_cost": 0
+      }
+    },
+    {
+      "audio_available_seconds": 16.0,
+      "processing_seconds": 2.1946227999869734,
+      "audio_window_start_seconds": 4.0,
+      "audio_window_end_seconds": 16.0,
+      "audio_reprocessed_seconds": 12.0,
+      "sequential_ready_seconds_simulated": 18.377299999818206,
+      "backlog_seconds_simulated": 0.18267719983123243,
+      "hypothesis": [
+        {
+          "word": "Ana",
+          "start": 4.0,
+          "end": 4.12,
+          "probability": 0.8036885261535645
+        },
+        {
+          "word": "salió",
+          "start": 4.12,
+          "end": 4.72,
+          "probability": 0.9369195699691772
+        },
+        {
+          "word": "al",
+          "start": 4.72,
+          "end": 4.84,
+          "probability": 0.9137927293777466
+        },
+        {
+          "word": "jardín",
+          "start": 4.84,
+          "end": 5.14,
+          "probability": 0.9967924654483795
+        },
+        {
+          "word": "de",
+          "start": 5.14,
+          "end": 5.22,
+          "probability": 0.9981054067611694
+        },
+        {
+          "word": "su",
+          "start": 5.22,
+          "end": 5.36,
+          "probability": 0.986078679561615
+        },
+        {
+          "word": "casa",
+          "start": 5.36,
+          "end": 5.7,
+          "probability": 0.9981291890144348
+        },
+        {
+          "word": "cerca",
+          "start": 6.04,
+          "end": 6.32,
+          "probability": 0.9962306618690491
+        },
+        {
+          "word": "de",
+          "start": 6.32,
+          "end": 6.52,
+          "probability": 0.9939168095588684
+        },
+        {
+          "word": "un",
+          "start": 6.52,
+          "end": 6.62,
+          "probability": 0.9956870675086975
+        },
+        {
+          "word": "árbol",
+          "start": 6.62,
+          "end": 6.92,
+          "probability": 0.9968788325786591
+        },
+        {
+          "word": "encontró",
+          "start": 6.92,
+          "end": 7.42,
+          "probability": 0.8762715756893158
+        },
+        {
+          "word": "una",
+          "start": 7.42,
+          "end": 7.5600000000000005,
+          "probability": 0.981370747089386
+        },
+        {
+          "word": "mariposa",
+          "start": 7.5600000000000005,
+          "end": 7.98,
+          "probability": 0.9948687553405762
+        },
+        {
+          "word": "azul",
+          "start": 7.98,
+          "end": 8.3,
+          "probability": 0.9676042199134827
+        },
+        {
+          "word": "La",
+          "start": 9.059999999999999,
+          "end": 9.16,
+          "probability": 0.9874609112739563
+        },
+        {
+          "word": "mariposa",
+          "start": 9.16,
+          "end": 9.66,
+          "probability": 0.9991103410720825
+        },
+        {
+          "word": "voló",
+          "start": 9.66,
+          "end": 10.059999999999999,
+          "probability": 0.9947987496852875
+        },
+        {
+          "word": "y",
+          "start": 10.059999999999999,
+          "end": 10.26,
+          "probability": 0.9634150266647339
+        },
+        {
+          "word": "se",
+          "start": 10.26,
+          "end": 10.379999999999999,
+          "probability": 0.9976159334182739
+        },
+        {
+          "word": "posó",
+          "start": 10.379999999999999,
+          "end": 10.719999999999999,
+          "probability": 0.9616598188877106
+        },
+        {
+          "word": "sobre",
+          "start": 10.719999999999999,
+          "end": 10.92,
+          "probability": 0.9960073828697205
+        },
+        {
+          "word": "una",
+          "start": 10.92,
+          "end": 11.1,
+          "probability": 0.9912046790122986
+        },
+        {
+          "word": "flor",
+          "start": 11.1,
+          "end": 11.379999999999999,
+          "probability": 0.9981560111045837
+        },
+        {
+          "word": "Ana",
+          "start": 12.12,
+          "end": 12.46,
+          "probability": 0.9872646331787109
+        },
+        {
+          "word": "llamó",
+          "start": 12.46,
+          "end": 12.8,
+          "probability": 0.9747632145881653
+        },
+        {
+          "word": "a",
+          "start": 12.8,
+          "end": 12.86,
+          "probability": 0.9910392165184021
+        },
+        {
+          "word": "su",
+          "start": 12.86,
+          "end": 12.96,
+          "probability": 0.9984252452850342
+        },
+        {
+          "word": "hermano",
+          "start": 12.96,
+          "end": 13.32,
+          "probability": 0.9918527901172638
+        },
+        {
+          "word": "para",
+          "start": 13.32,
+          "end": 13.5,
+          "probability": 0.9821361899375916
+        },
+        {
+          "word": "que",
+          "start": 13.5,
+          "end": 13.64,
+          "probability": 0.9979690909385681
+        },
+        {
+          "word": "pudiera",
+          "start": 13.64,
+          "end": 13.96,
+          "probability": 0.9983755946159363
+        },
+        {
+          "word": "verla",
+          "start": 13.96,
+          "end": 14.4,
+          "probability": 0.9880261719226837
+        },
+        {
+          "word": "Los",
+          "start": 15.14,
+          "end": 15.3,
+          "probability": 0.9613090753555298
+        },
+        {
+          "word": "dos",
+          "start": 15.3,
+          "end": 15.6,
+          "probability": 0.984774112701416
+        },
+        {
+          "word": "secu",
+          "start": 15.6,
+          "end": 15.98,
+          "probability": 0.3188479195038478
+        }
+      ],
+      "previous_position": 35,
+      "position": 38,
+      "word": "dos",
+      "movement": 3,
+      "mode": "local",
+      "evidence": {
+        "position": 38,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          24,
+          56
+        ],
+        "exact_matches": 7,
+        "hypothesis_words": 8,
+        "edit_cost": 1
+      }
+    },
+    {
+      "audio_available_seconds": 18.0,
+      "processing_seconds": 2.169777899980545,
+      "audio_window_start_seconds": 6.0,
+      "audio_window_end_seconds": 18.0,
+      "audio_reprocessed_seconds": 12.0,
+      "sequential_ready_seconds_simulated": 20.54707789979875,
+      "backlog_seconds_simulated": 0.37729999981820583,
+      "hypothesis": [
+        {
+          "word": "Cerca",
+          "start": 6.0,
+          "end": 6.4,
+          "probability": 0.7429764419794083
+        },
+        {
+          "word": "de",
+          "start": 6.4,
+          "end": 6.52,
+          "probability": 0.983271062374115
+        },
+        {
+          "word": "un",
+          "start": 6.52,
+          "end": 6.62,
+          "probability": 0.994565486907959
+        },
+        {
+          "word": "árbol",
+          "start": 6.62,
+          "end": 6.92,
+          "probability": 0.9948505759239197
+        },
+        {
+          "word": "encontró",
+          "start": 6.92,
+          "end": 7.42,
+          "probability": 0.8970811367034912
+        },
+        {
+          "word": "una",
+          "start": 7.42,
+          "end": 7.5600000000000005,
+          "probability": 0.9554818272590637
+        },
+        {
+          "word": "mariposa",
+          "start": 7.5600000000000005,
+          "end": 7.98,
+          "probability": 0.9937765598297119
+        },
+        {
+          "word": "azul",
+          "start": 7.98,
+          "end": 8.3,
+          "probability": 0.9759824275970459
+        },
+        {
+          "word": "La",
+          "start": 9.120000000000001,
+          "end": 9.16,
+          "probability": 0.9861376881599426
+        },
+        {
+          "word": "mariposa",
+          "start": 9.16,
+          "end": 9.66,
+          "probability": 0.9990461667378744
+        },
+        {
+          "word": "voló",
+          "start": 9.66,
+          "end": 10.059999999999999,
+          "probability": 0.9947405457496643
+        },
+        {
+          "word": "y",
+          "start": 10.059999999999999,
+          "end": 10.26,
+          "probability": 0.9645699262619019
+        },
+        {
+          "word": "se",
+          "start": 10.26,
+          "end": 10.379999999999999,
+          "probability": 0.9971687197685242
+        },
+        {
+          "word": "posó",
+          "start": 10.379999999999999,
+          "end": 10.719999999999999,
+          "probability": 0.9707383811473846
+        },
+        {
+          "word": "sobre",
+          "start": 10.719999999999999,
+          "end": 10.92,
+          "probability": 0.9929706454277039
+        },
+        {
+          "word": "una",
+          "start": 10.92,
+          "end": 11.1,
+          "probability": 0.9905909895896912
+        },
+        {
+          "word": "flor",
+          "start": 11.1,
+          "end": 11.379999999999999,
+          "probability": 0.9974541068077087
+        },
+        {
+          "word": "Ana",
+          "start": 12.219999999999999,
+          "end": 12.440000000000001,
+          "probability": 0.7441242337226868
+        },
+        {
+          "word": "llamó",
+          "start": 12.440000000000001,
+          "end": 12.8,
+          "probability": 0.961765706539154
+        },
+        {
+          "word": "a",
+          "start": 12.8,
+          "end": 12.86,
+          "probability": 0.987798273563385
+        },
+        {
+          "word": "su",
+          "start": 12.86,
+          "end": 12.96,
+          "probability": 0.9974184036254883
+        },
+        {
+          "word": "hermano",
+          "start": 12.96,
+          "end": 13.34,
+          "probability": 0.9908414781093597
+        },
+        {
+          "word": "para",
+          "start": 13.34,
+          "end": 13.5,
+          "probability": 0.985855758190155
+        },
+        {
+          "word": "que",
+          "start": 13.5,
+          "end": 13.66,
+          "probability": 0.9974575638771057
+        },
+        {
+          "word": "pudiera",
+          "start": 13.66,
+          "end": 13.96,
+          "probability": 0.9983755052089691
+        },
+        {
+          "word": "verla",
+          "start": 13.96,
+          "end": 14.4,
+          "probability": 0.9876734018325806
+        },
+        {
+          "word": "Los",
+          "start": 15.12,
+          "end": 15.3,
+          "probability": 0.9778720736503601
+        },
+        {
+          "word": "dos",
+          "start": 15.3,
+          "end": 15.6,
+          "probability": 0.983247697353363
+        },
+        {
+          "word": "se",
+          "start": 15.6,
+          "end": 15.94,
+          "probability": 0.9760788679122925
+        },
+        {
+          "word": "quedaron",
+          "start": 15.94,
+          "end": 16.28,
+          "probability": 0.9960826635360718
+        },
+        {
+          "word": "en",
+          "start": 16.28,
+          "end": 16.48,
+          "probability": 0.8433855772018433
+        },
+        {
+          "word": "cinesio",
+          "start": 16.48,
+          "end": 16.96,
+          "probability": 0.7147373755772909
+        },
+        {
+          "word": "mirando",
+          "start": 16.96,
+          "end": 17.439999999999998,
+          "probability": 0.9275117218494415
+        },
+        {
+          "word": "sus",
+          "start": 17.439999999999998,
+          "end": 17.68,
+          "probability": 0.9558274149894714
+        },
+        {
+          "word": "a",
+          "start": 17.68,
+          "end": 17.98,
+          "probability": 0.3340345472097397
+        }
+      ],
+      "previous_position": 38,
+      "position": 44,
+      "word": "sus",
+      "movement": 6,
+      "mode": "local",
+      "evidence": {
+        "position": 44,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          27,
+          56
+        ],
+        "exact_matches": 6,
+        "hypothesis_words": 8,
+        "edit_cost": 2
+      }
+    },
+    {
+      "audio_available_seconds": 20.0,
+      "processing_seconds": 2.0405875998549163,
+      "audio_window_start_seconds": 8.0,
+      "audio_window_end_seconds": 20.0,
+      "audio_reprocessed_seconds": 12.0,
+      "sequential_ready_seconds_simulated": 22.587665499653667,
+      "backlog_seconds_simulated": 0.5470778997987509,
+      "hypothesis": [
+        {
+          "word": "azul",
+          "start": 8.0,
+          "end": 8.28,
+          "probability": 0.8231400847434998
+        },
+        {
+          "word": "La",
+          "start": 8.9,
+          "end": 9.16,
+          "probability": 0.9845589995384216
+        },
+        {
+          "word": "mariposa",
+          "start": 9.16,
+          "end": 9.66,
+          "probability": 0.9900643626848856
+        },
+        {
+          "word": "voló",
+          "start": 9.66,
+          "end": 10.06,
+          "probability": 0.992679089307785
+        },
+        {
+          "word": "y",
+          "start": 10.06,
+          "end": 10.26,
+          "probability": 0.9756842255592346
+        },
+        {
+          "word": "se",
+          "start": 10.26,
+          "end": 10.379999999999999,
+          "probability": 0.9971389770507812
+        },
+        {
+          "word": "posó",
+          "start": 10.379999999999999,
+          "end": 10.72,
+          "probability": 0.9670992791652679
+        },
+        {
+          "word": "sobre",
+          "start": 10.72,
+          "end": 10.92,
+          "probability": 0.9962581396102905
+        },
+        {
+          "word": "una",
+          "start": 10.92,
+          "end": 11.1,
+          "probability": 0.9949671626091003
+        },
+        {
+          "word": "flor",
+          "start": 11.1,
+          "end": 11.36,
+          "probability": 0.9979376792907715
+        },
+        {
+          "word": "Ana",
+          "start": 12.26,
+          "end": 12.440000000000001,
+          "probability": 0.7110071778297424
+        },
+        {
+          "word": "llamó",
+          "start": 12.440000000000001,
+          "end": 12.82,
+          "probability": 0.9596985876560211
+        },
+        {
+          "word": "a",
+          "start": 12.82,
+          "end": 12.86,
+          "probability": 0.9845207333564758
+        },
+        {
+          "word": "su",
+          "start": 12.86,
+          "end": 12.96,
+          "probability": 0.9985382556915283
+        },
+        {
+          "word": "hermano",
+          "start": 12.96,
+          "end": 13.32,
+          "probability": 0.9867396652698517
+        },
+        {
+          "word": "para",
+          "start": 13.32,
+          "end": 13.5,
+          "probability": 0.9863390922546387
+        },
+        {
+          "word": "que",
+          "start": 13.5,
+          "end": 13.64,
+          "probability": 0.9979619979858398
+        },
+        {
+          "word": "pudiera",
+          "start": 13.64,
+          "end": 13.96,
+          "probability": 0.9978982508182526
+        },
+        {
+          "word": "verla",
+          "start": 13.96,
+          "end": 14.4,
+          "probability": 0.9877727031707764
+        },
+        {
+          "word": "Los",
+          "start": 15.120000000000001,
+          "end": 15.3,
+          "probability": 0.9859579205513
+        },
+        {
+          "word": "dos",
+          "start": 15.3,
+          "end": 15.6,
+          "probability": 0.9884584546089172
+        },
+        {
+          "word": "se",
+          "start": 15.6,
+          "end": 15.940000000000001,
+          "probability": 0.9898624420166016
+        },
+        {
+          "word": "quedaron",
+          "start": 15.940000000000001,
+          "end": 16.28,
+          "probability": 0.9964839518070221
+        },
+        {
+          "word": "en",
+          "start": 16.28,
+          "end": 16.46,
+          "probability": 0.8749948740005493
+        },
+        {
+          "word": "cinesio",
+          "start": 16.46,
+          "end": 16.96,
+          "probability": 0.6608347098032633
+        },
+        {
+          "word": "mirando",
+          "start": 16.96,
+          "end": 17.42,
+          "probability": 0.9606946706771851
+        },
+        {
+          "word": "sus",
+          "start": 17.42,
+          "end": 17.7,
+          "probability": 0.9693858027458191
+        },
+        {
+          "word": "alas",
+          "start": 17.7,
+          "end": 18.34,
+          "probability": 0.9760792255401611
+        },
+        {
+          "word": "Después",
+          "start": 19.0,
+          "end": 19.32,
+          "probability": 0.9874429106712341
+        },
+        {
+          "word": "volvieron",
+          "start": 19.32,
+          "end": 19.880000000000003,
+          "probability": 0.966054896513621
+        },
+        {
+          "word": "a",
+          "start": 19.880000000000003,
+          "end": 19.98,
+          "probability": 0.4812323972582817
+        }
+      ],
+      "previous_position": 44,
+      "position": 48,
+      "word": "a",
+      "movement": 4,
+      "mode": "local",
+      "evidence": {
+        "position": 48,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          33,
+          56
+        ],
+        "exact_matches": 7,
+        "hypothesis_words": 8,
+        "edit_cost": 1
+      }
+    },
+    {
+      "audio_available_seconds": 22.0,
+      "processing_seconds": 2.0641194998752326,
+      "audio_window_start_seconds": 10.0,
+      "audio_window_end_seconds": 22.0,
+      "audio_reprocessed_seconds": 12.0,
+      "sequential_ready_seconds_simulated": 24.6517849995289,
+      "backlog_seconds_simulated": 0.5876654996536672,
+      "hypothesis": [
+        {
+          "word": "y",
+          "start": 10.0,
+          "end": 10.26,
+          "probability": 0.6122133135795593
+        },
+        {
+          "word": "se",
+          "start": 10.26,
+          "end": 10.38,
+          "probability": 0.9940420985221863
+        },
+        {
+          "word": "posó",
+          "start": 10.38,
+          "end": 10.72,
+          "probability": 0.9708681106567383
+        },
+        {
+          "word": "sobre",
+          "start": 10.72,
+          "end": 10.92,
+          "probability": 0.9966096878051758
+        },
+        {
+          "word": "una",
+          "start": 10.92,
+          "end": 11.08,
+          "probability": 0.9929593801498413
+        },
+        {
+          "word": "flor",
+          "start": 11.08,
+          "end": 11.379999999999999,
+          "probability": 0.9979104399681091
+        },
+        {
+          "word": "Ana",
+          "start": 12.08,
+          "end": 12.46,
+          "probability": 0.7167560458183289
+        },
+        {
+          "word": "llamó",
+          "start": 12.46,
+          "end": 12.82,
+          "probability": 0.9731043577194214
+        },
+        {
+          "word": "a",
+          "start": 12.82,
+          "end": 12.86,
+          "probability": 0.9890756607055664
+        },
+        {
+          "word": "su",
+          "start": 12.86,
+          "end": 12.96,
+          "probability": 0.997730553150177
+        },
+        {
+          "word": "hermano",
+          "start": 12.96,
+          "end": 13.32,
+          "probability": 0.9906094074249268
+        },
+        {
+          "word": "para",
+          "start": 13.32,
+          "end": 13.5,
+          "probability": 0.9746683835983276
+        },
+        {
+          "word": "que",
+          "start": 13.5,
+          "end": 13.64,
+          "probability": 0.9976819753646851
+        },
+        {
+          "word": "pudiera",
+          "start": 13.64,
+          "end": 13.96,
+          "probability": 0.997483104467392
+        },
+        {
+          "word": "verla",
+          "start": 13.96,
+          "end": 14.4,
+          "probability": 0.9895079135894775
+        },
+        {
+          "word": "Los",
+          "start": 15.08,
+          "end": 15.3,
+          "probability": 0.9807553887367249
+        },
+        {
+          "word": "dos",
+          "start": 15.3,
+          "end": 15.6,
+          "probability": 0.9869226813316345
+        },
+        {
+          "word": "se",
+          "start": 15.6,
+          "end": 15.940000000000001,
+          "probability": 0.9868469834327698
+        },
+        {
+          "word": "quedaron",
+          "start": 15.940000000000001,
+          "end": 16.3,
+          "probability": 0.9966111481189728
+        },
+        {
+          "word": "en",
+          "start": 16.3,
+          "end": 16.46,
+          "probability": 0.9142833352088928
+        },
+        {
+          "word": "cinesio",
+          "start": 16.46,
+          "end": 16.96,
+          "probability": 0.5270131230354309
+        },
+        {
+          "word": "mirando",
+          "start": 16.96,
+          "end": 17.42,
+          "probability": 0.9405019283294678
+        },
+        {
+          "word": "sus",
+          "start": 17.42,
+          "end": 17.68,
+          "probability": 0.9821861386299133
+        },
+        {
+          "word": "alas",
+          "start": 17.68,
+          "end": 18.34,
+          "probability": 0.97688227891922
+        },
+        {
+          "word": "Después",
+          "start": 19.0,
+          "end": 19.28,
+          "probability": 0.9925565719604492
+        },
+        {
+          "word": "volvieron",
+          "start": 19.28,
+          "end": 19.880000000000003,
+          "probability": 0.9540119369824728
+        },
+        {
+          "word": "a",
+          "start": 19.880000000000003,
+          "end": 20.04,
+          "probability": 0.652543306350708
+        },
+        {
+          "word": "casa",
+          "start": 20.04,
+          "end": 20.28,
+          "probability": 0.9428489208221436
+        },
+        {
+          "word": "y",
+          "start": 20.28,
+          "end": 20.439999999999998,
+          "probability": 0.9659417271614075
+        },
+        {
+          "word": "dibujaron",
+          "start": 20.439999999999998,
+          "end": 20.8,
+          "probability": 0.9925011098384857
+        },
+        {
+          "word": "la",
+          "start": 20.8,
+          "end": 20.96,
+          "probability": 0.94012850522995
+        },
+        {
+          "word": "marín",
+          "start": 20.96,
+          "end": 21.46,
+          "probability": 0.41307274997234344
+        }
+      ],
+      "previous_position": 48,
+      "position": 52,
+      "word": "la",
+      "movement": 4,
+      "mode": "local",
+      "evidence": {
+        "position": 52,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          37,
+          56
+        ],
+        "exact_matches": 7,
+        "hypothesis_words": 8,
+        "edit_cost": 1
+      }
+    },
+    {
+      "audio_available_seconds": 24.0,
+      "processing_seconds": 2.039878600044176,
+      "audio_window_start_seconds": 12.0,
+      "audio_window_end_seconds": 24.0,
+      "audio_reprocessed_seconds": 12.0,
+      "sequential_ready_seconds_simulated": 26.691663599573076,
+      "backlog_seconds_simulated": 0.6517849995288998,
+      "hypothesis": [
+        {
+          "word": "Ana",
+          "start": 12.0,
+          "end": 12.46,
+          "probability": 0.8281171917915344
+        },
+        {
+          "word": "llamó",
+          "start": 12.46,
+          "end": 12.82,
+          "probability": 0.9263332486152649
+        },
+        {
+          "word": "a",
+          "start": 12.82,
+          "end": 12.86,
+          "probability": 0.9568379521369934
+        },
+        {
+          "word": "su",
+          "start": 12.86,
+          "end": 12.96,
+          "probability": 0.9953457713127136
+        },
+        {
+          "word": "hermano",
+          "start": 12.96,
+          "end": 13.32,
+          "probability": 0.99065300822258
+        },
+        {
+          "word": "para",
+          "start": 13.32,
+          "end": 13.5,
+          "probability": 0.9762598872184753
+        },
+        {
+          "word": "que",
+          "start": 13.5,
+          "end": 13.64,
+          "probability": 0.9965664148330688
+        },
+        {
+          "word": "pudiera",
+          "start": 13.64,
+          "end": 13.96,
+          "probability": 0.9963810741901398
+        },
+        {
+          "word": "verla",
+          "start": 13.96,
+          "end": 14.42,
+          "probability": 0.9838966727256775
+        },
+        {
+          "word": "los",
+          "start": 14.68,
+          "end": 15.3,
+          "probability": 0.9292315244674683
+        },
+        {
+          "word": "dos",
+          "start": 15.3,
+          "end": 15.6,
+          "probability": 0.985960841178894
+        },
+        {
+          "word": "se",
+          "start": 15.6,
+          "end": 15.94,
+          "probability": 0.9760035276412964
+        },
+        {
+          "word": "quedaron",
+          "start": 15.94,
+          "end": 16.28,
+          "probability": 0.9946450591087341
+        },
+        {
+          "word": "en",
+          "start": 16.28,
+          "end": 16.46,
+          "probability": 0.8714912533760071
+        },
+        {
+          "word": "cinesio",
+          "start": 16.46,
+          "end": 16.96,
+          "probability": 0.5868050754070282
+        },
+        {
+          "word": "mirando",
+          "start": 16.96,
+          "end": 17.42,
+          "probability": 0.9627404808998108
+        },
+        {
+          "word": "sus",
+          "start": 17.42,
+          "end": 17.72,
+          "probability": 0.9839322566986084
+        },
+        {
+          "word": "alas",
+          "start": 17.72,
+          "end": 18.44,
+          "probability": 0.9761748015880585
+        },
+        {
+          "word": "después",
+          "start": 18.88,
+          "end": 19.3,
+          "probability": 0.945145845413208
+        },
+        {
+          "word": "volvieron",
+          "start": 19.3,
+          "end": 19.9,
+          "probability": 0.9910865426063538
+        },
+        {
+          "word": "a",
+          "start": 19.9,
+          "end": 20.060000000000002,
+          "probability": 0.8679884076118469
+        },
+        {
+          "word": "casa",
+          "start": 20.060000000000002,
+          "end": 20.28,
+          "probability": 0.9799476861953735
+        },
+        {
+          "word": "y",
+          "start": 20.28,
+          "end": 20.439999999999998,
+          "probability": 0.9280105233192444
+        },
+        {
+          "word": "dibujaron",
+          "start": 20.439999999999998,
+          "end": 20.82,
+          "probability": 0.984315812587738
+        },
+        {
+          "word": "la",
+          "start": 20.82,
+          "end": 20.96,
+          "probability": 0.9136374592781067
+        },
+        {
+          "word": "mariposa",
+          "start": 20.96,
+          "end": 22.86,
+          "probability": 0.962671140829722
+        },
+        {
+          "word": "en",
+          "start": 22.86,
+          "end": 23.2,
+          "probability": 0.9816153645515442
+        },
+        {
+          "word": "un",
+          "start": 23.2,
+          "end": 23.32,
+          "probability": 0.9830601811408997
+        },
+        {
+          "word": "cuaderno",
+          "start": 23.32,
+          "end": 23.86,
+          "probability": 0.9872796734174093
+        }
+      ],
+      "previous_position": 52,
+      "position": 56,
+      "word": "cuaderno",
+      "movement": 4,
+      "mode": "local",
+      "evidence": {
+        "position": 56,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          41,
+          56
+        ],
+        "exact_matches": 8,
+        "hypothesis_words": 8,
+        "edit_cost": 0
+      }
+    },
+    {
+      "audio_available_seconds": 26.0,
+      "processing_seconds": 1.8840806998778135,
+      "audio_window_start_seconds": 14.0,
+      "audio_window_end_seconds": 26.0,
+      "audio_reprocessed_seconds": 12.0,
+      "sequential_ready_seconds_simulated": 28.57574429945089,
+      "backlog_seconds_simulated": 0.6916635995730758,
+      "hypothesis": [
+        {
+          "word": "verla",
+          "start": 14.0,
+          "end": 14.42,
+          "probability": 0.8694460093975067
+        },
+        {
+          "word": "Los",
+          "start": 15.14,
+          "end": 15.3,
+          "probability": 0.8835763931274414
+        },
+        {
+          "word": "dos",
+          "start": 15.3,
+          "end": 15.620000000000001,
+          "probability": 0.9789162874221802
+        },
+        {
+          "word": "se",
+          "start": 15.620000000000001,
+          "end": 15.96,
+          "probability": 0.9881922602653503
+        },
+        {
+          "word": "quedaron",
+          "start": 15.96,
+          "end": 16.3,
+          "probability": 0.9965920746326447
+        },
+        {
+          "word": "en",
+          "start": 16.3,
+          "end": 16.46,
+          "probability": 0.8311495780944824
+        },
+        {
+          "word": "cinesio",
+          "start": 16.46,
+          "end": 16.96,
+          "probability": 0.6421477297941843
+        },
+        {
+          "word": "mirando",
+          "start": 16.96,
+          "end": 17.44,
+          "probability": 0.9804498255252838
+        },
+        {
+          "word": "sus",
+          "start": 17.44,
+          "end": 17.68,
+          "probability": 0.9826886653900146
+        },
+        {
+          "word": "alas",
+          "start": 17.68,
+          "end": 18.36,
+          "probability": 0.9773101210594177
+        },
+        {
+          "word": "Después",
+          "start": 19.04,
+          "end": 19.3,
+          "probability": 0.984801709651947
+        },
+        {
+          "word": "volvieron",
+          "start": 19.3,
+          "end": 19.88,
+          "probability": 0.9595417181650797
+        },
+        {
+          "word": "a",
+          "start": 19.88,
+          "end": 20.06,
+          "probability": 0.9403303265571594
+        },
+        {
+          "word": "casa",
+          "start": 20.06,
+          "end": 20.3,
+          "probability": 0.9833959937095642
+        },
+        {
+          "word": "y",
+          "start": 20.3,
+          "end": 20.44,
+          "probability": 0.9434033036231995
+        },
+        {
+          "word": "dibujaron",
+          "start": 20.44,
+          "end": 20.82,
+          "probability": 0.988057017326355
+        },
+        {
+          "word": "la",
+          "start": 20.82,
+          "end": 20.98,
+          "probability": 0.9402017593383789
+        },
+        {
+          "word": "mariposa",
+          "start": 20.98,
+          "end": 22.86,
+          "probability": 0.9558380246162415
+        },
+        {
+          "word": "en",
+          "start": 22.86,
+          "end": 23.2,
+          "probability": 0.9870545864105225
+        },
+        {
+          "word": "un",
+          "start": 23.2,
+          "end": 23.32,
+          "probability": 0.9871531128883362
+        },
+        {
+          "word": "cuaderno",
+          "start": 23.32,
+          "end": 23.9,
+          "probability": 0.9923767447471619
+        }
+      ],
+      "previous_position": 56,
+      "position": 56,
+      "word": "cuaderno",
+      "movement": 0,
+      "mode": "local",
+      "evidence": {
+        "position": 56,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          45,
+          56
+        ],
+        "exact_matches": 8,
+        "hypothesis_words": 8,
+        "edit_cost": 0
+      }
+    },
+    {
+      "audio_available_seconds": 28.0,
+      "processing_seconds": 1.828024199930951,
+      "audio_window_start_seconds": 16.0,
+      "audio_window_end_seconds": 28.0,
+      "audio_reprocessed_seconds": 12.0,
+      "sequential_ready_seconds_simulated": 30.40376849938184,
+      "backlog_seconds_simulated": 0.5757442994508892,
+      "hypothesis": [
+        {
+          "word": "quedaron",
+          "start": 16.0,
+          "end": 16.28,
+          "probability": 0.9206987917423248
+        },
+        {
+          "word": "en",
+          "start": 16.28,
+          "end": 16.46,
+          "probability": 0.7302352786064148
+        },
+        {
+          "word": "cinecio",
+          "start": 16.46,
+          "end": 16.96,
+          "probability": 0.6503316015005112
+        },
+        {
+          "word": "mirando",
+          "start": 16.96,
+          "end": 17.44,
+          "probability": 0.9778291583061218
+        },
+        {
+          "word": "sus",
+          "start": 17.44,
+          "end": 17.68,
+          "probability": 0.9910422563552856
+        },
+        {
+          "word": "alas",
+          "start": 17.68,
+          "end": 18.36,
+          "probability": 0.9694844484329224
+        },
+        {
+          "word": "después",
+          "start": 18.36,
+          "end": 19.3,
+          "probability": 0.2398417741060257
+        },
+        {
+          "word": "volvieron",
+          "start": 19.3,
+          "end": 19.9,
+          "probability": 0.9928092559178671
+        },
+        {
+          "word": "a",
+          "start": 19.9,
+          "end": 20.06,
+          "probability": 0.924855649471283
+        },
+        {
+          "word": "casa",
+          "start": 20.06,
+          "end": 20.28,
+          "probability": 0.9896383285522461
+        },
+        {
+          "word": "y",
+          "start": 20.28,
+          "end": 20.44,
+          "probability": 0.8388115763664246
+        },
+        {
+          "word": "dibujaron",
+          "start": 20.44,
+          "end": 20.82,
+          "probability": 0.9789025485515594
+        },
+        {
+          "word": "la",
+          "start": 20.82,
+          "end": 20.96,
+          "probability": 0.9423359632492065
+        },
+        {
+          "word": "mariposa",
+          "start": 22.18,
+          "end": 22.86,
+          "probability": 0.953174869219462
+        },
+        {
+          "word": "en",
+          "start": 22.86,
+          "end": 23.2,
+          "probability": 0.9898672103881836
+        },
+        {
+          "word": "un",
+          "start": 23.2,
+          "end": 23.32,
+          "probability": 0.9892944097518921
+        },
+        {
+          "word": "cuaderno",
+          "start": 23.32,
+          "end": 23.88,
+          "probability": 0.9954052368799845
+        }
+      ],
+      "previous_position": 56,
+      "position": 56,
+      "word": "cuaderno",
+      "movement": 0,
+      "mode": "local",
+      "evidence": {
+        "position": 56,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          45,
+          56
+        ],
+        "exact_matches": 8,
+        "hypothesis_words": 8,
+        "edit_cost": 0
+      }
+    },
+    {
+      "audio_available_seconds": 30.0,
+      "processing_seconds": 1.6701772001106292,
+      "audio_window_start_seconds": 18.0,
+      "audio_window_end_seconds": 30.0,
+      "audio_reprocessed_seconds": 12.0,
+      "sequential_ready_seconds_simulated": 32.07394569949247,
+      "backlog_seconds_simulated": 0.40376849938184023,
+      "hypothesis": [
+        {
+          "word": "después",
+          "start": 18.0,
+          "end": 19.28,
+          "probability": 0.294455349445343
+        },
+        {
+          "word": "volvieron",
+          "start": 19.28,
+          "end": 19.9,
+          "probability": 0.9798027475674947
+        },
+        {
+          "word": "a",
+          "start": 19.9,
+          "end": 20.04,
+          "probability": 0.9517284631729126
+        },
+        {
+          "word": "casa",
+          "start": 20.04,
+          "end": 20.259999999999998,
+          "probability": 0.9747180938720703
+        },
+        {
+          "word": "y",
+          "start": 20.259999999999998,
+          "end": 20.44,
+          "probability": 0.9153189659118652
+        },
+        {
+          "word": "dibujaron",
+          "start": 20.44,
+          "end": 20.82,
+          "probability": 0.9826236367225647
+        },
+        {
+          "word": "la",
+          "start": 20.82,
+          "end": 20.96,
+          "probability": 0.9205842018127441
+        },
+        {
+          "word": "mariposa",
+          "start": 20.96,
+          "end": 22.88,
+          "probability": 0.9644579092661539
+        },
+        {
+          "word": "en",
+          "start": 22.88,
+          "end": 23.2,
+          "probability": 0.9866107106208801
+        },
+        {
+          "word": "un",
+          "start": 23.2,
+          "end": 23.32,
+          "probability": 0.9830864667892456
+        },
+        {
+          "word": "cuaderno",
+          "start": 23.32,
+          "end": 23.88,
+          "probability": 0.991496741771698
+        }
+      ],
+      "previous_position": 56,
+      "position": 56,
+      "word": "cuaderno",
+      "movement": 0,
+      "mode": "local",
+      "evidence": {
+        "position": 56,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          45,
+          56
+        ],
+        "exact_matches": 8,
+        "hypothesis_words": 8,
+        "edit_cost": 0
+      }
+    }
+  ]
+}

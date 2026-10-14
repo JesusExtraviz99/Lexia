@@ -104,7 +104,17 @@ Para probar únicamente una ventana de 6 s:
 
 Revisa el total de procesamiento, las inferencias que superan 2 s, la cola simulada y las posiciones por bloque. Llegar al final no demuestra que el seguimiento temporal sea preciso. La comparación usa una ejecución por método en orden fijo: es orientativa y no controla calentamiento ni carga del ordenador.
 
-Los cambios de esta comparación quedan locales hasta que los pruebes y autorices subirlos.
+### Experimento ampliado: cinco ventanas y dos rondas
+
+```powershell
+.\.venv\Scripts\python.exe -u scripts\comparar_ventanas.py --ventanas 0 4 6 8 10 12 --repeticiones 2
+```
+
+El 0 representa el prefijo completo. Las otras ventanas tienen solapamientos de 2, 4, 6, 8 y 10 s, manteniendo una actualización cada 2 s. Se realizan doce ejecuciones secuenciales sobre el último WAV. Puede tardar varios minutos; conviene mantener condiciones similares del ordenador durante la prueba.
+
+El orden se aleatoriza por ronda con una semilla registrada. El informe muestra cada ejecución, las medias y rangos de procesamiento, colas simuladas y posiciones por bloque. Dos rondas permiten observar variación, pero no bastan para una validación estadística ni infantil. No cambia el modo predeterminado: el comando sin opciones sigue comparando 0, 6 y 10 s una vez, ahora en orden aleatorio.
+
+Las nuevas ampliaciones quedan locales hasta que las pruebes y autorices subirlas.
 
 ## Entorno
 

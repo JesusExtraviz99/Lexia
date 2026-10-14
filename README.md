@@ -22,6 +22,9 @@ La segunda prueba conserva una repetición y una omisión, pero elimina un inten
 - [Guía de primera prueba](EMPEZAR.md).
 - [Prueba 01](pruebas/01_lectura_normal.md).
 - [Prueba 02](pruebas/02_lectura_con_disfluencias.md).
+- [Seguimiento progresivo](pruebas/03_seguimiento_progresivo.md).
+- [Primera comparación de ventanas](pruebas/04_comparacion_ventanas.md).
+- [Experimento ampliado de ventanas](pruebas/05_ventanas_ampliadas.md).
 
 ## Instalación reproducible en Windows
 
@@ -83,6 +86,14 @@ La posición representa la última palabra apoyada por coincidencia textual; no 
 Compara prefijo acumulado, ventana de 6 s y ventana de 10 s en el último audio, manteniendo bloques de 2 s y las mismas opciones del modelo y seguidor. Usa --todos para las dos grabaciones. Guarda registros y un resumen en resultados/comparaciones. También se puede ejecutar seguir.py --ventana 6. Los timestamps de cada ventana se trasladan al reloj global; se mantiene posición del cuento sin concatenar palabras de ventanas solapadas.
 
 Son tiempos orientativos de una ejecución por configuración, no un benchmark con repeticiones. La posición del prefijo tampoco es una referencia humana de precisión. No hay medición de latencia visual ni evaluación de errores lectores.
+
+Experimento ampliado configurable (cinco ventanas, prefijo y dos rondas):
+
+```powershell
+.\.venv\Scripts\python.exe -u scripts\comparar_ventanas.py --ventanas 0 4 6 8 10 12 --repeticiones 2
+```
+
+Cada ronda ejecuta las configuraciones en orden aleatorio reproducible, sin competir por CPU. El informe conserva el plan, semilla, resultados por ronda y medias/rangos. Los valores predeterminados son 0, 6 y 10 s, una ronda. El 0 significa prefijo completo, las demás duraciones son ventanas con solapamiento igual a duración menos 2 s. Dos rondas no validan precisión ni generalización infantil.
 
 ## Archivos conservados
 

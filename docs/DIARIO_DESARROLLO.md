@@ -16,10 +16,11 @@ El diario se actualiza durante el trabajo, sin necesitar una petición nueva par
 
 - Implementados: grabación local, transcripción posterior, alineamiento textual, seguimiento simulado por prefijos y comparación con ventanas solapadas.
 - Probados por el usuario: grabación/transcripción, alineamiento, seguimiento por prefijos y comparación de ventanas de 6 y 10 s.
-- Pendientes: revisión del diario y siguientes experimentos de ventanas/configuración.
-- Publicado: hasta el seguimiento por prefijos, commit `22c7ab3`.
-- Local: comparación de ventanas, sus registros y este diario.
-- Candidato provisional: ventana acústica de 6 s, actualización cada 2 s. El modo por defecto sigue siendo prefijo completo.
+- Probado también por el usuario: experimento ampliado de ventanas, con tres rondas sobre el mismo audio.
+- Pendientes: nuevas grabaciones con pausas/relecturas y referencia temporal de posición.
+- Publicación autorizada: comparación ampliada, resultados de dos rondas del desarrollador y tres rondas del usuario, y diario hasta E012. El commit de esta entrega se consulta en el historial de Git.
+- Próximo trabajo local: nuevas grabaciones con pausas/relecturas y referencia temporal; todavía no ejecutado.
+- Candidato principal provisional: ventana de 4 s tras la reproducción del usuario; conservar 8 s como alternativa con más contexto y 6 s como referencia. Actualización cada 2 s. El modo por defecto sigue siendo prefijo completo.
 - No implementados: subrayado visual, captura con seguimiento en directo y diagnóstico fiable de errores lectores.
 - Datos actuales: dos lecturas de un mismo adulto, con un cuento de 56 palabras. No permiten conclusiones sobre lectura infantil ni generalización a otros textos.
 
@@ -178,9 +179,70 @@ El diario se actualiza durante el trabajo, sin necesitar una petición nueva par
 
 **Decisión provisional.** Mantener 6 s como candidato, sin declarar el sistema listo para directo. Siguiente propuesta: probar 4 y 8 s con el mismo intervalo de actualización y revisar posición junto con coste; después estudiar configuración del ASR e intervalo de actualización. Falta evaluar pausas, relecturas, textos largos y voces infantiles.
 
+## E010 · Publicación y ampliación del experimento
+
+**Fecha:** 14/10/2026.
+
+**Autorización.** El usuario pide subir la versión probada y hacer el siguiente experimento, permitiendo añadir más ventanas. Se publica la comparación anterior y el diario en `d63d7f1`. La ampliación nueva se mantiene local hasta su revisión.
+
+**Pregunta.** ¿Reducir a 4 s mejora el coste sin perjudicar el seguimiento? ¿Aportan 8 o 12 s contexto útil frente a 6 y 10 s? ¿Cuánto varían los tiempos entre rondas?
+
+**Configuración.** Prefijo completo y ventanas de 4, 6, 8, 10 y 12 s; bloques de 2 s. Dos rondas sobre el audio adulto con desviaciones. Se conservan modelo, CPU int8, VAD y seguidor. Orden aleatorio reproducible, semilla 20261014; ejecuciones secuenciales. Cada ventana conserva solapamiento igual a su duración menos 2 s.
+
+**Cambios.** El comparador permite --ventanas, --repeticiones y --semilla; guarda plan de ejecución, registros individuales y resumen por configuración con medias/rangos. No reutiliza tiempos de pruebas anteriores: vuelve a ejecutar cada candidato bajo el mismo protocolo.
+
+**Comprobaciones.** Pasan trece pruebas automáticas, incluidas integridad/reproducibilidad del plan de rondas y resumen que distingue alcanzar una posición del resultado final tras un retroceso.
+
+**Resultados locales.** Doce ejecuciones completas. Totales medios de inferencia para prefijo/4/6/8/10/12 s: 44,39/24,30/26,92/26,90/28,88/30,03 s. Inferencias superiores al bloque de 2 s: 20/7/10/2/12/14 de 30, respectivamente. Las doce llegan a cuaderno (56) al corte de 24 s sin retrocesos. Cada configuración conserva sus posiciones entre rondas; las ventanas de 4, 6, 8 y 10 s coinciden en todas sus posiciones sobre este audio.
+
+**Aprendizaje.** La ventana de 4 s minimiza el total medio; la de 8 s tiene menos inferencias lentas y menor cola simulada. Hasta el corte común de 24 s, la ventana de 8 s tiene menor coste medio (21,96 s) que 4 (22,49 s) y 6 (23,10 s); el silencio final favorece el total de la ventana más corta. No hay anotación humana temporal ni evidencia para atribuir variación a una causa del ordenador. No interpretar pequeñas diferencias como superioridad estadística.
+
+**Comprobación adicional.** Intervalos y posiciones verificados en 180 actualizaciones. Informe y registros en resultados/comparaciones/20261014_093754_597676; [ficha detallada](../pruebas/05_ventanas_ampliadas.md).
+
+**Decisión provisional.** Conservar 4 y 8 s como candidatos, junto a la referencia de 6 s, y no cambiar el modo predeterminado. La nueva versión queda local para reproducción del usuario. Sin referencia humana temporal; dos rondas no permiten declarar una ventana óptima universal.
+
+## E011 · El usuario amplía a tres rondas
+
+**Fecha:** 14/10/2026. Ejecutado por el usuario; registros locales revisados. Sin nueva autorización para publicar.
+
+**Configuración.** El usuario reproduce la prueba con --ventanas 0 4 6 8 10 12 --repeticiones 3. Mismo WAV adulto de 30 s; 18 ejecuciones, 270 actualizaciones. Son repeticiones de procesamiento del mismo audio, no nuevas lecturas ni nuevos participantes.
+
+**Evidencia.** [Informe del usuario](../resultados/comparaciones/20261014_100148_765908/resumen.md), resumen JSON y dieciocho historiales en esa carpeta.
+
+| Método | Inferencia total media (s) | Rango entre rondas (s) | Inferencias >2 s | Media de cola máxima simulada (s) |
+|---|---:|---|---:|---:|
+| Prefijo | 44,85 | 43,15–48,09 | 30/45 | 13,73 |
+| Ventana 4 s | 22,45 | 21,49–24,25 | 0/45 | 0,00 |
+| Ventana 6 s | 24,71 | 23,72–26,17 | 6/45 | 0,14 |
+| Ventana 8 s | 26,59 | 25,49–27,30 | 1/45 | 0,09 |
+| Ventana 10 s | 28,18 | 27,90–28,58 | 13/45 | 0,28 |
+| Ventana 12 s | 30,16 | 28,94–32,23 | 24/45 | 1,62 |
+
+**Seguimiento.** Las dieciocho ejecuciones llegan al índice 56 al corte de 24 s, sin retrocesos en la salida presentada. Se verifican intervalos de audio en 270 actualizaciones. Cada configuración mantiene la misma secuencia de posiciones entre las tres rondas. Las ventanas 4/6/8/10 coinciden en sus posiciones sobre este audio, aunque sus transcripciones difieren.
+
+**Control del silencio final.** Hasta el corte de 24 s, los costes medios prefijo/4/6/8/10/12 s son 31,04/20,80/21,52/21,72/22,89/24,26 s. En esta ejecución 4 s tiene también menor coste hasta ese corte; la ventaja total no procede exclusivamente del silencio final. El corte de 24 s no es una anotación humana de fin de voz.
+
+**Revisión de E010.** La ventana de 4 s no supera 2 s en ninguna de las 45 inferencias de esta ejecución, mientras sí lo hacía en siete inferencias de la comprobación anterior. Las condiciones del ordenador no se han medido; no se atribuye la variación a una causa ni se garantiza ese comportamiento en otras ejecuciones.
+
+**Decisión provisional.** Adoptar 4 s como candidato principal para la siguiente prueba, conservando 8 s como alternativa de mayor contexto y sin modificar todavía el modo predeterminado. Pasar de repetir este audio a añadir lecturas con pausas, ritmo lento y retrocesos, y revisar posición frente a referencia temporal humana.
+
+**Límites.** Tres rondas mejoran la observación de variación de tiempos, pero no añaden diversidad de voz, texto ni errores. Cola cero significa ausencia de espera acumulada antes de las inferencias en la simulación; persisten espera del bloque, inferencia y otras etapas. No prueba latencia visual cero ni precisión infantil. La prueba del usuario no constituye autorización para publicar la nueva versión.
+
+## E012 · Guardar resultados y pasar a nuevas lecturas
+
+**Fecha:** 14/10/2026.
+
+**Autorización.** El usuario pide subir los resultados a GitHub y explicar con qué continuar. Se prepara la publicación de la ampliación configurable, las 12 ejecuciones del desarrollador, las 18 del usuario y el diario actualizado.
+
+**Decisión de siguiente paso.** Comparar ventanas de 4 y 8 s en nuevas lecturas adultas del mismo cuento: ritmo lento, pausa de 8 s y relectura de una frase. Hacer grabaciones separadas para distinguir los efectos. Mantener bloque de 2 s y ASR igual. No modificar aún modelo ni subrayado.
+
+**Objetivo.** Comprobar si el indicador se mantiene durante silencio, retoma posición tras una pausa y representa/repara retrocesos. Revisar los instantes difíciles contra el audio, no solo la posición final. El punto de partida es el [protocolo propuesto](../pruebas/06_protocolo_pausas_relecturas.md).
+
+**Estado.** Protocolo propuesto; audios nuevos y resultados todavía inexistentes. La futura implementación y sus resultados se mantendrán locales hasta revisión y nueva autorización para publicar.
+
 ## Formato de futuras entradas (plantilla)
 
-### E010 · Título del siguiente cambio o experimento
+### E013 · Título del siguiente cambio o experimento
 
 - Fecha y estado: propuesta / implementado / probado localmente / revisado por el usuario / publicado.
 - Objetivo o pregunta.
