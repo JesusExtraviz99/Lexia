@@ -7,6 +7,7 @@ Trabajo inicial de prácticas y TFG: reconocimiento, seguimiento y evaluación d
 - Grabación de audio local en WAV.
 - Transcripción posterior con Whisper small, faster-whisper y CPU int8.
 - Registro de palabras, tiempos estimados y duración de procesamiento en JSON.
+- Alineamiento global posterior con el cuento e informes de diferencias candidatas.
 - Dos grabaciones adultas de depuración y resultados de las primeras pruebas.
 - Seguimiento incremental, subrayado y evaluación automática pendientes.
 
@@ -41,6 +42,24 @@ Para reproducir la segunda prueba sin grabar:
 
 ```powershell
 .\.venv\Scripts\python.exe scripts\transcribir.py datos\audio\lectura_20261014_082953_219058.wav
+```
+
+## Alineamiento con el cuento
+
+```powershell
+.\.venv\Scripts\python.exe scripts\alinear.py
+```
+
+Usa la última transcripción de resultados, o pasa la ruta de un JSON concreto. El parámetro --cuento permite elegir otro TXT. Se generan informes Markdown y JSON en resultados/alineamientos.
+
+El método es distancia de edición global con costes unitarios. Conserva índices globales desde 1 y tiempos ASR. Ignora caja y puntuación, pero conserva tildes y ñ. Las inserciones que duplican un fragmento contiguo se etiquetan como repeticiones candidatas; otras ambigüedades requieren revisión.
+
+Primera prueba: 56 coincidencias. Segunda prueba: 54 coincidencias, una repetición candidata, una omisión candidata y una sustitución candidata. No recupera mari… porque ese fragmento no está en la salida del reconocedor. No califica la lectura ni demuestra seguimiento en directo.
+
+Comprobaciones del alineador:
+
+```powershell
+.\.venv\Scripts\python.exe -m unittest discover -s tests -v
 ```
 
 ## Archivos conservados

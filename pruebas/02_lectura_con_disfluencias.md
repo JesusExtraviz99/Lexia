@@ -22,4 +22,7 @@ Los intervalos son estimaciones del ASR. La duración de mariposa (1,88 s) no de
 - Separar diferencias textuales, errores del ASR y errores lectores confirmados.
 - El seguidor deberá tolerar una sustitución local como silencio/cinesio y continuar con mirando sus alas.
 - Comparar cuento y transcripción puede localizar repetición, omisión y sustitución candidatas, pero no recuperar un fragmento borrado por el reconocedor.
-- Siguiente hito: alineamiento textual posterior con índices del cuento, antes de implementar seguimiento incremental.
+- Alineamiento textual posterior implementado con índices del cuento desde 1: 54 coincidencias, una repetición candidata, una omisión candidata y una sustitución candidata. El informe está en resultados/alineamientos con el prefijo de esta transcripción.
+- Cuento y ASR tienen 56 palabras: la repetición compensa la omisión en el total, pero el alineamiento localiza ambas.
+- El fragmento mari… no aparece como evento porque el ASR no lo representa.
+- Siguiente hito: seguimiento incremental, probado con hipótesis disponibles en cada instante.
