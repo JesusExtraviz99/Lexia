@@ -1,0 +1,195 @@
+# Diario de desarrollo y experimentación — Lexia
+
+Proyecto de prácticas y TFG de lectura asistida en español.
+
+Inicio del diario: 14 de octubre de 2026, zona horaria Atlantic/Canary. Las primeras entradas se reconstruyen a partir de la conversación, las fichas de pruebas, los registros y los commits. Las horas de los nombres de archivo se conservan como identificadores, sin asumir que corresponden a la hora local del usuario.
+
+## Cómo se mantiene
+
+Se añadirá una entrada tras cada cambio relevante, experimento, incidencia o decisión. Cada entrada recoge objetivo, cambios/configuración, evidencia, interpretación, límites y siguiente paso. Los resultados comunicados por el lector se distinguirán de las comprobaciones automáticas y de las hipótesis del desarrollador.
+
+Las conclusiones provisionales se revisarán mediante entradas nuevas que enlacen las anteriores. No se borrarán observaciones porque después cambie el método. Se conservarán configuraciones y archivos para reproducir las pruebas.
+
+El diario se actualiza durante el trabajo, sin necesitar una petición nueva para cada entrada. Primero se prueba localmente, después el usuario revisa los cambios y finalmente autoriza su subida a GitHub. No se publican cambios por el mero hecho de anotarlos aquí.
+
+## Estado del proyecto
+
+- Implementados: grabación local, transcripción posterior, alineamiento textual, seguimiento simulado por prefijos y comparación con ventanas solapadas.
+- Probados por el usuario: grabación/transcripción, alineamiento, seguimiento por prefijos y comparación de ventanas de 6 y 10 s.
+- Pendientes: revisión del diario y siguientes experimentos de ventanas/configuración.
+- Publicado: hasta el seguimiento por prefijos, commit `22c7ab3`.
+- Local: comparación de ventanas, sus registros y este diario.
+- Candidato provisional: ventana acústica de 6 s, actualización cada 2 s. El modo por defecto sigue siendo prefijo completo.
+- No implementados: subrayado visual, captura con seguimiento en directo y diagnóstico fiable de errores lectores.
+- Datos actuales: dos lecturas de un mismo adulto, con un cuento de 56 palabras. No permiten conclusiones sobre lectura infantil ni generalización a otros textos.
+
+## E001 · Del informe al primer prototipo
+
+**Fecha:** 14/10/2026. Reconstrucción retrospectiva.
+
+**Objetivo.** Pasar de la revisión bibliográfica del 09/10/2026 a una prueba pequeña y reproducible.
+
+**Decisión.** Empezar por un lector adulto, cuento corto en español y procesamiento local. Separar reconocimiento, seguimiento y evaluación. Aceptar una hipótesis para mover el indicador no significa calificar la palabra como correcta.
+
+**Cambios.** Se crean el alcance, la guía y los scripts de preparación del modelo, grabación y transcripción. Se prepara un entorno aislado de Python 3.12, manteniendo el Python 3.14 existente. El ordenador dispone de unos 16 GB de RAM y una RTX 3050 Laptop de 4 GB; la primera ejecución utiliza CPU int8.
+
+**Configuración.** Whisper small multilingüe, faster-whisper 1.2.1, sounddevice 0.5.5 y soundfile 0.13.1. Las versiones completas se guardan en requirements-lock.txt. Se descarga el modelo para inferencia local.
+
+**Evidencia y límites.** La comprobación inicial carga el modelo y procesa audio en memoria. No cubre aún la apertura de WAV, limitación que se manifiesta en E002.
+
+**Referencias.** [Informe original](Informe%20Lectura%20Asistida%20Prototipo.md), [alcance](../ALCANCE.md), [guía](../EMPEZAR.md).
+
+## E002 · Incidencia al abrir el WAV y primera lectura normal
+
+**Fecha:** 14/10/2026. Reconstrucción retrospectiva.
+
+**Observación del usuario.** La grabación se guarda, pero la transcripción falla con `TypeError: open() got an unexpected keyword argument 'metadata_errors'`.
+
+**Causa y cambio.** faster-whisper 1.2.1 llama a PyAV con un parámetro rechazado por PyAV 19.0.1. Se fija `av==16.0.1`, se actualiza el archivo de versiones y se prueba la apertura del WAV real.
+
+**Resultado.** La transcripción funciona. La ejecución mostrada por el usuario tarda 3,99 s de inferencia y 0,87 s de carga. El texto reconocido coincide con las palabras del cuento, salvo puntuación. Son tiempos de procesamiento posterior, no latencia del indicador.
+
+**Aprendizaje.** Cargar el modelo y procesar un array no verifica el recorrido completo desde archivo. Las comprobaciones posteriores deben incluir el formato real de entrada.
+
+**Evidencia.** [Ficha 01](../pruebas/01_lectura_normal.md), WAV `datos/audio/lectura_20261014_081816_009646.wav` y JSON con ese prefijo en resultados.
+
+## E003 · Repetición, omisión y autocorrección deliberadas
+
+**Fecha:** 14/10/2026. Reconstrucción retrospectiva.
+
+**Objetivo.** Comprobar si el ASR conserva desviaciones que interesan para evaluar lectura.
+
+**Referencia del lector.** Repite Ana dos veces al principio, omite despacio e introduce mari… mariposa en la última frase. Indica haber pronunciado silencio, aunque la salida muestra cinesio. No se ha realizado una anotación humana independiente del audio.
+
+**Resultados del JSON.** Dos entradas Ana; no aparece despacio; una sola entrada para la última mariposa, de 20,98 a 22,86 s; sustitución silencio/cinesio según la referencia del lector. Inferencia: 3,85 s; carga: 0,84 s; archivo: 30 s.
+
+**Interpretación.** La transcripción preserva repetición y ausencia de la palabra omitida, pero no representa el fragmento mari… por separado. El intervalo largo de mariposa puede abarcar varios intentos; no prueba por sí solo una autocorrección. Cinesio no debe atribuirse automáticamente al lector.
+
+**Decisión.** Conservar audio y salida original. No corregir silenciosamente contra el cuento. Comparar textos no recupera lo que el reconocedor elimina.
+
+**Evidencia.** [Ficha 02](../pruebas/02_lectura_con_disfluencias.md).
+
+## E004 · Alineamiento textual posterior
+
+**Fecha:** 14/10/2026. Reconstrucción retrospectiva.
+
+**Cambios.** Se añade scripts/alinear.py: distancia de edición global con costes unitarios e índices del cuento desde 1. Ignora caja y puntuación, conservando tildes y ñ. Marca diferencias candidatas y reconoce inserciones que duplican un fragmento contiguo como repeticiones candidatas. Genera Markdown y JSON.
+
+**Resultados.** Lectura normal: 56 coincidencias. Lectura con desviaciones: 54 coincidencias, repetición de Ana, omisión de despacio y sustitución silencio/cinesio. El usuario ejecuta el programa y confirma esa salida. Pasan cinco pruebas automáticas.
+
+**Aprendizaje.** Cuento y segunda transcripción tienen ambos 56 palabras: repetición y omisión se compensan en el total. El recuento no permite diagnosticar la lectura. Una coincidencia textual tampoco certifica pronunciación correcta.
+
+**Límites.** Usa la transcripción completa y puede ser ambiguo con palabras repetidas. No demuestra seguimiento en directo ni recupera mari….
+
+**Evidencia.** Informes de resultados/alineamientos. Publicado en commit `7b4f83b`.
+
+## E005 · Seguimiento con audio disponible progresivamente
+
+**Fecha:** 14/10/2026. Reconstrucción retrospectiva.
+
+**Cambios.** Se añade scripts/seguir.py. Cada 2 s del WAV se vuelve a reconocer únicamente el prefijo disponible. El seguidor usa las últimas 8 palabras ASR, una ventana textual de hasta 12 palabras anteriores y 24 posteriores, tolerancia a ediciones y recuperación con confirmación. Se activa VAD: la configuración difiere de la transcripción inicial sin VAD.
+
+**Convención.** La posición es la última palabra del cuento respaldada por coincidencia textual, no la palabra pronunciada actualmente. Las hipótesis pueden revisar posiciones anteriores. Se registra tiempo de inferencia y una cola secuencial simulada, excluyendo carga del modelo, captura y pantalla.
+
+**Resultados.** Ambas grabaciones alcanzan cuaderno, índice 56, al corte de 24 s. Pasan diez pruebas automáticas. El usuario reproduce la prueba con desviaciones.
+
+**Observación del usuario.** Al corte de 16 s aparece Los dos secu; al de 18 s se revisa a Los dos se quedaron. El seguidor pasa de dos (38) a sus (44). Al corte de 22 s aparece Hola Madi y posteriormente se revisa a la mariposa en un cuaderno.
+
+**Coste.** En la ejecución del usuario, 15 inferencias suman aproximadamente 41,77 s para un audio de 30 s. Varias actualizaciones superan los 2 s. La disponibilidad final secuencial simulada es aproximadamente 45,84 s. No es una medición de latencia visual.
+
+**Decisión.** Comparar ventanas acústicas limitadas para reducir reprocesamiento. Guardar cada hipótesis disponible; no fabricar el seguimiento a partir del resultado final.
+
+**Evidencia.** [Ficha 03](../pruebas/03_seguimiento_progresivo.md), registro con sufijo `090803_312561_seguimiento`. Publicado en commit `22c7ab3` después de autorización del usuario.
+
+## E006 · Comparación de ventanas de 6 y 10 segundos
+
+**Fecha:** 14/10/2026. Comprobación del desarrollador, pendiente del usuario.
+
+**Objetivo.** Reducir coste sin perder continuidad, conservando el método de prefijos como comparación.
+
+**Cambios.** scripts/seguir.py acepta --ventana y scripts/comparar_ventanas.py ejecuta tres configuraciones sobre el mismo audio. Ventanas de 6 y 10 s, actualización cada 2 s, solapamientos de 4 y 8 s. Mismos modelo, CPU, VAD y seguidor. Los tiempos ASR se trasladan al reloj global. Las hipótesis solapadas no se concatenan ni se cuentan como intentos nuevos.
+
+**Resultados orientativos.** Una ejecución por configuración, en orden fijo.
+
+| Audio | Método | Inferencia total (s) | Actualizaciones >2 s | Cola máxima simulada (s) |
+|---|---|---:|---:|---:|
+| Normal | Prefijo | 50,51 | 14/20 | 10,18 |
+| Normal | Ventana 6 s | 25,93 | 2/20 | 0,13 |
+| Normal | Ventana 10 s | 30,35 | 6/20 | 0,44 |
+| Con desviaciones | Prefijo | 44,74 | 10/15 | 13,39 |
+| Con desviaciones | Ventana 6 s | 24,58 | 0/15 | 0,00 |
+| Con desviaciones | Ventana 10 s | 29,01 | 6/15 | 0,66 |
+
+**Posición.** Las seis ejecuciones llegan a 56 al corte de 24 s, sin retrocesos. Algunas posiciones intermedias difieren. En la lectura con desviaciones, al corte de 22 s la ventana de 6 s devuelve la marina y la de 10 s la mari, frente a Hola Madi del prefijo.
+
+**Límites.** Parte del ahorro procede de dejar de reprocesar habla antigua durante el silencio final. Hasta el corte común de 24 s, los costes prefijo/6 s/10 s son 26,07/22,56/23,23 s en la lectura normal y 30,89/21,27/23,39 s en la lectura con desviaciones. No hay referencia humana temporal ni repeticiones que controlen carga o calentamiento del ordenador.
+
+**Comprobaciones.** Once pruebas de lógica pasan. Se verifican intervalos y rangos de posición en 105 actualizaciones de los seis registros.
+
+**Decisión provisional.** La ventana de 6 s es el candidato inicial para continuar experimentando. No se cambia el modo por defecto. Alcanzar el final no prueba precisión temporal ni funcionamiento infantil.
+
+**Evidencia.** [Ficha 04](../pruebas/04_comparacion_ventanas.md), [resumen comparativo](../resultados/comparaciones/20261014_091512_716487/resumen.md). Sin subir a GitHub.
+
+## E007 · Qué aporta la bibliografía a la elección de ventana
+
+**Fecha:** 14/10/2026. Interpretación discutida con el usuario.
+
+**Pregunta.** ¿Existe una ventana acústica recomendada por los papers? ¿Qué podemos concluir usando un adulto?
+
+**Evidencia bibliográfica.** Gao et al. (2024), apartado 2.2, describe fragmentos de 10 s y GPU Tesla V100, sin establecer mediante comparación una ventana óptima para nuestro subrayado. Yılmaz et al. (2012) actualiza la estimación cada 150 ms y usa tres estimaciones para ciertas recuperaciones (aproximadamente 450 ms): son intervalos de actualización/confirmación de su sistema, no tamaños acústicos que podamos copiar a Whisper.
+
+**Fuentes.** [Gao 2024](https://www.isca-archive.org/interspeech_2024/gao24d_interspeech.pdf), [Yılmaz 2012](https://www.isca-archive.org/interspeech_2012/yilmaz12_interspeech.pdf).
+
+**Decisión.** Usar la bibliografía para diseñar pruebas y elegir parámetros mediante mediciones propias. Separar ventana acústica, intervalo de actualización y ventana textual. Las lecturas adultas sirven para depuración; la configuración infantil necesita evaluación específica.
+
+**Propuesta aún no ejecutada.** Comparar 4, 6, 8 y 10 s con bloque de 2 s; después probar actualizaciones de 1 y 2 s. Añadir lecturas lentas, pausas y relecturas, y una referencia temporal humana. Una actualización cada 2 s ya puede dejar el indicador atrás aunque la inferencia termine antes del siguiente bloque.
+
+## E008 · Registro continuo de decisiones y experimentos
+
+**Fecha:** 14/10/2026.
+
+**Petición del usuario.** Mantener un diario/informe mientras se desarrolla y prueba el sistema, incluyendo novedades, descubrimientos, cambios y experimentación.
+
+**Cambio.** Se crea este diario y se enlaza desde README. Reúne el contexto de desarrollo; las fichas y registros detallados siguen siendo la evidencia de cada experimento.
+
+**Pendiente inmediato.** El usuario debe ejecutar la comparación de ventanas, compartir su resumen y revisar cambios de hipótesis/posición. Su autorización para publicar la versión anterior no se extiende automáticamente a esta nueva versión.
+
+## E009 · Reproducción de la comparación de ventanas por el usuario
+
+**Fecha:** 14/10/2026. Ejecutado por el usuario; resultados comprobados en los JSON locales. Sin autorización nueva para publicar.
+
+**Configuración.** Mismo audio adulto con desviaciones deliberadas; prefijo, ventana de 6 s y ventana de 10 s; actualización cada 2 s. No se cambia el código ni se ejecuta otra inferencia durante esta revisión.
+
+**Evidencia.** Salida completa aportada como texto; [informe de la ejecución del usuario](../resultados/comparaciones/20261014_092131_720136/resumen.md) y tres registros JSON de esa carpeta.
+
+| Método | Inferencia total (s) | Mediana (s) | Inferencias >2 s | Cola máxima simulada (s) |
+|---|---:|---:|---:|---:|
+| Prefijo | 53,17 | 3,46 | 10/15 | 21,04 |
+| Ventana 6 s | 29,51 | 2,10 | 11/15 | 2,15 |
+| Ventana 10 s | 33,22 | 2,32 | 10/15 | 4,31 |
+
+**Seguimiento.** Las tres ejecuciones alcanzan el índice 56 al corte de 24 s y no presentan retrocesos. Para cada método, la secuencia de posiciones coincide exactamente con la obtenida en E006 sobre el mismo audio. Es repetibilidad de la salida en este caso, no validación frente a una referencia humana.
+
+**Diferencia respecto a E006.** Los tiempos son mayores en esta ejecución. La ventana de 6 s pasa de cero a once inferencias que superan 2 s y acumula una cola simulada de 2,15 s. No se ha medido carga de fondo, alimentación ni temperatura: no se atribuye la variación a una causa concreta.
+
+**Interpretación.** La ventana de 6 s sigue siendo el candidato de menor coste total y menor cola, pero aún no garantiza sostener actualizaciones cada 2 s. El prefijo tiene menos actualizaciones que superan 2 s que la ventana de 6 s, pero sus excesos son mucho mayores; ese recuento aislado no determina viabilidad.
+
+**Control del silencio final.** Hasta el corte común de 24 s, los costes prefijo/6 s/10 s son 35,47/25,46/27,38 s. La reducción de la ventana de 6 s se mantiene al excluir las actualizaciones posteriores a ese corte, aunque este corte no es una anotación humana de fin de voz.
+
+**Decisión provisional.** Mantener 6 s como candidato, sin declarar el sistema listo para directo. Siguiente propuesta: probar 4 y 8 s con el mismo intervalo de actualización y revisar posición junto con coste; después estudiar configuración del ASR e intervalo de actualización. Falta evaluar pausas, relecturas, textos largos y voces infantiles.
+
+## Formato de futuras entradas (plantilla)
+
+### E010 · Título del siguiente cambio o experimento
+
+- Fecha y estado: propuesta / implementado / probado localmente / revisado por el usuario / publicado.
+- Objetivo o pregunta.
+- Cambio y configuración, incluyendo qué varía y qué permanece igual.
+- Datos utilizados y procedencia de la referencia.
+- Evidencia: comandos, registros, informe y commit si existe.
+- Resultados medidos y observaciones del usuario.
+- Interpretación y limitaciones.
+- Decisión: provisional o confirmada, con motivo.
+- Próximo paso y comprobaciones pendientes.
+
+Este último bloque es una plantilla, no un experimento ya realizado.

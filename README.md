@@ -16,6 +16,7 @@ La segunda prueba conserva una repetición y una omisión, pero elimina un inten
 
 ## Documentación
 
+- [Diario de desarrollo y experimentación](docs/DIARIO_DESARROLLO.md).
 - [Informe de investigación](docs/Informe%20Lectura%20Asistida%20Prototipo.md).
 - [Alcance inicial](ALCANCE.md).
 - [Guía de primera prueba](EMPEZAR.md).
@@ -72,6 +73,16 @@ Comprobaciones del alineador:
 Procesa el último WAV en cortes de dos segundos. El modelo solo recibe el prefijo disponible. El seguidor utiliza las últimas ocho palabras ASR, una ventana local y recuperación con confirmación; admite retrocesos. Guarda historial JSON e informe Markdown en resultados/seguimiento. Usa VAD, por lo que las hipótesis pueden diferir de las transcripciones anteriores sin VAD.
 
 La posición representa la última palabra apoyada por coincidencia textual; no mide palabra actual ni corrección lectora. El procesamiento repetido de prefijos es una base experimental, no streaming nativo. La cola secuencial estimada no incluye carga del modelo, captura ni pantalla. No se evalúa precisión temporal sin referencia humana. Grabaciones limitadas a 120 segundos.
+
+## Comparación experimental de ventanas
+
+```powershell
+.\.venv\Scripts\python.exe -u scripts\comparar_ventanas.py
+```
+
+Compara prefijo acumulado, ventana de 6 s y ventana de 10 s en el último audio, manteniendo bloques de 2 s y las mismas opciones del modelo y seguidor. Usa --todos para las dos grabaciones. Guarda registros y un resumen en resultados/comparaciones. También se puede ejecutar seguir.py --ventana 6. Los timestamps de cada ventana se trasladan al reloj global; se mantiene posición del cuento sin concatenar palabras de ventanas solapadas.
+
+Son tiempos orientativos de una ejecución por configuración, no un benchmark con repeticiones. La posición del prefijo tampoco es una referencia humana de precisión. No hay medición de latencia visual ni evaluación de errores lectores.
 
 ## Archivos conservados
 

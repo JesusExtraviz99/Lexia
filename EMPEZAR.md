@@ -78,6 +78,34 @@ Comprueba si llega al final, si se detiene con la repetición/omisión y si hay 
 
 Cada nueva versión se prueba localmente y se sube a GitHub después de la confirmación del usuario.
 
+## 7. Comparar ventanas acústicas con el prefijo completo
+
+```powershell
+.\.venv\Scripts\python.exe -u scripts\comparar_ventanas.py
+```
+
+Procesa la última grabación tres veces: prefijo completo, ventana de 6 s y ventana de 10 s. Mantiene bloques de 2 s, modelo, CPU, VAD y seguidor. No usa audio futuro, no activa el micrófono y no descarga nada.
+
+Las ventanas se desplazan 2 s por actualización: solapamiento de 4 s para la ventana de 6 y de 8 s para la de 10. Los tiempos de cada hipótesis se trasladan al reloj global del audio. Las palabras solapadas no se concatenan ni se cuentan como nuevos intentos lectores.
+
+Guarda un resumen comparativo y los historiales de cada método en resultados/comparaciones, dentro de una carpeta por ejecución. La posición previa del cuento se mantiene entre ventanas. No se fusiona todavía una transcripción final de ventanas.
+
+Para comparar ambas grabaciones:
+
+```powershell
+.\.venv\Scripts\python.exe -u scripts\comparar_ventanas.py --todos
+```
+
+Para probar únicamente una ventana de 6 s:
+
+```powershell
+.\.venv\Scripts\python.exe -u scripts\seguir.py --ventana 6
+```
+
+Revisa el total de procesamiento, las inferencias que superan 2 s, la cola simulada y las posiciones por bloque. Llegar al final no demuestra que el seguimiento temporal sea preciso. La comparación usa una ejecución por método en orden fijo: es orientativa y no controla calentamiento ni carga del ordenador.
+
+Los cambios de esta comparación quedan locales hasta que los pruebes y autorices subirlos.
+
 ## Entorno
 
 Python 3.12 aislado en .tools/python; entorno en .venv. No hace falta activarlo: los comandos usan directamente su ejecutable. Librerías en requirements.txt; versiones completas en requirements-lock.txt tras la instalación. Modelo multilingüe small en modelos/faster-whisper-small, ejecución inicial CPU int8.

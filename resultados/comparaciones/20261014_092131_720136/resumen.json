@@ -1,0 +1,65 @@
+{
+  "block_seconds": 2,
+  "windows_seconds": [
+    0,
+    6,
+    10
+  ],
+  "notice": "Una ejecución por configuración en orden fijo. Tiempos orientativos, afectados por carga y calentamiento. No hay referencia humana de posición ni latencia visual. Comparar posiciones entre métodos no demuestra precisión.",
+  "runs": [
+    {
+      "audio": "lectura_20261014_082953_219058.wav",
+      "method": "prefijo",
+      "window_seconds": 0,
+      "record_file": "lectura_20261014_082953_219058_prefijo.json",
+      "updates": 15,
+      "processing_total_seconds": 53.17490439955145,
+      "processing_median_seconds": 3.462006499990821,
+      "processing_p95_seconds": 6.074575899867341,
+      "audio_reprocessed_total_seconds": 240.0,
+      "over_block_updates": 10,
+      "max_backlog_seconds_simulated": 21.044927599839866,
+      "final_ready_seconds_simulated": 56.890138699673116,
+      "final_position": 56,
+      "first_final_position_audio_seconds": 24.0,
+      "backward_moves": 0,
+      "holds": 4
+    },
+    {
+      "audio": "lectura_20261014_082953_219058.wav",
+      "method": "ventana_6s",
+      "window_seconds": 6,
+      "record_file": "lectura_20261014_082953_219058_ventana_6s.json",
+      "updates": 15,
+      "processing_total_seconds": 29.5121828999836,
+      "processing_median_seconds": 2.0954259000718594,
+      "processing_p95_seconds": 2.3646774999797344,
+      "audio_reprocessed_total_seconds": 84.0,
+      "over_block_updates": 11,
+      "max_backlog_seconds_simulated": 2.149084100034088,
+      "final_ready_seconds_simulated": 32.14105620002374,
+      "final_position": 56,
+      "first_final_position_audio_seconds": 24.0,
+      "backward_moves": 0,
+      "holds": 4
+    },
+    {
+      "audio": "lectura_20261014_082953_219058.wav",
+      "method": "ventana_10s",
+      "window_seconds": 10,
+      "record_file": "lectura_20261014_082953_219058_ventana_10s.json",
+      "updates": 15,
+      "processing_total_seconds": 33.217998600332066,
+      "processing_median_seconds": 2.3212568000890315,
+      "processing_p95_seconds": 2.653037700103596,
+      "audio_reprocessed_total_seconds": 130.0,
+      "over_block_updates": 10,
+      "max_backlog_seconds_simulated": 4.309112300164998,
+      "final_ready_seconds_simulated": 35.96143800020218,
+      "final_position": 56,
+      "first_final_position_audio_seconds": 24.0,
+      "backward_moves": 0,
+      "holds": 4
+    }
+  ]
+}

@@ -1,9 +1,15 @@
 import unittest
-from scripts.seguir import Tracker, locate
+from scripts.seguir import Tracker, locate, audio_bounds
 from scripts.alinear import tokens
 
 
 class TrackingTests(unittest.TestCase):
+    def test_window_limits_and_overlap(self):
+        self.assertEqual(audio_bounds(4*16000, 6), (0, 4*16000))
+        self.assertEqual(audio_bounds(12*16000, 6), (6*16000, 12*16000))
+        self.assertEqual(audio_bounds(14*16000, 6), (8*16000, 14*16000))
+        self.assertEqual(audio_bounds(12*16000, 0), (0, 12*16000))
+
     def test_omission_and_substitution_do_not_block(self):
         story = tokens("la mariposa voló despacio y se posó sobre una flor")
         result = locate(story, tokens("la mariposa voló y se posó sobre una flor"))

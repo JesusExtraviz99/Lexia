@@ -15,6 +15,11 @@ except ImportError:
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def audio_bounds(end, window_seconds, sample_rate=16000):
+    """Intervalo [inicio, fin) sin audio futuro; 0 significa prefijo completo."""
+    return (max(0, end-round(window_seconds*sample_rate)) if window_seconds else 0, end)
+
+
 def locate(story, hypothesis, previous=0, before=12, after=24, global_search=False):
     """Alinea las últimas 8 palabras ASR contra un fragmento del cuento.
 
@@ -98,9 +103,13 @@ def main():
     parser.add_argument("audio", nargs="?", type=Path)
     parser.add_argument("--bloque", type=float, default=2.0, help="Segundos entre actualizaciones (por defecto 2).")
     parser.add_argument("--cuento", type=Path, default=ROOT / "datos/textos/lectura_01.txt")
+    parser.add_argument("--ventana", type=float, default=0, help="Audio a reprocesar en segundos; 0 conserva los prefijos completos.")
+    parser.add_argument("--salida", type=Path, help="Ruta del registro JSON, usada en comparaciones.")
     args = parser.parse_args()
     if not math.isfinite(args.bloque) or not 0.5 <= args.bloque <= 10:
         parser.error("El bloque debe estar entre 0.5 y 10 segundos.")
+    if not math.isfinite(args.ventana) or (args.ventana != 0 and not args.bloque <= args.ventana <= 120):
+        parser.error("La ventana debe ser 0 o estar entre la duración del bloque y 120 segundos.")
     if args.audio is None:
         files = sorted((ROOT / "datos/audio").glob("*.wav"))
         if not files:
@@ -132,30 +141,35 @@ def main():
     ready = 0.0
     folder = ROOT / "resultados/seguimiento"
     folder.mkdir(parents=True, exist_ok=True)
-    path = folder / f"{args.audio.stem}_{datetime.now():%Y%m%d_%H%M%S_%f}_seguimiento.json"
+    path = args.salida or folder / f"{args.audio.stem}_{datetime.now():%Y%m%d_%H%M%S_%f}_seguimiento.json"
+    path.parent.mkdir(parents=True, exist_ok=True)
     data = {"schema_version": 1, "audio_file": args.audio.name, "story_file": args.cuento.name,
             "story_words": story, "audio_seconds": len(audio)/16000, "block_seconds": args.bloque,
+            "audio_window_seconds": args.ventana, "overlap_seconds": max(0, args.ventana-args.bloque) if args.ventana else None,
             "model": "Systran/faster-whisper-small", "device": "cpu", "compute_type": "int8",
             "versions": {name: importlib.metadata.version(name) for name in ("faster-whisper", "av", "ctranslate2")},
             "model_load_seconds": load_seconds,
             "position_convention": "última palabra del cuento apoyada por coincidencia textual en la hipótesis",
-            "recognition": "prefijos acumulativos, sin audio futuro; beam_size=5, VAD activo",
+            "recognition": "ventana acústica limitada" if args.ventana else "prefijos acumulativos",
+            "asr_parameters": {"language": "es", "beam_size": 5, "vad_filter": True, "condition_on_previous_text": False},
             "notice": "Simulación posterior, no streaming nativo ni medida de latencia visual. Tiempos ASR estimados. Posiciones provisionales, sin valoración lectora.",
             "updates": records}
-    print("Simulación sin audio futuro. Se analiza un prefijo creciente cada", args.bloque, "s.")
+    print("Simulación sin audio futuro. Actualización cada", args.bloque, "s. Ventana:", args.ventana or "prefijo completo")
     print("La posición indica la última palabra apoyada por la hipótesis, no la palabra actual en directo.")
     previous_words = []
     for end in ends:
         cutoff = end/16000
+        begin, end = audio_bounds(end, args.ventana)
+        offset = begin/16000
         tick = perf_counter()
-        segments, _ = model.transcribe(audio[:end].copy(), language="es", beam_size=5,
+        segments, _ = model.transcribe(audio[begin:end].copy(), language="es", beam_size=5,
                                       word_timestamps=True, vad_filter=True,
                                       condition_on_previous_text=False)
         hypotheses = []
         for seg in segments:
             for w in seg.words or []:
                 for word in tokens(w.word):
-                    hypotheses.append({"word": word, "start": w.start, "end": w.end,
+                    hypotheses.append({"word": word, "start": w.start+offset, "end": w.end+offset,
                                        "probability": w.probability})
         processing = perf_counter()-tick
         heard = [w["word"] for w in hypotheses]
@@ -169,17 +183,20 @@ def main():
         start_simulated = max(cutoff, ready)
         ready = start_simulated+processing
         records.append({"audio_available_seconds": cutoff, "processing_seconds": processing,
+                        "audio_window_start_seconds": offset, "audio_window_end_seconds": cutoff,
+                        "audio_reprocessed_seconds": cutoff-offset,
                         "sequential_ready_seconds_simulated": ready,
                         "backlog_seconds_simulated": start_simulated-cutoff,
                         "hypothesis": hypotheses, **state})
         # Guardamos cada actualización para conservar progreso si se interrumpe.
         path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
-        print(f"Audio hasta {cutoff:5.1f}s | posición {state['position'] or '-'}: {state['word'] or '-'} | {processing:.2f}s | {state['mode']}")
+        print(f"Audio {offset:4.1f}-{cutoff:4.1f}s | posición {state['position'] or '-'}: {state['word'] or '-'} | {processing:.2f}s | {state['mode']}")
         print("  ASR:", " ".join(heard[-12:]))
     md_path = path.with_suffix(".md")
     lines = ["# Seguimiento progresivo simulado", "", data["notice"], "",
              "Convención: última palabra apoyada por coincidencia textual; no se califica pronunciación.", "",
-             "El audio se recorta antes de cada inferencia. El ASR vuelve a analizar el prefijo acumulado, por lo que puede revisar palabras anteriores.",
+             f"Audio por inferencia: {'últimos ' + str(args.ventana) + ' segundos' if args.ventana else 'prefijo completo'}. Bloque: {args.bloque} s. Sin audio futuro.",
+             "Las hipótesis de ventanas solapadas se alinean de forma independiente manteniendo el estado del seguidor. No se concatenan como una transcripción definitiva ni se cuentan intentos repetidos por el solapamiento.",
              "La cola secuencial simulada supone el modelo ya cargado y no mide transferencia ni pantalla.", "",
              "| Audio disponible (s) | Posición | Palabra | Movimiento | Procesamiento (s) | Cola simulada (s) | Modo |",
              "|---:|---:|---|---:|---:|---:|---|"]
