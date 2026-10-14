@@ -8,6 +8,7 @@ Trabajo inicial de prácticas y TFG: reconocimiento, seguimiento y evaluación d
 - Transcripción posterior con Whisper small, faster-whisper y CPU int8.
 - Registro de palabras, tiempos estimados y duración de procesamiento en JSON.
 - Alineamiento global posterior con el cuento e informes de diferencias candidatas.
+- Simulación de seguimiento por prefijos crecientes de audio, con historial de hipótesis y posición provisional.
 - Dos grabaciones adultas de depuración y resultados de las primeras pruebas.
 - Seguimiento incremental, subrayado y evaluación automática pendientes.
 
@@ -61,6 +62,16 @@ Comprobaciones del alineador:
 ```powershell
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 ```
+
+## Seguimiento progresivo experimental
+
+```powershell
+.\.venv\Scripts\python.exe -u scripts\seguir.py
+```
+
+Procesa el último WAV en cortes de dos segundos. El modelo solo recibe el prefijo disponible. El seguidor utiliza las últimas ocho palabras ASR, una ventana local y recuperación con confirmación; admite retrocesos. Guarda historial JSON e informe Markdown en resultados/seguimiento. Usa VAD, por lo que las hipótesis pueden diferir de las transcripciones anteriores sin VAD.
+
+La posición representa la última palabra apoyada por coincidencia textual; no mide palabra actual ni corrección lectora. El procesamiento repetido de prefijos es una base experimental, no streaming nativo. La cola secuencial estimada no incluye carga del modelo, captura ni pantalla. No se evalúa precisión temporal sin referencia humana. Grabaciones limitadas a 120 segundos.
 
 ## Archivos conservados
 

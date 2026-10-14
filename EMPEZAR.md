@@ -54,6 +54,30 @@ Para otro texto, añade --cuento seguido de la ruta de su archivo TXT. Los índi
 
 El informe muestra coincidencias, omisiones, inserciones, sustituciones y repeticiones candidatas. No decide si una diferencia corresponde al lector o al ASR. Las omisiones no reciben tiempos inventados; las palabras reconocidas conservan los tiempos estimados originales. Un fragmento eliminado por el ASR, como mari…, no se recupera comparando textos.
 
+## 6. Probar seguimiento progresivo con una grabación
+
+```powershell
+.\.venv\Scripts\python.exe -u scripts\seguir.py
+```
+
+Usa el último WAV. No activa el micrófono ni descarga modelos. Cada dos segundos de audio disponible vuelve a reconocer el prefijo acumulado, sin proporcionar el audio futuro al ASR. Se ejecuta como simulación, sin esperar los intervalos reales entre bloques.
+
+La posición es el índice de la última palabra del cuento apoyada por coincidencia textual. Puede retroceder al revisar la hipótesis; no equivale todavía a señalar la palabra que se pronuncia en ese instante. La primera palabra sola no basta para mover el indicador: se exigen al menos dos coincidencias.
+
+El seguidor compara las últimas ocho palabras de cada hipótesis dentro de una ventana local de hasta 12 palabras anteriores y 24 posteriores a su posición. Tolera algunas inserciones, omisiones y sustituciones. Una búsqueda global de recuperación exige dos posiciones candidatas consecutivas iguales; no se confirma con una hipótesis idéntica repetida en silencio. Estos umbrales son iniciales y no están validados con niños.
+
+Para reproducir la primera grabación:
+
+```powershell
+.\.venv\Scripts\python.exe -u scripts\seguir.py datos\audio\lectura_20261014_081816_009646.wav
+```
+
+Guarda un informe Markdown y el historial JSON en resultados/seguimiento. El historial conserva cada hipótesis, corte de audio, posición, movimiento, evidencia y tiempos de procesamiento. También estima la cola que se formaría procesando los bloques secuencialmente: no es una medición de latencia visual.
+
+Comprueba si llega al final, si se detiene con la repetición/omisión y si hay retrocesos o saltos inesperados. Una posición conservada durante silencio es esperable. Como reprocesa prefijos cada vez más largos, esta versión se limita a grabaciones de hasta 120 segundos y no es la arquitectura final para cuentos largos.
+
+Cada nueva versión se prueba localmente y se sube a GitHub después de la confirmación del usuario.
+
 ## Entorno
 
 Python 3.12 aislado en .tools/python; entorno en .venv. No hace falta activarlo: los comandos usan directamente su ejecutable. Librerías en requirements.txt; versiones completas en requirements-lock.txt tras la instalación. Modelo multilingüe small en modelos/faster-whisper-small, ejecución inicial CPU int8.
