@@ -290,9 +290,23 @@ El diario se actualiza durante el trabajo, sin necesitar una petición nueva par
 
 **Estado.** Lectura lenta propuesta; aún no hay un nuevo WAV ni resultados. Se registrarán incidencias y desviaciones reales que comunique el usuario. Los nuevos archivos quedarán locales hasta su revisión y autorización para publicar.
 
+## E016 · Informe de utilidad profesional y alcance grupal
+
+**Fecha:** 16/10/2026.
+
+**Petición.** El usuario informa de la finalización de un miniinforme en otro chat y autoriza subir los cambios del proyecto a GitHub.
+
+**Archivos revisados.** Nuevo [informe de necesidades de docentes y logopedas](Investigacion_necesidades_logopedas_docentes.md), cambios en README y ALCANCE. En esta publicación no se verifican de nuevo los estudios citados ni se modifican sus conclusiones.
+
+**Novedad de diseño.** Se documenta como objetivo final una lectura grupal con selección del lector desde la tablet docente, habilitación de un único micrófono y pausa/reanudación de sesión. La interrupción marcada por la profesora se diferencia del silencio del lector; el tiempo de lectura activa se separa del tiempo total. Estas funciones están propuestas, no implementadas.
+
+**Estado técnico.** El prototipo sigue trabajando con un lector y audio local. No se han cambiado los scripts de reconocimiento o seguimiento ni se han generado nuevas pruebas en esta revisión.
+
+**Siguiente prueba pendiente.** Lectura lenta del mismo cuento, sin pausa larga ni errores deliberados: grabar 60 s y comparar ventanas de 4 y 8 s con tres rondas, manteniendo el bloque de 2 s. Después queda la relectura de una frase. Los cambios de alcance no sustituyen estas comprobaciones del núcleo técnico.
+
 ## Formato de futuras entradas (plantilla)
 
-### E016 · Título del siguiente cambio o experimento
+### E017 · Título del siguiente cambio o experimento
 
 - Fecha y estado: propuesta / implementado / probado localmente / revisado por el usuario / publicado.
 - Objetivo o pregunta.

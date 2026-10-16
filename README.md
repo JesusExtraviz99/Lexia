@@ -2,6 +2,8 @@
 
 Trabajo inicial de prácticas y TFG: reconocimiento, seguimiento y evaluación de lectura oral en español.
 
+El objetivo final es la lectura asistida en grupo: la profesora selecciona al lector desde su tablet y solo se habilita el micrófono de ese alumno. Puede pausar la sesión para explicaciones u otras interrupciones, excluyendo ese intervalo del tiempo de lectura activa. Este control de turnos y pausa está definido en [el alcance](ALCANCE.md) y pendiente de implementación; el prototipo actual trabaja con un lector y audio local.
+
 ## Estado actual
 
 - Grabación de audio local en WAV.
@@ -15,6 +17,8 @@ Trabajo inicial de prácticas y TFG: reconocimiento, seguimiento y evaluación d
 La segunda prueba conserva una repetición y una omisión, pero elimina un intento truncado y sustituye silencio por cinesio según la referencia del lector. Los resultados no validan funcionamiento con alumnos ni puntuación de pronunciación.
 
 ## Documentación
+
+- [Investigación sobre necesidades de logopedas y docentes](docs/Investigacion_necesidades_logopedas_docentes.md).
 
 - [Diario de desarrollo y experimentación](docs/DIARIO_DESARROLLO.md).
 - [Informe de investigación](docs/Informe%20Lectura%20Asistida%20Prototipo.md).
