@@ -31,6 +31,7 @@ La segunda prueba conserva una repetición y una omisión, pero elimina un inten
 - [Experimento ampliado de ventanas](pruebas/05_ventanas_ampliadas.md).
 - [Pausa y protocolo de relectura](pruebas/06_protocolo_pausas_relecturas.md).
 - [Lectura lenta: bloqueos y regresión](pruebas/07_lectura_lenta.md).
+- [Relectura de una frase](pruebas/08_relectura_frase.md).
 
 ## Instalación reproducible en Windows
 

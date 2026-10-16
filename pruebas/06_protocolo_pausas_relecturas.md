@@ -1,6 +1,6 @@
 # Próxima prueba: ritmo lento, pausa y relectura
 
-Estado: pausa y lectura lenta ejecutadas por el usuario; relectura pendiente. Los resultados de pausa se resumen al final; la lectura lenta se documenta en pruebas/07_lectura_lenta.md.
+Estado: pausa, lectura lenta y relectura ejecutadas por el usuario. Los resultados de pausa se resumen al final; las lecturas lenta y repetida se documentan en las fichas 07 y 08.
 
 ## Pregunta
 

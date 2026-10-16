@@ -19,12 +19,13 @@ El diario se actualiza durante el trabajo, sin necesitar una petición nueva par
 - Probado también por el usuario: experimento ampliado de ventanas, con tres rondas sobre el mismo audio.
 - Probada por el usuario: grabación con pausa de unos 8 s y revisión humana del ruido de pájaros al final.
 - Probada por el usuario: lectura lenta, con bloqueos, regresión final y pico de procesamiento documentados.
-- Pendientes: relectura de una frase y referencia temporal de posición.
-- Publicación autorizada: lectura lenta, WAV, resultados y diario hasta E018. El commit de esta entrega se consulta en el historial de Git.
-- Próximo trabajo local: relectura de una frase del cuento, comparando ventanas de 4 y 8 s; todavía no ejecutada.
+- Probada por el usuario: relectura de una frase; completado el primer recorrido de cinco casos adultos.
+- Pendientes: organización del banco de pruebas y referencia humana literal/temporal.
+- Publicación autorizada: relectura, WAV, resultados y diario hasta E020; primer ciclo de cinco casos adultos conservado. El commit de esta entrega se consulta en el historial de Git.
+- Próximo trabajo local: referencias y métricas de calidad para comparar configuraciones sin limitarse a tiempos y posición final.
 - Configuración pendiente de selección: 4 s reduce coste en las primeras lecturas, pero se bloquea al final de la lectura lenta; 8 s alcanza el final y después retrocede, con un pico de procesamiento. Mantener ambas como comparación. Bloque de 2 s, modo predeterminado de prefijo sin cambios.
 - No implementados: subrayado visual, captura con seguimiento en directo y diagnóstico fiable de errores lectores.
-- Datos actuales: cuatro lecturas completas de un mismo adulto (normal, desviaciones, pausa y lenta), con un cuento de 56 palabras. No permiten conclusiones sobre lectura infantil ni generalización a otros textos.
+- Datos actuales: cinco lecturas de un mismo adulto (normal, desviaciones, pausa, lenta y relectura), con un cuento de 56 palabras. No permiten conclusiones sobre lectura infantil ni generalización a otros textos.
 
 ## E001 · Del informe al primer prototipo
 
@@ -335,9 +336,39 @@ El diario se actualiza durante el trabajo, sin necesitar una petición nueva par
 
 **Estado.** Prueba de relectura propuesta, todavía sin audio ni resultados. Los nuevos archivos permanecerán locales hasta su revisión y autorización de publicación.
 
+## E019 · Relectura: conservar el intento no equivale a representar su recorrido
+
+**Fecha:** 16/10/2026. Prueba del usuario, JSON revisados. Nuevos archivos locales, sin autorización para publicar.
+
+**Configuración.** WAV lectura_20261016_104151_933317, 60 s. Ventanas 4/8 s, bloque 2 s, tres rondas, mismo ASR/VAD/seguidor. Consigna: repetir Los dos se quedaron en silencio. [Ficha](../pruebas/08_relectura_frase.md) e [informe](../resultados/comparaciones/20261016_104206_415649/resumen.md).
+
+**Resultados.** Totales medios 26,21 s (4 s) y 31,49 s (8 s), 0/90 inferencias superiores a 2 s por ventana y cola simulada cero. Las seis ejecuciones alcanzan cuaderno al corte de 30 s y lo mantienen. Las posiciones se reproducen entre rondas.
+
+**Repetición.** Ambas hipótesis muestran la frase repetida. En cortes de 20/22/24 s, la ventana 4 señala 42/41/45 y la de 8 señala 42/42/45. En 8 s se rechaza la evidencia del corte de 22 s (cuatro coincidencias de ocho, coste cuatro), por lo que conserva la última posición. En 4 s se acepta un retroceso de una palabra, que no demuestra representar todo el retorno al inicio del fragmento. No hay referencia humana temporal para puntuar el recorrido.
+
+**Aprendizaje.** Reconocimiento de la repetición, representación visual de retroceso y evaluación lectora no son equivalentes. Menos retrocesos no significa necesariamente mejor seguimiento; deben distinguirse relecturas reales y regresiones del ASR, como la observada al final de la lectura lenta.
+
+**Decisión.** Primer ciclo de cinco casos adultos completado. Pasar a organizar el banco y añadir referencias humanas literales y temporales antes de modificar reglas o comparar modelos/ayudas. No elegir una ventana definitiva solo por coste o por llegar al final. La posible influencia de ruido al final de la lectura lenta sigue sin comprobarse específicamente; no se extrapola la revisión de pájaros del audio de pausa.
+
+## E020 · Cerrar la base inicial y preparar evaluación con referencia humana
+
+**Fecha:** 16/10/2026.
+
+**Autorización.** El usuario pide subir la relectura y sus resultados y concretar el siguiente trabajo. Se conservan la quinta grabación, las seis ejecuciones y sus resúmenes sin modificar ASR ni seguidor.
+
+**Siguiente fase propuesta.** Catalogar los cinco WAV por caso y configuración. Crear una referencia literal de lo pronunciado, incluyendo repeticiones, fragmentos, autocorrecciones y habla ajena al cuento, y una referencia temporal de palabras/eventos revisada por escucha. Comenzar por un audio para acordar las reglas antes de anotar los demás.
+
+**Criterio.** Las referencias no se obtienen tomando el cuento ni el JSON ASR como verdad. Las ayudas automáticas de transcripción/alineamiento solo podrán ser borradores explícitos y necesitarán revisión humana. Registrar incertidumbre, intervalos de silencio/ruido y pronunciaciones ambiguas sin inventar palabras o tiempos.
+
+**Objetivo.** Poder medir diferencias de transcripción, preservación de intentos, posición y recuperación en tramos revisados; posteriormente calcular retraso con el reloj de disponibilidad simulado, separado de la precisión de posición y de la futura latencia visual. Los tiempos ASR actuales no son referencia temporal humana.
+
+**Decisión.** No seguir eligiendo combinaciones por velocidad y posición final solamente. Preparar primero referencias y métricas, conservar una base sin cambios y después comparar reconocedores y ayudas de audio. Añadir grabaciones nuevas reservadas para comprobar las decisiones, sin presentarlas como independientes si se usan para ajustar parámetros.
+
+**Estado.** Plan propuesto; referencias humanas y evaluador aún pendientes. No se afirma disponer ya de métricas de precisión temporal ni validación infantil.
+
 ## Formato de futuras entradas (plantilla)
 
-### E019 · Título del siguiente cambio o experimento
+### E021 · Título del siguiente cambio o experimento
 
 - Fecha y estado: propuesta / implementado / probado localmente / revisado por el usuario / publicado.
 - Objetivo o pregunta.
