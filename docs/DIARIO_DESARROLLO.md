@@ -18,12 +18,13 @@ El diario se actualiza durante el trabajo, sin necesitar una petición nueva par
 - Probados por el usuario: grabación/transcripción, alineamiento, seguimiento por prefijos y comparación de ventanas de 6 y 10 s.
 - Probado también por el usuario: experimento ampliado de ventanas, con tres rondas sobre el mismo audio.
 - Probada por el usuario: grabación con pausa de unos 8 s y revisión humana del ruido de pájaros al final.
-- Pendientes: lecturas lenta y con relectura, y referencia temporal de posición.
-- Publicación autorizada: prueba de pausa, WAV, resultados y diario hasta E015. El commit de esta entrega se consulta en el historial de Git.
-- Próximo trabajo local: lectura lenta del mismo cuento, comparando ventanas de 4 y 8 s; todavía no ejecutada.
-- Candidato principal provisional: ventana de 4 s tras la reproducción del usuario; conservar 8 s como alternativa con más contexto y 6 s como referencia. Actualización cada 2 s. El modo por defecto sigue siendo prefijo completo.
+- Probada por el usuario: lectura lenta, con bloqueos, regresión final y pico de procesamiento documentados.
+- Pendientes: relectura de una frase y referencia temporal de posición.
+- Publicación autorizada: lectura lenta, WAV, resultados y diario hasta E018. El commit de esta entrega se consulta en el historial de Git.
+- Próximo trabajo local: relectura de una frase del cuento, comparando ventanas de 4 y 8 s; todavía no ejecutada.
+- Configuración pendiente de selección: 4 s reduce coste en las primeras lecturas, pero se bloquea al final de la lectura lenta; 8 s alcanza el final y después retrocede, con un pico de procesamiento. Mantener ambas como comparación. Bloque de 2 s, modo predeterminado de prefijo sin cambios.
 - No implementados: subrayado visual, captura con seguimiento en directo y diagnóstico fiable de errores lectores.
-- Datos actuales: tres lecturas de un mismo adulto (normal, desviaciones y pausa), con un cuento de 56 palabras. No permiten conclusiones sobre lectura infantil ni generalización a otros textos.
+- Datos actuales: cuatro lecturas completas de un mismo adulto (normal, desviaciones, pausa y lenta), con un cuento de 56 palabras. No permiten conclusiones sobre lectura infantil ni generalización a otros textos.
 
 ## E001 · Del informe al primer prototipo
 
@@ -304,9 +305,39 @@ El diario se actualiza durante el trabajo, sin necesitar una petición nueva par
 
 **Siguiente prueba pendiente.** Lectura lenta del mismo cuento, sin pausa larga ni errores deliberados: grabar 60 s y comparar ventanas de 4 y 8 s con tres rondas, manteniendo el bloque de 2 s. Después queda la relectura de una frase. Los cambios de alcance no sustituyen estas comprobaciones del núcleo técnico.
 
+## E017 · La lectura lenta expone bloqueo, regresión y pico de coste
+
+**Fecha:** 16/10/2026. Ejecutado por el usuario; registros revisados. Nuevos archivos locales, sin autorización para publicar.
+
+**Configuración y evidencia.** WAV lectura_20261016_095108_269618, 90 s, ventanas 4/8 s, bloque 2 s, tres rondas. [Ficha](../pruebas/07_lectura_lenta.md) e [informe](../resultados/comparaciones/20261016_095252_869489/resumen.md). ASR y reglas sin cambios.
+
+**Resultados.** Ventana 4: total medio 68,74 s, 9/135 inferencias superiores a 2 s, cola máxima media simulada 2,03 s; termina en mariposa (53) sin alcanzar 56. Ventana 8: 93,29 s, 4/135, cola media 22,72 s; alcanza cuaderno (56) al corte de 78 s y retrocede a un (55) al corte de 80 s, al cambiar la hipótesis a en un jugaderno. Estos comportamientos se repiten en las tres rondas.
+
+**Mecanismo observado.** Con 4 s, Después aparece sola en el corte de 62 s: la regla mínima de dos coincidencias mantiene la posición. Pues volvieron tampoco supera los criterios en 64 s. Recupera al aparecer volvieron a casa. Al final, las hipótesis cortas/deformadas no permiten recuperar el final. Con 8 s, dos coincidencias antiguas en un bastan para aceptar una posición anterior tras perder cuaderno en la nueva hipótesis. Falta referencia humana que confirme el movimiento real del lector.
+
+**Pico reproducible.** Ventana 8, audio 2–10 s: 26,21/27,03/20,90 s de procesamiento y salida vacía. No se registra el desglose interno que permita atribuirlo a un componente. La mediana habitual de 1,6–1,8 s y el pequeño número de inferencias lentas ocultan una espera acumulada elevada.
+
+**Otra observación.** La ventana 4 genera y nos vemos en el próximo vídeo hasta la próxima en el corte de 76 s. Texto ajeno al cuento, posible alucinación pendiente de escucha; no extrapolar a esta grabación la confirmación de pájaros del audio anterior.
+
+**Decisión.** Revisar la preferencia por 4 s: ninguna configuración resuelve esta lectura completamente. Mantener el código para terminar la prueba base de relectura. Después comparar reglas que distingan revisiones de retrocesos reales, contexto insuficiente y tratamiento del pico de inferencia; no impedir todos los retrocesos. Registrar posiciones y costes extremos además del resultado final y la mediana.
+
+## E018 · Conservar el fallo de lectura lenta y probar un retroceso real
+
+**Fecha:** 16/10/2026.
+
+**Decisión.** El usuario autoriza publicar la lectura lenta y pasar a la siguiente prueba. Se conservan el WAV y los seis registros originales, incluidos el pico de inferencia, bloqueo en 53 y regresión de 56 a 55. No se cambian todavía reglas ni parámetros para corregirlos.
+
+**Siguiente experimento.** Leer normalmente el mismo cuento, repetir una vez Los dos se quedaron en silencio tras pronunciar ese fragmento, y continuar con mirando sus alas. Grabar 60 s; comparar ventanas 4 y 8 s, tres rondas, bloque de 2 s, mismo ASR y seguidor. No introducir omisiones ni errores deliberados adicionales.
+
+**Pregunta.** ¿El seguidor distingue un retroceso real del lector de una revisión del ASR? Revisar la hipótesis y las posiciones durante la relectura y la recuperación posterior. La actualización cada 2 s puede no representar todos los movimientos de una repetición breve; la ausencia de retroceso visible no basta para afirmar que la repetición no ocurrió.
+
+**Referencia.** El lector confirmará el fragmento realmente repetido y las desviaciones de la prueba. Se necesita escucha temporal para cuantificar precisión y recuperación. La lectura lenta queda como comparación de regresión automática, sin asumir que su retroceso final fue lector.
+
+**Estado.** Prueba de relectura propuesta, todavía sin audio ni resultados. Los nuevos archivos permanecerán locales hasta su revisión y autorización de publicación.
+
 ## Formato de futuras entradas (plantilla)
 
-### E017 · Título del siguiente cambio o experimento
+### E019 · Título del siguiente cambio o experimento
 
 - Fecha y estado: propuesta / implementado / probado localmente / revisado por el usuario / publicado.
 - Objetivo o pregunta.

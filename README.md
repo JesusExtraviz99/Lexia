@@ -29,6 +29,8 @@ La segunda prueba conserva una repetición y una omisión, pero elimina un inten
 - [Seguimiento progresivo](pruebas/03_seguimiento_progresivo.md).
 - [Primera comparación de ventanas](pruebas/04_comparacion_ventanas.md).
 - [Experimento ampliado de ventanas](pruebas/05_ventanas_ampliadas.md).
+- [Pausa y protocolo de relectura](pruebas/06_protocolo_pausas_relecturas.md).
+- [Lectura lenta: bloqueos y regresión](pruebas/07_lectura_lenta.md).
 
 ## Instalación reproducible en Windows
 

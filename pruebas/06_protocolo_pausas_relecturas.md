@@ -1,6 +1,6 @@
 # Próxima prueba: ritmo lento, pausa y relectura
 
-Estado: prueba de pausa ejecutada por el usuario; lectura lenta y relectura pendientes. Los resultados de pausa se resumen al final.
+Estado: pausa y lectura lenta ejecutadas por el usuario; relectura pendiente. Los resultados de pausa se resumen al final; la lectura lenta se documenta en pruebas/07_lectura_lenta.md.
 
 ## Pregunta
 
@@ -56,4 +56,4 @@ Esta confirmación cubre el final (cortes 36/38 s para ventana 4 y 40/42 s para 
 
 Leer el mismo cuento más despacio, intentando una duración de unos 40–50 s, sin pausa larga ni errores deliberados y sin separar artificialmente cada palabra. Grabar 60 s y comparar ventanas 4 y 8 s, tres rondas, con los comandos anteriores. Si se necesita más tiempo, grabar 90 s. Anotar cualquier desviación real y revisar las posiciones intermedias, no únicamente el final.
 
-La pregunta es si una ventana de 4 s mantiene suficientes palabras de contexto para seguir una lectura lenta, frente a una de 8 s. La prueba aún no está ejecutada.
+La pregunta es si una ventana de 4 s mantiene suficientes palabras de contexto para seguir una lectura lenta, frente a una de 8 s. Prueba ejecutada el 16/10/2026: 4 s termina bloqueada en 53; 8 s alcanza 56 y después retrocede a 55, con un pico grave de procesamiento. Véase la ficha 07. No se cambia el código antes de completar la relectura.
