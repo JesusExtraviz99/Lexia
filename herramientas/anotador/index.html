@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Lexia · Anotación temporal</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body><main>
+<header><div><p class="eyebrow">LEXIA · BANCO DE PRUEBAS</p><h1>Escuchar y marcar palabras</h1><p>Lectura normal · 40 segundos · revisión temporal por escucha</p></div><button id="save" class="primary" disabled>Guardar progreso</button></header>
+<section class="intro"><strong>Empezamos por la primera frase: palabras 1–9.</strong><p>Selecciona una palabra, escucha su fragmento y ajusta sus límites. Marca «Revisada por escucha» solo después de oírla. Los tiempos ASR son un borrador; no se validan automáticamente.</p></section>
+<div id="status" role="status">Cargando audio y referencia…</div>
+<section class="audio-panel"><audio id="audio" controls preload="metadata" src="/audio"></audio><label>Velocidad <select id="speed"><option value="0.4">0,4×</option><option value="0.6">0,6×</option><option value="0.8">0,8×</option><option value="1" selected>1×</option></select></label><output id="clock">0,00 s</output></section>
+<section aria-label="Onda completa"><div class="row"><h2>Vista general</h2><span>Haz clic para situarte en el audio</span></div><canvas id="overview" aria-label="Onda de los 40 segundos" tabindex="0"></canvas></section>
+<div class="columns"><section class="editor"><div class="row"><h2 id="word-title">Selecciona una palabra</h2><span id="progress">0/56 revisadas</span></div>
+<p id="window-label">Fragmento ampliado</p><canvas id="detail" aria-label="Fragmento ampliado: clic marca inicio; Mayús y clic marca fin" tabindex="0"></canvas>
+<p class="hint">En la onda ampliada: clic = inicio; Mayús + clic = fin. También puedes escribir los tiempos.</p>
+<div class="fields"><label>Inicio (s)<input id="start" type="number" min="0" max="40" step="0.01"></label><label>Fin (s)<input id="end" type="number" min="0" max="40" step="0.01"></label><label>Contexto al escuchar<select id="context"><option value="0">Solo palabra</option><option value="0.15" selected>±0,15 s</option><option value="0.4">±0,40 s</option></select></label></div>
+<div class="buttons"><button id="play" class="primary">Escuchar fragmento</button><button id="loop" aria-pressed="false">Repetir: no</button><button id="mark-start">Inicio aquí</button><button id="mark-end">Fin aquí</button></div>
+<div class="buttons"><button id="previous">← Anterior</button><button id="next">Siguiente →</button><button id="focus">Centrar en palabra</button></div>
+<label class="check"><input id="reviewed" type="checkbox"> Revisada por escucha</label><p id="origin" class="hint"></p>
+<label>Observación o duda<input id="note" type="text" maxlength="1000" placeholder="Ejemplo: límite difícil de separar de la siguiente palabra"></label>
+<p class="hint">Incluye todos los sonidos audibles de la palabra. Conserva los huecos de silencio. Si cambias un límite, tendrás que revisar de nuevo esa palabra. La precisión del control no garantiza precisión acústica.</p>
+</section><section class="words-panel"><div class="row"><h2>Palabras del cuento</h2><button id="draft">Cargar borrador ASR</button></div><p class="hint">Sin marcar · borrador/pendiente · revisada. Las revisadas llevan ✓.</p><div id="words"></div><p id="draft-status" class="hint"></p></section></div>
+<footer>El progreso se guarda en <code>datos/anotaciones/lectura_normal.json</code>, separado de la referencia literal y con copias de seguridad. Esta herramienta no publica datos ni activa el micrófono.</footer>
+</main></body></html>

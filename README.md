@@ -32,6 +32,8 @@ La segunda prueba conserva una repetición y una omisión, pero elimina un inten
 - [Pausa y protocolo de relectura](pruebas/06_protocolo_pausas_relecturas.md).
 - [Lectura lenta: bloqueos y regresión](pruebas/07_lectura_lenta.md).
 - [Relectura de una frase](pruebas/08_relectura_frase.md).
+- [Referencias humanas del banco](datos/referencias/LEEME.md).
+- [Reproductor de anotación temporal](herramientas/anotador/LEEME.md).
 
 ## Instalación reproducible en Windows
 

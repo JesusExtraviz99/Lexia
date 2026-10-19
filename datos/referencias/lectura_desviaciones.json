@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "recording_id": "lectura_desviaciones",
+  "audio_file": "datos/audio/lectura_20261014_082953_219058.wav",
+  "audio_sha256": "936e41098628c1e1687f438ee7bed23c3e2ee1a68fd417866a6cf60037a35625",
+  "status": "transcripcion_validada_tiempos_pendientes",
+  "transcript_literal": "Una mañana, Ana, Ana salió al jardín de su casa. Cerca de un árbol encontró una mariposa azul. La mariposa voló y se posó sobre una flor. Ana llamó a su hermano para que pudiera verla. Los dos se quedaron en silencio, mirando sus alas. Después volvieron a casa y dibujaron la mari… mariposa en un cuaderno.",
+  "transcript_reviewed_by": "usuario_lector",
+  "transcript_review_date": "2026-10-16",
+  "validation_source": "El usuario confirma por escucha las tres diferencias y describe silencio como comprensible, aunque poco claro.",
+  "timing_status": "sin_anotar",
+  "word_intervals": [],
+  "reading_events": [
+    {
+      "type": "repeticion",
+      "story_index": 3,
+      "expected": "Ana",
+      "spoken": "Ana, Ana",
+      "start": null,
+      "end": null,
+      "source": "confirmacion_usuario"
+    },
+    {
+      "type": "omision",
+      "story_index": 21,
+      "expected": "despacio",
+      "spoken": null,
+      "start": null,
+      "end": null,
+      "source": "confirmacion_usuario"
+    },
+    {
+      "type": "fragmento_seguido_de_autocorreccion",
+      "story_index": 53,
+      "expected": "mariposa",
+      "spoken": "mari… mariposa",
+      "fragment": "mari",
+      "start": null,
+      "end": null,
+      "source": "confirmacion_usuario"
+    }
+  ],
+  "pronunciation_observations": [
+    {
+      "story_index": 42,
+      "lexical_word": "silencio",
+      "source": "escucha_usuario",
+      "description": "Pronunciación no del todo clara, pero el usuario considera que se entiende silencio.",
+      "phonetic_error_label": null,
+      "start": null,
+      "end": null
+    }
+  ],
+  "events": [
+    {
+      "type": "sonidos_de_pajaros",
+      "location": "intermitentes_durante_el_audio",
+      "start": null,
+      "end": null,
+      "source": "escucha_usuario"
+    },
+    {
+      "type": "ruidos_de_objetos",
+      "location": "despues_de_aproximadamente_24_s",
+      "start": null,
+      "end": null,
+      "source": "escucha_usuario",
+      "description": "Crujido de una silla y cierre de una mochila, muy notables."
+    }
+  ],
+  "uncertainties": [
+    "No se ha adjudicado una categoría de error fonético a silencio ni verificado de forma independiente su realización acústica.",
+    "Límites de eventos y palabras sin anotación temporal humana."
+  ],
+  "notice": "Referencia lexical confirmada por el lector; puntuación editorial. El fragmento mari debe conservarse como intento incompleto, no tratarse como palabra completa ni eliminarse en la evaluación. Observaciones de ruido sin aislar causalidad sobre errores del ASR."
+}

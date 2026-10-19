@@ -20,7 +20,7 @@ El diario se actualiza durante el trabajo, sin necesitar una petición nueva par
 - Probada por el usuario: grabación con pausa de unos 8 s y revisión humana del ruido de pájaros al final.
 - Probada por el usuario: lectura lenta, con bloqueos, regresión final y pico de procesamiento documentados.
 - Probada por el usuario: relectura de una frase; completado el primer recorrido de cinco casos adultos.
-- Pendientes: organización del banco de pruebas y referencia humana literal/temporal.
+- Banco de pruebas catalogado y cinco transcripciones literales confirmadas por escucha del usuario. Pendientes: tiempos humanos por palabra/evento y evaluador de calidad.
 - Publicación autorizada: relectura, WAV, resultados y diario hasta E020; primer ciclo de cinco casos adultos conservado. El commit de esta entrega se consulta en el historial de Git.
 - Próximo trabajo local: referencias y métricas de calidad para comparar configuraciones sin limitarse a tiempos y posición final.
 - Configuración pendiente de selección: 4 s reduce coste en las primeras lecturas, pero se bloquea al final de la lectura lenta; 8 s alcanza el final y después retrocede, con un pico de procesamiento. Mantener ambas como comparación. Bloque de 2 s, modo predeterminado de prefijo sin cambios.
@@ -366,9 +366,127 @@ El diario se actualiza durante el trabajo, sin necesitar una petición nueva par
 
 **Estado.** Plan propuesto; referencias humanas y evaluador aún pendientes. No se afirma disponer ya de métricas de precisión temporal ni validación infantil.
 
+## E021 · Catalogación y primera plantilla de referencia
+
+**Fecha:** 16/10/2026.
+
+**Objetivo.** Preparar una base común para medir calidad de reconocimiento y seguimiento, empezando por la lectura normal.
+
+**Cambios.** Se crea datos/referencias/catalogo.json con los cinco casos, rutas relativas, SHA-256, duración, frecuencia, canales y tamaño de muestra de los WAV. Se identifica un único adulto y se asignan todos a desarrollo porque ya se han utilizado en las decisiones anteriores. No se presenta ninguna ronda como participante ni un audio usado como prueba independiente.
+
+**Referencia humana.** Se crea lectura_normal.json con texto nulo y estado pendiente, sin importar la salida ASR como verdad. LEEME.md define la revisión literal por escucha y separa validación textual de anotación temporal. No se han inferido palabras ni tiempos humanos.
+
+**Siguiente acción del usuario.** Escuchar los 40 s de la lectura normal y confirmar qué se pronuncia, incluidos comentarios o fragmentos adicionales y ambiente al final. Aún no se piden tiempos por palabra. Se empezará por un audio para fijar reglas antes de extenderlas al resto.
+
+**Estado.** Preparación local; pendiente de revisión del usuario. No hay evaluador de precisión ni nuevas inferencias. Sin publicación.
+
+## E022 · Primera transcripción literal confirmada por escucha
+
+**Fecha:** 16/10/2026.
+
+**Referencia del usuario.** Tras escuchar la lectura normal, confirma que pronuncia exactamente el cuento, sin habla antes ni después. Indica ruido ambiental muy breve al inicio y, aproximadamente desde 23–24 s, silencio con ruido muy leve que apenas se percibe con auriculares.
+
+**Acción.** Se incorpora el texto del cuento como transcripción literal únicamente tras esa confirmación humana. Se registran revisor (usuario/lector), fecha, fuente y observaciones de ambiente. Se verifican los SHA-256 del WAV y del cuento contra el catálogo. La puntuación es editorial y no implica anotación fonética.
+
+**Límites.** Primer ruido sin duración medida: la expresión primer milisegundo se conserva como descripción del usuario, no como un intervalo exacto de 0,001 s. El fin estimado 23–24 s tampoco se usa como etiqueta temporal precisa. Los tiempos por palabra quedan vacíos y pendientes. Revisión del propio lector, no de un anotador independiente; los otros cuatro audios no quedan validados automáticamente.
+
+**Estado.** Una transcripción literal revisada, cero alineamientos temporales humanos. Cambios locales; sin publicación ni nuevas inferencias.
+
+## E023 · Referencia literal con desviaciones y pronunciación ambigua
+
+**Fecha:** 16/10/2026.
+
+**Confirmación humana.** El usuario confirma Ana, Ana, la omisión de despacio y mari… mariposa al final. Describe silencio como pronunciado con poca claridad, aunque comprensible como esa palabra. Informa pájaros intermitentes y ruidos notables de silla y cierre de mochila después de aproximadamente 24 s.
+
+**Acción.** Se crea datos/referencias/lectura_desviaciones.json con texto literal, tres eventos lectores separados e índices del cuento. Se conserva silencio como palabra de referencia con observación de pronunciación, sin asignar etiqueta de error fonético. Se verifica SHA-256 del WAV y se actualiza catálogo. Ruido y palabras quedan separados; sus tiempos humanos no se inventan.
+
+**Aprendizaje metodológico.** La salida cinesio difiere de la referencia lexical del usuario, pero su observación de articulación poco clara impide presentar este caso como pronunciación inequívocamente correcta o usarlo como diagnóstico fonético. El fragmento mari es un intento incompleto que debe preservarse al puntuar disfluencias, aunque un tokenizador pueda extraerlo como texto.
+
+**Estado.** Dos transcripciones revisadas por el propio lector, ninguna anotación temporal humana por palabra. Referencias locales; sin cambios del modelo ni publicación. Pendiente la revisión literal del audio con pausa, seguida de lenta y relectura.
+
+## E024 · Referencia lexical de lectura con pausa
+
+**Fecha:** 16/10/2026.
+
+**Confirmación humana.** El usuario confirma el cuento correcto y la pausa entre flor y Ana llamó. Describe ruido de silla al principio, otro ruido al final del silencio y solo silencio desde aproximadamente el segundo 31.
+
+**Acción.** Se crea datos/referencias/lectura_pausa.json, se verifica la identidad del WAV y se actualiza catálogo. La pausa queda vinculada a los índices 27/28 sin inventar tiempos. La duración de 8 s se conserva como estimación de la consigna y descripción previa, no medición humana.
+
+**Precisión de etiquetas.** Se registra ausencia de habla desde aproximadamente 31 s, pero no silencio acústico absoluto: en la revisión previa del mismo archivo el usuario describía pájaros al final. Se conservan ambas observaciones y su incertidumbre. La ubicación del ruido al final del silencio no se fuerza a un intervalo sin aclaración.
+
+**Estado.** Tres transcripciones literales confirmadas por el lector; tiempos humanos por palabra y límites de pausa pendientes. Faltan las lecturas lenta y repetida. Sin nuevas inferencias, cambios del modelo ni publicación.
+
+## E025 · Revisión humana del fallo final en lectura lenta
+
+**Fecha:** 16/10/2026.
+
+**Confirmación del usuario tras escucha.** Ritmo deliberadamente lento; cuaderno se pronuncia claramente. Desde aproximadamente 1:18 hay silencio con un pequeño ruido de silla, y otro al inicio. La frase y nos vemos en el próximo vídeo es inventada por el ASR: no se pronuncia ni hay habla de fondo. El usuario considera el ruido ambiental poco marcado.
+
+**Consecuencia sobre E017.** La ausencia de cuaderno en la ventana 4 y la pérdida de esa palabra tras reconocerla en ventana 8 son fallos respecto a la palabra final confirmada por el lector. No se explican como omisión lectora. La frase del vídeo pasa de candidata a salida inventada confirmada por escucha del usuario. No se atribuye el fallo a ruido leve sin un experimento controlado; el pico de 2–10 s sigue sin causa identificada.
+
+**Referencia.** Se crea datos/referencias/lectura_lenta.json y se verifica identidad del WAV. Observaciones confirmadas y estimaciones temporales separadas. Se conserva el resto del cuento como borrador, pendiente de confirmación literal explícita de que no hubo otras diferencias. No se rellenan tiempos de palabra ni se puntúa contra el borrador.
+
+**Estado.** Tres transcripciones completas revisadas, una revisión parcial y una pendiente. Sin cambios de código ni publicación.
+
+## E026 · Transcripción lenta completa confirmada
+
+**Fecha:** 16/10/2026.
+
+**Confirmación.** El usuario confirma explícitamente que toda la lectura lenta coincide con el cuento, sin cambios, omisiones ni repeticiones. La lentitud es deliberada.
+
+**Acción.** El borrador se convierte en transcripción literal revisada en lectura_lenta.json y se actualiza catálogo. Se conservan las observaciones previas de ruido, cuaderno y frase inventada del ASR. Los tiempos por palabra permanecen sin anotar.
+
+**Estado.** Cuatro transcripciones completas revisadas por el lector; queda la relectura. Referencias locales, sin publicación ni nuevas inferencias.
+
+## E027 · Relectura confirmada y cierre de referencias literales
+
+**Fecha:** 16/10/2026.
+
+**Confirmación humana.** El usuario confirma una repetición adicional exacta de Los dos se quedaron en silencio y coincidencia del resto con el cuento. Describe esta grabación como la más limpia, sin habla desde aproximadamente 30 s, con un ruido mínimo en los últimos segundos.
+
+**Acción.** Se crea lectura_relectura.json, se verifica SHA-256 y se actualiza catálogo. Se vinculan las dos apariciones al fragmento 37–42 del cuento, conservando el orden de los intentos. La puntuación es editorial; no se inventa duración de la pausa ni tiempos de los intentos.
+
+**Resultado de fase.** Cinco transcripciones literales revisadas por el propio lector. Se separan observaciones de ambiente y pronunciación de los eventos lectores. El banco es de desarrollo, un adulto y un cuento; la confirmación no constituye anotación independiente ni validación infantil.
+
+**Siguiente trabajo.** Preparar anotación temporal asistida, empezando por la lectura normal: escuchar fragmentos y revisar inicios/finales por palabra con posiciones globales. Las referencias temporales solo se considerarán revisadas después de escucha humana; cualquier propuesta automática conservará estado de borrador. Para relecturas, cada intento debe mantener índice de cuento e intervalo propio.
+
+**Estado.** Referencias locales, sin publicación. Cero alineamientos temporales humanos completos y ninguna nueva inferencia en esta revisión.
+
+## E028 · Reproductor de revisión temporal de la lectura normal
+
+**Fecha:** 16/10/2026.
+
+**Objetivo.** Revisar tiempos por escucha, empezando por una frase para fijar el flujo antes de anotar todo el cuento.
+
+**Implementación.** scripts/anotar.py sirve una interfaz local en 127.0.0.1. Reproducción del WAV original, velocidad, selección de palabra, contexto, repetición, onda general/ampliada, edición de inicio/fin, notas y estado de revisión. Primer alcance: lectura normal, palabras 1–9 de la primera frase.
+
+**Borrador explícito.** Los tiempos ASR se ofrecen opcionalmente solo cuando las palabras coinciden con el texto humano. Cargarlos no marca revisión. Cambiar límites desmarca la palabra. La procedencia ASR se conserva por palabra; esta ayuda puede introducir sesgo de anclaje y requiere escucha y posterior comprobación, idealmente independiente.
+
+**Datos.** Anotaciones guardadas en datos/anotaciones/lectura_normal.json, con copias de seguridad y validación de identidad, límites y orden. Los JSON de referencia literal y ASR permanecen intactos. Se rechazan tiempos inválidos, palabras alteradas y revisiones sin tiempos. La interfaz todavía no representa los intentos múltiples de otras grabaciones.
+
+**Comprobaciones.** Pasan 17 pruebas automáticas. En navegador se comprueban carga/onda, borrador, reproducción, guardado y recuperación. Se guarda un borrador técnico con cero palabras revisadas; no se presenta ninguna marca como humana. El programa no puede comprobar la escucha: esa revisión depende del usuario.
+
+**Estado.** Herramienta y referencias locales, sin publicación. Siguiente tarea: el usuario revisa por escucha las palabras Una mañana Ana salió al jardín de su casa, guarda y comunica si los límites son cómodos o ambiguos. La visualización de centésimas no implica precisión acústica de centésimas.
+
+## E029 · Reproducción a 0,4× para revisar límites
+
+**Fecha:** 19/10/2026.
+
+**Cambio.** Se añade 0,4× al selector de velocidad del anotador a petición del usuario, para facilitar la escucha de inicios y finales. Utiliza el control de velocidad existente; los tiempos de anotación siguen referidos al audio original. Opción comprobada en el HTML y conectada al manejador existente de playbackRate; pendiente de comprobación por escucha del usuario. Cambio local, sin publicación.
+
+## E030 · Revisión temporal completa de la lectura normal
+
+**Fecha:** 19/10/2026.
+
+**Resultado.** El usuario termina la revisión por escucha y quedan guardadas 56/56 palabras en datos/anotaciones/lectura_normal.json. Primera palabra: 1,79–2,00 s; última: 22,36–22,94 s. Nueve palabras conservan notas sobre dificultad para separar límites.
+
+**Comprobación.** Workspace.current() valida identidad del audio y texto, número e índices de palabras, límites, orden y estados de revisión sin errores. Esta comprobación es estructural; no sustituye una segunda escucha ni demuestra precisión acústica. Se conserva la procedencia de los tiempos propuestos por ASR y ajustados por el usuario.
+
+**Decisión.** Usar esta anotación como referencia de desarrollo revisada por el lector, con límites ambiguos identificados. No exigir anotación exhaustiva de todos los audios: priorizar intervalos representativos y eventos críticos, indicando la cobertura evaluada. Siguiente paso: comparar las posiciones del seguimiento con esta referencia y distinguir desfase del seguimiento y demora de procesamiento. Datos locales, sin publicación.
+
 ## Formato de futuras entradas (plantilla)
 
-### E021 · Título del siguiente cambio o experimento
+### E031 · Título del siguiente cambio o experimento
 
 - Fecha y estado: propuesta / implementado / probado localmente / revisado por el usuario / publicado.
 - Objetivo o pregunta.
