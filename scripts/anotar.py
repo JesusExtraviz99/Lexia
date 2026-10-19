@@ -59,6 +59,10 @@ def validate_annotation(payload, template):
     result["reviewed_words"] = sum(w["reviewed"] for w in result["words"])
     result["timing_status"] = "revision_usuario_completa" if result["reviewed_words"] == len(result["words"]) else "borrador_parcial"
     result["reviewer"] = "usuario_lector" if result["reviewed_words"] else None
+    if result.get('annotation_kind') == 'selected_intervals':
+        result['reviewed_intervals'] = result.pop('reviewed_words')
+        result['timing_status'] = ('revision_intervalos_seleccionados_completa'
+                                   if result['reviewed_intervals'] == len(result['words']) else 'borrador_parcial')
     result["saved_at_utc"] = datetime.now(timezone.utc).isoformat()
     return result
 
@@ -128,11 +132,59 @@ class Workspace:
                 backups = self.path.parent / "copias"
                 backups.mkdir(exist_ok=True)
                 stamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
-                shutil.copy2(self.path, backups / f"lectura_normal_{stamp}.json")
+                shutil.copy2(self.path, backups / f"{self.path.stem}_{stamp}.json")
             temporary = self.path.with_suffix(".tmp")
             temporary.write_text(json.dumps(result, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
             temporary.replace(self.path)
             return result
+
+
+EVENT_CASES = {
+    'pausa': ('lectura_pausa', 'Pausa entre flor y Ana',
+              'Marca flor antes de la pausa, Ana al retomar la lectura y cuaderno al final. Solo estas tres palabras.',
+              [('flor · antes de la pausa', [27, 27], 1, [6, 14]),
+               ('Ana · al retomar', [28, 28], 1, [18, 26]),
+               ('cuaderno · final', [56, 56], 1, [26, 34])]),
+    'lenta': ('lectura_lenta', 'Lectura lenta: puntos de pérdida y final',
+              'Marca únicamente Después, mariposa de la última frase, un y cuaderno. No anotes el resto del cuento.',
+              [('Después', [46, 46], 1, [56, 68]),
+               ('mariposa · última frase', [53, 53], 1, [66, 78]),
+               ('un · antes de cuaderno', [55, 55], 1, [70, 82]),
+               ('cuaderno · final', [56, 56], 1, [70, 82])]),
+    'relectura': ('lectura_relectura', 'Dos intentos de la misma frase',
+                 'Marca la frase entera Los dos se quedaron en silencio en su primer y segundo intento. Después marca mirando. Cada intento conserva el mismo tramo del cuento.',
+                 [('Los dos se quedaron en silencio · primer intento', [37, 42], 1, [12, 22]),
+                  ('Los dos se quedaron en silencio · segundo intento', [37, 42], 2, [16, 26]),
+                  ('mirando · después del segundo intento', [43, 43], 1, [20, 28])]),
+}
+
+
+class EventWorkspace(Workspace):
+    """Intervalos seleccionados; no representan una anotación de todas las palabras."""
+    def __init__(self, case, root=ROOT):
+        recording, title, instructions, targets = EVENT_CASES[case]
+        self.root, self.lock, self.nonce = root, threading.Lock(), secrets.token_urlsafe(24)
+        reference = json.loads((root / f'datos/referencias/{recording}.json').read_text(encoding='utf-8'))
+        self.audio = root / reference['audio_file']
+        digest = hashlib.sha256(self.audio.read_bytes()).hexdigest()
+        if digest != reference['audio_sha256']:
+            raise ValueError('El audio no coincide con la referencia validada.')
+        with wave.open(str(self.audio), 'rb') as wav:
+            duration = wav.getnframes() / wav.getframerate()
+        self.template = {'schema_version': 1, 'annotation_kind': 'selected_intervals',
+                         'recording_id': recording, 'title': title, 'instructions': instructions,
+                         'audio_file': reference['audio_file'], 'audio_sha256': digest,
+                         'transcript_sha256': hashlib.sha256(reference['transcript_literal'].encode('utf-8')).hexdigest(),
+                         'duration_seconds': duration, 'timing_status': 'borrador_parcial',
+                         'reviewed_intervals': 0,
+                         'coverage_notice': 'Solo intervalos seleccionados. Completar esta lista no significa anotar todo el audio. Las ventanas de orientación no son marcas humanas ni propuestas de inicio/fin.',
+                         'boundary_convention': 'Inicio audible y final audible de la palabra o frase completa de cada intento, en orden cronológico.',
+                         'words': [{'index': i + 1, 'word': label, 'story_range': indices, 'attempt': attempt,
+                                    'navigation_seconds': navigation, 'start': None, 'end': None,
+                                    'reviewed': False, 'note': '', 'timing_origin': 'sin_marcar'}
+                                   for i, (label, indices, attempt, navigation) in enumerate(targets)]}
+        self.path = root / f'datos/anotaciones/{recording}_fragmentos.json'
+        self.draft = None
 
 
 def make_handler(workspace):
@@ -224,7 +276,7 @@ def make_handler(workspace):
                     raise ValueError("Tamaño de petición incorrecto.")
                 payload = json.loads(self.rfile.read(size))
                 result = workspace.save(payload)
-                self.reply(200, {"annotation": result, "file": "datos/anotaciones/lectura_normal.json"})
+                self.reply(200, {"annotation": result, "file": workspace.path.relative_to(workspace.root).as_posix()})
             except (ValueError, KeyError, TypeError) as exc:
                 self.reply(400, {"error": str(exc)})
 
@@ -234,16 +286,17 @@ def make_handler(workspace):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--puerto", type=int, default=8765)
+    parser.add_argument('--caso', choices=['normal', *EVENT_CASES], default='normal')
     args = parser.parse_args()
     if not 0 <= args.puerto <= 65535:
         parser.error("Puerto incorrecto.")
     try:
-        workspace = Workspace()
+        workspace = Workspace() if args.caso == 'normal' else EventWorkspace(args.caso)
         server = ThreadingHTTPServer(("127.0.0.1", args.puerto), make_handler(workspace))
     except (OSError, ValueError) as exc:
         parser.error(str(exc))
     print(f"Abre http://127.0.0.1:{server.server_port}", flush=True)
-    print("Lectura normal. Guardado local en datos/anotaciones. Ctrl+C para cerrar.", flush=True)
+    print(f"Caso {args.caso}. Guardado local en datos/anotaciones. Ctrl+C para cerrar.", flush=True)
     try:
         server.serve_forever()
     except KeyboardInterrupt:

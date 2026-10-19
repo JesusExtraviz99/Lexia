@@ -41,4 +41,46 @@ Reproducción por fragmentos con contexto opcional, velocidad, repetición, onda
 
 17 pruebas automáticas pasan. Se comprobó en navegador carga de audio/onda, borrador, reproducción de un fragmento, guardado y recuperación. Durante la comprobación técnica se guardó un borrador con cero palabras revisadas; no se validó temporalmente ninguna palabra del usuario.
 
-Primera versión limitada a la lectura normal. Repeticiones y fragmentos requerirán una extensión que conserve cada intento con su índice del cuento e intervalo propio. No reutilizar esta interfaz sin esa adaptación para anotar los demás casos.
+El modo normal conserva las 56 palabras. Los modos siguientes revisan solo intervalos seleccionados, en archivos separados; no presentan una lista completada como anotación de todo el audio.
+
+## Fragmentos clave
+
+```powershell
+.\.venv\Scripts\python.exe -u scripts\anotar.py --caso pausa --puerto 8767
+```
+
+Abrir http://127.0.0.1:8767. Seleccionar cada elemento, escuchar la zona de orientación y marcar inicio/final con los campos, la onda o Inicio aquí / Fin aquí. Escuchar de nuevo el fragmento delimitado, marcar Revisado por escucha y guardar. Se mantiene la velocidad 0,4×. Las zonas de orientación no son propuestas de límites ni cuentan como anotación: los tiempos comienzan vacíos.
+
+- pausa: flor antes de la pausa (27), Ana al retomar (28), cuaderno (56). La pausa se podrá medir entre el final de flor y el inicio de Ana, sin inventar sus límites a partir del ASR.
+- lenta: Después (46), mariposa de la última frase (53), un (55), cuaderno (56). Sirven para revisar recuperación y final; no permiten evaluar posiciones en todo el audio.
+- relectura: frase completa Los dos se quedaron en silencio, intento 1 e intento 2 (ambos 37–42), y mirando (43). Cada intento conserva un intervalo cronológico independiente, aunque vuelva al mismo tramo del cuento. Los límites de la frase no permiten asignar tiempos a sus seis palabras interiores.
+
+Para cambiar de caso, parar el proceso con Ctrl+C y arrancar el mismo comando con --caso lenta o --caso relectura. Guardar antes de recargar. Los archivos son datos/anotaciones/lectura_pausa_fragmentos.json, lectura_lenta_fragmentos.json y lectura_relectura_fragmentos.json, con copias anteriores separadas. No se sobrescribe lectura_normal.json.
+
+El evaluador de lectura normal no consume estos intervalos; la evaluación de eventos se hará explícitamente cuando estén revisados. En el formato compartido, words contiene los elementos editables, pero annotation_kind=selected_intervals, story_range y attempt indican que son intervalos de cobertura parcial; reviewed_intervals cuenta elementos, no palabras. Solo se permiten tiempos ordenados, sin solapamiento y dentro del audio. La validación estructural no sustituye la escucha.
+
+Tras revisar las tres anclas del caso pausa, se pueden contrastar con sus seis registros existentes sin repetir inferencias:
+
+```powershell
+.\.venv\Scripts\python.exe -m scripts.evaluar_pausa resultados/comparaciones/20261014_111548_094194
+```
+
+Genera evaluacion_pausa.json/md: duración entre flor y Ana, posiciones por corte dentro de la pausa, posición visible simulada, primer avance después de retomar y demora final. La demora del primer avance se mide desde el final de Ana, pero no implica reconocer precisamente Ana: el seguidor puede saltar a una posición posterior. No se extrapola la posición humana fuera de la pausa ni se clasifica toda hipótesis no vacía como alucinación.
+
+Tras revisar las cuatro anclas de lectura lenta:
+
+```powershell
+.\.venv\Scripts\python.exe -m scripts.evaluar_lenta resultados/comparaciones/20261016_095252_869489
+```
+
+Genera evaluacion_lenta.json/md reutilizando las seis ejecuciones existentes. Entre anclas solo acota la posición posible sin asignar tiempos a palabras no anotadas; tras el final de cuaderno la referencia es 56. Conserva tanto la primera llegada al final como los retrocesos posteriores, y separa el corte de audio de la demora simulada de procesamiento. No calcula un error medio de todo el audio a partir de cuatro palabras.
+
+Tras revisar los dos intentos completos y mirando:
+
+```powershell
+.\.venv\Scripts\python.exe -m scripts.evaluar_relectura resultados/comparaciones/20261016_104206_415649
+```
+
+Genera evaluacion_relectura.json/md con los cortes próximos a ambos intentos, movimiento del seguidor, salidas listas simuladas y posición visible. No asigna tiempos a las palabras interiores ni considera que un retroceso de una palabra demuestre seguimiento completo de la relectura. Distingue una hipótesis calculada con audio de la relectura de una salida disponible mientras el lector aún la realiza.
+
+Comprobación de esta extensión: 23 pruebas automáticas pasan y app.js supera node --check. Revisión visual y de uso del nuevo modo pendiente del usuario.

@@ -1,0 +1,349 @@
+{
+  "notice": "Dos intentos completos y una palabra revisados por el lector, sin revisión independiente. No hay tiempos humanos de las seis palabras interiores: no se calcula error exacto de posición dentro de la frase ni demora de detección de su primer Los. Un retroceso pequeño no acredita seguir la frase completa desde su inicio. Se distingue el corte del audio del instante de salida lista según cola secuencial simulada, sin carga del modelo ni pantalla. Se reutilizan seis registros existentes, sin nuevas inferencias.",
+  "annotation_file": "datos/anotaciones/lectura_relectura_fragmentos.json",
+  "annotation_sha256": "9465e730681fee16b6f3b5a6ea157933cda4499ce6a8570e53c0a27657b14e09",
+  "runs": [
+    {
+      "file": "lectura_20261016_104151_933317_ventana_8s_r1.json",
+      "sha256": "ff00d017b4ebc749614e1aa307909d9e4c0b9e5a8c08ebfc7aa2ab44ff248b23",
+      "window_seconds": 8,
+      "repeat": 1,
+      "first_attempt_seconds": [
+        17.54,
+        19.84
+      ],
+      "second_attempt_seconds": [
+        20.36,
+        22.77
+      ],
+      "gap_seconds": 0.5199999999999996,
+      "samples": [
+        {
+          "audio_seconds": 18.0,
+          "phase": "primer_intento",
+          "position": 38,
+          "movement": 4,
+          "ready_seconds_simulated": 19.730701299999055,
+          "visible_position_simulated": 34,
+          "hypothesis_text": "voló despacio y se posó sobre una flor Ana llamó su hermano para que pudiera verla Los dos"
+        },
+        {
+          "audio_seconds": 20.0,
+          "phase": "entre_intentos",
+          "position": 42,
+          "movement": 4,
+          "ready_seconds_simulated": 21.75808429999961,
+          "visible_position_simulated": 38,
+          "hypothesis_text": "sobre una flor Anna llamó a su hermano para que pudiera verla Los dos se quedaron en silencio"
+        },
+        {
+          "audio_seconds": 22.0,
+          "phase": "segundo_intento",
+          "position": 42,
+          "movement": 0,
+          "ready_seconds_simulated": 23.847369699999035,
+          "visible_position_simulated": 42,
+          "hypothesis_text": "Ana llamó a su hermano para que pudiera verla Los dos se quedaron en silencio Los dos se quedaron"
+        },
+        {
+          "audio_seconds": 24.0,
+          "phase": "mirando_terminada",
+          "position": 45,
+          "movement": 3,
+          "ready_seconds_simulated": 25.747344299999895,
+          "visible_position_simulated": 42,
+          "hypothesis_text": "pudiera verla Los dos se quedaron en silencio Los dos se quedaron en silencio mirando sus alas"
+        }
+      ],
+      "second_attempt_cut_samples": 1,
+      "backward_hypotheses_with_cut_in_second_attempt": 0,
+      "backward_outputs_ready_during_second_attempt_simulated": 0,
+      "final_position": 56
+    },
+    {
+      "file": "lectura_20261016_104151_933317_ventana_4s_r1.json",
+      "sha256": "5a20473fa93a18e1cd14c8fd30420fdaae38467b894b83588313c1cce9a3eee6",
+      "window_seconds": 4,
+      "repeat": 1,
+      "first_attempt_seconds": [
+        17.54,
+        19.84
+      ],
+      "second_attempt_seconds": [
+        20.36,
+        22.77
+      ],
+      "gap_seconds": 0.5199999999999996,
+      "samples": [
+        {
+          "audio_seconds": 18.0,
+          "phase": "primer_intento",
+          "position": 36,
+          "movement": 2,
+          "ready_seconds_simulated": 19.665066800000204,
+          "visible_position_simulated": 34,
+          "hypothesis_text": "Lana llamó a su hermano para que pudiera verla"
+        },
+        {
+          "audio_seconds": 20.0,
+          "phase": "entre_intentos",
+          "position": 42,
+          "movement": 6,
+          "ready_seconds_simulated": 21.691950899999938,
+          "visible_position_simulated": 36,
+          "hypothesis_text": "pudiera verla Los dos se quedaron en silencio"
+        },
+        {
+          "audio_seconds": 22.0,
+          "phase": "segundo_intento",
+          "position": 41,
+          "movement": -1,
+          "ready_seconds_simulated": 23.645581100001436,
+          "visible_position_simulated": 42,
+          "hypothesis_text": "los dos se quedaron en silencio los dos se quedaron en"
+        },
+        {
+          "audio_seconds": 24.0,
+          "phase": "mirando_terminada",
+          "position": 45,
+          "movement": 4,
+          "ready_seconds_simulated": 25.663985799999864,
+          "visible_position_simulated": 41,
+          "hypothesis_text": "Los dos se quedaron en silencio mirando sus alas"
+        }
+      ],
+      "second_attempt_cut_samples": 1,
+      "backward_hypotheses_with_cut_in_second_attempt": 1,
+      "backward_outputs_ready_during_second_attempt_simulated": 0,
+      "final_position": 56
+    },
+    {
+      "file": "lectura_20261016_104151_933317_ventana_8s_r2.json",
+      "sha256": "671bd7b4990a485d83d0a6f5f8716c228e1ec25d23b5489561a95a34f6407c86",
+      "window_seconds": 8,
+      "repeat": 2,
+      "first_attempt_seconds": [
+        17.54,
+        19.84
+      ],
+      "second_attempt_seconds": [
+        20.36,
+        22.77
+      ],
+      "gap_seconds": 0.5199999999999996,
+      "samples": [
+        {
+          "audio_seconds": 18.0,
+          "phase": "primer_intento",
+          "position": 38,
+          "movement": 4,
+          "ready_seconds_simulated": 19.928579399998853,
+          "visible_position_simulated": 34,
+          "hypothesis_text": "voló despacio y se posó sobre una flor Ana llamó su hermano para que pudiera verla Los dos"
+        },
+        {
+          "audio_seconds": 20.0,
+          "phase": "entre_intentos",
+          "position": 42,
+          "movement": 4,
+          "ready_seconds_simulated": 21.831822199999806,
+          "visible_position_simulated": 38,
+          "hypothesis_text": "sobre una flor Anna llamó a su hermano para que pudiera verla Los dos se quedaron en silencio"
+        },
+        {
+          "audio_seconds": 22.0,
+          "phase": "segundo_intento",
+          "position": 42,
+          "movement": 0,
+          "ready_seconds_simulated": 23.96057440000004,
+          "visible_position_simulated": 42,
+          "hypothesis_text": "Ana llamó a su hermano para que pudiera verla Los dos se quedaron en silencio Los dos se quedaron"
+        },
+        {
+          "audio_seconds": 24.0,
+          "phase": "mirando_terminada",
+          "position": 45,
+          "movement": 3,
+          "ready_seconds_simulated": 25.847323899999537,
+          "visible_position_simulated": 42,
+          "hypothesis_text": "pudiera verla Los dos se quedaron en silencio Los dos se quedaron en silencio mirando sus alas"
+        }
+      ],
+      "second_attempt_cut_samples": 1,
+      "backward_hypotheses_with_cut_in_second_attempt": 0,
+      "backward_outputs_ready_during_second_attempt_simulated": 0,
+      "final_position": 56
+    },
+    {
+      "file": "lectura_20261016_104151_933317_ventana_4s_r2.json",
+      "sha256": "6d47793ef255e782efa2082802bc0ff8d243a645f1ad5023d54e7adb143ba0fa",
+      "window_seconds": 4,
+      "repeat": 2,
+      "first_attempt_seconds": [
+        17.54,
+        19.84
+      ],
+      "second_attempt_seconds": [
+        20.36,
+        22.77
+      ],
+      "gap_seconds": 0.5199999999999996,
+      "samples": [
+        {
+          "audio_seconds": 18.0,
+          "phase": "primer_intento",
+          "position": 36,
+          "movement": 2,
+          "ready_seconds_simulated": 19.698557899999287,
+          "visible_position_simulated": 34,
+          "hypothesis_text": "Lana llamó a su hermano para que pudiera verla"
+        },
+        {
+          "audio_seconds": 20.0,
+          "phase": "entre_intentos",
+          "position": 42,
+          "movement": 6,
+          "ready_seconds_simulated": 21.69371669999964,
+          "visible_position_simulated": 36,
+          "hypothesis_text": "pudiera verla Los dos se quedaron en silencio"
+        },
+        {
+          "audio_seconds": 22.0,
+          "phase": "segundo_intento",
+          "position": 41,
+          "movement": -1,
+          "ready_seconds_simulated": 23.721102999999857,
+          "visible_position_simulated": 42,
+          "hypothesis_text": "los dos se quedaron en silencio los dos se quedaron en"
+        },
+        {
+          "audio_seconds": 24.0,
+          "phase": "mirando_terminada",
+          "position": 45,
+          "movement": 4,
+          "ready_seconds_simulated": 25.65714939999998,
+          "visible_position_simulated": 41,
+          "hypothesis_text": "Los dos se quedaron en silencio mirando sus alas"
+        }
+      ],
+      "second_attempt_cut_samples": 1,
+      "backward_hypotheses_with_cut_in_second_attempt": 1,
+      "backward_outputs_ready_during_second_attempt_simulated": 0,
+      "final_position": 56
+    },
+    {
+      "file": "lectura_20261016_104151_933317_ventana_4s_r3.json",
+      "sha256": "982f0e612e15eae82cd8bf7ba6fef2b6fd903c2ef10f726ec41dae1e05f1ad5b",
+      "window_seconds": 4,
+      "repeat": 3,
+      "first_attempt_seconds": [
+        17.54,
+        19.84
+      ],
+      "second_attempt_seconds": [
+        20.36,
+        22.77
+      ],
+      "gap_seconds": 0.5199999999999996,
+      "samples": [
+        {
+          "audio_seconds": 18.0,
+          "phase": "primer_intento",
+          "position": 36,
+          "movement": 2,
+          "ready_seconds_simulated": 19.692392900000414,
+          "visible_position_simulated": 34,
+          "hypothesis_text": "Lana llamó a su hermano para que pudiera verla"
+        },
+        {
+          "audio_seconds": 20.0,
+          "phase": "entre_intentos",
+          "position": 42,
+          "movement": 6,
+          "ready_seconds_simulated": 21.61975100000018,
+          "visible_position_simulated": 36,
+          "hypothesis_text": "pudiera verla Los dos se quedaron en silencio"
+        },
+        {
+          "audio_seconds": 22.0,
+          "phase": "segundo_intento",
+          "position": 41,
+          "movement": -1,
+          "ready_seconds_simulated": 23.67226429999937,
+          "visible_position_simulated": 42,
+          "hypothesis_text": "los dos se quedaron en silencio los dos se quedaron en"
+        },
+        {
+          "audio_seconds": 24.0,
+          "phase": "mirando_terminada",
+          "position": 45,
+          "movement": 4,
+          "ready_seconds_simulated": 25.614336399999956,
+          "visible_position_simulated": 41,
+          "hypothesis_text": "Los dos se quedaron en silencio mirando sus alas"
+        }
+      ],
+      "second_attempt_cut_samples": 1,
+      "backward_hypotheses_with_cut_in_second_attempt": 1,
+      "backward_outputs_ready_during_second_attempt_simulated": 0,
+      "final_position": 56
+    },
+    {
+      "file": "lectura_20261016_104151_933317_ventana_8s_r3.json",
+      "sha256": "22bfb7571e489aab00ca4f50cdaaaaca1779fbfd4c405c335bf658f3e74d66c4",
+      "window_seconds": 8,
+      "repeat": 3,
+      "first_attempt_seconds": [
+        17.54,
+        19.84
+      ],
+      "second_attempt_seconds": [
+        20.36,
+        22.77
+      ],
+      "gap_seconds": 0.5199999999999996,
+      "samples": [
+        {
+          "audio_seconds": 18.0,
+          "phase": "primer_intento",
+          "position": 38,
+          "movement": 4,
+          "ready_seconds_simulated": 19.876676699999734,
+          "visible_position_simulated": 34,
+          "hypothesis_text": "voló despacio y se posó sobre una flor Ana llamó su hermano para que pudiera verla Los dos"
+        },
+        {
+          "audio_seconds": 20.0,
+          "phase": "entre_intentos",
+          "position": 42,
+          "movement": 4,
+          "ready_seconds_simulated": 21.80595220000032,
+          "visible_position_simulated": 38,
+          "hypothesis_text": "sobre una flor Anna llamó a su hermano para que pudiera verla Los dos se quedaron en silencio"
+        },
+        {
+          "audio_seconds": 22.0,
+          "phase": "segundo_intento",
+          "position": 42,
+          "movement": 0,
+          "ready_seconds_simulated": 23.903153699999166,
+          "visible_position_simulated": 42,
+          "hypothesis_text": "Ana llamó a su hermano para que pudiera verla Los dos se quedaron en silencio Los dos se quedaron"
+        },
+        {
+          "audio_seconds": 24.0,
+          "phase": "mirando_terminada",
+          "position": 45,
+          "movement": 3,
+          "ready_seconds_simulated": 25.814560900000288,
+          "visible_position_simulated": 42,
+          "hypothesis_text": "pudiera verla Los dos se quedaron en silencio Los dos se quedaron en silencio mirando sus alas"
+        }
+      ],
+      "second_attempt_cut_samples": 1,
+      "backward_hypotheses_with_cut_in_second_attempt": 0,
+      "backward_outputs_ready_during_second_attempt_simulated": 0,
+      "final_position": 56
+    }
+  ]
+}

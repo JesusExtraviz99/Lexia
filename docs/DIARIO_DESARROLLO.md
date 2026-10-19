@@ -498,9 +498,75 @@ El diario se actualiza durante el trabajo, sin necesitar una petición nueva par
 
 **Siguiente paso.** Revisar fragmentos críticos de pausa, lectura lenta y relectura con representación de intervalos e intentos adecuada antes de comparar ayudas de audio. No exigir otra anotación exhaustiva. Nuevo evaluador y experimento se conservan locales para revisión; no están en el commit publicado.
 
+## E032 · Publicación de la evaluación y revisión selectiva por eventos
+
+**Fecha:** 19/10/2026.
+
+**Publicado.** Commit d803551 en origin/main: evaluador de lectura normal, protocolo, nueve ejecuciones de 4/6/8 s y comparación con marcas humanas.
+
+**Nuevo cambio local.** El anotador admite --caso pausa, lenta y relectura. Se revisan respectivamente tres palabras clave, cuatro palabras clave y dos intentos de una frase más la palabra siguiente. Las frases repetidas conservan el mismo rango del cuento y distinto intento, con intervalos cronológicos propios. No se propone una posición palabra por palabra dentro de las frases. Los tiempos comienzan vacíos y las ventanas de orientación solo permiten navegar; no se validan automáticamente.
+
+**Datos y cobertura.** Archivos separados con sufijo _fragmentos.json y copias de seguridad por caso. Estado y contador específicos de intervalos seleccionados; completar la lista no equivale a anotar todo el audio. Se conserva sin cambios la anotación normal de 56 palabras. No se ejecuta todavía evaluación de eventos, pendiente de marcas humanas.
+
+**Comprobación.** Pasan 23 pruebas automáticas, incluyendo separación de archivos, guardado/recuperación, intentos repetidos con índices del cuento iguales y tiempos ordenados. app.js supera node --check. Nuevo modo pendiente de revisión visual y escucha del usuario. Servidor de pausa preparado en puerto 8767.
+
+**Siguiente acción del usuario.** Marcar flor antes de la pausa, Ana al retomar y cuaderno al final, revisar por escucha y guardar. Después calcular duración de la pausa y revisar el comportamiento del seguimiento en ese intervalo. Esta extensión permanece local.
+
+## E033 · Pausa medida con tres anclas humanas
+
+**Fecha:** 19/10/2026.
+
+**Referencia.** El usuario completa flor (11,37–11,88 s), Ana al retomar (21,20–21,50 s) y cuaderno (30,47–30,99 s). Se valida identidad y orden mediante EventWorkspace.current(). Cobertura parcial de tres palabras, sin interpolación de tiempos del resto del cuento. Pausa sin lectura: 11,88–21,20 s, duración 9,32 s; no equivale a ausencia de ruido.
+
+**Evaluación local.** scripts.evaluar_pausa contrasta los seis registros existentes en resultados/comparaciones/20261014_111548_094194 con estas anclas y guarda evaluacion_pausa.json/md con huellas de los archivos y de la anotación. No se ejecutan nuevas inferencias. Pasan tres pruebas nuevas: límites del intervalo, separación de salida visible/corte, datos incompatibles, referencia sin revisar y ausencia de avance/final.
+
+**Resultado.** En cada ejecución, posición de hipótesis 27 en los cinco cortes 12/14/16/18/20 s, concordantes con flor durante la pausa: 30/30 muestras entre las seis ejecuciones. La posición visible simulada coincide en 3/5 cortes por ejecución salvo una con 4/5, debido al retraso de procesamiento al inicio de la pausa. Primer avance tras retomar: corte 24 s, posición 36 en las seis ejecuciones; salida lista entre 4,29 y 4,53 s después del final humano de Ana. Esta demora no mide detección exacta de Ana ni precisión temporal de verla, que no está anotada. Primer corte con cuaderno: 32 s, con demora final simulada de 2,86–4,23 s respecto a 30,99 s. Todos los cortes posteriores al final mantienen 56.
+
+**Interpretación.** El seguidor mantiene la posición durante la pausa en las muestras observadas y recupera el avance después, con demora. Mantener la posición no implica que el texto ASR esté libre de invenciones. Las hipótesis no vacías pueden incluir audio anterior por solapamiento; no se atribuyen automáticamente a habla en la pausa. Solo tres anclas permiten estas métricas de evento, no un error medio de posición en todo el cuento.
+
+**Siguiente paso.** Revisar cuatro anclas del audio lento: Después, mariposa de la última frase, un y cuaderno. Servidor preparado en puerto 8768. Extensión, anotación y evaluación nuevas permanecen locales.
+
+## E034 · Lectura lenta: final humano y retroceso del seguidor
+
+**Fecha:** 19/10/2026.
+
+**Referencia.** Cuatro intervalos manuales revisados y validados estructuralmente: Después 59,38–61,42 s; mariposa de la última frase 70,40–72,73 s; un 74,26–75,01 s; cuaderno 75,14–77,34 s. Se conservan en lectura_lenta_fragmentos.json como cobertura parcial.
+
+**Evaluación local.** scripts.evaluar_lenta contrasta las seis ejecuciones de resultados/comparaciones/20261016_095252_869489 y guarda evaluacion_lenta.json/md con procedencia y huellas. No se ejecutan nuevas inferencias. Entre anclas se calculan cotas de posición según palabras terminadas, sin interpolar el resto. Las cotas pueden coincidir: por ejemplo, en el corte 76 s la última palabra terminada es un (55). Tras 77,34 s la referencia final es 56. Pasan dos pruebas nuevas que verifican cotas sin interpolación y que una llegada al final no oculte un retroceso posterior.
+
+**Resultados.** En las tres rondas de 4 s, Después está terminada en el corte 62 s pero el seguidor mantiene 45; lo mismo en 64 s, aunque la hipótesis ya contiene Después o Pues volvieron. En 66 s salta a 49; las anclas no permiten precisar el instante real de las palabras intermedias. En el corte 76 s la referencia exacta es 55 y la hipótesis del seguidor mantiene 53. Después del final humano, las siete actualizaciones 78–90 s se mantienen en 53: no se llega a cuaderno.
+
+**Ventana de 8 s.** En las tres rondas llega a 56 en el corte 78 s y retrocede a 55 desde 80 s hasta el final. Este retroceso es incompatible con el final humano y con la revisión previa que descarta una relectura en ese momento. La salida del corte 78 estaría lista entre 9,05 y 18,73 s después de terminar cuaderno según la cola simulada; alcanzar el final en el audio no equivale a mostrarlo inmediatamente. La causa del coste de cómputo y del retroceso no queda aislada por estas anclas.
+
+**Interpretación.** Se confirma un fallo de seguimiento al final, no una omisión del lector. Reconocer parte de una palabra antes de su final anotado puede producir adelantos respecto a la convención sin ser necesariamente un fallo del ASR. No calcular precisión global a partir de cuatro palabras. No eliminar todos los retrocesos antes de revisar una relectura real.
+
+**Siguiente paso.** Marcar los dos intentos completos de Los dos se quedaron en silencio y mirando después del segundo intento. Caso relectura preparado en puerto 8769. Cambios y resultados nuevos locales, sin publicación.
+
+## E035 · Relectura contrastada con ambos intentos humanos
+
+**Fecha:** 19/10/2026.
+
+**Referencia.** Usuario revisa primer intento de Los dos se quedaron en silencio (17,54–19,84 s), segundo intento (20,36–22,77 s) y mirando (22,91–23,29 s). Intervalo entre intentos: 0,52 s. Guardado validado por EventWorkspace.current(); las seis palabras interiores no tienen tiempos humanos individuales.
+
+**Evaluación local.** scripts.evaluar_relectura reutiliza las seis ejecuciones existentes de resultados/comparaciones/20261016_104206_415649; genera evaluacion_relectura.json/md con huellas y fases por corte. No se ejecutan nuevas inferencias. Pasan tres pruebas nuevas para fronteras de fase, salida diferida respecto al corte y rechazo de registros incompatibles o intentos sin revisar.
+
+**Resultado.** Solo hay un corte de audio dentro del segundo intento: 22 s. Secuencia 20→22→24 s: posición 42→41→45 en 4 s y 42→42→45 en 8 s, repetida en las tres rondas. El retroceso de una palabra con 4 s es compatible con relectura, pero no demuestra seguirla desde el inicio ni reconstruir todos sus pasos. Su salida estaría lista a 23,65–23,72 s, después del final humano del segundo intento (22,77 s). Ninguna salida con movimiento negativo queda lista durante el segundo intento en la simulación. El ASR conserva evidencia textual de dos intentos; esto no equivale a seguimiento temporal correcto.
+
+**Decisión.** Se cierra la primera revisión de eventos con cobertura selectiva. Balance en pruebas/10_revision_eventos.md. No se eliminan todos los retrocesos ni se declara una ventana óptima. Siguiente trabajo: estudiar evidencia escasa de habla lenta, posición provisional/respaldada y coste de actualización en experimentos separados, conservando la comparación inicial. No se piden más marcas humanas en esta fase. Nuevos resultados y cambios locales, sin publicación.
+
+## E036 · Cierre del primer bloque de evaluación y escaleta
+
+**Fecha:** 19/10/2026.
+
+**Cambio.** Se reúne la revisión selectiva de pausa, lenta y relectura, sus anotaciones, evaluadores, informes y pruebas para publicación autorizada por el usuario. La batería completa pasa 31 pruebas. Se corrige una prueba que dependía del estado de progreso real: ahora comprueba una plantilla inicial independiente de las anotaciones del lector, sin alterar sus datos.
+
+**Plan.** docs/RUTA_TRABAJO.md registra el estado de los ocho bloques, la comparación posterior de modelos/ejecución, ayudas de audio y entornos, y el alcance aún pendiente en directo y aula. Primer bloque de evaluación cerrado con alcance limitado a desarrollo adulto; no se declara validación infantil ni una ventana óptima.
+
+**Siguiente experimento propuesto.** Aislar una mejora de aceptación de evidencia escasa para lectura lenta mediante reproducción de hipótesis ya guardadas. Conservar el seguidor actual y comprobar normal, desviaciones, pausa, lenta y relectura antes de adoptar el cambio. Reutilizar tiempos ASR no produce nuevas medidas completas de rendimiento. No se implementa aún la variante en esta entrada.
+
 ## Formato de futuras entradas (plantilla)
 
-### E032 · Título del siguiente cambio o experimento
+### E037 · Título del siguiente cambio o experimento
 
 - Fecha y estado: propuesta / implementado / probado localmente / revisado por el usuario / publicado.
 - Objetivo o pregunta.

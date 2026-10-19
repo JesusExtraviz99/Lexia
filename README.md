@@ -122,4 +122,6 @@ Genera evaluacion_humana.json y evaluacion_humana.md. Compara la última palabra
 
 ## Corrección del entorno
 
+La revisión selectiva de pausas, lectura lenta y relectura se inicia con `python -u scripts/anotar.py --caso pausa --puerto 8767` desde el entorno virtual. Instrucciones y cobertura en [herramientas/anotador/LEEME.md](herramientas/anotador/LEEME.md). No requiere volver a anotar todos los cuentos.
+
 Se fija PyAV 16.0.1: la combinación inicial de faster-whisper 1.2.1 y PyAV 19.0.1 fallaba al abrir archivos con el parámetro metadata_errors. Tras corregirla se procesó correctamente el WAV real de la primera prueba.

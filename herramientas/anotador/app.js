@@ -7,6 +7,7 @@ const fmt = n => n.toFixed(2).replace(".", ",");
 function status(message, error = false) { $("status").textContent = message; $("status").classList.toggle("error", error); }
 function markDirty() { dirty = true; $("save").disabled = false; status("Cambios pendientes de guardar."); }
 function word() { return data.words[selected]; }
+function intervals() { return data.annotation_kind === "selected_intervals"; }
 function renderWords() {
   $("words").replaceChildren();
   data.words.forEach((w, i) => {
@@ -19,19 +20,26 @@ function renderWords() {
     b.addEventListener("click", () => select(i)); $("words").append(b);
   });
   const total = data.words.filter(w => w.reviewed).length;
-  $("progress").textContent = `${total}/${data.words.length} revisadas · primera frase ${data.words.slice(0, 9).filter(w => w.reviewed).length}/9`;
+  $("progress").textContent = intervals() ? `${total}/${data.words.length} intervalos revisados · cobertura parcial del audio` : `${total}/${data.words.length} revisadas · primera frase ${data.words.slice(0, 9).filter(w => w.reviewed).length}/9`;
 }
 function renderEditor() {
-  const w = word(); $("word-title").textContent = `${w.index}. ${w.word}`;
+  const w = word(); $("word-title").textContent = `${w.index}. ${w.word}` + (intervals() ? ` · cuento ${w.story_range.join("–")} · intento ${w.attempt}` : "");
   $("start").value = w.start === null ? "" : w.start.toFixed(2);
   $("end").value = w.end === null ? "" : w.end.toFixed(2);
   $("reviewed").checked = w.reviewed; $("note").value = w.note;
+  $("play").textContent = intervals() && !validWord(w) ? "Escuchar zona de orientación" : "Escuchar fragmento";
   $("origin").textContent = `Origen: ${w.timing_origin.replaceAll("_", " ")} · ${w.reviewed ? "declarada revisada por escucha" : "pendiente de revisión"}`;
   $("previous").disabled = selected === 0; $("next").disabled = selected === data.words.length - 1;
 }
 function select(i) { segment = null; audio.pause(); selected = i; focusWord(); renderWords(); renderEditor(); drawAll(); }
 function focusWord() {
   const w = word(); const t = w.start ?? audio.currentTime;
+  if (intervals() && w.start === null) {
+    [viewStart, viewEnd] = w.navigation_seconds;
+    viewEnd = Math.min(duration, viewEnd);
+    audio.currentTime = viewStart;
+    return;
+  }
   viewStart = Math.max(0, t - 1); viewEnd = Math.min(duration, Math.max(viewStart + 5, (w.end ?? t) + 1));
   if (viewEnd - viewStart < 3) viewStart = Math.max(0, viewEnd - 5);
 }
@@ -89,6 +97,12 @@ $("loop").addEventListener("click", () => {loop=!loop;$("loop").textContent=`Rep
 $("mark-start").addEventListener("click", () => editTimes(Number(audio.currentTime.toFixed(2)),word().end));
 $("mark-end").addEventListener("click", () => editTimes(word().start,Number(audio.currentTime.toFixed(2))));
 $("play").addEventListener("click", async () => {
+  if (intervals() && !validWord(word())) {
+    const [start,end]=word().navigation_seconds;
+    segment={start,end:Math.min(duration,end)};
+    audio.currentTime=start;await audio.play();
+    status("Zona de orientación: aún debes marcar y revisar el inicio y final del elemento.");return;
+  }
   if (!validWord(word())) {status("Indica inicio y fin, o carga el borrador ASR.",true);return;}
   const context=Number($("context").value);segment={start:Math.max(0,word().start-context),end:Math.min(duration,word().end+context)};
   audio.currentTime=segment.start; await audio.play();
@@ -112,7 +126,7 @@ $("save").addEventListener("click", async () => {
   try {
     const res=await fetch("/api/guardar",{method:"POST",headers:{"Content-Type":"application/json","X-Anotador-Token":nonce},body:JSON.stringify(data)});
     const result=await res.json();if(!res.ok)throw new Error(result.error||"No se pudo guardar.");
-    data=result.annotation;dirty=false;renderWords();renderEditor();status(`Guardado: ${data.reviewed_words}/${data.words.length} palabras revisadas. Puedes cerrar y retomar después.`);
+    data=result.annotation;dirty=false;renderWords();renderEditor();status(`Guardado: ${data.words.filter(w=>w.reviewed).length}/${data.words.length} ${intervals()?"intervalos revisados (cobertura parcial)":"palabras revisadas"}. Puedes cerrar y retomar después.`);
   } catch(e) {$("save").disabled=false;status(e.message,true);}
 });
 window.addEventListener("beforeunload", e => {if(dirty){e.preventDefault();e.returnValue="";}});
@@ -121,9 +135,22 @@ async function init() {
   try {
     const res=await fetch("/api/caso");const loaded=await res.json();if(!res.ok)throw new Error(loaded.error);
     data=loaded.annotation;draft=loaded.asr_draft;nonce=loaded.nonce;duration=data.duration_seconds;
+    $("start").max=duration;$("end").max=duration;
+    $("overview").setAttribute("aria-label",`Onda de los ${duration} segundos`);
+    if(intervals()) {
+      document.querySelector("h1").textContent="Revisar fragmentos clave";
+      document.querySelector("header p:last-child").textContent=`${data.title} · ${duration} segundos`;
+      document.querySelector(".intro strong").textContent=data.instructions;
+      document.querySelector(".intro p").textContent="Escucha y marca el inicio y final de cada elemento. Las zonas de orientación solo ayudan a encontrarlo: no son tiempos revisados. Usa Inicio aquí / Fin aquí o los campos numéricos y confirma la revisión tras escuchar.";
+      document.querySelector(".words-panel h2").textContent="Intervalos seleccionados";
+      document.querySelector("footer code").textContent=`datos/anotaciones/${data.recording_id}_fragmentos.json`;
+      $("draft").hidden=true;$("focus").textContent="Centrar en fragmento";
+      $("reviewed").parentElement.lastChild.textContent=" Revisado por escucha";
+      $("note").parentElement.previousElementSibling.textContent="Marca la palabra o frase completa. Cambiar un límite desmarca la revisión. Cada intento se guarda por separado; estos intervalos no cubren todo el audio.";
+    }
     $("draft").disabled=!draft;$("draft-status").textContent=draft?"Borrador ASR disponible; cargarlo es opcional. Solo la escucha valida los tiempos.":"Marca los tiempos manualmente.";
-    renderWords();renderEditor();drawAll();
-    status(data.saved_at_utc?"Progreso anterior recuperado. Continúa donde lo dejaste.":"Listo. Selecciona una palabra o carga el borrador ASR para empezar.");
+    select(0);
+    status(data.saved_at_utc?"Progreso anterior recuperado. Continúa donde lo dejaste.":intervals()?"Listo. Escucha la zona de orientación y marca solo los elementos seleccionados.":"Listo. Selecciona una palabra o carga el borrador ASR para empezar.");
     const buffer=await (await fetch("/audio")).arrayBuffer();
     const context=new AudioContext();const decoded=await context.decodeAudioData(buffer);const raw=decoded.getChannelData(0);
     const bins=Math.min(12000,raw.length);peaksMin=new Float32Array(bins);peaksMax=new Float32Array(bins);
