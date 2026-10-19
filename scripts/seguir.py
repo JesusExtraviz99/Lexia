@@ -20,7 +20,7 @@ def audio_bounds(end, window_seconds, sample_rate=16000):
     return (max(0, end-round(window_seconds*sample_rate)) if window_seconds else 0, end)
 
 
-def locate(story, hypothesis, previous=0, before=12, after=24, global_search=False):
+def locate(story, hypothesis, previous=0, before=12, after=24, global_search=False, include_match_index=False):
     """Alinea las últimas 8 palabras ASR contra un fragmento del cuento.
 
     Se permiten extremos libres del cuento y ediciones unitarias. Requiere
@@ -46,22 +46,27 @@ def locate(story, hypothesis, previous=0, before=12, after=24, global_search=Fal
     i, j = n, endpoint
     matches = 0
     position = None
+    matched_hypothesis_index = None
     while i:
         if j and dp[i][j] == dp[i-1][j-1] + (heard[i-1] != expected[j-1]):
             equal = heard[i-1] == expected[j-1]
             matches += int(equal)
             if equal and position is None:
                 position = start+j
+                matched_hypothesis_index = max(0, len(hypothesis)-8)+i-1
             i, j = i-1, j-1
         elif dp[i][j] == dp[i-1][j]+1:
             i -= 1
         else:
             j -= 1
     accepted = matches >= 2 and matches/n >= 0.6 and dp[n][endpoint]/n <= 0.4
-    return {"position": position if accepted else None,
+    result = {"position": position if accepted else None,
             "reason": "coincidencia_local" if accepted else "evidencia_incompatible",
             "window_indices": [start+1, stop], "exact_matches": matches,
             "hypothesis_words": len(heard), "edit_cost": dp[n][endpoint]}
+    if include_match_index:
+        result['matched_hypothesis_index'] = matched_hypothesis_index if accepted else None
+    return result
 
 
 class Tracker:

@@ -112,6 +112,8 @@ Los JSON existentes conservan las rutas locales de origen como metadatos; al rep
 
 ## Evaluación con marcas revisadas
 
+Para comparar el seguidor original y una variante experimental que admite una palabra aislada bajo restricciones, sin repetir reconocimiento: `.\.venv\Scripts\python.exe -m scripts.comparar_seguidores`. Protocolo y resultados: [pruebas/11_palabra_aislada.md](pruebas/11_palabra_aislada.md). La variante no modifica el seguidor habitual.
+
 Tras completar una comparación de la lectura normal, ejecutar (sustituir CARPETA por la carpeta generada):
 
 ```powershell

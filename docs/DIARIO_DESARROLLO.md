@@ -564,9 +564,57 @@ El diario se actualiza durante el trabajo, sin necesitar una petición nueva par
 
 **Siguiente experimento propuesto.** Aislar una mejora de aceptación de evidencia escasa para lectura lenta mediante reproducción de hipótesis ya guardadas. Conservar el seguidor actual y comprobar normal, desviaciones, pausa, lenta y relectura antes de adoptar el cambio. Reutilizar tiempos ASR no produce nuevas medidas completas de rendimiento. No se implementa aún la variante en esta entrada.
 
+## E037 · Primer cambio aislado del seguidor: palabra consecutiva
+
+**Fecha:** 19/10/2026.
+
+**Objetivo.** Aceptar evidencia escasa de lectura lenta sin cambiar ASR, ventanas, VAD ni tiempos de entrada. Se añade scripts.comparar_seguidores con una variante separada del Tracker habitual. Una hipótesis de una única palabra puede avanzar una posición si tiene al menos cinco caracteres, coincidencia exacta única en la ventana local y corresponde a la siguiente palabra del cuento. La decisión no usa tiempos humanos ni etiquetas del caso; el umbral es provisional.
+
+**Método.** Reproducción de 36 registros de normal, desviaciones, pausa, lenta y relectura. El original reproduce posición, movimiento y modo de los 36 sin diferencias. La variante conserva la política de hipótesis sin cambios y los retrocesos multiword. Se reutilizan tiempos ASR/cola; el tiempo propio del seguidor se mide aparte y no se presenta como latencia total nueva. Fuentes y anclas con huellas en resultados/seguidores/20261019_104824_848649/resumen.json. Protocolo en pruebas/11_palabra_aislada.md.
+
+**Resultado.** Regla activada en Después, corte 62 s de las tres rondas lentas de 4 s. Posición 46 en lugar de 45 en 62/64 s; ambas versiones coinciden de nuevo en 49 desde 66 s. La ancla humana sitúa el final de Después en 61,42 s. No cambia ninguna posición de las otras 33 ejecuciones. Final lento sin resolver: 53 en 4 s y 55 en 8 s. Sin nuevas grabaciones ni inferencias. Pasan las 35 pruebas automáticas.
+
+**Decisión.** Mejora localizada; mantener como variante experimental, sin sustituir seguir.py. No se demuestra generalización ni ausencia de avances falsos ante una palabra inventada que coincida con la siguiente palabra del cuento. Siguiente intervención separada: estabilidad tras llegar al final y preservación de relecturas reales.
+
+**Organización.** Se retira docs/RUTA_TRABAJO.md por petición del usuario para que desaparezca del repositorio en la próxima actualización. Las decisiones técnicas de este experimento permanecen documentadas. Cambios y resultados locales, sin publicación.
+
+## E038 · Diagnóstico reproducible del retroceso cuaderno→un
+
+**Fecha:** 19/10/2026.
+
+**Comprobación compartida previa.** El usuario ejecuta comparar_seguidores y confirma la mejora localizada de Después (45→46 en 62/64 s, tres rondas de 4 s), sin cambios de posiciones en los otros registros. Solicita estudiar la causa del retroceso del final antes de corregirlo.
+
+**Diagnóstico.** Nuevo comando scripts.diagnosticar_retroceso muestra cortes 76–86 s y comprueba reproducción exacta de posiciones, movimientos y modos de las tres rondas lentas de 8 s. En 78 s, hipótesis mariposa en un cuaderno lleva a 56; en 80 s, en un jugaderno produce dos coincidencias de tres (66,7%) y coste 1/3 (33,3%), aceptables para locate. La última coincidencia exacta es un (55); Tracker.update reemplaza 56 sin exigir evidencia adicional de relectura. Después las hipótesis no recuperan cuaderno y mantiene 55.
+
+**Audio y límites.** Las ventanas 70–78 y 72–80 s contienen cuaderno completo según la marca humana 75,14–77,34 s. Son reconocimientos solapados, no evidencia de volver a pronunciar un. Se explica la decisión del seguidor; no se determina por qué el ASR cambia cuaderno por jugaderno ni se atribuye a ruido. Se distingue corte de audio de salida en pantalla.
+
+**Evidencia y estado.** Protocolo y comando para el usuario en pruebas/12_diagnostico_retroceso.md. Pasan dos pruebas nuevas del mecanismo. El diagnóstico solo lee registros; no ejecuta ASR ni cambia seguir.py o la variante anterior. Pendiente de comprobación del usuario en su terminal. Sin publicación ni corrección nueva en esta entrada.
+
+## E039 · Variante temporal para retrocesos sobre audio solapado
+
+**Fecha:** 19/10/2026.
+
+**Revisión compartida.** El usuario ejecuta diagnosticar_retroceso y reproduce el cambio 56→55 al pasar de cuaderno a jugaderno, así como las coincidencias 2/3 y coste 1/3. Se prueba una corrección separada, no una combinación con la regla de palabra aislada.
+
+**Implementación.** TemporalBacktrackTracker conserva una marca máxima de final ASR de la última coincidencia exacta aceptada. Solo permite retroceder si la coincidencia del candidato aporta un final ASR posterior. Se usa el recorrido del alineamiento para identificar el token que respalda la posición. locate añade una opción diagnóstica, desactivada por defecto; la regla del Tracker habitual no cambia. Se conserva también la política de no reconfirmar texto idéntico.
+
+**Experimento.** comparar_seguidores --variante temporal reproduce los 36 registros y confirma exactitud de la reproducción original. Resultados en resultados/retrocesos/20261019_110452_881233; protocolo pruebas/13_proteccion_temporal_retrocesos.md. No hay nuevas inferencias. Los tiempos ASR/cola siguen reutilizados; se mide el tiempo del seguidor por separado.
+
+**Resultado.** Tres rondas lentas de 8 s: en el corte 80 s se rechaza posición 55 apoyada por un con fin ASR 74,66 s, anterior al apoyo aceptado de cuaderno con fin ASR 77,26 s. Conserva 56 en los seis cortes 80–90 s, en lugar de 55. La primera llegada a 56 sigue en 78 s. Sin cambios de posiciones en los otros 33 registros; se conserva el pequeño retroceso de la relectura de 4 s. Lectura lenta de 4 s sigue terminando en 53. Pasan las 42 pruebas automáticas.
+
+**Límites y estado.** Timestamps estimados, sin tolerancia ni prueba de nueva voz; pueden permitir retrocesos falsos o frenar reales si son erróneos. Texto idéntico con tiempos distintos sigue sin actualizarse. Datos de desarrollo usados para diseñar la regla; no demuestra generalización ni seguimiento completo de relectura. Variante separada, pendiente de comprobación del usuario antes de decidir incorporación. Cambios locales sin publicación.
+
+## E040 · Comprobación del usuario de la variante temporal
+
+**Fecha:** 19/10/2026.
+
+**Evidencia.** El usuario ejecuta comparar_seguidores --variante temporal y comparte la salida de resultados/retrocesos/20261019_111048_743268. En las tres rondas lentas de 8 s se rechaza el retroceso en 80 s y se mantiene 56 en los seis cortes 80–90 s, frente a 55 del original. No cambian las posiciones de los otros 33 registros. Lectura lenta de 4 s sigue en 53. La relectura mantiene su comportamiento anterior; no se presenta como resuelta.
+
+**Decisión.** Comprobación compartida de esta mejora localizada sobre los mismos datos de desarrollo. La variante permanece experimental, sin activar en el seguidor habitual ni publicar. Siguiente comparación propuesta: original, palabra aislada, protección temporal y ambas juntas, para estudiar interacción antes de integrar. No se requieren nuevas grabaciones para esa reproducción; los tiempos ASR seguirán siendo reutilizados.
+
 ## Formato de futuras entradas (plantilla)
 
-### E037 · Título del siguiente cambio o experimento
+### E041 · Título del siguiente cambio o experimento
 
 - Fecha y estado: propuesta / implementado / probado localmente / revisado por el usuario / publicado.
 - Objetivo o pregunta.
