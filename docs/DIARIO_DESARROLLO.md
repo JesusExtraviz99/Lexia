@@ -484,9 +484,23 @@ El diario se actualiza durante el trabajo, sin necesitar una petición nueva par
 
 **Decisión.** Usar esta anotación como referencia de desarrollo revisada por el lector, con límites ambiguos identificados. No exigir anotación exhaustiva de todos los audios: priorizar intervalos representativos y eventos críticos, indicando la cobertura evaluada. Siguiente paso: comparar las posiciones del seguimiento con esta referencia y distinguir desfase del seguimiento y demora de procesamiento. Datos locales, sin publicación.
 
+## E031 · Publicación de anotaciones y primera evaluación temporal
+
+**Fecha:** 19/10/2026.
+
+**Publicado.** Commit 664893e en origin/main: anotador, referencias literales, catálogo, 56 palabras revisadas y diario hasta E030. Antes de publicar pasan las 17 pruebas existentes.
+
+**Nuevo experimento local.** Lectura normal, ventanas 4/6/8 s y tres rondas, mismos parámetros del seguidor. Registros en resultados/comparaciones/20261019_084114_510023. scripts.evaluar_seguimiento lee explícitamente la anotación validada y genera evaluacion_humana.json/md, con huellas de los registros y la anotación. Protocolo: pruebas/09_evaluacion_temporal.md. Pasan 20 pruebas, incluidas fronteras de palabras, separación de cola/silencio y rechazo de identidad o revisión incorrectas.
+
+**Métricas.** Referencia: última palabra terminada. Once cortes durante la lectura por ejecución; se excluye silencio posterior. Error absoluto medio de hipótesis, en palabras: 4 s = 0,45; 6 s = 0,36; 8 s = 0,36. Error absoluto medio de posición visible simulada en esos mismos cortes: 5,45 / 6,91 / 6,73 palabras. Demora media hasta mostrar la palabra final simulada: 3,40 / 3,36 / 4,45 s. Todas las ejecuciones llegan a 56. Totales medios de inferencia: 23,83 / 26,63 / 29,92 s por audio de 40 s; estos totales incluyen silencio y no son latencia.
+
+**Interpretación.** Las hipótesis están próximas a la referencia en esta lectura, pero actualización por bloques y cómputo añaden retraso. Diferencias de 0,09 palabras entre ventanas en solo once cortes no permiten declarar una ganadora. La primera ronda presenta más carga de cómputo; no se ha monitorizado su causa. 4 s conserva menor coste y menor error visible medio; 6 s tiene demora final media ligeramente menor. La evaluación secuencial no mide pantalla ni carga inicial del modelo. Lectura única, adulto, referencia asistida por ASR y revisada por el propio lector; nueve límites ambiguos.
+
+**Siguiente paso.** Revisar fragmentos críticos de pausa, lectura lenta y relectura con representación de intervalos e intentos adecuada antes de comparar ayudas de audio. No exigir otra anotación exhaustiva. Nuevo evaluador y experimento se conservan locales para revisión; no están en el commit publicado.
+
 ## Formato de futuras entradas (plantilla)
 
-### E031 · Título del siguiente cambio o experimento
+### E032 · Título del siguiente cambio o experimento
 
 - Fecha y estado: propuesta / implementado / probado localmente / revisado por el usuario / publicado.
 - Objetivo o pregunta.

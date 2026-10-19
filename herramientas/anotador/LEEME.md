@@ -31,7 +31,7 @@ No separar sonidos a la fuerza por una cuadrícula de centésimas. En habla liga
 - Guardar no modifica datos/referencias/lectura_normal.json ni los JSON originales del reconocedor.
 - Los guardados posteriores crean copias en datos/anotaciones/copias, excluidas de Git. Cerrar el navegador con cambios no guardados muestra un aviso.
 - Recargar la página recupera la anotación guardada. Usar una sola pestaña de anotación para evitar sobrescribir cambios desde otra sesión.
-- Aunque todas las palabras estén marcadas revisadas, hará falta comprobar el conjunto antes de utilizarlo como referencia temporal. No se importa automáticamente al evaluador.
+- Aunque todas las palabras estén marcadas revisadas, hace falta comprobar el conjunto antes de utilizarlo como referencia temporal. El guardado no lanza ninguna evaluación. Tras la revisión completa del usuario y la comprobación estructural se puede ejecutar explícitamente scripts.evaluar_seguimiento para el caso normal, conservando procedencia y límites ambiguos. No modifica los JSON de datos/referencias.
 
 La semilla procede de las marcas del mismo reconocedor evaluado; su revisión humana puede tener sesgo de anclaje. Conservar esa procedencia, revisar especialmente bordes y silencios, y plantear una segunda revisión independiente para conclusiones más sólidas.
 

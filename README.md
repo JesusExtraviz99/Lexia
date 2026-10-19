@@ -108,7 +108,17 @@ Cada ronda ejecuta las configuraciones en orden aleatorio reproducible, sin comp
 
 Se incluyen código, dependencias, documentación, texto, grabaciones adultas de prueba y resultados. El entorno Python, las herramientas descargadas y el modelo quedan fuera de Git porque se pueden reconstruir. No se incluyen credenciales ni grabaciones infantiles.
 
-Los JSON existentes conservan las rutas locales de origen como metadatos; al reproducir una prueba, pasa la ruta relativa de su WAV. Los tiempos por palabra son estimaciones del ASR, no anotaciones humanas. El tiempo de procesamiento posterior no mide la latencia del futuro subrayado.
+Los JSON existentes conservan las rutas locales de origen como metadatos; al reproducir una prueba, pasa la ruta relativa de su WAV. Los tiempos por palabra de las transcripciones ASR son estimaciones automáticas. La revisión humana se guarda por separado en datos/anotaciones, con procedencia y notas sobre límites ambiguos. El tiempo de procesamiento posterior no mide la latencia del futuro subrayado.
+
+## Evaluación con marcas revisadas
+
+Tras completar una comparación de la lectura normal, ejecutar (sustituir CARPETA por la carpeta generada):
+
+```powershell
+.\.venv\Scripts\python.exe -m scripts.evaluar_seguimiento resultados/comparaciones/CARPETA
+```
+
+Genera evaluacion_humana.json y evaluacion_humana.md. Compara la última palabra terminada según la revisión humana con la posición estimada en cada corte de 2 s durante la lectura. Separa el error de la hipótesis del error de la posición visible en una simulación secuencial con cola. Excluye el silencio posterior de las medias y registra la demora simulada hasta alcanzar la palabra final. No mide latencia real de pantalla ni califica al lector. Solo admite el caso normal con todas sus palabras revisadas; no interpreta relecturas ni omisiones mediante esta referencia.
 
 ## Corrección del entorno
 

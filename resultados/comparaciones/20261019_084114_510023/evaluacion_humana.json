@@ -1,0 +1,1474 @@
+{
+  "notice": "Referencia de desarrollo revisada por el lector, no independiente. Posición de referencia = última palabra terminada (fin <= instante). Error firmado = posición estimada menos referencia: negativo es retraso. Muestras cada 2 s dentro de la lectura, desde la primera palabra hasta el fin de la última; se excluye el silencio final de las medias. La hipótesis al corte ignora coste de cómputo; la posición visible simulada conserva la última salida ya lista en ese mismo instante, incluyendo cola secuencial y sin carga de modelo ni latencia de pantalla. Límites ambiguos y muestreo de 2 s limitan la interpretación. Tres rondas del mismo audio no son tres lectores ni validación en otros entornos.",
+  "annotation_file": "datos/anotaciones/lectura_normal.json",
+  "annotation_sha256": "f8cf26d38b44228aee4b83be34a16d30a9dbdd132fe393075356d01cda916c7a",
+  "runs": [
+    {
+      "file": "lectura_20261014_081816_009646_ventana_6s_r1.json",
+      "sha256": "64329e1ce6a2dc3a70d7b04fe4b12ff385fb87ef7b5149e07c3f3b92827e4aeb",
+      "repeat": 1,
+      "window_seconds": 6.0,
+      "annotation_coverage_words": 56,
+      "hypothesis_at_audio_cutoff": {
+        "samples": 11,
+        "mean_signed_words": 0.18181818181818182,
+        "mean_absolute_words": 0.36363636363636365,
+        "max_absolute_words": 1,
+        "exact_samples": 7,
+        "within_one_word_samples": 11
+      },
+      "visible_at_audio_cutoff_simulated": {
+        "samples": 11,
+        "mean_signed_words": -8.818181818181818,
+        "mean_absolute_words": 8.818181818181818,
+        "max_absolute_words": 14,
+        "exact_samples": 0,
+        "within_one_word_samples": 1
+      },
+      "cutoff_samples": [
+        {
+          "audio_seconds": 2.0,
+          "reference_position": 1,
+          "hypothesis_position": 0,
+          "error_words": -1
+        },
+        {
+          "audio_seconds": 4.0,
+          "reference_position": 5,
+          "hypothesis_position": 5,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 6.0,
+          "reference_position": 11,
+          "hypothesis_position": 12,
+          "error_words": 1
+        },
+        {
+          "audio_seconds": 8.0,
+          "reference_position": 17,
+          "hypothesis_position": 17,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 10.0,
+          "reference_position": 20,
+          "hypothesis_position": 20,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 12.0,
+          "reference_position": 27,
+          "hypothesis_position": 27,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 14.0,
+          "reference_position": 34,
+          "hypothesis_position": 34,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 16.0,
+          "reference_position": 37,
+          "hypothesis_position": 38,
+          "error_words": 1
+        },
+        {
+          "audio_seconds": 18.0,
+          "reference_position": 43,
+          "hypothesis_position": 43,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 20.0,
+          "reference_position": 46,
+          "hypothesis_position": 46,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 22.0,
+          "reference_position": 52,
+          "hypothesis_position": 53,
+          "error_words": 1
+        }
+      ],
+      "display_samples": [
+        {
+          "audio_seconds": 2.0,
+          "reference_position": 1,
+          "visible_position_simulated": 0,
+          "error_words": -1
+        },
+        {
+          "audio_seconds": 4.0,
+          "reference_position": 5,
+          "visible_position_simulated": 0,
+          "error_words": -5
+        },
+        {
+          "audio_seconds": 6.0,
+          "reference_position": 11,
+          "visible_position_simulated": 0,
+          "error_words": -11
+        },
+        {
+          "audio_seconds": 8.0,
+          "reference_position": 17,
+          "visible_position_simulated": 5,
+          "error_words": -12
+        },
+        {
+          "audio_seconds": 10.0,
+          "reference_position": 20,
+          "visible_position_simulated": 12,
+          "error_words": -8
+        },
+        {
+          "audio_seconds": 12.0,
+          "reference_position": 27,
+          "visible_position_simulated": 17,
+          "error_words": -10
+        },
+        {
+          "audio_seconds": 14.0,
+          "reference_position": 34,
+          "visible_position_simulated": 20,
+          "error_words": -14
+        },
+        {
+          "audio_seconds": 16.0,
+          "reference_position": 37,
+          "visible_position_simulated": 27,
+          "error_words": -10
+        },
+        {
+          "audio_seconds": 18.0,
+          "reference_position": 43,
+          "visible_position_simulated": 34,
+          "error_words": -9
+        },
+        {
+          "audio_seconds": 20.0,
+          "reference_position": 46,
+          "visible_position_simulated": 38,
+          "error_words": -8
+        },
+        {
+          "audio_seconds": 22.0,
+          "reference_position": 52,
+          "visible_position_simulated": 43,
+          "error_words": -9
+        }
+      ],
+      "first_final_word_audio_seconds": 24.0,
+      "first_final_word_ready_seconds_simulated": 26.59740830003284,
+      "final_word_delay_seconds_simulated": 3.657408300032838,
+      "final_position": 56
+    },
+    {
+      "file": "lectura_20261014_081816_009646_ventana_4s_r1.json",
+      "sha256": "b42d5963ddeb2653584c6ff8d3ec5629f44fc4b46fcea7dce003a489e6401a35",
+      "repeat": 1,
+      "window_seconds": 4.0,
+      "annotation_coverage_words": 56,
+      "hypothesis_at_audio_cutoff": {
+        "samples": 11,
+        "mean_signed_words": 0.2727272727272727,
+        "mean_absolute_words": 0.45454545454545453,
+        "max_absolute_words": 1,
+        "exact_samples": 6,
+        "within_one_word_samples": 11
+      },
+      "visible_at_audio_cutoff_simulated": {
+        "samples": 11,
+        "mean_signed_words": -7.2727272727272725,
+        "mean_absolute_words": 7.2727272727272725,
+        "max_absolute_words": 14,
+        "exact_samples": 0,
+        "within_one_word_samples": 1
+      },
+      "cutoff_samples": [
+        {
+          "audio_seconds": 2.0,
+          "reference_position": 1,
+          "hypothesis_position": 0,
+          "error_words": -1
+        },
+        {
+          "audio_seconds": 4.0,
+          "reference_position": 5,
+          "hypothesis_position": 5,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 6.0,
+          "reference_position": 11,
+          "hypothesis_position": 12,
+          "error_words": 1
+        },
+        {
+          "audio_seconds": 8.0,
+          "reference_position": 17,
+          "hypothesis_position": 17,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 10.0,
+          "reference_position": 20,
+          "hypothesis_position": 20,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 12.0,
+          "reference_position": 27,
+          "hypothesis_position": 27,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 14.0,
+          "reference_position": 34,
+          "hypothesis_position": 34,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 16.0,
+          "reference_position": 37,
+          "hypothesis_position": 38,
+          "error_words": 1
+        },
+        {
+          "audio_seconds": 18.0,
+          "reference_position": 43,
+          "hypothesis_position": 43,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 20.0,
+          "reference_position": 46,
+          "hypothesis_position": 47,
+          "error_words": 1
+        },
+        {
+          "audio_seconds": 22.0,
+          "reference_position": 52,
+          "hypothesis_position": 53,
+          "error_words": 1
+        }
+      ],
+      "display_samples": [
+        {
+          "audio_seconds": 2.0,
+          "reference_position": 1,
+          "visible_position_simulated": 0,
+          "error_words": -1
+        },
+        {
+          "audio_seconds": 4.0,
+          "reference_position": 5,
+          "visible_position_simulated": 0,
+          "error_words": -5
+        },
+        {
+          "audio_seconds": 6.0,
+          "reference_position": 11,
+          "visible_position_simulated": 5,
+          "error_words": -6
+        },
+        {
+          "audio_seconds": 8.0,
+          "reference_position": 17,
+          "visible_position_simulated": 12,
+          "error_words": -5
+        },
+        {
+          "audio_seconds": 10.0,
+          "reference_position": 20,
+          "visible_position_simulated": 17,
+          "error_words": -3
+        },
+        {
+          "audio_seconds": 12.0,
+          "reference_position": 27,
+          "visible_position_simulated": 17,
+          "error_words": -10
+        },
+        {
+          "audio_seconds": 14.0,
+          "reference_position": 34,
+          "visible_position_simulated": 20,
+          "error_words": -14
+        },
+        {
+          "audio_seconds": 16.0,
+          "reference_position": 37,
+          "visible_position_simulated": 27,
+          "error_words": -10
+        },
+        {
+          "audio_seconds": 18.0,
+          "reference_position": 43,
+          "visible_position_simulated": 34,
+          "error_words": -9
+        },
+        {
+          "audio_seconds": 20.0,
+          "reference_position": 46,
+          "visible_position_simulated": 38,
+          "error_words": -8
+        },
+        {
+          "audio_seconds": 22.0,
+          "reference_position": 52,
+          "visible_position_simulated": 43,
+          "error_words": -9
+        }
+      ],
+      "first_final_word_audio_seconds": 24.0,
+      "first_final_word_ready_seconds_simulated": 27.63602399994852,
+      "final_word_delay_seconds_simulated": 4.696023999948519,
+      "final_position": 56
+    },
+    {
+      "file": "lectura_20261014_081816_009646_ventana_8s_r1.json",
+      "sha256": "5ea2fe93e30184fa46c318b7c453610233ae1959bcb306d21de308a4b74dceb7",
+      "repeat": 1,
+      "window_seconds": 8.0,
+      "annotation_coverage_words": 56,
+      "hypothesis_at_audio_cutoff": {
+        "samples": 11,
+        "mean_signed_words": 0.18181818181818182,
+        "mean_absolute_words": 0.36363636363636365,
+        "max_absolute_words": 1,
+        "exact_samples": 7,
+        "within_one_word_samples": 11
+      },
+      "visible_at_audio_cutoff_simulated": {
+        "samples": 11,
+        "mean_signed_words": -10.272727272727273,
+        "mean_absolute_words": 10.272727272727273,
+        "max_absolute_words": 16,
+        "exact_samples": 0,
+        "within_one_word_samples": 1
+      },
+      "cutoff_samples": [
+        {
+          "audio_seconds": 2.0,
+          "reference_position": 1,
+          "hypothesis_position": 0,
+          "error_words": -1
+        },
+        {
+          "audio_seconds": 4.0,
+          "reference_position": 5,
+          "hypothesis_position": 5,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 6.0,
+          "reference_position": 11,
+          "hypothesis_position": 12,
+          "error_words": 1
+        },
+        {
+          "audio_seconds": 8.0,
+          "reference_position": 17,
+          "hypothesis_position": 17,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 10.0,
+          "reference_position": 20,
+          "hypothesis_position": 20,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 12.0,
+          "reference_position": 27,
+          "hypothesis_position": 27,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 14.0,
+          "reference_position": 34,
+          "hypothesis_position": 34,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 16.0,
+          "reference_position": 37,
+          "hypothesis_position": 38,
+          "error_words": 1
+        },
+        {
+          "audio_seconds": 18.0,
+          "reference_position": 43,
+          "hypothesis_position": 43,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 20.0,
+          "reference_position": 46,
+          "hypothesis_position": 46,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 22.0,
+          "reference_position": 52,
+          "hypothesis_position": 53,
+          "error_words": 1
+        }
+      ],
+      "display_samples": [
+        {
+          "audio_seconds": 2.0,
+          "reference_position": 1,
+          "visible_position_simulated": 0,
+          "error_words": -1
+        },
+        {
+          "audio_seconds": 4.0,
+          "reference_position": 5,
+          "visible_position_simulated": 0,
+          "error_words": -5
+        },
+        {
+          "audio_seconds": 6.0,
+          "reference_position": 11,
+          "visible_position_simulated": 0,
+          "error_words": -11
+        },
+        {
+          "audio_seconds": 8.0,
+          "reference_position": 17,
+          "visible_position_simulated": 5,
+          "error_words": -12
+        },
+        {
+          "audio_seconds": 10.0,
+          "reference_position": 20,
+          "visible_position_simulated": 12,
+          "error_words": -8
+        },
+        {
+          "audio_seconds": 12.0,
+          "reference_position": 27,
+          "visible_position_simulated": 17,
+          "error_words": -10
+        },
+        {
+          "audio_seconds": 14.0,
+          "reference_position": 34,
+          "visible_position_simulated": 20,
+          "error_words": -14
+        },
+        {
+          "audio_seconds": 16.0,
+          "reference_position": 37,
+          "visible_position_simulated": 27,
+          "error_words": -10
+        },
+        {
+          "audio_seconds": 18.0,
+          "reference_position": 43,
+          "visible_position_simulated": 27,
+          "error_words": -16
+        },
+        {
+          "audio_seconds": 20.0,
+          "reference_position": 46,
+          "visible_position_simulated": 34,
+          "error_words": -12
+        },
+        {
+          "audio_seconds": 22.0,
+          "reference_position": 52,
+          "visible_position_simulated": 38,
+          "error_words": -14
+        }
+      ],
+      "first_final_word_audio_seconds": 24.0,
+      "first_final_word_ready_seconds_simulated": 30.256921800028067,
+      "final_word_delay_seconds_simulated": 7.316921800028066,
+      "final_position": 56
+    },
+    {
+      "file": "lectura_20261014_081816_009646_ventana_6s_r2.json",
+      "sha256": "2bb4d07e65aea43141e45d239d145f71a32b697bdf77555ec2964d7a38b3e16f",
+      "repeat": 2,
+      "window_seconds": 6.0,
+      "annotation_coverage_words": 56,
+      "hypothesis_at_audio_cutoff": {
+        "samples": 11,
+        "mean_signed_words": 0.18181818181818182,
+        "mean_absolute_words": 0.36363636363636365,
+        "max_absolute_words": 1,
+        "exact_samples": 7,
+        "within_one_word_samples": 11
+      },
+      "visible_at_audio_cutoff_simulated": {
+        "samples": 11,
+        "mean_signed_words": -7.2727272727272725,
+        "mean_absolute_words": 7.2727272727272725,
+        "max_absolute_words": 14,
+        "exact_samples": 0,
+        "within_one_word_samples": 1
+      },
+      "cutoff_samples": [
+        {
+          "audio_seconds": 2.0,
+          "reference_position": 1,
+          "hypothesis_position": 0,
+          "error_words": -1
+        },
+        {
+          "audio_seconds": 4.0,
+          "reference_position": 5,
+          "hypothesis_position": 5,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 6.0,
+          "reference_position": 11,
+          "hypothesis_position": 12,
+          "error_words": 1
+        },
+        {
+          "audio_seconds": 8.0,
+          "reference_position": 17,
+          "hypothesis_position": 17,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 10.0,
+          "reference_position": 20,
+          "hypothesis_position": 20,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 12.0,
+          "reference_position": 27,
+          "hypothesis_position": 27,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 14.0,
+          "reference_position": 34,
+          "hypothesis_position": 34,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 16.0,
+          "reference_position": 37,
+          "hypothesis_position": 38,
+          "error_words": 1
+        },
+        {
+          "audio_seconds": 18.0,
+          "reference_position": 43,
+          "hypothesis_position": 43,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 20.0,
+          "reference_position": 46,
+          "hypothesis_position": 46,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 22.0,
+          "reference_position": 52,
+          "hypothesis_position": 53,
+          "error_words": 1
+        }
+      ],
+      "display_samples": [
+        {
+          "audio_seconds": 2.0,
+          "reference_position": 1,
+          "visible_position_simulated": 0,
+          "error_words": -1
+        },
+        {
+          "audio_seconds": 4.0,
+          "reference_position": 5,
+          "visible_position_simulated": 0,
+          "error_words": -5
+        },
+        {
+          "audio_seconds": 6.0,
+          "reference_position": 11,
+          "visible_position_simulated": 5,
+          "error_words": -6
+        },
+        {
+          "audio_seconds": 8.0,
+          "reference_position": 17,
+          "visible_position_simulated": 12,
+          "error_words": -5
+        },
+        {
+          "audio_seconds": 10.0,
+          "reference_position": 20,
+          "visible_position_simulated": 17,
+          "error_words": -3
+        },
+        {
+          "audio_seconds": 12.0,
+          "reference_position": 27,
+          "visible_position_simulated": 17,
+          "error_words": -10
+        },
+        {
+          "audio_seconds": 14.0,
+          "reference_position": 34,
+          "visible_position_simulated": 20,
+          "error_words": -14
+        },
+        {
+          "audio_seconds": 16.0,
+          "reference_position": 37,
+          "visible_position_simulated": 27,
+          "error_words": -10
+        },
+        {
+          "audio_seconds": 18.0,
+          "reference_position": 43,
+          "visible_position_simulated": 34,
+          "error_words": -9
+        },
+        {
+          "audio_seconds": 20.0,
+          "reference_position": 46,
+          "visible_position_simulated": 38,
+          "error_words": -8
+        },
+        {
+          "audio_seconds": 22.0,
+          "reference_position": 52,
+          "visible_position_simulated": 43,
+          "error_words": -9
+        }
+      ],
+      "first_final_word_audio_seconds": 24.0,
+      "first_final_word_ready_seconds_simulated": 26.464869400078896,
+      "final_word_delay_seconds_simulated": 3.524869400078895,
+      "final_position": 56
+    },
+    {
+      "file": "lectura_20261014_081816_009646_ventana_4s_r2.json",
+      "sha256": "9b741fe0e1779661c78b1b9cac6fb43a3d95c2652e8137f43de875eab3ea69ef",
+      "repeat": 2,
+      "window_seconds": 4.0,
+      "annotation_coverage_words": 56,
+      "hypothesis_at_audio_cutoff": {
+        "samples": 11,
+        "mean_signed_words": 0.2727272727272727,
+        "mean_absolute_words": 0.45454545454545453,
+        "max_absolute_words": 1,
+        "exact_samples": 6,
+        "within_one_word_samples": 11
+      },
+      "visible_at_audio_cutoff_simulated": {
+        "samples": 11,
+        "mean_signed_words": -4.545454545454546,
+        "mean_absolute_words": 4.545454545454546,
+        "max_absolute_words": 7,
+        "exact_samples": 0,
+        "within_one_word_samples": 1
+      },
+      "cutoff_samples": [
+        {
+          "audio_seconds": 2.0,
+          "reference_position": 1,
+          "hypothesis_position": 0,
+          "error_words": -1
+        },
+        {
+          "audio_seconds": 4.0,
+          "reference_position": 5,
+          "hypothesis_position": 5,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 6.0,
+          "reference_position": 11,
+          "hypothesis_position": 12,
+          "error_words": 1
+        },
+        {
+          "audio_seconds": 8.0,
+          "reference_position": 17,
+          "hypothesis_position": 17,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 10.0,
+          "reference_position": 20,
+          "hypothesis_position": 20,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 12.0,
+          "reference_position": 27,
+          "hypothesis_position": 27,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 14.0,
+          "reference_position": 34,
+          "hypothesis_position": 34,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 16.0,
+          "reference_position": 37,
+          "hypothesis_position": 38,
+          "error_words": 1
+        },
+        {
+          "audio_seconds": 18.0,
+          "reference_position": 43,
+          "hypothesis_position": 43,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 20.0,
+          "reference_position": 46,
+          "hypothesis_position": 47,
+          "error_words": 1
+        },
+        {
+          "audio_seconds": 22.0,
+          "reference_position": 52,
+          "hypothesis_position": 53,
+          "error_words": 1
+        }
+      ],
+      "display_samples": [
+        {
+          "audio_seconds": 2.0,
+          "reference_position": 1,
+          "visible_position_simulated": 0,
+          "error_words": -1
+        },
+        {
+          "audio_seconds": 4.0,
+          "reference_position": 5,
+          "visible_position_simulated": 0,
+          "error_words": -5
+        },
+        {
+          "audio_seconds": 6.0,
+          "reference_position": 11,
+          "visible_position_simulated": 5,
+          "error_words": -6
+        },
+        {
+          "audio_seconds": 8.0,
+          "reference_position": 17,
+          "visible_position_simulated": 12,
+          "error_words": -5
+        },
+        {
+          "audio_seconds": 10.0,
+          "reference_position": 20,
+          "visible_position_simulated": 17,
+          "error_words": -3
+        },
+        {
+          "audio_seconds": 12.0,
+          "reference_position": 27,
+          "visible_position_simulated": 20,
+          "error_words": -7
+        },
+        {
+          "audio_seconds": 14.0,
+          "reference_position": 34,
+          "visible_position_simulated": 27,
+          "error_words": -7
+        },
+        {
+          "audio_seconds": 16.0,
+          "reference_position": 37,
+          "visible_position_simulated": 34,
+          "error_words": -3
+        },
+        {
+          "audio_seconds": 18.0,
+          "reference_position": 43,
+          "visible_position_simulated": 38,
+          "error_words": -5
+        },
+        {
+          "audio_seconds": 20.0,
+          "reference_position": 46,
+          "visible_position_simulated": 43,
+          "error_words": -3
+        },
+        {
+          "audio_seconds": 22.0,
+          "reference_position": 52,
+          "visible_position_simulated": 47,
+          "error_words": -5
+        }
+      ],
+      "first_final_word_audio_seconds": 24.0,
+      "first_final_word_ready_seconds_simulated": 25.687072700005956,
+      "final_word_delay_seconds_simulated": 2.7470727000059547,
+      "final_position": 56
+    },
+    {
+      "file": "lectura_20261014_081816_009646_ventana_8s_r2.json",
+      "sha256": "aef86674b0bbd5d23887f6dfe175956213a8b02b1ab7c3ae9a4ac2d2bef2a9fa",
+      "repeat": 2,
+      "window_seconds": 8.0,
+      "annotation_coverage_words": 56,
+      "hypothesis_at_audio_cutoff": {
+        "samples": 11,
+        "mean_signed_words": 0.18181818181818182,
+        "mean_absolute_words": 0.36363636363636365,
+        "max_absolute_words": 1,
+        "exact_samples": 7,
+        "within_one_word_samples": 11
+      },
+      "visible_at_audio_cutoff_simulated": {
+        "samples": 11,
+        "mean_signed_words": -5.2727272727272725,
+        "mean_absolute_words": 5.2727272727272725,
+        "max_absolute_words": 10,
+        "exact_samples": 0,
+        "within_one_word_samples": 1
+      },
+      "cutoff_samples": [
+        {
+          "audio_seconds": 2.0,
+          "reference_position": 1,
+          "hypothesis_position": 0,
+          "error_words": -1
+        },
+        {
+          "audio_seconds": 4.0,
+          "reference_position": 5,
+          "hypothesis_position": 5,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 6.0,
+          "reference_position": 11,
+          "hypothesis_position": 12,
+          "error_words": 1
+        },
+        {
+          "audio_seconds": 8.0,
+          "reference_position": 17,
+          "hypothesis_position": 17,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 10.0,
+          "reference_position": 20,
+          "hypothesis_position": 20,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 12.0,
+          "reference_position": 27,
+          "hypothesis_position": 27,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 14.0,
+          "reference_position": 34,
+          "hypothesis_position": 34,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 16.0,
+          "reference_position": 37,
+          "hypothesis_position": 38,
+          "error_words": 1
+        },
+        {
+          "audio_seconds": 18.0,
+          "reference_position": 43,
+          "hypothesis_position": 43,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 20.0,
+          "reference_position": 46,
+          "hypothesis_position": 46,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 22.0,
+          "reference_position": 52,
+          "hypothesis_position": 53,
+          "error_words": 1
+        }
+      ],
+      "display_samples": [
+        {
+          "audio_seconds": 2.0,
+          "reference_position": 1,
+          "visible_position_simulated": 0,
+          "error_words": -1
+        },
+        {
+          "audio_seconds": 4.0,
+          "reference_position": 5,
+          "visible_position_simulated": 0,
+          "error_words": -5
+        },
+        {
+          "audio_seconds": 6.0,
+          "reference_position": 11,
+          "visible_position_simulated": 5,
+          "error_words": -6
+        },
+        {
+          "audio_seconds": 8.0,
+          "reference_position": 17,
+          "visible_position_simulated": 12,
+          "error_words": -5
+        },
+        {
+          "audio_seconds": 10.0,
+          "reference_position": 20,
+          "visible_position_simulated": 17,
+          "error_words": -3
+        },
+        {
+          "audio_seconds": 12.0,
+          "reference_position": 27,
+          "visible_position_simulated": 20,
+          "error_words": -7
+        },
+        {
+          "audio_seconds": 14.0,
+          "reference_position": 34,
+          "visible_position_simulated": 27,
+          "error_words": -7
+        },
+        {
+          "audio_seconds": 16.0,
+          "reference_position": 37,
+          "visible_position_simulated": 27,
+          "error_words": -10
+        },
+        {
+          "audio_seconds": 18.0,
+          "reference_position": 43,
+          "visible_position_simulated": 38,
+          "error_words": -5
+        },
+        {
+          "audio_seconds": 20.0,
+          "reference_position": 46,
+          "visible_position_simulated": 43,
+          "error_words": -3
+        },
+        {
+          "audio_seconds": 22.0,
+          "reference_position": 52,
+          "visible_position_simulated": 46,
+          "error_words": -6
+        }
+      ],
+      "first_final_word_audio_seconds": 24.0,
+      "first_final_word_ready_seconds_simulated": 26.025100699975155,
+      "final_word_delay_seconds_simulated": 3.085100699975154,
+      "final_position": 56
+    },
+    {
+      "file": "lectura_20261014_081816_009646_ventana_4s_r3.json",
+      "sha256": "06bd621cd3c702e5498f5982dddae2d6e9247d9dc8278db795e97c43e5f6c4bd",
+      "repeat": 3,
+      "window_seconds": 4.0,
+      "annotation_coverage_words": 56,
+      "hypothesis_at_audio_cutoff": {
+        "samples": 11,
+        "mean_signed_words": 0.2727272727272727,
+        "mean_absolute_words": 0.45454545454545453,
+        "max_absolute_words": 1,
+        "exact_samples": 6,
+        "within_one_word_samples": 11
+      },
+      "visible_at_audio_cutoff_simulated": {
+        "samples": 11,
+        "mean_signed_words": -4.545454545454546,
+        "mean_absolute_words": 4.545454545454546,
+        "max_absolute_words": 7,
+        "exact_samples": 0,
+        "within_one_word_samples": 1
+      },
+      "cutoff_samples": [
+        {
+          "audio_seconds": 2.0,
+          "reference_position": 1,
+          "hypothesis_position": 0,
+          "error_words": -1
+        },
+        {
+          "audio_seconds": 4.0,
+          "reference_position": 5,
+          "hypothesis_position": 5,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 6.0,
+          "reference_position": 11,
+          "hypothesis_position": 12,
+          "error_words": 1
+        },
+        {
+          "audio_seconds": 8.0,
+          "reference_position": 17,
+          "hypothesis_position": 17,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 10.0,
+          "reference_position": 20,
+          "hypothesis_position": 20,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 12.0,
+          "reference_position": 27,
+          "hypothesis_position": 27,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 14.0,
+          "reference_position": 34,
+          "hypothesis_position": 34,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 16.0,
+          "reference_position": 37,
+          "hypothesis_position": 38,
+          "error_words": 1
+        },
+        {
+          "audio_seconds": 18.0,
+          "reference_position": 43,
+          "hypothesis_position": 43,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 20.0,
+          "reference_position": 46,
+          "hypothesis_position": 47,
+          "error_words": 1
+        },
+        {
+          "audio_seconds": 22.0,
+          "reference_position": 52,
+          "hypothesis_position": 53,
+          "error_words": 1
+        }
+      ],
+      "display_samples": [
+        {
+          "audio_seconds": 2.0,
+          "reference_position": 1,
+          "visible_position_simulated": 0,
+          "error_words": -1
+        },
+        {
+          "audio_seconds": 4.0,
+          "reference_position": 5,
+          "visible_position_simulated": 0,
+          "error_words": -5
+        },
+        {
+          "audio_seconds": 6.0,
+          "reference_position": 11,
+          "visible_position_simulated": 5,
+          "error_words": -6
+        },
+        {
+          "audio_seconds": 8.0,
+          "reference_position": 17,
+          "visible_position_simulated": 12,
+          "error_words": -5
+        },
+        {
+          "audio_seconds": 10.0,
+          "reference_position": 20,
+          "visible_position_simulated": 17,
+          "error_words": -3
+        },
+        {
+          "audio_seconds": 12.0,
+          "reference_position": 27,
+          "visible_position_simulated": 20,
+          "error_words": -7
+        },
+        {
+          "audio_seconds": 14.0,
+          "reference_position": 34,
+          "visible_position_simulated": 27,
+          "error_words": -7
+        },
+        {
+          "audio_seconds": 16.0,
+          "reference_position": 37,
+          "visible_position_simulated": 34,
+          "error_words": -3
+        },
+        {
+          "audio_seconds": 18.0,
+          "reference_position": 43,
+          "visible_position_simulated": 38,
+          "error_words": -5
+        },
+        {
+          "audio_seconds": 20.0,
+          "reference_position": 46,
+          "visible_position_simulated": 43,
+          "error_words": -3
+        },
+        {
+          "audio_seconds": 22.0,
+          "reference_position": 52,
+          "visible_position_simulated": 47,
+          "error_words": -5
+        }
+      ],
+      "first_final_word_audio_seconds": 24.0,
+      "first_final_word_ready_seconds_simulated": 25.708541599975433,
+      "final_word_delay_seconds_simulated": 2.768541599975432,
+      "final_position": 56
+    },
+    {
+      "file": "lectura_20261014_081816_009646_ventana_8s_r3.json",
+      "sha256": "bfc97b73cce3dfcd0a3494d30843f5fa676f99d20c3905d8a0f7842aa2d0b67c",
+      "repeat": 3,
+      "window_seconds": 8.0,
+      "annotation_coverage_words": 56,
+      "hypothesis_at_audio_cutoff": {
+        "samples": 11,
+        "mean_signed_words": 0.18181818181818182,
+        "mean_absolute_words": 0.36363636363636365,
+        "max_absolute_words": 1,
+        "exact_samples": 7,
+        "within_one_word_samples": 11
+      },
+      "visible_at_audio_cutoff_simulated": {
+        "samples": 11,
+        "mean_signed_words": -4.636363636363637,
+        "mean_absolute_words": 4.636363636363637,
+        "max_absolute_words": 7,
+        "exact_samples": 0,
+        "within_one_word_samples": 1
+      },
+      "cutoff_samples": [
+        {
+          "audio_seconds": 2.0,
+          "reference_position": 1,
+          "hypothesis_position": 0,
+          "error_words": -1
+        },
+        {
+          "audio_seconds": 4.0,
+          "reference_position": 5,
+          "hypothesis_position": 5,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 6.0,
+          "reference_position": 11,
+          "hypothesis_position": 12,
+          "error_words": 1
+        },
+        {
+          "audio_seconds": 8.0,
+          "reference_position": 17,
+          "hypothesis_position": 17,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 10.0,
+          "reference_position": 20,
+          "hypothesis_position": 20,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 12.0,
+          "reference_position": 27,
+          "hypothesis_position": 27,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 14.0,
+          "reference_position": 34,
+          "hypothesis_position": 34,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 16.0,
+          "reference_position": 37,
+          "hypothesis_position": 38,
+          "error_words": 1
+        },
+        {
+          "audio_seconds": 18.0,
+          "reference_position": 43,
+          "hypothesis_position": 43,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 20.0,
+          "reference_position": 46,
+          "hypothesis_position": 46,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 22.0,
+          "reference_position": 52,
+          "hypothesis_position": 53,
+          "error_words": 1
+        }
+      ],
+      "display_samples": [
+        {
+          "audio_seconds": 2.0,
+          "reference_position": 1,
+          "visible_position_simulated": 0,
+          "error_words": -1
+        },
+        {
+          "audio_seconds": 4.0,
+          "reference_position": 5,
+          "visible_position_simulated": 0,
+          "error_words": -5
+        },
+        {
+          "audio_seconds": 6.0,
+          "reference_position": 11,
+          "visible_position_simulated": 5,
+          "error_words": -6
+        },
+        {
+          "audio_seconds": 8.0,
+          "reference_position": 17,
+          "visible_position_simulated": 12,
+          "error_words": -5
+        },
+        {
+          "audio_seconds": 10.0,
+          "reference_position": 20,
+          "visible_position_simulated": 17,
+          "error_words": -3
+        },
+        {
+          "audio_seconds": 12.0,
+          "reference_position": 27,
+          "visible_position_simulated": 20,
+          "error_words": -7
+        },
+        {
+          "audio_seconds": 14.0,
+          "reference_position": 34,
+          "visible_position_simulated": 27,
+          "error_words": -7
+        },
+        {
+          "audio_seconds": 16.0,
+          "reference_position": 37,
+          "visible_position_simulated": 34,
+          "error_words": -3
+        },
+        {
+          "audio_seconds": 18.0,
+          "reference_position": 43,
+          "visible_position_simulated": 38,
+          "error_words": -5
+        },
+        {
+          "audio_seconds": 20.0,
+          "reference_position": 46,
+          "visible_position_simulated": 43,
+          "error_words": -3
+        },
+        {
+          "audio_seconds": 22.0,
+          "reference_position": 52,
+          "visible_position_simulated": 46,
+          "error_words": -6
+        }
+      ],
+      "first_final_word_audio_seconds": 24.0,
+      "first_final_word_ready_seconds_simulated": 25.89439659996424,
+      "final_word_delay_seconds_simulated": 2.9543965999642374,
+      "final_position": 56
+    },
+    {
+      "file": "lectura_20261014_081816_009646_ventana_6s_r3.json",
+      "sha256": "af2e5dcc6a79c56f701eceaf21588d4f07827d71e9dd282f9e833b2dfe5346b0",
+      "repeat": 3,
+      "window_seconds": 6.0,
+      "annotation_coverage_words": 56,
+      "hypothesis_at_audio_cutoff": {
+        "samples": 11,
+        "mean_signed_words": 0.18181818181818182,
+        "mean_absolute_words": 0.36363636363636365,
+        "max_absolute_words": 1,
+        "exact_samples": 7,
+        "within_one_word_samples": 11
+      },
+      "visible_at_audio_cutoff_simulated": {
+        "samples": 11,
+        "mean_signed_words": -4.636363636363637,
+        "mean_absolute_words": 4.636363636363637,
+        "max_absolute_words": 7,
+        "exact_samples": 0,
+        "within_one_word_samples": 1
+      },
+      "cutoff_samples": [
+        {
+          "audio_seconds": 2.0,
+          "reference_position": 1,
+          "hypothesis_position": 0,
+          "error_words": -1
+        },
+        {
+          "audio_seconds": 4.0,
+          "reference_position": 5,
+          "hypothesis_position": 5,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 6.0,
+          "reference_position": 11,
+          "hypothesis_position": 12,
+          "error_words": 1
+        },
+        {
+          "audio_seconds": 8.0,
+          "reference_position": 17,
+          "hypothesis_position": 17,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 10.0,
+          "reference_position": 20,
+          "hypothesis_position": 20,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 12.0,
+          "reference_position": 27,
+          "hypothesis_position": 27,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 14.0,
+          "reference_position": 34,
+          "hypothesis_position": 34,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 16.0,
+          "reference_position": 37,
+          "hypothesis_position": 38,
+          "error_words": 1
+        },
+        {
+          "audio_seconds": 18.0,
+          "reference_position": 43,
+          "hypothesis_position": 43,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 20.0,
+          "reference_position": 46,
+          "hypothesis_position": 46,
+          "error_words": 0
+        },
+        {
+          "audio_seconds": 22.0,
+          "reference_position": 52,
+          "hypothesis_position": 53,
+          "error_words": 1
+        }
+      ],
+      "display_samples": [
+        {
+          "audio_seconds": 2.0,
+          "reference_position": 1,
+          "visible_position_simulated": 0,
+          "error_words": -1
+        },
+        {
+          "audio_seconds": 4.0,
+          "reference_position": 5,
+          "visible_position_simulated": 0,
+          "error_words": -5
+        },
+        {
+          "audio_seconds": 6.0,
+          "reference_position": 11,
+          "visible_position_simulated": 5,
+          "error_words": -6
+        },
+        {
+          "audio_seconds": 8.0,
+          "reference_position": 17,
+          "visible_position_simulated": 12,
+          "error_words": -5
+        },
+        {
+          "audio_seconds": 10.0,
+          "reference_position": 20,
+          "visible_position_simulated": 17,
+          "error_words": -3
+        },
+        {
+          "audio_seconds": 12.0,
+          "reference_position": 27,
+          "visible_position_simulated": 20,
+          "error_words": -7
+        },
+        {
+          "audio_seconds": 14.0,
+          "reference_position": 34,
+          "visible_position_simulated": 27,
+          "error_words": -7
+        },
+        {
+          "audio_seconds": 16.0,
+          "reference_position": 37,
+          "visible_position_simulated": 34,
+          "error_words": -3
+        },
+        {
+          "audio_seconds": 18.0,
+          "reference_position": 43,
+          "visible_position_simulated": 38,
+          "error_words": -5
+        },
+        {
+          "audio_seconds": 20.0,
+          "reference_position": 46,
+          "visible_position_simulated": 43,
+          "error_words": -3
+        },
+        {
+          "audio_seconds": 22.0,
+          "reference_position": 52,
+          "visible_position_simulated": 46,
+          "error_words": -6
+        }
+      ],
+      "first_final_word_audio_seconds": 24.0,
+      "first_final_word_ready_seconds_simulated": 25.846013400005177,
+      "final_word_delay_seconds_simulated": 2.9060134000051754,
+      "final_position": 56
+    }
+  ]
+}
