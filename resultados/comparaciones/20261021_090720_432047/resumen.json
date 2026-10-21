@@ -1,0 +1,186 @@
+{
+  "block_seconds": 2,
+  "windows_seconds": [
+    4,
+    8
+  ],
+  "repetitions": 3,
+  "seed": 20261014,
+  "execution_plan": [
+    {
+      "repeat": 1,
+      "window_seconds": 8
+    },
+    {
+      "repeat": 1,
+      "window_seconds": 4
+    },
+    {
+      "repeat": 2,
+      "window_seconds": 8
+    },
+    {
+      "repeat": 2,
+      "window_seconds": 4
+    },
+    {
+      "repeat": 3,
+      "window_seconds": 4
+    },
+    {
+      "repeat": 3,
+      "window_seconds": 8
+    }
+  ],
+  "notice": "3 ronda(s) por configuración, orden aleatorio reproducible por ronda. Ejecución secuencial para no competir por CPU. Tiempos orientativos, afectados por carga y calentamiento. No hay referencia humana de posición ni latencia visual. Comparar posiciones entre métodos no demuestra precisión.",
+  "runs": [
+    {
+      "audio": "lectura_20261021_090304_259866.wav",
+      "method": "ventana_8s",
+      "window_seconds": 8,
+      "repeat": 1,
+      "record_file": "lectura_20261021_090304_259866_ventana_8s_r1.json",
+      "updates": 30,
+      "processing_total_seconds": 36.516293399909046,
+      "processing_median_seconds": 1.6162647499877494,
+      "processing_p95_seconds": 2.8658980000182055,
+      "audio_reprocessed_total_seconds": 228.0,
+      "over_block_updates": 2,
+      "max_backlog_seconds_simulated": 1.356774999992922,
+      "final_ready_seconds_simulated": 60.016971400007606,
+      "final_position": 45,
+      "first_final_position_audio_seconds": 26.0,
+      "backward_moves": 1,
+      "holds": 16
+    },
+    {
+      "audio": "lectura_20261021_090304_259866.wav",
+      "method": "ventana_4s",
+      "window_seconds": 4,
+      "repeat": 1,
+      "record_file": "lectura_20261021_090304_259866_ventana_4s_r1.json",
+      "updates": 30,
+      "processing_total_seconds": 30.028529400005937,
+      "processing_median_seconds": 1.5960012499708682,
+      "processing_p95_seconds": 1.7571996999904513,
+      "audio_reprocessed_total_seconds": 118.0,
+      "over_block_updates": 0,
+      "max_backlog_seconds_simulated": 0.0,
+      "final_ready_seconds_simulated": 60.01108010002645,
+      "final_position": 56,
+      "first_final_position_audio_seconds": 26.0,
+      "backward_moves": 0,
+      "holds": 17
+    },
+    {
+      "audio": "lectura_20261021_090304_259866.wav",
+      "method": "ventana_8s",
+      "window_seconds": 8,
+      "repeat": 2,
+      "record_file": "lectura_20261021_090304_259866_ventana_8s_r2.json",
+      "updates": 30,
+      "processing_total_seconds": 37.02277010004036,
+      "processing_median_seconds": 1.6612571500008926,
+      "processing_p95_seconds": 2.0696804000181146,
+      "audio_reprocessed_total_seconds": 228.0,
+      "over_block_updates": 3,
+      "max_backlog_seconds_simulated": 1.3722136999713257,
+      "final_ready_seconds_simulated": 60.01664200000232,
+      "final_position": 45,
+      "first_final_position_audio_seconds": 26.0,
+      "backward_moves": 1,
+      "holds": 16
+    },
+    {
+      "audio": "lectura_20261021_090304_259866.wav",
+      "method": "ventana_4s",
+      "window_seconds": 4,
+      "repeat": 2,
+      "record_file": "lectura_20261021_090304_259866_ventana_4s_r2.json",
+      "updates": 30,
+      "processing_total_seconds": 29.172636699920986,
+      "processing_median_seconds": 1.542946600005962,
+      "processing_p95_seconds": 1.7058483000146225,
+      "audio_reprocessed_total_seconds": 118.0,
+      "over_block_updates": 0,
+      "max_backlog_seconds_simulated": 0.0,
+      "final_ready_seconds_simulated": 60.008952700009104,
+      "final_position": 56,
+      "first_final_position_audio_seconds": 26.0,
+      "backward_moves": 0,
+      "holds": 17
+    },
+    {
+      "audio": "lectura_20261021_090304_259866.wav",
+      "method": "ventana_4s",
+      "window_seconds": 4,
+      "repeat": 3,
+      "record_file": "lectura_20261021_090304_259866_ventana_4s_r3.json",
+      "updates": 30,
+      "processing_total_seconds": 28.941348900203593,
+      "processing_median_seconds": 1.549201650021132,
+      "processing_p95_seconds": 1.658019799971953,
+      "audio_reprocessed_total_seconds": 118.0,
+      "over_block_updates": 0,
+      "max_backlog_seconds_simulated": 0.0,
+      "final_ready_seconds_simulated": 60.00936129997717,
+      "final_position": 56,
+      "first_final_position_audio_seconds": 26.0,
+      "backward_moves": 0,
+      "holds": 17
+    },
+    {
+      "audio": "lectura_20261021_090304_259866.wav",
+      "method": "ventana_8s",
+      "window_seconds": 8,
+      "repeat": 3,
+      "record_file": "lectura_20261021_090304_259866_ventana_8s_r3.json",
+      "updates": 30,
+      "processing_total_seconds": 36.169908400042914,
+      "processing_median_seconds": 1.662951050006086,
+      "processing_p95_seconds": 1.8338716000434943,
+      "audio_reprocessed_total_seconds": 228.0,
+      "over_block_updates": 1,
+      "max_backlog_seconds_simulated": 1.2564190999837592,
+      "final_ready_seconds_simulated": 60.01603330002399,
+      "final_position": 45,
+      "first_final_position_audio_seconds": 26.0,
+      "backward_moves": 1,
+      "holds": 16
+    }
+  ],
+  "aggregates": [
+    {
+      "audio": "lectura_20261021_090304_259866.wav",
+      "window_seconds": 4,
+      "method": "ventana_4s",
+      "mean_total_seconds": 29.38083833337684,
+      "min_total_seconds": 28.941348900203593,
+      "max_total_seconds": 30.028529400005937,
+      "mean_max_backlog_seconds": 0.0,
+      "over_block_updates_total": 0,
+      "updates_total": 90,
+      "final_positions": [
+        56,
+        56,
+        56
+      ]
+    },
+    {
+      "audio": "lectura_20261021_090304_259866.wav",
+      "window_seconds": 8,
+      "method": "ventana_8s",
+      "mean_total_seconds": 36.56965729999744,
+      "min_total_seconds": 36.169908400042914,
+      "max_total_seconds": 37.02277010004036,
+      "mean_max_backlog_seconds": 1.3284692666493356,
+      "over_block_updates_total": 6,
+      "updates_total": 90,
+      "final_positions": [
+        45,
+        45,
+        45
+      ]
+    }
+  ]
+}

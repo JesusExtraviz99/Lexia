@@ -60,9 +60,12 @@ class TemporalBacktrackTracker(Tracker):
         old = (self.position, self.failures, self.recovery_candidate)
         heard = [w['word'] for w in hypothesis]
         state = super().update(heard)
-        if state['evidence'].get('position') is None:
+        if state['mode'] == 'palabra_aislada_consecutiva':
+            matched = {'position': state['position'], 'matched_hypothesis_index': 0}
+        elif state['evidence'].get('position') is None:
             return state
-        matched = locate(self.story, heard, old[0], global_search=state['mode'] == 'recuperacion', include_match_index=True)
+        else:
+            matched = locate(self.story, heard, old[0], global_search=state['mode'] == 'recuperacion', include_match_index=True)
         index = matched.get('matched_hypothesis_index')
         if matched['position'] != state['position'] or index is None:
             raise ValueError('No se pudo reproducir la coincidencia temporal del candidato.')
@@ -77,6 +80,14 @@ class TemporalBacktrackTracker(Tracker):
         else:
             self.latest_support_end = max(candidate_end, self.latest_support_end or 0)
         return state
+
+
+class CombinedTracker(TemporalBacktrackTracker, SingleWordTracker):
+    """Combina ambas reglas sin alterar sus parámetros; no se activa en seguir.py.
+
+    La envoltura temporal llama a la regla de palabra aislada y conserva también
+    el respaldo temporal de los avances aceptados por esa regla.
+    """
 
 
 def replay(data, tracker_class=Tracker):

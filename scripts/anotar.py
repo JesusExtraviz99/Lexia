@@ -140,6 +140,11 @@ class Workspace:
 
 
 EVENT_CASES = {
+    'relectura_lejana': ('lectura_relectura_lejana', 'Vuelta atrás después del final del cuento',
+                        'Marca solo tres palabras: cuaderno al terminar el cuento, Los al empezar la relectura y alas al terminarla. Los y alas son de la segunda lectura de ese tramo. Sus límites permiten delimitar la frase sin anotar cada palabra interna.',
+                        [('cuaderno · final de la lectura completa', [56, 56], 1, [22, 28]),
+                         ('Los · inicio de la relectura', [37, 37], 2, [26, 32]),
+                         ('alas · final de la relectura', [45, 45], 2, [30, 36])]),
     'pausa': ('lectura_pausa', 'Pausa entre flor y Ana',
               'Marca flor antes de la pausa, Ana al retomar la lectura y cuaderno al final. Solo estas tres palabras.',
               [('flor · antes de la pausa', [27, 27], 1, [6, 14]),

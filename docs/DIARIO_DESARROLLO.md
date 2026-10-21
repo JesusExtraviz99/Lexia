@@ -12,20 +12,14 @@ Las conclusiones provisionales se revisarán mediante entradas nuevas que enlace
 
 El diario se actualiza durante el trabajo, sin necesitar una petición nueva para cada entrada. Primero se prueba localmente, después el usuario revisa los cambios y finalmente autoriza su subida a GitHub. No se publican cambios por el mero hecho de anotarlos aquí.
 
-## Estado del proyecto
+## Estado del proyecto a 19/10/2026
 
-- Implementados: grabación local, transcripción posterior, alineamiento textual, seguimiento simulado por prefijos y comparación con ventanas solapadas.
-- Probados por el usuario: grabación/transcripción, alineamiento, seguimiento por prefijos y comparación de ventanas de 6 y 10 s.
-- Probado también por el usuario: experimento ampliado de ventanas, con tres rondas sobre el mismo audio.
-- Probada por el usuario: grabación con pausa de unos 8 s y revisión humana del ruido de pájaros al final.
-- Probada por el usuario: lectura lenta, con bloqueos, regresión final y pico de procesamiento documentados.
-- Probada por el usuario: relectura de una frase; completado el primer recorrido de cinco casos adultos.
-- Banco de pruebas catalogado y cinco transcripciones literales confirmadas por escucha del usuario. Pendientes: tiempos humanos por palabra/evento y evaluador de calidad.
-- Publicación autorizada: relectura, WAV, resultados y diario hasta E020; primer ciclo de cinco casos adultos conservado. El commit de esta entrega se consulta en el historial de Git.
-- Próximo trabajo local: referencias y métricas de calidad para comparar configuraciones sin limitarse a tiempos y posición final.
-- Configuración pendiente de selección: 4 s reduce coste en las primeras lecturas, pero se bloquea al final de la lectura lenta; 8 s alcanza el final y después retrocede, con un pico de procesamiento. Mantener ambas como comparación. Bloque de 2 s, modo predeterminado de prefijo sin cambios.
-- No implementados: subrayado visual, captura con seguimiento en directo y diagnóstico fiable de errores lectores.
-- Datos actuales: cinco lecturas de un mismo adulto (normal, desviaciones, pausa, lenta y relectura), con un cuento de 56 palabras. No permiten conclusiones sobre lectura infantil ni generalización a otros textos.
+- Implementados: grabación local, transcripción posterior, alineamiento textual, seguimiento simulado, comparación de ventanas, referencias humanas y evaluadores de posición/eventos.
+- Banco de desarrollo: cinco grabaciones de un adulto con un cuento de 56 palabras. Cinco transcripciones revisadas; anotación temporal completa del caso normal y selectiva de pausa, lenta y relectura. Revisión por el propio lector, sin anotador independiente.
+- Probadas y revisadas por el usuario: variantes de palabra aislada, protección temporal, combinación y recuperación global exacta. Las dos primeras aportan mejoras localizadas sobre hipótesis de grabaciones; el resultado positivo de la última sigue siendo sintético.
+- Última publicación: c99035d. Los experimentos posteriores y esta revisión del diario permanecen locales. Ninguna variante está activada en el seguidor habitual.
+- Pasan 51 pruebas automáticas. Siguen pendientes el final lento de 4 s, la evaluación positiva grabada de relectura lejana y la demora real de pantalla. La nueva grabación propuesta todavía no se ha realizado.
+- No implementados: seguimiento visible en directo y aplicación de aula. Los datos actuales no demuestran generalización a otros cuentos, voces o lectura infantil. No se ha elegido ventana ni configuración definitiva.
 
 ## E001 · Del informe al primer prototipo
 
@@ -612,18 +606,115 @@ El diario se actualiza durante el trabajo, sin necesitar una petición nueva par
 
 **Decisión.** Comprobación compartida de esta mejora localizada sobre los mismos datos de desarrollo. La variante permanece experimental, sin activar en el seguidor habitual ni publicar. Siguiente comparación propuesta: original, palabra aislada, protección temporal y ambas juntas, para estudiar interacción antes de integrar. No se requieren nuevas grabaciones para esa reproducción; los tiempos ASR seguirán siendo reutilizados.
 
+## E041 · Comparación de las mejoras aisladas y combinadas
+
+**Fecha:** 19/10/2026. Primera comparación; la reproducción del usuario se registra en E042.
+
+**Pregunta.** ¿La combinación conserva los avances de palabra aislada y protección temporal, o aparecen efectos adicionales al aplicarlas juntas?
+
+**Configuración y método.** Se comparan original, palabra aislada, protección temporal y combinación sobre los mismos 36 registros. Son 144 reproducciones de seguimiento, no grabaciones ni participantes nuevos. Se verifican posiciones, movimientos y modos del original. Se mantienen hipótesis, ventanas, cortes y parámetros; no se ejecutan inferencias nuevas. Los tiempos ASR/cola se reutilizan, mientras el coste propio del seguidor se mide aparte.
+
+**Implementación.** La envoltura temporal llama a la regla de palabra aislada y conserva también el respaldo temporal de sus avances. Se comprueba ese enlace con una secuencia sintética que aplica ambas reglas y después vuelve atrás con evidencia posterior. Las trazas compactas identifican la fuente original por huella sin duplicar sus hipótesis.
+
+**Resultado en grabaciones.** Con 4 s, la combinación mantiene la mejora 45→46 en los cortes 62/64 s de las tres rondas lentas, aunque su final sigue siendo 53. Con 8 s, conserva 56 en los seis cortes 80–90 s y termina en 56, igual que la protección temporal aislada; original y palabra aislada terminan en 55. No cambian posiciones de normal, desviaciones, pausa o relectura. No se mejora todavía la demora del seguimiento de la frase repetida.
+
+**Interacción y límite descubierto.** No aparecen posiciones nuevas exclusivas de combinar reglas en los registros. Sin embargo, un control sintético de relectura lejana muestra que, tras conservar 14 en vez de 13, mirando sus alas hacia posición 3 deja solo alas dentro de la ventana local. Original y palabra aislada aceptan 3; temporal y combinación mantienen 14 en esa actualización. El candidato no supera la búsqueda local antes de comprobar sus tiempos. El límite afecta ya a la regla temporal aislada; no surge únicamente de la combinación. No se había evaluado aún la recuperación global con hipótesis posteriores.
+
+**Decisión.** Mantener la combinación experimental y analizar la recuperación fuera de la búsqueda local. No observar posiciones nuevas por interacción no demuestra independencia de las reglas ni ausencia universal de regresiones. No se activa aún en el seguidor habitual ni se mide latencia real nueva. El commit c99035d conserva los experimentos previos; este experimento posterior sigue local.
+
+**Evidencia.** scripts/comparar_combinacion.py, pruebas/14_combinacion_reglas.md y resumen.json/md de ambas ejecuciones.
+
+## E042 · Comprobación del usuario de ambas reglas juntas
+
+**Fecha:** 19/10/2026.
+
+**Comprobación del usuario.** Ejecuta comparar_combinacion y comparte resultados/combinacion/20261019_112218_565950, reproduciendo tanto las mejoras de las grabaciones como el control negativo. La primera comparación y sus huellas se conservan en resultados/combinacion/20261019_112016_077915. Pasan 45 pruebas automáticas.
+
+**Resultado compartido.** Se conservan las mejoras de Después en 62/64 s con ventana de 4 s y de cuaderno en 80–90 s con 8 s. No cambian las posiciones de normal, desviaciones, pausa o relectura. El usuario también reproduce el control sintético: original 3, palabra aislada 3, temporal 14 y combinación 14.
+
+**Decisión.** Mantener la combinación experimental y estudiar la recuperación de una relectura que queda fuera de la zona local. La ausencia de nuevas posiciones exclusivas de combinar reglas en las grabaciones no elimina ese límite. Sin nuevas grabaciones ni publicación en esta revisión.
+
+## E043 · Diagnóstico de búsqueda global y confirmación de recuperación
+
+**Fecha:** 19/10/2026. Cuatro secuencias sintéticas reproducidas por el usuario.
+
+**Objetivo.** Explicar cuándo recupera la combinación una relectura que queda fuera de la ventana local, sin corregir todavía ninguna regla.
+
+**Mecanismo.** Desde 14, la búsqueda local abarca 3–14 y solo encuentra una coincidencia de mirando sus alas (1–3). La consulta global encuentra 3/3 y candidato 3, pero el algoritmo exige dos fallos locales procesados para consultarla. Su primer candidato queda pendiente hasta que otra actualización procesada proponga el mismo índice. Un candidato local aceptado puede recuperar directamente y reiniciar los fallos. Solo se procesan textos distintos: timestamps posteriores con texto idéntico no llegan al filtro temporal.
+
+**Controles y resultado.** A: texto y tiempos repetidos mantiene 14 en las tres propuestas. B: el mismo texto con tiempos posteriores también mantiene 14. C: frase creciente recupera por búsqueda local a 5 en el tercer paso, después de guardar candidato global 4 en el segundo. D: textos distintos construidos para el candidato 3 recuperan globalmente a 3 en el tercero, con respaldo temporal posterior. El diagnóstico verifica posiciones y modos contra replay en las cuatro secuencias, doce propuestas en total. La consulta global adicional que se imprime para explicar el resultado no modifica el seguimiento.
+
+**Comprobación compartida.** El usuario ejecuta diagnosticar_recuperacion y aporta la salida completa de los cuatro casos, confirmando la diferencia entre encontrar una frase globalmente y aceptar su candidato. El comando solo lee registros y construye secuencias: no escribe archivos ni ejecuta ASR.
+
+**Interpretación y límites.** No afirmar bloqueo permanente: la recuperación depende de las hipótesis siguientes. Son propuestas construidas, no grabaciones ni segundos de latencia. Dos textos diferentes tampoco prueban dos eventos independientes de habla. La política de texto idéntico evita confirmar repetidamente el mismo texto en silencio, pero también puede impedir examinar nueva información temporal.
+
+**Decisión.** Probar por separado una recuperación adelantada con coincidencia global exacta, inequívoca y temporalmente posterior. No ampliar la ventana solo para hacer caber el ejemplo ni tratar la repetición del mismo texto como confirmación independiente. No se introduce una corrección en este diagnóstico.
+
+**Evidencia.** scripts/diagnosticar_recuperacion.py y pruebas/15_diagnostico_recuperacion.md.
+
+## E044 · Recuperación anticipada por frase exacta única y posterior
+
+**Fecha:** 19/10/2026. Primera comparación de la variante; revisión posterior del usuario en E045.
+
+**Pregunta y cambio.** Evitar la espera de recuperación cuando la búsqueda local falla pero hay evidencia global especialmente clara. ExactRecoveryTracker se añade sobre la combinación sin activarse en el seguidor habitual. Examina la cola completa de 3–8 palabras: deben coincidir exactamente como secuencia consecutiva, aparecer una sola vez en todo el cuento y conducir a una posición anterior. Sus tiempos ASR deben estar ordenados y no solaparse entre palabras; el inicio de la frase no debe ser anterior al respaldo aceptado y su final debe ser posterior. Si no cumple todo, conserva la combinación anterior. No usa tiempos humanos para decidir ni modifica la política de texto idéntico.
+
+**Método y evidencia.** comparar_recuperacion contrasta original, combinación y nueva variante sobre los mismos 36 registros y verifica reproducción del original. No ejecuta inferencias ni grabaciones nuevas. Los tiempos ASR/cola se reutilizan y el tiempo propio del seguidor se mide aparte. Código, fuentes y anotaciones se identifican por huellas; se guardan informes y trazas compactas. Primera ejecución en resultados/recuperacion/20261019_120146_079995.
+
+**Resultado en grabaciones.** La nueva recuperación no se activa y no cambia ninguna posición frente a la combinación en los 36 registros. Se conservan sus mejoras previas y sus fallos pendientes: lenta de 4 s termina en 53 y no se mejora la demora de la relectura. No hay todavía un ejemplo positivo grabado de esta nueva vía.
+
+**Controles sintéticos positivos.** A/B pasan de 14/14/14 a 3/3/3; C, frase creciente, de 14/14/5 a 3/4/5; D, textos distintos para el mismo candidato, de 14/14/3 a 3/3/3. Se recupera desde la primera propuesta y los siguientes avances pueden seguir por la búsqueda local. Las listas son propuestas, no segundos de demora.
+
+**Controles negativos y límite conservado.** No se activa la vía rápida con frase de audio antiguo, solo dos palabras, una palabra incorrecta, frase que empieza antes del respaldo aceptado ni frase con dos apariciones. Este último control usa un cuento construido de 61 palabras y mantiene 61. En I, texto antiguo rechazado seguido del mismo texto con tiempos nuevos, se mantiene 14/14: la segunda propuesta sigue ignorándose. Estos controles no eliminan otras decisiones que pueda aceptar el algoritmo anterior.
+
+**Interpretación y decisión.** El resultado positivo es todavía sintético, sobre datos usados para diseñar la regla. El umbral de tres palabras y las restricciones temporales son provisionales. Timestamps estimados, exactitud y unicidad no prueban habla nueva: el ASR puede equivocarse o inventar texto. No se declara resuelta la relectura ni se incorpora la variante al seguidor habitual. Este experimento y sus revisiones permanecen locales.
+
+**Evidencia.** scripts/comparar_recuperacion.py, pruebas/16_recuperacion_global_exacta.md, informes enlazados y protocolo de contraste grabado.
+
+**Comprobaciones automáticas.** Pasan 51 pruebas. Las seis nuevas cubren recuperación inicial, condiciones de exactitud/unicidad/longitud, tiempos antiguos/solapados/desordenados o inválidos, preservación de datos, camino local y política de texto idéntico.
+
+## E045 · Revisión compartida y propuesta de relectura lejana real
+
+**Fecha:** 19/10/2026.
+
+**Comprobación del usuario.** Ejecuta comparar_recuperacion y comparte resultados/recuperacion/20261019_120351_062213, confirmando cero activaciones en grabaciones y los resultados de los diez controles. Pasan 51 pruebas, incluidas seis nuevas sobre recuperación inicial, condiciones de exactitud/unicidad/longitud, tiempos antiguos/solapados/desordenados o inválidos, preservación de datos, camino local y política de texto idéntico.
+
+**Conclusión de la revisión.** Se confirma cero activaciones de la nueva recuperación en los 36 registros existentes y las recuperaciones sintéticas de A–D desde la primera propuesta. E–H/J no activan la vía rápida; I conserva la limitación del texto idéntico. No se declara validación positiva con audio real de esta nueva vía.
+
+**Contraste siguiente, aún no realizado.** Está preparado pruebas/17_relectura_lejana_grabada.md: grabar el cuento completo a ritmo normal, pausa aproximada de dos segundos y volver a Los dos se quedaron en silencio mirando sus alas lentamente, terminando en alas. Posición final esperada 45, no 56. Tras identificar el WAV y revisar su contenido, comparar ventanas 4/8 s y bloques 2 s, con referencias selectivas si hacen falta. No ajustar la regla para favorecer esa primera comparación. La consigna no constituye una anotación temporal ni valida otras voces o entornos.
+
+**Estado.** Protocolo preparado en pruebas/17_relectura_lejana_grabada.md. Se espera la ruta del WAV y revisión de contenido antes de generar referencias o resultados. La grabación y el análisis siguen pendientes; no se ha activado el micrófono ni publicado nada en esta revisión.
+
+## E046 · Primer contraste grabado de relectura lejana
+
+**Fecha:** 21/10/2026. Contenido confirmado, tres anclas humanas revisadas y comparaciones/evaluación comprobadas por el usuario y por el asistente.
+
+**Grabación y método.** WAV lectura_20261021_090304_259866.wav, 60 s, nivel máximo comunicado 0,8252. Consigna: cuento completo y vuelta a Los dos se quedaron en silencio mirando sus alas, terminando en alas (45). La consigna no sustituye una referencia humana. El usuario ejecuta ventanas 4/8 s, bloques de 2 s y tres rondas: resultados/comparaciones/20261021_090720_432047. Son repeticiones de cómputo sobre un solo audio del mismo adulto, cuento y entorno.
+
+**Resultado del seguidor original.** Ventana 4 s: final 56 en las tres rondas; inferencia total media 29,38 s, ninguna de 90 llamadas supera 2 s. Ventana 8 s: final 45 en las tres rondas; total medio 36,57 s, seis de 90 llamadas superan 2 s. En 8 s reconoce la frase releída en el corte 34, deja recuperación pendiente y solo vuelve a 45 en el corte 38; el texto idéntico del corte 36 no confirma recuperación. En 4 s los candidatos globales cambian de 43 (corte 32) a 45 (34), sin confirmar dos candidatos iguales antes de perder suficiente texto. No equivale a una omisión del lector.
+
+**Comparación de variantes.** Se añade scripts/comparar_relectura_lejana.py para recibir una carpeta explícita y reproducir original, combinación y recuperación exacta sobre idénticas hipótesis. Guarda huellas de fuentes/código, evidencia y posiciones por corte, con tiempos de salida lista simulados reutilizados. Comprueba reproducción exacta de posiciones, movimientos y modos originales en los seis registros. No cambia ninguna regla ni parámetros. Primera ejecución: resultados/relectura_lejana/20261021_091237_442232.
+
+**Resultado experimental.** En las tres rondas de 4 s la nueva vía se activa en el corte 32, desde 56 a 43 (mirando), y avanza localmente a 45 en el corte 34; original y combinación terminan en 56. En las tres rondas de 8 s la nueva vía se activa en 34 y vuelve directamente a 45, mientras original y combinación recuperan en 38. Los cuatro segundos de diferencia corresponden a cortes de audio, no a una reducción de latencia humana medida. Los tiempos ASR de las frases que activan la regla son posteriores al respaldo aceptado: primera ronda 4 s, inicio 28,78 frente a respaldo 25,32; 8 s, inicio de la cola 29,36 frente a respaldo 25,88. Pasan las nueve pruebas específicas de combinación y recuperación.
+
+**Comprobación compartida.** El usuario ejecuta el comparador y comparte resultados/relectura_lejana/20261021_091515_954571. Se contrasta con la ejecución del asistente: coinciden los seis registros completos de comparación, incluidas posiciones, modos y evidencias. Se confirman las activaciones en 32 s (ventana 4 s) y 34 s (8 s). Esta comprobación reproduce el cálculo; todavía no constituye revisión humana del contenido del audio.
+
+**Referencia confirmada y anotación preparada.** El usuario confirma el cuento completo seguido únicamente de la frase 37–45, sin continuar con Después. Se guarda datos/referencias/lectura_relectura_lejana.json, identificado por hash del WAV. El anotador añade el caso relectura_lejana con tres palabras sin tiempos propuestos: cuaderno (56, intento 1), Los (37, intento 2) y alas (45, intento 2). El inicio de Los y el final de alas delimitan la frase sin anotar sus palabras interiores; la revisión se completa y se documenta a continuación.
+
+**Anclas humanas y contraste temporal.** El usuario guarda y revisa los tres intervalos: cuaderno 24,65–25,48 s, Los de la relectura 29,16–29,43 y alas 32,17–32,73. Pausa entre final del cuento y relectura: 3,68 s; frase releída: 3,57 s. La duración real difiere de la consigna aproximada y no se modifica la grabación para ajustarla. scripts/evaluar_relectura_lejana.py contrasta las trazas con esas anclas, verifica audio/fuentes y guarda evaluacion_humana.json/md en la carpeta del comparador del usuario. En ventana 4 s, la nueva variante llega a alas con demora simulada 2,87–2,92 s desde su final humano (media 2,89); original/combinación no recuperan durante el registro. En 8 s, la nueva demora es 2,96–3,16 s (media 3,06), frente a 6,82–6,90 (media 6,87) de original/combinación. Se reutilizan tiempos de inferencia/cola: no es latencia visual medida ni incluye el coste adicional de las variantes. No se estima precisión de palabras internas no anotadas. Pasan dos pruebas específicas del evaluador: excluye alas de la primera lectura y conserva ausencia de detección sin inventar demora. El usuario ejecuta el evaluador y comparte su salida: confirma las 18 filas de resultados, con las mismas demoras simuladas que la comprobación del asistente. La revisión compartida de este contraste temporal queda completada; las variantes siguen experimentales y sin activar.
+
+**Apoyo a la interpretación.** Se prepara un explorador local de ventanas (scripts/explorar_ventanas.py, herramientas/explorador_ventanas) para comparar por escucha fragmentos exactos por corte, transcripciones guardadas y decisiones de los tres seguidores. Solo consulta: sin nuevas inferencias. Se validan seis originales y 180 límites, ocho clips por muestras dentro de la cuantización PCM16, y en navegador cambio de corte y reproducción excluyente de 4/8 s. Permite revisar auditivamente el efecto del contexto conservado/descartado; no genera nuevas métricas ni modifica reglas.
+
+**Interpretación y siguiente comprobación.** Primera activación positiva de esta vía sobre hipótesis procedentes de una nueva grabación, con contenido confirmado y anclas revisadas por el lector. Comparador y evaluación temporal comprobados por ambas partes. Una grabación con tres rondas no demuestra generalización. Antes de publicar, pasan las 53 pruebas de la batería completa. El contraste siguiente será una nueva lectura completa sin relectura: buscar retrocesos falsos antes de adoptar la regla. Ninguna variante se activa en seguir.py. El usuario autoriza publicar código, resultados y diario original; el diario alternativo permanece local.
+
 ## Formato de futuras entradas (plantilla)
 
-### E041 · Título del siguiente cambio o experimento
+### E047 · Título del siguiente cambio o experimento
 
-- Fecha y estado: propuesta / implementado / probado localmente / revisado por el usuario / publicado.
+- Fecha y estado.
 - Objetivo o pregunta.
-- Cambio y configuración, incluyendo qué varía y qué permanece igual.
-- Datos utilizados y procedencia de la referencia.
-- Evidencia: comandos, registros, informe y commit si existe.
-- Resultados medidos y observaciones del usuario.
-- Interpretación y limitaciones.
-- Decisión: provisional o confirmada, con motivo.
-- Próximo paso y comprobaciones pendientes.
+- Cambios y configuración.
+- Evidencia y procedencia de la referencia.
+- Resultados, interpretación y límites.
+- Decisión y siguiente comprobación.
 
 Este último bloque es una plantilla, no un experimento ya realizado.

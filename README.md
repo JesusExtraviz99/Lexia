@@ -114,6 +114,10 @@ Los JSON existentes conservan las rutas locales de origen como metadatos; al rep
 
 Para comparar el seguidor original y una variante experimental que admite una palabra aislada bajo restricciones, sin repetir reconocimiento: `.\.venv\Scripts\python.exe -m scripts.comparar_seguidores`. Protocolo y resultados: [pruebas/11_palabra_aislada.md](pruebas/11_palabra_aislada.md). La variante no modifica el seguidor habitual.
 
+La comparación de cuatro versiones (original, palabra aislada, temporal y ambas) se ejecuta con `.\.venv\Scripts\python.exe -m scripts.comparar_combinacion`. Imprime los resultados y un control sintético de relectura lejana. Protocolo y limitaciones: [pruebas/14_combinacion_reglas.md](pruebas/14_combinacion_reglas.md).
+
+Para probar una recuperación global anticipada de frase exacta y única con respaldo temporal posterior: `.\.venv\Scripts\python.exe -m scripts.comparar_recuperacion`. Compara la nueva variante con la combinación y el original, e imprime controles sintéticos positivos y negativos. No cambia el seguidor habitual. Detalle: [pruebas/16_recuperacion_global_exacta.md](pruebas/16_recuperacion_global_exacta.md).
+
 Tras completar una comparación de la lectura normal, ejecutar (sustituir CARPETA por la carpeta generada):
 
 ```powershell
@@ -127,3 +131,20 @@ Genera evaluacion_humana.json y evaluacion_humana.md. Compara la última palabra
 La revisión selectiva de pausas, lectura lenta y relectura se inicia con `python -u scripts/anotar.py --caso pausa --puerto 8767` desde el entorno virtual. Instrucciones y cobertura en [herramientas/anotador/LEEME.md](herramientas/anotador/LEEME.md). No requiere volver a anotar todos los cuentos.
 
 Se fija PyAV 16.0.1: la combinación inicial de faster-whisper 1.2.1 y PyAV 19.0.1 fallaba al abrir archivos con el parámetro metadata_errors. Tras corregirla se procesó correctamente el WAV real de la primera prueba.
+
+## Relectura lejana y escucha de ventanas
+
+La comparación grabada de la vuelta desde cuaderno a Los dos se quedaron en silencio mirando sus alas, con tres anclas humanas revisadas, está documentada en [pruebas/17_relectura_lejana_grabada.md](pruebas/17_relectura_lejana_grabada.md). La recuperación exacta sigue siendo experimental; el seguidor habitual no la activa.
+
+```powershell
+.\.venv\Scripts\python.exe -m scripts.comparar_relectura_lejana resultados/comparaciones/20261021_090720_432047
+.\.venv\Scripts\python.exe -m scripts.evaluar_relectura_lejana resultados/relectura_lejana/20261021_091515_954571
+```
+
+Para escuchar el fragmento de entrada de cada ventana y ver las hipótesis y decisiones guardadas:
+
+```powershell
+.\.venv\Scripts\python.exe -u -m scripts.explorar_ventanas resultados/comparaciones/20261021_090720_432047 --puerto 8771
+```
+
+Abrir http://127.0.0.1:8771/. Instrucciones y límites: [explorador de ventanas](herramientas/explorador_ventanas/LEEME.md). Reutiliza los resultados; no ejecuta reconocimiento nuevo. Las demoras de evaluación usan cola simulada, no medición de pantalla.

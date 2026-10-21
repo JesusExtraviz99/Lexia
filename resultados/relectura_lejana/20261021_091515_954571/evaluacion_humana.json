@@ -1,0 +1,299 @@
+{
+  "notice": "Anclas del propio lector, sin revisión independiente ni tiempos interiores de la frase. Salidas listas según cola secuencial simulada: no latencia visual medida; se reutilizan tiempos ASR y no se añade el coste de las variantes. La demora hasta alas se cuenta desde su final humano; el primer retroceso se cuenta desde el inicio de Los. Sin nuevas inferencias ni cambios del seguidor.",
+  "annotation_file": "datos/anotaciones/lectura_relectura_lejana_fragmentos.json",
+  "annotation_sha256": "0156a1d717ed263fe4d4bba809aa3e55a9e1ff51e661c7f61692f1681f6a6b47",
+  "comparison_sha256": "7b4b7e4fa192eae401a5c68ba36bba8505aa4500902677b6a72d1858e5530499",
+  "evaluator_sha256": "2f72f798de7c45935fb3166afaaafa2e1052c3fd0d0ff0f0afac29ec357188e3",
+  "anchors": [
+    {
+      "index": 1,
+      "word": "cuaderno · final de la lectura completa",
+      "story_range": [
+        56,
+        56
+      ],
+      "attempt": 1,
+      "navigation_seconds": [
+        22,
+        28
+      ],
+      "start": 24.65,
+      "end": 25.48,
+      "reviewed": true,
+      "note": "",
+      "timing_origin": "manual"
+    },
+    {
+      "index": 2,
+      "word": "Los · inicio de la relectura",
+      "story_range": [
+        37,
+        37
+      ],
+      "attempt": 2,
+      "navigation_seconds": [
+        26,
+        32
+      ],
+      "start": 29.16,
+      "end": 29.43,
+      "reviewed": true,
+      "note": "",
+      "timing_origin": "manual"
+    },
+    {
+      "index": 3,
+      "word": "alas · final de la relectura",
+      "story_range": [
+        45,
+        45
+      ],
+      "attempt": 2,
+      "navigation_seconds": [
+        30,
+        36
+      ],
+      "start": 32.17,
+      "end": 32.73,
+      "reviewed": true,
+      "note": "",
+      "timing_origin": "manual"
+    }
+  ],
+  "runs": [
+    {
+      "window_seconds": 8,
+      "repeat": 1,
+      "variant": "original",
+      "first_56_ready_delay_after_cuaderno_end_simulated": 3.5999343999824482,
+      "backward_cut_seconds": 38.0,
+      "backward_ready_seconds_simulated": 39.54549499996938,
+      "backward_ready_since_los_start_simulated": 10.385494999969378,
+      "final_45_cut_seconds": 38.0,
+      "final_45_ready_seconds_simulated": 39.54549499996938,
+      "final_45_ready_delay_after_alas_end_simulated": 6.815494999969381,
+      "final_position": 45
+    },
+    {
+      "window_seconds": 8,
+      "repeat": 1,
+      "variant": "combinada",
+      "first_56_ready_delay_after_cuaderno_end_simulated": 3.5999343999824482,
+      "backward_cut_seconds": 38.0,
+      "backward_ready_seconds_simulated": 39.54549499996938,
+      "backward_ready_since_los_start_simulated": 10.385494999969378,
+      "final_45_cut_seconds": 38.0,
+      "final_45_ready_seconds_simulated": 39.54549499996938,
+      "final_45_ready_delay_after_alas_end_simulated": 6.815494999969381,
+      "final_position": 45
+    },
+    {
+      "window_seconds": 8,
+      "repeat": 1,
+      "variant": "nueva",
+      "first_56_ready_delay_after_cuaderno_end_simulated": 3.5999343999824482,
+      "backward_cut_seconds": 34.0,
+      "backward_ready_seconds_simulated": 35.79055540001718,
+      "backward_ready_since_los_start_simulated": 6.630555400017183,
+      "final_45_cut_seconds": 34.0,
+      "final_45_ready_seconds_simulated": 35.79055540001718,
+      "final_45_ready_delay_after_alas_end_simulated": 3.0605554000171864,
+      "final_position": 45
+    },
+    {
+      "window_seconds": 4,
+      "repeat": 1,
+      "variant": "original",
+      "first_56_ready_delay_after_cuaderno_end_simulated": 2.273466499969363,
+      "backward_cut_seconds": null,
+      "backward_ready_seconds_simulated": null,
+      "backward_ready_since_los_start_simulated": null,
+      "final_45_cut_seconds": null,
+      "final_45_ready_seconds_simulated": null,
+      "final_45_ready_delay_after_alas_end_simulated": null,
+      "final_position": 56
+    },
+    {
+      "window_seconds": 4,
+      "repeat": 1,
+      "variant": "combinada",
+      "first_56_ready_delay_after_cuaderno_end_simulated": 2.273466499969363,
+      "backward_cut_seconds": null,
+      "backward_ready_seconds_simulated": null,
+      "backward_ready_since_los_start_simulated": null,
+      "final_45_cut_seconds": null,
+      "final_45_ready_seconds_simulated": null,
+      "final_45_ready_delay_after_alas_end_simulated": null,
+      "final_position": 56
+    },
+    {
+      "window_seconds": 4,
+      "repeat": 1,
+      "variant": "nueva",
+      "first_56_ready_delay_after_cuaderno_end_simulated": 2.273466499969363,
+      "backward_cut_seconds": 32.0,
+      "backward_ready_seconds_simulated": 33.691619399993215,
+      "backward_ready_since_los_start_simulated": 4.531619399993215,
+      "final_45_cut_seconds": 34.0,
+      "final_45_ready_seconds_simulated": 35.649455400009174,
+      "final_45_ready_delay_after_alas_end_simulated": 2.919455400009177,
+      "final_position": 45
+    },
+    {
+      "window_seconds": 8,
+      "repeat": 2,
+      "variant": "original",
+      "first_56_ready_delay_after_cuaderno_end_simulated": 3.636919299936853,
+      "backward_cut_seconds": 38.0,
+      "backward_ready_seconds_simulated": 39.62985309999203,
+      "backward_ready_since_los_start_simulated": 10.469853099992033,
+      "final_45_cut_seconds": 38.0,
+      "final_45_ready_seconds_simulated": 39.62985309999203,
+      "final_45_ready_delay_after_alas_end_simulated": 6.899853099992036,
+      "final_position": 45
+    },
+    {
+      "window_seconds": 8,
+      "repeat": 2,
+      "variant": "combinada",
+      "first_56_ready_delay_after_cuaderno_end_simulated": 3.636919299936853,
+      "backward_cut_seconds": 38.0,
+      "backward_ready_seconds_simulated": 39.62985309999203,
+      "backward_ready_since_los_start_simulated": 10.469853099992033,
+      "final_45_cut_seconds": 38.0,
+      "final_45_ready_seconds_simulated": 39.62985309999203,
+      "final_45_ready_delay_after_alas_end_simulated": 6.899853099992036,
+      "final_position": 45
+    },
+    {
+      "window_seconds": 8,
+      "repeat": 2,
+      "variant": "nueva",
+      "first_56_ready_delay_after_cuaderno_end_simulated": 3.636919299936853,
+      "backward_cut_seconds": 34.0,
+      "backward_ready_seconds_simulated": 35.88597369991476,
+      "backward_ready_since_los_start_simulated": 6.725973699914757,
+      "final_45_cut_seconds": 34.0,
+      "final_45_ready_seconds_simulated": 35.88597369991476,
+      "final_45_ready_delay_after_alas_end_simulated": 3.1559736999147603,
+      "final_position": 45
+    },
+    {
+      "window_seconds": 4,
+      "repeat": 2,
+      "variant": "original",
+      "first_56_ready_delay_after_cuaderno_end_simulated": 2.200567800009157,
+      "backward_cut_seconds": null,
+      "backward_ready_seconds_simulated": null,
+      "backward_ready_since_los_start_simulated": null,
+      "final_45_cut_seconds": null,
+      "final_45_ready_seconds_simulated": null,
+      "final_45_ready_delay_after_alas_end_simulated": null,
+      "final_position": 56
+    },
+    {
+      "window_seconds": 4,
+      "repeat": 2,
+      "variant": "combinada",
+      "first_56_ready_delay_after_cuaderno_end_simulated": 2.200567800009157,
+      "backward_cut_seconds": null,
+      "backward_ready_seconds_simulated": null,
+      "backward_ready_since_los_start_simulated": null,
+      "final_45_cut_seconds": null,
+      "final_45_ready_seconds_simulated": null,
+      "final_45_ready_delay_after_alas_end_simulated": null,
+      "final_position": 56
+    },
+    {
+      "window_seconds": 4,
+      "repeat": 2,
+      "variant": "nueva",
+      "first_56_ready_delay_after_cuaderno_end_simulated": 2.200567800009157,
+      "backward_cut_seconds": 32.0,
+      "backward_ready_seconds_simulated": 33.63563690002775,
+      "backward_ready_since_los_start_simulated": 4.475636900027748,
+      "final_45_cut_seconds": 34.0,
+      "final_45_ready_seconds_simulated": 35.60633300000336,
+      "final_45_ready_delay_after_alas_end_simulated": 2.8763330000033633,
+      "final_position": 45
+    },
+    {
+      "window_seconds": 4,
+      "repeat": 3,
+      "variant": "original",
+      "first_56_ready_delay_after_cuaderno_end_simulated": 2.170710800022352,
+      "backward_cut_seconds": null,
+      "backward_ready_seconds_simulated": null,
+      "backward_ready_since_los_start_simulated": null,
+      "final_45_cut_seconds": null,
+      "final_45_ready_seconds_simulated": null,
+      "final_45_ready_delay_after_alas_end_simulated": null,
+      "final_position": 56
+    },
+    {
+      "window_seconds": 4,
+      "repeat": 3,
+      "variant": "combinada",
+      "first_56_ready_delay_after_cuaderno_end_simulated": 2.170710800022352,
+      "backward_cut_seconds": null,
+      "backward_ready_seconds_simulated": null,
+      "backward_ready_since_los_start_simulated": null,
+      "final_45_cut_seconds": null,
+      "final_45_ready_seconds_simulated": null,
+      "final_45_ready_delay_after_alas_end_simulated": null,
+      "final_position": 56
+    },
+    {
+      "window_seconds": 4,
+      "repeat": 3,
+      "variant": "nueva",
+      "first_56_ready_delay_after_cuaderno_end_simulated": 2.170710800022352,
+      "backward_cut_seconds": 32.0,
+      "backward_ready_seconds_simulated": 33.6412995000137,
+      "backward_ready_since_los_start_simulated": 4.4812995000137015,
+      "final_45_cut_seconds": 34.0,
+      "final_45_ready_seconds_simulated": 35.60488320002332,
+      "final_45_ready_delay_after_alas_end_simulated": 2.8748832000233264,
+      "final_position": 45
+    },
+    {
+      "window_seconds": 8,
+      "repeat": 3,
+      "variant": "original",
+      "first_56_ready_delay_after_cuaderno_end_simulated": 3.402502699969336,
+      "backward_cut_seconds": 38.0,
+      "backward_ready_seconds_simulated": 39.61072250001598,
+      "backward_ready_since_los_start_simulated": 10.450722500015981,
+      "final_45_cut_seconds": 38.0,
+      "final_45_ready_seconds_simulated": 39.61072250001598,
+      "final_45_ready_delay_after_alas_end_simulated": 6.880722500015985,
+      "final_position": 45
+    },
+    {
+      "window_seconds": 8,
+      "repeat": 3,
+      "variant": "combinada",
+      "first_56_ready_delay_after_cuaderno_end_simulated": 3.402502699969336,
+      "backward_cut_seconds": 38.0,
+      "backward_ready_seconds_simulated": 39.61072250001598,
+      "backward_ready_since_los_start_simulated": 10.450722500015981,
+      "final_45_cut_seconds": 38.0,
+      "final_45_ready_seconds_simulated": 39.61072250001598,
+      "final_45_ready_delay_after_alas_end_simulated": 6.880722500015985,
+      "final_position": 45
+    },
+    {
+      "window_seconds": 8,
+      "repeat": 3,
+      "variant": "nueva",
+      "first_56_ready_delay_after_cuaderno_end_simulated": 3.402502699969336,
+      "backward_cut_seconds": 34.0,
+      "backward_ready_seconds_simulated": 35.69002239999827,
+      "backward_ready_since_los_start_simulated": 6.53002239999827,
+      "final_45_cut_seconds": 34.0,
+      "final_45_ready_seconds_simulated": 35.69002239999827,
+      "final_45_ready_delay_after_alas_end_simulated": 2.960022399998273,
+      "final_position": 45
+    }
+  ]
+}
