@@ -4,6 +4,22 @@ from scripts.evaluar_relectura_lejana import evaluate
 
 
 class FarRereadingEvaluationTests(unittest.TestCase):
+    def test_other_destination_distinguishes_partial_word_from_post_end_update(self):
+        anchors = [{'end': 22.51}, {'start': 25.73}, {'end': 34.32}]
+        def row(cut, ready, position, movement):
+            return {'audio_seconds': cut, 'ready_seconds_simulated': ready,
+                    'variants': {'new': {'position': position, 'movement': movement}}}
+        rows = [row(8, 10, 17, 2), row(24, 26, 56, 11), row(28, 29.5, 12, -44),
+                row(34, 35.6, 17, 2), row(36, 37.5, 17, 0)]
+        result = evaluate(rows, 'new', anchors, (10, 17))
+        self.assertEqual(result['backward_cut_seconds'], 28)
+        self.assertEqual(result['first_target_cut_seconds'], 34)
+        self.assertTrue(result['first_target_cut_before_human_end'])
+        self.assertAlmostEqual(result['first_target_ready_minus_human_end_simulated'], 1.28)
+        self.assertEqual(result['post_end_target_cut_seconds'], 36)
+        self.assertAlmostEqual(result['post_end_target_ready_delay_simulated'], 3.18)
+        self.assertNotIn('final_45_cut_seconds', result)
+
     def test_first_reading_alas_does_not_count_as_rereading_recovery(self):
         anchors = [{'end': 25}, {'start': 29}, {'end': 33}]
         def row(t, ready, position, movement):

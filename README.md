@@ -148,3 +148,22 @@ Para escuchar el fragmento de entrada de cada ventana y ver las hipótesis y dec
 ```
 
 Abrir http://127.0.0.1:8771/. Instrucciones y límites: [explorador de ventanas](herramientas/explorador_ventanas/LEEME.md). Reutiliza los resultados; no ejecuta reconocimiento nuevo. Las demoras de evaluación usan cola simulada, no medición de pantalla.
+
+## Controles y segunda relectura
+
+El [control sin relectura con lluvia](pruebas/18_control_sin_relectura_lluvia.md) no registra retrocesos en las tres versiones. Comparación revisada por usuario y asistente:
+
+```powershell
+.\.venv\Scripts\python.exe -m scripts.comparar_relectura_lejana resultados/comparaciones/20261021_100926_258927 --control-sin-relectura
+```
+
+La [segunda relectura lejana](pruebas/20_relectura_lejana_azul.md) cambia el destino a azul (17). Contenido y anclas revisados por el lector, comparación y evaluación comprobadas por ambas partes:
+
+```powershell
+.\.venv\Scripts\python.exe -m scripts.comparar_relectura_lejana resultados/comparaciones/20261021_104005_265730
+.\.venv\Scripts\python.exe -m scripts.evaluar_relectura_lejana resultados/relectura_lejana/20261021_104703_885196 --caso relectura_azul
+```
+
+El evaluador distingue primera identificación del destino con palabra incompleta de actualización con corte posterior al final humano. Los tiempos de salida son simulados; las variantes siguen sin activarse en seguir.py.
+
+El [diagnóstico del pico de inferencia](pruebas/19_diagnostico_inferencia.md), ejecutado por el asistente y pendiente de reproducción por el usuario, instrumenta los reintentos internos. Desactivar las temperaturas alternativas no se adopta: conserva repetición y texto ajeno al cuento. Este diagnóstico ejecuta inferencias nuevas; no es solo reproducción de registros.

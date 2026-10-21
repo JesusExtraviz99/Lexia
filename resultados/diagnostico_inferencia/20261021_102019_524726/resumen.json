@@ -1,0 +1,1099 @@
+{
+  "notice": "Nuevas inferencias instrumentadas sobre cortes aislados en orden aleatorio por ronda. Modelo cargado una vez; primera llamada puede incluir calentamiento. No modifica reglas ni registros originales. Ablación solo temperatura cero cuando se indica; no implica recomendación ni activación.",
+  "source_folder": "C:\\Users\\PC\\OneDrive\\Documentos\\ChatGPT\\Practicas y TFG\\resultados\\comparaciones\\20261021_100926_258927",
+  "source_manifest_sha256": "0cf45cc8036abee016b8868ac2df54003d5b17361257573c14f53f8787aa6c64",
+  "audio_file": "lectura_20261021_100814_321948.wav",
+  "audio_sha256": "86eaef918d35a272a1ba1ee613dfae4993583ebba63e2ae47fc235f7ca1f1315",
+  "script_sha256": "41d702e844f770233de01d94dc446212e2ce19f14adf977d9d4584c334c2ca17",
+  "transcribe_source_sha256": "5d5ffb00018561d3d529b2c72e1d9f5fff055bea725f3cccc7c6c67f5cc8ffe4",
+  "versions": {
+    "faster-whisper": "1.2.1",
+    "ctranslate2": "4.8.3",
+    "av": "16.0.1"
+  },
+  "options": {
+    "language": "es",
+    "beam_size": 5,
+    "word_timestamps": true,
+    "vad_filter": true,
+    "condition_on_previous_text": false,
+    "temperature": 0
+  },
+  "model_load_seconds": 0.9320264999987558,
+  "runs": [
+    {
+      "repeat": 1,
+      "window_seconds": 4,
+      "cut_seconds": 22,
+      "audio_start_seconds": 18.0,
+      "audio_end_seconds": 22.0,
+      "total_seconds": 2.116184299986344,
+      "transcribe_return_seconds": 0.3375884999986738,
+      "vad_duration_seconds": 4.0,
+      "native_events": [
+        {
+          "operation": "encode",
+          "seconds": 1.1436374000040814
+        },
+        {
+          "operation": "generate",
+          "seconds": 0.4458481000037864,
+          "temperature": 0,
+          "tokens": 16,
+          "text": "Se quedaron en silencio mirando sus salas después.",
+          "avg_logprob": -0.40235696119420666,
+          "compression_ratio": 0.864406779661017,
+          "no_speech_prob": 0.33215954899787903,
+          "log_prob_threshold": -1.0,
+          "compression_ratio_threshold": 2.4
+        },
+        {
+          "operation": "align",
+          "seconds": 0.1694866999750957
+        }
+      ],
+      "segments": [
+        {
+          "start": 18.0,
+          "end": 21.84,
+          "text": " Se quedaron en silencio mirando sus salas después.",
+          "temperature": 0,
+          "avg_logprob": -0.40235696119420666,
+          "words": [
+            {
+              "word": " Se",
+              "start": 18.0,
+              "end": 18.28
+            },
+            {
+              "word": " quedaron",
+              "start": 18.28,
+              "end": 18.72
+            },
+            {
+              "word": " en",
+              "start": 18.72,
+              "end": 18.88
+            },
+            {
+              "word": " silencio",
+              "start": 18.88,
+              "end": 19.5
+            },
+            {
+              "word": " mirando",
+              "start": 19.5,
+              "end": 20.259999999999998
+            },
+            {
+              "word": " sus",
+              "start": 20.259999999999998,
+              "end": 20.46
+            },
+            {
+              "word": " salas",
+              "start": 20.46,
+              "end": 21.58
+            },
+            {
+              "word": " después.",
+              "start": 21.58,
+              "end": 21.84
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "repeat": 1,
+      "window_seconds": 8,
+      "cut_seconds": 22,
+      "audio_start_seconds": 14.0,
+      "audio_end_seconds": 22.0,
+      "total_seconds": 6.298128299997188,
+      "transcribe_return_seconds": 0.02559640002436936,
+      "vad_duration_seconds": 8.0,
+      "native_events": [
+        {
+          "operation": "encode",
+          "seconds": 1.454280000005383
+        },
+        {
+          "operation": "generate",
+          "seconds": 2.5450011999928392,
+          "temperature": 0,
+          "tokens": 117,
+          "text": "Ana llamó su hermano para que pudiera verla. Los dos se quedaron en silencio, mirando sus alas. Después de un momento, la gente se volvió a ver a Ana. Y la gente se volvió a ver a Ana. Ana llamó su hermano para que pudiera verla. Los dos se quedaron en silencio, mirando sus alas. Después de un momento, la gente se volvió a ver a Ana.",
+          "avg_logprob": -0.5615248760934604,
+          "compression_ratio": 2.5522388059701493,
+          "no_speech_prob": 0.0541752353310585,
+          "log_prob_threshold": -1.0,
+          "compression_ratio_threshold": 2.4
+        },
+        {
+          "operation": "align",
+          "seconds": 0.25390049995621666
+        },
+        {
+          "operation": "encode",
+          "seconds": 1.4455328999902122
+        },
+        {
+          "operation": "generate",
+          "seconds": 0.3809800000162795,
+          "temperature": 0,
+          "tokens": 14,
+          "text": "Subtítulos por la comunidad de Amara.org",
+          "avg_logprob": -0.6655399322509765,
+          "compression_ratio": 0.8367346938775511,
+          "no_speech_prob": 0.7817888855934143,
+          "log_prob_threshold": -1.0,
+          "compression_ratio_threshold": 2.4
+        },
+        {
+          "operation": "align",
+          "seconds": 0.18606869998620823
+        }
+      ],
+      "segments": [
+        {
+          "start": 14.0,
+          "end": 16.38,
+          "text": " Ana llamó su hermano para que pudiera verla.",
+          "temperature": 0,
+          "avg_logprob": -0.5615248760934604,
+          "words": [
+            {
+              "word": " Ana",
+              "start": 14.0,
+              "end": 14.28
+            },
+            {
+              "word": " llamó",
+              "start": 14.28,
+              "end": 14.8
+            },
+            {
+              "word": " su",
+              "start": 14.8,
+              "end": 14.94
+            },
+            {
+              "word": " hermano",
+              "start": 14.94,
+              "end": 15.36
+            },
+            {
+              "word": " para",
+              "start": 15.36,
+              "end": 15.56
+            },
+            {
+              "word": " que",
+              "start": 15.56,
+              "end": 15.74
+            },
+            {
+              "word": " pudiera",
+              "start": 15.74,
+              "end": 16.1
+            },
+            {
+              "word": " verla.",
+              "start": 16.1,
+              "end": 16.38
+            }
+          ]
+        },
+        {
+          "start": 16.38,
+          "end": 16.6,
+          "text": " Ana llamó su hermano para que pudiera verla.",
+          "temperature": 0,
+          "avg_logprob": -0.5615248760934604,
+          "words": [
+            {
+              "word": " Ana",
+              "start": 16.38,
+              "end": 16.38
+            },
+            {
+              "word": " llamó",
+              "start": 16.38,
+              "end": 16.38
+            },
+            {
+              "word": " su",
+              "start": 16.38,
+              "end": 16.38
+            },
+            {
+              "word": " hermano",
+              "start": 16.38,
+              "end": 16.38
+            },
+            {
+              "word": " para",
+              "start": 16.38,
+              "end": 16.38
+            },
+            {
+              "word": " que",
+              "start": 16.38,
+              "end": 16.38
+            },
+            {
+              "word": " pudiera",
+              "start": 16.38,
+              "end": 16.38
+            },
+            {
+              "word": " verla.",
+              "start": 16.38,
+              "end": 16.6
+            }
+          ]
+        },
+        {
+          "start": 17.22,
+          "end": 21.02,
+          "text": " Los dos se quedaron en silencio, mirando sus alas.",
+          "temperature": 0,
+          "avg_logprob": -0.5615248760934604,
+          "words": [
+            {
+              "word": " Los",
+              "start": 17.22,
+              "end": 17.46
+            },
+            {
+              "word": " dos",
+              "start": 17.46,
+              "end": 17.82
+            },
+            {
+              "word": " se",
+              "start": 17.82,
+              "end": 18.28
+            },
+            {
+              "word": " quedaron",
+              "start": 18.28,
+              "end": 18.740000000000002
+            },
+            {
+              "word": " en",
+              "start": 18.740000000000002,
+              "end": 18.88
+            },
+            {
+              "word": " silencio,",
+              "start": 18.88,
+              "end": 19.48
+            },
+            {
+              "word": " mirando",
+              "start": 19.78,
+              "end": 20.240000000000002
+            },
+            {
+              "word": " sus",
+              "start": 20.240000000000002,
+              "end": 20.46
+            },
+            {
+              "word": " alas.",
+              "start": 20.46,
+              "end": 21.02
+            }
+          ]
+        },
+        {
+          "start": 21.4,
+          "end": 21.98,
+          "text": " Después de un momento, la gente se volvió a ver a Ana.",
+          "temperature": 0,
+          "avg_logprob": -0.5615248760934604,
+          "words": [
+            {
+              "word": " Después",
+              "start": 21.4,
+              "end": 21.9
+            },
+            {
+              "word": " de",
+              "start": 21.9,
+              "end": 21.9
+            },
+            {
+              "word": " un",
+              "start": 21.9,
+              "end": 21.98
+            },
+            {
+              "word": " momento,",
+              "start": 21.98,
+              "end": 21.98
+            },
+            {
+              "word": " la",
+              "start": 21.98,
+              "end": 21.98
+            },
+            {
+              "word": " gente",
+              "start": 21.98,
+              "end": 21.98
+            },
+            {
+              "word": " se",
+              "start": 21.98,
+              "end": 21.98
+            },
+            {
+              "word": " volvió",
+              "start": 21.98,
+              "end": 21.98
+            },
+            {
+              "word": " a",
+              "start": 21.98,
+              "end": 21.98
+            },
+            {
+              "word": " ver",
+              "start": 21.98,
+              "end": 21.98
+            },
+            {
+              "word": " a",
+              "start": 21.98,
+              "end": 21.98
+            },
+            {
+              "word": " Ana.",
+              "start": 21.98,
+              "end": 21.98
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "repeat": 2,
+      "window_seconds": 8,
+      "cut_seconds": 22,
+      "audio_start_seconds": 14.0,
+      "audio_end_seconds": 22.0,
+      "total_seconds": 6.307276499981526,
+      "transcribe_return_seconds": 0.022661700029857457,
+      "vad_duration_seconds": 8.0,
+      "native_events": [
+        {
+          "operation": "encode",
+          "seconds": 1.462836199963931
+        },
+        {
+          "operation": "generate",
+          "seconds": 2.542831300001126,
+          "temperature": 0,
+          "tokens": 117,
+          "text": "Ana llamó su hermano para que pudiera verla. Los dos se quedaron en silencio, mirando sus alas. Después de un momento, la gente se volvió a ver a Ana. Y la gente se volvió a ver a Ana. Ana llamó su hermano para que pudiera verla. Los dos se quedaron en silencio, mirando sus alas. Después de un momento, la gente se volvió a ver a Ana.",
+          "avg_logprob": -0.5615248760934604,
+          "compression_ratio": 2.5522388059701493,
+          "no_speech_prob": 0.0541752353310585,
+          "log_prob_threshold": -1.0,
+          "compression_ratio_threshold": 2.4
+        },
+        {
+          "operation": "align",
+          "seconds": 0.27937319996999577
+        },
+        {
+          "operation": "encode",
+          "seconds": 1.4596021999605
+        },
+        {
+          "operation": "generate",
+          "seconds": 0.3578436000389047,
+          "temperature": 0,
+          "tokens": 14,
+          "text": "Subtítulos por la comunidad de Amara.org",
+          "avg_logprob": -0.6655399322509765,
+          "compression_ratio": 0.8367346938775511,
+          "no_speech_prob": 0.7817888855934143,
+          "log_prob_threshold": -1.0,
+          "compression_ratio_threshold": 2.4
+        },
+        {
+          "operation": "align",
+          "seconds": 0.17671309999423102
+        }
+      ],
+      "segments": [
+        {
+          "start": 14.0,
+          "end": 16.38,
+          "text": " Ana llamó su hermano para que pudiera verla.",
+          "temperature": 0,
+          "avg_logprob": -0.5615248760934604,
+          "words": [
+            {
+              "word": " Ana",
+              "start": 14.0,
+              "end": 14.28
+            },
+            {
+              "word": " llamó",
+              "start": 14.28,
+              "end": 14.8
+            },
+            {
+              "word": " su",
+              "start": 14.8,
+              "end": 14.94
+            },
+            {
+              "word": " hermano",
+              "start": 14.94,
+              "end": 15.36
+            },
+            {
+              "word": " para",
+              "start": 15.36,
+              "end": 15.56
+            },
+            {
+              "word": " que",
+              "start": 15.56,
+              "end": 15.74
+            },
+            {
+              "word": " pudiera",
+              "start": 15.74,
+              "end": 16.1
+            },
+            {
+              "word": " verla.",
+              "start": 16.1,
+              "end": 16.38
+            }
+          ]
+        },
+        {
+          "start": 16.38,
+          "end": 16.6,
+          "text": " Ana llamó su hermano para que pudiera verla.",
+          "temperature": 0,
+          "avg_logprob": -0.5615248760934604,
+          "words": [
+            {
+              "word": " Ana",
+              "start": 16.38,
+              "end": 16.38
+            },
+            {
+              "word": " llamó",
+              "start": 16.38,
+              "end": 16.38
+            },
+            {
+              "word": " su",
+              "start": 16.38,
+              "end": 16.38
+            },
+            {
+              "word": " hermano",
+              "start": 16.38,
+              "end": 16.38
+            },
+            {
+              "word": " para",
+              "start": 16.38,
+              "end": 16.38
+            },
+            {
+              "word": " que",
+              "start": 16.38,
+              "end": 16.38
+            },
+            {
+              "word": " pudiera",
+              "start": 16.38,
+              "end": 16.38
+            },
+            {
+              "word": " verla.",
+              "start": 16.38,
+              "end": 16.6
+            }
+          ]
+        },
+        {
+          "start": 17.22,
+          "end": 21.02,
+          "text": " Los dos se quedaron en silencio, mirando sus alas.",
+          "temperature": 0,
+          "avg_logprob": -0.5615248760934604,
+          "words": [
+            {
+              "word": " Los",
+              "start": 17.22,
+              "end": 17.46
+            },
+            {
+              "word": " dos",
+              "start": 17.46,
+              "end": 17.82
+            },
+            {
+              "word": " se",
+              "start": 17.82,
+              "end": 18.28
+            },
+            {
+              "word": " quedaron",
+              "start": 18.28,
+              "end": 18.740000000000002
+            },
+            {
+              "word": " en",
+              "start": 18.740000000000002,
+              "end": 18.88
+            },
+            {
+              "word": " silencio,",
+              "start": 18.88,
+              "end": 19.48
+            },
+            {
+              "word": " mirando",
+              "start": 19.78,
+              "end": 20.240000000000002
+            },
+            {
+              "word": " sus",
+              "start": 20.240000000000002,
+              "end": 20.46
+            },
+            {
+              "word": " alas.",
+              "start": 20.46,
+              "end": 21.02
+            }
+          ]
+        },
+        {
+          "start": 21.4,
+          "end": 21.98,
+          "text": " Después de un momento, la gente se volvió a ver a Ana.",
+          "temperature": 0,
+          "avg_logprob": -0.5615248760934604,
+          "words": [
+            {
+              "word": " Después",
+              "start": 21.4,
+              "end": 21.9
+            },
+            {
+              "word": " de",
+              "start": 21.9,
+              "end": 21.9
+            },
+            {
+              "word": " un",
+              "start": 21.9,
+              "end": 21.98
+            },
+            {
+              "word": " momento,",
+              "start": 21.98,
+              "end": 21.98
+            },
+            {
+              "word": " la",
+              "start": 21.98,
+              "end": 21.98
+            },
+            {
+              "word": " gente",
+              "start": 21.98,
+              "end": 21.98
+            },
+            {
+              "word": " se",
+              "start": 21.98,
+              "end": 21.98
+            },
+            {
+              "word": " volvió",
+              "start": 21.98,
+              "end": 21.98
+            },
+            {
+              "word": " a",
+              "start": 21.98,
+              "end": 21.98
+            },
+            {
+              "word": " ver",
+              "start": 21.98,
+              "end": 21.98
+            },
+            {
+              "word": " a",
+              "start": 21.98,
+              "end": 21.98
+            },
+            {
+              "word": " Ana.",
+              "start": 21.98,
+              "end": 21.98
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "repeat": 2,
+      "window_seconds": 4,
+      "cut_seconds": 22,
+      "audio_start_seconds": 18.0,
+      "audio_end_seconds": 22.0,
+      "total_seconds": 2.192990000010468,
+      "transcribe_return_seconds": 0.011678099981509149,
+      "vad_duration_seconds": 4.0,
+      "native_events": [
+        {
+          "operation": "encode",
+          "seconds": 1.5084343999624252
+        },
+        {
+          "operation": "generate",
+          "seconds": 0.494648199994117,
+          "temperature": 0,
+          "tokens": 16,
+          "text": "Se quedaron en silencio mirando sus salas después.",
+          "avg_logprob": -0.40235696119420666,
+          "compression_ratio": 0.864406779661017,
+          "no_speech_prob": 0.33215954899787903,
+          "log_prob_threshold": -1.0,
+          "compression_ratio_threshold": 2.4
+        },
+        {
+          "operation": "align",
+          "seconds": 0.17612749995896593
+        }
+      ],
+      "segments": [
+        {
+          "start": 18.0,
+          "end": 21.84,
+          "text": " Se quedaron en silencio mirando sus salas después.",
+          "temperature": 0,
+          "avg_logprob": -0.40235696119420666,
+          "words": [
+            {
+              "word": " Se",
+              "start": 18.0,
+              "end": 18.28
+            },
+            {
+              "word": " quedaron",
+              "start": 18.28,
+              "end": 18.72
+            },
+            {
+              "word": " en",
+              "start": 18.72,
+              "end": 18.88
+            },
+            {
+              "word": " silencio",
+              "start": 18.88,
+              "end": 19.5
+            },
+            {
+              "word": " mirando",
+              "start": 19.5,
+              "end": 20.259999999999998
+            },
+            {
+              "word": " sus",
+              "start": 20.259999999999998,
+              "end": 20.46
+            },
+            {
+              "word": " salas",
+              "start": 20.46,
+              "end": 21.58
+            },
+            {
+              "word": " después.",
+              "start": 21.58,
+              "end": 21.84
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "repeat": 3,
+      "window_seconds": 4,
+      "cut_seconds": 22,
+      "audio_start_seconds": 18.0,
+      "audio_end_seconds": 22.0,
+      "total_seconds": 2.1172468999866396,
+      "transcribe_return_seconds": 0.013212699966970831,
+      "vad_duration_seconds": 4.0,
+      "native_events": [
+        {
+          "operation": "encode",
+          "seconds": 1.4517496000044048
+        },
+        {
+          "operation": "generate",
+          "seconds": 0.48367560002952814,
+          "temperature": 0,
+          "tokens": 16,
+          "text": "Se quedaron en silencio mirando sus salas después.",
+          "avg_logprob": -0.40235696119420666,
+          "compression_ratio": 0.864406779661017,
+          "no_speech_prob": 0.33215954899787903,
+          "log_prob_threshold": -1.0,
+          "compression_ratio_threshold": 2.4
+        },
+        {
+          "operation": "align",
+          "seconds": 0.1668737000436522
+        }
+      ],
+      "segments": [
+        {
+          "start": 18.0,
+          "end": 21.84,
+          "text": " Se quedaron en silencio mirando sus salas después.",
+          "temperature": 0,
+          "avg_logprob": -0.40235696119420666,
+          "words": [
+            {
+              "word": " Se",
+              "start": 18.0,
+              "end": 18.28
+            },
+            {
+              "word": " quedaron",
+              "start": 18.28,
+              "end": 18.72
+            },
+            {
+              "word": " en",
+              "start": 18.72,
+              "end": 18.88
+            },
+            {
+              "word": " silencio",
+              "start": 18.88,
+              "end": 19.5
+            },
+            {
+              "word": " mirando",
+              "start": 19.5,
+              "end": 20.259999999999998
+            },
+            {
+              "word": " sus",
+              "start": 20.259999999999998,
+              "end": 20.46
+            },
+            {
+              "word": " salas",
+              "start": 20.46,
+              "end": 21.58
+            },
+            {
+              "word": " después.",
+              "start": 21.58,
+              "end": 21.84
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "repeat": 3,
+      "window_seconds": 8,
+      "cut_seconds": 22,
+      "audio_start_seconds": 14.0,
+      "audio_end_seconds": 22.0,
+      "total_seconds": 6.350746100011747,
+      "transcribe_return_seconds": 0.0245485000195913,
+      "vad_duration_seconds": 8.0,
+      "native_events": [
+        {
+          "operation": "encode",
+          "seconds": 1.4876903999829665
+        },
+        {
+          "operation": "generate",
+          "seconds": 2.4519151999847963,
+          "temperature": 0,
+          "tokens": 117,
+          "text": "Ana llamó su hermano para que pudiera verla. Los dos se quedaron en silencio, mirando sus alas. Después de un momento, la gente se volvió a ver a Ana. Y la gente se volvió a ver a Ana. Ana llamó su hermano para que pudiera verla. Los dos se quedaron en silencio, mirando sus alas. Después de un momento, la gente se volvió a ver a Ana.",
+          "avg_logprob": -0.5615248760934604,
+          "compression_ratio": 2.5522388059701493,
+          "no_speech_prob": 0.0541752353310585,
+          "log_prob_threshold": -1.0,
+          "compression_ratio_threshold": 2.4
+        },
+        {
+          "operation": "align",
+          "seconds": 0.28273300000000745
+        },
+        {
+          "operation": "encode",
+          "seconds": 1.5438503000186756
+        },
+        {
+          "operation": "generate",
+          "seconds": 0.38122159999329597,
+          "temperature": 0,
+          "tokens": 14,
+          "text": "Subtítulos por la comunidad de Amara.org",
+          "avg_logprob": -0.6655399322509765,
+          "compression_ratio": 0.8367346938775511,
+          "no_speech_prob": 0.7817888855934143,
+          "log_prob_threshold": -1.0,
+          "compression_ratio_threshold": 2.4
+        },
+        {
+          "operation": "align",
+          "seconds": 0.1734627999830991
+        }
+      ],
+      "segments": [
+        {
+          "start": 14.0,
+          "end": 16.38,
+          "text": " Ana llamó su hermano para que pudiera verla.",
+          "temperature": 0,
+          "avg_logprob": -0.5615248760934604,
+          "words": [
+            {
+              "word": " Ana",
+              "start": 14.0,
+              "end": 14.28
+            },
+            {
+              "word": " llamó",
+              "start": 14.28,
+              "end": 14.8
+            },
+            {
+              "word": " su",
+              "start": 14.8,
+              "end": 14.94
+            },
+            {
+              "word": " hermano",
+              "start": 14.94,
+              "end": 15.36
+            },
+            {
+              "word": " para",
+              "start": 15.36,
+              "end": 15.56
+            },
+            {
+              "word": " que",
+              "start": 15.56,
+              "end": 15.74
+            },
+            {
+              "word": " pudiera",
+              "start": 15.74,
+              "end": 16.1
+            },
+            {
+              "word": " verla.",
+              "start": 16.1,
+              "end": 16.38
+            }
+          ]
+        },
+        {
+          "start": 16.38,
+          "end": 16.6,
+          "text": " Ana llamó su hermano para que pudiera verla.",
+          "temperature": 0,
+          "avg_logprob": -0.5615248760934604,
+          "words": [
+            {
+              "word": " Ana",
+              "start": 16.38,
+              "end": 16.38
+            },
+            {
+              "word": " llamó",
+              "start": 16.38,
+              "end": 16.38
+            },
+            {
+              "word": " su",
+              "start": 16.38,
+              "end": 16.38
+            },
+            {
+              "word": " hermano",
+              "start": 16.38,
+              "end": 16.38
+            },
+            {
+              "word": " para",
+              "start": 16.38,
+              "end": 16.38
+            },
+            {
+              "word": " que",
+              "start": 16.38,
+              "end": 16.38
+            },
+            {
+              "word": " pudiera",
+              "start": 16.38,
+              "end": 16.38
+            },
+            {
+              "word": " verla.",
+              "start": 16.38,
+              "end": 16.6
+            }
+          ]
+        },
+        {
+          "start": 17.22,
+          "end": 21.02,
+          "text": " Los dos se quedaron en silencio, mirando sus alas.",
+          "temperature": 0,
+          "avg_logprob": -0.5615248760934604,
+          "words": [
+            {
+              "word": " Los",
+              "start": 17.22,
+              "end": 17.46
+            },
+            {
+              "word": " dos",
+              "start": 17.46,
+              "end": 17.82
+            },
+            {
+              "word": " se",
+              "start": 17.82,
+              "end": 18.28
+            },
+            {
+              "word": " quedaron",
+              "start": 18.28,
+              "end": 18.740000000000002
+            },
+            {
+              "word": " en",
+              "start": 18.740000000000002,
+              "end": 18.88
+            },
+            {
+              "word": " silencio,",
+              "start": 18.88,
+              "end": 19.48
+            },
+            {
+              "word": " mirando",
+              "start": 19.78,
+              "end": 20.240000000000002
+            },
+            {
+              "word": " sus",
+              "start": 20.240000000000002,
+              "end": 20.46
+            },
+            {
+              "word": " alas.",
+              "start": 20.46,
+              "end": 21.02
+            }
+          ]
+        },
+        {
+          "start": 21.4,
+          "end": 21.98,
+          "text": " Después de un momento, la gente se volvió a ver a Ana.",
+          "temperature": 0,
+          "avg_logprob": -0.5615248760934604,
+          "words": [
+            {
+              "word": " Después",
+              "start": 21.4,
+              "end": 21.9
+            },
+            {
+              "word": " de",
+              "start": 21.9,
+              "end": 21.9
+            },
+            {
+              "word": " un",
+              "start": 21.9,
+              "end": 21.98
+            },
+            {
+              "word": " momento,",
+              "start": 21.98,
+              "end": 21.98
+            },
+            {
+              "word": " la",
+              "start": 21.98,
+              "end": 21.98
+            },
+            {
+              "word": " gente",
+              "start": 21.98,
+              "end": 21.98
+            },
+            {
+              "word": " se",
+              "start": 21.98,
+              "end": 21.98
+            },
+            {
+              "word": " volvió",
+              "start": 21.98,
+              "end": 21.98
+            },
+            {
+              "word": " a",
+              "start": 21.98,
+              "end": 21.98
+            },
+            {
+              "word": " ver",
+              "start": 21.98,
+              "end": 21.98
+            },
+            {
+              "word": " a",
+              "start": 21.98,
+              "end": 21.98
+            },
+            {
+              "word": " Ana.",
+              "start": 21.98,
+              "end": 21.98
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
