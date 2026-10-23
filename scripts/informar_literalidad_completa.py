@@ -53,6 +53,17 @@ def report(folder):
         '```','',
         f'Referencia puntual del lector: {review.relative_to(ROOT).as_posix()} (SHA256 {digest(review)}).',
         'Entradas, modelo, salidas, código ejecutado y piloto previo: huellas en manifest.json e integridad.json.']
+    complete_review=ROOT/'datos/anotaciones/lectura_02_literal_completa_revision.json'
+    if complete_review.exists():
+        reviewed=json.loads(complete_review.read_text(encoding='utf-8'))
+        if reviewed['experiment_folder']==folder.relative_to(ROOT).as_posix():
+            if (reviewed['candidate_output_sha256']!=digest(folder/'candidato.json')
+                    or reviewed['manifest_sha256']!=digest(folder/'manifest.json')):
+                raise ValueError('La revisión completa no corresponde a estas fuentes.')
+            lines+=['','## Confirmación posterior del lector','',
+                'Tras escuchar la grabación completa, el lector valora el resto como bastante fiel y señala una omisión: se oye «regres- re- regresaron», frente a «regres- regresaron» del candidato. Falta el intento parcial «re-». Es un episodio conservado parcialmente: tres intentos (dos parciales y palabra completa) frente a dos en la salida, sin perder la palabra pretendida.','',
+                'Esta revisión cualitativa y la corrección puntual no son un inventario temporal exhaustivo ni una revisión independiente. No se calcula precisión/F1 o porcentaje global. La evaluación debe distinguir localizar un episodio de contar sus intentos. No se cambia el texto bruto del ASR ni se ejecuta una nueva inferencia.','',
+                f'Referencia: {complete_review.relative_to(ROOT).as_posix()} (SHA256 {digest(complete_review)}).']
     write_text_atomic(folder/'comparacion_contexto.md','\n'.join(lines)+'\n')
     print(folder/'comparacion_contexto.md')
 

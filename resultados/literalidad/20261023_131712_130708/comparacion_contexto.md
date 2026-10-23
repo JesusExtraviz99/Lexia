@@ -41,3 +41,11 @@ Comandos de comprobación (sin inferencia):
 
 Referencia puntual del lector: datos/anotaciones/lectura_02_piloto_literal_revision.json (SHA256 2f0826de2fd6e086489fecb151a5a8e82d838df0f6e56db0b4ad524d244b229d).
 Entradas, modelo, salidas, código ejecutado y piloto previo: huellas en manifest.json e integridad.json.
+
+## Confirmación posterior del lector
+
+Tras escuchar la grabación completa, el lector valora el resto como bastante fiel y señala una omisión: se oye «regres- re- regresaron», frente a «regres- regresaron» del candidato. Falta el intento parcial «re-». Es un episodio conservado parcialmente: tres intentos (dos parciales y palabra completa) frente a dos en la salida, sin perder la palabra pretendida.
+
+Esta revisión cualitativa y la corrección puntual no son un inventario temporal exhaustivo ni una revisión independiente. No se calcula precisión/F1 o porcentaje global. La evaluación debe distinguir localizar un episodio de contar sus intentos. No se cambia el texto bruto del ASR ni se ejecuta una nueva inferencia.
+
+Referencia: datos/anotaciones/lectura_02_literal_completa_revision.json (SHA256 ab744f696a7a6fbf6bacd2d0f78dcc2511a4bd6dfdc1aeec8ab004628e0bee58).

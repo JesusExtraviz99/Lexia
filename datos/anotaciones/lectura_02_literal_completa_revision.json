@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-23",
+  "review_type": "escucha_completa_valoracion_cualitativa_y_correccion_puntual",
+  "reviewer": "propio_lector_usuario; confirmacion en conversacion, no revision independiente",
+  "experiment_folder": "resultados/literalidad/20261023_131712_130708",
+  "manifest_sha256": "366c2451c92bce716fd14a5ad03109afeb44567c074c96e8ae2f92dcc8c2022f",
+  "candidate_output_sha256": "b0af935942a519fbe529866744d00458185e395ea9ea8736fe642506f0decaf3",
+  "sample": {
+    "id": "completa",
+    "kind": "trabadas",
+    "start": 0,
+    "end": 60.0,
+    "human_note": "Lectura completa con trabadas variables, según el lector. No es una referencia literal exhaustiva. Comparar con las notas y el error confirmado del recorte 16–24 s.",
+    "source_audio": "datos/audio/Lectura con muchas trabadas - cuento 2 - lectura_02 - 23-10-2026.wav",
+    "source_sha256": "c40c2b067709afc6e4f80ecb69db4ad37c8fa33263323f5ab70848491fcce0b7",
+    "array_file": ".descartados/literalidad/20261023_131712_130708/completa.npy",
+    "array_sha256": "0f859eac92cca2ed4cb9c4133f1f81d6c42b0c77178c9beda09dad9272e82eef",
+    "listen_file": ".descartados/literalidad/20261023_131712_130708/completa.wav",
+    "listen_sha256": "2efbc4c4f2d81327ec0592f10a7a4346b187d6faf308773757b0be10c38d3145"
+  },
+  "model": {
+    "repo": "nyralabs/CrisperWhisper2.0_small",
+    "revision": "bcaecf0a584a1f600d8897fe6032b9e2e56429a7"
+  },
+  "raw_candidate_text": "U- u- una tarde lu- lucia pa- paseaba por el par- parque con su abuelo junto a una un- una fuente des- des- descu- descubrió un pe- pequeño barco rojo, el el barco el barco flotaba des- despacio en entre las hojas. Lu- Lucia buscó una r- rama para acercarlo a la ori- o- orilla. Su abuelo la la ayudó y y juntos sa- sacaron el barco del del agua. Des- después regres- regresaron a casa y lo y lo colocaron sobre una estantería.",
+  "user_statement": "Está bastante bien, solo hay una trabada que no captó bien que es la de \"regres- regresaron\" por que hay una tercera repetición \"regres- re- regresaron\" pero el resto está bastante fiel al audio",
+  "overall_judgment": "El lector valora el resto de la transcripcion como bastante fiel al audio.",
+  "confirmed_issue": {
+    "type": "omision_de_intento_parcial_ASR",
+    "human_sequence": "regres- re- regresaron",
+    "recognized_sequence": "regres- regresaron",
+    "missing_fragment": "re-",
+    "character_span_in_raw_output_zero_based_end_exclusive": [
+      360,
+      378
+    ],
+    "episode_count": 1,
+    "human_attempts_in_episode": 3,
+    "recognized_attempts_in_episode": 2,
+    "human_attempts_description": "dos intentos parciales y una palabra completa",
+    "recognized_attempts_description": "un intento parcial y una palabra completa",
+    "human_word_times": null,
+    "interpretation": "El episodio se conserva parcialmente, pero se infracuenta en un intento. No equivale a perder el episodio entero ni a cambiar el texto pretendido."
+  },
+  "scope": "Revision cualitativa de la grabacion completa y una correccion puntual. No se asignan etiquetas ni tiempos a todos los eventos. No permite precision/F1 o porcentaje global ni demuestra generalizacion."
+}

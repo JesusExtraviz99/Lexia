@@ -75,3 +75,5 @@ $completo = .\.venv\Scripts\python.exe -m scripts.comparar_literalidad preparar_
 ```
 
 Fuentes primarias: [modelo](https://huggingface.co/nyralabs/CrisperWhisper2.0_small), [documentación del autor](https://github.com/nyrahealth/CrisperWhisper/blob/main/DOCS.md), contrastadas con el paquete instalado y el checkpoint fijado. Las afirmaciones de rendimiento del autor no sustituyen este piloto propio.
+
+**Revisión del audio completo por el lector.** El lector completa la escucha y valora el resto como bastante fiel; señala una omisión de intento: se oye «regres- re- regresaron» y el candidato escribe «regres- regresaron». Es un episodio conservado parcialmente, con tres intentos humanos (dos parciales y la palabra completa) frente a dos escritos; falta «re-». Confirmación con huellas en datos/anotaciones/lectura_02_literal_completa_revision.json, sin tiempos humanos interiores ni anotación exhaustiva por evento. No se calcula un porcentaje global de precisión. Las salidas ASR originales permanecen intactas; no se ejecuta reconocimiento nuevo.
