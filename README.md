@@ -167,3 +167,29 @@ La [segunda relectura lejana](pruebas/20_relectura_lejana_azul.md) cambia el des
 El evaluador distingue primera identificación del destino con palabra incompleta de actualización con corte posterior al final humano. Los tiempos de salida son simulados; las variantes siguen sin activarse en seguir.py.
 
 El [diagnóstico del pico de inferencia](pruebas/19_diagnostico_inferencia.md), ejecutado por el asistente y pendiente de reproducción por el usuario, instrumenta los reintentos internos. Desactivar las temperaturas alternativas no se adopta: conserva repetición y texto ajeno al cuento. Este diagnóstico ejecuta inferencias nuevas; no es solo reproducción de registros.
+
+## Recursos de cómputo y destino tablet
+
+Las ejecuciones nuevas registran CPU, RAM y muestras de GPU global disponibles, además de tiempos, RTF y configuración. El ASR sigue en CPU int8; tener GPU no implica usarla. La instrumentación tiene sobrecoste; --sin-recursos permite contrastarlo. Los históricos conservan no medido donde no hubo instrumentación y mantienen sus JSON originales.
+
+```powershell
+.\.venv\Scripts\python.exe -m scripts.informar_recursos resultados/relectura_lejana/20261021_115941_383989
+```
+
+Ficha recursos_computo.md/json en cada carpeta compatible. Definiciones, unidades, límites y mediciones pendientes de tablet: [docs/METRICAS_COMPUTO.md](docs/METRICAS_COMPUTO.md). Ninguna métrica de este ordenador demuestra consumo o rendimiento de una tablet.
+
+## Identificación de audios y dataset
+
+Los WAV de datos/audio tienen nombres descriptivos por tipo, eventos, cuento y fecha. El catálogo técnico conserva las equivalencias con los nombres antiguos para reproducir informes y anotaciones existentes. Los audios ya usados pertenecen a desarrollo, no a una prueba final reservada.
+
+```powershell
+.\.venv\Scripts\python.exe -m scripts.catalogo --verificar
+```
+
+Las nuevas grabaciones admiten --nombre, --caso, --lector y --ambiente; el programa registra la consigna sin dar el contenido por validado. Terminal, informes y nuevas sesiones web muestran el nombre junto al ID. [Especificación del dataset](docs/DATASET.md): referencias, particiones, cobertura y comparación con los mismos audios. La fuente Common Voice se ha revisado, sin descargar ni publicar sus grabaciones; procedencia en datos/externos/FUENTES.json.
+
+## Rama experimental de transcripción literal
+
+El seguimiento conserva su motor habitual; el análisis de trabadas se prueba por separado. El [piloto de literalidad](pruebas/23_piloto_literalidad.md) compara el ASR actual con CrisperWhisper 2.0 Small en un entorno aislado y documenta modelos, configuración, recursos y referencias humanas. El candidato conserva más intentos escritos, pero también puede insertar texto: no es una referencia automática de disfluencias.
+
+La [comparación con audio completo](resultados/literalidad/20261023_131712_130708/comparacion_contexto.md) conserva el error confirmado del recorte y su cambio al reconocer los 60 s completos. Incluye transcripciones, huellas y coste; sigue pendiente de revisión literal por evento. Modelos y entornos se mantienen fuera de Git, con procedencia y licencia registradas. Ninguna variante literal se activa en el seguidor.

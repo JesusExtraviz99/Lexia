@@ -128,3 +128,26 @@ Comparación descriptiva con el prefijo, no referencia de precisión. El prefijo
 |---|---|---:|---|---:|---|---|
 | lectura_20261021_090304_259866.wav | ventana_4s | 29.38 | 28.94–30.03 | 0.00 | 0/90 | [56, 56, 56] |
 | lectura_20261021_090304_259866.wav | ventana_8s | 36.57 | 36.17–37.02 | 1.33 | 6/90 | [45, 45, 45] |
+
+<!-- recursos-computo-inicio -->
+## Recursos y coste computacional
+
+Datos de la ejecución original. «No medido» no significa cero. RTF = suma de inferencias / duración del audio completo (incluye silencio); no es latencia visual ni mide captura, escritura o muestreo. Las rondas de una grabación no son lecturas independientes.
+
+| Registro | Dispositivo ASR | Precisión | GPU para ASR | RTF | Máx. inferencia (s) | CPU/RAM/GPU instrumentadas |
+|---|---|---|---|---:|---:|---|
+| lectura_20261021_090304_259866_ventana_8s_r1.json | cpu | int8 | no (CPU) | 0.609 | 3.357 | no_medido_en_la_ejecucion_original |
+| lectura_20261021_090304_259866_ventana_4s_r1.json | cpu | int8 | no (CPU) | 0.500 | 1.800 | no_medido_en_la_ejecucion_original |
+| lectura_20261021_090304_259866_ventana_8s_r2.json | cpu | int8 | no (CPU) | 0.617 | 3.372 | no_medido_en_la_ejecucion_original |
+| lectura_20261021_090304_259866_ventana_4s_r2.json | cpu | int8 | no (CPU) | 0.486 | 1.727 | no_medido_en_la_ejecucion_original |
+| lectura_20261021_090304_259866_ventana_4s_r3.json | cpu | int8 | no (CPU) | 0.482 | 1.730 | no_medido_en_la_ejecucion_original |
+| lectura_20261021_090304_259866_ventana_8s_r3.json | cpu | int8 | no (CPU) | 0.603 | 3.256 | no_medido_en_la_ejecucion_original |
+
+Para comparar tablets habrá que medir en el dispositivo de destino: RAM máxima, tiempo de respuesta sostenido y consumo/batería. Este ordenador no permite deducir esos valores. No se cambia CPU por GPU automáticamente.
+<!-- recursos-computo-fin -->
+
+<!-- identidad-audio-inicio -->
+## Audio utilizado
+
+- **Relectura lejana: vuelta a Los dos… hasta alas · cuento 1 · 21/10/2026** — Lectura con relectura lejana (Los dos-alas) - cuento 1 - 21-10-2026.wav
+<!-- identidad-audio-fin -->

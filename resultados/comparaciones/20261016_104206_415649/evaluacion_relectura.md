@@ -41,3 +41,9 @@ Primer intento: 17.54–19.84 s. Segundo: 20.36–22.77 s. Mirando: 22.91–23.2
 | 8 | 3 | 20.0 | entre_intentos | 42 | 4 | 21.81 | 38 | sobre una flor Anna llamó a su hermano para que pudiera verla Los dos se quedaron en silencio |
 | 8 | 3 | 22.0 | segundo_intento | 42 | 0 | 23.90 | 42 | Ana llamó a su hermano para que pudiera verla Los dos se quedaron en silencio Los dos se quedaron |
 | 8 | 3 | 24.0 | mirando_terminada | 45 | 3 | 25.81 | 42 | pudiera verla Los dos se quedaron en silencio Los dos se quedaron en silencio mirando sus alas |
+
+<!-- identidad-audio-inicio -->
+## Audio utilizado
+
+- **Relectura de Los dos se quedaron en silencio · cuento 1 · 16/10/2026** — Lectura con relectura (Los dos se quedaron en silencio) - cuento 1 - 16-10-2026.wav
+<!-- identidad-audio-fin -->

@@ -22,3 +22,20 @@ Anclas del propio lector, sin revisión independiente ni tiempos interiores de l
 | 8 | 3 | original | 38.00 | 39.61 | 39.61 | 6.88 |
 | 8 | 3 | combinada | 38.00 | 39.61 | 39.61 | 6.88 |
 | 8 | 3 | nueva | 34.00 | 35.69 | 35.69 | 2.96 |
+
+<!-- recursos-computo-inicio -->
+## Recursos y coste computacional
+
+Datos de la ejecución original. «No medido» no significa cero. RTF = suma de inferencias / duración del audio completo (incluye silencio); no es latencia visual ni mide captura, escritura o muestreo. Las rondas de una grabación no son lecturas independientes.
+
+| Registro | Dispositivo ASR | Precisión | GPU para ASR | RTF | Máx. inferencia (s) | CPU/RAM/GPU instrumentadas |
+|---|---|---|---|---:|---:|---|
+| lectura_20261021_090304_259866_ventana_8s_r1.json | cpu | int8 | no (CPU) | 0.609 | 3.357 | no_medido_en_la_ejecucion_original |
+| lectura_20261021_090304_259866_ventana_4s_r1.json | cpu | int8 | no (CPU) | 0.500 | 1.800 | no_medido_en_la_ejecucion_original |
+| lectura_20261021_090304_259866_ventana_8s_r2.json | cpu | int8 | no (CPU) | 0.617 | 3.372 | no_medido_en_la_ejecucion_original |
+| lectura_20261021_090304_259866_ventana_4s_r2.json | cpu | int8 | no (CPU) | 0.486 | 1.727 | no_medido_en_la_ejecucion_original |
+| lectura_20261021_090304_259866_ventana_4s_r3.json | cpu | int8 | no (CPU) | 0.482 | 1.730 | no_medido_en_la_ejecucion_original |
+| lectura_20261021_090304_259866_ventana_8s_r3.json | cpu | int8 | no (CPU) | 0.603 | 3.256 | no_medido_en_la_ejecucion_original |
+
+Para comparar tablets habrá que medir en el dispositivo de destino: RAM máxima, tiempo de respuesta sostenido y consumo/batería. Este ordenador no permite deducir esos valores. No se cambia CPU por GPU automáticamente.
+<!-- recursos-computo-fin -->

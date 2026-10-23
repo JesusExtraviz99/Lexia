@@ -105,3 +105,9 @@ Cuatro anclas manuales revisadas por el lector, cobertura parcial y sin revisió
 | 8 | 3 | 86.0 | 56–56 | 55 | 1 | 55 |  |
 | 8 | 3 | 88.0 | 56–56 | 55 | 1 | 56 |  |
 | 8 | 3 | 90.0 | 56–56 | 55 | 1 | 55 |  |
+
+<!-- identidad-audio-inicio -->
+## Audio utilizado
+
+- **Lectura lenta · cuento 1 · 16/10/2026** — Lectura lenta - cuento 1 - 16-10-2026.wav
+<!-- identidad-audio-fin -->

@@ -135,6 +135,7 @@ async function init() {
   try {
     const res=await fetch("/api/caso");const loaded=await res.json();if(!res.ok)throw new Error(loaded.error);
     data=loaded.annotation;draft=loaded.asr_draft;nonce=loaded.nonce;duration=data.duration_seconds;
+    $("audio-name").textContent=`${loaded.audio_identity?.label??"Audio sin clasificar"} · ${data.audio_file}`;
     $("start").max=duration;$("end").max=duration;
     $("overview").setAttribute("aria-label",`Onda de los ${duration} segundos`);
     if(intervals()) {

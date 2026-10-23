@@ -1,3 +1,4 @@
+from scripts.catalogo import same_audio
 """Contrasta cuatro anclas de lectura lenta sin interpolar las palabras no anotadas."""
 import argparse
 import hashlib
@@ -16,7 +17,7 @@ def position_bounds(anchors, t, length):
 
 
 def evaluate(data, annotation, story):
-    if (data['audio_file'] != Path(annotation['audio_file']).name
+    if (not same_audio(data['audio_file'], annotation['audio_file'])
             or abs(data['audio_seconds'] - annotation['duration_seconds']) > .01
             or [normalize(w) for w in data['story_words']] != [normalize(w) for w in story]):
         raise ValueError('Audio, duración o cuento distintos de la referencia.')

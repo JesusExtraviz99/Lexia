@@ -29,3 +29,9 @@ La instrumentación muestra dónde se consume el tiempo en estas nuevas ejecucio
 - Ablación: resultados/diagnostico_inferencia/20261021_102019_524726/resumen.json (6 llamadas, corte 22 y ventanas 4/8).
 
 Sin cambios en seguir.py ni comparación de posiciones del seguidor en esta prueba. No se calcula precisión lexical, tasa de error ni latencia de pantalla. Pendiente de ejecución compartida.
+
+<!-- identidad-audio-inicio -->
+## Audio utilizado
+
+- **Lectura normal con lluvia · cuento 1 · 21/10/2026** — Lectura normal con lluvia - cuento 1 - 21-10-2026.wav
+<!-- identidad-audio-fin -->

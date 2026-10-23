@@ -1,0 +1,101 @@
+{
+  "experiment": "literalidad_audio_completo_frente_recortes",
+  "created_date": "2026-10-23",
+  "candidate_model": {
+    "repo": "nyralabs/CrisperWhisper2.0_small",
+    "revision": "bcaecf0a584a1f600d8897fe6032b9e2e56429a7",
+    "files": [
+      {
+        "file": "added_tokens.json",
+        "bytes": 35275,
+        "sha256": "54e87fd086baa530e05082c11feacf9df5439453c5fae279611f3099ec844dc5"
+      },
+      {
+        "file": "config.json",
+        "bytes": 1344,
+        "sha256": "58cdd5607712143b7c6ed474380627732ab4eadb6dbcf60a85c9b32cba625de2"
+      },
+      {
+        "file": "generation_config.json",
+        "bytes": 3834,
+        "sha256": "c8c487bc35b117a94196e9d533def05e83c65c747b19350bc1773f59f3562085"
+      },
+      {
+        "file": "LICENSE.md",
+        "bytes": 17784,
+        "sha256": "42f43bf4dc72ef422f91f6ca143f4514e21a68b353940d99091c1addcd0aee79"
+      },
+      {
+        "file": "merges.txt",
+        "bytes": 493869,
+        "sha256": "2df2990a395e35e8dfbc7511e08c12d56018d8d04691e0133e5d63b21e154dc6"
+      },
+      {
+        "file": "model.safetensors",
+        "bytes": 483575002,
+        "sha256": "ecfcbd3d5dddebf9c79cd9ae774b6f6a5d68a500cdbe1b196ce5b2085912ebdf"
+      },
+      {
+        "file": "normalizer.json",
+        "bytes": 52666,
+        "sha256": "bf1c507dc8724ca9cf9903640dacfb69dae2f00edee4f21ceba106a7392f26dd"
+      },
+      {
+        "file": "preprocessor_config.json",
+        "bytes": 356,
+        "sha256": "994838f1fa6462c8b9b3c90edada831f11f3dd8b4664634e18f4694d005c9dbf"
+      },
+      {
+        "file": "README.md",
+        "bytes": 10974,
+        "sha256": "ddc82a301a1b59035eefcc1a8b2ec90d56257104df7365b00493c58135a6b029"
+      },
+      {
+        "file": "special_tokens_map.json",
+        "bytes": 2194,
+        "sha256": "e67ae3a0aaa99abcd9f187138e12db1f65c16a14761c50ef10eef2c174a7a691"
+      },
+      {
+        "file": "tokenizer.json",
+        "bytes": 3936954,
+        "sha256": "567da8c8a5b7df02555deecfcb3a7f6acd315844dc5e2fde883fe7ced8467317"
+      },
+      {
+        "file": "tokenizer_config.json",
+        "bytes": 288127,
+        "sha256": "5fa089926c8c2535c622d09a5992fb57c63cbc3514e18cf40bc535bee2a23827"
+      },
+      {
+        "file": "vocab.json",
+        "bytes": 835550,
+        "sha256": "8f680bba319e01a653d2e8a5dbc17a9157179e0576e6ce74ce0c06356c6e24f9"
+      }
+    ],
+    "spanish_language_token": true,
+    "total_bytes": 489253929,
+    "license_source": "C:\\Users\\PC\\OneDrive\\Documentos\\ChatGPT\\Practicas y TFG\\modelos\\crisperwhisper2-small\\LICENSE.md"
+  },
+  "sample_rate_hz": 16000,
+  "source_pilot": "resultados/literalidad/20261023_124047_726452",
+  "prior_hashes": {
+    "manifest.json": "2d366e0b098bd7e2f15c4a90965e5ea675cc627db16df25777eae0edbfe9c147",
+    "baseline.json": "c3d4ec5fc6bab1efc6cf64298a218fc07ac1366baa0d1f7f1ec8edf685168538",
+    "candidato.json": "1f09fd7dacdcb5f1e8ab63060978a3c50e356d285c48c83f40546128cbd1c05e"
+  },
+  "samples": [
+    {
+      "id": "completa",
+      "kind": "trabadas",
+      "start": 0,
+      "end": 60.0,
+      "human_note": "Lectura completa con trabadas variables, según el lector. No es una referencia literal exhaustiva. Comparar con las notas y el error confirmado del recorte 16–24 s.",
+      "source_audio": "datos/audio/Lectura con muchas trabadas - cuento 2 - lectura_02 - 23-10-2026.wav",
+      "source_sha256": "c40c2b067709afc6e4f80ecb69db4ad37c8fa33263323f5ab70848491fcce0b7",
+      "array_file": ".descartados/literalidad/20261023_131712_130708/completa.npy",
+      "array_sha256": "0f859eac92cca2ed4cb9c4133f1f81d6c42b0c77178c9beda09dad9272e82eef",
+      "listen_file": ".descartados/literalidad/20261023_131712_130708/completa.wav",
+      "listen_sha256": "2efbc4c4f2d81327ec0592f10a7a4346b187d6faf308773757b0be10c38d3145"
+    }
+  ],
+  "notice": "Mismo WAV completo para ambos motores, sin cuento ni notas como prompt; una pasada offline. Se conservan modelo y ajustes del piloto corto. Para entradas mayores de 30 s el candidato activa su estrategia interna continuation (ventanas 30 s, paso 26 s y contexto generado). No escucha toda la grabación en una única ventana. Cambian duración y procesamiento interno: no se aísla una causa del error ni se mide seguimiento en directo. Comparar el tramo revisado, sin convertir diferencias de texto en métricas humanas."
+}

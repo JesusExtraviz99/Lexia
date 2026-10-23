@@ -10,6 +10,7 @@ from scripts.anotar import ROOT
 from scripts.comparar_seguidores import Tracker, CombinedTracker, replay
 from scripts.comparar_recuperacion import ExactRecoveryTracker
 from scripts.seguir import locate
+from scripts.catalogo import audio_identity, resolve_audio_path, report_stem
 
 UI = ROOT / 'herramientas/explorador_ventanas'
 
@@ -28,7 +29,7 @@ def load_experiment(folder):
             audio_name = data['audio_file']
             if Path(audio_name).name != audio_name:
                 raise ValueError('Nombre de audio inválido.')
-            audio = decode_audio(str(ROOT / 'datos/audio' / audio_name), sampling_rate=16000)
+            audio = decode_audio(str(resolve_audio_path(audio_name)), sampling_rate=16000)
         if audio_name != data['audio_file'] or abs(len(audio)/16000-data['audio_seconds']) > .01:
             raise ValueError('Se requiere una sola grabación compatible.')
         traces = {name: replay(data, cls) for name, cls in
@@ -52,7 +53,7 @@ def load_experiment(folder):
                                       for name, trace in traces.items()}})
         runs.append({'window': run['window_seconds'], 'repeat': run['repeat'], 'rows': rows})
     peaks = [float(np.max(np.abs(audio[i:i+800]))) for i in range(0, len(audio), 800)]
-    return {'audio': audio_name, 'duration': len(audio)/16000, 'story': data['story_words'],
+    return {'audio': audio_name, 'audio_label': audio_identity(audio_name)['label'], 'duration': len(audio)/16000, 'story': data['story_words'],
             'peaks': peaks, 'runs': runs}, audio, clips
 
 

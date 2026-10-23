@@ -8,6 +8,8 @@ from pathlib import Path
 from scripts.anotar import ROOT
 from scripts.comparar_seguidores import Tracker, CombinedTracker, replay
 from scripts.comparar_recuperacion import ExactRecoveryTracker
+from scripts.recursos import write_resource_report
+from scripts.catalogo import audio_identity
 
 
 def digest(path):
@@ -43,6 +45,7 @@ def main():
         if path.parent != source:
             raise ValueError('Registro fuera de la carpeta indicada.')
         data = json.loads(path.read_text(encoding='utf-8'))
+        identity = audio_identity(data['audio_file'])
         traces = {name: replay(data, cls) for name, cls in classes.items()}
         if [(u['position'], u['movement'], u['mode']) for u in data['updates']] != [
                 (u['position'], u['movement'], u['mode']) for u in traces['original']['updates']]:
@@ -74,7 +77,8 @@ def main():
                                'changed_cuts': changed, 'fast_recovery_cuts': fast,
                                'backward_cuts': backwards, 'departures_after_first_end': after_end, 'updates': rows})
         label = f"Ventana {run['window_seconds']} s, ronda {run['repeat']}"
-        print(f"\n{label}: finales {finals}; recuperación exacta {fast}")
+        print(f"\nAudio: {identity['label']} | {data['audio_file']}")
+        print(f"{label}: finales {finals}; recuperación exacta {fast}")
         if args.control_sin_relectura:
             print(f'Retrocesos por versión: {backwards}')
             print(f'Posiciones distintas del final tras alcanzarlo: {after_end}')
@@ -94,6 +98,9 @@ def main():
     folder.mkdir(parents=True)
     (folder / 'resumen.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     (folder / 'resumen.md').write_text('\n'.join(lines) + '\n', encoding='utf-8')
+    from scripts.catalogo import label_reports
+    label_reports(folder=folder)
+    write_resource_report(folder, ROOT)
     print(f'\nInformes: {folder}')
     print('Pendiente de revisión compartida y escucha. No se publica ni activa la variante.')
 

@@ -1,5 +1,6 @@
 """Compara ventanas acústicas configurables y repeticiones sobre los mismos WAV."""
 import argparse
+import hashlib
 from datetime import datetime
 import json
 import math
@@ -8,6 +9,15 @@ from pathlib import Path
 import statistics
 import subprocess
 import sys
+
+try:
+    from .archivos import write_text_atomic
+    from .recursos import write_resource_report
+    from .catalogo import audio_identity, resolve_audio_path, report_stem
+except ImportError:
+    from archivos import write_text_atomic
+    from recursos import write_resource_report
+    from catalogo import audio_identity, resolve_audio_path, report_stem
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -42,10 +52,14 @@ def experiment_plan(windows, repetitions, seed):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("audio", nargs="?", type=Path)
+    parser.add_argument("--cuento", type=Path, default=ROOT / "datos/textos/lectura_01.txt",
+                        help="Cuento usado para alinear cada ejecución.")
     parser.add_argument("--todos", action="store_true", help="Procesar los dos WAV de prueba.")
+    parser.add_argument('--carpeta-salida', type=Path, help='Carpeta nueva para esta comparación; no sobrescribe una existente.')
     parser.add_argument("--ventanas", nargs="+", type=int, default=[0, 6, 10], help="Duraciones en segundos; 0 es prefijo (por defecto: 0 6 10).")
     parser.add_argument("--repeticiones", type=int, default=1, help="Rondas por configuración, entre 1 y 5.")
     parser.add_argument("--semilla", type=int, default=20261014, help="Semilla para reproducir el orden aleatorio.")
+    parser.add_argument('--sin-recursos', action='store_true', help='Desactivar muestreo de CPU/RAM/GPU para contrastar su sobrecoste.')
     args = parser.parse_args()
     if args.audio and args.todos:
         parser.error("Elige un audio o --todos.")
@@ -53,33 +67,45 @@ def main():
         parser.error("Las repeticiones deben estar entre 1 y 5.")
     if len(set(args.ventanas)) != len(args.ventanas) or any(w != 0 and not 2 <= w <= 120 for w in args.ventanas):
         parser.error("Las ventanas deben ser únicas y valer 0 o entre 2 y 120 s.")
-    files = sorted((ROOT / "datos/audio").glob("*.wav"))
+    files = sorted((ROOT / "datos/audio").glob("*.wav"), key=lambda p: p.stat().st_mtime_ns)
     if args.audio:
-        files = [args.audio.resolve()]
+        files = [resolve_audio_path(args.audio).resolve()]
     elif not args.todos:
         files = files[-1:]
     if not files:
         parser.error("No hay grabaciones.")
-    folder = ROOT / "resultados/comparaciones" / datetime.now().strftime("%Y%m%d_%H%M%S_%f")
+    try:
+        story_path = args.cuento.resolve()
+        story_bytes = story_path.read_bytes()
+        if not story_bytes.decode('utf-8-sig').strip():
+            raise ValueError('El cuento está vacío.')
+    except (OSError, ValueError) as exc:
+        parser.error(str(exc))
+    folder = args.carpeta_salida or ROOT / "resultados/comparaciones" / datetime.now().strftime("%Y%m%d_%H%M%S_%f")
     folder.mkdir(parents=True)
     plan = experiment_plan(args.ventanas, args.repeticiones, args.semilla)
-    result = {"block_seconds": 2, "windows_seconds": args.ventanas,
+    result = {"story_file": str(story_path), "story_sha256": hashlib.sha256(story_bytes).hexdigest(),
+              "resource_monitoring_enabled": not args.sin_recursos,
+              "block_seconds": 2, "windows_seconds": args.ventanas,
               "repetitions": args.repeticiones, "seed": args.semilla,
               "execution_plan": [{"repeat": r, "window_seconds": w} for r, w in plan],
               "notice": f"{args.repeticiones} ronda(s) por configuración, orden aleatorio reproducible por ronda. Ejecución secuencial para no competir por CPU. Tiempos orientativos, afectados por carga y calentamiento. No hay referencia humana de posición ni latencia visual. Comparar posiciones entre métodos no demuestra precisión.",
               "runs": []}
     try:
         for audio in files:
+            print('Audio seleccionado:', audio_identity(audio)['label'], '|', audio.name, flush=True)
             for repeat, window in plan:
                 label = "prefijo" if not window else f"ventana_{window}s"
-                path = folder / f"{audio.stem}_{label}_r{repeat}.json"
+                path = folder / f"{report_stem(audio)}_{label}_r{repeat}.json"
                 print(f"\nComparando {audio.name}: {label}, ronda {repeat}/{args.repeticiones}", flush=True)
                 subprocess.run([sys.executable, "-u", str(ROOT / "scripts/seguir.py"), str(audio),
-                                "--ventana", str(window), "--salida", str(path)], check=True, cwd=ROOT)
+                                "--cuento", str(story_path),
+                                "--ventana", str(window), "--salida", str(path)]
+                               + (['--sin-recursos'] if args.sin_recursos else []), check=True, cwd=ROOT)
                 data = json.loads(path.read_text(encoding="utf-8"))
-                result["runs"].append({"audio": audio.name, "method": label, "window_seconds": window, "repeat": repeat,
+                result["runs"].append({"audio": audio.name, "audio_identity": audio_identity(audio), "method": label, "window_seconds": window, "repeat": repeat,
                                        "record_file": path.name, **summarize(data)})
-                (folder / "resumen.json").write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+                write_text_atomic(folder / "resumen.json", json.dumps(result, ensure_ascii=False, indent=2))
     except subprocess.CalledProcessError as exc:
         raise SystemExit(f"La comparación se interrumpió ({exc.returncode}). Se conservan los registros en {folder}.")
     lines = ["# Comparación de reprocesamiento", "", result["notice"], "",
@@ -110,14 +136,15 @@ def main():
                                "updates_total":sum(r["updates"] for r in group),
                                "final_positions":[r["final_position"] for r in group]})
     result["aggregates"] = aggregates
-    (folder / "resumen.json").write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+    write_text_atomic(folder / "resumen.json", json.dumps(result, ensure_ascii=False, indent=2))
     lines += ["", "## Resumen por configuración", "",
               "| Audio | Método | Total medio (s) | Rango de totales (s) | Cola máxima media (s) | Inferencias >2 s | Posiciones finales |",
               "|---|---|---:|---|---:|---|---|"]
     for r in aggregates:
         lines.append(f"| {r['audio']} | {r['method']} | {r['mean_total_seconds']:.2f} | {r['min_total_seconds']:.2f}–{r['max_total_seconds']:.2f} | {r['mean_max_backlog_seconds']:.2f} | {r['over_block_updates_total']}/{r['updates_total']} | {r['final_positions']} |")
     report = folder / "resumen.md"
-    report.write_text("\n".join(lines)+"\n", encoding="utf-8")
+    write_text_atomic(report, "\n".join(lines)+"\n")
+    write_resource_report(folder, ROOT)
     print("\nResumen (tiempos de inferencia, sin carga del modelo):", flush=True)
     for r in result["runs"]:
         print(f"{r['audio']} | {r['method']} | ronda {r['repeat']} | total {r['processing_total_seconds']:.2f}s | mediana {r['processing_median_seconds']:.2f}s | >2s: {r['over_block_updates']} | cola max. {r['max_backlog_seconds_simulated']:.2f}s | posicion final {r['final_position']}", flush=True)

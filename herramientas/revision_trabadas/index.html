@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Lexia · Revisar las trabadas</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body><main>
+<header><p class="eyebrow">LEXIA · REVISIÓN POR FRAGMENTOS</p><h1>Escuchar sin transcribir cada sílaba</h1><p id="file"></p><p>Primero escucha el fragmento completo. Después muestra las hipótesis de las ventanas de 4 y 8 segundos. Revisamos la ronda 1 y el seguidor habitual.</p></header>
+<section class="card"><div class="toolbar"><button id="prev">← Anterior</button><strong id="progress"></strong><button id="next">Siguiente →</button></div><h2 id="title"></h2><p id="interval"></p>
+<label>Velocidad de escucha <select id="rate"><option value="1">1× · normal</option><option value="0.8">0,8×</option><option value="0.6">0,6×</option><option value="0.4">0,4×</option></select></label>
+<label><input id="loop" type="checkbox"> Repetir audio</label><h3>Fragmento completo</h3><audio id="context" controls preload="metadata"></audio>
+<p class="muted">Los tiempos pertenecen a la grabación original. Escuchar más despacio no cambia las hipótesis guardadas. La escucha usa audio mono a 16 kHz; los recortes de ventanas son anteriores al filtrado interno del VAD.</p>
+<button id="reveal">Mostrar comparación ASR</button>
+<div id="comparison" hidden><label>Corte: audio disponible hasta <select id="cut"></select></label><p>Recorre los cortes del selector. Compara cada hipótesis con el audio de su propia ventana: si una trabada queda fuera del recorte, eso no significa que el ASR la haya eliminado.</p><div id="panels" class="panels"></div><p class="muted">La posición es la última palabra apoyada por el seguidor, no una marca humana de dónde estabas leyendo. El ASR puede revisar palabras al recibir más audio.</p></div></section>
+<section class="card"><h2>Tu revisión del fragmento completo</h2><fieldset><legend>¿Qué escuchas? Puedes marcar varias opciones.</legend><div id="flags" class="checks"></div></fieldset>
+<div class="ratings"><label>ASR de 4 segundos<select id="asr4"></select></label><label>ASR de 8 segundos<select id="asr8"></select></label></div>
+<label for="notes">Nota opcional: por ejemplo, «repite el inicio dos veces y completa la palabra»</label><textarea id="notes" rows="3" maxlength="4000"></textarea>
+<label class="done"><input id="reviewed" type="checkbox"> He revisado este fragmento (puedo dejar dudas expresas)</label>
+<button id="save" class="primary">Guardar revisión</button><p id="status" role="status" aria-live="polite">Cargando…</p><p id="destination" class="muted"></p></section>
+<footer>Son cuatro muestras de una lectura irregular, no una revisión de todas sus trabadas. No hace falta delimitar palabras ni contar sílabas. Las notas se guardan localmente y no modifican el audio ni los resultados del ASR. Revisión asistida por ASR del propio lector, no revisión independiente.</footer>
+</main></body></html>

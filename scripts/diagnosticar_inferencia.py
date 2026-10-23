@@ -70,7 +70,8 @@ def main():
             records[run['window_seconds']] = json.loads(path.read_text(encoding='utf-8'))
     if set(records) != {4, 8} or len({d['audio_file'] for d in records.values()}) != 1:
         raise ValueError('Se requieren ventanas 4/8 del mismo audio.')
-    audio_path = ROOT / 'datos/audio' / records[4]['audio_file']
+    from scripts.catalogo import resolve_audio_path
+    audio_path = resolve_audio_path(records[4]['audio_file'])
     audio = decode_audio(str(audio_path), sampling_rate=16000)
     tick = perf_counter()
     model = ProfiledWhisper(str(ROOT / 'modelos/faster-whisper-small'), device='cpu',

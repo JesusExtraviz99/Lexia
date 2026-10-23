@@ -15,8 +15,10 @@ import wave
 
 try:
     from .alinear import tokens, normalize
+    from .catalogo import audio_identity, resolve_audio_path, report_stem
 except ImportError:
     from alinear import tokens, normalize
+    from catalogo import audio_identity, resolve_audio_path, report_stem
 
 ROOT = Path(__file__).resolve().parents[1]
 UI = ROOT / "herramientas/anotador"
@@ -76,7 +78,7 @@ class Workspace:
         reference = json.loads(reference_path.read_text(encoding="utf-8"))
         if reference["status"] != "transcripcion_validada_tiempos_pendientes":
             raise ValueError("La transcripción normal debe estar validada antes de anotar.")
-        self.audio = root / reference["audio_file"]
+        self.audio = resolve_audio_path(reference["audio_file"], root)
         digest = hashlib.sha256(self.audio.read_bytes()).hexdigest()
         if digest != reference["audio_sha256"]:
             raise ValueError("El audio no coincide con la referencia validada.")
@@ -140,6 +142,11 @@ class Workspace:
 
 
 EVENT_CASES = {
+    'relectura_cuento_02': ('lectura_02_relectura', 'Segundo cuento: vuelta a Junto a una fuente',
+                           'Marca estantería al terminar el cuento completo, Junto al empezar la relectura y rojo al terminarla. Junto y rojo pertenecen a la segunda lectura de ese tramo. Solo estas tres palabras.',
+                           [('estantería · final de la lectura completa', [56, 56], 1, [20, 28]),
+                            ('Junto · inicio de la relectura', [11, 11], 2, [28, 34]),
+                            ('rojo · final de la relectura', [19, 19], 2, [36, 43])]),
     'relectura_azul': ('lectura_relectura_azul', 'Segunda vuelta atrás: Cerca de un árbol',
                        'Marca cuaderno al terminar el cuento completo, Cerca al empezar la relectura y azul al terminarla. Cerca y azul pertenecen a la segunda lectura del tramo. No marques las palabras interiores.',
                        [('cuaderno · final de la lectura completa', [56, 56], 1, [18, 25]),
@@ -175,7 +182,7 @@ class EventWorkspace(Workspace):
         recording, title, instructions, targets = EVENT_CASES[case]
         self.root, self.lock, self.nonce = root, threading.Lock(), secrets.token_urlsafe(24)
         reference = json.loads((root / f'datos/referencias/{recording}.json').read_text(encoding='utf-8'))
-        self.audio = root / reference['audio_file']
+        self.audio = resolve_audio_path(reference['audio_file'], root)
         digest = hashlib.sha256(self.audio.read_bytes()).hexdigest()
         if digest != reference['audio_sha256']:
             raise ValueError('El audio no coincide con la referencia validada.')
@@ -221,7 +228,8 @@ def make_handler(workspace):
                 return
             if self.path == "/api/caso":
                 try:
-                    self.reply(200, {"annotation": workspace.current(), "asr_draft": workspace.draft, "nonce": workspace.nonce})
+                    self.reply(200, {"annotation": workspace.current(), "asr_draft": workspace.draft, "nonce": workspace.nonce,
+                                     "audio_identity": audio_identity(workspace.audio, workspace.root)})
                 except ValueError as exc:
                     self.reply(409, {"error": str(exc)})
                 return

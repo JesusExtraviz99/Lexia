@@ -5,12 +5,18 @@ import json
 import importlib.metadata
 import math
 from pathlib import Path
-from time import perf_counter
+from time import perf_counter, process_time
 
 try:
     from .alinear import normalize, tokens
+    from .archivos import write_text_atomic
+    from .recursos import ResourceMonitor, compute_markdown
+    from .catalogo import audio_identity, resolve_audio_path, report_stem
 except ImportError:
     from alinear import normalize, tokens
+    from archivos import write_text_atomic
+    from recursos import ResourceMonitor, compute_markdown
+    from catalogo import audio_identity, resolve_audio_path, report_stem
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -110,16 +116,19 @@ def main():
     parser.add_argument("--cuento", type=Path, default=ROOT / "datos/textos/lectura_01.txt")
     parser.add_argument("--ventana", type=float, default=0, help="Audio a reprocesar en segundos; 0 conserva los prefijos completos.")
     parser.add_argument("--salida", type=Path, help="Ruta del registro JSON, usada en comparaciones.")
+    parser.add_argument('--sin-recursos', action='store_true', help='Desactivar muestreo de recursos para contrastar su sobrecoste.')
     args = parser.parse_args()
     if not math.isfinite(args.bloque) or not 0.5 <= args.bloque <= 10:
         parser.error("El bloque debe estar entre 0.5 y 10 segundos.")
     if not math.isfinite(args.ventana) or (args.ventana != 0 and not args.bloque <= args.ventana <= 120):
         parser.error("La ventana debe ser 0 o estar entre la duración del bloque y 120 segundos.")
     if args.audio is None:
-        files = sorted((ROOT / "datos/audio").glob("*.wav"))
+        files = sorted((ROOT / "datos/audio").glob("*.wav"), key=lambda p: p.stat().st_mtime_ns)
         if not files:
             parser.error("No hay grabaciones.")
         args.audio = files[-1]
+    args.audio = resolve_audio_path(args.audio)
+    monitor = None
     try:
         story = tokens(args.cuento.read_text(encoding="utf-8-sig"))
         if not story:
@@ -133,11 +142,16 @@ def main():
             raise ValueError("El audio está vacío.")
         if len(audio) > 120*16000:
             raise ValueError("Esta primera prueba admite hasta 120 segundos.")
+        if not args.sin_recursos:
+            monitor = ResourceMonitor()
+            monitor.start()
         load_start = perf_counter()
         model = WhisperModel(str(ROOT / "modelos/faster-whisper-small"), device="cpu",
                              compute_type="int8", local_files_only=True)
         load_seconds = perf_counter()-load_start
     except (OSError, ValueError) as exc:
+        if monitor is not None:
+            monitor.stop()
         parser.error(str(exc))
     tracker = Tracker(story)
     records = []
@@ -146,7 +160,7 @@ def main():
     ready = 0.0
     folder = ROOT / "resultados/seguimiento"
     folder.mkdir(parents=True, exist_ok=True)
-    path = args.salida or folder / f"{args.audio.stem}_{datetime.now():%Y%m%d_%H%M%S_%f}_seguimiento.json"
+    path = args.salida or folder / f"{report_stem(args.audio)}_{datetime.now():%Y%m%d_%H%M%S_%f}_seguimiento.json"
     path.parent.mkdir(parents=True, exist_ok=True)
     data = {"schema_version": 1, "audio_file": args.audio.name, "story_file": args.cuento.name,
             "story_words": story, "audio_seconds": len(audio)/16000, "block_seconds": args.bloque,
@@ -154,11 +168,15 @@ def main():
             "model": "Systran/faster-whisper-small", "device": "cpu", "compute_type": "int8",
             "versions": {name: importlib.metadata.version(name) for name in ("faster-whisper", "av", "ctranslate2")},
             "model_load_seconds": load_seconds,
+            "model_disk_bytes": sum(p.stat().st_size for p in (ROOT / 'modelos/faster-whisper-small').rglob('*') if p.is_file()),
+            "resource_measurement": "desactivada" if args.sin_recursos else "CPU/RAM del proceso y GPU global muestreadas durante carga e inferencias; recursos completos al finalizar. No son métricas de tablet.",
             "position_convention": "última palabra del cuento apoyada por coincidencia textual en la hipótesis",
             "recognition": "ventana acústica limitada" if args.ventana else "prefijos acumulativos",
             "asr_parameters": {"language": "es", "beam_size": 5, "vad_filter": True, "condition_on_previous_text": False},
             "notice": "Simulación posterior, no streaming nativo ni medida de latencia visual. Tiempos ASR estimados. Posiciones provisionales, sin valoración lectora.",
             "updates": records}
+    data['audio_identity'] = audio_identity(args.audio)
+    print('Audio:', data['audio_identity']['label'], '|', args.audio.name)
     print("Simulación sin audio futuro. Actualización cada", args.bloque, "s. Ventana:", args.ventana or "prefijo completo")
     print("La posición indica la última palabra apoyada por la hipótesis, no la palabra actual en directo.")
     previous_words = []
@@ -167,6 +185,7 @@ def main():
         begin, end = audio_bounds(end, args.ventana)
         offset = begin/16000
         tick = perf_counter()
+        cpu_tick = process_time()
         segments, _ = model.transcribe(audio[begin:end].copy(), language="es", beam_size=5,
                                       word_timestamps=True, vad_filter=True,
                                       condition_on_previous_text=False)
@@ -177,6 +196,7 @@ def main():
                     hypotheses.append({"word": word, "start": w.start+offset, "end": w.end+offset,
                                        "probability": w.probability})
         processing = perf_counter()-tick
+        cpu_processing = process_time()-cpu_tick
         heard = [w["word"] for w in hypotheses]
         unchanged = heard == previous_words
         # No confirmamos recuperación con la misma hipótesis reiterada en silencio.
@@ -188,17 +208,26 @@ def main():
         start_simulated = max(cutoff, ready)
         ready = start_simulated+processing
         records.append({"audio_available_seconds": cutoff, "processing_seconds": processing,
+                        "asr_cpu_seconds": cpu_processing,
                         "audio_window_start_seconds": offset, "audio_window_end_seconds": cutoff,
                         "audio_reprocessed_seconds": cutoff-offset,
                         "sequential_ready_seconds_simulated": ready,
                         "backlog_seconds_simulated": start_simulated-cutoff,
                         "hypothesis": hypotheses, **state})
         # Guardamos cada actualización para conservar progreso si se interrumpe.
-        path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+        write_text_atomic(path, json.dumps(data, ensure_ascii=False, indent=2))
         print(f"Audio {offset:4.1f}-{cutoff:4.1f}s | posición {state['position'] or '-'}: {state['word'] or '-'} | {processing:.2f}s | {state['mode']}")
         print("  ASR:", " ".join(heard[-12:]))
+    data['resources'] = monitor.stop() if monitor is not None else None
+    rms = math.sqrt(float((audio.astype('float64')**2).mean()))
+    data['input_audio_metrics'] = {'sample_rate_hz': 16000, 'channels': 1,
+                                   'peak_amplitude': float(abs(audio).max()),
+                                   'rms_dbfs_full_audio': 20*math.log10(rms) if rms else None,
+                                   'notice': 'Señal remuestreada completa, incluida habla, ruido y silencio. No es SNR ni estimación de ruido aislado.'}
+    write_text_atomic(path, json.dumps(data, ensure_ascii=False, indent=2))
     md_path = path.with_suffix(".md")
     lines = ["# Seguimiento progresivo simulado", "", data["notice"], "",
+             f"Audio: {data['audio_identity']['label']} · {args.audio.name}", "",
              "Convención: última palabra apoyada por coincidencia textual; no se califica pronunciación.", "",
              f"Audio por inferencia: {'últimos ' + str(args.ventana) + ' segundos' if args.ventana else 'prefijo completo'}. Bloque: {args.bloque} s. Sin audio futuro.",
              "Las hipótesis de ventanas solapadas se alinean de forma independiente manteniendo el estado del seguidor. No se concatenan como una transcripción definitiva ni se cuentan intentos repetidos por el solapamiento.",
@@ -210,7 +239,8 @@ def main():
     lines += ["", "## Hipótesis disponibles", ""]
     for r in records:
         lines.append(f"- Hasta {r['audio_available_seconds']:.1f} s: " + " ".join(w["word"] for w in r["hypothesis"]))
-    md_path.write_text("\n".join(lines)+"\n", encoding="utf-8")
+    lines += ['', compute_markdown([(path.name, data)])]
+    write_text_atomic(md_path, "\n".join(lines)+"\n")
     print("Informe:", md_path)
     print("Registro:", path)
 

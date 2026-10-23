@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "review_type": "revision_parcial_salida_candidato_literal",
+  "date": "2026-10-23",
+  "reviewer": "lector_usuario; confirmacion en conversacion, no revision independiente",
+  "experiment_folder": "resultados/literalidad/20261023_124047_726452",
+  "manifest_sha256": "2d366e0b098bd7e2f15c4a90965e5ea675cc627db16df25777eae0edbfe9c147",
+  "candidate_output_sha256": "1f09fd7dacdcb5f1e8ab63060978a3c50e356d285c48c83f40546128cbd1c05e",
+  "model": {
+    "repo": "nyralabs/CrisperWhisper2.0_small",
+    "revision": "bcaecf0a584a1f600d8897fe6032b9e2e56429a7"
+  },
+  "sample": {
+    "id": "medio_1",
+    "kind": "trabadas",
+    "start": 16,
+    "end": 24,
+    "human_note": "Las trabadas en este audio son: Descu descubrió un pe pequeño barco rojo el el barco",
+    "source_audio": "datos/audio/Lectura con muchas trabadas - cuento 2 - lectura_02 - 23-10-2026.wav",
+    "source_sha256": "c40c2b067709afc6e4f80ecb69db4ad37c8fa33263323f5ab70848491fcce0b7",
+    "array_file": ".descartados/literalidad/20261023_124047_726452/medio_1.npy",
+    "array_sha256": "0b37d60c5c504597bc5afb6716adc48c4d610d7b42a4dc52f295264f22c31262",
+    "listen_file": ".descartados/literalidad/20261023_124047_726452/medio_1.wav",
+    "listen_sha256": "039b2425c0386d9af3b78f4a61ae04a31321a0149cc7c7a39fda23dba312285e"
+  },
+  "raw_candidate_text": "Descu- descubrió un pe- pequeño barco rojo, el el barco, el barco rojo.",
+  "confirmed_issue": {
+    "type": "insercion_ASR",
+    "text": "el barco rojo",
+    "occurrence": "ultima aparicion, tras el el barco",
+    "character_span_zero_based_end_exclusive": [
+      57,
+      70
+    ],
+    "human_judgment": "La frase final no se oye en el recorte 16-24 s. No contar como repeticion o disfluencia del lector.",
+    "cause": "no determinada; anticipacion y repeticion generada son hipotesis",
+    "word_times_human": null
+  },
+  "scope": "Confirmacion puntual del texto extra; no valida toda la transcripcion ni permite calcular precision/F1 por evento.",
+  "user_statement": "en intermedio 1 aparece un texto que en el audio no se nombra [...] el final \"el barco rojo\" no se menciona en el audio al menos en esos 8s"
+}

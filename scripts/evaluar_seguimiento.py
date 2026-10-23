@@ -1,3 +1,4 @@
+from scripts.catalogo import same_audio
 """Evalúa registros de lectura normal contra anotación humana completa, sin nuevas inferencias."""
 import argparse
 from bisect import bisect_right
@@ -29,7 +30,7 @@ def metrics(rows, key):
 
 def evaluate(data, annotation):
     words = annotation['words']
-    if data['audio_file'] != Path(annotation['audio_file']).name:
+    if not same_audio(data['audio_file'], annotation['audio_file']):
         raise ValueError('El registro corresponde a otro audio.')
     if [normalize(w) for w in data['story_words']] != [normalize(w['word']) for w in words]:
         raise ValueError('El cuento del registro no coincide con la anotación.')

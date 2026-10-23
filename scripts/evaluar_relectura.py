@@ -1,3 +1,4 @@
+from scripts.catalogo import same_audio
 """Revisa la relectura por intentos completos sin inventar tiempos de palabras interiores."""
 import argparse
 import hashlib
@@ -24,7 +25,7 @@ def phase_at(anchors, t):
 
 
 def evaluate(data, annotation, story):
-    if (data['audio_file'] != Path(annotation['audio_file']).name
+    if (not same_audio(data['audio_file'], annotation['audio_file'])
             or abs(data['audio_seconds'] - annotation['duration_seconds']) > .01
             or [normalize(w) for w in data['story_words']] != [normalize(w) for w in story]):
         raise ValueError('Registro incompatible con audio, duración o cuento.')

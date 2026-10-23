@@ -1,0 +1,6099 @@
+{
+  "schema_version": 1,
+  "audio_file": "Lectura lenta - cuento 2 - lectura_02 - 23-10-2026.wav",
+  "story_file": "lectura_02.txt",
+  "story_words": [
+    "Una",
+    "tarde",
+    "Lucía",
+    "paseaba",
+    "por",
+    "el",
+    "parque",
+    "con",
+    "su",
+    "abuelo",
+    "Junto",
+    "a",
+    "una",
+    "fuente",
+    "descubrió",
+    "un",
+    "pequeño",
+    "barco",
+    "rojo",
+    "El",
+    "barco",
+    "flotaba",
+    "despacio",
+    "entre",
+    "las",
+    "hojas",
+    "Lucía",
+    "buscó",
+    "una",
+    "rama",
+    "para",
+    "acercarlo",
+    "a",
+    "la",
+    "orilla",
+    "Su",
+    "abuelo",
+    "la",
+    "ayudó",
+    "y",
+    "juntos",
+    "sacaron",
+    "el",
+    "barco",
+    "del",
+    "agua",
+    "Después",
+    "regresaron",
+    "a",
+    "casa",
+    "y",
+    "lo",
+    "colocaron",
+    "sobre",
+    "una",
+    "estantería"
+  ],
+  "audio_seconds": 90.0,
+  "block_seconds": 2.0,
+  "audio_window_seconds": 4.0,
+  "overlap_seconds": 2.0,
+  "model": "Systran/faster-whisper-small",
+  "device": "cpu",
+  "compute_type": "int8",
+  "versions": {
+    "faster-whisper": "1.2.1",
+    "av": "16.0.1",
+    "ctranslate2": "4.8.3"
+  },
+  "model_load_seconds": 1.0534785999916494,
+  "model_disk_bytes": 486213875,
+  "resource_measurement": "CPU/RAM del proceso y GPU global muestreadas durante carga e inferencias; recursos completos al finalizar. No son métricas de tablet.",
+  "position_convention": "última palabra del cuento apoyada por coincidencia textual en la hipótesis",
+  "recognition": "ventana acústica limitada",
+  "asr_parameters": {
+    "language": "es",
+    "beam_size": 5,
+    "vad_filter": true,
+    "condition_on_previous_text": false
+  },
+  "notice": "Simulación posterior, no streaming nativo ni medida de latencia visual. Tiempos ASR estimados. Posiciones provisionales, sin valoración lectora.",
+  "updates": [
+    {
+      "audio_available_seconds": 2.0,
+      "processing_seconds": 1.5829048999585211,
+      "asr_cpu_seconds": 6.34375,
+      "audio_window_start_seconds": 0.0,
+      "audio_window_end_seconds": 2.0,
+      "audio_reprocessed_seconds": 2.0,
+      "sequential_ready_seconds_simulated": 3.582904899958521,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [
+        {
+          "word": "Humna",
+          "start": 0.66,
+          "end": 1.88,
+          "probability": 0.37052851915359497
+        }
+      ],
+      "previous_position": 0,
+      "position": null,
+      "word": null,
+      "movement": 0,
+      "mode": "local",
+      "evidence": {
+        "position": null,
+        "reason": "evidencia_insuficiente"
+      }
+    },
+    {
+      "audio_available_seconds": 4.0,
+      "processing_seconds": 1.5488262000726536,
+      "asr_cpu_seconds": 6.203125,
+      "audio_window_start_seconds": 0.0,
+      "audio_window_end_seconds": 4.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 5.548826200072654,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [
+        {
+          "word": "Una",
+          "start": 0.66,
+          "end": 1.86,
+          "probability": 0.6600626309712728
+        },
+        {
+          "word": "tarde",
+          "start": 1.86,
+          "end": 2.7,
+          "probability": 0.8571271896362305
+        },
+        {
+          "word": "luz",
+          "start": 2.7,
+          "end": 3.74,
+          "probability": 0.9313353300094604
+        }
+      ],
+      "previous_position": 0,
+      "position": 2,
+      "word": "tarde",
+      "movement": 2,
+      "mode": "local",
+      "evidence": {
+        "position": 2,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          1,
+          24
+        ],
+        "exact_matches": 2,
+        "hypothesis_words": 3,
+        "edit_cost": 1
+      }
+    },
+    {
+      "audio_available_seconds": 6.0,
+      "processing_seconds": 1.816252400050871,
+      "asr_cpu_seconds": 7.296875,
+      "audio_window_start_seconds": 2.0,
+      "audio_window_end_seconds": 6.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 7.816252400050871,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [
+        {
+          "word": "tarde",
+          "start": 2.0,
+          "end": 2.82,
+          "probability": 0.46928414702415466
+        },
+        {
+          "word": "Lucia",
+          "start": 3.42,
+          "end": 4.82,
+          "probability": 0.8227110803127289
+        },
+        {
+          "word": "Pasea",
+          "start": 4.82,
+          "end": 5.98,
+          "probability": 0.6231008718411127
+        }
+      ],
+      "previous_position": 2,
+      "position": 2,
+      "word": "tarde",
+      "movement": 0,
+      "mode": "local",
+      "evidence": {
+        "position": null,
+        "reason": "evidencia_incompatible",
+        "window_indices": [
+          1,
+          26
+        ],
+        "exact_matches": 1,
+        "hypothesis_words": 3,
+        "edit_cost": 2
+      }
+    },
+    {
+      "audio_available_seconds": 8.0,
+      "processing_seconds": 1.8255924000404775,
+      "asr_cpu_seconds": 7.265625,
+      "audio_window_start_seconds": 4.0,
+      "audio_window_end_seconds": 8.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 9.825592400040478,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [
+        {
+          "word": "O",
+          "start": 4.0,
+          "end": 4.06,
+          "probability": 0.04094609618186951
+        },
+        {
+          "word": "sea",
+          "start": 4.06,
+          "end": 4.78,
+          "probability": 0.4703100025653839
+        },
+        {
+          "word": "paseaba",
+          "start": 4.98,
+          "end": 6.4399999999999995,
+          "probability": 0.9295184016227722
+        },
+        {
+          "word": "por",
+          "start": 6.4399999999999995,
+          "end": 7.46,
+          "probability": 0.9815630912780762
+        },
+        {
+          "word": "el",
+          "start": 7.46,
+          "end": 7.96,
+          "probability": 0.4532494619488716
+        }
+      ],
+      "previous_position": 2,
+      "position": 6,
+      "word": "el",
+      "movement": 4,
+      "mode": "local",
+      "evidence": {
+        "position": 6,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          1,
+          26
+        ],
+        "exact_matches": 3,
+        "hypothesis_words": 5,
+        "edit_cost": 2
+      }
+    },
+    {
+      "audio_available_seconds": 10.0,
+      "processing_seconds": 1.7497516999719664,
+      "asr_cpu_seconds": 6.953125,
+      "audio_window_start_seconds": 6.0,
+      "audio_window_end_seconds": 10.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 11.749751699971966,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [
+        {
+          "word": "estaba",
+          "start": 6.0,
+          "end": 6.46,
+          "probability": 0.037520140409469604
+        },
+        {
+          "word": "por",
+          "start": 6.46,
+          "end": 7.24,
+          "probability": 0.8992056846618652
+        },
+        {
+          "word": "el",
+          "start": 7.24,
+          "end": 8.04,
+          "probability": 0.9818518161773682
+        },
+        {
+          "word": "parque",
+          "start": 8.04,
+          "end": 9.16,
+          "probability": 0.8785482943058014
+        }
+      ],
+      "previous_position": 6,
+      "position": 7,
+      "word": "parque",
+      "movement": 1,
+      "mode": "local",
+      "evidence": {
+        "position": 7,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          1,
+          30
+        ],
+        "exact_matches": 3,
+        "hypothesis_words": 4,
+        "edit_cost": 1
+      }
+    },
+    {
+      "audio_available_seconds": 12.0,
+      "processing_seconds": 1.9189889999106526,
+      "asr_cpu_seconds": 7.765625,
+      "audio_window_start_seconds": 8.0,
+      "audio_window_end_seconds": 12.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 13.918988999910653,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [
+        {
+          "word": "el",
+          "start": 8.0,
+          "end": 8.14,
+          "probability": 0.31641823053359985
+        },
+        {
+          "word": "parque",
+          "start": 8.14,
+          "end": 9.16,
+          "probability": 0.9419989287853241
+        },
+        {
+          "word": "con",
+          "start": 9.16,
+          "end": 10.3,
+          "probability": 0.9286094307899475
+        },
+        {
+          "word": "su",
+          "start": 10.3,
+          "end": 10.9,
+          "probability": 0.9757599234580994
+        },
+        {
+          "word": "abuelo",
+          "start": 10.9,
+          "end": 11.94,
+          "probability": 0.8087977965672811
+        }
+      ],
+      "previous_position": 7,
+      "position": 10,
+      "word": "abuelo",
+      "movement": 3,
+      "mode": "local",
+      "evidence": {
+        "position": 10,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          1,
+          31
+        ],
+        "exact_matches": 5,
+        "hypothesis_words": 5,
+        "edit_cost": 0
+      }
+    },
+    {
+      "audio_available_seconds": 14.0,
+      "processing_seconds": 1.9211018999340013,
+      "asr_cpu_seconds": 7.671875,
+      "audio_window_start_seconds": 10.0,
+      "audio_window_end_seconds": 14.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 15.921101899934001,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [
+        {
+          "word": "como",
+          "start": 10.0,
+          "end": 10.38,
+          "probability": 0.11289283633232117
+        },
+        {
+          "word": "su",
+          "start": 10.38,
+          "end": 10.9,
+          "probability": 0.9435468316078186
+        },
+        {
+          "word": "abuelo",
+          "start": 10.9,
+          "end": 12.9,
+          "probability": 0.9901749094327291
+        }
+      ],
+      "previous_position": 10,
+      "position": 10,
+      "word": "abuelo",
+      "movement": 0,
+      "mode": "local",
+      "evidence": {
+        "position": 10,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          1,
+          34
+        ],
+        "exact_matches": 2,
+        "hypothesis_words": 3,
+        "edit_cost": 1
+      }
+    },
+    {
+      "audio_available_seconds": 16.0,
+      "processing_seconds": 1.8211632000748068,
+      "asr_cpu_seconds": 7.265625,
+      "audio_window_start_seconds": 12.0,
+      "audio_window_end_seconds": 16.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 17.821163200074807,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [
+        {
+          "word": "Juntos",
+          "start": 13.42,
+          "end": 14.3,
+          "probability": 0.37679089109102887
+        },
+        {
+          "word": "a",
+          "start": 14.3,
+          "end": 14.58,
+          "probability": 0.6193980574607849
+        },
+        {
+          "word": "una",
+          "start": 14.58,
+          "end": 15.02,
+          "probability": 0.8650835752487183
+        },
+        {
+          "word": "fuente",
+          "start": 15.02,
+          "end": 15.9,
+          "probability": 0.7923686504364014
+        }
+      ],
+      "previous_position": 10,
+      "position": 14,
+      "word": "fuente",
+      "movement": 4,
+      "mode": "local",
+      "evidence": {
+        "position": 14,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          1,
+          34
+        ],
+        "exact_matches": 3,
+        "hypothesis_words": 4,
+        "edit_cost": 1
+      }
+    },
+    {
+      "audio_available_seconds": 18.0,
+      "processing_seconds": 1.7930609000613913,
+      "asr_cpu_seconds": 7.1875,
+      "audio_window_start_seconds": 14.0,
+      "audio_window_end_seconds": 18.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 19.79306090006139,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [
+        {
+          "word": "a",
+          "start": 14.0,
+          "end": 14.46,
+          "probability": 0.16609439253807068
+        },
+        {
+          "word": "una",
+          "start": 14.46,
+          "end": 15.02,
+          "probability": 0.9724412560462952
+        },
+        {
+          "word": "fuente",
+          "start": 15.02,
+          "end": 16.259999999999998,
+          "probability": 0.9651588797569275
+        },
+        {
+          "word": "de",
+          "start": 16.259999999999998,
+          "end": 17.36,
+          "probability": 0.6701616048812866
+        },
+        {
+          "word": "escudo",
+          "start": 17.36,
+          "end": 17.98,
+          "probability": 0.5525245815515518
+        }
+      ],
+      "previous_position": 14,
+      "position": 14,
+      "word": "fuente",
+      "movement": 0,
+      "mode": "local",
+      "evidence": {
+        "position": 14,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          3,
+          38
+        ],
+        "exact_matches": 3,
+        "hypothesis_words": 5,
+        "edit_cost": 2
+      }
+    },
+    {
+      "audio_available_seconds": 20.0,
+      "processing_seconds": 1.7648231000639498,
+      "asr_cpu_seconds": 7.0,
+      "audio_window_start_seconds": 16.0,
+      "audio_window_end_seconds": 20.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 21.76482310006395,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [
+        {
+          "word": "Descubrió",
+          "start": 16.0,
+          "end": 18.66,
+          "probability": 0.7117761299014091
+        },
+        {
+          "word": "un",
+          "start": 18.66,
+          "end": 19.68,
+          "probability": 0.523382306098938
+        }
+      ],
+      "previous_position": 14,
+      "position": 16,
+      "word": "un",
+      "movement": 2,
+      "mode": "local",
+      "evidence": {
+        "position": 16,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          3,
+          38
+        ],
+        "exact_matches": 2,
+        "hypothesis_words": 2,
+        "edit_cost": 0
+      }
+    },
+    {
+      "audio_available_seconds": 22.0,
+      "processing_seconds": 1.812667699996382,
+      "asr_cpu_seconds": 7.234375,
+      "audio_window_start_seconds": 18.0,
+      "audio_window_end_seconds": 22.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 23.812667699996382,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [
+        {
+          "word": "cubrió",
+          "start": 18.0,
+          "end": 18.66,
+          "probability": 0.5050806030631065
+        },
+        {
+          "word": "un",
+          "start": 18.66,
+          "end": 19.74,
+          "probability": 0.929387092590332
+        },
+        {
+          "word": "pequeño",
+          "start": 19.74,
+          "end": 20.6,
+          "probability": 0.9350255727767944
+        },
+        {
+          "word": "baño",
+          "start": 20.6,
+          "end": 21.44,
+          "probability": 0.3092867508530617
+        }
+      ],
+      "previous_position": 16,
+      "position": 16,
+      "word": "un",
+      "movement": 0,
+      "mode": "local",
+      "evidence": {
+        "position": null,
+        "reason": "evidencia_incompatible",
+        "window_indices": [
+          5,
+          40
+        ],
+        "exact_matches": 2,
+        "hypothesis_words": 4,
+        "edit_cost": 2
+      }
+    },
+    {
+      "audio_available_seconds": 24.0,
+      "processing_seconds": 1.870359200052917,
+      "asr_cpu_seconds": 7.515625,
+      "audio_window_start_seconds": 20.0,
+      "audio_window_end_seconds": 24.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 25.870359200052917,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [
+        {
+          "word": "Pequeño",
+          "start": 20.0,
+          "end": 21.54,
+          "probability": 0.7299950222174326
+        },
+        {
+          "word": "barco",
+          "start": 21.54,
+          "end": 22.6,
+          "probability": 0.7843285202980042
+        },
+        {
+          "word": "rojo",
+          "start": 22.6,
+          "end": 23.6,
+          "probability": 0.9912224113941193
+        }
+      ],
+      "previous_position": 16,
+      "position": 19,
+      "word": "rojo",
+      "movement": 3,
+      "mode": "local",
+      "evidence": {
+        "position": 19,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          5,
+          40
+        ],
+        "exact_matches": 3,
+        "hypothesis_words": 3,
+        "edit_cost": 0
+      }
+    },
+    {
+      "audio_available_seconds": 26.0,
+      "processing_seconds": 1.9009319000178948,
+      "asr_cpu_seconds": 7.65625,
+      "audio_window_start_seconds": 22.0,
+      "audio_window_end_seconds": 26.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 27.900931900017895,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [
+        {
+          "word": "El",
+          "start": 22.0,
+          "end": 22.2,
+          "probability": 0.3119373619556427
+        },
+        {
+          "word": "barco",
+          "start": 22.2,
+          "end": 22.62,
+          "probability": 0.9001729786396027
+        },
+        {
+          "word": "rojo",
+          "start": 22.62,
+          "end": 23.78,
+          "probability": 0.9451144635677338
+        },
+        {
+          "word": "el",
+          "start": 23.78,
+          "end": 23.78,
+          "probability": 0.7868720293045044
+        },
+        {
+          "word": "barco",
+          "start": 23.78,
+          "end": 23.78,
+          "probability": 0.7846421003341675
+        },
+        {
+          "word": "rojo",
+          "start": 23.78,
+          "end": 24.02,
+          "probability": 0.8710296750068665
+        },
+        {
+          "word": "el",
+          "start": 24.58,
+          "end": 25.48,
+          "probability": 0.8704012036323547
+        },
+        {
+          "word": "barco",
+          "start": 25.48,
+          "end": 25.98,
+          "probability": 0.9564136266708374
+        },
+        {
+          "word": "rojo",
+          "start": 25.98,
+          "end": 25.98,
+          "probability": 0.9627322256565094
+        }
+      ],
+      "previous_position": 19,
+      "position": 19,
+      "word": "rojo",
+      "movement": 0,
+      "mode": "local",
+      "evidence": {
+        "position": null,
+        "reason": "evidencia_incompatible",
+        "window_indices": [
+          8,
+          43
+        ],
+        "exact_matches": 4,
+        "hypothesis_words": 8,
+        "edit_cost": 4
+      }
+    },
+    {
+      "audio_available_seconds": 28.0,
+      "processing_seconds": 1.750752400024794,
+      "asr_cpu_seconds": 7.046875,
+      "audio_window_start_seconds": 24.0,
+      "audio_window_end_seconds": 28.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 29.750752400024794,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [
+        {
+          "word": "El",
+          "start": 24.69,
+          "end": 25.51,
+          "probability": 0.47146204113960266
+        },
+        {
+          "word": "barco",
+          "start": 25.51,
+          "end": 26.35,
+          "probability": 0.937815248966217
+        },
+        {
+          "word": "flotó",
+          "start": 26.35,
+          "end": 27.89,
+          "probability": 0.5304174522558848
+        }
+      ],
+      "previous_position": 19,
+      "position": 21,
+      "word": "barco",
+      "movement": 2,
+      "mode": "local",
+      "evidence": {
+        "position": 21,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          8,
+          43
+        ],
+        "exact_matches": 2,
+        "hypothesis_words": 3,
+        "edit_cost": 1
+      }
+    },
+    {
+      "audio_available_seconds": 30.0,
+      "processing_seconds": 1.7253638000693172,
+      "asr_cpu_seconds": 6.953125,
+      "audio_window_start_seconds": 26.0,
+      "audio_window_end_seconds": 30.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 31.725363800069317,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [
+        {
+          "word": "flotaba",
+          "start": 26.0,
+          "end": 28.36,
+          "probability": 0.7152391572793325
+        },
+        {
+          "word": "despacio",
+          "start": 28.36,
+          "end": 29.9,
+          "probability": 0.9379312098026276
+        }
+      ],
+      "previous_position": 21,
+      "position": 23,
+      "word": "despacio",
+      "movement": 2,
+      "mode": "local",
+      "evidence": {
+        "position": 23,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          10,
+          45
+        ],
+        "exact_matches": 2,
+        "hypothesis_words": 2,
+        "edit_cost": 0
+      }
+    },
+    {
+      "audio_available_seconds": 32.0,
+      "processing_seconds": 1.8490626000566408,
+      "asr_cpu_seconds": 7.421875,
+      "audio_window_start_seconds": 28.0,
+      "audio_window_end_seconds": 32.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 33.84906260005664,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [
+        {
+          "word": "estaba",
+          "start": 28.0,
+          "end": 28.46,
+          "probability": 0.0728536918759346
+        },
+        {
+          "word": "despacio",
+          "start": 28.46,
+          "end": 30.08,
+          "probability": 0.9817034602165222
+        },
+        {
+          "word": "entre",
+          "start": 30.08,
+          "end": 31.04,
+          "probability": 0.9086956977844238
+        },
+        {
+          "word": "las",
+          "start": 31.04,
+          "end": 31.58,
+          "probability": 0.9584685564041138
+        }
+      ],
+      "previous_position": 23,
+      "position": 25,
+      "word": "las",
+      "movement": 2,
+      "mode": "local",
+      "evidence": {
+        "position": 25,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          12,
+          47
+        ],
+        "exact_matches": 3,
+        "hypothesis_words": 4,
+        "edit_cost": 1
+      }
+    },
+    {
+      "audio_available_seconds": 34.0,
+      "processing_seconds": 1.8469342000316828,
+      "asr_cpu_seconds": 7.453125,
+      "audio_window_start_seconds": 30.0,
+      "audio_window_end_seconds": 34.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 35.84693420003168,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [
+        {
+          "word": "entre",
+          "start": 30.0,
+          "end": 31.02,
+          "probability": 0.6399624943733215
+        },
+        {
+          "word": "las",
+          "start": 31.02,
+          "end": 31.74,
+          "probability": 0.9880930781364441
+        },
+        {
+          "word": "hojas",
+          "start": 31.74,
+          "end": 33.0,
+          "probability": 0.9917208850383759
+        }
+      ],
+      "previous_position": 25,
+      "position": 26,
+      "word": "hojas",
+      "movement": 1,
+      "mode": "local",
+      "evidence": {
+        "position": 26,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          14,
+          49
+        ],
+        "exact_matches": 3,
+        "hypothesis_words": 3,
+        "edit_cost": 0
+      }
+    },
+    {
+      "audio_available_seconds": 36.0,
+      "processing_seconds": 1.8733007999835536,
+      "asr_cpu_seconds": 7.53125,
+      "audio_window_start_seconds": 32.0,
+      "audio_window_end_seconds": 36.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 37.873300799983554,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [
+        {
+          "word": "Ojas",
+          "start": 32.0,
+          "end": 32.98,
+          "probability": 0.5965134277939796
+        },
+        {
+          "word": "Lucia",
+          "start": 33.48,
+          "end": 34.86,
+          "probability": 0.8038884997367859
+        },
+        {
+          "word": "buscó",
+          "start": 34.86,
+          "end": 35.98,
+          "probability": 0.7841987013816833
+        }
+      ],
+      "previous_position": 26,
+      "position": 26,
+      "word": "hojas",
+      "movement": 0,
+      "mode": "local",
+      "evidence": {
+        "position": null,
+        "reason": "evidencia_incompatible",
+        "window_indices": [
+          15,
+          50
+        ],
+        "exact_matches": 1,
+        "hypothesis_words": 3,
+        "edit_cost": 2
+      }
+    },
+    {
+      "audio_available_seconds": 38.0,
+      "processing_seconds": 1.868838299997151,
+      "asr_cpu_seconds": 7.515625,
+      "audio_window_start_seconds": 34.0,
+      "audio_window_end_seconds": 38.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 39.86883829999715,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [
+        {
+          "word": "Lucía",
+          "start": 34.0,
+          "end": 34.94,
+          "probability": 0.5515688173472881
+        },
+        {
+          "word": "buscó",
+          "start": 34.94,
+          "end": 36.02,
+          "probability": 0.9477909406026205
+        },
+        {
+          "word": "una",
+          "start": 36.02,
+          "end": 36.68,
+          "probability": 0.968789279460907
+        },
+        {
+          "word": "drama",
+          "start": 36.68,
+          "end": 37.44,
+          "probability": 0.4000508189201355
+        }
+      ],
+      "previous_position": 26,
+      "position": 29,
+      "word": "una",
+      "movement": 3,
+      "mode": "local",
+      "evidence": {
+        "position": 29,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          15,
+          50
+        ],
+        "exact_matches": 3,
+        "hypothesis_words": 4,
+        "edit_cost": 1
+      }
+    },
+    {
+      "audio_available_seconds": 40.0,
+      "processing_seconds": 1.75145069998689,
+      "asr_cpu_seconds": 7.015625,
+      "audio_window_start_seconds": 36.0,
+      "audio_window_end_seconds": 40.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 41.75145069998689,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [
+        {
+          "word": "una",
+          "start": 36.0,
+          "end": 36.7,
+          "probability": 0.4860198199748993
+        },
+        {
+          "word": "rama",
+          "start": 36.7,
+          "end": 37.78,
+          "probability": 0.8926520645618439
+        },
+        {
+          "word": "para",
+          "start": 37.78,
+          "end": 38.54,
+          "probability": 0.962921679019928
+        },
+        {
+          "word": "acercar",
+          "start": 38.54,
+          "end": 39.88,
+          "probability": 0.8801183501879374
+        }
+      ],
+      "previous_position": 29,
+      "position": 31,
+      "word": "para",
+      "movement": 2,
+      "mode": "local",
+      "evidence": {
+        "position": 31,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          18,
+          53
+        ],
+        "exact_matches": 3,
+        "hypothesis_words": 4,
+        "edit_cost": 1
+      }
+    },
+    {
+      "audio_available_seconds": 42.0,
+      "processing_seconds": 1.7950172000564635,
+      "asr_cpu_seconds": 7.15625,
+      "audio_window_start_seconds": 38.0,
+      "audio_window_end_seconds": 42.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 43.79501720005646,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [
+        {
+          "word": "para",
+          "start": 38.0,
+          "end": 38.62,
+          "probability": 0.8643220067024231
+        },
+        {
+          "word": "acercarnos",
+          "start": 38.62,
+          "end": 40.36,
+          "probability": 0.7529479364554087
+        },
+        {
+          "word": "a",
+          "start": 40.36,
+          "end": 40.84,
+          "probability": 0.8871880769729614
+        },
+        {
+          "word": "la",
+          "start": 40.84,
+          "end": 41.22,
+          "probability": 0.9930608868598938
+        },
+        {
+          "word": "orilla",
+          "start": 41.22,
+          "end": 41.8,
+          "probability": 0.7444649040699005
+        }
+      ],
+      "previous_position": 31,
+      "position": 35,
+      "word": "orilla",
+      "movement": 4,
+      "mode": "local",
+      "evidence": {
+        "position": 35,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          20,
+          55
+        ],
+        "exact_matches": 4,
+        "hypothesis_words": 5,
+        "edit_cost": 1
+      }
+    },
+    {
+      "audio_available_seconds": 44.0,
+      "processing_seconds": 1.7707267999649048,
+      "asr_cpu_seconds": 7.109375,
+      "audio_window_start_seconds": 40.0,
+      "audio_window_end_seconds": 44.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 45.770726799964905,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [
+        {
+          "word": "hacerlo",
+          "start": 40.0,
+          "end": 40.46,
+          "probability": 0.017729459330439568
+        },
+        {
+          "word": "a",
+          "start": 40.46,
+          "end": 40.86,
+          "probability": 0.6804958581924438
+        },
+        {
+          "word": "la",
+          "start": 40.86,
+          "end": 41.24,
+          "probability": 0.9900016784667969
+        },
+        {
+          "word": "orilla",
+          "start": 41.24,
+          "end": 42.16,
+          "probability": 0.9777794778347015
+        },
+        {
+          "word": "Suau",
+          "start": 42.98,
+          "end": 43.86,
+          "probability": 0.5371996909379959
+        }
+      ],
+      "previous_position": 35,
+      "position": 35,
+      "word": "orilla",
+      "movement": 0,
+      "mode": "local",
+      "evidence": {
+        "position": 35,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          24,
+          56
+        ],
+        "exact_matches": 3,
+        "hypothesis_words": 5,
+        "edit_cost": 2
+      }
+    },
+    {
+      "audio_available_seconds": 46.0,
+      "processing_seconds": 1.7912371000275016,
+      "asr_cpu_seconds": 7.21875,
+      "audio_window_start_seconds": 42.0,
+      "audio_window_end_seconds": 46.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 47.7912371000275,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [
+        {
+          "word": "su",
+          "start": 42.0,
+          "end": 43.4,
+          "probability": 0.36882346868515015
+        },
+        {
+          "word": "abuelo",
+          "start": 43.4,
+          "end": 44.56,
+          "probability": 0.9823707342147827
+        },
+        {
+          "word": "le",
+          "start": 44.56,
+          "end": 44.82,
+          "probability": 0.6664591431617737
+        },
+        {
+          "word": "ayudó",
+          "start": 44.82,
+          "end": 45.78,
+          "probability": 0.7760662138462067
+        }
+      ],
+      "previous_position": 35,
+      "position": 39,
+      "word": "ayudó",
+      "movement": 4,
+      "mode": "local",
+      "evidence": {
+        "position": 39,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          24,
+          56
+        ],
+        "exact_matches": 3,
+        "hypothesis_words": 4,
+        "edit_cost": 1
+      }
+    },
+    {
+      "audio_available_seconds": 48.0,
+      "processing_seconds": 1.804939900059253,
+      "asr_cpu_seconds": 7.28125,
+      "audio_window_start_seconds": 44.0,
+      "audio_window_end_seconds": 48.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 49.80493990005925,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [
+        {
+          "word": "Huelo",
+          "start": 44.0,
+          "end": 44.6,
+          "probability": 0.6697678714990616
+        },
+        {
+          "word": "la",
+          "start": 44.6,
+          "end": 44.88,
+          "probability": 0.41359102725982666
+        },
+        {
+          "word": "ayudó",
+          "start": 44.88,
+          "end": 46.38,
+          "probability": 0.8625806570053101
+        },
+        {
+          "word": "y",
+          "start": 46.38,
+          "end": 46.68,
+          "probability": 0.8625385165214539
+        },
+        {
+          "word": "juntos",
+          "start": 46.68,
+          "end": 47.54,
+          "probability": 0.8214765787124634
+        }
+      ],
+      "previous_position": 39,
+      "position": 41,
+      "word": "juntos",
+      "movement": 2,
+      "mode": "local",
+      "evidence": {
+        "position": 41,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          28,
+          56
+        ],
+        "exact_matches": 4,
+        "hypothesis_words": 5,
+        "edit_cost": 1
+      }
+    },
+    {
+      "audio_available_seconds": 50.0,
+      "processing_seconds": 1.7616025999886915,
+      "asr_cpu_seconds": 7.046875,
+      "audio_window_start_seconds": 46.0,
+      "audio_window_end_seconds": 50.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 51.76160259998869,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [
+        {
+          "word": "y",
+          "start": 46.11,
+          "end": 46.69,
+          "probability": 0.6476918458938599
+        },
+        {
+          "word": "juntos",
+          "start": 46.69,
+          "end": 47.67,
+          "probability": 0.5795417428016663
+        },
+        {
+          "word": "sacaron",
+          "start": 47.67,
+          "end": 48.99,
+          "probability": 0.9850427508354187
+        },
+        {
+          "word": "el",
+          "start": 48.99,
+          "end": 49.47,
+          "probability": 0.9679481983184814
+        },
+        {
+          "word": "bar",
+          "start": 49.47,
+          "end": 49.83,
+          "probability": 0.9530555605888367
+        }
+      ],
+      "previous_position": 41,
+      "position": 43,
+      "word": "el",
+      "movement": 2,
+      "mode": "local",
+      "evidence": {
+        "position": 43,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          30,
+          56
+        ],
+        "exact_matches": 4,
+        "hypothesis_words": 5,
+        "edit_cost": 1
+      }
+    },
+    {
+      "audio_available_seconds": 52.0,
+      "processing_seconds": 1.7570715000620112,
+      "asr_cpu_seconds": 6.984375,
+      "audio_window_start_seconds": 48.0,
+      "audio_window_end_seconds": 52.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 53.75707150006201,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [
+        {
+          "word": "sacaron",
+          "start": 48.0,
+          "end": 48.98,
+          "probability": 0.8608273863792419
+        },
+        {
+          "word": "el",
+          "start": 48.98,
+          "end": 49.48,
+          "probability": 0.9848664402961731
+        },
+        {
+          "word": "barco",
+          "start": 49.48,
+          "end": 50.54,
+          "probability": 0.9820064604282379
+        },
+        {
+          "word": "del",
+          "start": 50.54,
+          "end": 51.02,
+          "probability": 0.9191385507583618
+        },
+        {
+          "word": "agua",
+          "start": 51.02,
+          "end": 51.78,
+          "probability": 0.3999589681625366
+        }
+      ],
+      "previous_position": 43,
+      "position": 46,
+      "word": "agua",
+      "movement": 3,
+      "mode": "local",
+      "evidence": {
+        "position": 46,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          32,
+          56
+        ],
+        "exact_matches": 5,
+        "hypothesis_words": 5,
+        "edit_cost": 0
+      }
+    },
+    {
+      "audio_available_seconds": 54.0,
+      "processing_seconds": 1.7059223999967799,
+      "asr_cpu_seconds": 6.78125,
+      "audio_window_start_seconds": 50.0,
+      "audio_window_end_seconds": 54.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 55.70592239999678,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [
+        {
+          "word": "el",
+          "start": 50.0,
+          "end": 50.24,
+          "probability": 0.2978801131248474
+        },
+        {
+          "word": "co",
+          "start": 50.24,
+          "end": 50.52,
+          "probability": 0.13525256514549255
+        },
+        {
+          "word": "del",
+          "start": 50.52,
+          "end": 51.16,
+          "probability": 0.9241714477539062
+        },
+        {
+          "word": "agua",
+          "start": 51.16,
+          "end": 52.28,
+          "probability": 0.9917355179786682
+        },
+        {
+          "word": "de",
+          "start": 52.28,
+          "end": 53.98,
+          "probability": 0.4775727093219757
+        }
+      ],
+      "previous_position": 46,
+      "position": 46,
+      "word": "agua",
+      "movement": 0,
+      "mode": "local",
+      "evidence": {
+        "position": 46,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          35,
+          56
+        ],
+        "exact_matches": 3,
+        "hypothesis_words": 5,
+        "edit_cost": 2
+      }
+    },
+    {
+      "audio_available_seconds": 56.0,
+      "processing_seconds": 9.176999100018293,
+      "asr_cpu_seconds": 36.859375,
+      "audio_window_start_seconds": 52.0,
+      "audio_window_end_seconds": 56.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 65.17699910001829,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [
+        {
+          "word": "Después",
+          "start": 54.22,
+          "end": 55.62,
+          "probability": 0.3858931162394583
+        },
+        {
+          "word": "re",
+          "start": 55.62,
+          "end": 55.98,
+          "probability": 0.05064585618674755
+        }
+      ],
+      "previous_position": 46,
+      "position": 46,
+      "word": "agua",
+      "movement": 0,
+      "mode": "local",
+      "evidence": {
+        "position": null,
+        "reason": "evidencia_incompatible",
+        "window_indices": [
+          35,
+          56
+        ],
+        "exact_matches": 1,
+        "hypothesis_words": 2,
+        "edit_cost": 1
+      }
+    },
+    {
+      "audio_available_seconds": 58.0,
+      "processing_seconds": 1.5569561999291182,
+      "asr_cpu_seconds": 6.21875,
+      "audio_window_start_seconds": 54.0,
+      "audio_window_end_seconds": 58.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 66.73395529994741,
+      "backlog_seconds_simulated": 7.176999100018293,
+      "hypothesis": [
+        {
+          "word": "Pues",
+          "start": 54.0,
+          "end": 55.24,
+          "probability": 0.25971707701683044
+        },
+        {
+          "word": "regresar",
+          "start": 55.24,
+          "end": 57.14,
+          "probability": 0.8830974996089935
+        },
+        {
+          "word": "una",
+          "start": 57.14,
+          "end": 57.5,
+          "probability": 0.8519503474235535
+        },
+        {
+          "word": "ca",
+          "start": 57.5,
+          "end": 57.98,
+          "probability": 0.40249063074588776
+        }
+      ],
+      "previous_position": 46,
+      "position": 46,
+      "word": "agua",
+      "movement": 0,
+      "mode": "local",
+      "evidence": {
+        "position": null,
+        "reason": "evidencia_incompatible",
+        "window_indices": [
+          35,
+          56
+        ],
+        "exact_matches": 1,
+        "hypothesis_words": 4,
+        "edit_cost": 3
+      }
+    },
+    {
+      "audio_available_seconds": 60.0,
+      "processing_seconds": 1.788522299961187,
+      "asr_cpu_seconds": 7.109375,
+      "audio_window_start_seconds": 56.0,
+      "audio_window_end_seconds": 60.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 68.5224775999086,
+      "backlog_seconds_simulated": 6.733955299947411,
+      "hypothesis": [
+        {
+          "word": "regresar",
+          "start": 56.0,
+          "end": 57.18,
+          "probability": 0.8584921658039093
+        },
+        {
+          "word": "a",
+          "start": 57.18,
+          "end": 57.28,
+          "probability": 0.5332340598106384
+        },
+        {
+          "word": "una",
+          "start": 57.28,
+          "end": 57.52,
+          "probability": 0.920343816280365
+        },
+        {
+          "word": "casa",
+          "start": 57.52,
+          "end": 58.46,
+          "probability": 0.981878936290741
+        },
+        {
+          "word": "y",
+          "start": 58.46,
+          "end": 59.72,
+          "probability": 0.7058977484703064
+        },
+        {
+          "word": "lo",
+          "start": 59.72,
+          "end": 59.98,
+          "probability": 0.3688308894634247
+        }
+      ],
+      "previous_position": 46,
+      "position": 52,
+      "word": "lo",
+      "movement": 6,
+      "mode": "local",
+      "evidence": {
+        "position": 52,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          35,
+          56
+        ],
+        "exact_matches": 4,
+        "hypothesis_words": 6,
+        "edit_cost": 2
+      }
+    },
+    {
+      "audio_available_seconds": 62.0,
+      "processing_seconds": 1.7300069999182597,
+      "asr_cpu_seconds": 7.015625,
+      "audio_window_start_seconds": 58.0,
+      "audio_window_end_seconds": 62.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 70.25248459982686,
+      "backlog_seconds_simulated": 6.522477599908598,
+      "hypothesis": [
+        {
+          "word": "y",
+          "start": 58.0,
+          "end": 59.68,
+          "probability": 0.4744899272918701
+        },
+        {
+          "word": "lo",
+          "start": 59.68,
+          "end": 60.16,
+          "probability": 0.7885213494300842
+        },
+        {
+          "word": "colocaron",
+          "start": 60.16,
+          "end": 61.76,
+          "probability": 0.9916130304336548
+        }
+      ],
+      "previous_position": 52,
+      "position": 53,
+      "word": "colocaron",
+      "movement": 1,
+      "mode": "local",
+      "evidence": {
+        "position": 53,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          41,
+          56
+        ],
+        "exact_matches": 3,
+        "hypothesis_words": 3,
+        "edit_cost": 0
+      }
+    },
+    {
+      "audio_available_seconds": 64.0,
+      "processing_seconds": 1.7063534000189975,
+      "asr_cpu_seconds": 6.875,
+      "audio_window_start_seconds": 60.0,
+      "audio_window_end_seconds": 64.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 71.95883799984585,
+      "backlog_seconds_simulated": 6.2524845998268574,
+      "hypothesis": [
+        {
+          "word": "colocaron",
+          "start": 60.0,
+          "end": 61.8,
+          "probability": 0.6893239915370941
+        },
+        {
+          "word": "sobre",
+          "start": 61.8,
+          "end": 62.7,
+          "probability": 0.851019561290741
+        },
+        {
+          "word": "una",
+          "start": 62.7,
+          "end": 63.66,
+          "probability": 0.9509115815162659
+        }
+      ],
+      "previous_position": 53,
+      "position": 55,
+      "word": "una",
+      "movement": 2,
+      "mode": "local",
+      "evidence": {
+        "position": 55,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          42,
+          56
+        ],
+        "exact_matches": 3,
+        "hypothesis_words": 3,
+        "edit_cost": 0
+      }
+    },
+    {
+      "audio_available_seconds": 66.0,
+      "processing_seconds": 1.7725570999318734,
+      "asr_cpu_seconds": 7.109375,
+      "audio_window_start_seconds": 62.0,
+      "audio_window_end_seconds": 66.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 73.73139509977773,
+      "backlog_seconds_simulated": 5.958837999845855,
+      "hypothesis": [
+        {
+          "word": "sobre",
+          "start": 62.0,
+          "end": 62.76,
+          "probability": 0.878785252571106
+        },
+        {
+          "word": "una",
+          "start": 62.76,
+          "end": 63.74,
+          "probability": 0.9311068654060364
+        },
+        {
+          "word": "estantería",
+          "start": 63.74,
+          "end": 65.98,
+          "probability": 0.8658072551091512
+        }
+      ],
+      "previous_position": 55,
+      "position": 56,
+      "word": "estantería",
+      "movement": 1,
+      "mode": "local",
+      "evidence": {
+        "position": 56,
+        "reason": "coincidencia_local",
+        "window_indices": [
+          44,
+          56
+        ],
+        "exact_matches": 3,
+        "hypothesis_words": 3,
+        "edit_cost": 0
+      }
+    },
+    {
+      "audio_available_seconds": 68.0,
+      "processing_seconds": 1.712245799950324,
+      "asr_cpu_seconds": 6.8125,
+      "audio_window_start_seconds": 64.0,
+      "audio_window_end_seconds": 68.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 75.44364089972805,
+      "backlog_seconds_simulated": 5.731395099777728,
+      "hypothesis": [
+        {
+          "word": "Estantería",
+          "start": 64.0,
+          "end": 66.28,
+          "probability": 0.6733031769593557
+        }
+      ],
+      "previous_position": 56,
+      "position": 56,
+      "word": "estantería",
+      "movement": 0,
+      "mode": "local",
+      "evidence": {
+        "position": null,
+        "reason": "evidencia_insuficiente"
+      }
+    },
+    {
+      "audio_available_seconds": 70.0,
+      "processing_seconds": 1.735088299959898,
+      "asr_cpu_seconds": 7.015625,
+      "audio_window_start_seconds": 66.0,
+      "audio_window_end_seconds": 70.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 77.17872919968795,
+      "backlog_seconds_simulated": 5.443640899728052,
+      "hypothesis": [
+        {
+          "word": "Adiós",
+          "start": 66.0,
+          "end": 66.46,
+          "probability": 0.47453388199210167
+        }
+      ],
+      "previous_position": 56,
+      "position": 56,
+      "word": "estantería",
+      "movement": 0,
+      "mode": "local",
+      "evidence": {
+        "position": null,
+        "reason": "evidencia_insuficiente"
+      }
+    },
+    {
+      "audio_available_seconds": 72.0,
+      "processing_seconds": 0.010500599979422987,
+      "asr_cpu_seconds": 0.015625,
+      "audio_window_start_seconds": 68.0,
+      "audio_window_end_seconds": 72.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 77.18922979966737,
+      "backlog_seconds_simulated": 5.17872919968795,
+      "hypothesis": [],
+      "previous_position": 56,
+      "position": 56,
+      "word": "estantería",
+      "movement": 0,
+      "mode": "local",
+      "evidence": {
+        "position": null,
+        "reason": "evidencia_insuficiente"
+      }
+    },
+    {
+      "audio_available_seconds": 74.0,
+      "processing_seconds": 0.010106700006872416,
+      "asr_cpu_seconds": 0.0,
+      "audio_window_start_seconds": 70.0,
+      "audio_window_end_seconds": 74.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 77.19933649967425,
+      "backlog_seconds_simulated": 3.1892297996673733,
+      "hypothesis": [],
+      "previous_position": 56,
+      "position": 56,
+      "word": "estantería",
+      "movement": 0,
+      "mode": "hipotesis_sin_cambios",
+      "evidence": {}
+    },
+    {
+      "audio_available_seconds": 76.0,
+      "processing_seconds": 0.00987039995379746,
+      "asr_cpu_seconds": 0.0,
+      "audio_window_start_seconds": 72.0,
+      "audio_window_end_seconds": 76.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 77.20920689962804,
+      "backlog_seconds_simulated": 1.1993364996742457,
+      "hypothesis": [],
+      "previous_position": 56,
+      "position": 56,
+      "word": "estantería",
+      "movement": 0,
+      "mode": "hipotesis_sin_cambios",
+      "evidence": {}
+    },
+    {
+      "audio_available_seconds": 78.0,
+      "processing_seconds": 0.010031700017862022,
+      "asr_cpu_seconds": 0.0,
+      "audio_window_start_seconds": 74.0,
+      "audio_window_end_seconds": 78.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 78.01003170001786,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [],
+      "previous_position": 56,
+      "position": 56,
+      "word": "estantería",
+      "movement": 0,
+      "mode": "hipotesis_sin_cambios",
+      "evidence": {}
+    },
+    {
+      "audio_available_seconds": 80.0,
+      "processing_seconds": 0.010203499929048121,
+      "asr_cpu_seconds": 0.015625,
+      "audio_window_start_seconds": 76.0,
+      "audio_window_end_seconds": 80.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 80.01020349992905,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [],
+      "previous_position": 56,
+      "position": 56,
+      "word": "estantería",
+      "movement": 0,
+      "mode": "hipotesis_sin_cambios",
+      "evidence": {}
+    },
+    {
+      "audio_available_seconds": 82.0,
+      "processing_seconds": 0.010279999929480255,
+      "asr_cpu_seconds": 0.0625,
+      "audio_window_start_seconds": 78.0,
+      "audio_window_end_seconds": 82.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 82.01027999992948,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [],
+      "previous_position": 56,
+      "position": 56,
+      "word": "estantería",
+      "movement": 0,
+      "mode": "hipotesis_sin_cambios",
+      "evidence": {}
+    },
+    {
+      "audio_available_seconds": 84.0,
+      "processing_seconds": 0.010515999980270863,
+      "asr_cpu_seconds": 0.0625,
+      "audio_window_start_seconds": 80.0,
+      "audio_window_end_seconds": 84.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 84.01051599998027,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [],
+      "previous_position": 56,
+      "position": 56,
+      "word": "estantería",
+      "movement": 0,
+      "mode": "hipotesis_sin_cambios",
+      "evidence": {}
+    },
+    {
+      "audio_available_seconds": 86.0,
+      "processing_seconds": 0.010124400025233626,
+      "asr_cpu_seconds": 0.0625,
+      "audio_window_start_seconds": 82.0,
+      "audio_window_end_seconds": 86.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 86.01012440002523,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [],
+      "previous_position": 56,
+      "position": 56,
+      "word": "estantería",
+      "movement": 0,
+      "mode": "hipotesis_sin_cambios",
+      "evidence": {}
+    },
+    {
+      "audio_available_seconds": 88.0,
+      "processing_seconds": 0.009879100020043552,
+      "asr_cpu_seconds": 0.0625,
+      "audio_window_start_seconds": 84.0,
+      "audio_window_end_seconds": 88.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 88.00987910002004,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [],
+      "previous_position": 56,
+      "position": 56,
+      "word": "estantería",
+      "movement": 0,
+      "mode": "hipotesis_sin_cambios",
+      "evidence": {}
+    },
+    {
+      "audio_available_seconds": 90.0,
+      "processing_seconds": 0.009800400002859533,
+      "asr_cpu_seconds": 0.0625,
+      "audio_window_start_seconds": 86.0,
+      "audio_window_end_seconds": 90.0,
+      "audio_reprocessed_seconds": 4.0,
+      "sequential_ready_seconds_simulated": 90.00980040000286,
+      "backlog_seconds_simulated": 0.0,
+      "hypothesis": [],
+      "previous_position": 56,
+      "position": 56,
+      "word": "estantería",
+      "movement": 0,
+      "mode": "hipotesis_sin_cambios",
+      "evidence": {}
+    }
+  ],
+  "audio_identity": {
+    "id": "lectura_20261023_100001_445275",
+    "label": "Lectura lenta - cuento 2 · 23/10/2026",
+    "case": "lenta",
+    "recorded_date": "2026-10-23",
+    "story_file": "datos/textos/lectura_02.txt",
+    "speaker_id": "adulto_01",
+    "partition": "sin_asignar"
+  },
+  "resources": {
+    "hardware": {
+      "captured_at_utc": "2026-10-23T09:26:06.807897+00:00",
+      "os": "Windows-11-10.0.26200-SP0",
+      "architecture": "AMD64",
+      "python": "3.12.15",
+      "cpu_model": "11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz",
+      "logical_cpus": 16,
+      "memory": {
+        "status": "medido",
+        "working_set_bytes": 67235840,
+        "private_commit_bytes": 574255104,
+        "process_lifetime_peak_working_set_bytes": 81977344,
+        "system_ram_total_bytes": 16866881536,
+        "system_ram_available_bytes": 6529875968
+      },
+      "gpu": {
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.39,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      }
+    },
+    "wall_seconds": 70.90315200004261,
+    "process_cpu_seconds": 282.96875,
+    "cpu_average_percent_one_logical_core": 399.091919072695,
+    "cpu_average_percent_machine_capacity": 24.94324494204344,
+    "samples": [
+      {
+        "elapsed_seconds": 0.0002416000934317708,
+        "cpu_seconds": 0.0,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 67313664,
+          "private_commit_bytes": 574308352,
+          "process_lifetime_peak_working_set_bytes": 81977344,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6540169216
+        }
+      },
+      {
+        "elapsed_seconds": 0.32531520002521574,
+        "cpu_seconds": 0.34375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 421380096,
+          "private_commit_bytes": 934461440,
+          "process_lifetime_peak_working_set_bytes": 421380096,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6183743488
+        }
+      },
+      {
+        "elapsed_seconds": 0.580906999995932,
+        "cpu_seconds": 1.0,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 480788480,
+          "private_commit_bytes": 999251968,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6112419840
+        }
+      },
+      {
+        "elapsed_seconds": 0.8312337000388652,
+        "cpu_seconds": 2.0,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 373530624,
+          "private_commit_bytes": 890863616,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6255239168
+        }
+      },
+      {
+        "elapsed_seconds": 1.1512166000902653,
+        "cpu_seconds": 3.328125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 408629248,
+          "private_commit_bytes": 2889834496,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6216249344
+        }
+      },
+      {
+        "elapsed_seconds": 1.490494600031525,
+        "cpu_seconds": 4.625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 467775488,
+          "private_commit_bytes": 3031470080,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6154330112
+        }
+      },
+      {
+        "elapsed_seconds": 1.7464901000494137,
+        "cpu_seconds": 5.625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 484388864,
+          "private_commit_bytes": 3039559680,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6132625408
+        }
+      },
+      {
+        "elapsed_seconds": 2.003191800089553,
+        "cpu_seconds": 6.625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 471908352,
+          "private_commit_bytes": 3036094464,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6150959104
+        }
+      },
+      {
+        "elapsed_seconds": 2.261560400016606,
+        "cpu_seconds": 7.6875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 515420160,
+          "private_commit_bytes": 3138539520,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6125330432
+        }
+      },
+      {
+        "elapsed_seconds": 2.6066235000034794,
+        "cpu_seconds": 9.09375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 471273472,
+          "private_commit_bytes": 3027873792,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6155223040
+        }
+      },
+      {
+        "elapsed_seconds": 2.858193700085394,
+        "cpu_seconds": 10.09375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 485928960,
+          "private_commit_bytes": 3058470912,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6137696256
+        }
+      },
+      {
+        "elapsed_seconds": 3.113188200048171,
+        "cpu_seconds": 11.09375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 587997184,
+          "private_commit_bytes": 3142443008,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6063947776
+        }
+      },
+      {
+        "elapsed_seconds": 3.3698983000358567,
+        "cpu_seconds": 12.15625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 583393280,
+          "private_commit_bytes": 3137822720,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6071005184
+        }
+      },
+      {
+        "elapsed_seconds": 3.709515599999577,
+        "cpu_seconds": 13.546875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 484671488,
+          "private_commit_bytes": 3043454976,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6133657600
+        }
+      },
+      {
+        "elapsed_seconds": 3.9612605000147596,
+        "cpu_seconds": 14.546875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 563945472,
+          "private_commit_bytes": 3118145536,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6063611904
+        }
+      },
+      {
+        "elapsed_seconds": 4.224919200059958,
+        "cpu_seconds": 15.609375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 469262336,
+          "private_commit_bytes": 3033858048,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6148886528
+        }
+      },
+      {
+        "elapsed_seconds": 4.479545300011523,
+        "cpu_seconds": 16.609375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 547786752,
+          "private_commit_bytes": 3139604480,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6191607808
+        }
+      },
+      {
+        "elapsed_seconds": 4.83359749999363,
+        "cpu_seconds": 18.078125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 482574336,
+          "private_commit_bytes": 3037249536,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6247731200
+        }
+      },
+      {
+        "elapsed_seconds": 5.090038300026208,
+        "cpu_seconds": 19.09375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 523431936,
+          "private_commit_bytes": 3139698688,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6200856576
+        }
+      },
+      {
+        "elapsed_seconds": 5.340474600088783,
+        "cpu_seconds": 20.09375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 588906496,
+          "private_commit_bytes": 3144318976,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6120271872
+        }
+      },
+      {
+        "elapsed_seconds": 5.5908223000587896,
+        "cpu_seconds": 21.078125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 495108096,
+          "private_commit_bytes": 3049959424,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6221357056
+        }
+      },
+      {
+        "elapsed_seconds": 5.943415199988522,
+        "cpu_seconds": 22.5,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 471371776,
+          "private_commit_bytes": 3029680128,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6235435008
+        }
+      },
+      {
+        "elapsed_seconds": 6.194395099999383,
+        "cpu_seconds": 23.515625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 505946112,
+          "private_commit_bytes": 3139530752,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6202208256
+        }
+      },
+      {
+        "elapsed_seconds": 6.458167300093919,
+        "cpu_seconds": 24.515625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 491089920,
+          "private_commit_bytes": 3139530752,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6225682432
+        }
+      },
+      {
+        "elapsed_seconds": 6.713454200071283,
+        "cpu_seconds": 25.546875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 585068544,
+          "private_commit_bytes": 3139530752,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6120632320
+        }
+      },
+      {
+        "elapsed_seconds": 7.067521600052714,
+        "cpu_seconds": 26.953125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 569438208,
+          "private_commit_bytes": 3144151040,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6137532416
+        }
+      },
+      {
+        "elapsed_seconds": 7.325014700065367,
+        "cpu_seconds": 27.984375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 503181312,
+          "private_commit_bytes": 3060178944,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6195036160
+        }
+      },
+      {
+        "elapsed_seconds": 7.58050640008878,
+        "cpu_seconds": 28.984375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 560205824,
+          "private_commit_bytes": 3114119168,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6146576384
+        }
+      },
+      {
+        "elapsed_seconds": 7.837278600083664,
+        "cpu_seconds": 30.046875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 469733376,
+          "private_commit_bytes": 3031453696,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6231658496
+        }
+      },
+      {
+        "elapsed_seconds": 8.192454800009727,
+        "cpu_seconds": 31.421875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 585547776,
+          "private_commit_bytes": 3139559424,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6105985024
+        }
+      },
+      {
+        "elapsed_seconds": 8.447644000058062,
+        "cpu_seconds": 32.484375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 484143104,
+          "private_commit_bytes": 3041738752,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6205300736
+        }
+      },
+      {
+        "elapsed_seconds": 8.704412400024012,
+        "cpu_seconds": 33.484375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 494108672,
+          "private_commit_bytes": 3049803776,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6198992896
+        }
+      },
+      {
+        "elapsed_seconds": 8.961799000040628,
+        "cpu_seconds": 34.546875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 523767808,
+          "private_commit_bytes": 3144179712,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6185971712
+        }
+      },
+      {
+        "elapsed_seconds": 9.31502169999294,
+        "cpu_seconds": 35.921875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 550862848,
+          "private_commit_bytes": 3105275904,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6154768384
+        }
+      },
+      {
+        "elapsed_seconds": 9.571523100021295,
+        "cpu_seconds": 36.984375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 458457088,
+          "private_commit_bytes": 3023376384,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6241820672
+        }
+      },
+      {
+        "elapsed_seconds": 9.8285928000696,
+        "cpu_seconds": 37.984375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 586960896,
+          "private_commit_bytes": 3145269248,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6102994944
+        }
+      },
+      {
+        "elapsed_seconds": 10.093689500004984,
+        "cpu_seconds": 39.046875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 492285952,
+          "private_commit_bytes": 3047448576,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6198132736
+        }
+      },
+      {
+        "elapsed_seconds": 10.473362500080839,
+        "cpu_seconds": 40.59375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 490483712,
+          "private_commit_bytes": 3044974592,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6152232960
+        }
+      },
+      {
+        "elapsed_seconds": 10.724457500036806,
+        "cpu_seconds": 41.640625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 490082304,
+          "private_commit_bytes": 3049582592,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6161453056
+        }
+      },
+      {
+        "elapsed_seconds": 10.980012300075032,
+        "cpu_seconds": 42.640625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 584691712,
+          "private_commit_bytes": 3139338240,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6057418752
+        }
+      },
+      {
+        "elapsed_seconds": 11.236532800015993,
+        "cpu_seconds": 43.640625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 564764672,
+          "private_commit_bytes": 3119083520,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6122758144
+        }
+      },
+      {
+        "elapsed_seconds": 11.604143000091426,
+        "cpu_seconds": 45.1875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 559759360,
+          "private_commit_bytes": 3141029888,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6133157888
+        }
+      },
+      {
+        "elapsed_seconds": 11.862067400012165,
+        "cpu_seconds": 46.171875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 586002432,
+          "private_commit_bytes": 3141029888,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6095671296
+        }
+      },
+      {
+        "elapsed_seconds": 12.131576200015843,
+        "cpu_seconds": 47.296875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 591282176,
+          "private_commit_bytes": 3145650176,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6069067776
+        }
+      },
+      {
+        "elapsed_seconds": 12.395216800039634,
+        "cpu_seconds": 48.296875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 494780416,
+          "private_commit_bytes": 3051290624,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6167437312
+        }
+      },
+      {
+        "elapsed_seconds": 12.763086699997075,
+        "cpu_seconds": 49.796875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 568811520,
+          "private_commit_bytes": 3141029888,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6098366464
+        }
+      },
+      {
+        "elapsed_seconds": 13.027601800044067,
+        "cpu_seconds": 50.859375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 534016000,
+          "private_commit_bytes": 3088261120,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6134095872
+        }
+      },
+      {
+        "elapsed_seconds": 13.291457200073637,
+        "cpu_seconds": 51.921875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 472059904,
+          "private_commit_bytes": 3028365312,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6208925696
+        }
+      },
+      {
+        "elapsed_seconds": 13.546768500003964,
+        "cpu_seconds": 52.921875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 587431936,
+          "private_commit_bytes": 3144118272,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6081982464
+        }
+      },
+      {
+        "elapsed_seconds": 13.928254100028425,
+        "cpu_seconds": 54.515625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 474292224,
+          "private_commit_bytes": 3037048832,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6200397824
+        }
+      },
+      {
+        "elapsed_seconds": 14.193007900030352,
+        "cpu_seconds": 55.5625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 542904320,
+          "private_commit_bytes": 3144118272,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6134661120
+        }
+      },
+      {
+        "elapsed_seconds": 14.44870790001005,
+        "cpu_seconds": 56.578125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 487047168,
+          "private_commit_bytes": 3045130240,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6173728768
+        }
+      },
+      {
+        "elapsed_seconds": 14.705311900004745,
+        "cpu_seconds": 57.578125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 471699456,
+          "private_commit_bytes": 3026665472,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6201671680
+        }
+      },
+      {
+        "elapsed_seconds": 15.058896900038235,
+        "cpu_seconds": 59.0,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 569323520,
+          "private_commit_bytes": 3122896896,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6092668928
+        }
+      },
+      {
+        "elapsed_seconds": 15.321880400064401,
+        "cpu_seconds": 60.0625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 464678912,
+          "private_commit_bytes": 3022307328,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6197215232
+        }
+      },
+      {
+        "elapsed_seconds": 15.572288400027901,
+        "cpu_seconds": 61.0625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 585900032,
+          "private_commit_bytes": 3139768320,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6084263936
+        }
+      },
+      {
+        "elapsed_seconds": 15.829371700063348,
+        "cpu_seconds": 62.0625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 485593088,
+          "private_commit_bytes": 3045404672,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6181847040
+        }
+      },
+      {
+        "elapsed_seconds": 16.1910826000385,
+        "cpu_seconds": 63.53125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 505245696,
+          "private_commit_bytes": 3144388608,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6157725696
+        }
+      },
+      {
+        "elapsed_seconds": 16.462058400036767,
+        "cpu_seconds": 64.65625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 581451776,
+          "private_commit_bytes": 3139768320,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6087778304
+        }
+      },
+      {
+        "elapsed_seconds": 16.725227700080723,
+        "cpu_seconds": 65.71875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 564740096,
+          "private_commit_bytes": 3118546944,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6088638464
+        }
+      },
+      {
+        "elapsed_seconds": 16.980620800051838,
+        "cpu_seconds": 66.71875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 467103744,
+          "private_commit_bytes": 3028918272,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6187278336
+        }
+      },
+      {
+        "elapsed_seconds": 17.362300100037828,
+        "cpu_seconds": 68.1875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 485724160,
+          "private_commit_bytes": 3045203968,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6146850816
+        }
+      },
+      {
+        "elapsed_seconds": 17.627447700011544,
+        "cpu_seconds": 69.25,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 486506496,
+          "private_commit_bytes": 3041755136,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6148620288
+        }
+      },
+      {
+        "elapsed_seconds": 17.89097040006891,
+        "cpu_seconds": 70.3125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 569454592,
+          "private_commit_bytes": 3139575808,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6113202176
+        }
+      },
+      {
+        "elapsed_seconds": 18.145990999997593,
+        "cpu_seconds": 71.3125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 495935488,
+          "private_commit_bytes": 3049820160,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6175518720
+        }
+      },
+      {
+        "elapsed_seconds": 18.506763800047338,
+        "cpu_seconds": 72.8125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 561532928,
+          "private_commit_bytes": 3115692032,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6104961024
+        }
+      },
+      {
+        "elapsed_seconds": 18.763619400095195,
+        "cpu_seconds": 73.796875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 475783168,
+          "private_commit_bytes": 3031789568,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6199013376
+        }
+      },
+      {
+        "elapsed_seconds": 19.020239300094545,
+        "cpu_seconds": 74.796875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 498659328,
+          "private_commit_bytes": 3140616192,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6153932800
+        }
+      },
+      {
+        "elapsed_seconds": 19.276740800007246,
+        "cpu_seconds": 75.859375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 518246400,
+          "private_commit_bytes": 3145236480,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6156054528
+        }
+      },
+      {
+        "elapsed_seconds": 19.644442100077868,
+        "cpu_seconds": 77.328125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 520314880,
+          "private_commit_bytes": 3140616192,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6154297344
+        }
+      },
+      {
+        "elapsed_seconds": 19.895945099997334,
+        "cpu_seconds": 78.375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 477966336,
+          "private_commit_bytes": 3032395776,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6180929536
+        }
+      },
+      {
+        "elapsed_seconds": 20.15930559998378,
+        "cpu_seconds": 79.390625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 485400576,
+          "private_commit_bytes": 3045945344,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6183096320
+        }
+      },
+      {
+        "elapsed_seconds": 20.410508800065145,
+        "cpu_seconds": 80.3125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 567771136,
+          "private_commit_bytes": 3121229824,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6088228864
+        }
+      },
+      {
+        "elapsed_seconds": 20.77546680008527,
+        "cpu_seconds": 81.84375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 534638592,
+          "private_commit_bytes": 3145199616,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6118219776
+        }
+      },
+      {
+        "elapsed_seconds": 21.03340170008596,
+        "cpu_seconds": 82.84375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 478408704,
+          "private_commit_bytes": 3140579328,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6171115520
+        }
+      },
+      {
+        "elapsed_seconds": 21.289634100045078,
+        "cpu_seconds": 83.90625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 588484608,
+          "private_commit_bytes": 3145199616,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6076575744
+        }
+      },
+      {
+        "elapsed_seconds": 21.541048799990676,
+        "cpu_seconds": 84.90625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 469659648,
+          "private_commit_bytes": 3024285696,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6186221568
+        }
+      },
+      {
+        "elapsed_seconds": 21.906390200019814,
+        "cpu_seconds": 86.375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 523423744,
+          "private_commit_bytes": 3140579328,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6132948992
+        }
+      },
+      {
+        "elapsed_seconds": 22.156966599985026,
+        "cpu_seconds": 87.375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 565624832,
+          "private_commit_bytes": 3120164864,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6087430144
+        }
+      },
+      {
+        "elapsed_seconds": 22.412557500065304,
+        "cpu_seconds": 88.421875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 473481216,
+          "private_commit_bytes": 3032502272,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6179434496
+        }
+      },
+      {
+        "elapsed_seconds": 22.669229799997993,
+        "cpu_seconds": 89.421875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 493236224,
+          "private_commit_bytes": 3049816064,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6140858368
+        }
+      },
+      {
+        "elapsed_seconds": 23.03687130007893,
+        "cpu_seconds": 90.921875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 571715584,
+          "private_commit_bytes": 3139571712,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6077681664
+        }
+      },
+      {
+        "elapsed_seconds": 23.29500929999631,
+        "cpu_seconds": 91.9375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 492822528,
+          "private_commit_bytes": 3049816064,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6148972544
+        }
+      },
+      {
+        "elapsed_seconds": 23.558305900078267,
+        "cpu_seconds": 93.0,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 589000704,
+          "private_commit_bytes": 3144192000,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6050443264
+        }
+      },
+      {
+        "elapsed_seconds": 23.813709800015204,
+        "cpu_seconds": 94.0,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 477745152,
+          "private_commit_bytes": 3031351296,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6171320320
+        }
+      },
+      {
+        "elapsed_seconds": 24.167761499993503,
+        "cpu_seconds": 95.453125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 572071936,
+          "private_commit_bytes": 3125628928,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6075891712
+        }
+      },
+      {
+        "elapsed_seconds": 24.425413600052707,
+        "cpu_seconds": 96.453125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 458194944,
+          "private_commit_bytes": 3012354048,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6180745216
+        }
+      },
+      {
+        "elapsed_seconds": 24.681038600043394,
+        "cpu_seconds": 97.515625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 496689152,
+          "private_commit_bytes": 3051229184,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6130171904
+        }
+      },
+      {
+        "elapsed_seconds": 24.937825500033796,
+        "cpu_seconds": 98.515625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 585175040,
+          "private_commit_bytes": 3140984832,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6061740032
+        }
+      },
+      {
+        "elapsed_seconds": 25.284719299990684,
+        "cpu_seconds": 99.921875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 507109376,
+          "private_commit_bytes": 3061612544,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6116896768
+        }
+      },
+      {
+        "elapsed_seconds": 25.54111750004813,
+        "cpu_seconds": 100.984375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 586309632,
+          "private_commit_bytes": 3140984832,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6054936576
+        }
+      },
+      {
+        "elapsed_seconds": 25.79189990006853,
+        "cpu_seconds": 101.984375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 518144000,
+          "private_commit_bytes": 3074752512,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6104387584
+        }
+      },
+      {
+        "elapsed_seconds": 26.047476200037636,
+        "cpu_seconds": 102.96875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 457134080,
+          "private_commit_bytes": 3018092544,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6170705920
+        }
+      },
+      {
+        "elapsed_seconds": 26.396280499990098,
+        "cpu_seconds": 104.40625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 535863296,
+          "private_commit_bytes": 3146481664,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6089457664
+        }
+      },
+      {
+        "elapsed_seconds": 26.659857199992985,
+        "cpu_seconds": 105.4375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 488673280,
+          "private_commit_bytes": 3047489536,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6145884160
+        }
+      },
+      {
+        "elapsed_seconds": 26.914760900079273,
+        "cpu_seconds": 106.484375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 496025600,
+          "private_commit_bytes": 3146481664,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6140841984
+        }
+      },
+      {
+        "elapsed_seconds": 27.171480000019073,
+        "cpu_seconds": 107.484375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 485773312,
+          "private_commit_bytes": 3047489536,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6137634816
+        }
+      },
+      {
+        "elapsed_seconds": 27.525924500077963,
+        "cpu_seconds": 108.96875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 517844992,
+          "private_commit_bytes": 3079847936,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6106546176
+        }
+      },
+      {
+        "elapsed_seconds": 27.781834300025366,
+        "cpu_seconds": 109.96875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 464801792,
+          "private_commit_bytes": 3025985536,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6151872512
+        }
+      },
+      {
+        "elapsed_seconds": 28.03879920009058,
+        "cpu_seconds": 111.03125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 491413504,
+          "private_commit_bytes": 3049500672,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6118281216
+        }
+      },
+      {
+        "elapsed_seconds": 28.295493600075133,
+        "cpu_seconds": 112.03125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 515092480,
+          "private_commit_bytes": 3142705152,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6109786112
+        }
+      },
+      {
+        "elapsed_seconds": 28.65726290002931,
+        "cpu_seconds": 113.484375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 583172096,
+          "private_commit_bytes": 3142705152,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6049107968
+        }
+      },
+      {
+        "elapsed_seconds": 28.9126830000896,
+        "cpu_seconds": 114.546875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 495874048,
+          "private_commit_bytes": 3052957696,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6112837632
+        }
+      },
+      {
+        "elapsed_seconds": 29.169647100032307,
+        "cpu_seconds": 115.546875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 572600320,
+          "private_commit_bytes": 3142705152,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6047956992
+        }
+      },
+      {
+        "elapsed_seconds": 29.426005400018767,
+        "cpu_seconds": 116.53125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 562339840,
+          "private_commit_bytes": 3126890496,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6023081984
+        }
+      },
+      {
+        "elapsed_seconds": 29.814464800059795,
+        "cpu_seconds": 118.140625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 477470720,
+          "private_commit_bytes": 3040522240,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6089330688
+        }
+      },
+      {
+        "elapsed_seconds": 30.071155400015414,
+        "cpu_seconds": 119.203125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 483639296,
+          "private_commit_bytes": 3042660352,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6058303488
+        }
+      },
+      {
+        "elapsed_seconds": 30.329103700001724,
+        "cpu_seconds": 120.203125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 578093056,
+          "private_commit_bytes": 3141656576,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 5998280704
+        }
+      },
+      {
+        "elapsed_seconds": 30.592740799998865,
+        "cpu_seconds": 121.265625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 496340992,
+          "private_commit_bytes": 3062284288,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6060503040
+        }
+      },
+      {
+        "elapsed_seconds": 30.96081389999017,
+        "cpu_seconds": 122.796875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 491704320,
+          "private_commit_bytes": 3047288832,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6075318272
+        }
+      },
+      {
+        "elapsed_seconds": 31.22416860004887,
+        "cpu_seconds": 123.84375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 509775872,
+          "private_commit_bytes": 3065561088,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6062448640
+        }
+      },
+      {
+        "elapsed_seconds": 31.479429900064133,
+        "cpu_seconds": 124.84375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 460754944,
+          "private_commit_bytes": 3024842752,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6111162368
+        }
+      },
+      {
+        "elapsed_seconds": 31.743131200084463,
+        "cpu_seconds": 125.90625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 589934592,
+          "private_commit_bytes": 3145240576,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 5957582848
+        }
+      },
+      {
+        "elapsed_seconds": 32.10383500007447,
+        "cpu_seconds": 127.375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 582946816,
+          "private_commit_bytes": 3145244672,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 5971394560
+        }
+      },
+      {
+        "elapsed_seconds": 32.361772900098,
+        "cpu_seconds": 128.375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 495603712,
+          "private_commit_bytes": 3052023808,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6057627648
+        }
+      },
+      {
+        "elapsed_seconds": 32.625382199999876,
+        "cpu_seconds": 129.4375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 587694080,
+          "private_commit_bytes": 3145244672,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 5964615680
+        }
+      },
+      {
+        "elapsed_seconds": 32.88070280000102,
+        "cpu_seconds": 130.453125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 471891968,
+          "private_commit_bytes": 3038171136,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6072713216
+        }
+      },
+      {
+        "elapsed_seconds": 33.235182400094345,
+        "cpu_seconds": 131.875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 567934976,
+          "private_commit_bytes": 3122278400,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 5968781312
+        }
+      },
+      {
+        "elapsed_seconds": 33.49184979998972,
+        "cpu_seconds": 132.9375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 461905920,
+          "private_commit_bytes": 3016359936,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6076190720
+        }
+      },
+      {
+        "elapsed_seconds": 33.74801059998572,
+        "cpu_seconds": 133.9375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 482308096,
+          "private_commit_bytes": 3039637504,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6050594816
+        }
+      },
+      {
+        "elapsed_seconds": 34.00013200007379,
+        "cpu_seconds": 134.9375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 589815808,
+          "private_commit_bytes": 3146711040,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 5966909440
+        }
+      },
+      {
+        "elapsed_seconds": 34.360120100085624,
+        "cpu_seconds": 136.359375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 587632640,
+          "private_commit_bytes": 3142094848,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 5961789440
+        }
+      },
+      {
+        "elapsed_seconds": 34.615146700059995,
+        "cpu_seconds": 137.421875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 486834176,
+          "private_commit_bytes": 3044253696,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6026260480
+        }
+      },
+      {
+        "elapsed_seconds": 34.872026800061576,
+        "cpu_seconds": 138.421875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 482893824,
+          "private_commit_bytes": 3045924864,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6063181824
+        }
+      },
+      {
+        "elapsed_seconds": 35.12867000000551,
+        "cpu_seconds": 139.421875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 569110528,
+          "private_commit_bytes": 3123748864,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6069846016
+        }
+      },
+      {
+        "elapsed_seconds": 35.49046260002069,
+        "cpu_seconds": 140.953125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 486100992,
+          "private_commit_bytes": 3044155392,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6138150912
+        }
+      },
+      {
+        "elapsed_seconds": 35.74597250006627,
+        "cpu_seconds": 141.953125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 495423488,
+          "private_commit_bytes": 3052224512,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6141992960
+        }
+      },
+      {
+        "elapsed_seconds": 36.0030085000908,
+        "cpu_seconds": 142.953125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 558325760,
+          "private_commit_bytes": 3146600448,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6104481792
+        }
+      },
+      {
+        "elapsed_seconds": 36.260269200080074,
+        "cpu_seconds": 144.015625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 478547968,
+          "private_commit_bytes": 3142045696,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6169382912
+        }
+      },
+      {
+        "elapsed_seconds": 36.628122100024484,
+        "cpu_seconds": 145.484375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 490266624,
+          "private_commit_bytes": 3062611968,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6166409216
+        }
+      },
+      {
+        "elapsed_seconds": 36.892153699998744,
+        "cpu_seconds": 146.53125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 568561664,
+          "private_commit_bytes": 3122606080,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6087557120
+        }
+      },
+      {
+        "elapsed_seconds": 37.147096000029705,
+        "cpu_seconds": 147.59375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 466853888,
+          "private_commit_bytes": 3023466496,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6185304064
+        }
+      },
+      {
+        "elapsed_seconds": 37.404049500008114,
+        "cpu_seconds": 148.59375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 541507584,
+          "private_commit_bytes": 3140939776,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6107164672
+        }
+      },
+      {
+        "elapsed_seconds": 37.75778159999754,
+        "cpu_seconds": 150.015625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 528822272,
+          "private_commit_bytes": 3145564160,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6124847104
+        }
+      },
+      {
+        "elapsed_seconds": 38.01049440004863,
+        "cpu_seconds": 151.015625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 483028992,
+          "private_commit_bytes": 3046572032,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6186680320
+        }
+      },
+      {
+        "elapsed_seconds": 38.26450749998912,
+        "cpu_seconds": 152.0,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 553992192,
+          "private_commit_bytes": 3145564160,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6104494080
+        }
+      },
+      {
+        "elapsed_seconds": 38.52916720008943,
+        "cpu_seconds": 153.046875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 566042624,
+          "private_commit_bytes": 3125137408,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6095462400
+        }
+      },
+      {
+        "elapsed_seconds": 38.93038620008156,
+        "cpu_seconds": 154.6875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 447401984,
+          "private_commit_bytes": 3001864192,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6198579200
+        }
+      },
+      {
+        "elapsed_seconds": 39.19508279999718,
+        "cpu_seconds": 155.734375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 520634368,
+          "private_commit_bytes": 3141701632,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6128480256
+        }
+      },
+      {
+        "elapsed_seconds": 39.458773700054735,
+        "cpu_seconds": 156.796875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 487550976,
+          "private_commit_bytes": 3043860480,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6172028928
+        }
+      },
+      {
+        "elapsed_seconds": 39.714132599998266,
+        "cpu_seconds": 157.796875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 587169792,
+          "private_commit_bytes": 3141701632,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6076690432
+        }
+      },
+      {
+        "elapsed_seconds": 40.07481290004216,
+        "cpu_seconds": 159.265625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 487030784,
+          "private_commit_bytes": 3043913728,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6163918848
+        }
+      },
+      {
+        "elapsed_seconds": 40.32586560002528,
+        "cpu_seconds": 160.265625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 566591488,
+          "private_commit_bytes": 3127107584,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6083964928
+        }
+      },
+      {
+        "elapsed_seconds": 40.58108180004638,
+        "cpu_seconds": 161.265625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 473792512,
+          "private_commit_bytes": 3032915968,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6177636352
+        }
+      },
+      {
+        "elapsed_seconds": 40.837896100012586,
+        "cpu_seconds": 162.328125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 493391872,
+          "private_commit_bytes": 3062345728,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6147710976
+        }
+      },
+      {
+        "elapsed_seconds": 41.19890800002031,
+        "cpu_seconds": 163.796875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 557445120,
+          "private_commit_bytes": 3141767168,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6102003712
+        }
+      },
+      {
+        "elapsed_seconds": 41.45518739998806,
+        "cpu_seconds": 164.78125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 489385984,
+          "private_commit_bytes": 3043942400,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6159200256
+        }
+      },
+      {
+        "elapsed_seconds": 41.70547799998894,
+        "cpu_seconds": 165.78125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 515420160,
+          "private_commit_bytes": 3141767168,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6135373824
+        }
+      },
+      {
+        "elapsed_seconds": 41.956564699998125,
+        "cpu_seconds": 166.765625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 489439232,
+          "private_commit_bytes": 3043942400,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6162743296
+        }
+      },
+      {
+        "elapsed_seconds": 42.30521730007604,
+        "cpu_seconds": 168.234375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 570253312,
+          "private_commit_bytes": 3124195328,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6071259136
+        }
+      },
+      {
+        "elapsed_seconds": 42.55977040005382,
+        "cpu_seconds": 169.234375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 475660288,
+          "private_commit_bytes": 3038494720,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6177026048
+        }
+      },
+      {
+        "elapsed_seconds": 42.81514100008644,
+        "cpu_seconds": 170.234375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 591155200,
+          "private_commit_bytes": 3145568256,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6051938304
+        }
+      },
+      {
+        "elapsed_seconds": 43.07186220004223,
+        "cpu_seconds": 171.296875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 483151872,
+          "private_commit_bytes": 3046576128,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6175264768
+        }
+      },
+      {
+        "elapsed_seconds": 43.43256069999188,
+        "cpu_seconds": 172.75,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 588275712,
+          "private_commit_bytes": 3145568256,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6070185984
+        }
+      },
+      {
+        "elapsed_seconds": 43.69607360009104,
+        "cpu_seconds": 173.8125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 487800832,
+          "private_commit_bytes": 3140947968,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6166728704
+        }
+      },
+      {
+        "elapsed_seconds": 43.94657340005506,
+        "cpu_seconds": 174.8125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 566673408,
+          "private_commit_bytes": 3120676864,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6081429504
+        }
+      },
+      {
+        "elapsed_seconds": 44.2025615000166,
+        "cpu_seconds": 175.8125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 463888384,
+          "private_commit_bytes": 3021651968,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6182776832
+        }
+      },
+      {
+        "elapsed_seconds": 44.557765700039454,
+        "cpu_seconds": 177.296875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 465911808,
+          "private_commit_bytes": 3023945728,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6177370112
+        }
+      },
+      {
+        "elapsed_seconds": 44.81284350005444,
+        "cpu_seconds": 178.296875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 569708544,
+          "private_commit_bytes": 3141410816,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6083219456
+        }
+      },
+      {
+        "elapsed_seconds": 45.069471499999054,
+        "cpu_seconds": 179.359375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 499765248,
+          "private_commit_bytes": 3062042624,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6139772928
+        }
+      },
+      {
+        "elapsed_seconds": 45.32672150002327,
+        "cpu_seconds": 180.359375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 587100160,
+          "private_commit_bytes": 3146035200,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6060138496
+        }
+      },
+      {
+        "elapsed_seconds": 45.68026550009381,
+        "cpu_seconds": 181.828125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 534446080,
+          "private_commit_bytes": 3088642048,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6114607104
+        }
+      },
+      {
+        "elapsed_seconds": 45.93090730009135,
+        "cpu_seconds": 182.796875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 475435008,
+          "private_commit_bytes": 3033702400,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6154608640
+        }
+      },
+      {
+        "elapsed_seconds": 46.19460050005,
+        "cpu_seconds": 183.859375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 487419904,
+          "private_commit_bytes": 3043495936,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6147796992
+        }
+      },
+      {
+        "elapsed_seconds": 46.45844760001637,
+        "cpu_seconds": 184.890625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 585363456,
+          "private_commit_bytes": 3141320704,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6061723648
+        }
+      },
+      {
+        "elapsed_seconds": 46.81091720005497,
+        "cpu_seconds": 186.3125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 477065216,
+          "private_commit_bytes": 3043479552,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6162944000
+        }
+      },
+      {
+        "elapsed_seconds": 47.062005200074054,
+        "cpu_seconds": 187.3125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 580419584,
+          "private_commit_bytes": 3141320704,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6070562816
+        }
+      },
+      {
+        "elapsed_seconds": 47.325617099995725,
+        "cpu_seconds": 188.375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 487333888,
+          "private_commit_bytes": 3043479552,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6141419520
+        }
+      },
+      {
+        "elapsed_seconds": 47.58083870005794,
+        "cpu_seconds": 189.375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 570265600,
+          "private_commit_bytes": 3124084736,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6066950144
+        }
+      },
+      {
+        "elapsed_seconds": 47.96931549999863,
+        "cpu_seconds": 190.90625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 473427968,
+          "private_commit_bytes": 3043381248,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6156324864
+        }
+      },
+      {
+        "elapsed_seconds": 48.22772210009862,
+        "cpu_seconds": 191.953125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 587223040,
+          "private_commit_bytes": 3141222400,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6032748544
+        }
+      },
+      {
+        "elapsed_seconds": 48.49143829999957,
+        "cpu_seconds": 193.015625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 484790272,
+          "private_commit_bytes": 3038769152,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6154932224
+        }
+      },
+      {
+        "elapsed_seconds": 48.7463028000202,
+        "cpu_seconds": 194.015625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 523329536,
+          "private_commit_bytes": 3145842688,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6114557952
+        }
+      },
+      {
+        "elapsed_seconds": 49.10067409998737,
+        "cpu_seconds": 195.484375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 465899520,
+          "private_commit_bytes": 3019599872,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6152355840
+        }
+      },
+      {
+        "elapsed_seconds": 49.35306820005644,
+        "cpu_seconds": 196.484375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 462778368,
+          "private_commit_bytes": 3023634432,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6168088576
+        }
+      },
+      {
+        "elapsed_seconds": 49.60646510007791,
+        "cpu_seconds": 197.4375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 485298176,
+          "private_commit_bytes": 3039805440,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6137757696
+        }
+      },
+      {
+        "elapsed_seconds": 49.86393820005469,
+        "cpu_seconds": 198.453125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 497135616,
+          "private_commit_bytes": 3140939776,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6125797376
+        }
+      },
+      {
+        "elapsed_seconds": 50.23808020004071,
+        "cpu_seconds": 199.96875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 560574464,
+          "private_commit_bytes": 3145560064,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6064349184
+        }
+      },
+      {
+        "elapsed_seconds": 50.49626000004355,
+        "cpu_seconds": 201.03125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 522027008,
+          "private_commit_bytes": 3140939776,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6110609408
+        }
+      },
+      {
+        "elapsed_seconds": 50.75942950008903,
+        "cpu_seconds": 202.09375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 496361472,
+          "private_commit_bytes": 3051184128,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6119624704
+        }
+      },
+      {
+        "elapsed_seconds": 51.014812599984,
+        "cpu_seconds": 203.09375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 566542336,
+          "private_commit_bytes": 3120517120,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6057730048
+        }
+      },
+      {
+        "elapsed_seconds": 51.36862820002716,
+        "cpu_seconds": 204.5625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 577806336,
+          "private_commit_bytes": 3132166144,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6048370688
+        }
+      },
+      {
+        "elapsed_seconds": 51.626951300073415,
+        "cpu_seconds": 205.546875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 592338944,
+          "private_commit_bytes": 3147759616,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6034288640
+        }
+      },
+      {
+        "elapsed_seconds": 51.882048700004816,
+        "cpu_seconds": 206.609375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 602107904,
+          "private_commit_bytes": 3156013056,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6012661760
+        }
+      },
+      {
+        "elapsed_seconds": 52.138572700088844,
+        "cpu_seconds": 207.609375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 594153472,
+          "private_commit_bytes": 3148165120,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6026047488
+        }
+      },
+      {
+        "elapsed_seconds": 52.49417240009643,
+        "cpu_seconds": 209.0625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 601440256,
+          "private_commit_bytes": 3155451904,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6017298432
+        }
+      },
+      {
+        "elapsed_seconds": 52.75793120008893,
+        "cpu_seconds": 210.125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 607760384,
+          "private_commit_bytes": 3162374144,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6004555776
+        }
+      },
+      {
+        "elapsed_seconds": 53.01189210009761,
+        "cpu_seconds": 211.125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 611311616,
+          "private_commit_bytes": 3165351936,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6006558720
+        }
+      },
+      {
+        "elapsed_seconds": 53.2626305000158,
+        "cpu_seconds": 212.125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 615542784,
+          "private_commit_bytes": 3169583104,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 5999910912
+        }
+      },
+      {
+        "elapsed_seconds": 53.61621520004701,
+        "cpu_seconds": 213.59375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 623730688,
+          "private_commit_bytes": 3177734144,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 5932961792
+        }
+      },
+      {
+        "elapsed_seconds": 53.8738650000887,
+        "cpu_seconds": 214.578125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 625377280,
+          "private_commit_bytes": 3179380736,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 5931388928
+        }
+      },
+      {
+        "elapsed_seconds": 54.12440189998597,
+        "cpu_seconds": 215.5625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 629362688,
+          "private_commit_bytes": 3185442816,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 5933731840
+        }
+      },
+      {
+        "elapsed_seconds": 54.37939790007658,
+        "cpu_seconds": 216.5625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 631603200,
+          "private_commit_bytes": 3185627136,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 5931462656
+        }
+      },
+      {
+        "elapsed_seconds": 54.733526900061406,
+        "cpu_seconds": 218.03125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 638132224,
+          "private_commit_bytes": 3192246272,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 5926985728
+        }
+      },
+      {
+        "elapsed_seconds": 54.99128399998881,
+        "cpu_seconds": 219.09375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 638320640,
+          "private_commit_bytes": 3194953728,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 5934657536
+        }
+      },
+      {
+        "elapsed_seconds": 55.246451499988325,
+        "cpu_seconds": 220.09375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 627245056,
+          "private_commit_bytes": 3194576896,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6012506112
+        }
+      },
+      {
+        "elapsed_seconds": 55.503205400076695,
+        "cpu_seconds": 221.09375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 632156160,
+          "private_commit_bytes": 3200434176,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6211489792
+        }
+      },
+      {
+        "elapsed_seconds": 55.858542300062254,
+        "cpu_seconds": 222.546875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 636129280,
+          "private_commit_bytes": 3204034560,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6418694144
+        }
+      },
+      {
+        "elapsed_seconds": 56.113751200027764,
+        "cpu_seconds": 223.546875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 499372032,
+          "private_commit_bytes": 3067260928,
+          "process_lifetime_peak_working_set_bytes": 739885056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6556151808
+        }
+      },
+      {
+        "elapsed_seconds": 56.37731800007168,
+        "cpu_seconds": 224.625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 998891520,
+          "private_commit_bytes": 3567038464,
+          "process_lifetime_peak_working_set_bytes": 998891520,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6077239296
+        }
+      },
+      {
+        "elapsed_seconds": 56.62834480009042,
+        "cpu_seconds": 225.625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 750309376,
+          "private_commit_bytes": 3327213568,
+          "process_lifetime_peak_working_set_bytes": 999383040,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6328942592
+        }
+      },
+      {
+        "elapsed_seconds": 56.974065600079484,
+        "cpu_seconds": 227.0625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 594808832,
+          "private_commit_bytes": 3178897408,
+          "process_lifetime_peak_working_set_bytes": 999383040,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6468325376
+        }
+      },
+      {
+        "elapsed_seconds": 57.23083520005457,
+        "cpu_seconds": 228.09375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 997613568,
+          "private_commit_bytes": 3566235648,
+          "process_lifetime_peak_working_set_bytes": 1001058304,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6068461568
+        }
+      },
+      {
+        "elapsed_seconds": 57.48729800002184,
+        "cpu_seconds": 229.09375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 898899968,
+          "private_commit_bytes": 3473358848,
+          "process_lifetime_peak_working_set_bytes": 1001058304,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6163767296
+        }
+      },
+      {
+        "elapsed_seconds": 57.7439602999948,
+        "cpu_seconds": 230.15625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 463515648,
+          "private_commit_bytes": 3040333824,
+          "process_lifetime_peak_working_set_bytes": 1001058304,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6595428352
+        }
+      },
+      {
+        "elapsed_seconds": 58.09253440005705,
+        "cpu_seconds": 231.53125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 999243776,
+          "private_commit_bytes": 3567460352,
+          "process_lifetime_peak_working_set_bytes": 1001058304,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6064435200
+        }
+      },
+      {
+        "elapsed_seconds": 58.347561400034465,
+        "cpu_seconds": 232.53125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 1001181184,
+          "private_commit_bytes": 3569459200,
+          "process_lifetime_peak_working_set_bytes": 1001181184,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6062669824
+        }
+      },
+      {
+        "elapsed_seconds": 58.604191299993545,
+        "cpu_seconds": 233.609375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 458084352,
+          "private_commit_bytes": 3033993216,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6602121216
+        }
+      },
+      {
+        "elapsed_seconds": 58.86278010008391,
+        "cpu_seconds": 234.609375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 486334464,
+          "private_commit_bytes": 3052888064,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6569099264
+        }
+      },
+      {
+        "elapsed_seconds": 59.20802380004898,
+        "cpu_seconds": 236.046875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 549171200,
+          "private_commit_bytes": 3147264000,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6508507136
+        }
+      },
+      {
+        "elapsed_seconds": 59.45879160007462,
+        "cpu_seconds": 237.046875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 501293056,
+          "private_commit_bytes": 3142643712,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6547451904
+        }
+      },
+      {
+        "elapsed_seconds": 59.71427620004397,
+        "cpu_seconds": 238.0625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 474345472,
+          "private_commit_bytes": 3052888064,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6576476160
+        }
+      },
+      {
+        "elapsed_seconds": 59.96464180003386,
+        "cpu_seconds": 239.0625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 516972544,
+          "private_commit_bytes": 3091030016,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6524973056
+        }
+      },
+      {
+        "elapsed_seconds": 60.31082070001867,
+        "cpu_seconds": 240.453125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 459165696,
+          "private_commit_bytes": 3026231296,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6566846464
+        }
+      },
+      {
+        "elapsed_seconds": 60.56184189999476,
+        "cpu_seconds": 241.453125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 543838208,
+          "private_commit_bytes": 3143704576,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6491983872
+        }
+      },
+      {
+        "elapsed_seconds": 60.82590350008104,
+        "cpu_seconds": 242.5,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 576397312,
+          "private_commit_bytes": 3143704576,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6456430592
+        }
+      },
+      {
+        "elapsed_seconds": 61.081033700029366,
+        "cpu_seconds": 243.5,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 482992128,
+          "private_commit_bytes": 3050500096,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6535520256
+        }
+      },
+      {
+        "elapsed_seconds": 61.448397600091994,
+        "cpu_seconds": 245.015625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 479227904,
+          "private_commit_bytes": 3049332736,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6523547648
+        }
+      },
+      {
+        "elapsed_seconds": 61.69886480004061,
+        "cpu_seconds": 246.015625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 486293504,
+          "private_commit_bytes": 3055124480,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6529961984
+        }
+      },
+      {
+        "elapsed_seconds": 61.954935700050555,
+        "cpu_seconds": 247.0,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 459218944,
+          "private_commit_bytes": 3034509312,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6548426752
+        }
+      },
+      {
+        "elapsed_seconds": 62.21151340007782,
+        "cpu_seconds": 248.0625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 480784384,
+          "private_commit_bytes": 3048763392,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6529552384
+        }
+      },
+      {
+        "elapsed_seconds": 62.57268520002253,
+        "cpu_seconds": 249.546875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 466485248,
+          "private_commit_bytes": 3045363712,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6542557184
+        }
+      },
+      {
+        "elapsed_seconds": 62.82911630009767,
+        "cpu_seconds": 250.546875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 538673152,
+          "private_commit_bytes": 3143204864,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6457864192
+        }
+      },
+      {
+        "elapsed_seconds": 63.09389830008149,
+        "cpu_seconds": 251.609375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 479805440,
+          "private_commit_bytes": 3048833024,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6525550592
+        }
+      },
+      {
+        "elapsed_seconds": 63.357640900067054,
+        "cpu_seconds": 252.671875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 576442368,
+          "private_commit_bytes": 3143204864,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6443565056
+        }
+      },
+      {
+        "elapsed_seconds": 63.70989040005952,
+        "cpu_seconds": 254.140625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 461205504,
+          "private_commit_bytes": 3033784320,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6532743168
+        }
+      },
+      {
+        "elapsed_seconds": 63.962000200059265,
+        "cpu_seconds": 255.140625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 487706624,
+          "private_commit_bytes": 3056607232,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6516486144
+        }
+      },
+      {
+        "elapsed_seconds": 64.22507010004483,
+        "cpu_seconds": 256.171875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 520519680,
+          "private_commit_bytes": 3146362880,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6471593984
+        }
+      },
+      {
+        "elapsed_seconds": 64.47998180007562,
+        "cpu_seconds": 257.1875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 576778240,
+          "private_commit_bytes": 3150983168,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6425411584
+        }
+      },
+      {
+        "elapsed_seconds": 64.86180080007762,
+        "cpu_seconds": 258.703125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 559583232,
+          "private_commit_bytes": 3146362880,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6440394752
+        }
+      },
+      {
+        "elapsed_seconds": 65.11822340008803,
+        "cpu_seconds": 259.765625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 480747520,
+          "private_commit_bytes": 3048521728,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6513393664
+        }
+      },
+      {
+        "elapsed_seconds": 65.37494000000879,
+        "cpu_seconds": 260.765625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 457396224,
+          "private_commit_bytes": 3031986176,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6524010496
+        }
+      },
+      {
+        "elapsed_seconds": 65.63182960008271,
+        "cpu_seconds": 261.828125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 564490240,
+          "private_commit_bytes": 3148394496,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6434828288
+        }
+      },
+      {
+        "elapsed_seconds": 65.98624760005623,
+        "cpu_seconds": 263.21875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 532631552,
+          "private_commit_bytes": 3143774208,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6434271232
+        }
+      },
+      {
+        "elapsed_seconds": 66.24205100000836,
+        "cpu_seconds": 264.28125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 574939136,
+          "private_commit_bytes": 3148394496,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6473900032
+        }
+      },
+      {
+        "elapsed_seconds": 66.49342280009296,
+        "cpu_seconds": 265.28125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 487514112,
+          "private_commit_bytes": 3143774208,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6548295680
+        }
+      },
+      {
+        "elapsed_seconds": 66.74846430006437,
+        "cpu_seconds": 266.28125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 570785792,
+          "private_commit_bytes": 3148394496,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6471942144
+        }
+      },
+      {
+        "elapsed_seconds": 67.10923790000379,
+        "cpu_seconds": 267.75,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 560525312,
+          "private_commit_bytes": 3126673408,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6473854976
+        }
+      },
+      {
+        "elapsed_seconds": 67.36040300002787,
+        "cpu_seconds": 268.75,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 485027840,
+          "private_commit_bytes": 3055972352,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6558482432
+        }
+      },
+      {
+        "elapsed_seconds": 67.62407460005488,
+        "cpu_seconds": 269.796875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 578813952,
+          "private_commit_bytes": 3145728000,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6448631808
+        }
+      },
+      {
+        "elapsed_seconds": 67.87929190008435,
+        "cpu_seconds": 270.796875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 582053888,
+          "private_commit_bytes": 3150348288,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6456987648
+        }
+      },
+      {
+        "elapsed_seconds": 68.24029510002583,
+        "cpu_seconds": 272.3125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 488599552,
+          "private_commit_bytes": 3055972352,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6551932928
+        }
+      },
+      {
+        "elapsed_seconds": 68.49100000003818,
+        "cpu_seconds": 273.3125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 578818048,
+          "private_commit_bytes": 3145728000,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6464147456
+        }
+      },
+      {
+        "elapsed_seconds": 68.74639480002224,
+        "cpu_seconds": 274.296875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 535449600,
+          "private_commit_bytes": 3103363072,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6510792704
+        }
+      },
+      {
+        "elapsed_seconds": 69.00323430006392,
+        "cpu_seconds": 275.296875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 457379840,
+          "private_commit_bytes": 3024912384,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6575022080
+        }
+      },
+      {
+        "elapsed_seconds": 69.35689310007729,
+        "cpu_seconds": 276.765625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 574537728,
+          "private_commit_bytes": 3145990144,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6449590272
+        }
+      },
+      {
+        "elapsed_seconds": 69.60729590000119,
+        "cpu_seconds": 277.765625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 579149824,
+          "private_commit_bytes": 3145990144,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6454243328
+        }
+      },
+      {
+        "elapsed_seconds": 69.86410020000767,
+        "cpu_seconds": 278.78125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 478375936,
+          "private_commit_bytes": 3046998016,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6540087296
+        }
+      },
+      {
+        "elapsed_seconds": 70.12855670007411,
+        "cpu_seconds": 279.828125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 574537728,
+          "private_commit_bytes": 3141369856,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6456524800
+        }
+      },
+      {
+        "elapsed_seconds": 70.49606100004166,
+        "cpu_seconds": 281.359375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 539652096,
+          "private_commit_bytes": 3108241408,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6498877440
+        }
+      },
+      {
+        "elapsed_seconds": 70.75956480007153,
+        "cpu_seconds": 282.421875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 438861824,
+          "private_commit_bytes": 3006603264,
+          "process_lifetime_peak_working_set_bytes": 1001308160,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 6589657088
+        }
+      }
+    ],
+    "gpu_samples": [
+      {
+        "elapsed_seconds": 0.0002416000934317708,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.39,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 1.1512166000902653,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.41,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 2.261560400016606,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.42,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 3.3698983000358567,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.4,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 4.479545300011523,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.38,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 5.5908223000587896,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.38,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 6.713454200071283,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.38,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 7.837278600083664,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.38,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 8.961799000040628,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.38,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 10.093689500004984,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.37,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 11.236532800015993,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.38,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 12.395216800039634,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.38,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 13.546768500003964,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.38,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 14.705311900004745,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.38,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 15.829371700063348,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.37,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 16.980620800051838,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.37,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 18.145990999997593,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.36,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 19.276740800007246,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.36,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 20.410508800065145,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.37,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 21.541048799990676,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.38,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 22.669229799997993,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.37,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 23.813709800015204,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.38,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 24.937825500033796,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.38,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 26.047476200037636,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.38,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 27.171480000019073,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.36,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 28.295493600075133,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.36,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 29.426005400018767,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.37,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 30.592740799998865,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.37,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 31.743131200084463,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.38,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 32.88070280000102,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.38,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 34.00013200007379,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.36,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 35.12867000000551,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.36,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 36.260269200080074,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.36,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 37.404049500008114,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.36,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 38.52916720008943,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.37,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 39.714132599998266,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.36,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 40.837896100012586,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.37,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 41.956564699998125,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.36,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 43.07186220004223,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.36,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 44.2025615000166,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.37,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 45.32672150002327,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.37,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 46.45844760001637,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.37,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 47.58083870005794,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.37,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 48.7463028000202,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.37,
+            "temperature_celsius": 46.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 49.86393820005469,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.36,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 51.014812599984,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.39,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 52.138572700088844,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.43,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 53.2626305000158,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.39,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 54.37939790007658,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.38,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 55.503205400076695,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.37,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 56.62834480009042,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.38,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 57.7439602999948,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.38,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 58.86278010008391,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.39,
+            "temperature_celsius": 46.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 59.96464180003386,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.37,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 61.081033700029366,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.39,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 62.21151340007782,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.39,
+            "temperature_celsius": 46.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 63.357640900067054,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.37,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 64.47998180007562,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.37,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 65.63182960008271,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.39,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 66.74846430006437,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.38,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 67.87929190008435,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.38,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 69.00323430006392,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.38,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 70.12855670007411,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 481.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.38,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      }
+    ],
+    "final_memory": {
+      "status": "medido",
+      "working_set_bytes": 439697408,
+      "private_commit_bytes": 3007565824,
+      "process_lifetime_peak_working_set_bytes": 1001308160,
+      "system_ram_total_bytes": 16866881536,
+      "system_ram_available_bytes": 6597058560
+    },
+    "unavailable": {
+      "asr_energy_joules": null,
+      "cpu_temperature_celsius": null,
+      "asr_flops": null,
+      "tablet_memory_and_battery": null
+    },
+    "notice": "CPU y RAM del proceso completo, incluido muestreo. CPU 100% equivale a un procesador lógico; puede superar 100%. GPU/VRAM/potencia/temperatura son del equipo completo, no del ASR. No se mide energía específica, FLOPs ni rendimiento de tablet. Intervalos reales registrados, máximos muestreados no garantizan pico. Muestreo separado de inferencia; puede influir en la carga."
+  },
+  "input_audio_metrics": {
+    "sample_rate_hz": 16000,
+    "channels": 1,
+    "peak_amplitude": 0.836883544921875,
+    "rms_dbfs_full_audio": -20.543656931284467,
+    "notice": "Señal remuestreada completa, incluida habla, ruido y silencio. No es SNR ni estimación de ruido aislado."
+  }
+}

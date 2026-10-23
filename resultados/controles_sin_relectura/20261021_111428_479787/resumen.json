@@ -1,0 +1,6284 @@
+{
+  "notice": "Reproducción de hipótesis fijas, sin nuevas inferencias. Cortes de audio y salida lista simulada son distintos. Sin referencia humana temporal: no se calcula latencia respecto a la lectura ni precisión. Reglas sin modificar ni activar.",
+  "source_manifest": "C:\\Users\\PC\\OneDrive\\Documentos\\ChatGPT\\Practicas y TFG\\resultados\\comparaciones\\20261021_111057_752726\\resumen.json",
+  "source_manifest_sha256": "14021e18f0dd16f5c704d1c4eb437ee5dc06f203cf447dbe2b5474437152847c",
+  "code_sha256": {
+    "seguir.py": "57a49bca80d23b8a1fb3ab2654dac5f410aba2fd0dff4640f877b0bee6179e2e",
+    "comparar_seguidores.py": "1882749d1fc116f98e4b06e1eb6ab08fa531fe0ca78ec6c69cdf15cd6481e887",
+    "comparar_recuperacion.py": "039e05a47e1ea27613386392e84f8befa2af4ba13409eb07967549b92804f5e9",
+    "comparar_relectura_lejana.py": "b09d3960529477a4c60861cff8ad5905786f8fd9eca11e8a29a8b861f1462a85"
+  },
+  "runs": [
+    {
+      "source_file": "C:\\Users\\PC\\OneDrive\\Documentos\\ChatGPT\\Practicas y TFG\\resultados\\comparaciones\\20261021_111057_752726\\lectura_20261021_110858_556291_ventana_8s_r1.json",
+      "source_sha256": "06311123551fd00ae7e0e6e2c11ba121ef63bb3d775a823576101100f3476252",
+      "window_seconds": 8,
+      "repeat": 1,
+      "baseline_reproduces_original": true,
+      "final_positions": {
+        "original": 56,
+        "combinada": 56,
+        "nueva": 56
+      },
+      "changed_cuts": [],
+      "fast_recovery_cuts": [],
+      "backward_cuts": {
+        "original": [],
+        "combinada": [],
+        "nueva": []
+      },
+      "departures_after_first_end": {
+        "original": [],
+        "combinada": [],
+        "nueva": []
+      },
+      "updates": [
+        {
+          "audio_seconds": 2.0,
+          "ready_seconds_simulated": 3.7374260999495164,
+          "asr_text": "Una tarde",
+          "variants": {
+            "original": {
+              "position": 2,
+              "movement": 2,
+              "mode": "local",
+              "evidence": {
+                "position": 2,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  24
+                ],
+                "exact_matches": 2,
+                "hypothesis_words": 2,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 2,
+              "movement": 2,
+              "mode": "local",
+              "evidence": {
+                "position": 2,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  24
+                ],
+                "exact_matches": 2,
+                "hypothesis_words": 2,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 1.6,
+                "previous_support_end_seconds": null
+              }
+            },
+            "nueva": {
+              "position": 2,
+              "movement": 2,
+              "mode": "local",
+              "evidence": {
+                "position": 2,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  24
+                ],
+                "exact_matches": 2,
+                "hypothesis_words": 2,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 1.6,
+                "previous_support_end_seconds": null
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 4.0,
+          "ready_seconds_simulated": 5.522304099984467,
+          "asr_text": "Una tarde Lucía paseaba por el pa",
+          "variants": {
+            "original": {
+              "position": 6,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 6,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  26
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 7,
+                "edit_cost": 1
+              }
+            },
+            "combinada": {
+              "position": 6,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 6,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  26
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 7,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 3.88,
+                "previous_support_end_seconds": 1.6
+              }
+            },
+            "nueva": {
+              "position": 6,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 6,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  26
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 7,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 3.88,
+                "previous_support_end_seconds": 1.6
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 6.0,
+          "ready_seconds_simulated": 7.568640800018329,
+          "asr_text": "Una tarde Lucía paseaba por el parque con su abuelo",
+          "variants": {
+            "original": {
+              "position": 10,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 10,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  30
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 10,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 10,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  30
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 5.68,
+                "previous_support_end_seconds": 3.88
+              }
+            },
+            "nueva": {
+              "position": 10,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 10,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  30
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 5.68,
+                "previous_support_end_seconds": 3.88
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 8.0,
+          "ready_seconds_simulated": 9.624641700007487,
+          "asr_text": "Una tarde Lucía paseaba por el parque con su abuelo junto a una fuente descubrió un",
+          "variants": {
+            "original": {
+              "position": 16,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 16,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  34
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 16,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 16,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  34
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 7.9,
+                "previous_support_end_seconds": 5.68
+              }
+            },
+            "nueva": {
+              "position": 16,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 16,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  34
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 7.9,
+                "previous_support_end_seconds": 5.68
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 10.0,
+          "ready_seconds_simulated": 11.737756500020623,
+          "asr_text": "Lucía paseaba por el parque con su abuelo junto a una fuente descubrió un pequeño barco rojo",
+          "variants": {
+            "original": {
+              "position": 19,
+              "movement": 3,
+              "mode": "local",
+              "evidence": {
+                "position": 19,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  5,
+                  40
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 19,
+              "movement": 3,
+              "mode": "local",
+              "evidence": {
+                "position": 19,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  5,
+                  40
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 9.32,
+                "previous_support_end_seconds": 7.9
+              }
+            },
+            "nueva": {
+              "position": 19,
+              "movement": 3,
+              "mode": "local",
+              "evidence": {
+                "position": 19,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  5,
+                  40
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 9.32,
+                "previous_support_end_seconds": 7.9
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 12.0,
+          "ready_seconds_simulated": 13.702103700023144,
+          "asr_text": "con su abuelo Junto a una fuente descubrió un pequeño barco rojo El barco flotaba despacio",
+          "variants": {
+            "original": {
+              "position": 23,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 23,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  8,
+                  43
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 23,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 23,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  8,
+                  43
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 11.84,
+                "previous_support_end_seconds": 9.32
+              }
+            },
+            "nueva": {
+              "position": 23,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 23,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  8,
+                  43
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 11.84,
+                "previous_support_end_seconds": 9.32
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 14.0,
+          "ready_seconds_simulated": 15.704909900028724,
+          "asr_text": "una fuente descubrió un pequeño barco rojo El barco flotaba despacio entre las hojas",
+          "variants": {
+            "original": {
+              "position": 26,
+              "movement": 3,
+              "mode": "local",
+              "evidence": {
+                "position": 26,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  12,
+                  47
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 26,
+              "movement": 3,
+              "mode": "local",
+              "evidence": {
+                "position": 26,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  12,
+                  47
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 12.780000000000001,
+                "previous_support_end_seconds": 11.84
+              }
+            },
+            "nueva": {
+              "position": 26,
+              "movement": 3,
+              "mode": "local",
+              "evidence": {
+                "position": 26,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  12,
+                  47
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 12.780000000000001,
+                "previous_support_end_seconds": 11.84
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 16.0,
+          "ready_seconds_simulated": 17.74497220001649,
+          "asr_text": "barco rojo El barco flotaba despacio entre las hojas Lucía buscó una rama para acercar",
+          "variants": {
+            "original": {
+              "position": 31,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 31,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  15,
+                  50
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1
+              }
+            },
+            "combinada": {
+              "position": 31,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 31,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  15,
+                  50
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 15.379999999999999,
+                "previous_support_end_seconds": 12.780000000000001
+              }
+            },
+            "nueva": {
+              "position": 31,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 31,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  15,
+                  50
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 15.379999999999999,
+                "previous_support_end_seconds": 12.780000000000001
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 18.0,
+          "ready_seconds_simulated": 19.788677000033204,
+          "asr_text": "El barco flotaba despacio entre las hojas Lucía buscó una rama para acercarlo a la orilla su abuelo",
+          "variants": {
+            "original": {
+              "position": 37,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 37,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  20,
+                  55
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 37,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 37,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  20,
+                  55
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 17.98,
+                "previous_support_end_seconds": 15.379999999999999
+              }
+            },
+            "nueva": {
+              "position": 37,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 37,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  20,
+                  55
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 17.98,
+                "previous_support_end_seconds": 15.379999999999999
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 20.0,
+          "ready_seconds_simulated": 21.750073299976066,
+          "asr_text": "las hojas Lucia buscó una rama para acercarlo a la orilla Su abuelo la ayudó y juntos",
+          "variants": {
+            "original": {
+              "position": 41,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 41,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  26,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 41,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 41,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  26,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 19.62,
+                "previous_support_end_seconds": 17.98
+              }
+            },
+            "nueva": {
+              "position": 41,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 41,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  26,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 19.62,
+                "previous_support_end_seconds": 17.98
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 22.0,
+          "ready_seconds_simulated": 23.779807100014295,
+          "asr_text": "buscó una rama para acercarlo a la orilla Su abuelo la ayudó y juntos sacaron el barco del agua",
+          "variants": {
+            "original": {
+              "position": 46,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 46,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  30,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 46,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 46,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  30,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 21.32,
+                "previous_support_end_seconds": 19.62
+              }
+            },
+            "nueva": {
+              "position": 46,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 46,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  30,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 21.32,
+                "previous_support_end_seconds": 19.62
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 24.0,
+          "ready_seconds_simulated": 25.75196819996927,
+          "asr_text": "a la orilla Su abuelo la ayudó y juntos sacaron el barco del agua Después regresaron a casa",
+          "variants": {
+            "original": {
+              "position": 50,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 50,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  35,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 50,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 50,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  35,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 23.740000000000002,
+                "previous_support_end_seconds": 21.32
+              }
+            },
+            "nueva": {
+              "position": 50,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 50,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  35,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 23.740000000000002,
+                "previous_support_end_seconds": 21.32
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 26.0,
+          "ready_seconds_simulated": 27.7872002000222,
+          "asr_text": "la ayudó y juntos sacaron el barco del agua Después regresaron a casa y lo colocaron sobre una estantería",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  39,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  39,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.88,
+                "previous_support_end_seconds": 23.740000000000002
+              }
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  39,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.88,
+                "previous_support_end_seconds": 23.740000000000002
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 28.0,
+          "ready_seconds_simulated": 29.64421900000889,
+          "asr_text": "sacaron el barco del agua Después regresaron a casa y lo colocaron sobre una estantería",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.88,
+                "previous_support_end_seconds": 25.88
+              }
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.88,
+                "previous_support_end_seconds": 25.88
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 30.0,
+          "ready_seconds_simulated": 31.5511339000077,
+          "asr_text": "Después regresaron a casa y lo colocaron sobre una estantería",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.86,
+                "previous_support_end_seconds": 25.88
+              }
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.86,
+                "previous_support_end_seconds": 25.88
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 32.0,
+          "ready_seconds_simulated": 33.556824999977835,
+          "asr_text": "y lo colocaron sobre una estantería",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 6,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 6,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.88,
+                "previous_support_end_seconds": 25.88
+              }
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 6,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.88,
+                "previous_support_end_seconds": 25.88
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 34.0,
+          "ready_seconds_simulated": 34.01678800000809,
+          "asr_text": "",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": null,
+                "reason": "evidencia_insuficiente"
+              }
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": null,
+                "reason": "evidencia_insuficiente"
+              }
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": null,
+                "reason": "evidencia_insuficiente"
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 36.0,
+          "ready_seconds_simulated": 36.01514949998818,
+          "asr_text": "",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "audio_seconds": 38.0,
+          "ready_seconds_simulated": 38.01463829999557,
+          "asr_text": "",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "audio_seconds": 40.0,
+          "ready_seconds_simulated": 40.01526999997441,
+          "asr_text": "",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_file": "C:\\Users\\PC\\OneDrive\\Documentos\\ChatGPT\\Practicas y TFG\\resultados\\comparaciones\\20261021_111057_752726\\lectura_20261021_110858_556291_ventana_4s_r1.json",
+      "source_sha256": "ce8bcbf43fac698a21e0a348550a562b5222ec628f7904b0f4e6db55a06faa5a",
+      "window_seconds": 4,
+      "repeat": 1,
+      "baseline_reproduces_original": true,
+      "final_positions": {
+        "original": 56,
+        "combinada": 56,
+        "nueva": 56
+      },
+      "changed_cuts": [],
+      "fast_recovery_cuts": [],
+      "backward_cuts": {
+        "original": [],
+        "combinada": [],
+        "nueva": []
+      },
+      "departures_after_first_end": {
+        "original": [],
+        "combinada": [],
+        "nueva": []
+      },
+      "updates": [
+        {
+          "audio_seconds": 2.0,
+          "ready_seconds_simulated": 3.567343000031542,
+          "asr_text": "Una tarde",
+          "variants": {
+            "original": {
+              "position": 2,
+              "movement": 2,
+              "mode": "local",
+              "evidence": {
+                "position": 2,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  24
+                ],
+                "exact_matches": 2,
+                "hypothesis_words": 2,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 2,
+              "movement": 2,
+              "mode": "local",
+              "evidence": {
+                "position": 2,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  24
+                ],
+                "exact_matches": 2,
+                "hypothesis_words": 2,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 1.6,
+                "previous_support_end_seconds": null
+              }
+            },
+            "nueva": {
+              "position": 2,
+              "movement": 2,
+              "mode": "local",
+              "evidence": {
+                "position": 2,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  24
+                ],
+                "exact_matches": 2,
+                "hypothesis_words": 2,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 1.6,
+                "previous_support_end_seconds": null
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 4.0,
+          "ready_seconds_simulated": 5.6050307000405155,
+          "asr_text": "Una tarde Lucía paseaba por el pa",
+          "variants": {
+            "original": {
+              "position": 6,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 6,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  26
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 7,
+                "edit_cost": 1
+              }
+            },
+            "combinada": {
+              "position": 6,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 6,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  26
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 7,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 3.88,
+                "previous_support_end_seconds": 1.6
+              }
+            },
+            "nueva": {
+              "position": 6,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 6,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  26
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 7,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 3.88,
+                "previous_support_end_seconds": 1.6
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 6.0,
+          "ready_seconds_simulated": 7.545534899982158,
+          "asr_text": "Lucía paseaba por el parque con su abuelo",
+          "variants": {
+            "original": {
+              "position": 10,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 10,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  30
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 10,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 10,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  30
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 5.62,
+                "previous_support_end_seconds": 3.88
+              }
+            },
+            "nueva": {
+              "position": 10,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 10,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  30
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 5.62,
+                "previous_support_end_seconds": 3.88
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 8.0,
+          "ready_seconds_simulated": 9.619510299991816,
+          "asr_text": "que con su abuelo Junto a una fuente descubrió un pe",
+          "variants": {
+            "original": {
+              "position": 16,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 16,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  34
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1
+              }
+            },
+            "combinada": {
+              "position": 16,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 16,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  34
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 7.9,
+                "previous_support_end_seconds": 5.62
+              }
+            },
+            "nueva": {
+              "position": 16,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 16,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  34
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 7.9,
+                "previous_support_end_seconds": 5.62
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 10.0,
+          "ready_seconds_simulated": 11.565658599953167,
+          "asr_text": "cuando a una fuente descubrió un pequeño barco rojo",
+          "variants": {
+            "original": {
+              "position": 19,
+              "movement": 3,
+              "mode": "local",
+              "evidence": {
+                "position": 19,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  5,
+                  40
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 19,
+              "movement": 3,
+              "mode": "local",
+              "evidence": {
+                "position": 19,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  5,
+                  40
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 9.26,
+                "previous_support_end_seconds": 7.9
+              }
+            },
+            "nueva": {
+              "position": 19,
+              "movement": 3,
+              "mode": "local",
+              "evidence": {
+                "position": 19,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  5,
+                  40
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 9.26,
+                "previous_support_end_seconds": 7.9
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 12.0,
+          "ready_seconds_simulated": 13.657532099983655,
+          "asr_text": "pequeño barco rojo El barco flotaba despacio en",
+          "variants": {
+            "original": {
+              "position": 23,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 23,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  8,
+                  43
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1
+              }
+            },
+            "combinada": {
+              "position": 23,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 23,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  8,
+                  43
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 11.86,
+                "previous_support_end_seconds": 9.26
+              }
+            },
+            "nueva": {
+              "position": 23,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 23,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  8,
+                  43
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 11.86,
+                "previous_support_end_seconds": 9.26
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 14.0,
+          "ready_seconds_simulated": 15.634110299986787,
+          "asr_text": "El barco flotaba despacio entre las hojas Lucía",
+          "variants": {
+            "original": {
+              "position": 27,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 27,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  12,
+                  47
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 27,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 27,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  12,
+                  47
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 13.98,
+                "previous_support_end_seconds": 11.86
+              }
+            },
+            "nueva": {
+              "position": 27,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 27,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  12,
+                  47
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 13.98,
+                "previous_support_end_seconds": 11.86
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 16.0,
+          "ready_seconds_simulated": 17.633140399993863,
+          "asr_text": "entre las hojas Lucía buscó una rama para acercar",
+          "variants": {
+            "original": {
+              "position": 31,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 31,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  16,
+                  51
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1
+              }
+            },
+            "combinada": {
+              "position": 31,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 31,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  16,
+                  51
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 15.379999999999999,
+                "previous_support_end_seconds": 13.98
+              }
+            },
+            "nueva": {
+              "position": 31,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 31,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  16,
+                  51
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 15.379999999999999,
+                "previous_support_end_seconds": 13.98
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 18.0,
+          "ready_seconds_simulated": 19.612881900044158,
+          "asr_text": "buscó una rama para acercarlo a la orilla Su abuelo",
+          "variants": {
+            "original": {
+              "position": 37,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 37,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  20,
+                  55
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 37,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 37,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  20,
+                  55
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 17.98,
+                "previous_support_end_seconds": 15.379999999999999
+              }
+            },
+            "nueva": {
+              "position": 37,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 37,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  20,
+                  55
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 17.98,
+                "previous_support_end_seconds": 15.379999999999999
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 20.0,
+          "ready_seconds_simulated": 21.62460069998633,
+          "asr_text": "a la orilla Su abuelo le ayudó y juntos",
+          "variants": {
+            "original": {
+              "position": 41,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 41,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  26,
+                  56
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1
+              }
+            },
+            "combinada": {
+              "position": 41,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 41,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  26,
+                  56
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 19.98,
+                "previous_support_end_seconds": 17.98
+              }
+            },
+            "nueva": {
+              "position": 41,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 41,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  26,
+                  56
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 19.98,
+                "previous_support_end_seconds": 17.98
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 22.0,
+          "ready_seconds_simulated": 23.572287500021048,
+          "asr_text": "la ayudó y juntos sacaron el barco del agua",
+          "variants": {
+            "original": {
+              "position": 46,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 46,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  30,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 46,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 46,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  30,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 21.32,
+                "previous_support_end_seconds": 19.98
+              }
+            },
+            "nueva": {
+              "position": 46,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 46,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  30,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 21.32,
+                "previous_support_end_seconds": 19.98
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 24.0,
+          "ready_seconds_simulated": 25.606941899983212,
+          "asr_text": "sacaron el barco del agua Después regresaron a casa y",
+          "variants": {
+            "original": {
+              "position": 51,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 51,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  35,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 51,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 51,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  35,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 23.98,
+                "previous_support_end_seconds": 21.32
+              }
+            },
+            "nueva": {
+              "position": 51,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 51,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  35,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 23.98,
+                "previous_support_end_seconds": 21.32
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 26.0,
+          "ready_seconds_simulated": 27.556187400012277,
+          "asr_text": "Después regresaron a casa y lo colocaron sobre una estantería",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  40,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  40,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.86,
+                "previous_support_end_seconds": 23.98
+              }
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  40,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.86,
+                "previous_support_end_seconds": 23.98
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 28.0,
+          "ready_seconds_simulated": 29.55743769998662,
+          "asr_text": "y lo colocaron sobre una estantería",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 6,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 6,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.88,
+                "previous_support_end_seconds": 25.86
+              }
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 6,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.88,
+                "previous_support_end_seconds": 25.86
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 30.0,
+          "ready_seconds_simulated": 30.009622300043702,
+          "asr_text": "",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": null,
+                "reason": "evidencia_insuficiente"
+              }
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": null,
+                "reason": "evidencia_insuficiente"
+              }
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": null,
+                "reason": "evidencia_insuficiente"
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 32.0,
+          "ready_seconds_simulated": 32.010474500013515,
+          "asr_text": "",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "audio_seconds": 34.0,
+          "ready_seconds_simulated": 34.00912659999449,
+          "asr_text": "",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "audio_seconds": 36.0,
+          "ready_seconds_simulated": 36.009053299960215,
+          "asr_text": "",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "audio_seconds": 38.0,
+          "ready_seconds_simulated": 38.00848329998553,
+          "asr_text": "",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "audio_seconds": 40.0,
+          "ready_seconds_simulated": 40.008176299976185,
+          "asr_text": "",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_file": "C:\\Users\\PC\\OneDrive\\Documentos\\ChatGPT\\Practicas y TFG\\resultados\\comparaciones\\20261021_111057_752726\\lectura_20261021_110858_556291_ventana_8s_r2.json",
+      "source_sha256": "fcef89c587b7b7b387511ce4264b0b440679583be99e58e4f5f9956a1208b494",
+      "window_seconds": 8,
+      "repeat": 2,
+      "baseline_reproduces_original": true,
+      "final_positions": {
+        "original": 56,
+        "combinada": 56,
+        "nueva": 56
+      },
+      "changed_cuts": [],
+      "fast_recovery_cuts": [],
+      "backward_cuts": {
+        "original": [],
+        "combinada": [],
+        "nueva": []
+      },
+      "departures_after_first_end": {
+        "original": [],
+        "combinada": [],
+        "nueva": []
+      },
+      "updates": [
+        {
+          "audio_seconds": 2.0,
+          "ready_seconds_simulated": 3.6301552000222728,
+          "asr_text": "Una tarde",
+          "variants": {
+            "original": {
+              "position": 2,
+              "movement": 2,
+              "mode": "local",
+              "evidence": {
+                "position": 2,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  24
+                ],
+                "exact_matches": 2,
+                "hypothesis_words": 2,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 2,
+              "movement": 2,
+              "mode": "local",
+              "evidence": {
+                "position": 2,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  24
+                ],
+                "exact_matches": 2,
+                "hypothesis_words": 2,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 1.6,
+                "previous_support_end_seconds": null
+              }
+            },
+            "nueva": {
+              "position": 2,
+              "movement": 2,
+              "mode": "local",
+              "evidence": {
+                "position": 2,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  24
+                ],
+                "exact_matches": 2,
+                "hypothesis_words": 2,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 1.6,
+                "previous_support_end_seconds": null
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 4.0,
+          "ready_seconds_simulated": 5.597869399993215,
+          "asr_text": "Una tarde Lucía paseaba por el pa",
+          "variants": {
+            "original": {
+              "position": 6,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 6,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  26
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 7,
+                "edit_cost": 1
+              }
+            },
+            "combinada": {
+              "position": 6,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 6,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  26
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 7,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 3.88,
+                "previous_support_end_seconds": 1.6
+              }
+            },
+            "nueva": {
+              "position": 6,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 6,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  26
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 7,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 3.88,
+                "previous_support_end_seconds": 1.6
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 6.0,
+          "ready_seconds_simulated": 7.695023499953095,
+          "asr_text": "Una tarde Lucía paseaba por el parque con su abuelo",
+          "variants": {
+            "original": {
+              "position": 10,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 10,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  30
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 10,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 10,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  30
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 5.68,
+                "previous_support_end_seconds": 3.88
+              }
+            },
+            "nueva": {
+              "position": 10,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 10,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  30
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 5.68,
+                "previous_support_end_seconds": 3.88
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 8.0,
+          "ready_seconds_simulated": 9.755440299981274,
+          "asr_text": "Una tarde Lucía paseaba por el parque con su abuelo junto a una fuente descubrió un",
+          "variants": {
+            "original": {
+              "position": 16,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 16,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  34
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 16,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 16,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  34
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 7.9,
+                "previous_support_end_seconds": 5.68
+              }
+            },
+            "nueva": {
+              "position": 16,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 16,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  34
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 7.9,
+                "previous_support_end_seconds": 5.68
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 10.0,
+          "ready_seconds_simulated": 11.802968300005887,
+          "asr_text": "Lucía paseaba por el parque con su abuelo junto a una fuente descubrió un pequeño barco rojo",
+          "variants": {
+            "original": {
+              "position": 19,
+              "movement": 3,
+              "mode": "local",
+              "evidence": {
+                "position": 19,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  5,
+                  40
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 19,
+              "movement": 3,
+              "mode": "local",
+              "evidence": {
+                "position": 19,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  5,
+                  40
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 9.32,
+                "previous_support_end_seconds": 7.9
+              }
+            },
+            "nueva": {
+              "position": 19,
+              "movement": 3,
+              "mode": "local",
+              "evidence": {
+                "position": 19,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  5,
+                  40
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 9.32,
+                "previous_support_end_seconds": 7.9
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 12.0,
+          "ready_seconds_simulated": 13.821237700001802,
+          "asr_text": "con su abuelo Junto a una fuente descubrió un pequeño barco rojo El barco flotaba despacio",
+          "variants": {
+            "original": {
+              "position": 23,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 23,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  8,
+                  43
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 23,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 23,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  8,
+                  43
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 11.84,
+                "previous_support_end_seconds": 9.32
+              }
+            },
+            "nueva": {
+              "position": 23,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 23,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  8,
+                  43
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 11.84,
+                "previous_support_end_seconds": 9.32
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 14.0,
+          "ready_seconds_simulated": 15.863535799959209,
+          "asr_text": "una fuente descubrió un pequeño barco rojo El barco flotaba despacio entre las hojas",
+          "variants": {
+            "original": {
+              "position": 26,
+              "movement": 3,
+              "mode": "local",
+              "evidence": {
+                "position": 26,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  12,
+                  47
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 26,
+              "movement": 3,
+              "mode": "local",
+              "evidence": {
+                "position": 26,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  12,
+                  47
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 12.780000000000001,
+                "previous_support_end_seconds": 11.84
+              }
+            },
+            "nueva": {
+              "position": 26,
+              "movement": 3,
+              "mode": "local",
+              "evidence": {
+                "position": 26,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  12,
+                  47
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 12.780000000000001,
+                "previous_support_end_seconds": 11.84
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 16.0,
+          "ready_seconds_simulated": 17.885063999972772,
+          "asr_text": "barco rojo El barco flotaba despacio entre las hojas Lucía buscó una rama para acercar",
+          "variants": {
+            "original": {
+              "position": 31,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 31,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  15,
+                  50
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1
+              }
+            },
+            "combinada": {
+              "position": 31,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 31,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  15,
+                  50
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 15.379999999999999,
+                "previous_support_end_seconds": 12.780000000000001
+              }
+            },
+            "nueva": {
+              "position": 31,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 31,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  15,
+                  50
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 15.379999999999999,
+                "previous_support_end_seconds": 12.780000000000001
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 18.0,
+          "ready_seconds_simulated": 19.91650260001188,
+          "asr_text": "El barco flotaba despacio entre las hojas Lucía buscó una rama para acercarlo a la orilla su abuelo",
+          "variants": {
+            "original": {
+              "position": 37,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 37,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  20,
+                  55
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 37,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 37,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  20,
+                  55
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 17.98,
+                "previous_support_end_seconds": 15.379999999999999
+              }
+            },
+            "nueva": {
+              "position": 37,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 37,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  20,
+                  55
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 17.98,
+                "previous_support_end_seconds": 15.379999999999999
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 20.0,
+          "ready_seconds_simulated": 21.87173369998345,
+          "asr_text": "las hojas Lucia buscó una rama para acercarlo a la orilla Su abuelo la ayudó y juntos",
+          "variants": {
+            "original": {
+              "position": 41,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 41,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  26,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 41,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 41,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  26,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 19.62,
+                "previous_support_end_seconds": 17.98
+              }
+            },
+            "nueva": {
+              "position": 41,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 41,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  26,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 19.62,
+                "previous_support_end_seconds": 17.98
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 22.0,
+          "ready_seconds_simulated": 23.85753559996374,
+          "asr_text": "buscó una rama para acercarlo a la orilla Su abuelo la ayudó y juntos sacaron el barco del agua",
+          "variants": {
+            "original": {
+              "position": 46,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 46,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  30,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 46,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 46,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  30,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 21.32,
+                "previous_support_end_seconds": 19.62
+              }
+            },
+            "nueva": {
+              "position": 46,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 46,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  30,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 21.32,
+                "previous_support_end_seconds": 19.62
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 24.0,
+          "ready_seconds_simulated": 25.818367499974556,
+          "asr_text": "a la orilla Su abuelo la ayudó y juntos sacaron el barco del agua Después regresaron a casa",
+          "variants": {
+            "original": {
+              "position": 50,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 50,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  35,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 50,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 50,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  35,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 23.740000000000002,
+                "previous_support_end_seconds": 21.32
+              }
+            },
+            "nueva": {
+              "position": 50,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 50,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  35,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 23.740000000000002,
+                "previous_support_end_seconds": 21.32
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 26.0,
+          "ready_seconds_simulated": 27.824015499965753,
+          "asr_text": "la ayudó y juntos sacaron el barco del agua Después regresaron a casa y lo colocaron sobre una estantería",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  39,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  39,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.88,
+                "previous_support_end_seconds": 23.740000000000002
+              }
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  39,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.88,
+                "previous_support_end_seconds": 23.740000000000002
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 28.0,
+          "ready_seconds_simulated": 29.731336799974088,
+          "asr_text": "sacaron el barco del agua Después regresaron a casa y lo colocaron sobre una estantería",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.88,
+                "previous_support_end_seconds": 25.88
+              }
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.88,
+                "previous_support_end_seconds": 25.88
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 30.0,
+          "ready_seconds_simulated": 31.643867500009947,
+          "asr_text": "Después regresaron a casa y lo colocaron sobre una estantería",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.86,
+                "previous_support_end_seconds": 25.88
+              }
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.86,
+                "previous_support_end_seconds": 25.88
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 32.0,
+          "ready_seconds_simulated": 33.597653099976014,
+          "asr_text": "y lo colocaron sobre una estantería",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 6,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 6,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.88,
+                "previous_support_end_seconds": 25.88
+              }
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 6,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.88,
+                "previous_support_end_seconds": 25.88
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 34.0,
+          "ready_seconds_simulated": 34.02102169999853,
+          "asr_text": "",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": null,
+                "reason": "evidencia_insuficiente"
+              }
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": null,
+                "reason": "evidencia_insuficiente"
+              }
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": null,
+                "reason": "evidencia_insuficiente"
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 36.0,
+          "ready_seconds_simulated": 36.019941900041886,
+          "asr_text": "",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "audio_seconds": 38.0,
+          "ready_seconds_simulated": 38.019015999976546,
+          "asr_text": "",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "audio_seconds": 40.0,
+          "ready_seconds_simulated": 40.018580900039524,
+          "asr_text": "",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_file": "C:\\Users\\PC\\OneDrive\\Documentos\\ChatGPT\\Practicas y TFG\\resultados\\comparaciones\\20261021_111057_752726\\lectura_20261021_110858_556291_ventana_4s_r2.json",
+      "source_sha256": "abcd78908a6727afcf559a5815ea032be455b364369537d2b868b654e8e306d0",
+      "window_seconds": 4,
+      "repeat": 2,
+      "baseline_reproduces_original": true,
+      "final_positions": {
+        "original": 56,
+        "combinada": 56,
+        "nueva": 56
+      },
+      "changed_cuts": [],
+      "fast_recovery_cuts": [],
+      "backward_cuts": {
+        "original": [],
+        "combinada": [],
+        "nueva": []
+      },
+      "departures_after_first_end": {
+        "original": [],
+        "combinada": [],
+        "nueva": []
+      },
+      "updates": [
+        {
+          "audio_seconds": 2.0,
+          "ready_seconds_simulated": 3.862756700022146,
+          "asr_text": "Una tarde",
+          "variants": {
+            "original": {
+              "position": 2,
+              "movement": 2,
+              "mode": "local",
+              "evidence": {
+                "position": 2,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  24
+                ],
+                "exact_matches": 2,
+                "hypothesis_words": 2,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 2,
+              "movement": 2,
+              "mode": "local",
+              "evidence": {
+                "position": 2,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  24
+                ],
+                "exact_matches": 2,
+                "hypothesis_words": 2,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 1.6,
+                "previous_support_end_seconds": null
+              }
+            },
+            "nueva": {
+              "position": 2,
+              "movement": 2,
+              "mode": "local",
+              "evidence": {
+                "position": 2,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  24
+                ],
+                "exact_matches": 2,
+                "hypothesis_words": 2,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 1.6,
+                "previous_support_end_seconds": null
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 4.0,
+          "ready_seconds_simulated": 5.788507500023115,
+          "asr_text": "Una tarde Lucía paseaba por el pa",
+          "variants": {
+            "original": {
+              "position": 6,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 6,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  26
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 7,
+                "edit_cost": 1
+              }
+            },
+            "combinada": {
+              "position": 6,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 6,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  26
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 7,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 3.88,
+                "previous_support_end_seconds": 1.6
+              }
+            },
+            "nueva": {
+              "position": 6,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 6,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  26
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 7,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 3.88,
+                "previous_support_end_seconds": 1.6
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 6.0,
+          "ready_seconds_simulated": 7.818673699977808,
+          "asr_text": "Lucía paseaba por el parque con su abuelo",
+          "variants": {
+            "original": {
+              "position": 10,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 10,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  30
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 10,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 10,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  30
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 5.62,
+                "previous_support_end_seconds": 3.88
+              }
+            },
+            "nueva": {
+              "position": 10,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 10,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  30
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 5.62,
+                "previous_support_end_seconds": 3.88
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 8.0,
+          "ready_seconds_simulated": 9.791460999986157,
+          "asr_text": "que con su abuelo Junto a una fuente descubrió un pe",
+          "variants": {
+            "original": {
+              "position": 16,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 16,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  34
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1
+              }
+            },
+            "combinada": {
+              "position": 16,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 16,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  34
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 7.9,
+                "previous_support_end_seconds": 5.62
+              }
+            },
+            "nueva": {
+              "position": 16,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 16,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  34
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 7.9,
+                "previous_support_end_seconds": 5.62
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 10.0,
+          "ready_seconds_simulated": 12.384987400029786,
+          "asr_text": "cuando a una fuente descubrió un pequeño barco rojo",
+          "variants": {
+            "original": {
+              "position": 19,
+              "movement": 3,
+              "mode": "local",
+              "evidence": {
+                "position": 19,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  5,
+                  40
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 19,
+              "movement": 3,
+              "mode": "local",
+              "evidence": {
+                "position": 19,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  5,
+                  40
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 9.26,
+                "previous_support_end_seconds": 7.9
+              }
+            },
+            "nueva": {
+              "position": 19,
+              "movement": 3,
+              "mode": "local",
+              "evidence": {
+                "position": 19,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  5,
+                  40
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 9.26,
+                "previous_support_end_seconds": 7.9
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 12.0,
+          "ready_seconds_simulated": 14.881257999979425,
+          "asr_text": "pequeño barco rojo El barco flotaba despacio en",
+          "variants": {
+            "original": {
+              "position": 23,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 23,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  8,
+                  43
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1
+              }
+            },
+            "combinada": {
+              "position": 23,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 23,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  8,
+                  43
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 11.86,
+                "previous_support_end_seconds": 9.26
+              }
+            },
+            "nueva": {
+              "position": 23,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 23,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  8,
+                  43
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 11.86,
+                "previous_support_end_seconds": 9.26
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 14.0,
+          "ready_seconds_simulated": 17.45013699994888,
+          "asr_text": "El barco flotaba despacio entre las hojas Lucía",
+          "variants": {
+            "original": {
+              "position": 27,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 27,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  12,
+                  47
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 27,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 27,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  12,
+                  47
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 13.98,
+                "previous_support_end_seconds": 11.86
+              }
+            },
+            "nueva": {
+              "position": 27,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 27,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  12,
+                  47
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 13.98,
+                "previous_support_end_seconds": 11.86
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 16.0,
+          "ready_seconds_simulated": 19.383542599971406,
+          "asr_text": "entre las hojas Lucía buscó una rama para acercar",
+          "variants": {
+            "original": {
+              "position": 31,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 31,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  16,
+                  51
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1
+              }
+            },
+            "combinada": {
+              "position": 31,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 31,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  16,
+                  51
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 15.379999999999999,
+                "previous_support_end_seconds": 13.98
+              }
+            },
+            "nueva": {
+              "position": 31,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 31,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  16,
+                  51
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 15.379999999999999,
+                "previous_support_end_seconds": 13.98
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 18.0,
+          "ready_seconds_simulated": 21.54535119998036,
+          "asr_text": "buscó una rama para acercarlo a la orilla Su abuelo",
+          "variants": {
+            "original": {
+              "position": 37,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 37,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  20,
+                  55
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 37,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 37,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  20,
+                  55
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 17.98,
+                "previous_support_end_seconds": 15.379999999999999
+              }
+            },
+            "nueva": {
+              "position": 37,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 37,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  20,
+                  55
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 17.98,
+                "previous_support_end_seconds": 15.379999999999999
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 20.0,
+          "ready_seconds_simulated": 23.531851199979428,
+          "asr_text": "a la orilla Su abuelo le ayudó y juntos",
+          "variants": {
+            "original": {
+              "position": 41,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 41,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  26,
+                  56
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1
+              }
+            },
+            "combinada": {
+              "position": 41,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 41,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  26,
+                  56
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 19.98,
+                "previous_support_end_seconds": 17.98
+              }
+            },
+            "nueva": {
+              "position": 41,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 41,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  26,
+                  56
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 19.98,
+                "previous_support_end_seconds": 17.98
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 22.0,
+          "ready_seconds_simulated": 25.78808420000132,
+          "asr_text": "la ayudó y juntos sacaron el barco del agua",
+          "variants": {
+            "original": {
+              "position": 46,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 46,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  30,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 46,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 46,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  30,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 21.32,
+                "previous_support_end_seconds": 19.98
+              }
+            },
+            "nueva": {
+              "position": 46,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 46,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  30,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 21.32,
+                "previous_support_end_seconds": 19.98
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 24.0,
+          "ready_seconds_simulated": 28.06894079997437,
+          "asr_text": "sacaron el barco del agua Después regresaron a casa y",
+          "variants": {
+            "original": {
+              "position": 51,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 51,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  35,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 51,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 51,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  35,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 23.98,
+                "previous_support_end_seconds": 21.32
+              }
+            },
+            "nueva": {
+              "position": 51,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 51,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  35,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 23.98,
+                "previous_support_end_seconds": 21.32
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 26.0,
+          "ready_seconds_simulated": 29.933849199966062,
+          "asr_text": "Después regresaron a casa y lo colocaron sobre una estantería",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  40,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  40,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.86,
+                "previous_support_end_seconds": 23.98
+              }
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  40,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.86,
+                "previous_support_end_seconds": 23.98
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 28.0,
+          "ready_seconds_simulated": 31.907254299963824,
+          "asr_text": "y lo colocaron sobre una estantería",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 6,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 6,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.88,
+                "previous_support_end_seconds": 25.86
+              }
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 6,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.88,
+                "previous_support_end_seconds": 25.86
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 30.0,
+          "ready_seconds_simulated": 31.91746329999296,
+          "asr_text": "",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": null,
+                "reason": "evidencia_insuficiente"
+              }
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": null,
+                "reason": "evidencia_insuficiente"
+              }
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": null,
+                "reason": "evidencia_insuficiente"
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 32.0,
+          "ready_seconds_simulated": 32.008232399995904,
+          "asr_text": "",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "audio_seconds": 34.0,
+          "ready_seconds_simulated": 34.008060099964496,
+          "asr_text": "",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "audio_seconds": 36.0,
+          "ready_seconds_simulated": 36.00908500002697,
+          "asr_text": "",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "audio_seconds": 38.0,
+          "ready_seconds_simulated": 38.00829819997307,
+          "asr_text": "",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "audio_seconds": 40.0,
+          "ready_seconds_simulated": 40.00915689999238,
+          "asr_text": "",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_file": "C:\\Users\\PC\\OneDrive\\Documentos\\ChatGPT\\Practicas y TFG\\resultados\\comparaciones\\20261021_111057_752726\\lectura_20261021_110858_556291_ventana_4s_r3.json",
+      "source_sha256": "130f60456a7509b337ac958dcd03306a7f53f3afbdd072fbf02ebc73ca9448a7",
+      "window_seconds": 4,
+      "repeat": 3,
+      "baseline_reproduces_original": true,
+      "final_positions": {
+        "original": 56,
+        "combinada": 56,
+        "nueva": 56
+      },
+      "changed_cuts": [],
+      "fast_recovery_cuts": [],
+      "backward_cuts": {
+        "original": [],
+        "combinada": [],
+        "nueva": []
+      },
+      "departures_after_first_end": {
+        "original": [],
+        "combinada": [],
+        "nueva": []
+      },
+      "updates": [
+        {
+          "audio_seconds": 2.0,
+          "ready_seconds_simulated": 4.244202699977905,
+          "asr_text": "Una tarde",
+          "variants": {
+            "original": {
+              "position": 2,
+              "movement": 2,
+              "mode": "local",
+              "evidence": {
+                "position": 2,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  24
+                ],
+                "exact_matches": 2,
+                "hypothesis_words": 2,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 2,
+              "movement": 2,
+              "mode": "local",
+              "evidence": {
+                "position": 2,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  24
+                ],
+                "exact_matches": 2,
+                "hypothesis_words": 2,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 1.6,
+                "previous_support_end_seconds": null
+              }
+            },
+            "nueva": {
+              "position": 2,
+              "movement": 2,
+              "mode": "local",
+              "evidence": {
+                "position": 2,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  24
+                ],
+                "exact_matches": 2,
+                "hypothesis_words": 2,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 1.6,
+                "previous_support_end_seconds": null
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 4.0,
+          "ready_seconds_simulated": 6.312732400023378,
+          "asr_text": "Una tarde Lucía paseaba por el pa",
+          "variants": {
+            "original": {
+              "position": 6,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 6,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  26
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 7,
+                "edit_cost": 1
+              }
+            },
+            "combinada": {
+              "position": 6,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 6,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  26
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 7,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 3.88,
+                "previous_support_end_seconds": 1.6
+              }
+            },
+            "nueva": {
+              "position": 6,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 6,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  26
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 7,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 3.88,
+                "previous_support_end_seconds": 1.6
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 6.0,
+          "ready_seconds_simulated": 8.528506200003903,
+          "asr_text": "Lucía paseaba por el parque con su abuelo",
+          "variants": {
+            "original": {
+              "position": 10,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 10,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  30
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 10,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 10,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  30
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 5.62,
+                "previous_support_end_seconds": 3.88
+              }
+            },
+            "nueva": {
+              "position": 10,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 10,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  30
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 5.62,
+                "previous_support_end_seconds": 3.88
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 8.0,
+          "ready_seconds_simulated": 10.584144000022206,
+          "asr_text": "que con su abuelo Junto a una fuente descubrió un pe",
+          "variants": {
+            "original": {
+              "position": 16,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 16,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  34
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1
+              }
+            },
+            "combinada": {
+              "position": 16,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 16,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  34
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 7.9,
+                "previous_support_end_seconds": 5.62
+              }
+            },
+            "nueva": {
+              "position": 16,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 16,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  34
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 7.9,
+                "previous_support_end_seconds": 5.62
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 10.0,
+          "ready_seconds_simulated": 12.739798500027973,
+          "asr_text": "cuando a una fuente descubrió un pequeño barco rojo",
+          "variants": {
+            "original": {
+              "position": 19,
+              "movement": 3,
+              "mode": "local",
+              "evidence": {
+                "position": 19,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  5,
+                  40
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 19,
+              "movement": 3,
+              "mode": "local",
+              "evidence": {
+                "position": 19,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  5,
+                  40
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 9.26,
+                "previous_support_end_seconds": 7.9
+              }
+            },
+            "nueva": {
+              "position": 19,
+              "movement": 3,
+              "mode": "local",
+              "evidence": {
+                "position": 19,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  5,
+                  40
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 9.26,
+                "previous_support_end_seconds": 7.9
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 12.0,
+          "ready_seconds_simulated": 14.78922550007701,
+          "asr_text": "pequeño barco rojo El barco flotaba despacio en",
+          "variants": {
+            "original": {
+              "position": 23,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 23,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  8,
+                  43
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1
+              }
+            },
+            "combinada": {
+              "position": 23,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 23,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  8,
+                  43
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 11.86,
+                "previous_support_end_seconds": 9.26
+              }
+            },
+            "nueva": {
+              "position": 23,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 23,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  8,
+                  43
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 11.86,
+                "previous_support_end_seconds": 9.26
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 14.0,
+          "ready_seconds_simulated": 16.857835100090597,
+          "asr_text": "El barco flotaba despacio entre las hojas Lucía",
+          "variants": {
+            "original": {
+              "position": 27,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 27,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  12,
+                  47
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 27,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 27,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  12,
+                  47
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 13.98,
+                "previous_support_end_seconds": 11.86
+              }
+            },
+            "nueva": {
+              "position": 27,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 27,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  12,
+                  47
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 13.98,
+                "previous_support_end_seconds": 11.86
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 16.0,
+          "ready_seconds_simulated": 18.705130400077906,
+          "asr_text": "entre las hojas Lucía buscó una rama para acercar",
+          "variants": {
+            "original": {
+              "position": 31,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 31,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  16,
+                  51
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1
+              }
+            },
+            "combinada": {
+              "position": 31,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 31,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  16,
+                  51
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 15.379999999999999,
+                "previous_support_end_seconds": 13.98
+              }
+            },
+            "nueva": {
+              "position": 31,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 31,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  16,
+                  51
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 15.379999999999999,
+                "previous_support_end_seconds": 13.98
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 18.0,
+          "ready_seconds_simulated": 20.817102200118825,
+          "asr_text": "buscó una rama para acercarlo a la orilla Su abuelo",
+          "variants": {
+            "original": {
+              "position": 37,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 37,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  20,
+                  55
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 37,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 37,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  20,
+                  55
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 17.98,
+                "previous_support_end_seconds": 15.379999999999999
+              }
+            },
+            "nueva": {
+              "position": 37,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 37,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  20,
+                  55
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 17.98,
+                "previous_support_end_seconds": 15.379999999999999
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 20.0,
+          "ready_seconds_simulated": 22.88262440013932,
+          "asr_text": "a la orilla Su abuelo le ayudó y juntos",
+          "variants": {
+            "original": {
+              "position": 41,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 41,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  26,
+                  56
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1
+              }
+            },
+            "combinada": {
+              "position": 41,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 41,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  26,
+                  56
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 19.98,
+                "previous_support_end_seconds": 17.98
+              }
+            },
+            "nueva": {
+              "position": 41,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 41,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  26,
+                  56
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 19.98,
+                "previous_support_end_seconds": 17.98
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 22.0,
+          "ready_seconds_simulated": 24.88988880015677,
+          "asr_text": "la ayudó y juntos sacaron el barco del agua",
+          "variants": {
+            "original": {
+              "position": 46,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 46,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  30,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 46,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 46,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  30,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 21.32,
+                "previous_support_end_seconds": 19.98
+              }
+            },
+            "nueva": {
+              "position": 46,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 46,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  30,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 21.32,
+                "previous_support_end_seconds": 19.98
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 24.0,
+          "ready_seconds_simulated": 26.970532000123058,
+          "asr_text": "sacaron el barco del agua Después regresaron a casa y",
+          "variants": {
+            "original": {
+              "position": 51,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 51,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  35,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 51,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 51,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  35,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 23.98,
+                "previous_support_end_seconds": 21.32
+              }
+            },
+            "nueva": {
+              "position": 51,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 51,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  35,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 23.98,
+                "previous_support_end_seconds": 21.32
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 26.0,
+          "ready_seconds_simulated": 29.03144230012549,
+          "asr_text": "Después regresaron a casa y lo colocaron sobre una estantería",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  40,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  40,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.86,
+                "previous_support_end_seconds": 23.98
+              }
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  40,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.86,
+                "previous_support_end_seconds": 23.98
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 28.0,
+          "ready_seconds_simulated": 30.969789700116962,
+          "asr_text": "y lo colocaron sobre una estantería",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 6,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 6,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.88,
+                "previous_support_end_seconds": 25.86
+              }
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 6,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.88,
+                "previous_support_end_seconds": 25.86
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 30.0,
+          "ready_seconds_simulated": 30.98072190012317,
+          "asr_text": "",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": null,
+                "reason": "evidencia_insuficiente"
+              }
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": null,
+                "reason": "evidencia_insuficiente"
+              }
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": null,
+                "reason": "evidencia_insuficiente"
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 32.0,
+          "ready_seconds_simulated": 32.008868400007486,
+          "asr_text": "",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "audio_seconds": 34.0,
+          "ready_seconds_simulated": 34.00916049996158,
+          "asr_text": "",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "audio_seconds": 36.0,
+          "ready_seconds_simulated": 36.0092668000143,
+          "asr_text": "",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "audio_seconds": 38.0,
+          "ready_seconds_simulated": 38.01059620000888,
+          "asr_text": "",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "audio_seconds": 40.0,
+          "ready_seconds_simulated": 40.00901440001326,
+          "asr_text": "",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            }
+          }
+        }
+      ]
+    },
+    {
+      "source_file": "C:\\Users\\PC\\OneDrive\\Documentos\\ChatGPT\\Practicas y TFG\\resultados\\comparaciones\\20261021_111057_752726\\lectura_20261021_110858_556291_ventana_8s_r3.json",
+      "source_sha256": "6ec48ec6b7d30caebf8bf1eb4e97c0bf2a97363a3b14f1eef03bf0c565dd0d11",
+      "window_seconds": 8,
+      "repeat": 3,
+      "baseline_reproduces_original": true,
+      "final_positions": {
+        "original": 56,
+        "combinada": 56,
+        "nueva": 56
+      },
+      "changed_cuts": [],
+      "fast_recovery_cuts": [],
+      "backward_cuts": {
+        "original": [],
+        "combinada": [],
+        "nueva": []
+      },
+      "departures_after_first_end": {
+        "original": [],
+        "combinada": [],
+        "nueva": []
+      },
+      "updates": [
+        {
+          "audio_seconds": 2.0,
+          "ready_seconds_simulated": 3.688565699965693,
+          "asr_text": "Una tarde",
+          "variants": {
+            "original": {
+              "position": 2,
+              "movement": 2,
+              "mode": "local",
+              "evidence": {
+                "position": 2,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  24
+                ],
+                "exact_matches": 2,
+                "hypothesis_words": 2,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 2,
+              "movement": 2,
+              "mode": "local",
+              "evidence": {
+                "position": 2,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  24
+                ],
+                "exact_matches": 2,
+                "hypothesis_words": 2,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 1.6,
+                "previous_support_end_seconds": null
+              }
+            },
+            "nueva": {
+              "position": 2,
+              "movement": 2,
+              "mode": "local",
+              "evidence": {
+                "position": 2,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  24
+                ],
+                "exact_matches": 2,
+                "hypothesis_words": 2,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 1.6,
+                "previous_support_end_seconds": null
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 4.0,
+          "ready_seconds_simulated": 5.704417700006161,
+          "asr_text": "Una tarde Lucía paseaba por el pa",
+          "variants": {
+            "original": {
+              "position": 6,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 6,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  26
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 7,
+                "edit_cost": 1
+              }
+            },
+            "combinada": {
+              "position": 6,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 6,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  26
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 7,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 3.88,
+                "previous_support_end_seconds": 1.6
+              }
+            },
+            "nueva": {
+              "position": 6,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 6,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  26
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 7,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 3.88,
+                "previous_support_end_seconds": 1.6
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 6.0,
+          "ready_seconds_simulated": 8.046235999965575,
+          "asr_text": "Una tarde Lucía paseaba por el parque con su abuelo",
+          "variants": {
+            "original": {
+              "position": 10,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 10,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  30
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 10,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 10,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  30
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 5.68,
+                "previous_support_end_seconds": 3.88
+              }
+            },
+            "nueva": {
+              "position": 10,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 10,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  30
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 5.68,
+                "previous_support_end_seconds": 3.88
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 8.0,
+          "ready_seconds_simulated": 9.951055399957113,
+          "asr_text": "Una tarde Lucía paseaba por el parque con su abuelo junto a una fuente descubrió un",
+          "variants": {
+            "original": {
+              "position": 16,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 16,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  34
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 16,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 16,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  34
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 7.9,
+                "previous_support_end_seconds": 5.68
+              }
+            },
+            "nueva": {
+              "position": 16,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 16,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  1,
+                  34
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 7.9,
+                "previous_support_end_seconds": 5.68
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 10.0,
+          "ready_seconds_simulated": 12.169308900018223,
+          "asr_text": "Lucía paseaba por el parque con su abuelo junto a una fuente descubrió un pequeño barco rojo",
+          "variants": {
+            "original": {
+              "position": 19,
+              "movement": 3,
+              "mode": "local",
+              "evidence": {
+                "position": 19,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  5,
+                  40
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 19,
+              "movement": 3,
+              "mode": "local",
+              "evidence": {
+                "position": 19,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  5,
+                  40
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 9.32,
+                "previous_support_end_seconds": 7.9
+              }
+            },
+            "nueva": {
+              "position": 19,
+              "movement": 3,
+              "mode": "local",
+              "evidence": {
+                "position": 19,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  5,
+                  40
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 9.32,
+                "previous_support_end_seconds": 7.9
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 12.0,
+          "ready_seconds_simulated": 14.445440499985125,
+          "asr_text": "con su abuelo Junto a una fuente descubrió un pequeño barco rojo El barco flotaba despacio",
+          "variants": {
+            "original": {
+              "position": 23,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 23,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  8,
+                  43
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 23,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 23,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  8,
+                  43
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 11.84,
+                "previous_support_end_seconds": 9.32
+              }
+            },
+            "nueva": {
+              "position": 23,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 23,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  8,
+                  43
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 11.84,
+                "previous_support_end_seconds": 9.32
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 14.0,
+          "ready_seconds_simulated": 16.632950600003824,
+          "asr_text": "una fuente descubrió un pequeño barco rojo El barco flotaba despacio entre las hojas",
+          "variants": {
+            "original": {
+              "position": 26,
+              "movement": 3,
+              "mode": "local",
+              "evidence": {
+                "position": 26,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  12,
+                  47
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 26,
+              "movement": 3,
+              "mode": "local",
+              "evidence": {
+                "position": 26,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  12,
+                  47
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 12.780000000000001,
+                "previous_support_end_seconds": 11.84
+              }
+            },
+            "nueva": {
+              "position": 26,
+              "movement": 3,
+              "mode": "local",
+              "evidence": {
+                "position": 26,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  12,
+                  47
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 12.780000000000001,
+                "previous_support_end_seconds": 11.84
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 16.0,
+          "ready_seconds_simulated": 18.975054099981207,
+          "asr_text": "barco rojo El barco flotaba despacio entre las hojas Lucía buscó una rama para acercar",
+          "variants": {
+            "original": {
+              "position": 31,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 31,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  15,
+                  50
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1
+              }
+            },
+            "combinada": {
+              "position": 31,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 31,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  15,
+                  50
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 15.379999999999999,
+                "previous_support_end_seconds": 12.780000000000001
+              }
+            },
+            "nueva": {
+              "position": 31,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 31,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  15,
+                  50
+                ],
+                "exact_matches": 7,
+                "hypothesis_words": 8,
+                "edit_cost": 1,
+                "matched_asr_end_seconds": 15.379999999999999,
+                "previous_support_end_seconds": 12.780000000000001
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 18.0,
+          "ready_seconds_simulated": 21.122985399968456,
+          "asr_text": "El barco flotaba despacio entre las hojas Lucía buscó una rama para acercarlo a la orilla su abuelo",
+          "variants": {
+            "original": {
+              "position": 37,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 37,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  20,
+                  55
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 37,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 37,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  20,
+                  55
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 17.98,
+                "previous_support_end_seconds": 15.379999999999999
+              }
+            },
+            "nueva": {
+              "position": 37,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 37,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  20,
+                  55
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 17.98,
+                "previous_support_end_seconds": 15.379999999999999
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 20.0,
+          "ready_seconds_simulated": 23.38485289993696,
+          "asr_text": "las hojas Lucia buscó una rama para acercarlo a la orilla Su abuelo la ayudó y juntos",
+          "variants": {
+            "original": {
+              "position": 41,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 41,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  26,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 41,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 41,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  26,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 19.62,
+                "previous_support_end_seconds": 17.98
+              }
+            },
+            "nueva": {
+              "position": 41,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 41,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  26,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 19.62,
+                "previous_support_end_seconds": 17.98
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 22.0,
+          "ready_seconds_simulated": 25.715333899948746,
+          "asr_text": "buscó una rama para acercarlo a la orilla Su abuelo la ayudó y juntos sacaron el barco del agua",
+          "variants": {
+            "original": {
+              "position": 46,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 46,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  30,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 46,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 46,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  30,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 21.32,
+                "previous_support_end_seconds": 19.62
+              }
+            },
+            "nueva": {
+              "position": 46,
+              "movement": 5,
+              "mode": "local",
+              "evidence": {
+                "position": 46,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  30,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 21.32,
+                "previous_support_end_seconds": 19.62
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 24.0,
+          "ready_seconds_simulated": 27.989240899973083,
+          "asr_text": "a la orilla Su abuelo la ayudó y juntos sacaron el barco del agua Después regresaron a casa",
+          "variants": {
+            "original": {
+              "position": 50,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 50,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  35,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 50,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 50,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  35,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 23.740000000000002,
+                "previous_support_end_seconds": 21.32
+              }
+            },
+            "nueva": {
+              "position": 50,
+              "movement": 4,
+              "mode": "local",
+              "evidence": {
+                "position": 50,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  35,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 23.740000000000002,
+                "previous_support_end_seconds": 21.32
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 26.0,
+          "ready_seconds_simulated": 30.095890500000678,
+          "asr_text": "la ayudó y juntos sacaron el barco del agua Después regresaron a casa y lo colocaron sobre una estantería",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  39,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  39,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.88,
+                "previous_support_end_seconds": 23.740000000000002
+              }
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 6,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  39,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.88,
+                "previous_support_end_seconds": 23.740000000000002
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 28.0,
+          "ready_seconds_simulated": 32.266147100017406,
+          "asr_text": "sacaron el barco del agua Después regresaron a casa y lo colocaron sobre una estantería",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.88,
+                "previous_support_end_seconds": 25.88
+              }
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.88,
+                "previous_support_end_seconds": 25.88
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 30.0,
+          "ready_seconds_simulated": 34.24964010005351,
+          "asr_text": "Después regresaron a casa y lo colocaron sobre una estantería",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.86,
+                "previous_support_end_seconds": 25.88
+              }
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 8,
+                "hypothesis_words": 8,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.86,
+                "previous_support_end_seconds": 25.88
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 32.0,
+          "ready_seconds_simulated": 36.20585320005193,
+          "asr_text": "y lo colocaron sobre una estantería",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 6,
+                "edit_cost": 0
+              }
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 6,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.88,
+                "previous_support_end_seconds": 25.88
+              }
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": 56,
+                "reason": "coincidencia_local",
+                "window_indices": [
+                  45,
+                  56
+                ],
+                "exact_matches": 6,
+                "hypothesis_words": 6,
+                "edit_cost": 0,
+                "matched_asr_end_seconds": 25.88,
+                "previous_support_end_seconds": 25.88
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 34.0,
+          "ready_seconds_simulated": 36.220940400031395,
+          "asr_text": "",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": null,
+                "reason": "evidencia_insuficiente"
+              }
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": null,
+                "reason": "evidencia_insuficiente"
+              }
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "local",
+              "evidence": {
+                "position": null,
+                "reason": "evidencia_insuficiente"
+              }
+            }
+          }
+        },
+        {
+          "audio_seconds": 36.0,
+          "ready_seconds_simulated": 36.237105600012,
+          "asr_text": "",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "audio_seconds": 38.0,
+          "ready_seconds_simulated": 38.01749880000716,
+          "asr_text": "",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            }
+          }
+        },
+        {
+          "audio_seconds": 40.0,
+          "ready_seconds_simulated": 40.016408999974374,
+          "asr_text": "",
+          "variants": {
+            "original": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "combinada": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            },
+            "nueva": {
+              "position": 56,
+              "movement": 0,
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {}
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "experiment_kind": "control_sin_relectura"
+}

@@ -5,6 +5,8 @@ from pathlib import Path
 
 from scripts.anotar import EventWorkspace, ROOT
 from scripts.comparar_relectura_lejana import digest
+from scripts.recursos import write_resource_report
+from scripts.catalogo import audio_identity, same_audio
 
 
 def evaluate(rows, variant, anchors, story_range=(37, 45)):
@@ -49,7 +51,7 @@ def evaluate(rows, variant, anchors, story_range=(37, 45)):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('carpeta', type=Path, help='Carpeta del comparador de relectura lejana.')
-    parser.add_argument('--caso', choices=['relectura_lejana', 'relectura_azul'], default='relectura_lejana')
+    parser.add_argument('--caso', choices=['relectura_lejana', 'relectura_azul', 'relectura_cuento_02'], default='relectura_lejana')
     args = parser.parse_args()
     folder = args.carpeta.resolve()
     manifest = folder / 'resumen.json'
@@ -57,8 +59,12 @@ def main():
     workspace = EventWorkspace(args.caso)
     annotation = workspace.current()
     anchors = annotation['words']
-    start_position, target = (10, 17) if args.caso == 'relectura_azul' else (37, 45)
-    label = 'azul' if args.caso == 'relectura_azul' else 'alas'
+    print('Audio:', audio_identity(annotation['audio_file'])['label'], '|', Path(annotation['audio_file']).name)
+    start_position, target, label = {
+        'relectura_lejana': (37, 45, 'alas'),
+        'relectura_azul': (10, 17, 'azul'),
+        'relectura_cuento_02': (11, 19, 'rojo'),
+    }[args.caso]
     if ([w['story_range'] for w in anchors] != [[56, 56], [start_position, start_position], [target, target]]
             or [w['attempt'] for w in anchors] != [1, 2, 2]
             or not all(w['reviewed'] for w in anchors)):
@@ -81,7 +87,7 @@ def main():
     for run in comparison['runs']:
         source = Path(run['source_file'])
         data = json.loads(source.read_text(encoding='utf-8'))
-        if (digest(source) != run['source_sha256'] or data['audio_file'] != workspace.audio.name
+        if (digest(source) != run['source_sha256'] or not same_audio(data['audio_file'], workspace.audio)
                 or abs(data['audio_seconds'] - annotation['duration_seconds']) > .01
                 or len(data['updates']) != len(run['updates'])):
             raise ValueError('Fuentes modificadas o audio incompatible.')
@@ -99,6 +105,7 @@ def main():
             lines.append(f"| {run['window_seconds']} | {run['repeat']} | {variant} | {' | '.join(values)} |")
     (folder / 'evaluacion_humana.json').write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
     (folder / 'evaluacion_humana.md').write_text('\n'.join(lines)+'\n', encoding='utf-8')
+    write_resource_report(folder, ROOT)
     print(notice)
     print(f'Informe: {folder / "evaluacion_humana.md"}')
 

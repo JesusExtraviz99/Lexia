@@ -59,5 +59,5 @@ document.querySelectorAll('[data-cut]').forEach(b=>b.onclick=()=>{index=data.run
 window.addEventListener('resize',()=>{if(data)render();});
 fetch('/data').then(r=>{if(!r.ok)throw Error('No se pudieron cargar los datos.');return r.json();}).then(d=>{
  data=d;const rounds=[...new Set(d.runs.map(r=>r.repeat))].sort();rounds.forEach(r=>{const o=node('option',String(r));o.value=r;$('round').append(o);});
- $('cut').max=d.runs[0].rows.length-1;index=Math.min(index,d.runs[0].rows.length-1);$('file').textContent=d.audio;render();
+ $('cut').max=d.runs[0].rows.length-1;index=Math.min(index,d.runs[0].rows.length-1);$('file').textContent=`${d.audio_label??'Audio sin clasificar'} · ${d.audio}`;render();
 }).catch(e=>{$('status').textContent='Error: '+e.message;});

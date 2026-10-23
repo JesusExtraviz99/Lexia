@@ -128,3 +128,26 @@ Comparación descriptiva con el prefijo, no referencia de precisión. El prefijo
 |---|---|---:|---|---:|---|---|
 | lectura_20261016_104151_933317.wav | ventana_4s | 26.21 | 26.09–26.46 | 0.00 | 0/90 | [56, 56, 56] |
 | lectura_20261016_104151_933317.wav | ventana_8s | 31.49 | 30.89–31.80 | 0.00 | 0/90 | [56, 56, 56] |
+
+<!-- recursos-computo-inicio -->
+## Recursos y coste computacional
+
+Datos de la ejecución original. «No medido» no significa cero. RTF = suma de inferencias / duración del audio completo (incluye silencio); no es latencia visual ni mide captura, escritura o muestreo. Las rondas de una grabación no son lecturas independientes.
+
+| Registro | Dispositivo ASR | Precisión | GPU para ASR | RTF | Máx. inferencia (s) | CPU/RAM/GPU instrumentadas |
+|---|---|---|---|---:|---:|---|
+| lectura_20261016_104151_933317_ventana_8s_r1.json | cpu | int8 | no (CPU) | 0.515 | 1.847 | no_medido_en_la_ejecucion_original |
+| lectura_20261016_104151_933317_ventana_4s_r1.json | cpu | int8 | no (CPU) | 0.435 | 1.692 | no_medido_en_la_ejecucion_original |
+| lectura_20261016_104151_933317_ventana_8s_r2.json | cpu | int8 | no (CPU) | 0.529 | 1.961 | no_medido_en_la_ejecucion_original |
+| lectura_20261016_104151_933317_ventana_4s_r2.json | cpu | int8 | no (CPU) | 0.441 | 1.721 | no_medido_en_la_ejecucion_original |
+| lectura_20261016_104151_933317_ventana_4s_r3.json | cpu | int8 | no (CPU) | 0.435 | 1.769 | no_medido_en_la_ejecucion_original |
+| lectura_20261016_104151_933317_ventana_8s_r3.json | cpu | int8 | no (CPU) | 0.530 | 1.903 | no_medido_en_la_ejecucion_original |
+
+Para comparar tablets habrá que medir en el dispositivo de destino: RAM máxima, tiempo de respuesta sostenido y consumo/batería. Este ordenador no permite deducir esos valores. No se cambia CPU por GPU automáticamente.
+<!-- recursos-computo-fin -->
+
+<!-- identidad-audio-inicio -->
+## Audio utilizado
+
+- **Relectura de Los dos se quedaron en silencio · cuento 1 · 16/10/2026** — Lectura con relectura (Los dos se quedaron en silencio) - cuento 1 - 16-10-2026.wav
+<!-- identidad-audio-fin -->

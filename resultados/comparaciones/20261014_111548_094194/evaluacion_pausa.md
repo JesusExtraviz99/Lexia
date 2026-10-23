@@ -47,3 +47,9 @@ Pausa anotada: 11.88–21.20 s; duración 9.32 s.
 | 8 | 3 | 16.0 | 27 | 27 | 27 | La mariposa voló despacio y se posó sobre una flor |
 | 8 | 3 | 18.0 | 27 | 27 | 27 | y se posó sobre una flor |
 | 8 | 3 | 20.0 | 27 | 27 | 27 |  |
+
+<!-- identidad-audio-inicio -->
+## Audio utilizado
+
+- **Lectura con pausa entre flor y Ana · cuento 1 · 14/10/2026** — Lectura con pausa (flor-Ana) - cuento 1 - 14-10-2026.wav
+<!-- identidad-audio-fin -->

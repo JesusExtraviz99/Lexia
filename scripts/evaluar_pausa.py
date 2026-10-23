@@ -1,3 +1,4 @@
+from scripts.catalogo import same_audio
 """Revisa una pausa con tres anclas humanas sin extrapolar tiempos al resto del cuento."""
 import argparse
 import hashlib
@@ -9,7 +10,7 @@ from scripts.alinear import tokens, normalize
 
 
 def evaluate(data, annotation, story):
-    if data['audio_file'] != Path(annotation['audio_file']).name:
+    if not same_audio(data['audio_file'], annotation['audio_file']):
         raise ValueError('Audio distinto del anotado.')
     if abs(data['audio_seconds'] - annotation['duration_seconds']) > .01:
         raise ValueError('Duración distinta del audio anotado.')
