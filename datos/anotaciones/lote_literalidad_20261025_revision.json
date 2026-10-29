@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-25",
+  "reviewer": "propio_lector_usuario",
+  "status": "errores_senalados_en_candidato_y_contraste_documental_disponible",
+  "experiment_folder": "resultados/literalidad/20261025_182446_557677_UTC",
+  "manifest_sha256": "53074ee81c5d1ff1d1d6ecd1c3597bed33506d7ff3e7ceac0388b86d76b41051",
+  "outputs_sha256": {
+    "baseline": "d46203a64e2506e385c9f0399fd9fe5e45e70bf7e05765d478da0435759d3e30",
+    "candidato": "305f1de0527ef4847ea3e469e6f15c1deb73f6dc744a042f06b3dafb0e3e616b"
+  },
+  "user_statement": "He encontrado errores en los audios 1, 4, 5, 6, 11, 17",
+  "numbering": "ordinal de una base en el orden del manifiesto y del selector del visor",
+  "issues": [
+    {
+      "audio_number": 1,
+      "id": "lectura_normal",
+      "source_audio": "datos/audio/Lectura normal - cuento 1 - 14-10-2026.wav",
+      "source_sha256": "83640912d7a54c930c94fdb545f48796e3d04885c90b8d8d71191ed6a35181ea",
+      "issue_reported_by_reader": true,
+      "engine": "candidato",
+      "heard_text": null,
+      "asr_error_description": null,
+      "human_time_interval": null,
+      "status": "senalado_por_lector_con_analisis_del_asistente_separado",
+      "engine_source": "aclaracion_explicita_del_lector"
+    },
+    {
+      "audio_number": 4,
+      "id": "lectura_lenta",
+      "source_audio": "datos/audio/Lectura lenta - cuento 1 - 16-10-2026.wav",
+      "source_sha256": "8f621da4e009c11ab8940098309b2aae260e4cf32ac32cf3c31d9529cc09095c",
+      "issue_reported_by_reader": true,
+      "engine": "candidato",
+      "heard_text": null,
+      "asr_error_description": null,
+      "human_time_interval": null,
+      "status": "senalado_por_lector_con_analisis_del_asistente_separado",
+      "engine_source": "aclaracion_explicita_del_lector"
+    },
+    {
+      "audio_number": 5,
+      "id": "lectura_relectura",
+      "source_audio": "datos/audio/Lectura con relectura (Los dos se quedaron en silencio) - cuento 1 - 16-10-2026.wav",
+      "source_sha256": "0a766b9ca16e78e973fbce9c008952301e25275bfe2f6fc621c3df98524db03a",
+      "issue_reported_by_reader": true,
+      "engine": "candidato",
+      "heard_text": null,
+      "asr_error_description": null,
+      "human_time_interval": null,
+      "status": "senalado_por_lector_con_analisis_del_asistente_separado",
+      "engine_source": "aclaracion_explicita_del_lector"
+    },
+    {
+      "audio_number": 6,
+      "id": "lectura_relectura_lejana",
+      "source_audio": "datos/audio/Lectura con relectura lejana (Los dos-alas) - cuento 1 - 21-10-2026.wav",
+      "source_sha256": "95a35ea5f0e3cdef076ac52db87a80286c5f4eaebd1f8f0579cda1d25c6cc058",
+      "issue_reported_by_reader": true,
+      "engine": "candidato",
+      "heard_text": null,
+      "asr_error_description": null,
+      "human_time_interval": null,
+      "status": "senalado_por_lector_con_analisis_del_asistente_separado",
+      "engine_source": "aclaracion_explicita_del_lector"
+    },
+    {
+      "audio_number": 11,
+      "id": "lectura_20261023_100001_445275",
+      "source_audio": "datos/audio/Lectura lenta - cuento 2 - lectura_02 - 23-10-2026.wav",
+      "source_sha256": "36c7d9656b4d74e81a4fa0160bef887c2a571d7597381d890e0e48fcbb524add",
+      "issue_reported_by_reader": true,
+      "engine": "candidato",
+      "heard_text": null,
+      "asr_error_description": null,
+      "human_time_interval": null,
+      "status": "senalado_por_lector_con_analisis_del_asistente_separado",
+      "engine_source": "aclaracion_explicita_del_lector"
+    },
+    {
+      "audio_number": 17,
+      "id": "lectura_20261023_101713_339466",
+      "source_audio": "datos/audio/Lectura omisión abuelo - cuento 2 - lectura_02 - 23-10-2026.wav",
+      "source_sha256": "c2ed4663b151f477d675ac96a8711186876b0251aa654ddde9b0f766b513917e",
+      "issue_reported_by_reader": true,
+      "engine": "candidato",
+      "heard_text": null,
+      "asr_error_description": null,
+      "human_time_interval": null,
+      "status": "senalado_por_lector_con_analisis_del_asistente_separado",
+      "engine_source": "aclaracion_explicita_del_lector"
+    }
+  ],
+  "notice": "El lector señala archivos con errores, sin especificar aún motor, frases o tiempos. No se inventan esos detalles ni se clasifican como correctos los demás archivos. No es una tasa de error.",
+  "user_followup_statement": "En el candidato literal, no puedo entrar a decirte cada error porque son varios, pero si haces uso de las comprobaciones que hicimos del modelo actual y lo comparas con los resultados del literal verás que hay fallos y algunos bastantes notorios como invención de frases enteras",
+  "assistant_audit_file": "resultados/literalidad/20261025_182446_557677_UTC/auditoria_errores_lector.json",
+  "assistant_audit_sha256": "497999d32e650161c547f655ac3ef9cbbd31e8f5a6f4e255d0cdb07c88e196cc"
+}

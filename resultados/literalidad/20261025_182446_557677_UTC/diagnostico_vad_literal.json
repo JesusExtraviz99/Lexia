@@ -1,0 +1,1469 @@
+{
+  "date": "2026-10-25",
+  "kind": "diagnostico_solo_VAD_sin_reconocimiento_de_texto",
+  "source_manifest_sha256": "53074ee81c5d1ff1d1d6ecd1c3597bed33506d7ff3e7ceac0388b86d76b41051",
+  "source_outputs_sha256": {
+    "baseline": "d46203a64e2506e385c9f0399fd9fe5e45e70bf7e05765d478da0435759d3e30",
+    "candidato": "305f1de0527ef4847ea3e469e6f15c1deb73f6dc744a042f06b3dafb0e3e616b"
+  },
+  "model_file": ".venv\\Lib\\site-packages\\faster_whisper\\assets\\silero_vad_v6.onnx",
+  "model_sha256": "4cbf549b8326f60f80f2536d9eefeb450a9abe83365a098031c89719f1be17d2",
+  "vad_source_sha256": "37a9c774aefdd3162d936b896c8dcf5571b2ed938d65bffecfd631770049a18d",
+  "script_sha256": "c5a0981d36f6e37c85c07cad5110f80e0a913220162d99d81322d6c69d2c420f",
+  "versions": {
+    "faster-whisper": "1.2.1",
+    "onnxruntime": "1.31.0",
+    "numpy": "2.5.4"
+  },
+  "device": "cpu",
+  "vad_model_threads": 1,
+  "options": {
+    "threshold": 0.5,
+    "neg_threshold": null,
+    "min_speech_duration_ms": 0,
+    "max_speech_duration_s": Infinity,
+    "min_silence_duration_ms": 2000,
+    "speech_pad_ms": 400
+  },
+  "rows": [
+    {
+      "number": 1,
+      "id": "lectura_normal",
+      "audio": "datos/audio/Lectura normal - cuento 1 - 14-10-2026.wav",
+      "source_sha256": "83640912d7a54c930c94fdb545f48796e3d04885c90b8d8d71191ed6a35181ea",
+      "audio_seconds": 40.0,
+      "processing_seconds": 0.07080969994422048,
+      "cpu_seconds": 0.078125,
+      "intervals_seconds": [
+        [
+          1.392,
+          23.312
+        ]
+      ],
+      "last_vad_end_seconds": 23.312,
+      "candidate_input_blocks": [
+        {
+          "index": 0,
+          "start": 0.0,
+          "end": 30.0,
+          "vad_positive_seconds_with_padding": 21.92,
+          "no_vad_overlap": false,
+          "candidate_text": "Una mañana, Ana, salió al jardín de su casa. Cerca de un árbol, encontró una mariposa azul. La mariposa voló despacio y se posó sobre una flor. Ana llamó a su hermano para que pudiera verla. Los dos se quedaron en silencio, mirando sus alas. Después volvieron a casa y dibujaron la mariposa en un cuaderno.",
+          "is_last": false
+        },
+        {
+          "index": 1,
+          "start": 26.0,
+          "end": 40.0,
+          "vad_positive_seconds_with_padding": 0.0,
+          "no_vad_overlap": true,
+          "candidate_text": "Vas por el lado de las chicas, la mariposa, el cuaderno y la mariposa y los chicas, las mariposas, las mariposas, las mariposas, las mariposas.",
+          "is_last": true
+        }
+      ],
+      "human_anchors": [
+        {
+          "word": "Una",
+          "start": 1.79,
+          "end": 2,
+          "covered_seconds": 0.20999999999999996,
+          "fully_covered": true
+        },
+        {
+          "word": "mañana",
+          "start": 2,
+          "end": 2.65,
+          "covered_seconds": 0.6499999999999999,
+          "fully_covered": true
+        },
+        {
+          "word": "Ana",
+          "start": 2.89,
+          "end": 3.25,
+          "covered_seconds": 0.3599999999999999,
+          "fully_covered": true
+        },
+        {
+          "word": "salió",
+          "start": 3.32,
+          "end": 3.76,
+          "covered_seconds": 0.43999999999999995,
+          "fully_covered": true
+        },
+        {
+          "word": "al",
+          "start": 3.76,
+          "end": 3.88,
+          "covered_seconds": 0.1200000000000001,
+          "fully_covered": true
+        },
+        {
+          "word": "jardín",
+          "start": 3.88,
+          "end": 4.26,
+          "covered_seconds": 0.3799999999999999,
+          "fully_covered": true
+        },
+        {
+          "word": "de",
+          "start": 4.26,
+          "end": 4.38,
+          "covered_seconds": 0.1200000000000001,
+          "fully_covered": true
+        },
+        {
+          "word": "su",
+          "start": 4.38,
+          "end": 4.52,
+          "covered_seconds": 0.13999999999999968,
+          "fully_covered": true
+        },
+        {
+          "word": "casa",
+          "start": 4.52,
+          "end": 4.82,
+          "covered_seconds": 0.3000000000000007,
+          "fully_covered": true
+        },
+        {
+          "word": "Cerca",
+          "start": 5.46,
+          "end": 5.76,
+          "covered_seconds": 0.2999999999999998,
+          "fully_covered": true
+        },
+        {
+          "word": "de",
+          "start": 5.76,
+          "end": 5.88,
+          "covered_seconds": 0.1200000000000001,
+          "fully_covered": true
+        },
+        {
+          "word": "un",
+          "start": 5.88,
+          "end": 6.02,
+          "covered_seconds": 0.13999999999999968,
+          "fully_covered": true
+        },
+        {
+          "word": "árbol",
+          "start": 6.02,
+          "end": 6.4,
+          "covered_seconds": 0.3800000000000008,
+          "fully_covered": true
+        },
+        {
+          "word": "encontró",
+          "start": 6.47,
+          "end": 6.98,
+          "covered_seconds": 0.5100000000000007,
+          "fully_covered": true
+        },
+        {
+          "word": "una",
+          "start": 6.98,
+          "end": 7.2,
+          "covered_seconds": 0.21999999999999975,
+          "fully_covered": true
+        },
+        {
+          "word": "mariposa",
+          "start": 7.2,
+          "end": 7.62,
+          "covered_seconds": 0.41999999999999993,
+          "fully_covered": true
+        },
+        {
+          "word": "azul",
+          "start": 7.62,
+          "end": 7.94,
+          "covered_seconds": 0.3200000000000003,
+          "fully_covered": true
+        },
+        {
+          "word": "La",
+          "start": 8.66,
+          "end": 8.78,
+          "covered_seconds": 0.11999999999999922,
+          "fully_covered": true
+        },
+        {
+          "word": "mariposa",
+          "start": 8.78,
+          "end": 9.28,
+          "covered_seconds": 0.5,
+          "fully_covered": true
+        },
+        {
+          "word": "voló",
+          "start": 9.4,
+          "end": 9.66,
+          "covered_seconds": 0.2599999999999998,
+          "fully_covered": true
+        },
+        {
+          "word": "despacio",
+          "start": 9.66,
+          "end": 10.31,
+          "covered_seconds": 0.6500000000000004,
+          "fully_covered": true
+        },
+        {
+          "word": "y",
+          "start": 10.43,
+          "end": 10.56,
+          "covered_seconds": 0.13000000000000078,
+          "fully_covered": true
+        },
+        {
+          "word": "se",
+          "start": 10.57,
+          "end": 10.7,
+          "covered_seconds": 0.129999999999999,
+          "fully_covered": true
+        },
+        {
+          "word": "posó",
+          "start": 10.7,
+          "end": 11.08,
+          "covered_seconds": 0.3800000000000008,
+          "fully_covered": true
+        },
+        {
+          "word": "sobre",
+          "start": 11.08,
+          "end": 11.38,
+          "covered_seconds": 0.3000000000000007,
+          "fully_covered": true
+        },
+        {
+          "word": "una",
+          "start": 11.38,
+          "end": 11.56,
+          "covered_seconds": 0.17999999999999972,
+          "fully_covered": true
+        },
+        {
+          "word": "flor",
+          "start": 11.56,
+          "end": 11.85,
+          "covered_seconds": 0.28999999999999915,
+          "fully_covered": true
+        },
+        {
+          "word": "Ana",
+          "start": 12.55,
+          "end": 12.74,
+          "covered_seconds": 0.1899999999999995,
+          "fully_covered": true
+        },
+        {
+          "word": "llamó",
+          "start": 12.74,
+          "end": 13.08,
+          "covered_seconds": 0.33999999999999986,
+          "fully_covered": true
+        },
+        {
+          "word": "a",
+          "start": 13.08,
+          "end": 13.16,
+          "covered_seconds": 0.08000000000000007,
+          "fully_covered": true
+        },
+        {
+          "word": "su",
+          "start": 13.16,
+          "end": 13.22,
+          "covered_seconds": 0.0600000000000005,
+          "fully_covered": true
+        },
+        {
+          "word": "hermano",
+          "start": 13.22,
+          "end": 13.65,
+          "covered_seconds": 0.4299999999999997,
+          "fully_covered": true
+        },
+        {
+          "word": "para",
+          "start": 13.69,
+          "end": 13.84,
+          "covered_seconds": 0.15000000000000036,
+          "fully_covered": true
+        },
+        {
+          "word": "que",
+          "start": 13.84,
+          "end": 14,
+          "covered_seconds": 0.16000000000000014,
+          "fully_covered": true
+        },
+        {
+          "word": "pudiera",
+          "start": 14,
+          "end": 14.32,
+          "covered_seconds": 0.3200000000000003,
+          "fully_covered": true
+        },
+        {
+          "word": "verla",
+          "start": 14.32,
+          "end": 14.76,
+          "covered_seconds": 0.4399999999999995,
+          "fully_covered": true
+        },
+        {
+          "word": "Los",
+          "start": 15.46,
+          "end": 15.77,
+          "covered_seconds": 0.3099999999999987,
+          "fully_covered": true
+        },
+        {
+          "word": "dos",
+          "start": 15.78,
+          "end": 16.1,
+          "covered_seconds": 0.32000000000000206,
+          "fully_covered": true
+        },
+        {
+          "word": "se",
+          "start": 16.15,
+          "end": 16.38,
+          "covered_seconds": 0.23000000000000043,
+          "fully_covered": true
+        },
+        {
+          "word": "quedaron",
+          "start": 16.4,
+          "end": 16.73,
+          "covered_seconds": 0.33000000000000185,
+          "fully_covered": true
+        },
+        {
+          "word": "en",
+          "start": 16.74,
+          "end": 16.9,
+          "covered_seconds": 0.16000000000000014,
+          "fully_covered": true
+        },
+        {
+          "word": "silencio",
+          "start": 16.9,
+          "end": 17.47,
+          "covered_seconds": 0.5700000000000003,
+          "fully_covered": true
+        },
+        {
+          "word": "mirando",
+          "start": 17.59,
+          "end": 17.98,
+          "covered_seconds": 0.39000000000000057,
+          "fully_covered": true
+        },
+        {
+          "word": "sus",
+          "start": 17.98,
+          "end": 18.2,
+          "covered_seconds": 0.21999999999999886,
+          "fully_covered": true
+        },
+        {
+          "word": "alas",
+          "start": 18.25,
+          "end": 18.66,
+          "covered_seconds": 0.41000000000000014,
+          "fully_covered": true
+        },
+        {
+          "word": "Después",
+          "start": 19.24,
+          "end": 19.75,
+          "covered_seconds": 0.5100000000000016,
+          "fully_covered": true
+        },
+        {
+          "word": "volvieron",
+          "start": 19.8,
+          "end": 20.2,
+          "covered_seconds": 0.3999999999999986,
+          "fully_covered": true
+        },
+        {
+          "word": "a",
+          "start": 20.2,
+          "end": 20.37,
+          "covered_seconds": 0.1700000000000017,
+          "fully_covered": true
+        },
+        {
+          "word": "casa",
+          "start": 20.4,
+          "end": 20.81,
+          "covered_seconds": 0.41000000000000014,
+          "fully_covered": true
+        },
+        {
+          "word": "y",
+          "start": 20.91,
+          "end": 21.04,
+          "covered_seconds": 0.129999999999999,
+          "fully_covered": true
+        },
+        {
+          "word": "dibujaron",
+          "start": 21.05,
+          "end": 21.48,
+          "covered_seconds": 0.4299999999999997,
+          "fully_covered": true
+        },
+        {
+          "word": "la",
+          "start": 21.48,
+          "end": 21.62,
+          "covered_seconds": 0.14000000000000057,
+          "fully_covered": true
+        },
+        {
+          "word": "mariposa",
+          "start": 21.64,
+          "end": 22.14,
+          "covered_seconds": 0.5,
+          "fully_covered": true
+        },
+        {
+          "word": "en",
+          "start": 22.14,
+          "end": 22.28,
+          "covered_seconds": 0.14000000000000057,
+          "fully_covered": true
+        },
+        {
+          "word": "un",
+          "start": 22.28,
+          "end": 22.36,
+          "covered_seconds": 0.0799999999999983,
+          "fully_covered": true
+        },
+        {
+          "word": "cuaderno",
+          "start": 22.36,
+          "end": 22.94,
+          "covered_seconds": 0.5800000000000018,
+          "fully_covered": true
+        }
+      ],
+      "annotation_file": "datos/anotaciones/lectura_normal.json",
+      "annotation_sha256": "f8cf26d38b44228aee4b83be34a16d30a9dbdd132fe393075356d01cda916c7a"
+    },
+    {
+      "number": 2,
+      "id": "lectura_desviaciones",
+      "audio": "datos/audio/Lectura con disfluencias (Ana repetida, sin despacio, mari-mariposa) - cuento 1 - 14-10-2026.wav",
+      "source_sha256": "936e41098628c1e1687f438ee7bed23c3e2ee1a68fd417866a6cf60037a35625",
+      "audio_seconds": 30.0,
+      "processing_seconds": 0.05436350009404123,
+      "cpu_seconds": 0.0625,
+      "intervals_seconds": [
+        [
+          1.296,
+          24.336
+        ]
+      ],
+      "last_vad_end_seconds": 24.336,
+      "candidate_input_blocks": [
+        {
+          "index": 0,
+          "start": 0,
+          "end": 30.0,
+          "vad_positive_seconds_with_padding": 23.04,
+          "no_vad_overlap": false,
+          "candidate_text": "Una mañana, Ana Ana salió al jardín de su casa, cerca de un árbol encontró una mariposa azul. La mariposa voló y se posó sobre una flor. Ana llamó a su hermano para que pudiera verla. Los dos se quedaron en cinesio mirando sus alas. Después volvieron a casa y dibujaron la mar- mariposa en un cuaderno.",
+          "is_last": true
+        }
+      ],
+      "human_anchors": []
+    },
+    {
+      "number": 3,
+      "id": "lectura_pausa",
+      "audio": "datos/audio/Lectura con pausa (flor-Ana) - cuento 1 - 14-10-2026.wav",
+      "source_sha256": "aa64d9b93fb86028f62a2c80173640a07ff31f2278c58031d57560b890190ab1",
+      "audio_seconds": 60.0,
+      "processing_seconds": 0.11200610001105815,
+      "cpu_seconds": 0.125,
+      "intervals_seconds": [
+        [
+          1.488,
+          12.176
+        ],
+        [
+          20.912,
+          31.376
+        ]
+      ],
+      "last_vad_end_seconds": 31.376,
+      "candidate_input_blocks": [
+        {
+          "index": 0,
+          "start": 0.0,
+          "end": 30.0,
+          "vad_positive_seconds_with_padding": 19.776000000000003,
+          "no_vad_overlap": false,
+          "candidate_text": "Una mañana Ana salió al jardín de su casa. Cerca de un árbol encontró una mariposa azul. La mariposa voló despacio y se posó sobre una flor. Ana llamó su hermano para que pudiera verla. Los dos se quedaron en silencio mirando sus alas. Después volvieron a casa y dibujaron",
+          "is_last": false
+        },
+        {
+          "index": 1,
+          "start": 26.0,
+          "end": 56.0,
+          "vad_positive_seconds_with_padding": 5.376000000000001,
+          "no_vad_overlap": false,
+          "candidate_text": "la mariposa en un cuaderno.",
+          "is_last": false
+        },
+        {
+          "index": 2,
+          "start": 52.0,
+          "end": 60.0,
+          "vad_positive_seconds_with_padding": 0.0,
+          "no_vad_overlap": true,
+          "candidate_text": "[throatclearing]",
+          "is_last": true
+        }
+      ],
+      "human_anchors": [
+        {
+          "word": "flor · antes de la pausa",
+          "start": 11.37,
+          "end": 11.88,
+          "covered_seconds": 0.5100000000000016,
+          "fully_covered": true
+        },
+        {
+          "word": "Ana · al retomar",
+          "start": 21.2,
+          "end": 21.5,
+          "covered_seconds": 0.3000000000000007,
+          "fully_covered": true
+        },
+        {
+          "word": "cuaderno · final",
+          "start": 30.47,
+          "end": 30.99,
+          "covered_seconds": 0.5199999999999996,
+          "fully_covered": true
+        }
+      ],
+      "annotation_file": "datos/anotaciones/lectura_pausa_fragmentos.json",
+      "annotation_sha256": "0a4bd5b6157a0add34e3549ae9e7378fbf8abbe17d469bc34f1471673df78658"
+    },
+    {
+      "number": 4,
+      "id": "lectura_lenta",
+      "audio": "datos/audio/Lectura lenta - cuento 1 - 16-10-2026.wav",
+      "source_sha256": "8f621da4e009c11ab8940098309b2aae260e4cf32ac32cf3c31d9529cc09095c",
+      "audio_seconds": 90.0,
+      "processing_seconds": 0.17313090001698583,
+      "cpu_seconds": 0.171875,
+      "intervals_seconds": [
+        [
+          0.752,
+          77.68
+        ]
+      ],
+      "last_vad_end_seconds": 77.68,
+      "candidate_input_blocks": [
+        {
+          "index": 0,
+          "start": 0.0,
+          "end": 30.0,
+          "vad_positive_seconds_with_padding": 29.248,
+          "no_vad_overlap": false,
+          "candidate_text": "Una mañana Ana salió al jardín de su casa. Cerca de un árbol encontró una mariposa azul. La mariposa voló",
+          "is_last": false
+        },
+        {
+          "index": 1,
+          "start": 26.0,
+          "end": 56.0,
+          "vad_positive_seconds_with_padding": 30.0,
+          "no_vad_overlap": false,
+          "candidate_text": "desváceo y se posó sobre una flor. Ana llamó a su hermano para que pudiera verla. Los dos se quedaron",
+          "is_last": false
+        },
+        {
+          "index": 2,
+          "start": 52.0,
+          "end": 82.0,
+          "vad_positive_seconds_with_padding": 25.680000000000007,
+          "no_vad_overlap": false,
+          "candidate_text": "en silencio, mirando sus alas. Después volvieron a casa y dibujaron la mariposa en un jugador no.",
+          "is_last": false
+        },
+        {
+          "index": 3,
+          "start": 78.0,
+          "end": 90.0,
+          "vad_positive_seconds_with_padding": 0.0,
+          "no_vad_overlap": true,
+          "candidate_text": "Ven.",
+          "is_last": true
+        }
+      ],
+      "human_anchors": [
+        {
+          "word": "Después",
+          "start": 59.38,
+          "end": 61.42,
+          "covered_seconds": 2.039999999999999,
+          "fully_covered": true
+        },
+        {
+          "word": "mariposa · última frase",
+          "start": 70.4,
+          "end": 72.73,
+          "covered_seconds": 2.3299999999999983,
+          "fully_covered": true
+        },
+        {
+          "word": "un · antes de cuaderno",
+          "start": 74.26,
+          "end": 75.01,
+          "covered_seconds": 0.75,
+          "fully_covered": true
+        },
+        {
+          "word": "cuaderno · final",
+          "start": 75.14,
+          "end": 77.34,
+          "covered_seconds": 2.200000000000003,
+          "fully_covered": true
+        }
+      ],
+      "annotation_file": "datos/anotaciones/lectura_lenta_fragmentos.json",
+      "annotation_sha256": "270653564a018fcb6ad972fb18e7e08a14ef9cec59b2b4282d8ef1ac6f2b5d66"
+    },
+    {
+      "number": 5,
+      "id": "lectura_relectura",
+      "audio": "datos/audio/Lectura con relectura (Los dos se quedaron en silencio) - cuento 1 - 16-10-2026.wav",
+      "source_sha256": "0a766b9ca16e78e973fbce9c008952301e25275bfe2f6fc621c3df98524db03a",
+      "audio_seconds": 60.0,
+      "processing_seconds": 0.1143339000409469,
+      "cpu_seconds": 0.109375,
+      "intervals_seconds": [
+        [
+          1.2,
+          29.68
+        ]
+      ],
+      "last_vad_end_seconds": 29.68,
+      "candidate_input_blocks": [
+        {
+          "index": 0,
+          "start": 0.0,
+          "end": 30.0,
+          "vad_positive_seconds_with_padding": 28.48,
+          "no_vad_overlap": false,
+          "candidate_text": "Una mañana Ana salió al jardín de su casa. Cerca de un árbol encontró una mariposa azul. La mariposa voló despacio y se posó sobre una flor. Ana llamó su hermano para que pudiera verla. Los dos se quedaron en silencio. Los dos se quedaron en silencio mirando sus alas. Después volvieron a casa y dibujaron la mariposa en",
+          "is_last": false
+        },
+        {
+          "index": 1,
+          "start": 26.0,
+          "end": 56.0,
+          "vad_positive_seconds_with_padding": 3.6799999999999997,
+          "no_vad_overlap": false,
+          "candidate_text": "un cuaderno.",
+          "is_last": false
+        },
+        {
+          "index": 2,
+          "start": 52.0,
+          "end": 60.0,
+          "vad_positive_seconds_with_padding": 0.0,
+          "no_vad_overlap": true,
+          "candidate_text": "Ven.",
+          "is_last": true
+        }
+      ],
+      "human_anchors": [
+        {
+          "word": "Los dos se quedaron en silencio · primer intento",
+          "start": 17.54,
+          "end": 19.84,
+          "covered_seconds": 2.3000000000000007,
+          "fully_covered": true
+        },
+        {
+          "word": "Los dos se quedaron en silencio · segundo intento",
+          "start": 20.36,
+          "end": 22.77,
+          "covered_seconds": 2.41,
+          "fully_covered": true
+        },
+        {
+          "word": "mirando · después del segundo intento",
+          "start": 22.91,
+          "end": 23.29,
+          "covered_seconds": 0.379999999999999,
+          "fully_covered": true
+        }
+      ],
+      "annotation_file": "datos/anotaciones/lectura_relectura_fragmentos.json",
+      "annotation_sha256": "9465e730681fee16b6f3b5a6ea157933cda4499ce6a8570e53c0a27657b14e09"
+    },
+    {
+      "number": 6,
+      "id": "lectura_relectura_lejana",
+      "audio": "datos/audio/Lectura con relectura lejana (Los dos-alas) - cuento 1 - 21-10-2026.wav",
+      "source_sha256": "95a35ea5f0e3cdef076ac52db87a80286c5f4eaebd1f8f0579cda1d25c6cc058",
+      "audio_seconds": 60.0,
+      "processing_seconds": 0.17150639998726547,
+      "cpu_seconds": 0.15625,
+      "intervals_seconds": [
+        [
+          0.784,
+          25.712
+        ],
+        [
+          28.784,
+          33.136
+        ]
+      ],
+      "last_vad_end_seconds": 33.136,
+      "candidate_input_blocks": [
+        {
+          "index": 0,
+          "start": 0.0,
+          "end": 30.0,
+          "vad_positive_seconds_with_padding": 26.144000000000002,
+          "no_vad_overlap": false,
+          "candidate_text": "Una mañana Ana salió al jardín de su casa. Cerca de un árbol encontró una mariposa azul. La mariposa voló despacio y se posó sobre una flor. Ana llamó a su hermano para que pudiera verla. Los dos se quedaron en silencio mirando sus alas. Después volvieron a casa y dibujaron la mariposa en un cuaderno.",
+          "is_last": false
+        },
+        {
+          "index": 1,
+          "start": 26.0,
+          "end": 56.0,
+          "vad_positive_seconds_with_padding": 4.352000000000004,
+          "no_vad_overlap": false,
+          "candidate_text": "Los dos se quedaron en silencio mirando sus alas.",
+          "is_last": false
+        },
+        {
+          "index": 2,
+          "start": 52.0,
+          "end": 60.0,
+          "vad_positive_seconds_with_padding": 0.0,
+          "no_vad_overlap": true,
+          "candidate_text": "¿Y por qué no se puede ver el maravilla?",
+          "is_last": true
+        }
+      ],
+      "human_anchors": [
+        {
+          "word": "cuaderno · final de la lectura completa",
+          "start": 24.65,
+          "end": 25.48,
+          "covered_seconds": 0.8300000000000018,
+          "fully_covered": true
+        },
+        {
+          "word": "Los · inicio de la relectura",
+          "start": 29.16,
+          "end": 29.43,
+          "covered_seconds": 0.2699999999999996,
+          "fully_covered": true
+        },
+        {
+          "word": "alas · final de la relectura",
+          "start": 32.17,
+          "end": 32.73,
+          "covered_seconds": 0.5599999999999952,
+          "fully_covered": true
+        }
+      ],
+      "annotation_file": "datos/anotaciones/lectura_relectura_lejana_fragmentos.json",
+      "annotation_sha256": "0156a1d717ed263fe4d4bba809aa3e55a9e1ff51e661c7f61692f1681f6a6b47"
+    },
+    {
+      "number": 7,
+      "id": "lectura_normal_lluvia",
+      "audio": "datos/audio/Lectura normal con lluvia - cuento 1 - 21-10-2026.wav",
+      "source_sha256": "86eaef918d35a272a1ba1ee613dfae4993583ebba63e2ae47fc235f7ca1f1315",
+      "audio_seconds": 40.0,
+      "processing_seconds": 0.08578449999913573,
+      "cpu_seconds": 0.09375,
+      "intervals_seconds": [
+        [
+          0.816,
+          26.864
+        ]
+      ],
+      "last_vad_end_seconds": 26.864,
+      "candidate_input_blocks": [
+        {
+          "index": 0,
+          "start": 0.0,
+          "end": 30.0,
+          "vad_positive_seconds_with_padding": 26.048000000000002,
+          "no_vad_overlap": false,
+          "candidate_text": "Una mañana Ana salió al jardín de su casa. Cerca de un árbol encontró una mariposa azul. La mariposa voló despacio y se posó sobre una flor. Ana llamó su hermano para que pudiera verla. Los dos se quedaron en silencio, mirando sus alas. Después, volvieron a casa y dibujaron la mariposa en un cuaderno.",
+          "is_last": false
+        },
+        {
+          "index": 1,
+          "start": 26.0,
+          "end": 40.0,
+          "vad_positive_seconds_with_padding": 0.8640000000000008,
+          "no_vad_overlap": false,
+          "candidate_text": "",
+          "is_last": true
+        }
+      ],
+      "human_anchors": []
+    },
+    {
+      "number": 8,
+      "id": "lectura_relectura_azul",
+      "audio": "datos/audio/Lectura con relectura lejana (Cerca-azul) - cuento 1 - 21-10-2026.wav",
+      "source_sha256": "edc0a0b368b9c5c1a63a3290071c207786f72aa7fd91bbd0e982f622a3a6b56b",
+      "audio_seconds": 45.0,
+      "processing_seconds": 0.08321820001583546,
+      "cpu_seconds": 0.109375,
+      "intervals_seconds": [
+        [
+          0.72,
+          22.8
+        ],
+        [
+          25.648,
+          34.672
+        ]
+      ],
+      "last_vad_end_seconds": 34.672,
+      "candidate_input_blocks": [
+        {
+          "index": 0,
+          "start": 0.0,
+          "end": 30.0,
+          "vad_positive_seconds_with_padding": 26.432000000000002,
+          "no_vad_overlap": false,
+          "candidate_text": "Una mañana Ana salió al jardín de su casa. Cerca de un árbol encontró una mariposa azul. La mariposa voló despacio y se posó sobre una flor. Ana llamó su hermano para que pudiera verla. Los dos se quedaron en silencio, mirando sus alas. Después volvieron a casa y dibujaron la mariposa en un cuaderno. Cerca de un árbol",
+          "is_last": false
+        },
+        {
+          "index": 1,
+          "start": 26.0,
+          "end": 45.0,
+          "vad_positive_seconds_with_padding": 8.671999999999997,
+          "no_vad_overlap": false,
+          "candidate_text": "encontró una mariposa azul.",
+          "is_last": true
+        }
+      ],
+      "human_anchors": [
+        {
+          "word": "cuaderno · final de la lectura completa",
+          "start": 21.79,
+          "end": 22.51,
+          "covered_seconds": 0.7200000000000024,
+          "fully_covered": true
+        },
+        {
+          "word": "Cerca · inicio de la relectura",
+          "start": 25.73,
+          "end": 26.84,
+          "covered_seconds": 1.1099999999999994,
+          "fully_covered": true
+        },
+        {
+          "word": "azul · final de la relectura",
+          "start": 33.32,
+          "end": 34.32,
+          "covered_seconds": 1.0,
+          "fully_covered": true
+        }
+      ],
+      "annotation_file": "datos/anotaciones/lectura_relectura_azul_fragmentos.json",
+      "annotation_sha256": "0fe4eb58058dbaa9838ca835f8b5944fd3227a71d8b91d36cb700aeb94a220bb"
+    },
+    {
+      "number": 9,
+      "id": "lectura_02_normal",
+      "audio": "datos/audio/Lectura normal con lluvia - cuento 2 - 21-10-2026.wav",
+      "source_sha256": "a5846127dce81250bb8387d4c2fba2d1383780772c565e1c7c87ef98b79dad55",
+      "audio_seconds": 40.0,
+      "processing_seconds": 0.06997389998286963,
+      "cpu_seconds": 0.078125,
+      "intervals_seconds": [
+        [
+          0.784,
+          26.352
+        ]
+      ],
+      "last_vad_end_seconds": 26.352,
+      "candidate_input_blocks": [
+        {
+          "index": 0,
+          "start": 0.0,
+          "end": 30.0,
+          "vad_positive_seconds_with_padding": 25.568,
+          "no_vad_overlap": false,
+          "candidate_text": "Una tarde, Lucía paseaba por el parque con su abuelo. Junto a una fuente descubrió un pequeño barco rojo. El barco flotaba despacio entre las hojas. Lucía buscó una rama para acercarlo a la orilla. Su abuelo la ayudó y juntos sacaron el barco del agua. Después regresaron a casa y lo colocaron sobre una estantería.",
+          "is_last": false
+        },
+        {
+          "index": 1,
+          "start": 26.0,
+          "end": 40.0,
+          "vad_positive_seconds_with_padding": 0.3520000000000003,
+          "no_vad_overlap": false,
+          "candidate_text": "",
+          "is_last": true
+        }
+      ],
+      "human_anchors": []
+    },
+    {
+      "number": 10,
+      "id": "lectura_02_relectura",
+      "audio": "datos/audio/Lectura con relectura lejana (Junto-rojo) - cuento 2 - 21-10-2026.wav",
+      "source_sha256": "cc005957daf10f5042c2ff5c93eeea8f97ccdc58ccdf9b4c0580284bf7e44a3f",
+      "audio_seconds": 45.0,
+      "processing_seconds": 0.07844640000257641,
+      "cpu_seconds": 0.078125,
+      "intervals_seconds": [
+        [
+          0.528,
+          26.48
+        ],
+        [
+          29.072,
+          40.272
+        ]
+      ],
+      "last_vad_end_seconds": 40.272,
+      "candidate_input_blocks": [
+        {
+          "index": 0,
+          "start": 0.0,
+          "end": 30.0,
+          "vad_positive_seconds_with_padding": 26.880000000000003,
+          "no_vad_overlap": false,
+          "candidate_text": "Una tarde, Lucía paseaba por el parque con su abuelo. Junto a una fuente descubrió un pequeño barco rojo. El barco flotaba despacio entre las hojas. Lucía buscó una rama para acercarlo a la orilla. Su abuelo la ayudó y juntos sacaron el barco del agua. Después regresaron a casa y lo colocaron sobre una estantería.",
+          "is_last": false
+        },
+        {
+          "index": 1,
+          "start": 26.0,
+          "end": 45.0,
+          "vad_positive_seconds_with_padding": 11.68,
+          "no_vad_overlap": false,
+          "candidate_text": "Junto a una fuente descubrió un pequeño barco rojo.",
+          "is_last": true
+        }
+      ],
+      "human_anchors": [
+        {
+          "word": "estantería · final de la lectura completa",
+          "start": 25.25,
+          "end": 26.13,
+          "covered_seconds": 0.879999999999999,
+          "fully_covered": true
+        },
+        {
+          "word": "Junto · inicio de la relectura",
+          "start": 29.25,
+          "end": 30.13,
+          "covered_seconds": 0.879999999999999,
+          "fully_covered": true
+        },
+        {
+          "word": "rojo · final de la relectura",
+          "start": 38.81,
+          "end": 39.95,
+          "covered_seconds": 1.1400000000000006,
+          "fully_covered": true
+        }
+      ],
+      "annotation_file": "datos/anotaciones/lectura_02_relectura_fragmentos.json",
+      "annotation_sha256": "5cb007079267f0df7e849fce4032a9d49be74f44747b5b2da97e8f4f247bee54"
+    },
+    {
+      "number": 11,
+      "id": "lectura_20261023_100001_445275",
+      "audio": "datos/audio/Lectura lenta - cuento 2 - lectura_02 - 23-10-2026.wav",
+      "source_sha256": "36c7d9656b4d74e81a4fa0160bef887c2a571d7597381d890e0e48fcbb524add",
+      "audio_seconds": 90.0,
+      "processing_seconds": 0.15329370007384568,
+      "cpu_seconds": 0.140625,
+      "intervals_seconds": [
+        [
+          0.656,
+          66.8
+        ]
+      ],
+      "last_vad_end_seconds": 66.8,
+      "candidate_input_blocks": [
+        {
+          "index": 0,
+          "start": 0.0,
+          "end": 30.0,
+          "vad_positive_seconds_with_padding": 29.344,
+          "no_vad_overlap": false,
+          "candidate_text": "Una tarde, Lucía paseaba por el parque con su abuelo. Junto a una fuente descubrió un pequeño barco rojo. El barco",
+          "is_last": false
+        },
+        {
+          "index": 1,
+          "start": 26.0,
+          "end": 56.0,
+          "vad_positive_seconds_with_padding": 30.0,
+          "no_vad_overlap": false,
+          "candidate_text": "flotaba despacio entre las hojas. Lucía buscó una rama para acercarlo a la orilla. Su abuelo la ayudó y juntos sacaron el barco del agua.",
+          "is_last": false
+        },
+        {
+          "index": 2,
+          "start": 52.0,
+          "end": 82.0,
+          "vad_positive_seconds_with_padding": 14.799999999999997,
+          "no_vad_overlap": false,
+          "candidate_text": "Después regresaron a casa y lo colocaron sobre una estantería.",
+          "is_last": false
+        },
+        {
+          "index": 3,
+          "start": 78.0,
+          "end": 90.0,
+          "vad_positive_seconds_with_padding": 0.0,
+          "no_vad_overlap": true,
+          "candidate_text": "A la vez de hoy, la familia está en su casa, y el joven se lo lleva.",
+          "is_last": true
+        }
+      ],
+      "human_anchors": []
+    },
+    {
+      "number": 12,
+      "id": "lectura_20261023_100220_540414",
+      "audio": "datos/audio/Lectura rápida - cuento 2 - lectura_02 - 23-10-2026.wav",
+      "source_sha256": "37c8c42aa14e0bc5c4cc75eef493f61c0c86569017ae91513bc00799e10cc330",
+      "audio_seconds": 30.0,
+      "processing_seconds": 0.0520128000061959,
+      "cpu_seconds": 0.03125,
+      "intervals_seconds": [
+        [
+          0.368,
+          16.144
+        ]
+      ],
+      "last_vad_end_seconds": 16.144,
+      "candidate_input_blocks": [
+        {
+          "index": 0,
+          "start": 0,
+          "end": 30.0,
+          "vad_positive_seconds_with_padding": 15.775999999999998,
+          "no_vad_overlap": false,
+          "candidate_text": "Una tarde, Lucia paseaba por el parque con su abuelo, junto a una fuente descubrió un pequeño barco rojo, el barco flotaba despacio entre las hojas, Lucia buscó una rama para acercarlo a la orilla, su abuelo la ayudó y junto sacaron el barco del agua, después regresaron a casa y lo colocaron sobre una estantería.",
+          "is_last": true
+        }
+      ],
+      "human_anchors": []
+    },
+    {
+      "number": 13,
+      "id": "lectura_20261023_100623_099029",
+      "audio": "datos/audio/Lectura pausa con relectura barco rojo - el barco - cuento 2 - lectura_02 - 23-10-2026.wav",
+      "source_sha256": "b2632f1e455515be97f00369b68e7db929a9ab24d283897197e0bc53cf6098df",
+      "audio_seconds": 50.0,
+      "processing_seconds": 0.09180209995247424,
+      "cpu_seconds": 0.09375,
+      "intervals_seconds": [
+        [
+          0.88,
+          10.16
+        ],
+        [
+          18.832,
+          41.776
+        ]
+      ],
+      "last_vad_end_seconds": 41.776,
+      "candidate_input_blocks": [
+        {
+          "index": 0,
+          "start": 0.0,
+          "end": 30.0,
+          "vad_positive_seconds_with_padding": 20.448,
+          "no_vad_overlap": false,
+          "candidate_text": "Una tarde, Lucía paseaba por el parque con su abuelo, junto a una fuente descubrió un pequeño barco rojo. Junto a una fuente descubrió un pequeño barco rojo, el barco flotaba de espacio entre las hojas. Lucía buscó una rama para acercar a",
+          "is_last": false
+        },
+        {
+          "index": 1,
+          "start": 26.0,
+          "end": 50.0,
+          "vad_positive_seconds_with_padding": 15.776000000000003,
+          "no_vad_overlap": false,
+          "candidate_text": "la orilla, su abuelo la ayudó y juntos sacaron el barco del agua, después regresaron a casa y lo colocaron sobre una estantería.",
+          "is_last": true
+        }
+      ],
+      "human_anchors": []
+    },
+    {
+      "number": 14,
+      "id": "lectura_20261023_100912_195344",
+      "audio": "datos/audio/Lectura sustitución rojo por azul - cuento 2 - lectura_02 - 23-10-2026.wav",
+      "source_sha256": "a90c4aaca2e09e2fcf6271dd71002f382b8afe457727baa1511d503b7b6d2b03",
+      "audio_seconds": 50.0,
+      "processing_seconds": 0.08777579991146922,
+      "cpu_seconds": 0.09375,
+      "intervals_seconds": [
+        [
+          0.592,
+          28.24
+        ]
+      ],
+      "last_vad_end_seconds": 28.24,
+      "candidate_input_blocks": [
+        {
+          "index": 0,
+          "start": 0.0,
+          "end": 30.0,
+          "vad_positive_seconds_with_padding": 27.648,
+          "no_vad_overlap": false,
+          "candidate_text": "Una tarde, Lucía paseaba por el parque con su abuelo. Junto a una fuente descubrió un pequeño barco azul. El barco flotaba despacio entre las hojas. Lucía buscó una rama para acercarlo a la orilla. Su abuelo la ayudó y juntos sacaron el barco del agua. Después regresaron a casa y lo colocaron sobre",
+          "is_last": false
+        },
+        {
+          "index": 1,
+          "start": 26.0,
+          "end": 50.0,
+          "vad_positive_seconds_with_padding": 2.2399999999999984,
+          "no_vad_overlap": false,
+          "candidate_text": "una estantería.",
+          "is_last": true
+        }
+      ],
+      "human_anchors": []
+    },
+    {
+      "number": 15,
+      "id": "lectura_20261023_101133_857937",
+      "audio": "datos/audio/Lectura con ruido de fondo - cuento 2 - lectura_02 - 23-10-2026.wav",
+      "source_sha256": "408a8d4c21b92b3d4390300d5e65d02105610a478d4c5df563da9702acbadde8",
+      "audio_seconds": 50.0,
+      "processing_seconds": 0.0844737000297755,
+      "cpu_seconds": 0.078125,
+      "intervals_seconds": [
+        [
+          0.624,
+          27.92
+        ]
+      ],
+      "last_vad_end_seconds": 27.92,
+      "candidate_input_blocks": [
+        {
+          "index": 0,
+          "start": 0.0,
+          "end": 30.0,
+          "vad_positive_seconds_with_padding": 27.296000000000003,
+          "no_vad_overlap": false,
+          "candidate_text": "Una tarde, Lucía paseaba por el parque con su abuelo. Junto a una fuente descubrió un pequeño barco rojo. El barco flotaba despacio entre las hojas. Lucía buscó una rama para acercarlo a la orilla. Su abuelo la ayudó y juntos sacaron el barco del agua. Después, regresaron a casa y lo colocaron sobre",
+          "is_last": false
+        },
+        {
+          "index": 1,
+          "start": 26.0,
+          "end": 50.0,
+          "vad_positive_seconds_with_padding": 1.9200000000000017,
+          "no_vad_overlap": false,
+          "candidate_text": "una estantería.",
+          "is_last": true
+        }
+      ],
+      "human_anchors": []
+    },
+    {
+      "number": 16,
+      "id": "lectura_20261023_101522_832827",
+      "audio": "datos/audio/Lectura con muchas trabadas - cuento 2 - lectura_02 - 23-10-2026.wav",
+      "source_sha256": "c40c2b067709afc6e4f80ecb69db4ad37c8fa33263323f5ab70848491fcce0b7",
+      "audio_seconds": 60.0,
+      "processing_seconds": 0.11960820003878325,
+      "cpu_seconds": 0.109375,
+      "intervals_seconds": [
+        [
+          0.432,
+          56.528
+        ]
+      ],
+      "last_vad_end_seconds": 56.528,
+      "candidate_input_blocks": [
+        {
+          "index": 0,
+          "start": 0.0,
+          "end": 30.0,
+          "vad_positive_seconds_with_padding": 29.568,
+          "no_vad_overlap": false,
+          "candidate_text": "U- u- una tarde lu- lucia pa- paseaba por el par- parque con su abuelo junto a una un- una fuente des- des- descu- descubrió un pe- pequeño barco rojo, el el barco el barco flotaba des- despacio en entre",
+          "is_last": false
+        },
+        {
+          "index": 1,
+          "start": 26.0,
+          "end": 56.0,
+          "vad_positive_seconds_with_padding": 30.0,
+          "no_vad_overlap": false,
+          "candidate_text": "las hojas. Lu- Lucia buscó una r- rama para acercarlo a la ori- o- orilla. Su abuelo la la ayudó y y juntos sa- sacaron el barco del del agua. Des- después regres- regresaron a casa y lo y lo colocaron sobre",
+          "is_last": false
+        },
+        {
+          "index": 2,
+          "start": 52.0,
+          "end": 60.0,
+          "vad_positive_seconds_with_padding": 4.527999999999999,
+          "no_vad_overlap": false,
+          "candidate_text": "una estantería.",
+          "is_last": true
+        }
+      ],
+      "human_anchors": []
+    },
+    {
+      "number": 17,
+      "id": "lectura_20261023_101713_339466",
+      "audio": "datos/audio/Lectura omisión abuelo - cuento 2 - lectura_02 - 23-10-2026.wav",
+      "source_sha256": "c2ed4663b151f477d675ac96a8711186876b0251aa654ddde9b0f766b513917e",
+      "audio_seconds": 40.0,
+      "processing_seconds": 0.07429440005216748,
+      "cpu_seconds": 0.078125,
+      "intervals_seconds": [
+        [
+          0.976,
+          27.632
+        ]
+      ],
+      "last_vad_end_seconds": 27.632,
+      "candidate_input_blocks": [
+        {
+          "index": 0,
+          "start": 0.0,
+          "end": 30.0,
+          "vad_positive_seconds_with_padding": 26.656000000000002,
+          "no_vad_overlap": false,
+          "candidate_text": "Una tarde, Lucía paseaba por el parque Consu, junto a una fuente descubrió un pequeño barco rojo. El barco flotaba despacio entre las hojas. Lucía buscó una rama para acercarlo a la orilla. Suu la ayudó y juntos sacaron el barco del agua. Después regresaron a casa y lo colocaron sobre",
+          "is_last": false
+        },
+        {
+          "index": 1,
+          "start": 26.0,
+          "end": 40.0,
+          "vad_positive_seconds_with_padding": 1.6320000000000014,
+          "no_vad_overlap": false,
+          "candidate_text": "una estantería.",
+          "is_last": true
+        }
+      ],
+      "human_anchors": []
+    }
+  ],
+  "notice": "Inferencia VAD nueva sobre los 17 arrays originales; no es ASR nuevo. Intervalos VAD con margen, no referencia humana ni detector perfecto. No se recorta, concatena, cambia la duración ni filtra ninguna salida. La cobertura de anclas solo comprueba límites ya anotados; no valida todas las sílabas/trabadas. Parámetros iniciales, no óptimos.",
+  "model_load_seconds": 0.24270160007290542,
+  "status": "completo",
+  "resources": {
+    "hardware": {
+      "captured_at_utc": "2026-10-25T19:23:08.671513+00:00",
+      "os": "Windows-11-10.0.26200-SP0",
+      "architecture": "AMD64",
+      "python": "3.12.15",
+      "cpu_model": "11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz",
+      "logical_cpus": 16,
+      "memory": {
+        "status": "medido",
+        "working_set_bytes": 62033920,
+        "private_commit_bytes": 571424768,
+        "process_lifetime_peak_working_set_bytes": 62349312,
+        "system_ram_total_bytes": 16866881536,
+        "system_ram_available_bytes": 7911702528
+      },
+      "gpu": {
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 521.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.29,
+            "temperature_celsius": 46.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      }
+    },
+    "wall_seconds": 2.126964599941857,
+    "process_cpu_seconds": 1.984375,
+    "cpu_average_percent_one_logical_core": 93.29609905375223,
+    "cpu_average_percent_machine_capacity": 5.831006190859514,
+    "samples": [
+      {
+        "elapsed_seconds": 0.00020849995780736208,
+        "cpu_seconds": 0.0,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 62197760,
+          "private_commit_bytes": 571473920,
+          "process_lifetime_peak_working_set_bytes": 62349312,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 7899717632
+        }
+      },
+      {
+        "elapsed_seconds": 0.42167549999430776,
+        "cpu_seconds": 0.296875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 112496640,
+          "private_commit_bytes": 617684992,
+          "process_lifetime_peak_working_set_bytes": 112496640,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 7846113280
+        }
+      },
+      {
+        "elapsed_seconds": 0.6771274999482557,
+        "cpu_seconds": 0.546875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 108244992,
+          "private_commit_bytes": 609804288,
+          "process_lifetime_peak_working_set_bytes": 132628480,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 7842631680
+        }
+      },
+      {
+        "elapsed_seconds": 0.933712900034152,
+        "cpu_seconds": 0.796875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 120303616,
+          "private_commit_bytes": 620982272,
+          "process_lifetime_peak_working_set_bytes": 132628480,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 7820812288
+        }
+      },
+      {
+        "elapsed_seconds": 1.1913624999579042,
+        "cpu_seconds": 1.046875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 100421632,
+          "private_commit_bytes": 601755648,
+          "process_lifetime_peak_working_set_bytes": 132628480,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 7830384640
+        }
+      },
+      {
+        "elapsed_seconds": 1.5251603999640793,
+        "cpu_seconds": 1.40625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 136237056,
+          "private_commit_bytes": 637259776,
+          "process_lifetime_peak_working_set_bytes": 136237056,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 7799218176
+        }
+      },
+      {
+        "elapsed_seconds": 1.7800531999673694,
+        "cpu_seconds": 1.640625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 114724864,
+          "private_commit_bytes": 615350272,
+          "process_lifetime_peak_working_set_bytes": 142000128,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 7810715648
+        }
+      },
+      {
+        "elapsed_seconds": 2.036807999946177,
+        "cpu_seconds": 1.890625,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 123957248,
+          "private_commit_bytes": 625008640,
+          "process_lifetime_peak_working_set_bytes": 142000128,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 7805161472
+        }
+      }
+    ],
+    "gpu_samples": [
+      {
+        "elapsed_seconds": 0.00020849995780736208,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 521.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.29,
+            "temperature_celsius": 46.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 1.1913624999579042,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 521.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.31,
+            "temperature_celsius": 46.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      }
+    ],
+    "final_memory": {
+      "status": "medido",
+      "working_set_bytes": 90865664,
+      "private_commit_bytes": 591822848,
+      "process_lifetime_peak_working_set_bytes": 142000128,
+      "system_ram_total_bytes": 16866881536,
+      "system_ram_available_bytes": 7839248384
+    },
+    "unavailable": {
+      "asr_energy_joules": null,
+      "cpu_temperature_celsius": null,
+      "asr_flops": null,
+      "tablet_memory_and_battery": null
+    },
+    "notice": "CPU y RAM del proceso completo, incluido muestreo. CPU 100% equivale a un procesador lógico; puede superar 100%. GPU/VRAM/potencia/temperatura son del equipo completo, no del ASR. No se mide energía específica, FLOPs ni rendimiento de tablet. Intervalos reales registrados, máximos muestreados no garantizan pico. Muestreo separado de inferencia; puede influir en la carga."
+  },
+  "asr_outputs_unchanged": true,
+  "human_anchors_count": 75,
+  "human_anchors_fully_covered": 75
+}

@@ -1,0 +1,505 @@
+{
+  "experiment": "literal_control_final_vad",
+  "created_date": "2026-10-26",
+  "sample_rate_hz": 16000,
+  "candidate_model": {
+    "repo": "nyralabs/CrisperWhisper2.0_small",
+    "revision": "bcaecf0a584a1f600d8897fe6032b9e2e56429a7",
+    "files": [
+      {
+        "file": "added_tokens.json",
+        "bytes": 35275,
+        "sha256": "54e87fd086baa530e05082c11feacf9df5439453c5fae279611f3099ec844dc5"
+      },
+      {
+        "file": "config.json",
+        "bytes": 1344,
+        "sha256": "58cdd5607712143b7c6ed474380627732ab4eadb6dbcf60a85c9b32cba625de2"
+      },
+      {
+        "file": "generation_config.json",
+        "bytes": 3834,
+        "sha256": "c8c487bc35b117a94196e9d533def05e83c65c747b19350bc1773f59f3562085"
+      },
+      {
+        "file": "LICENSE.md",
+        "bytes": 17784,
+        "sha256": "42f43bf4dc72ef422f91f6ca143f4514e21a68b353940d99091c1addcd0aee79"
+      },
+      {
+        "file": "merges.txt",
+        "bytes": 493869,
+        "sha256": "2df2990a395e35e8dfbc7511e08c12d56018d8d04691e0133e5d63b21e154dc6"
+      },
+      {
+        "file": "model.safetensors",
+        "bytes": 483575002,
+        "sha256": "ecfcbd3d5dddebf9c79cd9ae774b6f6a5d68a500cdbe1b196ce5b2085912ebdf"
+      },
+      {
+        "file": "normalizer.json",
+        "bytes": 52666,
+        "sha256": "bf1c507dc8724ca9cf9903640dacfb69dae2f00edee4f21ceba106a7392f26dd"
+      },
+      {
+        "file": "preprocessor_config.json",
+        "bytes": 356,
+        "sha256": "994838f1fa6462c8b9b3c90edada831f11f3dd8b4664634e18f4694d005c9dbf"
+      },
+      {
+        "file": "README.md",
+        "bytes": 10974,
+        "sha256": "ddc82a301a1b59035eefcc1a8b2ec90d56257104df7365b00493c58135a6b029"
+      },
+      {
+        "file": "special_tokens_map.json",
+        "bytes": 2194,
+        "sha256": "e67ae3a0aaa99abcd9f187138e12db1f65c16a14761c50ef10eef2c174a7a691"
+      },
+      {
+        "file": "tokenizer.json",
+        "bytes": 3936954,
+        "sha256": "567da8c8a5b7df02555deecfcb3a7f6acd315844dc5e2fde883fe7ced8467317"
+      },
+      {
+        "file": "tokenizer_config.json",
+        "bytes": 288127,
+        "sha256": "5fa089926c8c2535c622d09a5992fb57c63cbc3514e18cf40bc535bee2a23827"
+      },
+      {
+        "file": "vocab.json",
+        "bytes": 835550,
+        "sha256": "8f680bba319e01a653d2e8a5dbc17a9157179e0576e6ce74ce0c06356c6e24f9"
+      }
+    ],
+    "spanish_language_token": true,
+    "total_bytes": 489253929,
+    "license_source": "C:\\Users\\PC\\OneDrive\\Documentos\\ChatGPT\\Practicas y TFG\\modelos\\crisperwhisper2-small\\LICENSE.md"
+  },
+  "record_per_audio_resources": true,
+  "source_batch": "resultados/literalidad/20261026_081747_630720_UTC",
+  "source_manifest_sha256": "04d817f7f36c4a9ad2e052a8e66656c3c82836eefef2e66b0e350ae9ee925b6a",
+  "source_candidate_sha256": "fc59e3022656331a3c19c43155d2dc46e5e46675b9be8135a175e0a844f31f28",
+  "source_vad_sha256": "b6497a8da1ef367b0719ce2fd3544e2403355b440b31a8397310e3b309042822",
+  "source_worker_sha256": "d8c35a13500035de5c823a7c959e67ba871a79045dc6d5240789e35a94179de9",
+  "source_parameters": {
+    "language": "es",
+    "mode": "verbatim",
+    "sr": 16000,
+    "word_timestamps": true,
+    "max_new_tokens": 256,
+    "hallucination_mitigation": true,
+    "temperature_fallback": true,
+    "longform_strategy": "continuation",
+    "chunk_duration": 30.0,
+    "stride": 26.0,
+    "context_words": 12,
+    "drop_words": 2,
+    "timestamp_aware_drop": true,
+    "early_eot_recovery": true
+  },
+  "source_versions": {
+    "numpy": "2.5.4",
+    "crisperwhisper": "2.0.3",
+    "torch": "2.14.1+cpu",
+    "transformers": "5.20.2",
+    "tokenizers": "0.23.3"
+  },
+  "preserved_sources": [
+    {
+      "file": "resultados/literalidad/20261026_081747_630720_UTC/baseline.json",
+      "sha256": "3d2c4608f6ae4c08e239c649871c7137644284d0d08eeeb8a5de8c7f80d1a0fd"
+    },
+    {
+      "file": "resultados/literalidad/20261026_081747_630720_UTC/candidato.json",
+      "sha256": "fc59e3022656331a3c19c43155d2dc46e5e46675b9be8135a175e0a844f31f28"
+    },
+    {
+      "file": "resultados/literalidad/20261026_081747_630720_UTC/catalogo_snapshot.json",
+      "sha256": "67b085977c278d59446a538d38b9149cf38a3f2e1f5e3c1a5e34557c8e709b49"
+    },
+    {
+      "file": "resultados/literalidad/20261026_081747_630720_UTC/diagnostico_vad_literal.json",
+      "sha256": "b6497a8da1ef367b0719ce2fd3544e2403355b440b31a8397310e3b309042822"
+    },
+    {
+      "file": "resultados/literalidad/20261026_081747_630720_UTC/integridad.json",
+      "sha256": "2d97a97447577efc1dcebb14f9dcdfce516ecf283be259abcfd6d21080ba526c"
+    },
+    {
+      "file": "resultados/literalidad/20261026_081747_630720_UTC/manifest.json",
+      "sha256": "04d817f7f36c4a9ad2e052a8e66656c3c82836eefef2e66b0e350ae9ee925b6a"
+    },
+    {
+      "file": "resultados/literalidad/20261026_081747_630720_UTC/metricas.json",
+      "sha256": "2da9b9ef2a9c9fd14640b2bee6eb69ae770c12464e926a846272b43968049499"
+    }
+  ],
+  "selection_original_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "vad_options": {
+    "threshold": 0.5,
+    "neg_threshold": null,
+    "min_speech_duration_ms": 0,
+    "max_speech_duration_s": Infinity,
+    "min_silence_duration_ms": 2000,
+    "speech_pad_ms": 400
+  },
+  "samples": [
+    {
+      "id": "lectura_20261026_080028_124216",
+      "kind": "normal",
+      "label": "Audio 1 · Lectura normal - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "original_number": 1,
+      "role": "seleccion_explicita",
+      "start": 0,
+      "end": 52.592,
+      "original_seconds": 90.0,
+      "removed_tail_seconds": 37.408,
+      "prefix_end_sample": 841472,
+      "source_audio": "datos/audio/Lectura normal - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "source_sha256": "a01baf50796a5937ab3fe4b758e1934ac6120fc07bfb961ab1ae5334381a194e",
+      "original_array_file": ".descartados/literalidad/20261026_081747_630720_UTC/lectura_20261026_080028_124216.npy",
+      "original_array_sha256": "c02a3aaee88119e9b7a9868751171bf8957eb25939b21a4f84299ac8a65f2b68",
+      "original_listen_file": ".descartados/literalidad/20261026_081747_630720_UTC/lectura_20261026_080028_124216.wav",
+      "original_listen_sha256": "f58830b2462d0a4aa95f83700fa29ff329b62f37bf56440024a96edabfe52ef9",
+      "array_file": ".descartados/literalidad/20261026_082404_701027_cola_vad_UTC/lectura_20261026_080028_124216.npy",
+      "array_sha256": "8365df96ee7453cd1e0cd9e5315713cd7359acb9c5df1d530da8b74534f93f75",
+      "listen_file": ".descartados/literalidad/20261026_082404_701027_cola_vad_UTC/lectura_20261026_080028_124216.wav",
+      "listen_sha256": "674132a2e74fbe885de6903d8ab576e52d7fba27374bf356096948be59518aef",
+      "human_note": "Consigna/metadatos: Lectura normal - caja del sendero · 26/10/2026. El lector confirma haber seguido la consigna: Lee todo el cuento una sola vez a tu ritmo habitual, sin introducir errores deliberados. Estado de referencia: descripcion_confirmada_por_lector_pendiente_escucha_detallada.",
+      "catalog_record": {
+        "id": "lectura_20261026_080028_124216",
+        "audio_file": "datos/audio/Lectura normal - caja del sendero - lectura_04 - 26-10-2026.wav",
+        "audio_sha256": "a01baf50796a5937ab3fe4b758e1934ac6120fc07bfb961ab1ae5334381a194e",
+        "label": "Lectura normal - caja del sendero · 26/10/2026",
+        "case": "normal",
+        "recorded_date": "2026-10-26",
+        "story_file": "datos/textos/lectura_04.txt",
+        "story_sha256": "c869686736872fb96150ede565d9d0a81ff986e2469f0131dd66cc5e56a2bf8e",
+        "speaker_id": "adulto_01",
+        "partition": "desarrollo",
+        "reference_status": "descripcion_confirmada_por_lector_pendiente_escucha_detallada",
+        "reference_file": null,
+        "reading_events": [
+          {
+            "description": "El lector confirma haber seguido la consigna: Lee todo el cuento una sola vez a tu ritmo habitual, sin introducir errores deliberados.",
+            "source": "confirmacion_lector_chat",
+            "start": null,
+            "end": null
+          }
+        ],
+        "environment_notes": null,
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "sample_width_bytes": 2,
+        "frames": 3969000,
+        "duration_seconds": 90.0,
+        "notice": "Nombre/caso describen la consigna, no validan contenido ni eventos. No es conjunto de prueba reservado por defecto.",
+        "legacy_audio_files": [
+          "datos/audio/lectura_20261026_080028_124216.wav"
+        ],
+        "reader_report_file": "datos/anotaciones/lectura_04_tanda_confirmacion.json"
+      },
+      "human_anchor_count": 0,
+      "human_anchors_retained": true
+    },
+    {
+      "id": "lectura_20261026_080310_194589",
+      "kind": "disfluencias",
+      "label": "Audio 2 · Lectura repeticiones de palabras - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "original_number": 2,
+      "role": "seleccion_explicita",
+      "start": 0,
+      "end": 65.84,
+      "original_seconds": 100.0,
+      "removed_tail_seconds": 34.16,
+      "prefix_end_sample": 1053440,
+      "source_audio": "datos/audio/Lectura repeticiones de palabras - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "source_sha256": "16a446ea986d06e14805e518f3068f296b643890ac6ecaefc651ae3e04196826",
+      "original_array_file": ".descartados/literalidad/20261026_081747_630720_UTC/lectura_20261026_080310_194589.npy",
+      "original_array_sha256": "ab71799136c541acbe9a20982b4702c8840a607c9fe325ef7127b1cb63bfa6f2",
+      "original_listen_file": ".descartados/literalidad/20261026_081747_630720_UTC/lectura_20261026_080310_194589.wav",
+      "original_listen_sha256": "13ba6756d07ee66426d35bb1fb4dfeaf7f2277b0d1bb8694b36d2ec4125e584a",
+      "array_file": ".descartados/literalidad/20261026_082404_701027_cola_vad_UTC/lectura_20261026_080310_194589.npy",
+      "array_sha256": "50147fb6415db311f5e44c450cb648f46d59609bc0c1de93952a5b8d2cef2eb3",
+      "listen_file": ".descartados/literalidad/20261026_082404_701027_cola_vad_UTC/lectura_20261026_080310_194589.wav",
+      "listen_sha256": "c93d646678cf24d2b41229cb24e48a563187af72a8f74b01e4532c4095e55d53",
+      "human_note": "Consigna/metadatos: Lectura repeticiones de palabras - caja del sendero · 26/10/2026. El lector confirma haber seguido la consigna: Lee todo el cuento. Introduce cuatro repeticiones: una una pequeña caja; Clara Clara abrió; Mateo Mateo probó; junto junto al puente (en la última frase). El resto se lee normalmente. Estado de referencia: descripcion_confirmada_por_lector_pendiente_escucha_detallada.",
+      "catalog_record": {
+        "id": "lectura_20261026_080310_194589",
+        "audio_file": "datos/audio/Lectura repeticiones de palabras - caja del sendero - lectura_04 - 26-10-2026.wav",
+        "audio_sha256": "16a446ea986d06e14805e518f3068f296b643890ac6ecaefc651ae3e04196826",
+        "label": "Lectura repeticiones de palabras - caja del sendero · 26/10/2026",
+        "case": "disfluencias",
+        "recorded_date": "2026-10-26",
+        "story_file": "datos/textos/lectura_04.txt",
+        "story_sha256": "c869686736872fb96150ede565d9d0a81ff986e2469f0131dd66cc5e56a2bf8e",
+        "speaker_id": "adulto_01",
+        "partition": "desarrollo",
+        "reference_status": "descripcion_confirmada_por_lector_pendiente_escucha_detallada",
+        "reference_file": null,
+        "reading_events": [
+          {
+            "description": "El lector confirma haber seguido la consigna: Lee todo el cuento. Introduce cuatro repeticiones: una una pequeña caja; Clara Clara abrió; Mateo Mateo probó; junto junto al puente (en la última frase). El resto se lee normalmente.",
+            "source": "confirmacion_lector_chat",
+            "start": null,
+            "end": null
+          }
+        ],
+        "environment_notes": null,
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "sample_width_bytes": 2,
+        "frames": 4410000,
+        "duration_seconds": 100.0,
+        "notice": "Nombre/caso describen la consigna, no validan contenido ni eventos. No es conjunto de prueba reservado por defecto.",
+        "legacy_audio_files": [
+          "datos/audio/lectura_20261026_080310_194589.wav"
+        ],
+        "reader_report_file": "datos/anotaciones/lectura_04_tanda_confirmacion.json"
+      },
+      "human_anchor_count": 0,
+      "human_anchors_retained": true
+    },
+    {
+      "id": "lectura_20261026_080612_790344",
+      "kind": "disfluencias",
+      "label": "Audio 3 · Lectura intentos parciales - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "original_number": 3,
+      "role": "seleccion_explicita",
+      "start": 0,
+      "end": 70.32,
+      "original_seconds": 120.0,
+      "removed_tail_seconds": 49.68000000000001,
+      "prefix_end_sample": 1125120,
+      "source_audio": "datos/audio/Lectura intentos parciales - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "source_sha256": "be0b3c786d61a0734fd7ce156f13f529ccca07617458edd462edf041bec67d97",
+      "original_array_file": ".descartados/literalidad/20261026_081747_630720_UTC/lectura_20261026_080612_790344.npy",
+      "original_array_sha256": "6a51c3bd18b559b4f7dc39e5b4f2be0a0a2490c30a5340f5f7e54ed6a053cd53",
+      "original_listen_file": ".descartados/literalidad/20261026_081747_630720_UTC/lectura_20261026_080612_790344.wav",
+      "original_listen_sha256": "62fd2c8fd1a50c78043b83d4a67f8ad717e278a4b0c39f283915d8f42d90a255",
+      "array_file": ".descartados/literalidad/20261026_082404_701027_cola_vad_UTC/lectura_20261026_080612_790344.npy",
+      "array_sha256": "a3a25be4c2aa43d735e8c65443091e337f162496218a433d71fe189d513020df",
+      "listen_file": ".descartados/literalidad/20261026_082404_701027_cola_vad_UTC/lectura_20261026_080612_790344.wav",
+      "listen_sha256": "1c7e2b319b4c0d3a30c5d6509ae2b9729a6d1bc54ed733b5f811741c9871b0ec",
+      "human_note": "Consigna/metadatos: Lectura intentos parciales - caja del sendero · 26/10/2026. El lector confirma haber seguido la consigna: Lee todo el cuento. En pequeña di pe- pe- pequeña; en descubrieron di des- des- descubrieron; en regresar di regres- re- regresar. Los guiones indican cortar la palabra, no decir guion. Deja salir los intentos sin corregirlos después. El resto se lee normalmente. Estado de referencia: descripcion_confirmada_por_lector_pendiente_escucha_detallada.",
+      "catalog_record": {
+        "id": "lectura_20261026_080612_790344",
+        "audio_file": "datos/audio/Lectura intentos parciales - caja del sendero - lectura_04 - 26-10-2026.wav",
+        "audio_sha256": "be0b3c786d61a0734fd7ce156f13f529ccca07617458edd462edf041bec67d97",
+        "label": "Lectura intentos parciales - caja del sendero · 26/10/2026",
+        "case": "disfluencias",
+        "recorded_date": "2026-10-26",
+        "story_file": "datos/textos/lectura_04.txt",
+        "story_sha256": "c869686736872fb96150ede565d9d0a81ff986e2469f0131dd66cc5e56a2bf8e",
+        "speaker_id": "adulto_01",
+        "partition": "desarrollo",
+        "reference_status": "descripcion_confirmada_por_lector_pendiente_escucha_detallada",
+        "reference_file": null,
+        "reading_events": [
+          {
+            "description": "El lector confirma haber seguido la consigna: Lee todo el cuento. En pequeña di pe- pe- pequeña; en descubrieron di des- des- descubrieron; en regresar di regres- re- regresar. Los guiones indican cortar la palabra, no decir guion. Deja salir los intentos sin corregirlos después. El resto se lee normalmente.",
+            "source": "confirmacion_lector_chat",
+            "start": null,
+            "end": null
+          }
+        ],
+        "environment_notes": null,
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "sample_width_bytes": 2,
+        "frames": 5292000,
+        "duration_seconds": 120.0,
+        "notice": "Nombre/caso describen la consigna, no validan contenido ni eventos. No es conjunto de prueba reservado por defecto.",
+        "legacy_audio_files": [
+          "datos/audio/lectura_20261026_080612_790344.wav"
+        ],
+        "reader_report_file": "datos/anotaciones/lectura_04_tanda_confirmacion.json"
+      },
+      "human_anchor_count": 0,
+      "human_anchors_retained": true
+    },
+    {
+      "id": "lectura_20261026_080852_827476",
+      "kind": "disfluencias",
+      "label": "Audio 4 · Lectura omisiones y sustituciones - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "original_number": 4,
+      "role": "seleccion_explicita",
+      "start": 0,
+      "end": 59.984,
+      "original_seconds": 90.0,
+      "removed_tail_seconds": 30.016,
+      "prefix_end_sample": 959744,
+      "source_audio": "datos/audio/Lectura omisiones y sustituciones - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "source_sha256": "01824afa5ab8d098b28eba2685fe1bcf9ba20ef1869a03456cf09bdbef9ee944",
+      "original_array_file": ".descartados/literalidad/20261026_081747_630720_UTC/lectura_20261026_080852_827476.npy",
+      "original_array_sha256": "0f44c458a5cec8b132a7febc35249761b6f7752c991ab7db5d1e99d95a2ac5f0",
+      "original_listen_file": ".descartados/literalidad/20261026_081747_630720_UTC/lectura_20261026_080852_827476.wav",
+      "original_listen_sha256": "bf38a15c21a9bc0a4e03f65fa2edcfe2a5e68897e81ed2f70d8666857e65e22b",
+      "array_file": ".descartados/literalidad/20261026_082404_701027_cola_vad_UTC/lectura_20261026_080852_827476.npy",
+      "array_sha256": "36ed3cb2d4eec3bb33b3b3d9dadd0d4b32002f75465976f33c36e7ac199c1244",
+      "listen_file": ".descartados/literalidad/20261026_082404_701027_cola_vad_UTC/lectura_20261026_080852_827476.wav",
+      "listen_sha256": "978851a4146f3bb59786e97c3de17572201dd8153de8e40607b53d7708a943e6",
+      "human_note": "Consigna/metadatos: Lectura omisiones y sustituciones - caja del sendero · 26/10/2026. El lector confirma haber seguido la consigna: Lee todo el cuento omitiendo madera y viejo. Sustituye pluma azul por pluma roja y un jardín por un parque. No añadas después las palabras omitidas ni corrijas las sustituciones. Estado de referencia: descripcion_confirmada_por_lector_pendiente_escucha_detallada.",
+      "catalog_record": {
+        "id": "lectura_20261026_080852_827476",
+        "audio_file": "datos/audio/Lectura omisiones y sustituciones - caja del sendero - lectura_04 - 26-10-2026.wav",
+        "audio_sha256": "01824afa5ab8d098b28eba2685fe1bcf9ba20ef1869a03456cf09bdbef9ee944",
+        "label": "Lectura omisiones y sustituciones - caja del sendero · 26/10/2026",
+        "case": "disfluencias",
+        "recorded_date": "2026-10-26",
+        "story_file": "datos/textos/lectura_04.txt",
+        "story_sha256": "c869686736872fb96150ede565d9d0a81ff986e2469f0131dd66cc5e56a2bf8e",
+        "speaker_id": "adulto_01",
+        "partition": "desarrollo",
+        "reference_status": "descripcion_confirmada_por_lector_pendiente_escucha_detallada",
+        "reference_file": null,
+        "reading_events": [
+          {
+            "description": "El lector confirma haber seguido la consigna: Lee todo el cuento omitiendo madera y viejo. Sustituye pluma azul por pluma roja y un jardín por un parque. No añadas después las palabras omitidas ni corrijas las sustituciones.",
+            "source": "confirmacion_lector_chat",
+            "start": null,
+            "end": null
+          }
+        ],
+        "environment_notes": null,
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "sample_width_bytes": 2,
+        "frames": 3969000,
+        "duration_seconds": 90.0,
+        "notice": "Nombre/caso describen la consigna, no validan contenido ni eventos. No es conjunto de prueba reservado por defecto.",
+        "legacy_audio_files": [
+          "datos/audio/lectura_20261026_080852_827476.wav"
+        ],
+        "reader_report_file": "datos/anotaciones/lectura_04_tanda_confirmacion.json"
+      },
+      "human_anchor_count": 0,
+      "human_anchors_retained": true
+    },
+    {
+      "id": "lectura_20261026_081113_354147",
+      "kind": "pausa",
+      "label": "Audio 5 · Lectura pausa larga y continuacion - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "original_number": 5,
+      "role": "seleccion_explicita",
+      "start": 0,
+      "end": 72.112,
+      "original_seconds": 120.0,
+      "removed_tail_seconds": 47.888000000000005,
+      "prefix_end_sample": 1153792,
+      "source_audio": "datos/audio/Lectura pausa larga y continuacion - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "source_sha256": "94a5ef1fdd6f2ee25f5fdda202c434824627d146c6939fa7dfe385e78e4311d7",
+      "original_array_file": ".descartados/literalidad/20261026_081747_630720_UTC/lectura_20261026_081113_354147.npy",
+      "original_array_sha256": "782c8a1fd0947b5c7163d0e7a57a3a27ff0cebe86121a84272a2c619ae372238",
+      "original_listen_file": ".descartados/literalidad/20261026_081747_630720_UTC/lectura_20261026_081113_354147.wav",
+      "original_listen_sha256": "dc38eea472848459981d58864c69ea785bbed033b8c7b227993d7afd96f5e696",
+      "array_file": ".descartados/literalidad/20261026_082404_701027_cola_vad_UTC/lectura_20261026_081113_354147.npy",
+      "array_sha256": "4a90d0cee726ce7d7fb61acef7697741ad3ca4597690dedd5a607f90dfc7037f",
+      "listen_file": ".descartados/literalidad/20261026_082404_701027_cola_vad_UTC/lectura_20261026_081113_354147.wav",
+      "listen_sha256": "4d942171cdc0f7ea8dc3665a9aec4561276aa7e4a20685294e05ef35a05993bb",
+      "human_note": "Consigna/metadatos: Lectura pausa larga y continuacion - caja del sendero · 26/10/2026. El lector confirma haber seguido la consigna: Lee hasta y un papel doblado. Haz una pausa aproximada de 8 segundos sin hablar, continúa por Clara abrió el papel y termina el cuento una sola vez. No repitas la frase anterior. Estado de referencia: descripcion_confirmada_por_lector_pendiente_escucha_detallada.",
+      "catalog_record": {
+        "id": "lectura_20261026_081113_354147",
+        "audio_file": "datos/audio/Lectura pausa larga y continuacion - caja del sendero - lectura_04 - 26-10-2026.wav",
+        "audio_sha256": "94a5ef1fdd6f2ee25f5fdda202c434824627d146c6939fa7dfe385e78e4311d7",
+        "label": "Lectura pausa larga y continuacion - caja del sendero · 26/10/2026",
+        "case": "pausa",
+        "recorded_date": "2026-10-26",
+        "story_file": "datos/textos/lectura_04.txt",
+        "story_sha256": "c869686736872fb96150ede565d9d0a81ff986e2469f0131dd66cc5e56a2bf8e",
+        "speaker_id": "adulto_01",
+        "partition": "validacion_reservada_cambios_posteriores",
+        "reference_status": "descripcion_confirmada_por_lector_pendiente_escucha_detallada",
+        "reference_file": null,
+        "reading_events": [
+          {
+            "description": "El lector confirma haber seguido la consigna: Lee hasta y un papel doblado. Haz una pausa aproximada de 8 segundos sin hablar, continúa por Clara abrió el papel y termina el cuento una sola vez. No repitas la frase anterior.",
+            "source": "confirmacion_lector_chat",
+            "start": null,
+            "end": null
+          }
+        ],
+        "environment_notes": null,
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "sample_width_bytes": 2,
+        "frames": 5292000,
+        "duration_seconds": 120.0,
+        "notice": "Nombre/caso describen la consigna, no validan contenido ni eventos. No es conjunto de prueba reservado por defecto.",
+        "legacy_audio_files": [
+          "datos/audio/lectura_20261026_081113_354147.wav"
+        ],
+        "reader_report_file": "datos/anotaciones/lectura_04_tanda_confirmacion.json"
+      },
+      "human_anchor_count": 0,
+      "human_anchors_retained": true
+    },
+    {
+      "id": "lectura_20261026_081403_297994",
+      "kind": "disfluencias",
+      "label": "Audio 6 · Lectura dificultades mixtas libres - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "original_number": 6,
+      "role": "seleccion_explicita",
+      "start": 0,
+      "end": 98.16,
+      "original_seconds": 150.0,
+      "removed_tail_seconds": 51.84,
+      "prefix_end_sample": 1570560,
+      "source_audio": "datos/audio/Lectura dificultades mixtas libres - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "source_sha256": "aa87fb1af758d64299397995949d0035cf782e88869fdc6e478b1e20700752f2",
+      "original_array_file": ".descartados/literalidad/20261026_081747_630720_UTC/lectura_20261026_081403_297994.npy",
+      "original_array_sha256": "6591f80a6358ac36be64fac431a61727c1f8c01a4b202d32f1380b0cba809656",
+      "original_listen_file": ".descartados/literalidad/20261026_081747_630720_UTC/lectura_20261026_081403_297994.wav",
+      "original_listen_sha256": "1afc1a313d81be8fc60decfb1be3a7929e62065412372bb47d820894d5f088fa",
+      "array_file": ".descartados/literalidad/20261026_082404_701027_cola_vad_UTC/lectura_20261026_081403_297994.npy",
+      "array_sha256": "61f5758827bc29e99f9078d65dfca7ab582baafdef9a24e0282423bc4b7ba899",
+      "listen_file": ".descartados/literalidad/20261026_082404_701027_cola_vad_UTC/lectura_20261026_081403_297994.wav",
+      "listen_sha256": "79265f310833c5267a1ccb08b715aab84233a33c514901da6cab82011c6faeca",
+      "human_note": "Consigna/metadatos: Lectura dificultades mixtas libres - caja del sendero · 26/10/2026. El lector describe confusiones/autocorrecciones, recuerda descubrieron y luego encontraron una caja..., otra autocorrección no recordada, repeticiones parciales y cambios lentos/rápidos. Secuencia literal completa pendiente de escucha. Estado de referencia: descripcion_confirmada_por_lector_pendiente_escucha_detallada.",
+      "catalog_record": {
+        "id": "lectura_20261026_081403_297994",
+        "audio_file": "datos/audio/Lectura dificultades mixtas libres - caja del sendero - lectura_04 - 26-10-2026.wav",
+        "audio_sha256": "aa87fb1af758d64299397995949d0035cf782e88869fdc6e478b1e20700752f2",
+        "label": "Lectura dificultades mixtas libres - caja del sendero · 26/10/2026",
+        "case": "disfluencias",
+        "recorded_date": "2026-10-26",
+        "story_file": "datos/textos/lectura_04.txt",
+        "story_sha256": "c869686736872fb96150ede565d9d0a81ff986e2469f0131dd66cc5e56a2bf8e",
+        "speaker_id": "adulto_01",
+        "partition": "validacion_reservada_cambios_posteriores",
+        "reference_status": "descripcion_confirmada_por_lector_pendiente_escucha_detallada",
+        "reference_file": null,
+        "reading_events": [
+          {
+            "description": "El lector describe confusiones/autocorrecciones, recuerda descubrieron y luego encontraron una caja..., otra autocorrección no recordada, repeticiones parciales y cambios lentos/rápidos. Secuencia literal completa pendiente de escucha.",
+            "source": "confirmacion_lector_chat",
+            "start": null,
+            "end": null
+          }
+        ],
+        "environment_notes": null,
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "sample_width_bytes": 2,
+        "frames": 6615000,
+        "duration_seconds": 150.0,
+        "notice": "Nombre/caso describen la consigna, no validan contenido ni eventos. No es conjunto de prueba reservado por defecto.",
+        "legacy_audio_files": [
+          "datos/audio/lectura_20261026_081403_297994.wav"
+        ],
+        "reader_report_file": "datos/anotaciones/lectura_04_tanda_confirmacion.json"
+      },
+      "human_anchor_count": 0,
+      "human_anchors_retained": true
+    }
+  ],
+  "notice": "Control offline de la cola: mismo candidato literal y parámetros; solo cambia la entrada hasta el último final VAD con margen ya incluido. Se conserva el prefijo completo, con pausas interiores e índice temporal desde cero. Originales intactos; una inferencia nueva por caso. Original literal reutilizado del lote previo: no es una nueva medición pareada de tiempo. Cambiar la duración puede cambiar la geometría/ruta corta-larga de bloques; no aísla una causa interna ni valida el VAD en todo el habla. Selección de números originales: [1, 2, 3, 4, 5, 6]. Partición según el registro de catálogo de cada audio. Sin cambios del seguidor ni publicación automática."
+}

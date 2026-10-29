@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lexia · Intentos parciales</title><link rel="stylesheet" href="style.css">
+<body><main><h1>¿Qué ocurre con los intentos parciales?</h1>
+<p>Compara las salidas escuchando el mismo audio. Los guiones y palabras escritos no son etiquetas humanas de disfluencias.</p>
+<p id="notice"></p><label for="sample">Grabación o fragmento:</label> <select id="sample"></select>
+<p id="range"></p><audio id="audio" controls preload="metadata"></audio>
+<p><label for="rate">Velocidad:</label> <select id="rate"><option value="1">1×</option><option value="0.8">0,8×</option><option value="0.6">0,6×</option><option value="0.4">0,4×</option></select></p>
+<p>En toma 3, revisa «Antes de regresar» cerca del segundo 60 del original. La marca procede del ASR y es orientativa. El fragmento empieza en 52 s del original.</p>
+<div id="outputs"></div><p id="status"></p></main><script src="app.js"></script></body></html>

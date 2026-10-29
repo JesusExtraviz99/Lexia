@@ -13,6 +13,9 @@ UI=ROOT/'herramientas/piloto_literal'
 def load(folder):
     manifest_path=folder/'manifest.json'
     manifest=json.loads(manifest_path.read_text(encoding='utf-8'))
+    if manifest.get('experiment')=='literal_control_final_vad':
+        from scripts.probar_final_vad_literal import viewer
+        return viewer(folder)
     outputs={e:json.loads((folder/(e+'.json')).read_text(encoding='utf-8')) for e in ['baseline','candidato']}
     if any(o.get('status')!='completo' or o['manifest_sha256']!=digest(manifest_path) for o in outputs.values()):
         raise ValueError('Resultados incompletos o manifiesto cambiado.')
@@ -22,7 +25,7 @@ def load(folder):
         if not path.is_relative_to((ROOT/'.descartados/literalidad').resolve()) or digest(path)!=item['listen_sha256']:
             raise ValueError('Recorte no permitido o modificado.')
         clips[item['id']]=path
-        samples.append(dict(id=item['id'],kind=item['kind'],start=item['start'],end=item['end'],note=item['human_note'],
+        samples.append(dict(id=item['id'],label=item.get('label'),kind=item['kind'],start=item['start'],end=item['end'],note=item['human_note'],
                             clip='/clip/'+item['id'],outputs={e:next(r for r in o['runs'] if r['id']==item['id']) for e,o in outputs.items()}))
     metrics={e:dict(load=o['model_load_seconds'],seconds=sum(r['processing_seconds'] for r in o['runs']),
                     ram_mib=o['resources']['final_memory'].get('process_lifetime_peak_working_set_bytes',0)/1048576,
@@ -40,6 +43,7 @@ def load(folder):
                 clips[sample['id']]=previous_clips[sample['id']]
     duration=sum(s['end']-s['start'] for s in manifest['samples'])
     return dict(samples=samples,metrics=metrics,notice=manifest['notice'],input_seconds=duration,
+                batch=manifest.get('experiment')=='lote_literalidad_todos_los_wav_propios',
                 comparison_complete=bool(manifest.get('source_pilot'))),clips
 
 
@@ -56,7 +60,8 @@ def make_handler(payload,clips):
                 body=clips[self.path[6:]].read_bytes();mime='audio/wav'
             elif self.path in ['/', '/app.js','/style.css']:
                 filename,mime={'/':('index.html','text/html; charset=utf-8'),'/app.js':('app.js','text/javascript; charset=utf-8'),'/style.css':('style.css','text/css; charset=utf-8')}[self.path]
-                path=UI/filename if filename!='style.css' else ROOT/'herramientas/revision_trabadas/style.css'
+                ui=ROOT/'herramientas/final_vad_literal' if payload.get('tail_comparison') else UI
+                path=ui/filename if filename!='style.css' else ROOT/'herramientas/revision_trabadas/style.css'
                 body=path.read_bytes()
             else:
                 self.send_error(404);return

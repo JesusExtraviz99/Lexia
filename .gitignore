@@ -10,3 +10,13 @@ datos/anotaciones/*.tmp
 /docs/DIARIO_DESARROLLO_LOCAL.md
 /datos/externos/audio/
 /datos/externos/descargas/
+/datos/externos/fleurs_es_419/
+/datos/externos/mls_es/
+
+# Corpus externos: nunca publicar archivos descargados.
+/datos/externos/*/
+# Solo el lector_01 ha autorizado publicar sus grabaciones.
+/datos/audio/*
+!/datos/audio/* - lector_01.wav
+!/datos/audio/* - lector_01 - *.wav
+/datos/referencias/catalogo_local.json

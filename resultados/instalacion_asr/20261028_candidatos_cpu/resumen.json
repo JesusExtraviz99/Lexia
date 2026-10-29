@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-28",
+  "status": "instalados_y_prueba_tecnica_correcta",
+  "environment": ".tools/asr-candidatos-env",
+  "python": "3.12.15",
+  "requirements_file": "requirements-asr-candidatos-lock.txt",
+  "requirements_sha256": "3b61c6a08386a27574f629d2186f9e9dd59520b2094996cdac18544aca4f79c4",
+  "existing_environments_preserved": [
+    ".venv",
+    ".tools/literal-env"
+  ],
+  "models": {
+    "xlsr": {
+      "path": "modelos/wav2vec2-xlsr-53-spanish",
+      "revision": "96d7e9b4e4a78af515a3c6d3cee7c0826045d276",
+      "license": "Apache-2.0",
+      "weight_and_metadata_bytes": 1262109798,
+      "files": 6,
+      "published_lfs_checks": 1,
+      "model_manifest": "resultados/instalacion_asr/20261028_candidatos_cpu/xlsr_modelo.json",
+      "model_manifest_sha256": "6c4d6c3d5cd5d0013342b2c11216a8cf3b23e3fae5e95c2cf765bd742b7b3725",
+      "technical_check": "resultados/instalacion_asr/20261028_candidatos_cpu/xlsr_prueba_tecnica.json",
+      "technical_check_sha256": "7ba87ddb6b8fff4d97fe073dd4e9495ced5aac59ba26f09973dfef74747edd5f",
+      "decoder": "CTC greedy, sin modelo de lenguaje adicional",
+      "status": "carga_y_ejecucion_correctas"
+    },
+    "vosk": {
+      "path": "modelos/vosk-model-small-es-0.42",
+      "revision": null,
+      "license": "Apache-2.0",
+      "weight_and_metadata_bytes": 60286598,
+      "files": 14,
+      "published_lfs_checks": 0,
+      "model_manifest": "resultados/instalacion_asr/20261028_candidatos_cpu/vosk_modelo.json",
+      "model_manifest_sha256": "0c8148e7d2b74cb28f2d3d34d49aeb0758c6c3b86aa3c161e625d98c04c952e9",
+      "technical_check": "resultados/instalacion_asr/20261028_candidatos_cpu/vosk_prueba_tecnica.json",
+      "technical_check_sha256": "34b3727f87acd220c19ab0e8f1be917ce6d089f965266f84de24d83bc21a1a49",
+      "decoder": "grafo Vosk",
+      "status": "carga_y_ejecucion_correctas"
+    },
+    "parakeet": {
+      "path": "modelos/parakeet-tdt-0.6b-v3",
+      "revision": "541d1f99c6b0c3cd0b11a95167540bb8edefd82b",
+      "license": "CC-BY-4.0",
+      "weight_and_metadata_bytes": 2509516092,
+      "files": 7,
+      "published_lfs_checks": 1,
+      "model_manifest": "resultados/instalacion_asr/20261028_candidatos_cpu/parakeet_modelo.json",
+      "model_manifest_sha256": "c403d2df8b38b157abdb8a9207d22c3045dfc09198cc32f12cfa060ffaf6b406",
+      "technical_check": "resultados/instalacion_asr/20261028_candidatos_cpu/parakeet_prueba_tecnica.json",
+      "technical_check_sha256": "aa9c8df58287ba1e8c4941dfce0b6f78ff010bc293674db04b3d6d762318eda2",
+      "decoder": "TDT greedy, configuración del modelo",
+      "status": "carga_y_ejecucion_correctas"
+    }
+  },
+  "microphone_used": false,
+  "own_recordings_used": false,
+  "datasets_used": false,
+  "notice": "Preparación técnica CPU, sin selección de ganador ni activación en el proyecto. Señal sintética de un segundo, no benchmark de precisión o rendimiento.",
+  "download_source_sha256": "adc07f6e8ce12d3ead4772ab58b3746f489e588cb1d4130d0ea9ea22372979ac",
+  "final_source_sha256": "daae1a307b8d5634be9bda1f89da18372013771cf7b5a4204046fc2e00c2adad"
+}

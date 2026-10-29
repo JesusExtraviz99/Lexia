@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-26",
+  "source": "revision_del_propio_lector_en_chat",
+  "output_file": "resultados/literalidad/20261026_082404_701027_cola_vad_UTC/candidato.json",
+  "output_sha256": "115321f5f4f18d8cd02985ecb47dc7c47f3f0d2e6ecdd815b602e630d8da7b73",
+  "take_3": {
+    "id": "lectura_20261026_080612_790344",
+    "reader_confirms_missing_attempts": "regres- re- regresar",
+    "observed_output": "regresar",
+    "cause": "no_determinada; completar/simplificar según contexto es hipótesis, no mecanismo demostrado",
+    "human_times": null
+  },
+  "take_6": {
+    "id": "lectura_20261026_081403_297994",
+    "status": "interpretacion_de_intentos_pendiente_de_escucha",
+    "reported_sequences": [
+      "des- descubrí des- descubrí descubrieron",
+      "Levam le- Levam levantó",
+      "la ca- la casa la- la caja"
+    ],
+    "notice": "El lector pregunta cómo interpretar la notación. No confirma estas secuencias como transcripción exacta ni autoriza a normalizarlas como parciales."
+  },
+  "vad": {
+    "reader_assessment": "Considera prácticamente necesario el VAD para evitar invenciones finales del literal.",
+    "scope": "Control offline del límite final; no prueba eliminación universal de alucinaciones ni fidelidad de fragmentos internos."
+  },
+  "notation_check": "El trabajador guarda native.text y el visor muestra raw_text sin añadir guiones; la notación procede de la salida del reconocedor, no de un clasificador de disfluencias propio."
+}

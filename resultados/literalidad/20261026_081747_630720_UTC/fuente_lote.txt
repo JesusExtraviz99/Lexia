@@ -1,0 +1,201 @@
+"""Fija, resume y verifica todos los WAV propios para la rama literal offline."""
+import argparse
+from datetime import date,datetime,timezone
+import json
+from pathlib import Path
+
+from scripts.archivos import write_text_atomic
+from scripts.catalogo import ROOT,read_catalog,verify_audio_catalog
+from scripts.comparar_literalidad import digest
+
+
+def select_recordings(root=ROOT):
+    catalog=read_catalog(root)
+    rows=verify_audio_catalog(catalog['recordings'],root)
+    paths=[(root/r['audio_file']).resolve() for r in rows]
+    actual={p.resolve() for p in (root/'datos/audio').glob('*.wav')}
+    if set(paths)!=actual or len(set(paths))!=len(paths) or len({r['id'] for r in rows})!=len(rows):
+        raise ValueError('El catálogo no cubre exactamente los WAV presentes o contiene duplicados. Revisar antes de procesar.')
+    if not rows:
+        raise ValueError('No hay WAV propios disponibles.')
+    skipped=[dict(id=r['id'],expected_sha256=r['audio_sha256'],reason=r.get('availability_status'))
+             for r in catalog['recordings'] if r not in rows]
+    return rows,skipped
+
+
+def select_story(rows,story,root=ROOT):
+    if story is None:
+        return rows
+    path=Path(story).resolve()
+    selected=[r for r in rows if (root/r['story_file']).resolve()==path]
+    if not selected:
+        raise ValueError('No hay grabaciones del cuento seleccionado.')
+    if any(r['story_sha256']!=digest(path) for r in selected):
+        raise ValueError('El cuento ha cambiado desde la grabación.')
+    return selected
+
+
+def prepare(day,story=None):
+    import numpy as np
+    import soundfile as sf
+    from faster_whisper.audio import decode_audio
+    date.fromisoformat(day)
+    rows,skipped=select_recordings()
+    rows=select_story(rows,story)
+    # Congelar fuentes anteriores permite comprobar que el lote no las altera.
+    previous=sorted(set((ROOT/'resultados').rglob('*.json'))|set((ROOT/'datos/anotaciones').glob('*.json')))
+    preserved=[dict(file=p.relative_to(ROOT).as_posix(),sha256=digest(p)) for p in previous]
+    stamp=datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S_%f_UTC')
+    folder=ROOT/'resultados/literalidad'/stamp
+    cache=ROOT/'.descartados/literalidad'/stamp
+    folder.mkdir(parents=True);cache.mkdir(parents=True)
+    metadata=json.loads((ROOT/'.tools/modelo_literal_procedencia.json').read_text(encoding='utf-8'))
+    for item in metadata['files']:
+        if digest(ROOT/'modelos/crisperwhisper2-small'/item['file'])!=item['sha256']:
+            raise ValueError('El candidato no coincide con la revisión fijada.')
+    baseline_files=[dict(file=p.name,bytes=p.stat().st_size,sha256=digest(p))
+                    for p in sorted((ROOT/'modelos/faster-whisper-small').iterdir()) if p.is_file()]
+    snapshot=folder/'catalogo_snapshot.json'
+    snapshot.write_bytes((ROOT/'datos/referencias/catalogo.json').read_bytes())
+    result=dict(experiment='lote_literalidad_todos_los_wav_propios',created_date=day,
+        selection_scope='todos_los_wav_propios' if story is None else 'cuento_seleccionado',
+        selected_story=None if story is None else Path(story).resolve().relative_to(ROOT).as_posix(),
+        created_at_utc=datetime.now(timezone.utc).isoformat(),sample_rate_hz=16000,
+        candidate_model=metadata,baseline_model=dict(folder='modelos/faster-whisper-small',files=baseline_files),
+        catalog_file=snapshot.relative_to(ROOT).as_posix(),catalog_sha256=digest(snapshot),
+        record_per_audio_resources=True,unavailable_catalog_entries=skipped,preserved_sources=preserved,samples=[],
+        notice='Lote de desarrollo, una pasada por motor y WAV completo; un proceso por motor y modelo reutilizado secuencialmente. No se entregan cuento ni notas al ASR. Mismos arrays mono 16 kHz, sin VAD ni limpieza de ruido. Small CT2 CPU int8 frente a CrisperWhisper2.0 Small Transformers CPU float32 literal; cuatro hilos. Candidato >30 s: continuation, bloques 30 s/paso 26 s con contexto generado. Duración incluye silencio; no latencia en directo ni rendimiento de tablet. El seguimiento no cambia. Nombres/consignas y diferencias de texto no validan fidelidad ni permiten calcular tasas humanas. El audio externo no está descargado en el proyecto y no forma parte de este lote.')
+    if story is not None:
+        result['notice']='Selección exclusiva de grabaciones del cuento '+result['selected_story']+'. '+result['notice']
+    for row in rows:
+        source=ROOT/row['audio_file']
+        audio=decode_audio(str(source),sampling_rate=16000)
+        if len(audio)==0 or abs(len(audio)/16000-row['duration_seconds'])>0.02:
+            raise ValueError('Duración decodificada incompatible con el catálogo.')
+        array=cache/(row['id']+'.npy');np.save(array,audio,allow_pickle=False)
+        listen=cache/(row['id']+'.wav');sf.write(listen,audio,16000,subtype='PCM_16')
+        descriptions=[e.get('description','') for e in row.get('reading_events',[])]
+        note='Consigna/metadatos: '+row['label']+'. '+' '.join(descriptions)
+        note+=' Estado de referencia: '+row.get('reference_status','sin referencia')+'.'
+        if row.get('environment_notes'):
+            note+=' Ambiente: '+row['environment_notes']
+        result['samples'].append(dict(id=row['id'],label=source.name,kind=row['case'],start=0,end=len(audio)/16000,
+            human_note=note,catalog_record=row,source_audio=row['audio_file'],source_sha256=row['audio_sha256'],
+            array_file=array.relative_to(ROOT).as_posix(),array_sha256=digest(array),
+            listen_file=listen.relative_to(ROOT).as_posix(),listen_sha256=digest(listen),
+            audio_metrics=dict(decoded_peak_abs=float(np.max(np.abs(audio))),decoded_rms=float(np.sqrt(np.mean(audio.astype(np.float64)**2))),
+                decoded_fraction_abs_ge_0_999=float(np.mean(np.abs(audio)>=.999)),
+                notice='Métricas de amplitud del array decodificado mono 16 kHz; no miden SNR ni prueban distorsión/saturación del original.')))
+    write_text_atomic(folder/'manifest.json',json.dumps(result,ensure_ascii=False,indent=2)+'\n')
+    worker=ROOT/'scripts/comparar_literalidad.py'
+    (folder/'fuente_ejecutada.txt').write_bytes(worker.read_bytes())
+    (folder/'fuente_lote.txt').write_bytes(Path(__file__).read_bytes())
+    print(folder,flush=True)
+    return folder
+
+
+def load_outputs(folder):
+    manifest=json.loads((folder/'manifest.json').read_text(encoding='utf-8'))
+    if manifest.get('experiment')!='lote_literalidad_todos_los_wav_propios':
+        raise ValueError('No es un lote de todos los WAV propios.')
+    outputs={e:json.loads((folder/(e+'.json')).read_text(encoding='utf-8')) for e in ['baseline','candidato']}
+    ids=[s['id'] for s in manifest['samples']]
+    for output in outputs.values():
+        if (output.get('status')!='completo' or output['manifest_sha256']!=digest(folder/'manifest.json')
+                or [r['id'] for r in output['runs']]!=ids):
+            raise ValueError('Resultado incompleto, orden distinto o manifiesto cambiado.')
+    return manifest,outputs
+
+
+def summarize(folder):
+    manifest,outputs=load_outputs(folder)
+    duration=sum(s['end'] for s in manifest['samples'])
+    lines=['# Reconocimiento completo del lote de audios propios','',manifest['notice'],'',
+        f"{len(manifest['samples'])} WAV completos; {duration:.2f} s ({duration/60:.2f} min) por motor. Una pasada por archivo, sin nuevas voces ni repetición estadística.",'',
+        '| Audio | Duración (s) | Actual inferencia (s) | Literal inferencia (s) | RTF actual / literal | RAM máxima muestreada actual / literal (MiB) |',
+        '|---|---:|---:|---:|---|---|']
+    stats=[]
+    for sample,base,candidate in zip(manifest['samples'],outputs['baseline']['runs'],outputs['candidato']['runs']):
+        ram=[r['resource_interval']['working_set_max_sampled_bytes'] for r in [base,candidate]]
+        ramtext=' / '.join(f'{v/1048576:.1f}' if v is not None else 'no medido' for v in ram)
+        lines.append(f"| {sample['label']} | {sample['end']:.2f} | {base['processing_seconds']:.2f} | {candidate['processing_seconds']:.2f} | {base['rtf_full_audio']:.3f} / {candidate['rtf_full_audio']:.3f} | {ramtext} |")
+        stats.append(dict(id=sample['id'],audio=sample['source_audio'],audio_seconds=sample['end'],
+            metrics={e:dict(inference_seconds=r['processing_seconds'],cpu_seconds=r['cpu_seconds'],rtf=r['rtf_full_audio'],
+                           working_set_max_sampled_bytes=r['resource_interval']['working_set_max_sampled_bytes'],
+                           cpu_percent_machine_capacity=r['resource_interval']['cpu_percent_machine_capacity'])
+                     for e,r in [('baseline',base),('candidato',candidate)]}))
+    totals={e:dict(inference_seconds=sum(r['processing_seconds'] for r in data['runs']),
+                  cpu_inference_seconds=sum(r['cpu_seconds'] for r in data['runs']),
+                  model_load_seconds=data['model_load_seconds'],
+                  process_lifetime_peak_working_set_bytes=data['resources']['final_memory'].get('process_lifetime_peak_working_set_bytes'))
+            for e,data in outputs.items()}
+    lines+=['','## Totales y alcance','',
+        '| Motor | Inferencia total (s) | RTF ponderado por duración | Carga única (s) | Pico RAM de toda la vida del proceso (MiB) |',
+        '|---|---:|---:|---:|---:|']
+    for engine,summary in totals.items():
+        lines.append(f"| {engine} | {summary['inference_seconds']:.2f} | {summary['inference_seconds']/duration:.3f} | {summary['model_load_seconds']:.2f} | {summary['process_lifetime_peak_working_set_bytes']/1048576:.2f} |")
+    lines+=['',
+        'Cada JSON contiene textos brutos, palabras automáticas, bloques nativos del candidato, CPU/RAM/GPU global, versiones y configuración. En cada audio se conserva el subintervalo de recursos del único muestreador. RAM por audio = máximo muestreado y extremos del intervalo, no pico independiente garantizado; el modelo se reutiliza y conserva memoria. Pico Windows = vida completa del proceso, incluida carga. CPU incluye instrumentación. GPU global no implica ejecución del ASR en GPU: ambos motores están en CPU. Energía propia del ASR/FLOPs/tablet no medidos.','',
+        'RTF = inferencia / duración total, incluido silencio. No es retardo de captura/interfaz ni RTF sobre habla. Backends/precisiones distintos, orden fijo, una pasada: no hay comparación causal de entrenamiento, estabilidad térmica ni generalización. Los tiempos de palabra del candidato siguen sin validarse por las advertencias de compatibilidad conocidas.','',
+        '## Transcripciones para revisión','',
+        'Las notas son consignas y confirmaciones previas, no una referencia literal exhaustiva. Una palabra añadida respecto al otro motor puede ser recuperación real o inserción; decidir escuchando. No calcular WER literal, precisión/F1 ni intentos a partir del cuento pretendido o de transcripciones sin revisar. No sumar bloques internos como eventos separados.']
+    for sample,base,candidate in zip(manifest['samples'],outputs['baseline']['runs'],outputs['candidato']['runs']):
+        lines+=['',f"### {sample['label']}",'',sample['human_note'],'',
+            '**Actual:** '+(base['raw_text'] or '(vacío)'),'','**Literal:** '+(candidate['raw_text'] or '(vacío)')]
+    lines+=['','Revisión compartida en el visor local de solo lectura. Sin activar el motor en el seguidor ni publicar automáticamente.']
+    write_text_atomic(folder/'resumen.md','\n'.join(lines)+'\n')
+    write_text_atomic(folder/'metricas.json',json.dumps(dict(audio_seconds=duration,rows=stats,totals=totals),ensure_ascii=False,indent=2)+'\n')
+    print(folder/'resumen.md',flush=True)
+
+
+def verify(folder):
+    import numpy as np
+    manifest,outputs=load_outputs(folder)
+    assert digest(ROOT/manifest['catalog_file'])==manifest['catalog_sha256']
+    for sample in manifest['samples']:
+        for pathkey,hashkey in [('source_audio','source_sha256'),('array_file','array_sha256'),('listen_file','listen_sha256')]:
+            assert digest(ROOT/sample[pathkey])==sample[hashkey],sample['id']
+        array=np.load(ROOT/sample['array_file'],allow_pickle=False)
+        assert len(array)==round(sample['end']*16000)
+        for engine in outputs:
+            row=next(r for r in outputs[engine]['runs'] if r['id']==sample['id'])
+            assert row['audio_seconds']==sample['end'] and row['processing_seconds']>=0
+            assert row['resource_interval']['end_seconds_in_monitor']>=row['resource_interval']['start_seconds_in_monitor']
+    for file in manifest['candidate_model']['files']:
+        assert digest(ROOT/'modelos/crisperwhisper2-small'/file['file'])==file['sha256']
+    for file in manifest['baseline_model']['files']:
+        assert digest(ROOT/manifest['baseline_model']['folder']/file['file'])==file['sha256']
+    for entry in manifest['preserved_sources']:
+        assert digest(ROOT/entry['file'])==entry['sha256'],entry['file']
+    assert outputs['baseline']['script_sha256']==outputs['candidato']['script_sha256']==digest(folder/'fuente_ejecutada.txt')
+    result=dict(manifest_sha256=digest(folder/'manifest.json'),
+        outputs_sha256={e:digest(folder/(e+'.json')) for e in outputs},
+        wav_verified=len(manifest['samples']),unavailable_catalog_entries=manifest['unavailable_catalog_entries'],
+        historical_sources_unchanged=len(manifest['preserved_sources']),worker_snapshot_verified=True,
+        selection_scope=manifest.get('selection_scope','todos_los_wav_propios'),
+        note='Integridad técnica; textos y marcas automáticos sin validación humana nueva. Cobertura según la selección congelada del manifiesto.')
+    write_text_atomic(folder/'integridad.json',json.dumps(result,ensure_ascii=False,indent=2)+'\n')
+    print(json.dumps(result,ensure_ascii=False),flush=True)
+
+
+def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('mode',choices=['preparar','resumir','verificar'])
+    parser.add_argument('folder',type=Path,nargs='?')
+    parser.add_argument('--fecha',help='Fecha del experimento en zona del lector, AAAA-MM-DD; necesaria al preparar.')
+    parser.add_argument('--cuento',type=Path,help='Procesar únicamente los WAV de este cuento, sin repetir los anteriores.')
+    args=parser.parse_args()
+    if args.mode=='preparar':
+        if not args.fecha:
+            parser.error('Indica --fecha con la fecha local del experimento.')
+        prepare(args.fecha,args.cuento)
+    elif args.folder is None:
+        parser.error('Indica la carpeta de resultados.')
+    elif args.mode=='resumir':
+        summarize(args.folder.resolve())
+    else:
+        verify(args.folder.resolve())
+
+
+if __name__=='__main__':
+    main()

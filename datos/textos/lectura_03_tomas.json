@@ -1,0 +1,104 @@
+{
+  "title": "El tren y el pañuelo verde · controles y pruebas difíciles",
+  "story_file": "datos/textos/lectura_03.txt",
+  "protocol_file": "pruebas/29_tanda_texto_03.md",
+  "notice": "Tanda exploratoria de doce grabaciones. Consignas, no transcripciones confirmadas. El cuento contiene dos veces El tren llegó a la estación: ambas son parte del original, no disfluencias por sí mismas. Enter permite guardar antes del máximo. No ejecutar ASR hasta que el usuario cierre la recogida completa.",
+  "takes": [
+    {
+      "number": 1,
+      "label": "Tren 01 - lectura normal",
+      "case": "normal",
+      "seconds": 90,
+      "purpose": "desarrollo_control",
+      "instructions": "Lee todo el cuento una sola vez a tu ritmo habitual y sin errores deliberados. La frase El tren llegó a la estación aparece dos veces en el texto: lee ambas apariciones."
+    },
+    {
+      "number": 2,
+      "label": "Tren 02 - lectura lenta sin errores",
+      "case": "lenta",
+      "seconds": 180,
+      "purpose": "desarrollo_control",
+      "instructions": "Lee el cuento entero despacio, pronunciando las palabras completas, sin repeticiones ni pausas largas deliberadas. No alargues artificialmente todas las vocales; buscamos un ritmo lento de lectura."
+    },
+    {
+      "number": 3,
+      "label": "Tren 03 - lectura rapida sin errores",
+      "case": "otro",
+      "seconds": 90,
+      "purpose": "desarrollo_control",
+      "instructions": "Lee el cuento entero más rápido de lo habitual, manteniéndolo inteligible e intentando no omitir palabras. No hace falta alcanzar una velocidad concreta."
+    },
+    {
+      "number": 4,
+      "label": "Tren 04 - repeticiones de palabras",
+      "case": "disfluencias",
+      "seconds": 120,
+      "purpose": "desarrollo_exploratorio",
+      "instructions": "Lee todo el cuento. En la primera frase di El tren tren llegó a la estación. En Clara esperaba di Clara Clara esperaba. En un pañuelo verde di un pañuelo pañuelo verde. El resto, incluida la segunda frase El tren llegó a la estación, se lee normalmente."
+    },
+    {
+      "number": 5,
+      "label": "Tren 05 - cadenas de intentos parciales",
+      "case": "disfluencias",
+      "seconds": 150,
+      "purpose": "desarrollo_exploratorio",
+      "instructions": "Lee el cuento entero. En pequeña di pe- peque- pequeña; en regresaron di re- regre- regres- regresaron; en ventanilla di ven- venta- ventanilla. Los guiones indican cortar el intento, no pronunciar guion. No repitas la frase completa para corregir."
+    },
+    {
+      "number": 6,
+      "label": "Tren 06 - omisiones primer y verde",
+      "case": "disfluencias",
+      "seconds": 90,
+      "purpose": "desarrollo_exploratorio",
+      "instructions": "Lee todo el cuento omitiendo solo primer (di del vagón) y verde (di un pañuelo en la ventanilla). No recuperes después las dos palabras omitidas."
+    },
+    {
+      "number": 7,
+      "label": "Tren 07 - sustituciones con autocorreccion",
+      "case": "disfluencias",
+      "seconds": 120,
+      "purpose": "desarrollo_exploratorio",
+      "instructions": "Lee todo el cuento. En pañuelo verde di pañuelo rojo, no, verde. En Su abuela bajó di Su abuelo, perdón, su abuela bajó, y continúa. No cambies la aparición anterior de abuela en esperar a su abuela. Las palabras no y perdón forman parte de la lectura de esta toma."
+    },
+    {
+      "number": 8,
+      "label": "Tren 08 - pausa larga antes de segunda llegada",
+      "case": "pausa",
+      "seconds": 150,
+      "purpose": "desarrollo_exploratorio",
+      "instructions": "Lee hasta Caminaron hasta la plaza, compraron pan y regresaron para esperar a su abuela. Calla aproximadamente 12 segundos. Continúa por la segunda aparición de El tren llegó a la estación y termina el cuento. No repitas palabras para retomar ni cuentes los segundos en voz alta."
+    },
+    {
+      "number": 9,
+      "label": "Tren 09 - relectura lejana al principio",
+      "case": "relectura",
+      "seconds": 150,
+      "purpose": "desarrollo_exploratorio",
+      "instructions": "Lee primero todo el cuento hasta casa. Sin anunciar la vuelta, vuelve al primer El tren llegó a la estación y relee las tres primeras frases, hasta Su hermano bajó del primer vagón y la saludó desde el andén. Termina la grabación ahí: no vuelvas a leer lo que sigue. Es una relectura completa según esta consigna aunque la posición final ya no sea casa."
+    },
+    {
+      "number": 10,
+      "label": "Tren 10 - frase recuperada fuera de orden",
+      "case": "otro",
+      "seconds": 150,
+      "purpose": "desarrollo_exploratorio",
+      "instructions": "Lee saltándote al principio toda la frase Su hermano bajó del primer vagón y la saludó desde el andén. Tras maleta pequeña continúa directamente por Caminaron hasta la plaza.... Sigue hasta Esta vez, Clara reconoció un pañuelo verde en la ventanilla. Entonces lee una vez la frase omitida Su hermano... andén. Después continúa por Su abuela bajó despacio y termina el cuento. No expliques el cambio de orden."
+    },
+    {
+      "number": 11,
+      "label": "Tren 11 - evento vocal no verbal intermedio",
+      "case": "otro",
+      "seconds": 120,
+      "purpose": "desarrollo_control_evento_no_verbal",
+      "instructions": "Lee todo el cuento sin errores deliberados de palabras. Después de maleta pequeña introduce un carraspeo breve y luego continúa por Su hermano bajó.... No digas la palabra carraspeo. Este sonido se registrará separado de las disfluencias léxicas; no hace falta forzar un estornudo."
+    },
+    {
+      "number": 12,
+      "label": "Tren 12 - mezcla dificil libre",
+      "case": "disfluencias",
+      "seconds": 180,
+      "purpose": "desarrollo_exploratorio",
+      "instructions": "Lee hasta el final mezclando libremente intentos parciales, palabras repetidas, alguna sustitución con autocorrección, una relectura y cambios de velocidad. No hace falta trabarse en cada palabra. No añadas ruido deliberado en esta tanda. Tras guardar, anota fuera del audio lo que recuerdes haber hecho; los detalles se confirmarán por escucha."
+    }
+  ]
+}

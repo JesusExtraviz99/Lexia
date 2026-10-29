@@ -1,0 +1,965 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-25",
+  "experiment_folder": "resultados/literalidad/20261025_182446_557677_UTC",
+  "manifest_sha256": "53074ee81c5d1ff1d1d6ecd1c3597bed33506d7ff3e7ceac0388b86d76b41051",
+  "outputs_sha256": {
+    "baseline": "d46203a64e2506e385c9f0399fd9fe5e45e70bf7e05765d478da0435759d3e30",
+    "candidato": "305f1de0527ef4847ea3e469e6f15c1deb73f6dc744a042f06b3dafb0e3e616b"
+  },
+  "input_human_report_file": "datos/anotaciones/lote_literalidad_20261025_revision.json",
+  "cases": [
+    {
+      "audio_number": 1,
+      "id": "lectura_normal",
+      "source_audio": "datos/audio/Lectura normal - cuento 1 - 14-10-2026.wav",
+      "source_sha256": "83640912d7a54c930c94fdb545f48796e3d04885c90b8d8d71191ed6a35181ea",
+      "analysis_origin": "asistente: contraste documental y textual; no nueva escucha humana ni inferencia",
+      "user_scope": "lector señala error en candidato literal, sin desglosar frases",
+      "raw_outputs": {
+        "baseline": " Una mañana Ana salió al jardín de su casa. Cerca de un árbol encontró una mariposa azul.  La mariposa voló despacio y se posó sobre una flor. Ana llamó a su hermano para que pudiera  verla. Los dos se quedaron en silencio mirando sus alas. Después volvieron a casa y dibujaron  la mariposa en un cuaderno.",
+        "candidato": "Una mañana, Ana, salió al jardín de su casa. Cerca de un árbol, encontró una mariposa azul. La mariposa voló despacio y se posó sobre una flor. Ana llamó a su hermano para que pudiera verla. Los dos se quedaron en silencio, mirando sus alas. Después volvieron a casa y dibujaron la mariposa en un cuaderno. Vas por el lado de las chicas, la mariposa, el cuaderno y la mariposa y los chicas, las mariposas, las mariposas, las mariposas, las mariposas."
+      },
+      "candidate_native_chunks": [
+        {
+          "chunk_idx": 0,
+          "start_sec": 0.0,
+          "end_sec": 30.0,
+          "text": "Una mañana, Ana, salió al jardín de su casa. Cerca de un árbol, encontró una mariposa azul. La mariposa voló despacio y se posó sobre una flor. Ana llamó a su hermano para que pudiera verla. Los dos se quedaron en silencio, mirando sus alas. Después volvieron a casa y dibujaron la mariposa en un cuaderno.",
+          "context": null,
+          "is_last": false,
+          "stitch_lcs_length": null,
+          "stitch_lcs_words": null
+        },
+        {
+          "chunk_idx": 1,
+          "start_sec": 26.0,
+          "end_sec": 40.0,
+          "text": "Vas por el lado de las chicas, la mariposa, el cuaderno y la mariposa y los chicas, las mariposas, las mariposas, las mariposas, las mariposas.",
+          "context": "alas. Después volvieron a casa y dibujaron la mariposa en un cuaderno.",
+          "is_last": true,
+          "stitch_lcs_length": null,
+          "stitch_lcs_words": null
+        }
+      ],
+      "references": [
+        {
+          "file": "datos/referencias/lectura_normal.json",
+          "sha256": "a896d8d5320a90cd1338bb97a962ab7bbd84d3efebfad5cc9729f09ba7152646",
+          "role": "reference_file",
+          "same_audio_verified": true
+        },
+        {
+          "file": "datos/anotaciones/lectura_normal.json",
+          "sha256": "f8cf26d38b44228aee4b83be34a16d30a9dbdd132fe393075356d01cda916c7a",
+          "role": "annotation_file",
+          "same_audio_verified": true
+        }
+      ],
+      "level": "referencia_lexical_humana_completa_y_anotacion_temporal",
+      "summary": "Añade una continuación ajena al audio, desde Vas por el lado de las chicas hasta las repeticiones de las mariposas.",
+      "findings": [
+        {
+          "type": "insercion_texto_final",
+          "recognized": "Vas por el lado de las chicas, la mariposa, el cuaderno y la mariposa y los chicas, las mariposas, las mariposas, las mariposas, las mariposas.",
+          "expected": "Sin palabras después del cuento; el lector confirmó que no hay habla adicional.",
+          "input_block": [
+            26,
+            40
+          ]
+        }
+      ],
+      "baseline_note": "La salida actual del lote coincide lexicalmente con la referencia normal, sin ese añadido.",
+      "human_lexical_reference": "Una mañana, Ana salió al jardín de su casa. Cerca de un árbol encontró una mariposa azul. La mariposa voló despacio y se posó sobre una flor. Ana llamó a su hermano para que pudiera verla. Los dos se quedaron en silencio, mirando sus alas. Después volvieron a casa y dibujaron la mariposa en un cuaderno.",
+      "lexical_diff_display_only": {
+        "baseline": [],
+        "candidato": [
+          {
+            "operation": "insert",
+            "reference_words": [],
+            "recognized_words": [
+              "vas",
+              "por",
+              "el",
+              "lado",
+              "de",
+              "las",
+              "chicas",
+              "la",
+              "mariposa",
+              "el",
+              "cuaderno",
+              "y",
+              "la",
+              "mariposa",
+              "y",
+              "los",
+              "chicas",
+              "las",
+              "mariposas",
+              "las",
+              "mariposas",
+              "las",
+              "mariposas",
+              "las",
+              "mariposas"
+            ]
+          }
+        ]
+      },
+      "reviewed_human_anchors": [
+        {
+          "word": "Una",
+          "start": 1.79,
+          "end": 2
+        },
+        {
+          "word": "mañana",
+          "start": 2,
+          "end": 2.65
+        },
+        {
+          "word": "Ana",
+          "start": 2.89,
+          "end": 3.25
+        },
+        {
+          "word": "salió",
+          "start": 3.32,
+          "end": 3.76
+        },
+        {
+          "word": "al",
+          "start": 3.76,
+          "end": 3.88
+        },
+        {
+          "word": "jardín",
+          "start": 3.88,
+          "end": 4.26
+        },
+        {
+          "word": "de",
+          "start": 4.26,
+          "end": 4.38
+        },
+        {
+          "word": "su",
+          "start": 4.38,
+          "end": 4.52
+        },
+        {
+          "word": "casa",
+          "start": 4.52,
+          "end": 4.82
+        },
+        {
+          "word": "Cerca",
+          "start": 5.46,
+          "end": 5.76
+        },
+        {
+          "word": "de",
+          "start": 5.76,
+          "end": 5.88
+        },
+        {
+          "word": "un",
+          "start": 5.88,
+          "end": 6.02
+        },
+        {
+          "word": "árbol",
+          "start": 6.02,
+          "end": 6.4
+        },
+        {
+          "word": "encontró",
+          "start": 6.47,
+          "end": 6.98
+        },
+        {
+          "word": "una",
+          "start": 6.98,
+          "end": 7.2
+        },
+        {
+          "word": "mariposa",
+          "start": 7.2,
+          "end": 7.62
+        },
+        {
+          "word": "azul",
+          "start": 7.62,
+          "end": 7.94
+        },
+        {
+          "word": "La",
+          "start": 8.66,
+          "end": 8.78
+        },
+        {
+          "word": "mariposa",
+          "start": 8.78,
+          "end": 9.28
+        },
+        {
+          "word": "voló",
+          "start": 9.4,
+          "end": 9.66
+        },
+        {
+          "word": "despacio",
+          "start": 9.66,
+          "end": 10.31
+        },
+        {
+          "word": "y",
+          "start": 10.43,
+          "end": 10.56
+        },
+        {
+          "word": "se",
+          "start": 10.57,
+          "end": 10.7
+        },
+        {
+          "word": "posó",
+          "start": 10.7,
+          "end": 11.08
+        },
+        {
+          "word": "sobre",
+          "start": 11.08,
+          "end": 11.38
+        },
+        {
+          "word": "una",
+          "start": 11.38,
+          "end": 11.56
+        },
+        {
+          "word": "flor",
+          "start": 11.56,
+          "end": 11.85
+        },
+        {
+          "word": "Ana",
+          "start": 12.55,
+          "end": 12.74
+        },
+        {
+          "word": "llamó",
+          "start": 12.74,
+          "end": 13.08
+        },
+        {
+          "word": "a",
+          "start": 13.08,
+          "end": 13.16
+        },
+        {
+          "word": "su",
+          "start": 13.16,
+          "end": 13.22
+        },
+        {
+          "word": "hermano",
+          "start": 13.22,
+          "end": 13.65
+        },
+        {
+          "word": "para",
+          "start": 13.69,
+          "end": 13.84
+        },
+        {
+          "word": "que",
+          "start": 13.84,
+          "end": 14
+        },
+        {
+          "word": "pudiera",
+          "start": 14,
+          "end": 14.32
+        },
+        {
+          "word": "verla",
+          "start": 14.32,
+          "end": 14.76
+        },
+        {
+          "word": "Los",
+          "start": 15.46,
+          "end": 15.77
+        },
+        {
+          "word": "dos",
+          "start": 15.78,
+          "end": 16.1
+        },
+        {
+          "word": "se",
+          "start": 16.15,
+          "end": 16.38
+        },
+        {
+          "word": "quedaron",
+          "start": 16.4,
+          "end": 16.73
+        },
+        {
+          "word": "en",
+          "start": 16.74,
+          "end": 16.9
+        },
+        {
+          "word": "silencio",
+          "start": 16.9,
+          "end": 17.47
+        },
+        {
+          "word": "mirando",
+          "start": 17.59,
+          "end": 17.98
+        },
+        {
+          "word": "sus",
+          "start": 17.98,
+          "end": 18.2
+        },
+        {
+          "word": "alas",
+          "start": 18.25,
+          "end": 18.66
+        },
+        {
+          "word": "Después",
+          "start": 19.24,
+          "end": 19.75
+        },
+        {
+          "word": "volvieron",
+          "start": 19.8,
+          "end": 20.2
+        },
+        {
+          "word": "a",
+          "start": 20.2,
+          "end": 20.37
+        },
+        {
+          "word": "casa",
+          "start": 20.4,
+          "end": 20.81
+        },
+        {
+          "word": "y",
+          "start": 20.91,
+          "end": 21.04
+        },
+        {
+          "word": "dibujaron",
+          "start": 21.05,
+          "end": 21.48
+        },
+        {
+          "word": "la",
+          "start": 21.48,
+          "end": 21.62
+        },
+        {
+          "word": "mariposa",
+          "start": 21.64,
+          "end": 22.14
+        },
+        {
+          "word": "en",
+          "start": 22.14,
+          "end": 22.28
+        },
+        {
+          "word": "un",
+          "start": 22.28,
+          "end": 22.36
+        },
+        {
+          "word": "cuaderno",
+          "start": 22.36,
+          "end": 22.94
+        }
+      ]
+    },
+    {
+      "audio_number": 4,
+      "id": "lectura_lenta",
+      "source_audio": "datos/audio/Lectura lenta - cuento 1 - 16-10-2026.wav",
+      "source_sha256": "8f621da4e009c11ab8940098309b2aae260e4cf32ac32cf3c31d9529cc09095c",
+      "analysis_origin": "asistente: contraste documental y textual; no nueva escucha humana ni inferencia",
+      "user_scope": "lector señala error en candidato literal, sin desglosar frases",
+      "raw_outputs": {
+        "baseline": " Una mañana Ana salió al jardín de su casa, cerca de un árbol encontró una mariposa azul.  La mariposa voló despacio y se posó sobre una flor.  Ana llamó a su hermano para que pudiera verla.  Los dos se quedaron en silencio, mirando sus alas.  Después volvieron a casa y dibujaron la mariposa en un cuaderno.",
+        "candidato": "Una mañana Ana salió al jardín de su casa. Cerca de un árbol encontró una mariposa azul. La mariposa voló desváceo y se posó sobre una flor. Ana llamó a su hermano para que pudiera verla. Los dos se quedaron en silencio, mirando sus alas. Después volvieron a casa y dibujaron la mariposa en un jugador no. Ven."
+      },
+      "candidate_native_chunks": [
+        {
+          "chunk_idx": 0,
+          "start_sec": 0.0,
+          "end_sec": 30.0,
+          "text": "Una mañana Ana salió al jardín de su casa. Cerca de un árbol encontró una mariposa azul. La mariposa voló",
+          "context": null,
+          "is_last": false,
+          "stitch_lcs_length": null,
+          "stitch_lcs_words": null
+        },
+        {
+          "chunk_idx": 1,
+          "start_sec": 26.0,
+          "end_sec": 56.0,
+          "text": "desváceo y se posó sobre una flor. Ana llamó a su hermano para que pudiera verla. Los dos se quedaron",
+          "context": "casa. Cerca de un árbol encontró una mariposa azul. La mariposa voló",
+          "is_last": false,
+          "stitch_lcs_length": null,
+          "stitch_lcs_words": null
+        },
+        {
+          "chunk_idx": 2,
+          "start_sec": 52.0,
+          "end_sec": 82.0,
+          "text": "en silencio, mirando sus alas. Después volvieron a casa y dibujaron la mariposa en un jugador no.",
+          "context": "llamó a su hermano para que pudiera verla. Los dos se quedaron",
+          "is_last": false,
+          "stitch_lcs_length": null,
+          "stitch_lcs_words": null
+        },
+        {
+          "chunk_idx": 3,
+          "start_sec": 78.0,
+          "end_sec": 90.0,
+          "text": "Ven.",
+          "context": "Después volvieron a casa y dibujaron la mariposa en un jugador no.",
+          "is_last": true,
+          "stitch_lcs_length": null,
+          "stitch_lcs_words": null
+        }
+      ],
+      "references": [
+        {
+          "file": "datos/referencias/lectura_lenta.json",
+          "sha256": "8148848abe243ea825ffa856a3360f9dcea93119e76903ed24e9113b32364e2f",
+          "role": "reference_file",
+          "same_audio_verified": true
+        },
+        {
+          "file": "datos/anotaciones/lectura_lenta_fragmentos.json",
+          "sha256": "270653564a018fcb6ad972fb18e7e08a14ef9cec59b2b4282d8ef1ac6f2b5d66",
+          "role": "annotation_file",
+          "same_audio_verified": true
+        }
+      ],
+      "level": "referencia_lexical_humana_completa_y_anclas_seleccionadas",
+      "summary": "Sustituye despacio por desváceo, cuaderno por jugador no y añade Ven al final.",
+      "findings": [
+        {
+          "type": "sustitucion",
+          "expected": "despacio",
+          "recognized": "desváceo",
+          "input_block": [
+            26,
+            56
+          ]
+        },
+        {
+          "type": "sustitucion_y_segmentacion",
+          "expected": "cuaderno",
+          "recognized": "jugador no",
+          "input_block": [
+            52,
+            82
+          ],
+          "human_target_interval": [
+            75.14,
+            77.34
+          ]
+        },
+        {
+          "type": "insercion_texto_final",
+          "expected": "Sin habla tras el cuento; silencio y ruido leve de silla según el lector.",
+          "recognized": "Ven.",
+          "input_block": [
+            78,
+            90
+          ]
+        }
+      ],
+      "baseline_note": "El actual completo del lote conserva despacio y cuaderno. En el experimento antiguo de ventanas aparecía jugaderno: la corrección humana de cuaderno evita tomar ese ASR histórico como verdad.",
+      "human_lexical_reference": "Una mañana, Ana salió al jardín de su casa. Cerca de un árbol encontró una mariposa azul. La mariposa voló despacio y se posó sobre una flor. Ana llamó a su hermano para que pudiera verla. Los dos se quedaron en silencio, mirando sus alas. Después volvieron a casa y dibujaron la mariposa en un cuaderno.",
+      "lexical_diff_display_only": {
+        "baseline": [],
+        "candidato": [
+          {
+            "operation": "replace",
+            "reference_words": [
+              "despacio"
+            ],
+            "recognized_words": [
+              "desváceo"
+            ]
+          },
+          {
+            "operation": "replace",
+            "reference_words": [
+              "cuaderno"
+            ],
+            "recognized_words": [
+              "jugador",
+              "no",
+              "ven"
+            ]
+          }
+        ]
+      },
+      "reviewed_human_anchors": [
+        {
+          "word": "Después",
+          "start": 59.38,
+          "end": 61.42
+        },
+        {
+          "word": "mariposa · última frase",
+          "start": 70.4,
+          "end": 72.73
+        },
+        {
+          "word": "un · antes de cuaderno",
+          "start": 74.26,
+          "end": 75.01
+        },
+        {
+          "word": "cuaderno · final",
+          "start": 75.14,
+          "end": 77.34
+        }
+      ]
+    },
+    {
+      "audio_number": 5,
+      "id": "lectura_relectura",
+      "source_audio": "datos/audio/Lectura con relectura (Los dos se quedaron en silencio) - cuento 1 - 16-10-2026.wav",
+      "source_sha256": "0a766b9ca16e78e973fbce9c008952301e25275bfe2f6fc621c3df98524db03a",
+      "analysis_origin": "asistente: contraste documental y textual; no nueva escucha humana ni inferencia",
+      "user_scope": "lector señala error en candidato literal, sin desglosar frases",
+      "raw_outputs": {
+        "baseline": " Una mañana Ana salió al jardín de su casa.  Cerca de un árbol encontró una mariposa azul.  La mariposa voló despacio y se posó sobre una flor.  Ana llamó a su hermano para que pudiera verla.  Los dos se quedaron en silencio.  Los dos se quedaron en silencio mirando sus alas.  Después volvieron a casa y dibujaron la mariposa en un cuaderno.  Bueno, nos vemos en el próximo vídeo, ¡hasta la próxima!",
+        "candidato": "Una mañana Ana salió al jardín de su casa. Cerca de un árbol encontró una mariposa azul. La mariposa voló despacio y se posó sobre una flor. Ana llamó su hermano para que pudiera verla. Los dos se quedaron en silencio. Los dos se quedaron en silencio mirando sus alas. Después volvieron a casa y dibujaron la mariposa en un cuaderno. Ven."
+      },
+      "candidate_native_chunks": [
+        {
+          "chunk_idx": 0,
+          "start_sec": 0.0,
+          "end_sec": 30.0,
+          "text": "Una mañana Ana salió al jardín de su casa. Cerca de un árbol encontró una mariposa azul. La mariposa voló despacio y se posó sobre una flor. Ana llamó su hermano para que pudiera verla. Los dos se quedaron en silencio. Los dos se quedaron en silencio mirando sus alas. Después volvieron a casa y dibujaron la mariposa en",
+          "context": null,
+          "is_last": false,
+          "stitch_lcs_length": null,
+          "stitch_lcs_words": null
+        },
+        {
+          "chunk_idx": 1,
+          "start_sec": 26.0,
+          "end_sec": 56.0,
+          "text": "un cuaderno.",
+          "context": "mirando sus alas. Después volvieron a casa y dibujaron la mariposa en",
+          "is_last": false,
+          "stitch_lcs_length": null,
+          "stitch_lcs_words": null
+        },
+        {
+          "chunk_idx": 2,
+          "start_sec": 52.0,
+          "end_sec": 60.0,
+          "text": "Ven.",
+          "context": "alas. Después volvieron a casa y dibujaron la mariposa en un cuaderno.",
+          "is_last": true,
+          "stitch_lcs_length": null,
+          "stitch_lcs_words": null
+        }
+      ],
+      "references": [
+        {
+          "file": "datos/referencias/lectura_relectura.json",
+          "sha256": "cd0ddaf76120e05753579933b0c35e00a933ac9fd54f4b2206f400dacb13adb8",
+          "role": "reference_file",
+          "same_audio_verified": true
+        },
+        {
+          "file": "datos/anotaciones/lectura_relectura_fragmentos.json",
+          "sha256": "9465e730681fee16b6f3b5a6ea157933cda4499ce6a8570e53c0a27657b14e09",
+          "role": "annotation_file",
+          "same_audio_verified": true
+        }
+      ],
+      "level": "referencia_lexical_humana_completa_y_anclas_seleccionadas",
+      "summary": "Omite a en llamó a su hermano y añade Ven; las dos apariciones de Los dos se quedaron en silencio sí son reales.",
+      "findings": [
+        {
+          "type": "omision_lexical",
+          "expected": "llamó a su hermano",
+          "recognized": "llamó su hermano",
+          "input_block": [
+            0,
+            30
+          ]
+        },
+        {
+          "type": "insercion_texto_final",
+          "expected": "Sin palabras adicionales al finalizar el cuento.",
+          "recognized": "Ven.",
+          "input_block": [
+            52,
+            60
+          ]
+        }
+      ],
+      "baseline_note": "El actual mantiene llamó a su hermano, pero añade Bueno, nos vemos en el próximo vídeo, ¡hasta la próxima!: también falla. No borrar la relectura verdadera para arreglar la invención.",
+      "human_lexical_reference": "Una mañana, Ana salió al jardín de su casa. Cerca de un árbol encontró una mariposa azul. La mariposa voló despacio y se posó sobre una flor. Ana llamó a su hermano para que pudiera verla. Los dos se quedaron en silencio… Los dos se quedaron en silencio, mirando sus alas. Después volvieron a casa y dibujaron la mariposa en un cuaderno.",
+      "lexical_diff_display_only": {
+        "baseline": [
+          {
+            "operation": "insert",
+            "reference_words": [],
+            "recognized_words": [
+              "bueno",
+              "nos",
+              "vemos",
+              "en",
+              "el",
+              "próximo",
+              "vídeo",
+              "hasta",
+              "la",
+              "próxima"
+            ]
+          }
+        ],
+        "candidato": [
+          {
+            "operation": "delete",
+            "reference_words": [
+              "a"
+            ],
+            "recognized_words": []
+          },
+          {
+            "operation": "insert",
+            "reference_words": [],
+            "recognized_words": [
+              "ven"
+            ]
+          }
+        ]
+      },
+      "reviewed_human_anchors": [
+        {
+          "word": "Los dos se quedaron en silencio · primer intento",
+          "start": 17.54,
+          "end": 19.84
+        },
+        {
+          "word": "Los dos se quedaron en silencio · segundo intento",
+          "start": 20.36,
+          "end": 22.77
+        },
+        {
+          "word": "mirando · después del segundo intento",
+          "start": 22.91,
+          "end": 23.29
+        }
+      ]
+    },
+    {
+      "audio_number": 6,
+      "id": "lectura_relectura_lejana",
+      "source_audio": "datos/audio/Lectura con relectura lejana (Los dos-alas) - cuento 1 - 21-10-2026.wav",
+      "source_sha256": "95a35ea5f0e3cdef076ac52db87a80286c5f4eaebd1f8f0579cda1d25c6cc058",
+      "analysis_origin": "asistente: contraste documental y textual; no nueva escucha humana ni inferencia",
+      "user_scope": "lector señala error en candidato literal, sin desglosar frases",
+      "raw_outputs": {
+        "baseline": " Una mañana Ana salió al jardín de su casa.  Cerca de un árbol encontró una mariposa azul.  La mariposa voló despacio y se posó sobre una flor.  Ana llamó a su hermano para que pudiera verla.  Los dos se quedaron en silencio mirando sus alas.  Después volvieron a casa y dibujaron la mariposa en un cuaderno.  Los dos se quedaron en silencio mirando sus alas.  y",
+        "candidato": "Una mañana Ana salió al jardín de su casa. Cerca de un árbol encontró una mariposa azul. La mariposa voló despacio y se posó sobre una flor. Ana llamó a su hermano para que pudiera verla. Los dos se quedaron en silencio mirando sus alas. Después volvieron a casa y dibujaron la mariposa en un cuaderno. Los dos se quedaron en silencio mirando sus alas. ¿Y por qué no se puede ver el maravilla?"
+      },
+      "candidate_native_chunks": [
+        {
+          "chunk_idx": 0,
+          "start_sec": 0.0,
+          "end_sec": 30.0,
+          "text": "Una mañana Ana salió al jardín de su casa. Cerca de un árbol encontró una mariposa azul. La mariposa voló despacio y se posó sobre una flor. Ana llamó a su hermano para que pudiera verla. Los dos se quedaron en silencio mirando sus alas. Después volvieron a casa y dibujaron la mariposa en un cuaderno.",
+          "context": null,
+          "is_last": false,
+          "stitch_lcs_length": null,
+          "stitch_lcs_words": null
+        },
+        {
+          "chunk_idx": 1,
+          "start_sec": 26.0,
+          "end_sec": 56.0,
+          "text": "Los dos se quedaron en silencio mirando sus alas.",
+          "context": "alas. Después volvieron a casa y dibujaron la mariposa en un cuaderno.",
+          "is_last": false,
+          "stitch_lcs_length": null,
+          "stitch_lcs_words": null
+        },
+        {
+          "chunk_idx": 2,
+          "start_sec": 52.0,
+          "end_sec": 60.0,
+          "text": "¿Y por qué no se puede ver el maravilla?",
+          "context": "en un cuaderno. Los dos se quedaron en silencio mirando sus alas.",
+          "is_last": true,
+          "stitch_lcs_length": null,
+          "stitch_lcs_words": null
+        }
+      ],
+      "references": [
+        {
+          "file": "datos/referencias/lectura_relectura_lejana.json",
+          "sha256": "68e892fe3b852bd31755029a193d1ffbe98af698eb652f2f056f0d3c41cdf716",
+          "role": "reference_file",
+          "same_audio_verified": true
+        },
+        {
+          "file": "datos/anotaciones/lectura_relectura_lejana_fragmentos.json",
+          "sha256": "0156a1d717ed263fe4d4bba809aa3e55a9e1ff51e661c7f61692f1681f6a6b47",
+          "role": "annotation_file",
+          "same_audio_verified": true
+        }
+      ],
+      "level": "referencia_lexical_humana_completa_y_anclas_seleccionadas",
+      "summary": "Conserva la relectura real y luego añade ¿Y por qué no se puede ver el maravilla?.",
+      "findings": [
+        {
+          "type": "insercion_texto_final",
+          "expected": "La última frase pronunciada es la relectura Los dos se quedaron en silencio mirando sus alas.",
+          "recognized": "¿Y por qué no se puede ver el maravilla?",
+          "input_block": [
+            52,
+            60
+          ],
+          "human_last_word_interval": [
+            32.17,
+            32.73
+          ]
+        }
+      ],
+      "baseline_note": "El actual conserva el contenido esperado pero añade una y final; tampoco es una salida perfecta.",
+      "human_lexical_reference": "Una mañana, Ana salió al jardín de su casa. Cerca de un árbol encontró una mariposa azul. La mariposa voló despacio y se posó sobre una flor. Ana llamó a su hermano para que pudiera verla. Los dos se quedaron en silencio, mirando sus alas. Después volvieron a casa y dibujaron la mariposa en un cuaderno. Los dos se quedaron en silencio, mirando sus alas.",
+      "lexical_diff_display_only": {
+        "baseline": [
+          {
+            "operation": "insert",
+            "reference_words": [],
+            "recognized_words": [
+              "y"
+            ]
+          }
+        ],
+        "candidato": [
+          {
+            "operation": "insert",
+            "reference_words": [],
+            "recognized_words": [
+              "y",
+              "por",
+              "qué",
+              "no",
+              "se",
+              "puede",
+              "ver",
+              "el",
+              "maravilla"
+            ]
+          }
+        ]
+      },
+      "reviewed_human_anchors": [
+        {
+          "word": "cuaderno · final de la lectura completa",
+          "start": 24.65,
+          "end": 25.48
+        },
+        {
+          "word": "Los · inicio de la relectura",
+          "start": 29.16,
+          "end": 29.43
+        },
+        {
+          "word": "alas · final de la relectura",
+          "start": 32.17,
+          "end": 32.73
+        }
+      ]
+    },
+    {
+      "audio_number": 11,
+      "id": "lectura_20261023_100001_445275",
+      "source_audio": "datos/audio/Lectura lenta - cuento 2 - lectura_02 - 23-10-2026.wav",
+      "source_sha256": "36c7d9656b4d74e81a4fa0160bef887c2a571d7597381d890e0e48fcbb524add",
+      "analysis_origin": "asistente: contraste documental y textual; no nueva escucha humana ni inferencia",
+      "user_scope": "lector señala error en candidato literal, sin desglosar frases",
+      "raw_outputs": {
+        "baseline": " Una tarde Lucía paseaba por el parque con su abuelo.  Junto a una fuente descubrió un pequeño barco rojo.  El barco flotaba despacio entre las hojas.  Lucia buscó una rama para acercarlo a la orilla.  Su abuelo la ayudó y junto sacaron el barco del agua.  Después regresaron a casa y lo colocaron sobre una estantería.",
+        "candidato": "Una tarde, Lucía paseaba por el parque con su abuelo. Junto a una fuente descubrió un pequeño barco rojo. El barco flotaba despacio entre las hojas. Lucía buscó una rama para acercarlo a la orilla. Su abuelo la ayudó y juntos sacaron el barco del agua. Después regresaron a casa y lo colocaron sobre una estantería. A la vez de hoy, la familia está en su casa, y el joven se lo lleva."
+      },
+      "candidate_native_chunks": [
+        {
+          "chunk_idx": 0,
+          "start_sec": 0.0,
+          "end_sec": 30.0,
+          "text": "Una tarde, Lucía paseaba por el parque con su abuelo. Junto a una fuente descubrió un pequeño barco rojo. El barco",
+          "context": null,
+          "is_last": false,
+          "stitch_lcs_length": null,
+          "stitch_lcs_words": null
+        },
+        {
+          "chunk_idx": 1,
+          "start_sec": 26.0,
+          "end_sec": 56.0,
+          "text": "flotaba despacio entre las hojas. Lucía buscó una rama para acercarlo a la orilla. Su abuelo la ayudó y juntos sacaron el barco del agua.",
+          "context": "abuelo. Junto a una fuente descubrió un pequeño barco rojo. El barco",
+          "is_last": false,
+          "stitch_lcs_length": null,
+          "stitch_lcs_words": null
+        },
+        {
+          "chunk_idx": 2,
+          "start_sec": 52.0,
+          "end_sec": 82.0,
+          "text": "Después regresaron a casa y lo colocaron sobre una estantería.",
+          "context": "orilla. Su abuelo la ayudó y juntos sacaron el barco del agua.",
+          "is_last": false,
+          "stitch_lcs_length": null,
+          "stitch_lcs_words": null
+        },
+        {
+          "chunk_idx": 3,
+          "start_sec": 78.0,
+          "end_sec": 90.0,
+          "text": "A la vez de hoy, la familia está en su casa, y el joven se lo lleva.",
+          "context": "del agua. Después regresaron a casa y lo colocaron sobre una estantería.",
+          "is_last": true,
+          "stitch_lcs_length": null,
+          "stitch_lcs_words": null
+        }
+      ],
+      "references": [
+        {
+          "file": "pruebas/22_lote_segundo_cuento.md",
+          "sha256": "6e51d737b0719ad65c37f46a478ca935e0eb91133820c06600e97b68eb97cd84",
+          "role": "content_review_file"
+        }
+      ],
+      "level": "consigna_y_finalizacion_confirmadas_sin_transcripcion_literal_exhaustiva",
+      "summary": "Añade A la vez de hoy, la familia está en su casa, y el joven se lo lleva. tras estantería.",
+      "findings": [
+        {
+          "type": "anadido_ajeno_al_texto_y_senalado_por_lector",
+          "expected": "El cuento comunicado termina en sobre una estantería; no contiene esta frase.",
+          "recognized": "A la vez de hoy, la familia está en su casa, y el joven se lo lleva.",
+          "input_block": [
+            78,
+            90
+          ],
+          "limit": "No hay referencia literal exhaustiva ni final humano temporizado para este WAV. Es texto añadido respecto al cuento y a la descripción, coherente con la señal de error del lector; no se afirma que todo el bloque sea silencio ni se valida cada palabra del resto."
+        }
+      ],
+      "baseline_note": "El actual no añade esa frase, aunque escribe junto en el lugar de juntos respecto al cuento. Falta referencia literal completa para adjudicar todas sus diferencias."
+    },
+    {
+      "audio_number": 17,
+      "id": "lectura_20261023_101713_339466",
+      "source_audio": "datos/audio/Lectura omisión abuelo - cuento 2 - lectura_02 - 23-10-2026.wav",
+      "source_sha256": "c2ed4663b151f477d675ac96a8711186876b0251aa654ddde9b0f766b513917e",
+      "analysis_origin": "asistente: contraste documental y textual; no nueva escucha humana ni inferencia",
+      "user_scope": "lector señala error en candidato literal, sin desglosar frases",
+      "raw_outputs": {
+        "baseline": " Una tarde, Lucía paseaba por el parque Konsu. Junto a una fuente descubrió un pequeño barco rojo.  El barco flotaba despacio entre las hojas. Lucía buscó una rama para acercarlo a la orilla.  Su, la ayudó y juntos sacaron el barco del agua. Después regresaron a casa y lo colocaron sobre  una estantería.",
+        "candidato": "Una tarde, Lucía paseaba por el parque Consu, junto a una fuente descubrió un pequeño barco rojo. El barco flotaba despacio entre las hojas. Lucía buscó una rama para acercarlo a la orilla. Suu la ayudó y juntos sacaron el barco del agua. Después regresaron a casa y lo colocaron sobre una estantería."
+      },
+      "candidate_native_chunks": [
+        {
+          "chunk_idx": 0,
+          "start_sec": 0.0,
+          "end_sec": 30.0,
+          "text": "Una tarde, Lucía paseaba por el parque Consu, junto a una fuente descubrió un pequeño barco rojo. El barco flotaba despacio entre las hojas. Lucía buscó una rama para acercarlo a la orilla. Suu la ayudó y juntos sacaron el barco del agua. Después regresaron a casa y lo colocaron sobre",
+          "context": null,
+          "is_last": false,
+          "stitch_lcs_length": null,
+          "stitch_lcs_words": null
+        },
+        {
+          "chunk_idx": 1,
+          "start_sec": 26.0,
+          "end_sec": 40.0,
+          "text": "una estantería.",
+          "context": "el barco del agua. Después regresaron a casa y lo colocaron sobre",
+          "is_last": true,
+          "stitch_lcs_length": null,
+          "stitch_lcs_words": null
+        }
+      ],
+      "references": [
+        {
+          "file": "pruebas/22_lote_segundo_cuento.md",
+          "sha256": "6e51d737b0719ad65c37f46a478ca935e0eb91133820c06600e97b68eb97cd84",
+          "role": "content_review_file"
+        }
+      ],
+      "level": "dos_omisiones_confirmadas_sin_referencia_fonetica_completa",
+      "summary": "Escribe Consu y Suu; no restaura abuelo. El problema es principalmente representación/segmentación, sin frase final inventada identificada.",
+      "findings": [
+        {
+          "type": "fusion_de_palabras",
+          "expected": "con su, con omisión de abuelo confirmada en este punto",
+          "recognized": "Consu",
+          "input_block": [
+            0,
+            30
+          ],
+          "limit": "Compatible con unir con su; no demuestra que se invente un nombre propio."
+        },
+        {
+          "type": "representacion_grafica_por_comprobar_foneticamente",
+          "expected": "Su la ayudó, con omisión de abuelo confirmada",
+          "recognized": "Suu la ayudó",
+          "input_block": [
+            0,
+            30
+          ],
+          "limit": "Sin anotación fonética no se resuelve si la u repetida representa una prolongación real o una grafía defectuosa; no contar como una repetición nueva."
+        }
+      ],
+      "baseline_note": "El actual también escribe Konsu y Su, la ayudó. La omisión de abuelo es del lector, no un fallo que el ASR deba corregir añadiendo la palabra."
+    }
+  ],
+  "reference_hashes": {
+    "datos/referencias/lectura_normal.json": "a896d8d5320a90cd1338bb97a962ab7bbd84d3efebfad5cc9729f09ba7152646",
+    "datos/anotaciones/lectura_normal.json": "f8cf26d38b44228aee4b83be34a16d30a9dbdd132fe393075356d01cda916c7a",
+    "datos/referencias/lectura_lenta.json": "8148848abe243ea825ffa856a3360f9dcea93119e76903ed24e9113b32364e2f",
+    "datos/anotaciones/lectura_lenta_fragmentos.json": "270653564a018fcb6ad972fb18e7e08a14ef9cec59b2b4282d8ef1ac6f2b5d66",
+    "datos/referencias/lectura_relectura.json": "cd0ddaf76120e05753579933b0c35e00a933ac9fd54f4b2206f400dacb13adb8",
+    "datos/anotaciones/lectura_relectura_fragmentos.json": "9465e730681fee16b6f3b5a6ea157933cda4499ce6a8570e53c0a27657b14e09",
+    "datos/referencias/lectura_relectura_lejana.json": "68e892fe3b852bd31755029a193d1ffbe98af698eb652f2f056f0d3c41cdf716",
+    "datos/anotaciones/lectura_relectura_lejana_fragmentos.json": "0156a1d717ed263fe4d4bba809aa3e55a9e1ff51e661c7f61692f1681f6a6b47",
+    "pruebas/22_lote_segundo_cuento.md": "6e51d737b0719ad65c37f46a478ca935e0eb91133820c06600e97b68eb97cd84",
+    "resultados/comparaciones/20261016_095252_869489/lectura_20261016_095108_269618_ventana_8s_r1.json": "a27f0e4f7e7fdefa259813d04a4577bdc0071b36b6e7f019a37f54e514723bb6"
+  },
+  "interpretation": "En 1,4,5,6,11 hay texto añadido en el último bloque corto de continuación, aunque el soporte humano es más completo en 1,4,5,6. El 4 además sustituye palabras y el 5 omite a. El 17 es representación/segmentación; la omisión deliberada de abuelo no debe corregirse como si fuera un error del ASR.",
+  "limits": [
+    "Los números de bloques son intervalos de entrada al modelo, no instantes humanos de habla ni marcas validadas del texto inventado.",
+    "El patrón en bloques finales no prueba por sí solo causa por ruido, contexto generado o una opción concreta; no se modifican reglas ni se ejecuta una prueba causal.",
+    "Las diferencias lexicales se agrupan con SequenceMatcher tras NFC, minúsculas y retirada de puntuación, conservando tildes; son una ayuda visual, no WER ni anotación de disfluencias.",
+    "No se adjudican palabras o tiempos humanos inexistentes para 11 y 17, ni se considera correcto el resto de audios por no estar señalado.",
+    "Las relecturas confirmadas se conservan como eventos reales; los ASR actual e histórico tampoco son referencias perfectas."
+  ]
+}

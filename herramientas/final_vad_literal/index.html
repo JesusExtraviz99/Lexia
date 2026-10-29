@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lexia · Control VAD del final</title>
+  <link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script>
+</head>
+<body><main>
+  <header><p class="eyebrow">LEXIA · COMPARACIÓN DEL MISMO RECONOCEDOR LITERAL</p>
+    <h1>¿Qué cambia al limitar el final sin voz?</h1>
+    <p>Compara el texto literal anterior con una inferencia nueva que termina la entrada en el último intervalo de voz detectada, incluido su margen. El audio original permanece completo.</p>
+  </header>
+  <section class="card">
+    <div class="toolbar"><button id="prev">← Anterior</button><strong id="counter"></strong><button id="next">Siguiente →</button></div>
+    <label>Grabación<select id="sample"></select></label>
+    <h2 id="name"></h2><p id="range"></p>
+    <label>Escuchar <select id="source"><option value="original">Original completo</option><option value="sent">Tramo enviado a la variante</option></select></label>
+    <label>Velocidad <select id="rate"><option value="1">1×</option><option value="0.8">0,8×</option><option value="0.6">0,6×</option><option value="0.4">0,4×</option></select></label>
+    <label><input id="loop" type="checkbox"> Repetir</label>
+    <audio id="audio" controls preload="metadata"></audio>
+    <p id="listen_scope" class="muted"></p>
+    <div class="panels">
+      <article class="panel"><h3>Literal original · lote anterior</h3><p class="muted">WAV completo. Texto y tiempo reutilizados; no es otra inferencia.</p><p id="baseline" class="transcript"></p><p id="baseline_time" class="position"></p></article>
+      <article class="panel"><h3>Literal con final VAD · nuevo</h3><p class="muted">Mismo modelo y ajustes. Cambia la duración de entrada, conservando las pausas interiores.</p><p id="candidate" class="transcript"></p><p id="candidate_time" class="position"></p></article>
+    </div>
+    <details><summary>Referencias previas de esta grabación</summary><p id="note"></p></details>
+  </section>
+  <section class="card"><h2>Qué comprobar</h2>
+    <p>Escucha si desaparece el texto añadido y si se conserva lo que sí pronunciaste: última palabra, relecturas e intentos parciales. Acortar la entrada no garantiza una transcripción correcta.</p>
+    <p>El VAD puede perder habla débil. Se mantienen los originales y los tiempos desde cero; la pausa interior no se ha eliminado. Las referencias previas no son una validación automática de cada salida nueva.</p>
+    <p>Este visor es de solo lectura: no guarda valoraciones ni ejecuta ASR.</p>
+  </section>
+  <section class="card"><h2>Coste de este contraste</h2><div id="metrics"></div>
+    <p class="muted">Original reutilizado del lote anterior; variante medida en un proceso nuevo. La carga y el VAD van aparte; el estado del equipo puede influir. RAM por audio muestreada, con memoria reutilizada; pico global de toda la vida del proceso. GPU global no es consumo del ASR: ambos ensayos ejecutan en CPU. No son mediciones de tablet.</p>
+    <details><summary>Diseño y límites del ensayo</summary><p id="notice"></p></details>
+  </section>
+  <p id="status" role="status">Cargando resultados…</p>
+</main></body></html>

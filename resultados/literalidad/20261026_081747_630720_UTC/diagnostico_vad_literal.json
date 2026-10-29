@@ -1,0 +1,574 @@
+{
+  "date": "2026-10-26",
+  "kind": "diagnostico_solo_VAD_sin_reconocimiento_de_texto",
+  "source_manifest_sha256": "04d817f7f36c4a9ad2e052a8e66656c3c82836eefef2e66b0e350ae9ee925b6a",
+  "source_outputs_sha256": {
+    "baseline": "3d2c4608f6ae4c08e239c649871c7137644284d0d08eeeb8a5de8c7f80d1a0fd",
+    "candidato": "fc59e3022656331a3c19c43155d2dc46e5e46675b9be8135a175e0a844f31f28"
+  },
+  "model_file": ".venv\\Lib\\site-packages\\faster_whisper\\assets\\silero_vad_v6.onnx",
+  "model_sha256": "4cbf549b8326f60f80f2536d9eefeb450a9abe83365a098031c89719f1be17d2",
+  "vad_source_sha256": "37a9c774aefdd3162d936b896c8dcf5571b2ed938d65bffecfd631770049a18d",
+  "script_sha256": "f26429fd5cca908e8178aea2be2a47b0ec8e79fd1ee908cc5e7df6b8aa12dd4b",
+  "versions": {
+    "faster-whisper": "1.2.1",
+    "onnxruntime": "1.31.0",
+    "numpy": "2.5.4"
+  },
+  "device": "cpu",
+  "vad_model_threads": 1,
+  "options": {
+    "threshold": 0.5,
+    "neg_threshold": null,
+    "min_speech_duration_ms": 0,
+    "max_speech_duration_s": Infinity,
+    "min_silence_duration_ms": 2000,
+    "speech_pad_ms": 400
+  },
+  "rows": [
+    {
+      "number": 1,
+      "id": "lectura_20261026_080028_124216",
+      "audio": "datos/audio/Lectura normal - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "source_sha256": "a01baf50796a5937ab3fe4b758e1934ac6120fc07bfb961ab1ae5334381a194e",
+      "audio_seconds": 90.0,
+      "processing_seconds": 0.1839445000514388,
+      "cpu_seconds": 0.15625,
+      "intervals_seconds": [
+        [
+          0.528,
+          52.592
+        ]
+      ],
+      "last_vad_end_seconds": 52.592,
+      "candidate_input_blocks": [
+        {
+          "index": 0,
+          "start": 0.0,
+          "end": 30.0,
+          "vad_positive_seconds_with_padding": 29.472,
+          "no_vad_overlap": false,
+          "candidate_text": "Una mañana Mateo salió a caminar con su hermana Clara. Junto al puente encontraron una pequeña caja de madera. Dentro había una llave, una pluma azul y un papel doblado. Clara abrió el papel y leyó, busca donde termina el sendero. Los dos siguieron despacio hasta un viejo molino. Allí descubrieron una puerta escondida entre",
+          "is_last": false
+        },
+        {
+          "index": 1,
+          "start": 26.0,
+          "end": 56.0,
+          "vad_positive_seconds_with_padding": 26.592,
+          "no_vad_overlap": false,
+          "candidate_text": "las plantas. Mateo probó la llave, pero no consiguió abrirla, entonces Clara levantó una piedra y encontró otra entrada. Detrás había un jardín lleno de flores. Antes de regresar, dejaron la caja junto al puente para que alguien más pudiera descubrir el secreto.",
+          "is_last": false
+        },
+        {
+          "index": 2,
+          "start": 52.0,
+          "end": 82.0,
+          "vad_positive_seconds_with_padding": 0.5919999999999987,
+          "no_vad_overlap": false,
+          "candidate_text": "",
+          "is_last": false
+        },
+        {
+          "index": 3,
+          "start": 78.0,
+          "end": 90.0,
+          "vad_positive_seconds_with_padding": 0.0,
+          "no_vad_overlap": true,
+          "candidate_text": "",
+          "is_last": true
+        }
+      ],
+      "human_anchors": []
+    },
+    {
+      "number": 2,
+      "id": "lectura_20261026_080310_194589",
+      "audio": "datos/audio/Lectura repeticiones de palabras - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "source_sha256": "16a446ea986d06e14805e518f3068f296b643890ac6ecaefc651ae3e04196826",
+      "audio_seconds": 100.0,
+      "processing_seconds": 0.19185059994924814,
+      "cpu_seconds": 0.1875,
+      "intervals_seconds": [
+        [
+          1.136,
+          65.84
+        ]
+      ],
+      "last_vad_end_seconds": 65.84,
+      "candidate_input_blocks": [
+        {
+          "index": 0,
+          "start": 0.0,
+          "end": 30.0,
+          "vad_positive_seconds_with_padding": 28.864,
+          "no_vad_overlap": false,
+          "candidate_text": "Una mañana Mateo salió a caminar con su hermana Clara. Junto al puente encontraron una una pequeña caja de madera. Dentro había una llave, una pluma azul y un papel doblado. Clara Clara abrió el papel y leyó, busca donde termina el sendero. Los dos",
+          "is_last": false
+        },
+        {
+          "index": 1,
+          "start": 26.0,
+          "end": 56.0,
+          "vad_positive_seconds_with_padding": 30.0,
+          "no_vad_overlap": false,
+          "candidate_text": "siguieron despacio hasta un viejo molino, allí descubrieron una puerta escondida entre las plantas. Mateo Mateo probó la llave, pero no consiguió abrirla. Entonces Clara levantó una piedra y encontró otra entrada. Detrás había un jardín lleno",
+          "is_last": false
+        },
+        {
+          "index": 2,
+          "start": 52.0,
+          "end": 82.0,
+          "vad_positive_seconds_with_padding": 13.840000000000003,
+          "no_vad_overlap": false,
+          "candidate_text": "de flores. Antes de regresar, dejaron la caja junto junto al puente para que alguien más pudiera descubrir el secreto.",
+          "is_last": false
+        },
+        {
+          "index": 3,
+          "start": 78.0,
+          "end": 100.0,
+          "vad_positive_seconds_with_padding": 0.0,
+          "no_vad_overlap": true,
+          "candidate_text": "¿Para qué?",
+          "is_last": true
+        }
+      ],
+      "human_anchors": []
+    },
+    {
+      "number": 3,
+      "id": "lectura_20261026_080612_790344",
+      "audio": "datos/audio/Lectura intentos parciales - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "source_sha256": "be0b3c786d61a0734fd7ce156f13f529ccca07617458edd462edf041bec67d97",
+      "audio_seconds": 120.0,
+      "processing_seconds": 0.22427369991783053,
+      "cpu_seconds": 0.234375,
+      "intervals_seconds": [
+        [
+          1.104,
+          70.32
+        ]
+      ],
+      "last_vad_end_seconds": 70.32,
+      "candidate_input_blocks": [
+        {
+          "index": 0,
+          "start": 0.0,
+          "end": 30.0,
+          "vad_positive_seconds_with_padding": 28.896,
+          "no_vad_overlap": false,
+          "candidate_text": "Una mañana Mateo salió a caminar con su hermana Clara. Junto al puente encontraron una pe- pe- pequeña caja de madera. Dentro había una llave, una pluma azul y un papel doblado. Clara abrió el papel y leyó:\"Busca donde termina",
+          "is_last": false
+        },
+        {
+          "index": 1,
+          "start": 26.0,
+          "end": 56.0,
+          "vad_positive_seconds_with_padding": 30.0,
+          "no_vad_overlap": false,
+          "candidate_text": "el sendero\". Los dos siguieron despacio hasta un viejo molino. Allí des des descubrieron una puerta escondida entre las plantas. Mateo probó la llave, pero no consiguió abrirla. Entonces Clara levantó una piedra y encontró",
+          "is_last": false
+        },
+        {
+          "index": 2,
+          "start": 52.0,
+          "end": 82.0,
+          "vad_positive_seconds_with_padding": 18.319999999999993,
+          "no_vad_overlap": false,
+          "candidate_text": "otra entrada. Detrás había un jardín lleno de flores. Antes de regresar, dejaron la caja junto al puente para que alguien más pudiera descubrir el secreto.",
+          "is_last": false
+        },
+        {
+          "index": 3,
+          "start": 78.0,
+          "end": 108.0,
+          "vad_positive_seconds_with_padding": 0.0,
+          "no_vad_overlap": true,
+          "candidate_text": "",
+          "is_last": false
+        },
+        {
+          "index": 4,
+          "start": 104.0,
+          "end": 120.0,
+          "vad_positive_seconds_with_padding": 0.0,
+          "no_vad_overlap": true,
+          "candidate_text": "¿Para qué?",
+          "is_last": true
+        }
+      ],
+      "human_anchors": []
+    },
+    {
+      "number": 4,
+      "id": "lectura_20261026_080852_827476",
+      "audio": "datos/audio/Lectura omisiones y sustituciones - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "source_sha256": "01824afa5ab8d098b28eba2685fe1bcf9ba20ef1869a03456cf09bdbef9ee944",
+      "audio_seconds": 90.0,
+      "processing_seconds": 0.16215930006001145,
+      "cpu_seconds": 0.15625,
+      "intervals_seconds": [
+        [
+          1.136,
+          59.984
+        ]
+      ],
+      "last_vad_end_seconds": 59.984,
+      "candidate_input_blocks": [
+        {
+          "index": 0,
+          "start": 0.0,
+          "end": 30.0,
+          "vad_positive_seconds_with_padding": 28.864,
+          "no_vad_overlap": false,
+          "candidate_text": "Una mañana Mateo salió a caminar con su hermana Clara, junto al puente, encontraron una pequeña caja de dentro había una llave, una pluma roja y un papel doblado. Clara abrió el papel y leyó:\"Busca donde termina el sendero\". Los dos siguieron despacio",
+          "is_last": false
+        },
+        {
+          "index": 1,
+          "start": 26.0,
+          "end": 56.0,
+          "vad_positive_seconds_with_padding": 30.0,
+          "no_vad_overlap": false,
+          "candidate_text": "hasta un molino. Allí descubrieron una puerta escondida entre las plantas. Mateo probó la llave, pero no consiguió abrirla. Entonces Clara levantó una piedra y encontró otra entrada. Detrás había un parque lleno de flores. Antes de regresar, dejaron la caja junto",
+          "is_last": false
+        },
+        {
+          "index": 2,
+          "start": 52.0,
+          "end": 82.0,
+          "vad_positive_seconds_with_padding": 7.984000000000002,
+          "no_vad_overlap": false,
+          "candidate_text": "al puente para que alguien más pudiera descubrir el secreto.",
+          "is_last": false
+        },
+        {
+          "index": 3,
+          "start": 78.0,
+          "end": 90.0,
+          "vad_positive_seconds_with_padding": 0.0,
+          "no_vad_overlap": true,
+          "candidate_text": "",
+          "is_last": true
+        }
+      ],
+      "human_anchors": []
+    },
+    {
+      "number": 5,
+      "id": "lectura_20261026_081113_354147",
+      "audio": "datos/audio/Lectura pausa larga y continuacion - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "source_sha256": "94a5ef1fdd6f2ee25f5fdda202c434824627d146c6939fa7dfe385e78e4311d7",
+      "audio_seconds": 120.0,
+      "processing_seconds": 0.21896799991372973,
+      "cpu_seconds": 0.234375,
+      "intervals_seconds": [
+        [
+          1.808,
+          18.864
+        ],
+        [
+          31.28,
+          72.112
+        ]
+      ],
+      "last_vad_end_seconds": 72.112,
+      "candidate_input_blocks": [
+        {
+          "index": 0,
+          "start": 0.0,
+          "end": 30.0,
+          "vad_positive_seconds_with_padding": 17.056,
+          "no_vad_overlap": false,
+          "candidate_text": "Una mañana Mateo salió a caminar con su hermana Clara. Junto al puente, encontraron una pequeña caja de madera. Dentro había una llave, una pluma azul y un papel doblado.",
+          "is_last": false
+        },
+        {
+          "index": 1,
+          "start": 26.0,
+          "end": 56.0,
+          "vad_positive_seconds_with_padding": 24.72,
+          "no_vad_overlap": false,
+          "candidate_text": "Clara abrió el papel y leyó, busca donde termina el sendero. Los dos siguieron despacio hasta un viejo molino. Allí descubrieron una puerta escondida entre las plantas. Mateo probó la llave, pero no consiguió abrirla.",
+          "is_last": false
+        },
+        {
+          "index": 2,
+          "start": 52.0,
+          "end": 82.0,
+          "vad_positive_seconds_with_padding": 20.111999999999995,
+          "no_vad_overlap": false,
+          "candidate_text": "Entonces Clara levantó una piedra y encontró otra entrada. Detrás había un jardín lleno de flores. Antes de regresar, dejaron la caja junto al puente para que alguien más pudiera descubrir el secreto.",
+          "is_last": false
+        },
+        {
+          "index": 3,
+          "start": 78.0,
+          "end": 108.0,
+          "vad_positive_seconds_with_padding": 0.0,
+          "no_vad_overlap": true,
+          "candidate_text": "P- p.",
+          "is_last": false
+        },
+        {
+          "index": 4,
+          "start": 104.0,
+          "end": 120.0,
+          "vad_positive_seconds_with_padding": 0.0,
+          "no_vad_overlap": true,
+          "candidate_text": "P- p.",
+          "is_last": true
+        }
+      ],
+      "human_anchors": []
+    },
+    {
+      "number": 6,
+      "id": "lectura_20261026_081403_297994",
+      "audio": "datos/audio/Lectura dificultades mixtas libres - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "source_sha256": "aa87fb1af758d64299397995949d0035cf782e88869fdc6e478b1e20700752f2",
+      "audio_seconds": 150.0,
+      "processing_seconds": 0.28237729996908456,
+      "cpu_seconds": 0.28125,
+      "intervals_seconds": [
+        [
+          0.912,
+          63.312
+        ],
+        [
+          65.488,
+          69.904
+        ],
+        [
+          71.408,
+          98.16
+        ]
+      ],
+      "last_vad_end_seconds": 98.16,
+      "candidate_input_blocks": [
+        {
+          "index": 0,
+          "start": 0.0,
+          "end": 30.0,
+          "vad_positive_seconds_with_padding": 29.088,
+          "no_vad_overlap": false,
+          "candidate_text": "[yawn] Una mañana, ma- ma- Mateo salió a caminar con su her- her- hermana Clara. Junto al puente descubrieron encontraron una pequeña caja de madera. Dentro había una llave, una una",
+          "is_last": false
+        },
+        {
+          "index": 1,
+          "start": 26.0,
+          "end": 56.0,
+          "vad_positive_seconds_with_padding": 30.0,
+          "no_vad_overlap": false,
+          "candidate_text": "pluma azul y un papel doblado. Clara abrió el papel y leyó, busca donde termina el sendero, los dos siguieron despacio hasta un viejo molino. Allí des- descubrí des- descubrí descubrieron una puerta escondida entre las",
+          "is_last": false
+        },
+        {
+          "index": 2,
+          "start": 52.0,
+          "end": 82.0,
+          "vad_positive_seconds_with_padding": 26.319999999999993,
+          "no_vad_overlap": false,
+          "candidate_text": "plantas. Mateo probó la llave, pero no con consiguió abrirla. Entonces Clara Levam le- Levam levantó",
+          "is_last": false
+        },
+        {
+          "index": 3,
+          "start": 78.0,
+          "end": 108.0,
+          "vad_positive_seconds_with_padding": 20.159999999999997,
+          "no_vad_overlap": false,
+          "candidate_text": "una piedra y encontró otra entrada detrás había un jardín lleno de flores, antes de regresar dejaron la ca- la casa la- la caja junto al puente para que alguien más pudiera descubrir el secreto.",
+          "is_last": false
+        },
+        {
+          "index": 4,
+          "start": 104.0,
+          "end": 134.0,
+          "vad_positive_seconds_with_padding": 0.0,
+          "no_vad_overlap": true,
+          "candidate_text": "P- por favor, si te da la pena, por favor, si te da la pena, por favor, si te da la pena,",
+          "is_last": false
+        },
+        {
+          "index": 5,
+          "start": 130.0,
+          "end": 150.0,
+          "vad_positive_seconds_with_padding": 0.0,
+          "no_vad_overlap": true,
+          "candidate_text": "¿?",
+          "is_last": true
+        }
+      ],
+      "human_anchors": []
+    }
+  ],
+  "notice": "Inferencia VAD nueva sobre los arrays originales del lote; no es ASR nuevo. Intervalos VAD con margen, no referencia humana ni detector perfecto. No se recorta, concatena, cambia la duración ni filtra ninguna salida. La cobertura de anclas solo comprueba límites ya anotados; no valida todas las sílabas/trabadas. Parámetros iniciales, no óptimos.",
+  "model_load_seconds": 0.25501129997428507,
+  "status": "completo",
+  "resources": {
+    "hardware": {
+      "captured_at_utc": "2026-10-26T08:24:01.058589+00:00",
+      "os": "Windows-11-10.0.26200-SP0",
+      "architecture": "AMD64",
+      "python": "3.12.15",
+      "cpu_model": "11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz",
+      "logical_cpus": 16,
+      "memory": {
+        "status": "medido",
+        "working_set_bytes": 59944960,
+        "private_commit_bytes": 569151488,
+        "process_lifetime_peak_working_set_bytes": 60182528,
+        "system_ram_total_bytes": 16866881536,
+        "system_ram_available_bytes": 7364259840
+      },
+      "gpu": {
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 538.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.28,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      }
+    },
+    "wall_seconds": 1.648698200006038,
+    "process_cpu_seconds": 1.578125,
+    "cpu_average_percent_one_logical_core": 95.71945914626585,
+    "cpu_average_percent_machine_capacity": 5.9824661966416155,
+    "samples": [
+      {
+        "elapsed_seconds": 0.00023559993132948875,
+        "cpu_seconds": 0.0,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 60080128,
+          "private_commit_bytes": 569253888,
+          "process_lifetime_peak_working_set_bytes": 60182528,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 7361298432
+        }
+      },
+      {
+        "elapsed_seconds": 0.4213456999277696,
+        "cpu_seconds": 0.34375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 111022080,
+          "private_commit_bytes": 611590144,
+          "process_lifetime_peak_working_set_bytes": 130453504,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 7316762624
+        }
+      },
+      {
+        "elapsed_seconds": 0.6862654999131337,
+        "cpu_seconds": 0.609375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 93200384,
+          "private_commit_bytes": 593080320,
+          "process_lifetime_peak_working_set_bytes": 135602176,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 7337914368
+        }
+      },
+      {
+        "elapsed_seconds": 0.9411889999173582,
+        "cpu_seconds": 0.859375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 114569216,
+          "private_commit_bytes": 634109952,
+          "process_lifetime_peak_working_set_bytes": 145571840,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 7320076288
+        }
+      },
+      {
+        "elapsed_seconds": 1.197562399902381,
+        "cpu_seconds": 1.125,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 141529088,
+          "private_commit_bytes": 651018240,
+          "process_lifetime_peak_working_set_bytes": 145571840,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 7293550592
+        }
+      },
+      {
+        "elapsed_seconds": 1.5250421999953687,
+        "cpu_seconds": 1.46875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 131743744,
+          "private_commit_bytes": 636207104,
+          "process_lifetime_peak_working_set_bytes": 160555008,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 7302012928
+        }
+      }
+    ],
+    "gpu_samples": [
+      {
+        "elapsed_seconds": 0.00023559993132948875,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 538.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.28,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      },
+      {
+        "elapsed_seconds": 1.197562399902381,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 538.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.29,
+            "temperature_celsius": 45.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      }
+    ],
+    "final_memory": {
+      "status": "medido",
+      "working_set_bytes": 95383552,
+      "private_commit_bytes": 595177472,
+      "process_lifetime_peak_working_set_bytes": 160555008,
+      "system_ram_total_bytes": 16866881536,
+      "system_ram_available_bytes": 7336153088
+    },
+    "unavailable": {
+      "asr_energy_joules": null,
+      "cpu_temperature_celsius": null,
+      "asr_flops": null,
+      "tablet_memory_and_battery": null
+    },
+    "notice": "CPU y RAM del proceso completo, incluido muestreo. CPU 100% equivale a un procesador lógico; puede superar 100%. GPU/VRAM/potencia/temperatura son del equipo completo, no del ASR. No se mide energía específica, FLOPs ni rendimiento de tablet. Intervalos reales registrados, máximos muestreados no garantizan pico. Muestreo separado de inferencia; puede influir en la carga."
+  },
+  "asr_outputs_unchanged": true,
+  "human_anchors_count": 0,
+  "human_anchors_fully_covered": 0
+}

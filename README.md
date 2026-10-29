@@ -193,3 +193,9 @@ Las nuevas grabaciones admiten --nombre, --caso, --lector y --ambiente; el progr
 El seguimiento conserva su motor habitual; el análisis de trabadas se prueba por separado. El [piloto de literalidad](pruebas/23_piloto_literalidad.md) compara el ASR actual con CrisperWhisper 2.0 Small en un entorno aislado y documenta modelos, configuración, recursos y referencias humanas. El candidato conserva más intentos escritos, pero también puede insertar texto: no es una referencia automática de disfluencias.
 
 La [comparación con audio completo](resultados/literalidad/20261023_131712_130708/comparacion_contexto.md) conserva el error confirmado del recorte y su cambio al reconocer los 60 s completos. Incluye transcripciones, huellas y coste; sigue pendiente de revisión literal por evento. Modelos y entornos se mantienen fuera de Git, con procedencia y licencia registradas. Ninguna variante literal se activa en el seguidor.
+
+El [lote de todos los audios propios](pruebas/24_lote_literalidad.md) amplía el contraste a los 17 WAV presentes (14 min 40 s), completos y con los mismos ajustes del piloto. Conserva textos brutos, procedencia y CPU/RAM/GPU global por motor e intervalos de inferencia por audio; una pasada de desarrollo con revisión humana pendiente. No demuestra una configuración óptima ni mediciones de tablet.
+
+El [control experimental del final por VAD](pruebas/25_final_vad_literal.md) compara ocho entradas limitadas por voz detectada con las salidas literales originales. Retira los cinco añadidos finales conocidos sin cambiar el resto del texto escrito en esos casos; mantiene errores lexicales e intentos omitidos. Los WAV completos y sus pausas se conservan para revisión y estadísticas; la variante no está activada en el seguidor.
+
+Candidatos ASR adicionales instalados y comprobados técnicamente en CPU: [configuración y uso](docs/RECONOCEDORES_CANDIDATOS.md). No están activados en el seguimiento ni evaluados todavía con los datasets públicos.

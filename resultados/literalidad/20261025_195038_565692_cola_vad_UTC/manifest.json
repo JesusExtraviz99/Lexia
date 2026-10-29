@@ -1,0 +1,275 @@
+{
+  "experiment": "literal_control_final_vad",
+  "created_date": "2026-10-25",
+  "sample_rate_hz": 16000,
+  "candidate_model": {
+    "repo": "nyralabs/CrisperWhisper2.0_small",
+    "revision": "bcaecf0a584a1f600d8897fe6032b9e2e56429a7",
+    "files": [
+      {
+        "file": "added_tokens.json",
+        "bytes": 35275,
+        "sha256": "54e87fd086baa530e05082c11feacf9df5439453c5fae279611f3099ec844dc5"
+      },
+      {
+        "file": "config.json",
+        "bytes": 1344,
+        "sha256": "58cdd5607712143b7c6ed474380627732ab4eadb6dbcf60a85c9b32cba625de2"
+      },
+      {
+        "file": "generation_config.json",
+        "bytes": 3834,
+        "sha256": "c8c487bc35b117a94196e9d533def05e83c65c747b19350bc1773f59f3562085"
+      },
+      {
+        "file": "LICENSE.md",
+        "bytes": 17784,
+        "sha256": "42f43bf4dc72ef422f91f6ca143f4514e21a68b353940d99091c1addcd0aee79"
+      },
+      {
+        "file": "merges.txt",
+        "bytes": 493869,
+        "sha256": "2df2990a395e35e8dfbc7511e08c12d56018d8d04691e0133e5d63b21e154dc6"
+      },
+      {
+        "file": "model.safetensors",
+        "bytes": 483575002,
+        "sha256": "ecfcbd3d5dddebf9c79cd9ae774b6f6a5d68a500cdbe1b196ce5b2085912ebdf"
+      },
+      {
+        "file": "normalizer.json",
+        "bytes": 52666,
+        "sha256": "bf1c507dc8724ca9cf9903640dacfb69dae2f00edee4f21ceba106a7392f26dd"
+      },
+      {
+        "file": "preprocessor_config.json",
+        "bytes": 356,
+        "sha256": "994838f1fa6462c8b9b3c90edada831f11f3dd8b4664634e18f4694d005c9dbf"
+      },
+      {
+        "file": "README.md",
+        "bytes": 10974,
+        "sha256": "ddc82a301a1b59035eefcc1a8b2ec90d56257104df7365b00493c58135a6b029"
+      },
+      {
+        "file": "special_tokens_map.json",
+        "bytes": 2194,
+        "sha256": "e67ae3a0aaa99abcd9f187138e12db1f65c16a14761c50ef10eef2c174a7a691"
+      },
+      {
+        "file": "tokenizer.json",
+        "bytes": 3936954,
+        "sha256": "567da8c8a5b7df02555deecfcb3a7f6acd315844dc5e2fde883fe7ced8467317"
+      },
+      {
+        "file": "tokenizer_config.json",
+        "bytes": 288127,
+        "sha256": "5fa089926c8c2535c622d09a5992fb57c63cbc3514e18cf40bc535bee2a23827"
+      },
+      {
+        "file": "vocab.json",
+        "bytes": 835550,
+        "sha256": "8f680bba319e01a653d2e8a5dbc17a9157179e0576e6ce74ce0c06356c6e24f9"
+      }
+    ],
+    "spanish_language_token": true,
+    "total_bytes": 489253929,
+    "license_source": "C:\\Users\\PC\\OneDrive\\Documentos\\ChatGPT\\Practicas y TFG\\modelos\\crisperwhisper2-small\\LICENSE.md"
+  },
+  "record_per_audio_resources": true,
+  "source_batch": "resultados/literalidad/20261025_182446_557677_UTC",
+  "source_manifest_sha256": "53074ee81c5d1ff1d1d6ecd1c3597bed33506d7ff3e7ceac0388b86d76b41051",
+  "source_candidate_sha256": "305f1de0527ef4847ea3e469e6f15c1deb73f6dc744a042f06b3dafb0e3e616b",
+  "source_vad_sha256": "eeca3b2b83c6e29a9912f6d6d0f5b67d3bd4dbfde4e96b482d8519650f45f329",
+  "source_worker_sha256": "d8c35a13500035de5c823a7c959e67ba871a79045dc6d5240789e35a94179de9",
+  "source_parameters": {
+    "language": "es",
+    "mode": "verbatim",
+    "sr": 16000,
+    "word_timestamps": true,
+    "max_new_tokens": 256,
+    "hallucination_mitigation": true,
+    "temperature_fallback": true,
+    "longform_strategy": "continuation",
+    "chunk_duration": 30.0,
+    "stride": 26.0,
+    "context_words": 12,
+    "drop_words": 2,
+    "timestamp_aware_drop": true,
+    "early_eot_recovery": true
+  },
+  "source_versions": {
+    "numpy": "2.5.4",
+    "crisperwhisper": "2.0.3",
+    "torch": "2.14.1+cpu",
+    "transformers": "5.20.2",
+    "tokenizers": "0.23.3"
+  },
+  "preserved_sources": [
+    {
+      "file": "resultados/literalidad/20261025_182446_557677_UTC/auditoria_errores_lector.json",
+      "sha256": "497999d32e650161c547f655ac3ef9cbbd31e8f5a6f4e255d0cdb07c88e196cc"
+    },
+    {
+      "file": "resultados/literalidad/20261025_182446_557677_UTC/baseline.json",
+      "sha256": "d46203a64e2506e385c9f0399fd9fe5e45e70bf7e05765d478da0435759d3e30"
+    },
+    {
+      "file": "resultados/literalidad/20261025_182446_557677_UTC/candidato.json",
+      "sha256": "305f1de0527ef4847ea3e469e6f15c1deb73f6dc744a042f06b3dafb0e3e616b"
+    },
+    {
+      "file": "resultados/literalidad/20261025_182446_557677_UTC/catalogo_snapshot.json",
+      "sha256": "19fde938777b796c1dddadd3918a254beff13a0a33ee257c2949da43884b349a"
+    },
+    {
+      "file": "resultados/literalidad/20261025_182446_557677_UTC/diagnostico_vad_literal.json",
+      "sha256": "eeca3b2b83c6e29a9912f6d6d0f5b67d3bd4dbfde4e96b482d8519650f45f329"
+    },
+    {
+      "file": "resultados/literalidad/20261025_182446_557677_UTC/integridad.json",
+      "sha256": "f31ece623bf36f51a271d30667ee1237e30275ec4776f2b79a8a783e362d834f"
+    },
+    {
+      "file": "resultados/literalidad/20261025_182446_557677_UTC/manifest.json",
+      "sha256": "53074ee81c5d1ff1d1d6ecd1c3597bed33506d7ff3e7ceac0388b86d76b41051"
+    },
+    {
+      "file": "resultados/literalidad/20261025_182446_557677_UTC/metricas.json",
+      "sha256": "b013add806fc6d63237dd710dd6b90c7f6f55c79d889ecc2cb3c73f2a29cb657"
+    }
+  ],
+  "selection_original_numbers": [
+    3,
+    13
+  ],
+  "vad_options": {
+    "threshold": 0.5,
+    "neg_threshold": null,
+    "min_speech_duration_ms": 0,
+    "max_speech_duration_s": Infinity,
+    "min_silence_duration_ms": 2000,
+    "speech_pad_ms": 400
+  },
+  "samples": [
+    {
+      "id": "lectura_pausa",
+      "kind": "pausa",
+      "label": "Audio 3 · Lectura con pausa (flor-Ana) - cuento 1 - 14-10-2026.wav",
+      "original_number": 3,
+      "role": "control_pausa_larga",
+      "start": 0,
+      "end": 31.376,
+      "original_seconds": 60.0,
+      "removed_tail_seconds": 28.624,
+      "prefix_end_sample": 502016,
+      "source_audio": "datos/audio/Lectura con pausa (flor-Ana) - cuento 1 - 14-10-2026.wav",
+      "source_sha256": "aa64d9b93fb86028f62a2c80173640a07ff31f2278c58031d57560b890190ab1",
+      "original_array_file": ".descartados/literalidad/20261025_182446_557677_UTC/lectura_pausa.npy",
+      "original_array_sha256": "61358bc892f975901b0f4079b6e9e6e9b159758ea72f44bc909f8c0167c72c7e",
+      "original_listen_file": ".descartados/literalidad/20261025_182446_557677_UTC/lectura_pausa.wav",
+      "original_listen_sha256": "cc0d0033ee3ca095b9c896a486817d4457ac7fc6287140bf353f8a0b36f667b2",
+      "array_file": ".descartados/literalidad/20261025_195038_565692_cola_vad_UTC/lectura_pausa.npy",
+      "array_sha256": "ed2399ae3e197837690e8c48a3949b78b1f9d2944a55c94c7e78a0c5c80ec82d",
+      "listen_file": ".descartados/literalidad/20261025_195038_565692_cola_vad_UTC/lectura_pausa.wav",
+      "listen_sha256": "6a881b5ccd99994d4833ceaa7e9be46b378ed15e30a03c3d5450496311f43672",
+      "human_note": "Consigna/metadatos: Lectura con pausa entre flor y Ana · cuento 1 · 14/10/2026. Pausa entre flor (27) y Ana (28). Estado de referencia: transcripcion_confirmada_por_usuario. Ambiente: Pájaros al final descritos por el lector; no se atribuye causalidad.",
+      "catalog_record": {
+        "id": "lectura_pausa",
+        "case": "pausa",
+        "audio_file": "datos/audio/Lectura con pausa (flor-Ana) - cuento 1 - 14-10-2026.wav",
+        "audio_sha256": "aa64d9b93fb86028f62a2c80173640a07ff31f2278c58031d57560b890190ab1",
+        "speaker_id": "adulto_01",
+        "partition": "desarrollo",
+        "reference_status": "transcripcion_confirmada_por_usuario",
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "sample_width_bytes": 2,
+        "frames": 2646000,
+        "duration_seconds": 60.0,
+        "reference_file": "datos/referencias/lectura_pausa.json",
+        "label": "Lectura con pausa entre flor y Ana · cuento 1 · 14/10/2026",
+        "recorded_date": "2026-10-14",
+        "story_file": "datos/textos/lectura_01.txt",
+        "story_sha256": "f6fc5153efd16c604a62d490730be4f64f2872fcbc3641c37f859d4849695cdb",
+        "reading_events": [
+          {
+            "description": "Pausa entre flor (27) y Ana (28).",
+            "source": "confirmacion_usuario"
+          }
+        ],
+        "environment_notes": "Pájaros al final descritos por el lector; no se atribuye causalidad.",
+        "asr_artifact_notes": "Suscríbete no fue pronunciado según el usuario.",
+        "annotation_file": "datos/anotaciones/lectura_pausa_fragmentos.json",
+        "content_review_source": "confirmacion_del_propio_lector",
+        "timing_status": "revision_intervalos_seleccionados_completa",
+        "timing_coverage": "selected_intervals",
+        "legacy_audio_files": [
+          "datos/audio/lectura_20261014_111454_984161.wav"
+        ]
+      },
+      "human_anchor_count": 3,
+      "human_anchors_retained": true
+    },
+    {
+      "id": "lectura_20261023_100623_099029",
+      "kind": "sin_clasificar",
+      "label": "Audio 13 · Lectura pausa con relectura barco rojo - el barco - cuento 2 - lectura_02 - 23-10-2026.wav",
+      "original_number": 13,
+      "role": "control_pausa_larga",
+      "start": 0,
+      "end": 41.776,
+      "original_seconds": 50.0,
+      "removed_tail_seconds": 8.223999999999997,
+      "prefix_end_sample": 668416,
+      "source_audio": "datos/audio/Lectura pausa con relectura barco rojo - el barco - cuento 2 - lectura_02 - 23-10-2026.wav",
+      "source_sha256": "b2632f1e455515be97f00369b68e7db929a9ab24d283897197e0bc53cf6098df",
+      "original_array_file": ".descartados/literalidad/20261025_182446_557677_UTC/lectura_20261023_100623_099029.npy",
+      "original_array_sha256": "81e7a865d2b93950623b9aa7f966f34737ad2a32379c7572e6e621b8ffda20dc",
+      "original_listen_file": ".descartados/literalidad/20261025_182446_557677_UTC/lectura_20261023_100623_099029.wav",
+      "original_listen_sha256": "6b815df7a992c429a2419254f556106255c63e3d9ab742068db083ab98a71275",
+      "array_file": ".descartados/literalidad/20261025_195038_565692_cola_vad_UTC/lectura_20261023_100623_099029.npy",
+      "array_sha256": "2723c97ae8f923f98b408d5a805a8869cbdfcf0725b7646b32653c3f6eaef007",
+      "listen_file": ".descartados/literalidad/20261025_195038_565692_cola_vad_UTC/lectura_20261023_100623_099029.wav",
+      "listen_sha256": "c46c5e5c12d64780730de304459f411e48206b9fa416b71b854f7d9752a670e4",
+      "human_note": "Consigna/metadatos: Lectura pausa con relectura barco rojo / el barco - cuento 2 · 23/10/2026. Tras leer Junto a una fuente descubrió un pequeño barco rojo, pausa aproximada de 8 s y relectura de la misma frase; después continúa hasta terminar el cuento. Estado de referencia: descripcion_de_eventos_confirmada_por_lector_transcripcion_literal_pendiente. Ambiente: El usuario no percibe ruido de fondo en esta grabación; no es una medición de SNR.",
+      "catalog_record": {
+        "id": "lectura_20261023_100623_099029",
+        "audio_file": "datos/audio/Lectura pausa con relectura barco rojo - el barco - cuento 2 - lectura_02 - 23-10-2026.wav",
+        "audio_sha256": "b2632f1e455515be97f00369b68e7db929a9ab24d283897197e0bc53cf6098df",
+        "label": "Lectura pausa con relectura barco rojo / el barco - cuento 2 · 23/10/2026",
+        "case": "sin_clasificar",
+        "recorded_date": "2026-10-23",
+        "story_file": "datos/textos/lectura_02.txt",
+        "story_sha256": "0c78d65f0d4ecff05998f596c1917135db529bf74bc4a2776a9a809d2e1c4c0b",
+        "speaker_id": "adulto_01",
+        "partition": "desarrollo",
+        "reference_status": "descripcion_de_eventos_confirmada_por_lector_transcripcion_literal_pendiente",
+        "reference_file": null,
+        "reading_events": [
+          {
+            "description": "Tras leer Junto a una fuente descubrió un pequeño barco rojo, pausa aproximada de 8 s y relectura de la misma frase; después continúa hasta terminar el cuento.",
+            "source": "confirmacion_usuario"
+          }
+        ],
+        "environment_notes": "El usuario no percibe ruido de fondo en esta grabación; no es una medición de SNR.",
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "sample_width_bytes": 2,
+        "frames": 2205000,
+        "duration_seconds": 50.0,
+        "notice": "Nombre/caso describen la consigna, no validan contenido ni eventos. No es conjunto de prueba reservado por defecto.",
+        "legacy_audio_files": [
+          "datos/audio/lectura_20261023_100623_099029.wav"
+        ],
+        "content_review_file": "pruebas/22_lote_segundo_cuento.md",
+        "content_review_source": "confirmacion_del_propio_lector",
+        "completion_confirmed_by_reader": true,
+        "timing_status": "sin_anotar"
+      },
+      "human_anchor_count": 0,
+      "human_anchors_retained": true
+    }
+  ],
+  "notice": "Control offline de la cola: mismo candidato literal y parámetros; solo cambia la entrada hasta el último final VAD con margen ya incluido. Se conserva el prefijo completo, con pausas interiores e índice temporal desde cero. Originales intactos; una inferencia nueva por caso. Original literal reutilizado del lote previo: no es una nueva medición pareada de tiempo. Cambiar la duración puede cambiar la geometría/ruta corta-larga de bloques; no aísla una causa interna ni valida el VAD en todo el habla. Selección de números originales: [3, 13]. Todos de desarrollo. Sin cambios del seguidor ni publicación automática."
+}

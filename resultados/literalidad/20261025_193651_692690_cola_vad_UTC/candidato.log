@@ -1,0 +1,44 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading weights:   0%|          | 0/479 [00:00<?, ?it/s]
+Loading weights:  17%|#7        | 82/479 [00:00<00:00, 755.82it/s]
+Loading weights:  34%|###3      | 161/479 [00:00<00:00, 763.71it/s]
+Loading weights:  50%|####9     | 238/479 [00:00<00:00, 750.48it/s]
+Loading weights:  66%|######5   | 314/479 [00:00<00:00, 725.81it/s]
+Loading weights:  81%|########  | 387/479 [00:00<00:00, 693.61it/s]
+Loading weights:  97%|#########6| 464/479 [00:00<00:00, 703.54it/s]
+Loading weights: 100%|##########| 479/479 [00:00<00:00, 729.58it/s]
+[transformers] WhisperForConditionalGeneration LOAD REPORT from: C:\Users\PC\OneDrive\Documentos\ChatGPT\Practicas y TFG\modelos\crisperwhisper2-small
+Key                       | Status     |  | 
+--------------------------+------------+--+-
+encoder_blank_head.bias   | UNEXPECTED |  | 
+encoder_blank_head.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[transformers] The following generation flags are not valid and may be ignored: ['output_attentions']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+[transformers] Passing `generation_config` together with generation-related arguments=({'output_attentions', 'suppress_tokens', 'begin_suppress_tokens'}) is deprecated and will be removed in future versions. Please pass either a `generation_config` object OR all generation parameters explicitly, but not both.
+[transformers] Both `max_new_tokens` (=256) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer WhisperTokenizer. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+candidato lectura_normal 'Una ma�ana, Ana, sali� al jard�n de su casa. Cerca de un �rbol, encontr� una mariposa azul. La mariposa vol� despacio y se pos� sobre una flor. Ana llam� a su hermano para que pudiera verla. Los dos se quedaron en silencio, mirando sus alas. Despu�s volvieron a casa y dibujaron la mariposa en un cuaderno.'
+[transformers] Both `max_new_tokens` (=256) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=256) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=256) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+candidato lectura_lenta 'Una ma�ana Ana sali� al jard�n de su casa. Cerca de un �rbol encontr� una mariposa azul. La mariposa vol� desv�ceo y se pos� sobre una flor. Ana llam� a su hermano para que pudiera verla. Los dos se quedaron en silencio, mirando sus alas. Despu�s volvieron a casa y dibujaron la mariposa en un jugador no.'
+[transformers] Both `max_new_tokens` (=256) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+candidato lectura_relectura 'Una ma�ana Ana sali� al jard�n de su casa. Cerca de un �rbol encontr� una mariposa azul. La mariposa vol� despacio y se pos� sobre una flor. Ana llam� su hermano para que pudiera verla. Los dos se quedaron en silencio. Los dos se quedaron en silencio mirando sus alas. Despu�s volvieron a casa y dibujaron la mariposa en un cuaderno.'
+[transformers] Both `max_new_tokens` (=256) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=256) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+candidato lectura_relectura_lejana 'Una ma�ana Ana sali� al jard�n de su casa. Cerca de un �rbol encontr� una mariposa azul. La mariposa vol� despacio y se pos� sobre una flor. Ana llam� a su hermano para que pudiera verla. Los dos se quedaron en silencio mirando sus alas. Despu�s volvieron a casa y dibujaron la mariposa en un cuaderno. Los dos se quedaron en silencio mirando sus alas.'
+[transformers] Both `max_new_tokens` (=256) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+candidato lectura_02_normal 'Una tarde, Luc�a paseaba por el parque con su abuelo. Junto a una fuente descubri� un peque�o barco rojo. El barco flotaba despacio entre las hojas. Luc�a busc� una rama para acercarlo a la orilla. Su abuelo la ayud� y juntos sacaron el barco del agua. Despu�s regresaron a casa y lo colocaron sobre una estanter�a.'
+[transformers] Both `max_new_tokens` (=256) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=256) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=256) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+candidato lectura_20261023_100001_445275 'Una tarde, Luc�a paseaba por el parque con su abuelo. Junto a una fuente descubri� un peque�o barco rojo. El barco flotaba despacio entre las hojas. Luc�a busc� una rama para acercarlo a la orilla. Su abuelo la ayud� y juntos sacaron el barco del agua. Despu�s regresaron a casa y lo colocaron sobre una estanter�a.'
+[transformers] Both `max_new_tokens` (=256) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=256) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Both `max_new_tokens` (=256) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+candidato lectura_20261023_101522_832827 'U- u- una tarde lu- lucia pa- paseaba por el par- parque con su abuelo junto a una un- una fuente des- des- descu- descubri� un pe- peque�o barco rojo, el el barco el barco flotaba des- despacio en entre las hojas. Lu- Lucia busc� una r- rama para acercarlo a la ori- o- orilla. Su abuelo la la ayud� y y juntos sa- sacaron el barco del del agua. Des- despu�s regres- regresaron a casa y lo y lo colocaron sobre una estanter�a.'
+[transformers] Both `max_new_tokens` (=256) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+candidato lectura_20261023_101713_339466 'Una tarde, Luc�a paseaba por el parque Consu, junto a una fuente descubri� un peque�o barco rojo. El barco flotaba despacio entre las hojas. Luc�a busc� una rama para acercarlo a la orilla. Suu la ayud� y juntos sacaron el barco del agua. Despu�s regresaron a casa y lo colocaron sobre una estanter�a.'

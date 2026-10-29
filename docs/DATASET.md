@@ -61,3 +61,32 @@ Para grabaciones nuevas se admiten --nombre, --caso, --lector y --ambiente en gr
 El WAV conserva identificador único y el catálogo añade fecha a la etiqueta. Una grabación nueva empieza sin partición asignada ni referencia validada; clasificarla antes de evaluar. Los nombres normales de archivo son compatibles con Windows; las barras de la fecha se reservan a la etiqueta legible.
 
 El siguiente trabajo es acordar la matriz de cobertura y las particiones, completar la revisión temporal pendiente del segundo cuento y preparar el primer lote. Revisar acceso y método de selección de Common Voice antes de iniciar una descarga grande. No se cambia todavía de modelo ni se publican nuevos datos automáticamente.
+
+
+## Actualización metodológica · 28/10/2026
+
+El usuario transmite el criterio del profesor: preseleccionar reconocedores con datasets públicos y usar después el banco propio para decidir entre los finalistas según lectura asistida. Este orden pasa a orientar las comparaciones siguientes; no convierte retrospectivamente las pruebas exploratorias anteriores en evaluación ciega. No se descargan datos/modelos ni se ejecuta ASR en esta revisión.
+
+En modelos/ constan únicamente faster-whisper-small y crisperwhisper2-small. Nuevas candidaturas propuestas, aún no instaladas:
+- [wav2vec2 XLSR-53 español](https://huggingface.co/jonatasgrosman/wav2vec2-large-xlsr-53-spanish), CTC, afinado con train/validation de Common Voice 6.1.
+- [Vosk español Small 0.42](https://alphacephei.com/vosk/models), modelo de 39 MB orientado también a Android; el tamaño del archivo no equivale a RAM medida en tablet. La variante grande es otra configuración, no una cuarta familia.
+- [Parakeet TDT 0.6B v3](https://huggingface.co/nvidia/parakeet-tdt-0.6b-v3), transductor multilingüe con español. La ficha señala limitaciones para transcripción palabra por palabra/frases incompletas; incluirlo como contraste de ASR general no supone validarlo para intentos parciales.
+Whisper se conserva como referencia y CrisperWhisper como candidato literal ya explorado de la misma familia; no son arquitecturas independientes. Ejecutores, versiones, precisión y hardware se documentarán por separado de los pesos del modelo. No se han elegido ganadores.
+
+Fuentes públicas adicionales revisadas, aún sin importar:
+- [FLEURS de Google](https://huggingface.co/datasets/google/fleurs), configuración es_419, audio/texto y licencia CC-BY-4.0. Propuesta de primera preselección manejable; añadir diversidad de fuentes con Common Voice cuando esté importado.
+- [Multilingual LibriSpeech, español](https://www.openslr.org/94/), fragmentos leídos de audiolibros y particiones train/dev/test, CC-BY-4.0. Complemento de dominio; no sustituye relatos propios con errores ni se concatenará para simular lectura continua.
+FUENTES.json añade fichas/procedencia, no audios descargados. Common Voice sigue en esa carpeta solo como ficha: no se ha comprobado una descarga que el usuario pueda tener fuera del proyecto.
+
+Criterio propuesto: fijar una muestra externa compartida y su versión/IDs antes de consultar salidas; usar validación/desarrollo para preseleccionar y reservar test para comprobar ajustes ya cerrados. WER/CER con normalización idéntica, errores por estratos, inserciones/omisiones/sustituciones y recursos (tiempo, RTF, carga, RAM y GPU realmente atribuible cuando pueda medirse). No comparar solo cifras publicadas en fichas ni mezclar muestras. Auditar posible solapamiento de entrenamiento: Common Voice 27 puede contener clips de versiones anteriores y XLSR declara Common Voice 6.1, por lo que una versión posterior no garantiza independencia.
+
+Conservar dos o tres finalistas por compromiso entre precisión/coste, sin descartar un literal únicamente por su posición en WER de lectura fluida. El corpus público de palabras completas no valida conservación de fragmentos. En el banco propio se medirán por separado seguimiento y literalidad: repeticiones/intentos/autocorrecciones, omisiones reales, falsos añadidos, pausas y recuperación. Las transcripciones de referencia se revisarán antes de convertirlas en conteos.
+
+Los 23 WAV anteriores ya se han usado en exploraciones; los 26 de las tandas límite/texto 3/texto 5 todavía no tienen reconocimiento de esta recogida. Antes de evaluar, verificar de nuevo disponibilidad y resultados existentes y fijar qué se usará para selección y qué quedará reservado. Las reservas anteriores no se reasignan. Elegir un ganador con el banco propio es selección para la tarea, no una prueba final independiente si se sigue reajustando con él. Mantener la limitación de un adulto, sin validación de población infantil. Todo cambio de filtro requiere comparación con originales y referencias, preservando pausas y cronología. El usuario todavía no ha cerrado la recogida completa.
+
+
+## FLEURS disponible localmente · 28/10/2026
+
+FLEURS es_419 importado desde Descargas en datos/externos/fleurs_es_419: originales comprimidos en archivos/, tablas en la raíz y WAV en audio/dev, audio/test, audio/train. Se conservan originales sin conversión. Resultado técnico completo en datos/externos/fleurs_es_419_verificacion.json e índice local por archivo. Dev 408, test 908, train 2.796; total 4.112 audios, 47.697,6 s. WAV FLOAT mono 16 kHz. Copia/CRC, correspondencia TSV y decodificación completa correctas, sin faltantes/sobrantes o audio idéntico cruzado. Hashes locales, no contrastados con hashes publicados. Sin evaluación ASR ni referencia humana nueva. El corpus propio permanece separado (49 audios según última comprobación); no sumar estos clips como nuevas lecturas propias. MLS tiene carpeta mls_es preparada y su descarga sigue pendiente de importar. Datos externos excluidos de Git.
+
+La estructura vigente sitúa cada dataset directamente bajo datos/externos: fleurs_es_419 y mls_es. Se retiró solo la carpeta descargas ya vacía; índices, registro de fuentes y scripts apuntan a las rutas nuevas. Las huellas de los 4.112 WAV y de las seis entradas originales permanecen iguales. La fuente histórica de importación se conserva sin reescribir.

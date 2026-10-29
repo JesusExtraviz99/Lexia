@@ -1,0 +1,798 @@
+{
+  "schema_version": 2,
+  "created_date": "2026-10-16",
+  "notice": "Diez grabaciones del mismo adulto y dos cuentos, todas vistas durante el desarrollo. No son diez hablantes ni rondas independientes. No hay prueba final reservada. Nombres descriptivos no sustituyen referencias literales/temporales; eventos del lector separados de artefactos ASR.",
+  "recordings": [
+    {
+      "id": "lectura_normal",
+      "case": "normal",
+      "audio_file": "datos/audio/Lectura normal - cuento 1 - 14-10-2026.wav",
+      "audio_sha256": "83640912d7a54c930c94fdb545f48796e3d04885c90b8d8d71191ed6a35181ea",
+      "speaker_id": "adulto_01",
+      "partition": "desarrollo",
+      "reference_status": "transcripcion_confirmada_por_usuario",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "frames": 1764000,
+      "duration_seconds": 40.0,
+      "reference_file": "datos/referencias/lectura_normal.json",
+      "label": "Lectura normal · cuento 1 · 14/10/2026",
+      "recorded_date": "2026-10-14",
+      "story_file": "datos/textos/lectura_01.txt",
+      "story_sha256": "f6fc5153efd16c604a62d490730be4f64f2872fcbc3641c37f859d4849695cdb",
+      "reading_events": [],
+      "environment_notes": null,
+      "asr_artifact_notes": null,
+      "annotation_file": "datos/anotaciones/lectura_normal.json",
+      "content_review_source": "confirmacion_del_propio_lector",
+      "timing_status": "revision_usuario_completa",
+      "timing_coverage": "all_words",
+      "legacy_audio_files": [
+        "datos/audio/lectura_20261014_081816_009646.wav"
+      ]
+    },
+    {
+      "id": "lectura_desviaciones",
+      "case": "desviaciones",
+      "audio_file": "datos/audio/Lectura con disfluencias (Ana repetida, sin despacio, mari-mariposa) - cuento 1 - 14-10-2026.wav",
+      "audio_sha256": "936e41098628c1e1687f438ee7bed23c3e2ee1a68fd417866a6cf60037a35625",
+      "speaker_id": "adulto_01",
+      "partition": "desarrollo",
+      "reference_status": "transcripcion_confirmada_por_usuario",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "frames": 1323000,
+      "duration_seconds": 30.0,
+      "reference_file": "datos/referencias/lectura_desviaciones.json",
+      "label": "Disfluencias: Ana repetida, omisión de despacio y mari… mariposa · cuento 1 · 14/10/2026",
+      "recorded_date": "2026-10-14",
+      "story_file": "datos/textos/lectura_01.txt",
+      "story_sha256": "f6fc5153efd16c604a62d490730be4f64f2872fcbc3641c37f859d4849695cdb",
+      "reading_events": [
+        {
+          "description": "Repetición de Ana en posición 3.",
+          "source": "confirmacion_usuario"
+        },
+        {
+          "description": "Omisión de despacio (21).",
+          "source": "confirmacion_usuario"
+        },
+        {
+          "description": "Intento incompleto mari seguido de mariposa al final (53).",
+          "source": "confirmacion_usuario"
+        }
+      ],
+      "environment_notes": "Pájaros intermitentes y ruidos de silla/mochila según escucha del usuario.",
+      "asr_artifact_notes": "Cinesio/cinecio en lugar de silencio es salida del ASR, no error lexical confirmado del lector.",
+      "annotation_file": null,
+      "content_review_source": "confirmacion_del_propio_lector",
+      "timing_status": "sin_anotar",
+      "timing_coverage": "none",
+      "legacy_audio_files": [
+        "datos/audio/lectura_20261014_082953_219058.wav"
+      ]
+    },
+    {
+      "id": "lectura_pausa",
+      "case": "pausa",
+      "audio_file": "datos/audio/Lectura con pausa (flor-Ana) - cuento 1 - 14-10-2026.wav",
+      "audio_sha256": "aa64d9b93fb86028f62a2c80173640a07ff31f2278c58031d57560b890190ab1",
+      "speaker_id": "adulto_01",
+      "partition": "desarrollo",
+      "reference_status": "transcripcion_confirmada_por_usuario",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "frames": 2646000,
+      "duration_seconds": 60.0,
+      "reference_file": "datos/referencias/lectura_pausa.json",
+      "label": "Lectura con pausa entre flor y Ana · cuento 1 · 14/10/2026",
+      "recorded_date": "2026-10-14",
+      "story_file": "datos/textos/lectura_01.txt",
+      "story_sha256": "f6fc5153efd16c604a62d490730be4f64f2872fcbc3641c37f859d4849695cdb",
+      "reading_events": [
+        {
+          "description": "Pausa entre flor (27) y Ana (28).",
+          "source": "confirmacion_usuario"
+        }
+      ],
+      "environment_notes": "Pájaros al final descritos por el lector; no se atribuye causalidad.",
+      "asr_artifact_notes": "Suscríbete no fue pronunciado según el usuario.",
+      "annotation_file": "datos/anotaciones/lectura_pausa_fragmentos.json",
+      "content_review_source": "confirmacion_del_propio_lector",
+      "timing_status": "revision_intervalos_seleccionados_completa",
+      "timing_coverage": "selected_intervals",
+      "legacy_audio_files": [
+        "datos/audio/lectura_20261014_111454_984161.wav"
+      ]
+    },
+    {
+      "id": "lectura_lenta",
+      "case": "lenta",
+      "audio_file": "datos/audio/Lectura lenta - cuento 1 - 16-10-2026.wav",
+      "audio_sha256": "8f621da4e009c11ab8940098309b2aae260e4cf32ac32cf3c31d9529cc09095c",
+      "speaker_id": "adulto_01",
+      "partition": "desarrollo",
+      "reference_status": "transcripcion_confirmada_por_usuario",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "frames": 3969000,
+      "duration_seconds": 90.0,
+      "reference_file": "datos/referencias/lectura_lenta.json",
+      "label": "Lectura lenta · cuento 1 · 16/10/2026",
+      "recorded_date": "2026-10-16",
+      "story_file": "datos/textos/lectura_01.txt",
+      "story_sha256": "f6fc5153efd16c604a62d490730be4f64f2872fcbc3641c37f859d4849695cdb",
+      "reading_events": [
+        {
+          "description": "Lectura deliberadamente lenta, sin omisiones confirmadas.",
+          "source": "confirmacion_usuario"
+        }
+      ],
+      "environment_notes": "Ruido de silla al principio y final según el lector.",
+      "asr_artifact_notes": "Despedida de vídeo no pronunciada por el lector.",
+      "annotation_file": "datos/anotaciones/lectura_lenta_fragmentos.json",
+      "content_review_source": "confirmacion_del_propio_lector",
+      "timing_status": "revision_intervalos_seleccionados_completa",
+      "timing_coverage": "selected_intervals",
+      "legacy_audio_files": [
+        "datos/audio/lectura_20261016_095108_269618.wav"
+      ]
+    },
+    {
+      "id": "lectura_relectura",
+      "case": "relectura",
+      "audio_file": "datos/audio/Lectura con relectura (Los dos se quedaron en silencio) - cuento 1 - 16-10-2026.wav",
+      "audio_sha256": "0a766b9ca16e78e973fbce9c008952301e25275bfe2f6fc621c3df98524db03a",
+      "speaker_id": "adulto_01",
+      "partition": "desarrollo",
+      "reference_status": "transcripcion_confirmada_por_usuario",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "frames": 2646000,
+      "duration_seconds": 60.0,
+      "reference_file": "datos/referencias/lectura_relectura.json",
+      "label": "Relectura de Los dos se quedaron en silencio · cuento 1 · 16/10/2026",
+      "recorded_date": "2026-10-16",
+      "story_file": "datos/textos/lectura_01.txt",
+      "story_sha256": "f6fc5153efd16c604a62d490730be4f64f2872fcbc3641c37f859d4849695cdb",
+      "reading_events": [
+        {
+          "description": "Dos apariciones del tramo 37–42; después continúa el cuento.",
+          "source": "confirmacion_usuario"
+        }
+      ],
+      "environment_notes": "Usuario describe audio limpio salvo ruido leve al final.",
+      "asr_artifact_notes": null,
+      "annotation_file": "datos/anotaciones/lectura_relectura_fragmentos.json",
+      "content_review_source": "confirmacion_del_propio_lector",
+      "timing_status": "revision_intervalos_seleccionados_completa",
+      "timing_coverage": "selected_intervals",
+      "legacy_audio_files": [
+        "datos/audio/lectura_20261016_104151_933317.wav"
+      ]
+    },
+    {
+      "id": "lectura_relectura_lejana",
+      "case": "relectura_lejana",
+      "label": "Relectura lejana: vuelta a Los dos… hasta alas · cuento 1 · 21/10/2026",
+      "recorded_date": "2026-10-21",
+      "audio_file": "datos/audio/Lectura con relectura lejana (Los dos-alas) - cuento 1 - 21-10-2026.wav",
+      "audio_sha256": "95a35ea5f0e3cdef076ac52db87a80286c5f4eaebd1f8f0579cda1d25c6cc058",
+      "speaker_id": "adulto_01",
+      "partition": "desarrollo",
+      "story_file": "datos/textos/lectura_01.txt",
+      "story_sha256": "f6fc5153efd16c604a62d490730be4f64f2872fcbc3641c37f859d4849695cdb",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "frames": 2646000,
+      "duration_seconds": 60.0,
+      "reference_file": "datos/referencias/lectura_relectura_lejana.json",
+      "reference_status": "transcripcion_confirmada_por_usuario",
+      "reading_events": [
+        {
+          "description": "Cuento completo, después relectura lenta de 37–45; final alas (45).",
+          "source": "confirmacion_usuario"
+        }
+      ],
+      "environment_notes": null,
+      "asr_artifact_notes": null,
+      "annotation_file": "datos/anotaciones/lectura_relectura_lejana_fragmentos.json",
+      "content_review_source": "confirmacion_del_propio_lector",
+      "timing_status": "revision_intervalos_seleccionados_completa",
+      "timing_coverage": "selected_intervals",
+      "legacy_audio_files": [
+        "datos/audio/lectura_20261021_090304_259866.wav"
+      ]
+    },
+    {
+      "id": "lectura_normal_lluvia",
+      "case": "normal",
+      "label": "Lectura normal con lluvia · cuento 1 · 21/10/2026",
+      "recorded_date": "2026-10-21",
+      "audio_file": "datos/audio/Lectura normal con lluvia - cuento 1 - 21-10-2026.wav",
+      "audio_sha256": "86eaef918d35a272a1ba1ee613dfae4993583ebba63e2ae47fc235f7ca1f1315",
+      "speaker_id": "adulto_01",
+      "partition": "desarrollo",
+      "story_file": "datos/textos/lectura_01.txt",
+      "story_sha256": "f6fc5153efd16c604a62d490730be4f64f2872fcbc3641c37f859d4849695cdb",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "frames": 1764000,
+      "duration_seconds": 40.0,
+      "reference_file": null,
+      "reference_status": "lectura_unica_confirmada_por_usuario_sin_referencia_literal_guardada",
+      "reading_events": [],
+      "environment_notes": "Lluvia comunicada por el usuario.",
+      "asr_artifact_notes": "No se registra retroceso en los tres seguidores.",
+      "annotation_file": null,
+      "content_review_source": "confirmacion_del_propio_lector",
+      "timing_status": "sin_anotar",
+      "timing_coverage": "none",
+      "legacy_audio_files": [
+        "datos/audio/lectura_20261021_100814_321948.wav"
+      ]
+    },
+    {
+      "id": "lectura_relectura_azul",
+      "case": "relectura_lejana",
+      "label": "Relectura lejana: Cerca de un árbol… hasta azul · cuento 1 · 21/10/2026",
+      "recorded_date": "2026-10-21",
+      "audio_file": "datos/audio/Lectura con relectura lejana (Cerca-azul) - cuento 1 - 21-10-2026.wav",
+      "audio_sha256": "edc0a0b368b9c5c1a63a3290071c207786f72aa7fd91bbd0e982f622a3a6b56b",
+      "speaker_id": "adulto_01",
+      "partition": "desarrollo",
+      "story_file": "datos/textos/lectura_01.txt",
+      "story_sha256": "f6fc5153efd16c604a62d490730be4f64f2872fcbc3641c37f859d4849695cdb",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "frames": 1984500,
+      "duration_seconds": 45.0,
+      "reference_file": "datos/referencias/lectura_relectura_azul.json",
+      "reference_status": "transcripcion_confirmada_por_usuario",
+      "reading_events": [
+        {
+          "description": "Cuento completo seguido de relectura lenta de 10–17; final azul (17).",
+          "source": "confirmacion_usuario"
+        }
+      ],
+      "environment_notes": null,
+      "asr_artifact_notes": null,
+      "annotation_file": "datos/anotaciones/lectura_relectura_azul_fragmentos.json",
+      "content_review_source": "confirmacion_del_propio_lector",
+      "timing_status": "revision_intervalos_seleccionados_completa",
+      "timing_coverage": "selected_intervals",
+      "legacy_audio_files": [
+        "datos/audio/lectura_20261021_103917_243241.wav"
+      ]
+    },
+    {
+      "id": "lectura_02_normal",
+      "case": "normal",
+      "label": "Lectura normal con lluvia · cuento 2 · 21/10/2026",
+      "recorded_date": "2026-10-21",
+      "audio_file": "datos/audio/Lectura normal con lluvia - cuento 2 - 21-10-2026.wav",
+      "audio_sha256": "a5846127dce81250bb8387d4c2fba2d1383780772c565e1c7c87ef98b79dad55",
+      "speaker_id": "adulto_01",
+      "partition": "desarrollo",
+      "story_file": "datos/textos/lectura_02.txt",
+      "story_sha256": "0c78d65f0d4ecff05998f596c1917135db529bf74bc4a2776a9a809d2e1c4c0b",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "frames": 1764000,
+      "duration_seconds": 40.0,
+      "reference_file": null,
+      "reference_status": "lectura_unica_confirmada_por_usuario_sin_referencia_literal_guardada",
+      "reading_events": [],
+      "environment_notes": "El usuario confirma que sigue lloviendo.",
+      "asr_artifact_notes": null,
+      "annotation_file": null,
+      "content_review_source": "confirmacion_del_propio_lector",
+      "timing_status": "sin_anotar",
+      "timing_coverage": "none",
+      "legacy_audio_files": [
+        "datos/audio/lectura_20261021_110858_556291.wav"
+      ]
+    },
+    {
+      "id": "lectura_02_relectura",
+      "case": "relectura_lejana",
+      "label": "Relectura lejana: Junto a una fuente… hasta rojo · cuento 2 · 21/10/2026",
+      "recorded_date": "2026-10-21",
+      "audio_file": "datos/audio/Lectura con relectura lejana (Junto-rojo) - cuento 2 - 21-10-2026.wav",
+      "audio_sha256": "cc005957daf10f5042c2ff5c93eeea8f97ccdc58ccdf9b4c0580284bf7e44a3f",
+      "speaker_id": "adulto_01",
+      "partition": "desarrollo",
+      "story_file": "datos/textos/lectura_02.txt",
+      "story_sha256": "0c78d65f0d4ecff05998f596c1917135db529bf74bc4a2776a9a809d2e1c4c0b",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "frames": 1984500,
+      "duration_seconds": 45.0,
+      "reference_file": "datos/referencias/lectura_02_relectura.json",
+      "reference_status": "transcripcion_confirmada_por_usuario",
+      "reading_events": [
+        {
+          "description": "Cuento completo seguido de relectura lenta de 11–19; final rojo (19).",
+          "source": "confirmacion_usuario"
+        }
+      ],
+      "environment_notes": "Nota humana en rojo: ruido de fondo algo notable. No se presupone intensidad de lluvia.",
+      "asr_artifact_notes": "Despedidas de vídeo, Hum y Marco rojo no forman parte de la lectura confirmada.",
+      "annotation_file": "datos/anotaciones/lectura_02_relectura_fragmentos.json",
+      "content_review_source": "confirmacion_del_propio_lector",
+      "timing_status": "revision_intervalos_seleccionados_completa",
+      "timing_coverage": "selected_intervals",
+      "legacy_audio_files": [
+        "datos/audio/lectura_20261021_114202_408281.wav"
+      ]
+    },
+    {
+      "id": "lectura_20261023_100001_445275",
+      "audio_file": "datos/audio/Lectura lenta - cuento 2 - lectura_02 - 23-10-2026.wav",
+      "audio_sha256": "36c7d9656b4d74e81a4fa0160bef887c2a571d7597381d890e0e48fcbb524add",
+      "label": "Lectura lenta - cuento 2 · 23/10/2026",
+      "case": "lenta",
+      "recorded_date": "2026-10-23",
+      "story_file": "datos/textos/lectura_02.txt",
+      "story_sha256": "0c78d65f0d4ecff05998f596c1917135db529bf74bc4a2776a9a809d2e1c4c0b",
+      "speaker_id": "adulto_01",
+      "partition": "desarrollo",
+      "reference_status": "descripcion_de_eventos_confirmada_por_lector_transcripcion_literal_pendiente",
+      "reference_file": null,
+      "reading_events": [],
+      "environment_notes": "El usuario no percibe ruido de fondo en esta grabación; no es una medición de SNR.",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "frames": 3969000,
+      "duration_seconds": 90.0,
+      "notice": "Nombre/caso describen la consigna, no validan contenido ni eventos. No es conjunto de prueba reservado por defecto.",
+      "legacy_audio_files": [
+        "datos/audio/lectura_20261023_100001_445275.wav"
+      ],
+      "content_review_file": "pruebas/22_lote_segundo_cuento.md",
+      "content_review_source": "confirmacion_del_propio_lector",
+      "completion_confirmed_by_reader": true,
+      "timing_status": "sin_anotar"
+    },
+    {
+      "id": "lectura_20261023_100220_540414",
+      "audio_file": "datos/audio/Lectura rápida - cuento 2 - lectura_02 - 23-10-2026.wav",
+      "audio_sha256": "37c8c42aa14e0bc5c4cc75eef493f61c0c86569017ae91513bc00799e10cc330",
+      "label": "Lectura rápida - cuento 2 · 23/10/2026",
+      "case": "sin_clasificar",
+      "recorded_date": "2026-10-23",
+      "story_file": "datos/textos/lectura_02.txt",
+      "story_sha256": "0c78d65f0d4ecff05998f596c1917135db529bf74bc4a2776a9a809d2e1c4c0b",
+      "speaker_id": "adulto_01",
+      "partition": "desarrollo",
+      "reference_status": "descripcion_de_eventos_confirmada_por_lector_transcripcion_literal_pendiente",
+      "reference_file": null,
+      "reading_events": [],
+      "environment_notes": "El usuario no percibe ruido de fondo en esta grabación; no es una medición de SNR.",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "frames": 1323000,
+      "duration_seconds": 30.0,
+      "notice": "Nombre/caso describen la consigna, no validan contenido ni eventos. No es conjunto de prueba reservado por defecto.",
+      "legacy_audio_files": [
+        "datos/audio/lectura_20261023_100220_540414.wav"
+      ],
+      "content_review_file": "pruebas/22_lote_segundo_cuento.md",
+      "content_review_source": "confirmacion_del_propio_lector",
+      "completion_confirmed_by_reader": true,
+      "timing_status": "sin_anotar"
+    },
+    {
+      "id": "lectura_20261023_100623_099029",
+      "audio_file": "datos/audio/Lectura pausa con relectura barco rojo - el barco - cuento 2 - lectura_02 - 23-10-2026.wav",
+      "audio_sha256": "b2632f1e455515be97f00369b68e7db929a9ab24d283897197e0bc53cf6098df",
+      "label": "Lectura pausa con relectura barco rojo / el barco - cuento 2 · 23/10/2026",
+      "case": "sin_clasificar",
+      "recorded_date": "2026-10-23",
+      "story_file": "datos/textos/lectura_02.txt",
+      "story_sha256": "0c78d65f0d4ecff05998f596c1917135db529bf74bc4a2776a9a809d2e1c4c0b",
+      "speaker_id": "adulto_01",
+      "partition": "desarrollo",
+      "reference_status": "descripcion_de_eventos_confirmada_por_lector_transcripcion_literal_pendiente",
+      "reference_file": null,
+      "reading_events": [
+        {
+          "description": "Tras leer Junto a una fuente descubrió un pequeño barco rojo, pausa aproximada de 8 s y relectura de la misma frase; después continúa hasta terminar el cuento.",
+          "source": "confirmacion_usuario"
+        }
+      ],
+      "environment_notes": "El usuario no percibe ruido de fondo en esta grabación; no es una medición de SNR.",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "frames": 2205000,
+      "duration_seconds": 50.0,
+      "notice": "Nombre/caso describen la consigna, no validan contenido ni eventos. No es conjunto de prueba reservado por defecto.",
+      "legacy_audio_files": [
+        "datos/audio/lectura_20261023_100623_099029.wav"
+      ],
+      "content_review_file": "pruebas/22_lote_segundo_cuento.md",
+      "content_review_source": "confirmacion_del_propio_lector",
+      "completion_confirmed_by_reader": true,
+      "timing_status": "sin_anotar"
+    },
+    {
+      "id": "lectura_20261023_100912_195344",
+      "audio_file": "datos/audio/Lectura sustitución rojo por azul - cuento 2 - lectura_02 - 23-10-2026.wav",
+      "audio_sha256": "a90c4aaca2e09e2fcf6271dd71002f382b8afe457727baa1511d503b7b6d2b03",
+      "label": "Lectura sustitución rojo por azul - cuento 2 · 23/10/2026",
+      "case": "disfluencias",
+      "recorded_date": "2026-10-23",
+      "story_file": "datos/textos/lectura_02.txt",
+      "story_sha256": "0c78d65f0d4ecff05998f596c1917135db529bf74bc4a2776a9a809d2e1c4c0b",
+      "speaker_id": "adulto_01",
+      "partition": "desarrollo",
+      "reference_status": "descripcion_de_eventos_confirmada_por_lector_transcripcion_literal_pendiente",
+      "reference_file": null,
+      "reading_events": [],
+      "environment_notes": "El usuario no percibe ruido de fondo en esta grabación; no es una medición de SNR.",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "frames": 2205000,
+      "duration_seconds": 50.0,
+      "notice": "Nombre/caso describen la consigna, no validan contenido ni eventos. No es conjunto de prueba reservado por defecto.",
+      "legacy_audio_files": [
+        "datos/audio/lectura_20261023_100912_195344.wav"
+      ],
+      "content_review_file": "pruebas/22_lote_segundo_cuento.md",
+      "content_review_source": "confirmacion_del_propio_lector",
+      "completion_confirmed_by_reader": true,
+      "timing_status": "sin_anotar"
+    },
+    {
+      "id": "lectura_20261023_101133_857937",
+      "audio_file": "datos/audio/Lectura con ruido de fondo - cuento 2 - lectura_02 - 23-10-2026.wav",
+      "audio_sha256": "408a8d4c21b92b3d4390300d5e65d02105610a478d4c5df563da9702acbadde8",
+      "label": "Lectura con ruido de fondo - cuento 2 · 23/10/2026",
+      "case": "sin_clasificar",
+      "recorded_date": "2026-10-23",
+      "story_file": "datos/textos/lectura_02.txt",
+      "story_sha256": "0c78d65f0d4ecff05998f596c1917135db529bf74bc4a2776a9a809d2e1c4c0b",
+      "speaker_id": "adulto_01",
+      "partition": "desarrollo",
+      "reference_status": "descripcion_de_eventos_confirmada_por_lector_transcripcion_literal_pendiente",
+      "reference_file": null,
+      "reading_events": [],
+      "environment_notes": "Sonido de calle reproducido desde un móvil, según el usuario.",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "frames": 2205000,
+      "duration_seconds": 50.0,
+      "notice": "Nombre/caso describen la consigna, no validan contenido ni eventos. No es conjunto de prueba reservado por defecto.",
+      "legacy_audio_files": [
+        "datos/audio/lectura_20261023_101133_857937.wav"
+      ],
+      "content_review_file": "pruebas/22_lote_segundo_cuento.md",
+      "content_review_source": "confirmacion_del_propio_lector",
+      "completion_confirmed_by_reader": true,
+      "timing_status": "sin_anotar"
+    },
+    {
+      "id": "lectura_20261023_101347_131094",
+      "availability_status": "historico_sin_wav_coincidente",
+      "availability_note": "Entrada histórica conservada: su SHA256 no corresponde al WAV actual de 60 s con el mismo nombre. No usarla como una grabación local adicional.",
+      "audio_file": "datos/audio/Lectura con muchas trabadas - cuento 2 - lectura_02 - 23-10-2026.wav",
+      "audio_sha256": "dd2f36317173802fdea1c6d7f24f3ffcfdb3364439d9bf68686ef5eef634efcf",
+      "label": "Lectura con muchas trabadas - cuento 2 · 23/10/2026",
+      "case": "disfluencias",
+      "recorded_date": "2026-10-23",
+      "story_file": "datos/textos/lectura_02.txt",
+      "story_sha256": "0c78d65f0d4ecff05998f596c1917135db529bf74bc4a2776a9a809d2e1c4c0b",
+      "speaker_id": "adulto_01",
+      "partition": "sin_asignar",
+      "reference_status": "pendiente_revision_usuario",
+      "reference_file": null,
+      "reading_events": [],
+      "environment_notes": null,
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "frames": 2205000,
+      "duration_seconds": 50.0,
+      "notice": "Nombre/caso describen la consigna, no validan contenido ni eventos. No es conjunto de prueba reservado por defecto.",
+      "legacy_audio_files": [
+        "datos/audio/lectura_20261023_101347_131094.wav"
+      ]
+    },
+    {
+      "id": "lectura_20261023_101522_832827",
+      "audio_file": "datos/audio/Lectura con muchas trabadas - cuento 2 - lectura_02 - 23-10-2026.wav",
+      "audio_sha256": "c40c2b067709afc6e4f80ecb69db4ad37c8fa33263323f5ab70848491fcce0b7",
+      "label": "Lectura con muchas trabadas - cuento 2 · 23/10/2026",
+      "case": "disfluencias",
+      "recorded_date": "2026-10-23",
+      "story_file": "datos/textos/lectura_02.txt",
+      "story_sha256": "0c78d65f0d4ecff05998f596c1917135db529bf74bc4a2776a9a809d2e1c4c0b",
+      "speaker_id": "adulto_01",
+      "partition": "desarrollo",
+      "reference_status": "descripcion_de_eventos_confirmada_por_lector_transcripcion_literal_pendiente",
+      "reference_file": null,
+      "reading_events": [
+        {
+          "description": "Fragmentos y repeticiones durante el cuento, por ejemplo Una ta ta tarde, Lu, Lucía; lista literal completa pendiente de anotación.",
+          "source": "confirmacion_usuario"
+        }
+      ],
+      "environment_notes": "El usuario no percibe ruido de fondo en esta grabación; no es una medición de SNR.",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "frames": 2646000,
+      "duration_seconds": 60.0,
+      "notice": "Nombre/caso describen la consigna, no validan contenido ni eventos. No es conjunto de prueba reservado por defecto.",
+      "legacy_audio_files": [
+        "datos/audio/lectura_20261023_101522_832827.wav"
+      ],
+      "content_review_file": "pruebas/22_lote_segundo_cuento.md",
+      "content_review_source": "confirmacion_del_propio_lector",
+      "completion_confirmed_by_reader": true,
+      "timing_status": "sin_anotar",
+      "qualitative_review_file": "datos/anotaciones/lectura_02_trabadas_revision_cualitativa.json",
+      "qualitative_review_status": "cuatro_fragmentos_revisados_por_el_lector_ronda_1"
+    },
+    {
+      "id": "lectura_20261023_101713_339466",
+      "audio_file": "datos/audio/Lectura omisión abuelo - cuento 2 - lectura_02 - 23-10-2026.wav",
+      "audio_sha256": "c2ed4663b151f477d675ac96a8711186876b0251aa654ddde9b0f766b513917e",
+      "label": "Lectura omisión abuelo - cuento 2 · 23/10/2026",
+      "case": "disfluencias",
+      "recorded_date": "2026-10-23",
+      "story_file": "datos/textos/lectura_02.txt",
+      "story_sha256": "0c78d65f0d4ecff05998f596c1917135db529bf74bc4a2776a9a809d2e1c4c0b",
+      "speaker_id": "adulto_01",
+      "partition": "desarrollo",
+      "reference_status": "descripcion_de_eventos_confirmada_por_lector_transcripcion_literal_pendiente",
+      "reference_file": null,
+      "reading_events": [
+        {
+          "description": "Omisión de las dos apariciones de abuelo, en con su abuelo y Su abuelo la ayudó.",
+          "source": "confirmacion_usuario"
+        }
+      ],
+      "environment_notes": "El usuario no percibe ruido de fondo en esta grabación; no es una medición de SNR.",
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "frames": 1764000,
+      "duration_seconds": 40.0,
+      "notice": "Nombre/caso describen la consigna, no validan contenido ni eventos. No es conjunto de prueba reservado por defecto.",
+      "legacy_audio_files": [
+        "datos/audio/lectura_20261023_101713_339466.wav"
+      ],
+      "content_review_file": "pruebas/22_lote_segundo_cuento.md",
+      "content_review_source": "confirmacion_del_propio_lector",
+      "completion_confirmed_by_reader": true,
+      "timing_status": "sin_anotar"
+    },
+    {
+      "id": "lectura_20261026_080028_124216",
+      "audio_file": "datos/audio/Lectura normal - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "audio_sha256": "a01baf50796a5937ab3fe4b758e1934ac6120fc07bfb961ab1ae5334381a194e",
+      "label": "Lectura normal - caja del sendero · 26/10/2026",
+      "case": "normal",
+      "recorded_date": "2026-10-26",
+      "story_file": "datos/textos/lectura_04.txt",
+      "story_sha256": "c869686736872fb96150ede565d9d0a81ff986e2469f0131dd66cc5e56a2bf8e",
+      "speaker_id": "adulto_01",
+      "partition": "desarrollo",
+      "reference_status": "descripcion_confirmada_por_lector_pendiente_escucha_detallada",
+      "reference_file": null,
+      "reading_events": [
+        {
+          "description": "El lector confirma haber seguido la consigna: Lee todo el cuento una sola vez a tu ritmo habitual, sin introducir errores deliberados.",
+          "source": "confirmacion_lector_chat",
+          "start": null,
+          "end": null
+        }
+      ],
+      "environment_notes": null,
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "frames": 3969000,
+      "duration_seconds": 90.0,
+      "notice": "Nombre/caso describen la consigna, no validan contenido ni eventos. No es conjunto de prueba reservado por defecto.",
+      "legacy_audio_files": [
+        "datos/audio/lectura_20261026_080028_124216.wav"
+      ],
+      "reader_report_file": "datos/anotaciones/lectura_04_tanda_confirmacion.json"
+    },
+    {
+      "id": "lectura_20261026_080310_194589",
+      "audio_file": "datos/audio/Lectura repeticiones de palabras - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "audio_sha256": "16a446ea986d06e14805e518f3068f296b643890ac6ecaefc651ae3e04196826",
+      "label": "Lectura repeticiones de palabras - caja del sendero · 26/10/2026",
+      "case": "disfluencias",
+      "recorded_date": "2026-10-26",
+      "story_file": "datos/textos/lectura_04.txt",
+      "story_sha256": "c869686736872fb96150ede565d9d0a81ff986e2469f0131dd66cc5e56a2bf8e",
+      "speaker_id": "adulto_01",
+      "partition": "desarrollo",
+      "reference_status": "descripcion_confirmada_por_lector_pendiente_escucha_detallada",
+      "reference_file": null,
+      "reading_events": [
+        {
+          "description": "El lector confirma haber seguido la consigna: Lee todo el cuento. Introduce cuatro repeticiones: una una pequeña caja; Clara Clara abrió; Mateo Mateo probó; junto junto al puente (en la última frase). El resto se lee normalmente.",
+          "source": "confirmacion_lector_chat",
+          "start": null,
+          "end": null
+        }
+      ],
+      "environment_notes": null,
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "frames": 4410000,
+      "duration_seconds": 100.0,
+      "notice": "Nombre/caso describen la consigna, no validan contenido ni eventos. No es conjunto de prueba reservado por defecto.",
+      "legacy_audio_files": [
+        "datos/audio/lectura_20261026_080310_194589.wav"
+      ],
+      "reader_report_file": "datos/anotaciones/lectura_04_tanda_confirmacion.json"
+    },
+    {
+      "id": "lectura_20261026_080612_790344",
+      "audio_file": "datos/audio/Lectura intentos parciales - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "audio_sha256": "be0b3c786d61a0734fd7ce156f13f529ccca07617458edd462edf041bec67d97",
+      "label": "Lectura intentos parciales - caja del sendero · 26/10/2026",
+      "case": "disfluencias",
+      "recorded_date": "2026-10-26",
+      "story_file": "datos/textos/lectura_04.txt",
+      "story_sha256": "c869686736872fb96150ede565d9d0a81ff986e2469f0131dd66cc5e56a2bf8e",
+      "speaker_id": "adulto_01",
+      "partition": "desarrollo",
+      "reference_status": "descripcion_confirmada_por_lector_pendiente_escucha_detallada",
+      "reference_file": null,
+      "reading_events": [
+        {
+          "description": "El lector confirma haber seguido la consigna: Lee todo el cuento. En pequeña di pe- pe- pequeña; en descubrieron di des- des- descubrieron; en regresar di regres- re- regresar. Los guiones indican cortar la palabra, no decir guion. Deja salir los intentos sin corregirlos después. El resto se lee normalmente.",
+          "source": "confirmacion_lector_chat",
+          "start": null,
+          "end": null
+        }
+      ],
+      "environment_notes": null,
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "frames": 5292000,
+      "duration_seconds": 120.0,
+      "notice": "Nombre/caso describen la consigna, no validan contenido ni eventos. No es conjunto de prueba reservado por defecto.",
+      "legacy_audio_files": [
+        "datos/audio/lectura_20261026_080612_790344.wav"
+      ],
+      "reader_report_file": "datos/anotaciones/lectura_04_tanda_confirmacion.json"
+    },
+    {
+      "id": "lectura_20261026_080852_827476",
+      "audio_file": "datos/audio/Lectura omisiones y sustituciones - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "audio_sha256": "01824afa5ab8d098b28eba2685fe1bcf9ba20ef1869a03456cf09bdbef9ee944",
+      "label": "Lectura omisiones y sustituciones - caja del sendero · 26/10/2026",
+      "case": "disfluencias",
+      "recorded_date": "2026-10-26",
+      "story_file": "datos/textos/lectura_04.txt",
+      "story_sha256": "c869686736872fb96150ede565d9d0a81ff986e2469f0131dd66cc5e56a2bf8e",
+      "speaker_id": "adulto_01",
+      "partition": "desarrollo",
+      "reference_status": "descripcion_confirmada_por_lector_pendiente_escucha_detallada",
+      "reference_file": null,
+      "reading_events": [
+        {
+          "description": "El lector confirma haber seguido la consigna: Lee todo el cuento omitiendo madera y viejo. Sustituye pluma azul por pluma roja y un jardín por un parque. No añadas después las palabras omitidas ni corrijas las sustituciones.",
+          "source": "confirmacion_lector_chat",
+          "start": null,
+          "end": null
+        }
+      ],
+      "environment_notes": null,
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "frames": 3969000,
+      "duration_seconds": 90.0,
+      "notice": "Nombre/caso describen la consigna, no validan contenido ni eventos. No es conjunto de prueba reservado por defecto.",
+      "legacy_audio_files": [
+        "datos/audio/lectura_20261026_080852_827476.wav"
+      ],
+      "reader_report_file": "datos/anotaciones/lectura_04_tanda_confirmacion.json"
+    },
+    {
+      "id": "lectura_20261026_081113_354147",
+      "audio_file": "datos/audio/Lectura pausa larga y continuacion - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "audio_sha256": "94a5ef1fdd6f2ee25f5fdda202c434824627d146c6939fa7dfe385e78e4311d7",
+      "label": "Lectura pausa larga y continuacion - caja del sendero · 26/10/2026",
+      "case": "pausa",
+      "recorded_date": "2026-10-26",
+      "story_file": "datos/textos/lectura_04.txt",
+      "story_sha256": "c869686736872fb96150ede565d9d0a81ff986e2469f0131dd66cc5e56a2bf8e",
+      "speaker_id": "adulto_01",
+      "partition": "validacion_reservada_cambios_posteriores",
+      "reference_status": "descripcion_confirmada_por_lector_pendiente_escucha_detallada",
+      "reference_file": null,
+      "reading_events": [
+        {
+          "description": "El lector confirma haber seguido la consigna: Lee hasta y un papel doblado. Haz una pausa aproximada de 8 segundos sin hablar, continúa por Clara abrió el papel y termina el cuento una sola vez. No repitas la frase anterior.",
+          "source": "confirmacion_lector_chat",
+          "start": null,
+          "end": null
+        }
+      ],
+      "environment_notes": null,
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "frames": 5292000,
+      "duration_seconds": 120.0,
+      "notice": "Nombre/caso describen la consigna, no validan contenido ni eventos. No es conjunto de prueba reservado por defecto.",
+      "legacy_audio_files": [
+        "datos/audio/lectura_20261026_081113_354147.wav"
+      ],
+      "reader_report_file": "datos/anotaciones/lectura_04_tanda_confirmacion.json"
+    },
+    {
+      "id": "lectura_20261026_081403_297994",
+      "audio_file": "datos/audio/Lectura dificultades mixtas libres - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "audio_sha256": "aa87fb1af758d64299397995949d0035cf782e88869fdc6e478b1e20700752f2",
+      "label": "Lectura dificultades mixtas libres - caja del sendero · 26/10/2026",
+      "case": "disfluencias",
+      "recorded_date": "2026-10-26",
+      "story_file": "datos/textos/lectura_04.txt",
+      "story_sha256": "c869686736872fb96150ede565d9d0a81ff986e2469f0131dd66cc5e56a2bf8e",
+      "speaker_id": "adulto_01",
+      "partition": "validacion_reservada_cambios_posteriores",
+      "reference_status": "descripcion_confirmada_por_lector_pendiente_escucha_detallada",
+      "reference_file": null,
+      "reading_events": [
+        {
+          "description": "El lector describe confusiones/autocorrecciones, recuerda descubrieron y luego encontraron una caja..., otra autocorrección no recordada, repeticiones parciales y cambios lentos/rápidos. Secuencia literal completa pendiente de escucha.",
+          "source": "confirmacion_lector_chat",
+          "start": null,
+          "end": null
+        }
+      ],
+      "environment_notes": null,
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "sample_width_bytes": 2,
+      "frames": 6615000,
+      "duration_seconds": 150.0,
+      "notice": "Nombre/caso describen la consigna, no validan contenido ni eventos. No es conjunto de prueba reservado por defecto.",
+      "legacy_audio_files": [
+        "datos/audio/lectura_20261026_081403_297994.wav"
+      ],
+      "reader_report_file": "datos/anotaciones/lectura_04_tanda_confirmacion.json"
+    }
+  ],
+  "updated_date": "2026-10-23",
+  "stories": [
+    {
+      "id": "cuento_01",
+      "file": "datos/textos/lectura_01.txt",
+      "sha256": "f6fc5153efd16c604a62d490730be4f64f2872fcbc3641c37f859d4849695cdb"
+    },
+    {
+      "id": "cuento_02",
+      "file": "datos/textos/lectura_02.txt",
+      "sha256": "0c78d65f0d4ecff05998f596c1917135db529bf74bc4a2776a9a809d2e1c4c0b"
+    }
+  ]
+}

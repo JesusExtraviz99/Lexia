@@ -1,0 +1,3288 @@
+{
+  "experiment": "lote_literalidad_todos_los_wav_propios",
+  "created_date": "2026-10-26",
+  "selection_scope": "cuento_seleccionado",
+  "selected_story": "datos/textos/lectura_04.txt",
+  "created_at_utc": "2026-10-26T08:17:48.891452+00:00",
+  "sample_rate_hz": 16000,
+  "candidate_model": {
+    "repo": "nyralabs/CrisperWhisper2.0_small",
+    "revision": "bcaecf0a584a1f600d8897fe6032b9e2e56429a7",
+    "files": [
+      {
+        "file": "added_tokens.json",
+        "bytes": 35275,
+        "sha256": "54e87fd086baa530e05082c11feacf9df5439453c5fae279611f3099ec844dc5"
+      },
+      {
+        "file": "config.json",
+        "bytes": 1344,
+        "sha256": "58cdd5607712143b7c6ed474380627732ab4eadb6dbcf60a85c9b32cba625de2"
+      },
+      {
+        "file": "generation_config.json",
+        "bytes": 3834,
+        "sha256": "c8c487bc35b117a94196e9d533def05e83c65c747b19350bc1773f59f3562085"
+      },
+      {
+        "file": "LICENSE.md",
+        "bytes": 17784,
+        "sha256": "42f43bf4dc72ef422f91f6ca143f4514e21a68b353940d99091c1addcd0aee79"
+      },
+      {
+        "file": "merges.txt",
+        "bytes": 493869,
+        "sha256": "2df2990a395e35e8dfbc7511e08c12d56018d8d04691e0133e5d63b21e154dc6"
+      },
+      {
+        "file": "model.safetensors",
+        "bytes": 483575002,
+        "sha256": "ecfcbd3d5dddebf9c79cd9ae774b6f6a5d68a500cdbe1b196ce5b2085912ebdf"
+      },
+      {
+        "file": "normalizer.json",
+        "bytes": 52666,
+        "sha256": "bf1c507dc8724ca9cf9903640dacfb69dae2f00edee4f21ceba106a7392f26dd"
+      },
+      {
+        "file": "preprocessor_config.json",
+        "bytes": 356,
+        "sha256": "994838f1fa6462c8b9b3c90edada831f11f3dd8b4664634e18f4694d005c9dbf"
+      },
+      {
+        "file": "README.md",
+        "bytes": 10974,
+        "sha256": "ddc82a301a1b59035eefcc1a8b2ec90d56257104df7365b00493c58135a6b029"
+      },
+      {
+        "file": "special_tokens_map.json",
+        "bytes": 2194,
+        "sha256": "e67ae3a0aaa99abcd9f187138e12db1f65c16a14761c50ef10eef2c174a7a691"
+      },
+      {
+        "file": "tokenizer.json",
+        "bytes": 3936954,
+        "sha256": "567da8c8a5b7df02555deecfcb3a7f6acd315844dc5e2fde883fe7ced8467317"
+      },
+      {
+        "file": "tokenizer_config.json",
+        "bytes": 288127,
+        "sha256": "5fa089926c8c2535c622d09a5992fb57c63cbc3514e18cf40bc535bee2a23827"
+      },
+      {
+        "file": "vocab.json",
+        "bytes": 835550,
+        "sha256": "8f680bba319e01a653d2e8a5dbc17a9157179e0576e6ce74ce0c06356c6e24f9"
+      }
+    ],
+    "spanish_language_token": true,
+    "total_bytes": 489253929,
+    "license_source": "C:\\Users\\PC\\OneDrive\\Documentos\\ChatGPT\\Practicas y TFG\\modelos\\crisperwhisper2-small\\LICENSE.md"
+  },
+  "baseline_model": {
+    "folder": "modelos/faster-whisper-small",
+    "files": [
+      {
+        "file": "config.json",
+        "bytes": 2370,
+        "sha256": "b55496ac7940a7ae47d2c01eab40edfd8701feec1229d9cce3b40014383fb828"
+      },
+      {
+        "file": "model.bin",
+        "bytes": 483546902,
+        "sha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671"
+      },
+      {
+        "file": "tokenizer.json",
+        "bytes": 2203239,
+        "sha256": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab"
+      },
+      {
+        "file": "vocabulary.txt",
+        "bytes": 459861,
+        "sha256": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913"
+      }
+    ]
+  },
+  "catalog_file": "resultados/literalidad/20261026_081747_630720_UTC/catalogo_snapshot.json",
+  "catalog_sha256": "67b085977c278d59446a538d38b9149cf38a3f2e1f5e3c1a5e34557c8e709b49",
+  "record_per_audio_resources": true,
+  "unavailable_catalog_entries": [
+    {
+      "id": "lectura_20261023_101347_131094",
+      "expected_sha256": "dd2f36317173802fdea1c6d7f24f3ffcfdb3364439d9bf68686ef5eef634efcf",
+      "reason": "historico_sin_wav_coincidente"
+    }
+  ],
+  "preserved_sources": [
+    {
+      "file": "datos/anotaciones/lectura_02_literal_completa_revision.json",
+      "sha256": "ab744f696a7a6fbf6bacd2d0f78dcc2511a4bd6dfdc1aeec8ab004628e0bee58"
+    },
+    {
+      "file": "datos/anotaciones/lectura_02_piloto_literal_revision.json",
+      "sha256": "2f0826de2fd6e086489fecb151a5a8e82d838df0f6e56db0b4ad524d244b229d"
+    },
+    {
+      "file": "datos/anotaciones/lectura_02_relectura_fragmentos.json",
+      "sha256": "5cb007079267f0df7e849fce4032a9d49be74f44747b5b2da97e8f4f247bee54"
+    },
+    {
+      "file": "datos/anotaciones/lectura_02_trabadas_revision_cualitativa.json",
+      "sha256": "8978a6685e41fc7ecc295ec98acaae0c116d4750089d40fd1aa26b645d5531b0"
+    },
+    {
+      "file": "datos/anotaciones/lectura_04_tanda_confirmacion.json",
+      "sha256": "2cb8fb590fe22c05296ce294e800ef958b5b63fc48a42cd524f95f5acdedf35e"
+    },
+    {
+      "file": "datos/anotaciones/lectura_lenta_fragmentos.json",
+      "sha256": "270653564a018fcb6ad972fb18e7e08a14ef9cec59b2b4282d8ef1ac6f2b5d66"
+    },
+    {
+      "file": "datos/anotaciones/lectura_normal.json",
+      "sha256": "f8cf26d38b44228aee4b83be34a16d30a9dbdd132fe393075356d01cda916c7a"
+    },
+    {
+      "file": "datos/anotaciones/lectura_pausa_fragmentos.json",
+      "sha256": "0a4bd5b6157a0add34e3549ae9e7378fbf8abbe17d469bc34f1471673df78658"
+    },
+    {
+      "file": "datos/anotaciones/lectura_relectura_azul_fragmentos.json",
+      "sha256": "0fe4eb58058dbaa9838ca835f8b5944fd3227a71d8b91d36cb700aeb94a220bb"
+    },
+    {
+      "file": "datos/anotaciones/lectura_relectura_fragmentos.json",
+      "sha256": "9465e730681fee16b6f3b5a6ea157933cda4499ce6a8570e53c0a27657b14e09"
+    },
+    {
+      "file": "datos/anotaciones/lectura_relectura_lejana_fragmentos.json",
+      "sha256": "0156a1d717ed263fe4d4bba809aa3e55a9e1ff51e661c7f61692f1681f6a6b47"
+    },
+    {
+      "file": "datos/anotaciones/lote_literalidad_20261025_revision.json",
+      "sha256": "c470fa477b435fc1ab63419dfc938be65c35bb7f1c4890a0db8a2a24f415e901"
+    },
+    {
+      "file": "resultados/alineamientos/lectura_20261014_081816_009646_20261014_082118_900314_alineado.json",
+      "sha256": "588fd9fb3bc15bc9259553547ffae36e30bdf55022127f78de3d9058e8b4698e"
+    },
+    {
+      "file": "resultados/alineamientos/lectura_20261014_082953_219058_20261014_083013_046227_alineado.json",
+      "sha256": "8272dbaaae3e8b8a9e0f97046f034423f33f7ff8bd1689a4c20cbf187d29ca7c"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/desviaciones_4s_r1.json",
+      "sha256": "f4e029a32870fb8dd3c3c2d29c52ac7f92ed3ca9b3ffb988596bb9beadb3f2a6"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/desviaciones_4s_r2.json",
+      "sha256": "15d42aa7cf6c8744000a8469a7d3fd5ee7ea1024d9635132e4741be6fad9f437"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/desviaciones_4s_r3.json",
+      "sha256": "75aeaa4af11d765d4060049db4b57c5c5254f92f33300345da0fa42c01da0651"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/desviaciones_6s_r1.json",
+      "sha256": "71909c5650a6543ec6944e1d69db16be74c4aba5262c68c2e4edc955c0692be2"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/desviaciones_6s_r2.json",
+      "sha256": "6cd6afc61a43e1294397e3448e2d80f22d5aa5d476efc6c89c03f1de8de146bd"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/desviaciones_6s_r3.json",
+      "sha256": "fafbcb3f8649f61c16b382b04a9fe8f7e0ce7fcb8938e112db4e97586ca597db"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/desviaciones_8s_r1.json",
+      "sha256": "4d4e6c4f1d14b0ae79280020f5f2e76bb3c9c89d1dc9e1d11360e3ff6835b195"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/desviaciones_8s_r2.json",
+      "sha256": "8efa8339c976ae248ff811805c2a4673bb2324136360029e51fb5495803b12da"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/desviaciones_8s_r3.json",
+      "sha256": "e4e2e53e5d1f955e98f3a92be1512ecc16567483c306a67173f88c798a59cf4e"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/lenta_4s_r1.json",
+      "sha256": "6ab9c62f9a500e72498b6a83f1b43ced093fd9109f1b92f13ac80f8d19f9ef5d"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/lenta_4s_r2.json",
+      "sha256": "32681e684bc8a5ec206e4c1e8f0c77e07518daf03626d534c88a6b397b4e5455"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/lenta_4s_r3.json",
+      "sha256": "e64844cd5a566159d90ca4d78c4e188e5f1da8e1b785b58672a3ddbef6c463f5"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/lenta_8s_r1.json",
+      "sha256": "648c5e3c45508414577c92c22ce2a13ea64a356e4ea7bf6f7a56ba56bb1b0e2e"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/lenta_8s_r2.json",
+      "sha256": "326c22e8506194fc9a294cc446333ffb96d297753e8739b239f511336ffd3035"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/lenta_8s_r3.json",
+      "sha256": "212ca4b4058cf71251eea74973e09ceef73b770bb94f29fce1e6d45a3de9702c"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/normal_4s_r1.json",
+      "sha256": "c9341d05e79ddd4a30572c8201621e00379664420bbcf8a6b5062e506a08791f"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/normal_4s_r2.json",
+      "sha256": "5aa939dfac71168b171e7e184342e06b3d271d5d883501364cdf331ff9b2426c"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/normal_4s_r3.json",
+      "sha256": "59ed523d8141555c42af6e919105fbf99449114ebd0bfa65dc2165998e2f21f9"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/normal_6s_r1.json",
+      "sha256": "babbd2ad4dec485473d99a6072a398544798c205a341d341561280c7cf5aaaf4"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/normal_6s_r2.json",
+      "sha256": "877805f91fa2b4aa9f173e503bb6abdb5e4735660f25b2f510ff4dd8e9ac6b2b"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/normal_6s_r3.json",
+      "sha256": "f4da22b16a9e66b6fb72242528dd37f9256ac2ffc5cf2f31e5e35fd1d5c16092"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/normal_8s_r1.json",
+      "sha256": "7ae9ce707cf8c87dcb19b63e9e5db2c7f2d4575a66d350818d03dd2582267de6"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/normal_8s_r2.json",
+      "sha256": "1c81b97c7a0f4f1fe7ddf83961a312983aa800fdff69b1211f862b33f850ccf1"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/normal_8s_r3.json",
+      "sha256": "c868678f18be7984fba46de0e910631f32702e8557821f843e75e72132f86556"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/pausa_4s_r1.json",
+      "sha256": "120fe133e24bcec4da6af743433c40933c78f313d8f54d500d871f55036a2c7c"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/pausa_4s_r2.json",
+      "sha256": "bbd8e93f893cdf4fe09026149a2a862555c308a4539ff4d3000c951678033cde"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/pausa_4s_r3.json",
+      "sha256": "b88c941388eab002f84bf2572d29f6261217d3689a36c00d4ea85cb8a6f1f947"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/pausa_8s_r1.json",
+      "sha256": "496a76402d9e7055f87496796388a153c19b4d418a0a715cf4a5ab6dec3d3748"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/pausa_8s_r2.json",
+      "sha256": "20602060dd9fe8b1ddca81c58afb14f0a35f04a2493340abdcdb77b812cb0dd1"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/pausa_8s_r3.json",
+      "sha256": "dff80d5f5235d381baec62dfc7c76adef922869122896dd14b129c58ca099408"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/recursos_computo.json",
+      "sha256": "2e7c16652fcce6318b205b9794074425a6ef45c1973950f4988dddba3154ed18"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/relectura_4s_r1.json",
+      "sha256": "08da26bcbfad4f0afc533c8346c4f5b3007c6b573bb7102063e8697e30c19577"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/relectura_4s_r2.json",
+      "sha256": "0310ee2961f5e0f41861b936a4b07fce3ae2e74d62f057d326f8598baeedaacb"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/relectura_4s_r3.json",
+      "sha256": "304abf5e1ef342c636bffc5555257c4cd05ab72656ceec314f7e7f2edfb3c905"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/relectura_8s_r1.json",
+      "sha256": "a678b725acdbc05dd5d63904c4b3653734b93ff47176d2a75e89d3ef5991b291"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/relectura_8s_r2.json",
+      "sha256": "9e4097abc3da4bb4446838dceba6ad675d9a881bef413fafb17465943825acdd"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/relectura_8s_r3.json",
+      "sha256": "15b548e1cca6d7a2f3d06e67013a99b6d4d0774b1d3f16ab4f04a34f2b318a84"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112016_077915/resumen.json",
+      "sha256": "8eed3b894f78eb094ce22f569f73cdca1105cf386c03c93f1cfe914c181fc09a"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/desviaciones_4s_r1.json",
+      "sha256": "f4e029a32870fb8dd3c3c2d29c52ac7f92ed3ca9b3ffb988596bb9beadb3f2a6"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/desviaciones_4s_r2.json",
+      "sha256": "15d42aa7cf6c8744000a8469a7d3fd5ee7ea1024d9635132e4741be6fad9f437"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/desviaciones_4s_r3.json",
+      "sha256": "75aeaa4af11d765d4060049db4b57c5c5254f92f33300345da0fa42c01da0651"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/desviaciones_6s_r1.json",
+      "sha256": "71909c5650a6543ec6944e1d69db16be74c4aba5262c68c2e4edc955c0692be2"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/desviaciones_6s_r2.json",
+      "sha256": "6cd6afc61a43e1294397e3448e2d80f22d5aa5d476efc6c89c03f1de8de146bd"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/desviaciones_6s_r3.json",
+      "sha256": "fafbcb3f8649f61c16b382b04a9fe8f7e0ce7fcb8938e112db4e97586ca597db"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/desviaciones_8s_r1.json",
+      "sha256": "4d4e6c4f1d14b0ae79280020f5f2e76bb3c9c89d1dc9e1d11360e3ff6835b195"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/desviaciones_8s_r2.json",
+      "sha256": "8efa8339c976ae248ff811805c2a4673bb2324136360029e51fb5495803b12da"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/desviaciones_8s_r3.json",
+      "sha256": "e4e2e53e5d1f955e98f3a92be1512ecc16567483c306a67173f88c798a59cf4e"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/lenta_4s_r1.json",
+      "sha256": "6ab9c62f9a500e72498b6a83f1b43ced093fd9109f1b92f13ac80f8d19f9ef5d"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/lenta_4s_r2.json",
+      "sha256": "32681e684bc8a5ec206e4c1e8f0c77e07518daf03626d534c88a6b397b4e5455"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/lenta_4s_r3.json",
+      "sha256": "e64844cd5a566159d90ca4d78c4e188e5f1da8e1b785b58672a3ddbef6c463f5"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/lenta_8s_r1.json",
+      "sha256": "648c5e3c45508414577c92c22ce2a13ea64a356e4ea7bf6f7a56ba56bb1b0e2e"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/lenta_8s_r2.json",
+      "sha256": "326c22e8506194fc9a294cc446333ffb96d297753e8739b239f511336ffd3035"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/lenta_8s_r3.json",
+      "sha256": "212ca4b4058cf71251eea74973e09ceef73b770bb94f29fce1e6d45a3de9702c"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/normal_4s_r1.json",
+      "sha256": "c9341d05e79ddd4a30572c8201621e00379664420bbcf8a6b5062e506a08791f"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/normal_4s_r2.json",
+      "sha256": "5aa939dfac71168b171e7e184342e06b3d271d5d883501364cdf331ff9b2426c"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/normal_4s_r3.json",
+      "sha256": "59ed523d8141555c42af6e919105fbf99449114ebd0bfa65dc2165998e2f21f9"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/normal_6s_r1.json",
+      "sha256": "babbd2ad4dec485473d99a6072a398544798c205a341d341561280c7cf5aaaf4"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/normal_6s_r2.json",
+      "sha256": "877805f91fa2b4aa9f173e503bb6abdb5e4735660f25b2f510ff4dd8e9ac6b2b"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/normal_6s_r3.json",
+      "sha256": "f4da22b16a9e66b6fb72242528dd37f9256ac2ffc5cf2f31e5e35fd1d5c16092"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/normal_8s_r1.json",
+      "sha256": "7ae9ce707cf8c87dcb19b63e9e5db2c7f2d4575a66d350818d03dd2582267de6"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/normal_8s_r2.json",
+      "sha256": "1c81b97c7a0f4f1fe7ddf83961a312983aa800fdff69b1211f862b33f850ccf1"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/normal_8s_r3.json",
+      "sha256": "c868678f18be7984fba46de0e910631f32702e8557821f843e75e72132f86556"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/pausa_4s_r1.json",
+      "sha256": "120fe133e24bcec4da6af743433c40933c78f313d8f54d500d871f55036a2c7c"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/pausa_4s_r2.json",
+      "sha256": "bbd8e93f893cdf4fe09026149a2a862555c308a4539ff4d3000c951678033cde"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/pausa_4s_r3.json",
+      "sha256": "b88c941388eab002f84bf2572d29f6261217d3689a36c00d4ea85cb8a6f1f947"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/pausa_8s_r1.json",
+      "sha256": "496a76402d9e7055f87496796388a153c19b4d418a0a715cf4a5ab6dec3d3748"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/pausa_8s_r2.json",
+      "sha256": "20602060dd9fe8b1ddca81c58afb14f0a35f04a2493340abdcdb77b812cb0dd1"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/pausa_8s_r3.json",
+      "sha256": "dff80d5f5235d381baec62dfc7c76adef922869122896dd14b129c58ca099408"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/recursos_computo.json",
+      "sha256": "2e7c16652fcce6318b205b9794074425a6ef45c1973950f4988dddba3154ed18"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/relectura_4s_r1.json",
+      "sha256": "08da26bcbfad4f0afc533c8346c4f5b3007c6b573bb7102063e8697e30c19577"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/relectura_4s_r2.json",
+      "sha256": "0310ee2961f5e0f41861b936a4b07fce3ae2e74d62f057d326f8598baeedaacb"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/relectura_4s_r3.json",
+      "sha256": "304abf5e1ef342c636bffc5555257c4cd05ab72656ceec314f7e7f2edfb3c905"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/relectura_8s_r1.json",
+      "sha256": "a678b725acdbc05dd5d63904c4b3653734b93ff47176d2a75e89d3ef5991b291"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/relectura_8s_r2.json",
+      "sha256": "9e4097abc3da4bb4446838dceba6ad675d9a881bef413fafb17465943825acdd"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/relectura_8s_r3.json",
+      "sha256": "15b548e1cca6d7a2f3d06e67013a99b6d4d0774b1d3f16ab4f04a34f2b318a84"
+    },
+    {
+      "file": "resultados/combinacion/20261019_112218_565950/resumen.json",
+      "sha256": "e86ccb0b9e3f0ff6dd8360377e99533ad48edb0cd6afb9536b259bfc1a19e6b2"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_091512_716487/lectura_20261014_081816_009646_prefijo.json",
+      "sha256": "183966a0701bd4f2c6d5f03373f7e065e72cdae5c9fc1a25f2a18d6054844c5d"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_091512_716487/lectura_20261014_081816_009646_ventana_10s.json",
+      "sha256": "e3db3aa35de0ecbddcd67266c5e2a04aca17b2c2994669b931492b89497c0e8d"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_091512_716487/lectura_20261014_081816_009646_ventana_6s.json",
+      "sha256": "3ab4c541874a4a4a76e43c47e2c17b6bddd14ea92dc165a3c3549f0d84e2ce41"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_091512_716487/lectura_20261014_082953_219058_prefijo.json",
+      "sha256": "6f1368ef27a754998e33c130bae2995de9e022a9cec3d667541afff7db9efa55"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_091512_716487/lectura_20261014_082953_219058_ventana_10s.json",
+      "sha256": "186c59be7a98e613f2ca3b1e08b05489a636dc602ab9e10e1a54a3436d3a77bf"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_091512_716487/lectura_20261014_082953_219058_ventana_6s.json",
+      "sha256": "b12c2742b3aeeb3445f41c13030e93e871a31a54b57932aaa77dbb78ef3a6b8f"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_091512_716487/recursos_computo.json",
+      "sha256": "b7ace3a0c1156d4f9012e6a603106b8bcea5d27598b402990c3e2ff5bc303045"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_091512_716487/resumen.json",
+      "sha256": "09e717fcf6c2f78d765154334b8c8ffebce2d475ae919f959e60e87a24fddacd"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_092131_720136/lectura_20261014_082953_219058_prefijo.json",
+      "sha256": "814ed17919f9343904c9411cc7a6f27d59586077ef904c4f8c7f82826a801b56"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_092131_720136/lectura_20261014_082953_219058_ventana_10s.json",
+      "sha256": "8510906e5c325647ffde47cbca0e5d6917749725ab928aa6eec946ef36b2094c"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_092131_720136/lectura_20261014_082953_219058_ventana_6s.json",
+      "sha256": "648b242cb5102f45b89122fefb1ead2fabd83c68e737b05f2fb75ac36f56637d"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_092131_720136/recursos_computo.json",
+      "sha256": "75f169c5f6aeba04fa34e60dafeb8756caf6ef274545fbf8b3ce86ff9437e404"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_092131_720136/resumen.json",
+      "sha256": "ad5900ca4caa937135bc346611db97fa0dfded5f1ad7566bd1079f873f18de07"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_093754_597676/lectura_20261014_082953_219058_prefijo_r1.json",
+      "sha256": "27544a240f23b17ef85d8227d4b78cc8764593814b9436c221823051cf77c07a"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_093754_597676/lectura_20261014_082953_219058_prefijo_r2.json",
+      "sha256": "0db07c96893e243621928743d33b1ed8ca593e78ba1890c1d14bd255cfef3fe5"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_093754_597676/lectura_20261014_082953_219058_ventana_10s_r1.json",
+      "sha256": "eee876f49685419fef1d32aa6f3d6648dc9dab4d29513c224a79eb9ec0703e9f"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_093754_597676/lectura_20261014_082953_219058_ventana_10s_r2.json",
+      "sha256": "51aab8d81278c36f5762deac46033acef298c044840e3ff0b9757729a6ca33f6"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_093754_597676/lectura_20261014_082953_219058_ventana_12s_r1.json",
+      "sha256": "f54ece7b2327a5fbacb8ef4074ca981a7d578251785261ffb4dec33d962e6e23"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_093754_597676/lectura_20261014_082953_219058_ventana_12s_r2.json",
+      "sha256": "a995a0af78295398d8a7363f4a5b282821ed800e3eb7a0f924208ac3479667ba"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_093754_597676/lectura_20261014_082953_219058_ventana_4s_r1.json",
+      "sha256": "94cdf7e6377639a44413c44a7bf92edabb24e4df362ddafd5ca7d12f55fcc539"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_093754_597676/lectura_20261014_082953_219058_ventana_4s_r2.json",
+      "sha256": "020f007b5698dcbff33f9609a9baca2df4a40322af87cfb0ace679d762efe9b1"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_093754_597676/lectura_20261014_082953_219058_ventana_6s_r1.json",
+      "sha256": "01b5c70539383efb216c0b7415950e19fee020f44dac45dbac1aea5eff820629"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_093754_597676/lectura_20261014_082953_219058_ventana_6s_r2.json",
+      "sha256": "c7d120dd76dd64623996c2fb8e3a63f1c2a039748a5895a408a554887e2ae229"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_093754_597676/lectura_20261014_082953_219058_ventana_8s_r1.json",
+      "sha256": "6ccc00c368432b12d67bbf906e96191e80b208e3524e0a8fbc82a591b79acf81"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_093754_597676/lectura_20261014_082953_219058_ventana_8s_r2.json",
+      "sha256": "a93260c784e5b5552d2b0ab065d9096205ac3070ec1059a98e0e7370ccd195c6"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_093754_597676/recursos_computo.json",
+      "sha256": "549eb7a082c7d9ce9d9046b24e01c98a0fea0e7764804425c8fc3d090a2f09e8"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_093754_597676/resumen.json",
+      "sha256": "9a0e87df40a3eb11354b3749ed55ae01233a33f2cc35e6d74e73cd42f5244093"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_100148_765908/lectura_20261014_082953_219058_prefijo_r1.json",
+      "sha256": "cfbd49763113c2cd56202e0c53824dcc0e9698f107cb2a17da8924711639775a"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_100148_765908/lectura_20261014_082953_219058_prefijo_r2.json",
+      "sha256": "314e7667b820dd8d1b7d711e104b881b5b0fa0d97939d103cb0c3a266fcef2e6"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_100148_765908/lectura_20261014_082953_219058_prefijo_r3.json",
+      "sha256": "758ff699fd7f80f453c590269544a05188ba870c1ee6ff51e4760e4b92a2e197"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_100148_765908/lectura_20261014_082953_219058_ventana_10s_r1.json",
+      "sha256": "e4efe625d4fb95338af2aebe897549569036795b49ca4c9f8642ec0c8994d7ad"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_100148_765908/lectura_20261014_082953_219058_ventana_10s_r2.json",
+      "sha256": "04a62b215efe22661e9e0cada23e2bcee1f12b99c8a15e17b11ef87a545c0b17"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_100148_765908/lectura_20261014_082953_219058_ventana_10s_r3.json",
+      "sha256": "daf4133e8936fe7dfd4a099e06410dbbfd48f9de5ff63903b55d4498020fe359"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_100148_765908/lectura_20261014_082953_219058_ventana_12s_r1.json",
+      "sha256": "0e585f31789d36078b0633f23dd74db49c3556e9368a51bae38893b8386fc5fc"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_100148_765908/lectura_20261014_082953_219058_ventana_12s_r2.json",
+      "sha256": "07f920a6b97e43a4dca6f9970ac138cf6871a1fb8e8d2f9b3257a446529b62f1"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_100148_765908/lectura_20261014_082953_219058_ventana_12s_r3.json",
+      "sha256": "57dafa29eff33173e02f9e68f7aa148096c0d82a841a016c6b4d758163936033"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_100148_765908/lectura_20261014_082953_219058_ventana_4s_r1.json",
+      "sha256": "aab93d031a800f920b1d2b5b54705e1ca29c258c0d093be4b6e09b6a9056ae63"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_100148_765908/lectura_20261014_082953_219058_ventana_4s_r2.json",
+      "sha256": "449552e9d411b1c03e80397811b012c084b826c760a3f0761bce110aebf83b7e"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_100148_765908/lectura_20261014_082953_219058_ventana_4s_r3.json",
+      "sha256": "5f86b5b0d1d8e09ffc2d856eab5db0dced45a96482afcb6f3b06baba917e621b"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_100148_765908/lectura_20261014_082953_219058_ventana_6s_r1.json",
+      "sha256": "2588b165f6bbeac18092c8d0204b1cb8388c195a8359f940d32913366c8abb28"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_100148_765908/lectura_20261014_082953_219058_ventana_6s_r2.json",
+      "sha256": "6d0cc2a96f26c6a22b7d86e2324353ff96b50ccb2adc48f60b085196014789fd"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_100148_765908/lectura_20261014_082953_219058_ventana_6s_r3.json",
+      "sha256": "2d20a91a387f559696e7b6d1253c02f2aedceddf6f8e1738bea04f4a6ee7e66f"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_100148_765908/lectura_20261014_082953_219058_ventana_8s_r1.json",
+      "sha256": "99ba5499dd338a5a67de648813fed63f9647760a878db705671c21d044fe0459"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_100148_765908/lectura_20261014_082953_219058_ventana_8s_r2.json",
+      "sha256": "a64c6a102acf9799f323ca7337368adc245ac05c384e768e58435ea59eb02fdf"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_100148_765908/lectura_20261014_082953_219058_ventana_8s_r3.json",
+      "sha256": "bea309f1608bf86591ae5e2613cf820b9bf9cb757f1af14279faff2c4ce1a09f"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_100148_765908/recursos_computo.json",
+      "sha256": "afe1432918a180005919b4f91460aeb4de7176170d6acd37e10ad63b912b9dd5"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_100148_765908/resumen.json",
+      "sha256": "3938b54cd2b9fcc62cdc277e04bd2b86d36d9e9b00678f47f7d5a498c0b81b74"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_111548_094194/evaluacion_pausa.json",
+      "sha256": "ac618b299b69e33b1cf9fbc6bd1f3e4d07a3c3cce02c59950da386e6cb5695c1"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_111548_094194/lectura_20261014_111454_984161_ventana_4s_r1.json",
+      "sha256": "ec96ab82cab7cf59c20f58313614115aab3b2ba63a4b405f5560b2dfedc8d5f2"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_111548_094194/lectura_20261014_111454_984161_ventana_4s_r2.json",
+      "sha256": "fa3bed5a6a47943a29a5effb546cb7676417916f0dc338c2cb60f842e3e52ade"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_111548_094194/lectura_20261014_111454_984161_ventana_4s_r3.json",
+      "sha256": "7f314a72f4cb0d0ff293f5c7fa4d8b34a3f9f10a5aed6495a4ab7cabc5182cc6"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_111548_094194/lectura_20261014_111454_984161_ventana_8s_r1.json",
+      "sha256": "9572688d22bf021e0ba917eec065c9945ded29e3c8cab7622de0d9a3298bb90f"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_111548_094194/lectura_20261014_111454_984161_ventana_8s_r2.json",
+      "sha256": "1f67dea8dbf5bda8328c190106f441c2397813a912f67dd470fdaa81794f17e0"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_111548_094194/lectura_20261014_111454_984161_ventana_8s_r3.json",
+      "sha256": "7cac7befb4df6292c6b0c44bdb46d62fd467c140fd7219be0d2e2eccbb14b49e"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_111548_094194/recursos_computo.json",
+      "sha256": "b15cf0dbc0a202edf56951886cea4fc0fcfadf567569f7fd935ddfb50a5264fb"
+    },
+    {
+      "file": "resultados/comparaciones/20261014_111548_094194/resumen.json",
+      "sha256": "0786a92ee75b14fa8e1edd95fd5cf23d7a6c9174ead1acabca4a30ff056f5c1f"
+    },
+    {
+      "file": "resultados/comparaciones/20261016_095252_869489/evaluacion_lenta.json",
+      "sha256": "40711164de072e74f3f290681b8795eca452f41006f6a1fd1be0d85681c1acae"
+    },
+    {
+      "file": "resultados/comparaciones/20261016_095252_869489/lectura_20261016_095108_269618_ventana_4s_r1.json",
+      "sha256": "927c6f823dcb03ae0d25c0a16bcd90e1221654a0f1a665e5c5afe2c9c4725f84"
+    },
+    {
+      "file": "resultados/comparaciones/20261016_095252_869489/lectura_20261016_095108_269618_ventana_4s_r2.json",
+      "sha256": "5c4b08607e599e6108e1934b3b56b60b56f0e9116ddd0b0e2e59cbc303397705"
+    },
+    {
+      "file": "resultados/comparaciones/20261016_095252_869489/lectura_20261016_095108_269618_ventana_4s_r3.json",
+      "sha256": "bf9af2fbdfddb76206aff3309c7ec62925ad1f9a65546fbfd0d7b2c5cab93267"
+    },
+    {
+      "file": "resultados/comparaciones/20261016_095252_869489/lectura_20261016_095108_269618_ventana_8s_r1.json",
+      "sha256": "a27f0e4f7e7fdefa259813d04a4577bdc0071b36b6e7f019a37f54e514723bb6"
+    },
+    {
+      "file": "resultados/comparaciones/20261016_095252_869489/lectura_20261016_095108_269618_ventana_8s_r2.json",
+      "sha256": "06b96a6d6db42ec0325de7566c457b837fe67e3e08cfd6fa854f38c1e38e7981"
+    },
+    {
+      "file": "resultados/comparaciones/20261016_095252_869489/lectura_20261016_095108_269618_ventana_8s_r3.json",
+      "sha256": "37e08ec5138c558bf737b262243539bfc3e5538f1029807f408408576e1fd1ef"
+    },
+    {
+      "file": "resultados/comparaciones/20261016_095252_869489/recursos_computo.json",
+      "sha256": "2ad63601421d94dc8c261728838afe2979779a5847bc2bfc437ca4aba8c604a5"
+    },
+    {
+      "file": "resultados/comparaciones/20261016_095252_869489/resumen.json",
+      "sha256": "60e395d631ae179c968c8934cdacd8751f626a71c56627c77705b82c78e41a83"
+    },
+    {
+      "file": "resultados/comparaciones/20261016_104206_415649/evaluacion_relectura.json",
+      "sha256": "e20c13f5ddfc29866f5500098bdb82eadc5ee807aeb800d27c55fc6c9a6054b4"
+    },
+    {
+      "file": "resultados/comparaciones/20261016_104206_415649/lectura_20261016_104151_933317_ventana_4s_r1.json",
+      "sha256": "5a20473fa93a18e1cd14c8fd30420fdaae38467b894b83588313c1cce9a3eee6"
+    },
+    {
+      "file": "resultados/comparaciones/20261016_104206_415649/lectura_20261016_104151_933317_ventana_4s_r2.json",
+      "sha256": "6d47793ef255e782efa2082802bc0ff8d243a645f1ad5023d54e7adb143ba0fa"
+    },
+    {
+      "file": "resultados/comparaciones/20261016_104206_415649/lectura_20261016_104151_933317_ventana_4s_r3.json",
+      "sha256": "982f0e612e15eae82cd8bf7ba6fef2b6fd903c2ef10f726ec41dae1e05f1ad5b"
+    },
+    {
+      "file": "resultados/comparaciones/20261016_104206_415649/lectura_20261016_104151_933317_ventana_8s_r1.json",
+      "sha256": "ff00d017b4ebc749614e1aa307909d9e4c0b9e5a8c08ebfc7aa2ab44ff248b23"
+    },
+    {
+      "file": "resultados/comparaciones/20261016_104206_415649/lectura_20261016_104151_933317_ventana_8s_r2.json",
+      "sha256": "671bd7b4990a485d83d0a6f5f8716c228e1ec25d23b5489561a95a34f6407c86"
+    },
+    {
+      "file": "resultados/comparaciones/20261016_104206_415649/lectura_20261016_104151_933317_ventana_8s_r3.json",
+      "sha256": "22bfb7571e489aab00ca4f50cdaaaaca1779fbfd4c405c335bf658f3e74d66c4"
+    },
+    {
+      "file": "resultados/comparaciones/20261016_104206_415649/recursos_computo.json",
+      "sha256": "729d7dde739b81683fc23e2aef5c885a80d49f47f60b8c11b3e5a582435520f4"
+    },
+    {
+      "file": "resultados/comparaciones/20261016_104206_415649/resumen.json",
+      "sha256": "3362f60750f3ce206c1319d2b6dd5bfef8be529abb3b13ac6060c764cf12c8f9"
+    },
+    {
+      "file": "resultados/comparaciones/20261019_084114_510023/evaluacion_humana.json",
+      "sha256": "18b55a699b1d72f6a92b0b48d74af02dc84fc1d9e11317af4120c34e76fe71e6"
+    },
+    {
+      "file": "resultados/comparaciones/20261019_084114_510023/lectura_20261014_081816_009646_ventana_4s_r1.json",
+      "sha256": "b42d5963ddeb2653584c6ff8d3ec5629f44fc4b46fcea7dce003a489e6401a35"
+    },
+    {
+      "file": "resultados/comparaciones/20261019_084114_510023/lectura_20261014_081816_009646_ventana_4s_r2.json",
+      "sha256": "9b741fe0e1779661c78b1b9cac6fb43a3d95c2652e8137f43de875eab3ea69ef"
+    },
+    {
+      "file": "resultados/comparaciones/20261019_084114_510023/lectura_20261014_081816_009646_ventana_4s_r3.json",
+      "sha256": "06bd621cd3c702e5498f5982dddae2d6e9247d9dc8278db795e97c43e5f6c4bd"
+    },
+    {
+      "file": "resultados/comparaciones/20261019_084114_510023/lectura_20261014_081816_009646_ventana_6s_r1.json",
+      "sha256": "64329e1ce6a2dc3a70d7b04fe4b12ff385fb87ef7b5149e07c3f3b92827e4aeb"
+    },
+    {
+      "file": "resultados/comparaciones/20261019_084114_510023/lectura_20261014_081816_009646_ventana_6s_r2.json",
+      "sha256": "2bb4d07e65aea43141e45d239d145f71a32b697bdf77555ec2964d7a38b3e16f"
+    },
+    {
+      "file": "resultados/comparaciones/20261019_084114_510023/lectura_20261014_081816_009646_ventana_6s_r3.json",
+      "sha256": "af2e5dcc6a79c56f701eceaf21588d4f07827d71e9dd282f9e833b2dfe5346b0"
+    },
+    {
+      "file": "resultados/comparaciones/20261019_084114_510023/lectura_20261014_081816_009646_ventana_8s_r1.json",
+      "sha256": "5ea2fe93e30184fa46c318b7c453610233ae1959bcb306d21de308a4b74dceb7"
+    },
+    {
+      "file": "resultados/comparaciones/20261019_084114_510023/lectura_20261014_081816_009646_ventana_8s_r2.json",
+      "sha256": "aef86674b0bbd5d23887f6dfe175956213a8b02b1ab7c3ae9a4ac2d2bef2a9fa"
+    },
+    {
+      "file": "resultados/comparaciones/20261019_084114_510023/lectura_20261014_081816_009646_ventana_8s_r3.json",
+      "sha256": "bfc97b73cce3dfcd0a3494d30843f5fa676f99d20c3905d8a0f7842aa2d0b67c"
+    },
+    {
+      "file": "resultados/comparaciones/20261019_084114_510023/recursos_computo.json",
+      "sha256": "99f42b7083c6bb0463011dc2ec31475a0597fc1a8c20958a4f03679e2d955e8a"
+    },
+    {
+      "file": "resultados/comparaciones/20261019_084114_510023/resumen.json",
+      "sha256": "59a81f9d101acff15a83034132199588267017abd3d606d010bd21e3a216ce32"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_090720_432047/lectura_20261021_090304_259866_ventana_4s_r1.json",
+      "sha256": "9f6228f628e9859480b506a45ebc4b558ead6af49ef5202e6e27fa2b4274bfbc"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_090720_432047/lectura_20261021_090304_259866_ventana_4s_r2.json",
+      "sha256": "69169875849de54b83958630a6eb517c261234c825e941993bb6de06170c04fa"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_090720_432047/lectura_20261021_090304_259866_ventana_4s_r3.json",
+      "sha256": "09123e0ff021313965ae35ba2c9308eebb47313f82e8e4db23b5cf68ade77858"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_090720_432047/lectura_20261021_090304_259866_ventana_8s_r1.json",
+      "sha256": "469c494dc1e9b046ab3861efe87dd5196b40de1e2196fe0db228a0f914eefad1"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_090720_432047/lectura_20261021_090304_259866_ventana_8s_r2.json",
+      "sha256": "fefb34aaaf315c0a8b5af53b237174b904d67685e0df2109d5873e487a1b1883"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_090720_432047/lectura_20261021_090304_259866_ventana_8s_r3.json",
+      "sha256": "26f6e92e42de41a2f02da3e389403c9893211844928d913807beb887a8e412b0"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_090720_432047/recursos_computo.json",
+      "sha256": "43edfbb7b051016e790f45a478fd8c390d5aea93c10ce4107f9b34cb8b88f3ea"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_090720_432047/resumen.json",
+      "sha256": "dcfcacfab03ca53b54d34802245f71beeda5b02d1412623bdf1acbf2f39d4cf1"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_100926_258927/lectura_20261021_100814_321948_ventana_4s_r1.json",
+      "sha256": "48c91c5553affff3ead9d2d55dde718516f9f4eb62de37416a5f253ec53232a3"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_100926_258927/lectura_20261021_100814_321948_ventana_4s_r2.json",
+      "sha256": "7e5484e963dff951a3bd82851df5afbeb0e1f5ab64183d202c022bf65aff0cbf"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_100926_258927/lectura_20261021_100814_321948_ventana_4s_r3.json",
+      "sha256": "1b1dbf25bd3be1032b99d1d131c0d71a81e77f75195df76429ea7e50d695c98f"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_100926_258927/lectura_20261021_100814_321948_ventana_8s_r1.json",
+      "sha256": "912f6f73425c57b385b77564696963e347833f47c4990a7515f7e835452f1f51"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_100926_258927/lectura_20261021_100814_321948_ventana_8s_r2.json",
+      "sha256": "6e8e956596e9cf52707dd9961c01268f764e39a42863339b7a0c2cfe4346ddfb"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_100926_258927/lectura_20261021_100814_321948_ventana_8s_r3.json",
+      "sha256": "bc706626f10124cd47f42438ebbcf96938189adc65a02c5d435e916f35dd1c51"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_100926_258927/recursos_computo.json",
+      "sha256": "91eb6afe3cf7c64b6edd4af7d1022779c6ea593eeb6c2a9d0e3b7e2783da3686"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_100926_258927/resumen.json",
+      "sha256": "0cf45cc8036abee016b8868ac2df54003d5b17361257573c14f53f8787aa6c64"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_104005_265730/lectura_20261021_103917_243241_ventana_4s_r1.json",
+      "sha256": "641e842cb4a1b4d0a582170b25428d4697927baf0387c8e3888527c439d9c067"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_104005_265730/lectura_20261021_103917_243241_ventana_4s_r2.json",
+      "sha256": "799e84db90cfbe7231529a599072c95173b6f0e137fd4258a80d70a03bf0fca3"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_104005_265730/lectura_20261021_103917_243241_ventana_4s_r3.json",
+      "sha256": "842bc1833275e0b0f9dde0977731ac4313b4dfcbf5baac0cf391127ddb8ebd34"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_104005_265730/lectura_20261021_103917_243241_ventana_8s_r1.json",
+      "sha256": "31c05d00c7aaaa316aa0d155a4d7fe4d6872a2fb5c3574a9998fc8a0e861b35d"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_104005_265730/lectura_20261021_103917_243241_ventana_8s_r2.json",
+      "sha256": "cbc60aad1d1107497bb5c70b56f623703d032d5cfbadce5096c7ea3d2d8cd437"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_104005_265730/lectura_20261021_103917_243241_ventana_8s_r3.json",
+      "sha256": "be5857729c6468f68a817b75977f16055fd1b44f1e8b36d2dd366de0bc8eb456"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_104005_265730/recursos_computo.json",
+      "sha256": "8709c1316d44be852987c1af95bb89992ed41fc55ef869045ee96322d66a5cbb"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_104005_265730/resumen.json",
+      "sha256": "26e02fdae48d2330fe1d3fe5b56942275d414380fa88ea421cdcf79b2d29eb88"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_111057_752726/lectura_20261021_110858_556291_ventana_4s_r1.json",
+      "sha256": "ce8bcbf43fac698a21e0a348550a562b5222ec628f7904b0f4e6db55a06faa5a"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_111057_752726/lectura_20261021_110858_556291_ventana_4s_r2.json",
+      "sha256": "abcd78908a6727afcf559a5815ea032be455b364369537d2b868b654e8e306d0"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_111057_752726/lectura_20261021_110858_556291_ventana_4s_r3.json",
+      "sha256": "130f60456a7509b337ac958dcd03306a7f53f3afbdd072fbf02ebc73ca9448a7"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_111057_752726/lectura_20261021_110858_556291_ventana_8s_r1.json",
+      "sha256": "06311123551fd00ae7e0e6e2c11ba121ef63bb3d775a823576101100f3476252"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_111057_752726/lectura_20261021_110858_556291_ventana_8s_r2.json",
+      "sha256": "fcef89c587b7b7b387511ce4264b0b440679583be99e58e4f5f9956a1208b494"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_111057_752726/lectura_20261021_110858_556291_ventana_8s_r3.json",
+      "sha256": "6ec48ec6b7d30caebf8bf1eb4e97c0bf2a97363a3b14f1eef03bf0c565dd0d11"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_111057_752726/recursos_computo.json",
+      "sha256": "d8bfb8161b6c23dcbc5c7fb9965fa6a78f7e8914dedfdd2089ed8e38de942515"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_111057_752726/resumen.json",
+      "sha256": "14021e18f0dd16f5c704d1c4eb437ee5dc06f203cf447dbe2b5474437152847c"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_114449_097057/lectura_20261021_114202_408281_ventana_4s_r1.json",
+      "sha256": "408f8a85a1607ae23118f893d759fde6ab84d7ee45b8184b8f61757ef91e2a83"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_114449_097057/lectura_20261021_114202_408281_ventana_8s_r1.json",
+      "sha256": "ba4a7561767d362f271721cba32beccdd105dea2f372a64f210050472bc43162"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_114449_097057/recursos_computo.json",
+      "sha256": "164bfecdf4aa62e5d169927043ceec4ba04782fd59b812d192d67a1e8bb85659"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_114449_097057/resumen.json",
+      "sha256": "f1ae89cafa47fc866c47884b2fc4132a4c9d2551fab13d406d95eb7e634302a9"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_115105_998651/lectura_20261021_114202_408281_ventana_4s_r1.json",
+      "sha256": "a8b45f7f2068fcb28b3a7422f981f5769767bfa08b5a514723f3b0bac28b0756"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_115105_998651/lectura_20261021_114202_408281_ventana_4s_r2.json",
+      "sha256": "d91fff2ca7392f092f7b938a5a172c40f2d33e6262f59f7ec2492cdd52b14fee"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_115105_998651/lectura_20261021_114202_408281_ventana_4s_r3.json",
+      "sha256": "dc2ff7b4783fc31ee2b8ae3eb6cfc5181c58807897a50cb92248243664653f4e"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_115105_998651/lectura_20261021_114202_408281_ventana_8s_r1.json",
+      "sha256": "db3e6a0df76b9beec5f4d2b63984d667759232220e4c6c995c2410ff82991b11"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_115105_998651/lectura_20261021_114202_408281_ventana_8s_r2.json",
+      "sha256": "d1e16a959ca0e9feba28805ae68c080b3967bde31a4a43927a6ac1e41e83b138"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_115105_998651/lectura_20261021_114202_408281_ventana_8s_r3.json",
+      "sha256": "d9f3ee2834645eacd060a277b68ae4b6ef6c1c6c368040a6c863f048ff03ce15"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_115105_998651/recursos_computo.json",
+      "sha256": "970333656a4c0acd9224b9d7098bae9047c296fe7447985e46faf5a0ea5c7d83"
+    },
+    {
+      "file": "resultados/comparaciones/20261021_115105_998651/resumen.json",
+      "sha256": "45ae5daf5b2742f006b752a1af75d9a539fa325143b226aaf6e9a7f32ccaa1d9"
+    },
+    {
+      "file": "resultados/controles_sin_relectura/20261021_101354_783663/recursos_computo.json",
+      "sha256": "91eb6afe3cf7c64b6edd4af7d1022779c6ea593eeb6c2a9d0e3b7e2783da3686"
+    },
+    {
+      "file": "resultados/controles_sin_relectura/20261021_101354_783663/resumen.json",
+      "sha256": "84fb01072f34c43061327d6d2eaec7563552e35a6d051316ca220b1a14c0a63a"
+    },
+    {
+      "file": "resultados/controles_sin_relectura/20261021_101537_824815/recursos_computo.json",
+      "sha256": "91eb6afe3cf7c64b6edd4af7d1022779c6ea593eeb6c2a9d0e3b7e2783da3686"
+    },
+    {
+      "file": "resultados/controles_sin_relectura/20261021_101537_824815/resumen.json",
+      "sha256": "84fb01072f34c43061327d6d2eaec7563552e35a6d051316ca220b1a14c0a63a"
+    },
+    {
+      "file": "resultados/controles_sin_relectura/20261021_111428_479787/recursos_computo.json",
+      "sha256": "d8bfb8161b6c23dcbc5c7fb9965fa6a78f7e8914dedfdd2089ed8e38de942515"
+    },
+    {
+      "file": "resultados/controles_sin_relectura/20261021_111428_479787/resumen.json",
+      "sha256": "906521ab4bcf793bcf53a5e0447a0ba69c3608ea515d31b486e630213ef1c32f"
+    },
+    {
+      "file": "resultados/controles_sin_relectura/20261021_111600_102761/recursos_computo.json",
+      "sha256": "d8bfb8161b6c23dcbc5c7fb9965fa6a78f7e8914dedfdd2089ed8e38de942515"
+    },
+    {
+      "file": "resultados/controles_sin_relectura/20261021_111600_102761/resumen.json",
+      "sha256": "906521ab4bcf793bcf53a5e0447a0ba69c3608ea515d31b486e630213ef1c32f"
+    },
+    {
+      "file": "resultados/diagnostico_inferencia/20261021_101852_059105/resumen.json",
+      "sha256": "ae569f1d6345aaed2d8c7a220a6d46a418f72aa0e34c0a878fae154a6a86dc77"
+    },
+    {
+      "file": "resultados/diagnostico_inferencia/20261021_102019_524726/resumen.json",
+      "sha256": "6c349c46cfea602b838899ef70257358faf211ffec20b2602c758c7d6de7ef2b"
+    },
+    {
+      "file": "resultados/diagnostico_inferencia/20261021_103420_342243/resumen.json",
+      "sha256": "f98ce44930be064d88c6c6454e00e42cd657ff4f63bf0c2ace3c2dc30d5355ca"
+    },
+    {
+      "file": "resultados/disfluencias/20261023_122442_840773/piloto.json",
+      "sha256": "6da825502530294b89889db12cd4e93ebee10eef186af7c05baf664d24e4d099"
+    },
+    {
+      "file": "resultados/lectura_20261014_081816_009646_20261014_082051_434507.json",
+      "sha256": "ca1a2021028304df50bb8e0868127bf24c9b442e7b5a4cd918d8600e7af38477"
+    },
+    {
+      "file": "resultados/lectura_20261014_081816_009646_20261014_082118_900314.json",
+      "sha256": "1c365e2fba9141e5d8e2bf981845e4a676fbd322e93281211857090805599dd5"
+    },
+    {
+      "file": "resultados/lectura_20261014_082953_219058_20261014_083013_046227.json",
+      "sha256": "e09f55a947d32f112d8e8c8d386ae4708f848e220388965ec1e311dcf7d21dfa"
+    },
+    {
+      "file": "resultados/literalidad/20261023_124047_726452/baseline.json",
+      "sha256": "c3d4ec5fc6bab1efc6cf64298a218fc07ac1366baa0d1f7f1ec8edf685168538"
+    },
+    {
+      "file": "resultados/literalidad/20261023_124047_726452/candidato.json",
+      "sha256": "1f09fd7dacdcb5f1e8ab63060978a3c50e356d285c48c83f40546128cbd1c05e"
+    },
+    {
+      "file": "resultados/literalidad/20261023_124047_726452/integridad.json",
+      "sha256": "1dc1c6ac7623ca4723c8ffaa36ff983126759aac1b33867062feb04d8d8ba578"
+    },
+    {
+      "file": "resultados/literalidad/20261023_124047_726452/manifest.json",
+      "sha256": "2d366e0b098bd7e2f15c4a90965e5ea675cc627db16df25777eae0edbfe9c147"
+    },
+    {
+      "file": "resultados/literalidad/20261023_131712_130708/baseline.json",
+      "sha256": "3ea172abb5f000f087baa8dddf0312bbb2cd7846f50924c75066859684976460"
+    },
+    {
+      "file": "resultados/literalidad/20261023_131712_130708/candidato.json",
+      "sha256": "b0af935942a519fbe529866744d00458185e395ea9ea8736fe642506f0decaf3"
+    },
+    {
+      "file": "resultados/literalidad/20261023_131712_130708/integridad.json",
+      "sha256": "b8ba0cdf624e9804b99f573dd592c20e9e5cf6fc554085e47136e369bbf43913"
+    },
+    {
+      "file": "resultados/literalidad/20261023_131712_130708/manifest.json",
+      "sha256": "366c2451c92bce716fd14a5ad03109afeb44567c074c96e8ae2f92dcc8c2022f"
+    },
+    {
+      "file": "resultados/literalidad/20261025_182446_557677_UTC/auditoria_errores_lector.json",
+      "sha256": "497999d32e650161c547f655ac3ef9cbbd31e8f5a6f4e255d0cdb07c88e196cc"
+    },
+    {
+      "file": "resultados/literalidad/20261025_182446_557677_UTC/baseline.json",
+      "sha256": "d46203a64e2506e385c9f0399fd9fe5e45e70bf7e05765d478da0435759d3e30"
+    },
+    {
+      "file": "resultados/literalidad/20261025_182446_557677_UTC/candidato.json",
+      "sha256": "305f1de0527ef4847ea3e469e6f15c1deb73f6dc744a042f06b3dafb0e3e616b"
+    },
+    {
+      "file": "resultados/literalidad/20261025_182446_557677_UTC/catalogo_snapshot.json",
+      "sha256": "19fde938777b796c1dddadd3918a254beff13a0a33ee257c2949da43884b349a"
+    },
+    {
+      "file": "resultados/literalidad/20261025_182446_557677_UTC/diagnostico_vad_literal.json",
+      "sha256": "eeca3b2b83c6e29a9912f6d6d0f5b67d3bd4dbfde4e96b482d8519650f45f329"
+    },
+    {
+      "file": "resultados/literalidad/20261025_182446_557677_UTC/integridad.json",
+      "sha256": "f31ece623bf36f51a271d30667ee1237e30275ec4776f2b79a8a783e362d834f"
+    },
+    {
+      "file": "resultados/literalidad/20261025_182446_557677_UTC/manifest.json",
+      "sha256": "53074ee81c5d1ff1d1d6ecd1c3597bed33506d7ff3e7ceac0388b86d76b41051"
+    },
+    {
+      "file": "resultados/literalidad/20261025_182446_557677_UTC/metricas.json",
+      "sha256": "b013add806fc6d63237dd710dd6b90c7f6f55c79d889ecc2cb3c73f2a29cb657"
+    },
+    {
+      "file": "resultados/literalidad/20261025_193651_692690_cola_vad_UTC/candidato.json",
+      "sha256": "2c39847d46d2f2bdd519ab443dd2918be57c731c8dbefbd087557d83db6468c2"
+    },
+    {
+      "file": "resultados/literalidad/20261025_193651_692690_cola_vad_UTC/integridad.json",
+      "sha256": "57e1eaf0d4ea21cfad5ed9e2f2e91113ebb704c1577f471366cfc9b23c1a5cbb"
+    },
+    {
+      "file": "resultados/literalidad/20261025_193651_692690_cola_vad_UTC/manifest.json",
+      "sha256": "18be16e238354da247cd0331ae49cf8bdf8289b590e180d9ee5f835a1a05ab1c"
+    },
+    {
+      "file": "resultados/literalidad/20261025_193651_692690_cola_vad_UTC/metricas.json",
+      "sha256": "ed1e0f2f60c86f4fe93e5cd3e38f422d68f83a6a6e947387de96b7df7fe7d2aa"
+    },
+    {
+      "file": "resultados/literalidad/20261025_195038_565692_cola_vad_UTC/candidato.json",
+      "sha256": "f20b497e1be593af153cb048e9f6741f5c95a45e4aed34d3dc8feb6df5ca2c28"
+    },
+    {
+      "file": "resultados/literalidad/20261025_195038_565692_cola_vad_UTC/integridad.json",
+      "sha256": "c28e4424153de23e0c6e2869c35ed09017bffc76dd1960ad6e7f78cc622763ba"
+    },
+    {
+      "file": "resultados/literalidad/20261025_195038_565692_cola_vad_UTC/manifest.json",
+      "sha256": "088c7b73e2bc2a8d02a0a06337519bef93bc90e90ff5ade81385113cb265a20f"
+    },
+    {
+      "file": "resultados/literalidad/20261025_195038_565692_cola_vad_UTC/metricas.json",
+      "sha256": "71a362e2005cf827d06681599e65684867932b590e2b0ca99b689801f25b036f"
+    },
+    {
+      "file": "resultados/literalidad/20261025_195038_565692_cola_vad_UTC/validacion_pausas.json",
+      "sha256": "e048653a10939c4592f6976f9ca553f957f31b6153f926eee2a29d91e0bb6b8a"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_100001_445275/lectura_20261023_100001_445275_ventana_4s_r1.json",
+      "sha256": "6b62c07d547b48ca3759f3fce2d8ba154e868e6b87fb21fd8ef4bb918e3a868c"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_100001_445275/lectura_20261023_100001_445275_ventana_4s_r2.json",
+      "sha256": "703e1b0a651db99a8c89a6e11dec8ee0d64961cd571c416b2c5ff54f2105d4e4"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_100001_445275/lectura_20261023_100001_445275_ventana_4s_r3.json",
+      "sha256": "aff3cc66ea6b0eafd62220eea7495a962fa126f0ea466137a22a7caa2ffeceec"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_100001_445275/lectura_20261023_100001_445275_ventana_8s_r1.json",
+      "sha256": "b5e2df628ee84230008637c1443d91eb719ca218fd03ad2fa601684689a4390e"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_100001_445275/lectura_20261023_100001_445275_ventana_8s_r2.json",
+      "sha256": "8d40b871b9e1e574613bdf130745aaf151231990b907e93cdd8001d271062eeb"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_100001_445275/lectura_20261023_100001_445275_ventana_8s_r3.json",
+      "sha256": "8914479f9918f7d07938bb6240bfebf7ba09fb04e246c3f81f576d1d4ebf0577"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_100001_445275/recursos_computo.json",
+      "sha256": "31404f8c0d419b0d86054c24053ad8de1e10bcd504f8da5135f16af04e9956e2"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_100001_445275/resumen.json",
+      "sha256": "a8c06ca5f6dc083e2567c4e9195db1ee11cd21f0ab239a206bb2203da01a872e"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_100220_540414/lectura_20261023_100220_540414_ventana_4s_r1.json",
+      "sha256": "1791ce8baf9ab248bf95cf35a651145693d0f71cf95aa7f697d569480f63c4db"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_100220_540414/lectura_20261023_100220_540414_ventana_4s_r2.json",
+      "sha256": "54adc2ea69ac433bc9bbd59ee61733f424ab6769cca5da7cd3daf893f829179e"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_100220_540414/lectura_20261023_100220_540414_ventana_4s_r3.json",
+      "sha256": "771b33445e5522520489f54f9b2666e7b52eff88742a5219e40b8e18fe42e487"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_100220_540414/lectura_20261023_100220_540414_ventana_8s_r1.json",
+      "sha256": "45bfe91fc52cb7ea457b147e60b917b59a1b96398cd64df007222b8dc0e3452a"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_100220_540414/lectura_20261023_100220_540414_ventana_8s_r2.json",
+      "sha256": "b2839e9182b6b11d5df740b13f0a06dbb9c3adae3177def0975e7097977b246b"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_100220_540414/lectura_20261023_100220_540414_ventana_8s_r3.json",
+      "sha256": "9ae5a22ccb80d714ea411c087d9062549240b90337158d0f5b584abb80c52063"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_100220_540414/recursos_computo.json",
+      "sha256": "8f433341b1c85b51b28580cf9176cecedd8b32f8c15dedfbd5bea2e3c5cbc58a"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_100220_540414/resumen.json",
+      "sha256": "f6e87137474c082b48e4ec59175a67d9484ba662d457f77dc1b342f22fa1bee0"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_100623_099029/lectura_20261023_100623_099029_ventana_4s_r1.json",
+      "sha256": "663c11d4cb9ff19a54f63bd9c60db7b2b8dae386a72ede44057ad310e0088190"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_100623_099029/lectura_20261023_100623_099029_ventana_4s_r2.json",
+      "sha256": "e93df8b71833d3d41df8a35dfd8fab5f8faa424034a6887ad4ea42d394fb658b"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_100623_099029/lectura_20261023_100623_099029_ventana_4s_r3.json",
+      "sha256": "7d6c7ef7480783442d4818cb2e096fbbc164b9867d767e8b36516f92fd98dc69"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_100623_099029/lectura_20261023_100623_099029_ventana_8s_r1.json",
+      "sha256": "c70f69822dc6b1e3477e2158821eea68ee28eb546484df2121bb20df149481a7"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_100623_099029/lectura_20261023_100623_099029_ventana_8s_r2.json",
+      "sha256": "db9babd1f156acd08a321877e7f8117919ee10877055380a09cc178e775c6026"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_100623_099029/lectura_20261023_100623_099029_ventana_8s_r3.json",
+      "sha256": "b4711ad69ec63aadf4bee43d5f165c72d6c6d1133ea498ed2ca9013a8ab1a001"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_100623_099029/recursos_computo.json",
+      "sha256": "80d4f884dd36f7b4b985d22bd040af4da21ce04ce65acb798eb1a6212103b2d4"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_100623_099029/resumen.json",
+      "sha256": "a34370c5f44c5f209572daa09a756de7face1673a9c7114859f118d8debd319c"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_100912_195344/lectura_20261023_100912_195344_ventana_4s_r1.json",
+      "sha256": "37b9eab63ac1c5fb73df418106ed9364f03fcf641967763d2d526f116f19de15"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_100912_195344/lectura_20261023_100912_195344_ventana_4s_r2.json",
+      "sha256": "412a46f450176d37154571d7f904cf9e9214cf431900bba713b43df2e7277ed7"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_100912_195344/lectura_20261023_100912_195344_ventana_4s_r3.json",
+      "sha256": "2e49b1ea51ba3404d6010454f1f3d9ae06e9a44d27f4458dc30bb72e4cfa6bbd"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_100912_195344/lectura_20261023_100912_195344_ventana_8s_r1.json",
+      "sha256": "962cc6432e22b25e594d298436856aac8d86a034cb8ed29cf02d7e7e860a064e"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_100912_195344/lectura_20261023_100912_195344_ventana_8s_r2.json",
+      "sha256": "c179d3dfe59765396d8e4128e075e685bc049eb8e81f680abff72e2ea0b16d07"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_100912_195344/lectura_20261023_100912_195344_ventana_8s_r3.json",
+      "sha256": "9044f3ae51bd704b2b5237471ba636fcb6d1bacb0996077e72bb3af63677a46d"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_100912_195344/recursos_computo.json",
+      "sha256": "c9ee9c82c6c5d5b6f54425ed45296ea628594e24e9b78590e00d5d8dd9c32b0d"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_100912_195344/resumen.json",
+      "sha256": "925c77ef360eebe54f6a8365cd72e44a2ce21ec38dbafa6d93c743e75c855155"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_101133_857937/lectura_20261023_101133_857937_ventana_4s_r1.json",
+      "sha256": "668f2a8d62c086baa228d30f05be3107efdebd5bcdef55197b024ab29d788e23"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_101133_857937/lectura_20261023_101133_857937_ventana_4s_r2.json",
+      "sha256": "aeafbaf9700f3307353ec2307f457e1add9efa059b2de4e33cbe97d6bd6faff6"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_101133_857937/lectura_20261023_101133_857937_ventana_4s_r3.json",
+      "sha256": "14793d759cc582f82d9572cf8e75bc3a5002b70cdf2b840ceb9b4c495c028718"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_101133_857937/lectura_20261023_101133_857937_ventana_8s_r1.json",
+      "sha256": "697218c9bcd08db372a3c4537ff356d2ec7c92cdffc13f77d916d3a4c6eee4b7"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_101133_857937/lectura_20261023_101133_857937_ventana_8s_r2.json",
+      "sha256": "c9eefcd6d21d3b77c18a1ebe22f655b17b09d3df97a2b7b6ef5aa00e77f2218c"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_101133_857937/lectura_20261023_101133_857937_ventana_8s_r3.json",
+      "sha256": "cb21e1ff209bf9a0bdd05f172f5102b06c6fdc336770493b3fa216410b71f138"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_101133_857937/recursos_computo.json",
+      "sha256": "9d85d86e2ffacef7276869d6be00f70bca58d88441309207c4aec8612f6d5409"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_101133_857937/resumen.json",
+      "sha256": "f16cc82a24ab48004eb1b39536e0991243165d1179ad01c46afb7180b03296b5"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_101522_832827/diagnostico_vad_trabadas.json",
+      "sha256": "f5e4ff1c489acca848712d892247b75e4a981d8705dcabedad9e7a8dfd6756ea"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_101522_832827/lectura_20261023_101522_832827_ventana_4s_r1.json",
+      "sha256": "061e3aebf612c4e61061d8a2f88a6e017cc37cc61847b8f78860f284f1c7c72e"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_101522_832827/lectura_20261023_101522_832827_ventana_4s_r2.json",
+      "sha256": "f869b193cf418569b82b116be12c86e434b99b60473ae4e8914b78a09411570f"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_101522_832827/lectura_20261023_101522_832827_ventana_4s_r3.json",
+      "sha256": "7514c6aed364753cc1140b5cfb0df12d2c7964f8efb8a13be95d9a8256408cd2"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_101522_832827/lectura_20261023_101522_832827_ventana_8s_r1.json",
+      "sha256": "c8a841b070f537ac31050ef5acc06df7006016629b84fc4544bf2983beb912d7"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_101522_832827/lectura_20261023_101522_832827_ventana_8s_r2.json",
+      "sha256": "120bb168d3d46cf5c4650f7a90ce75f464c8069d738cbe58a4feef93e6f93b14"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_101522_832827/lectura_20261023_101522_832827_ventana_8s_r3.json",
+      "sha256": "6d6178c010e1b5adb2b54d2f5d303c84d60645079216295c3c95c413543b6d9d"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_101522_832827/recursos_computo.json",
+      "sha256": "67c2075097745db2a3286de895eea3fabb75fd77e922f171cc6118ab0aee5614"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_101522_832827/resumen.json",
+      "sha256": "3a8788407dbcf7463bc24df7be436060b4b738603dc6f59e6da467975b911191"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_101713_339466/lectura_20261023_101713_339466_ventana_4s_r1.json",
+      "sha256": "5171d07df4a9dcd5e2246c75d400826c661cfce45cf0feade5205a9a04896171"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_101713_339466/lectura_20261023_101713_339466_ventana_4s_r2.json",
+      "sha256": "b625a8706e4cbc0886efa47b8b6b8ff5f95a0fe012d39d8405c3772ddfe368af"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_101713_339466/lectura_20261023_101713_339466_ventana_4s_r3.json",
+      "sha256": "cb4baf90f76f161c42a1926f3b7e1f8a93a18a696fd136a4a05d8233696fa6ca"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_101713_339466/lectura_20261023_101713_339466_ventana_8s_r1.json",
+      "sha256": "9e65e42d37ebb18075840efc7ac9706ca081e443cca5d5ad6f8a603c2f962341"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_101713_339466/lectura_20261023_101713_339466_ventana_8s_r2.json",
+      "sha256": "090dfe85f257c685d02b17b09a7d01a82ebb7fdc777b9a00d5ce319ba1feafc6"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_101713_339466/lectura_20261023_101713_339466_ventana_8s_r3.json",
+      "sha256": "0146926494ceededfde2dff68fdb8d8a9ec44f3e7ad042909b7c51145bbd2736"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_101713_339466/recursos_computo.json",
+      "sha256": "32b83f258d4ae0ae6d7f6087fbe239022eb9939731b7670cb9896de89769429e"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lectura_20261023_101713_339466/resumen.json",
+      "sha256": "f32836c64ad957987e72b08299ba491d1da1e86c2fcf8c93808defbbc8690216"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/lote.json",
+      "sha256": "221c4bc0142b0962819a2710d73330b23d0e17a3a4bface6e333b9c957afff34"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/revision_asistente.json",
+      "sha256": "b2cf02d5ef218d1359662050c71dc52030bf7b2fa81e9e2ce4ccda0ecf979579"
+    },
+    {
+      "file": "resultados/lotes/20261023_102114_072901/revision_humana_trabadas.json",
+      "sha256": "d6ac65e2b0d3936fd4774970bedf03bd1382ca453d07d999cf328b6c49602ea8"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/desviaciones_4s_r1.json",
+      "sha256": "a4715418ec2f756b78127bd304637f90c4626ff1ead948e84720eaecc8f381cc"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/desviaciones_4s_r2.json",
+      "sha256": "4ec0a5480e6ac2a4c0ef4d1932d50069f40a2cd2c25dcb4f5a47b5d65dd2310d"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/desviaciones_4s_r3.json",
+      "sha256": "34bd4bbc57f37e1692aa6bd566a99c786fbc50e392f7b2b7e0d1e9451917848c"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/desviaciones_6s_r1.json",
+      "sha256": "8169e975e9973f815e412ba25ab9cc4164b71ebbb0dc94f82e9f7cf23e7ed82b"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/desviaciones_6s_r2.json",
+      "sha256": "9010f6717642a5a2987e72867a66e2283f85750554f02c5a0cfc34fb6d08617a"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/desviaciones_6s_r3.json",
+      "sha256": "aaf99c230a77020b9607f20d3e0cc61455cb450195017193bccf6005c9127ff0"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/desviaciones_8s_r1.json",
+      "sha256": "e3d73435e884d77b7a3245a8d0c0f66fa375954d1342798ecb06ee10d205ebd1"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/desviaciones_8s_r2.json",
+      "sha256": "18966f00dc2b11e5b81c1fe2456d649670d9a6aa8ed4d2e80691f164bfb104e0"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/desviaciones_8s_r3.json",
+      "sha256": "1c1950ba00598d582999ca95904922f8a505ca4109d042566188ffcd22289f1f"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/lenta_4s_r1.json",
+      "sha256": "fd4fac8e0cfb400eeec3f1634239de9f6cd0090ae04af3dc79643f4571541321"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/lenta_4s_r2.json",
+      "sha256": "2fb9499cd8b765cdfdd353a9b0d0cdd9fbf4623f09ef092ecb62d84f0c58af07"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/lenta_4s_r3.json",
+      "sha256": "9b01eaadd3214e3d253ffc118a2a09bf10d466993092706f1c1e594f49da009e"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/lenta_8s_r1.json",
+      "sha256": "820962b572197cc395e74556a6cfe11535b860389e783d8a97434a765af2e3dc"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/lenta_8s_r2.json",
+      "sha256": "859d4f349a6dfb5034d39895e0cae5886a27ece29701323ef37dbb7a10bc61e5"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/lenta_8s_r3.json",
+      "sha256": "5bb0fda704d450dd76dff016a106df57930a9845da2891ccedacf4ced71f1e7d"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/normal_4s_r1.json",
+      "sha256": "20d613c54edce1da2543010f487b023d31b2d3b28f629ab33afeac8d45580835"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/normal_4s_r2.json",
+      "sha256": "3090e55197cddd1135fa1c285bd955a134f4e3d01c9e8373d46bdecc6a50b6cc"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/normal_4s_r3.json",
+      "sha256": "6d9863b08c6b7cdd99382571c9efcc43821c9847275b3521075de0dd48ee1b56"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/normal_6s_r1.json",
+      "sha256": "28d4a7fc4c16da4bdb96b2de22fb4e222dd5c0ba0b7b5b996cdf305bf66c1158"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/normal_6s_r2.json",
+      "sha256": "3897f843d13a9b9445e9b23f557a65137ecd78e5ff47929e9431eeea0a3be1b2"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/normal_6s_r3.json",
+      "sha256": "c42bfd335289081f78052c51ba0f3d1b745b0df6cd2ae655cacfb7d03bac1475"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/normal_8s_r1.json",
+      "sha256": "771ebbc9cab292dde76d1b6a08166ad550835f6909474a7737b463eb531cc4d3"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/normal_8s_r2.json",
+      "sha256": "af5a8b3b0dd83bd9743ac3658e2fd97ca6adeb8980073235ad732319edc1894a"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/normal_8s_r3.json",
+      "sha256": "9c10001bf8d41a9e37a7931c98f3b94fd3e4254cf3a13e96ded4631c45b770b9"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/pausa_4s_r1.json",
+      "sha256": "9a98d45d8941490acb48c28cb51bac1bc5295c42be7f09e9dd619cc899b57a59"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/pausa_4s_r2.json",
+      "sha256": "6f934d5b81f3f22d07a441d2f64c934b08e65a6a736172e0bf7473ebcbd3980a"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/pausa_4s_r3.json",
+      "sha256": "b01e361bfaf32b781b267ce029c682726add6617d1585be901d6eee343518237"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/pausa_8s_r1.json",
+      "sha256": "3b595345b53695251d21676b42999734fffe582547c5fe3b3df15a05138905d4"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/pausa_8s_r2.json",
+      "sha256": "695937c86c0a88dac0e6166ac040a9ff43f02ffc536bb17f0c8f377369115224"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/pausa_8s_r3.json",
+      "sha256": "f78296f9605b751039f4d641b0208edc0cddb1fdc0c6cb78dc6d29fd997f449d"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/recursos_computo.json",
+      "sha256": "2e7c16652fcce6318b205b9794074425a6ef45c1973950f4988dddba3154ed18"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/relectura_4s_r1.json",
+      "sha256": "d7b79447be7a91cf012dec1a9e2b95cf866201c2f2073011416ab61e7a3f200a"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/relectura_4s_r2.json",
+      "sha256": "7774afda10211fcd9bcfffa792d1a2b5b1f81d1f6178aee085aadcb11e5d36ad"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/relectura_4s_r3.json",
+      "sha256": "790bf8ba8dc78b4c6aea199685aa68b6a694393384d3e5a78607bc42b366adf1"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/relectura_8s_r1.json",
+      "sha256": "a2ed3d80669b030d2cda16e8b74435a7f5262d75e535cee21ed1d6cb5260279f"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/relectura_8s_r2.json",
+      "sha256": "66968246e228e5020cbec341e8f83bd4f650c2fd79126aaa1e93c67ea3bf6f0a"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/relectura_8s_r3.json",
+      "sha256": "fe66a629748d4f92cc66b6c23efb3f9084e5805fed8e42bcfcac4e73546aefe0"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120146_079995/resumen.json",
+      "sha256": "be61a411c2e9315673b8e0fd30be02db8f35776beb1d784f588c8f84d98dde1e"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/desviaciones_4s_r1.json",
+      "sha256": "a4715418ec2f756b78127bd304637f90c4626ff1ead948e84720eaecc8f381cc"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/desviaciones_4s_r2.json",
+      "sha256": "4ec0a5480e6ac2a4c0ef4d1932d50069f40a2cd2c25dcb4f5a47b5d65dd2310d"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/desviaciones_4s_r3.json",
+      "sha256": "34bd4bbc57f37e1692aa6bd566a99c786fbc50e392f7b2b7e0d1e9451917848c"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/desviaciones_6s_r1.json",
+      "sha256": "8169e975e9973f815e412ba25ab9cc4164b71ebbb0dc94f82e9f7cf23e7ed82b"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/desviaciones_6s_r2.json",
+      "sha256": "9010f6717642a5a2987e72867a66e2283f85750554f02c5a0cfc34fb6d08617a"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/desviaciones_6s_r3.json",
+      "sha256": "aaf99c230a77020b9607f20d3e0cc61455cb450195017193bccf6005c9127ff0"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/desviaciones_8s_r1.json",
+      "sha256": "e3d73435e884d77b7a3245a8d0c0f66fa375954d1342798ecb06ee10d205ebd1"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/desviaciones_8s_r2.json",
+      "sha256": "18966f00dc2b11e5b81c1fe2456d649670d9a6aa8ed4d2e80691f164bfb104e0"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/desviaciones_8s_r3.json",
+      "sha256": "1c1950ba00598d582999ca95904922f8a505ca4109d042566188ffcd22289f1f"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/lenta_4s_r1.json",
+      "sha256": "fd4fac8e0cfb400eeec3f1634239de9f6cd0090ae04af3dc79643f4571541321"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/lenta_4s_r2.json",
+      "sha256": "2fb9499cd8b765cdfdd353a9b0d0cdd9fbf4623f09ef092ecb62d84f0c58af07"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/lenta_4s_r3.json",
+      "sha256": "9b01eaadd3214e3d253ffc118a2a09bf10d466993092706f1c1e594f49da009e"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/lenta_8s_r1.json",
+      "sha256": "820962b572197cc395e74556a6cfe11535b860389e783d8a97434a765af2e3dc"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/lenta_8s_r2.json",
+      "sha256": "859d4f349a6dfb5034d39895e0cae5886a27ece29701323ef37dbb7a10bc61e5"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/lenta_8s_r3.json",
+      "sha256": "5bb0fda704d450dd76dff016a106df57930a9845da2891ccedacf4ced71f1e7d"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/normal_4s_r1.json",
+      "sha256": "20d613c54edce1da2543010f487b023d31b2d3b28f629ab33afeac8d45580835"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/normal_4s_r2.json",
+      "sha256": "3090e55197cddd1135fa1c285bd955a134f4e3d01c9e8373d46bdecc6a50b6cc"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/normal_4s_r3.json",
+      "sha256": "6d9863b08c6b7cdd99382571c9efcc43821c9847275b3521075de0dd48ee1b56"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/normal_6s_r1.json",
+      "sha256": "28d4a7fc4c16da4bdb96b2de22fb4e222dd5c0ba0b7b5b996cdf305bf66c1158"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/normal_6s_r2.json",
+      "sha256": "3897f843d13a9b9445e9b23f557a65137ecd78e5ff47929e9431eeea0a3be1b2"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/normal_6s_r3.json",
+      "sha256": "c42bfd335289081f78052c51ba0f3d1b745b0df6cd2ae655cacfb7d03bac1475"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/normal_8s_r1.json",
+      "sha256": "771ebbc9cab292dde76d1b6a08166ad550835f6909474a7737b463eb531cc4d3"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/normal_8s_r2.json",
+      "sha256": "af5a8b3b0dd83bd9743ac3658e2fd97ca6adeb8980073235ad732319edc1894a"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/normal_8s_r3.json",
+      "sha256": "9c10001bf8d41a9e37a7931c98f3b94fd3e4254cf3a13e96ded4631c45b770b9"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/pausa_4s_r1.json",
+      "sha256": "9a98d45d8941490acb48c28cb51bac1bc5295c42be7f09e9dd619cc899b57a59"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/pausa_4s_r2.json",
+      "sha256": "6f934d5b81f3f22d07a441d2f64c934b08e65a6a736172e0bf7473ebcbd3980a"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/pausa_4s_r3.json",
+      "sha256": "b01e361bfaf32b781b267ce029c682726add6617d1585be901d6eee343518237"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/pausa_8s_r1.json",
+      "sha256": "3b595345b53695251d21676b42999734fffe582547c5fe3b3df15a05138905d4"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/pausa_8s_r2.json",
+      "sha256": "695937c86c0a88dac0e6166ac040a9ff43f02ffc536bb17f0c8f377369115224"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/pausa_8s_r3.json",
+      "sha256": "f78296f9605b751039f4d641b0208edc0cddb1fdc0c6cb78dc6d29fd997f449d"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/recursos_computo.json",
+      "sha256": "2e7c16652fcce6318b205b9794074425a6ef45c1973950f4988dddba3154ed18"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/relectura_4s_r1.json",
+      "sha256": "d7b79447be7a91cf012dec1a9e2b95cf866201c2f2073011416ab61e7a3f200a"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/relectura_4s_r2.json",
+      "sha256": "7774afda10211fcd9bcfffa792d1a2b5b1f81d1f6178aee085aadcb11e5d36ad"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/relectura_4s_r3.json",
+      "sha256": "790bf8ba8dc78b4c6aea199685aa68b6a694393384d3e5a78607bc42b366adf1"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/relectura_8s_r1.json",
+      "sha256": "a2ed3d80669b030d2cda16e8b74435a7f5262d75e535cee21ed1d6cb5260279f"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/relectura_8s_r2.json",
+      "sha256": "66968246e228e5020cbec341e8f83bd4f650c2fd79126aaa1e93c67ea3bf6f0a"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/relectura_8s_r3.json",
+      "sha256": "fe66a629748d4f92cc66b6c23efb3f9084e5805fed8e42bcfcac4e73546aefe0"
+    },
+    {
+      "file": "resultados/recuperacion/20261019_120351_062213/resumen.json",
+      "sha256": "8a2e9eceb7bf225745194b9217edbbce979fc1b21a6ded8f432a54469e5d5853"
+    },
+    {
+      "file": "resultados/recursos_equipo/20261021_125210_444804/equipo.json",
+      "sha256": "8dc636b569f18cfbbd822069c168d060d38f38b3428271488756b04c20425dad"
+    },
+    {
+      "file": "resultados/relectura_lejana/20261021_091237_442232/recursos_computo.json",
+      "sha256": "43edfbb7b051016e790f45a478fd8c390d5aea93c10ce4107f9b34cb8b88f3ea"
+    },
+    {
+      "file": "resultados/relectura_lejana/20261021_091237_442232/resumen.json",
+      "sha256": "7b4b7e4fa192eae401a5c68ba36bba8505aa4500902677b6a72d1858e5530499"
+    },
+    {
+      "file": "resultados/relectura_lejana/20261021_091515_954571/evaluacion_humana.json",
+      "sha256": "ebe4ff3b713a482240c92783ecb5b9e5ff7fd808121607fc3f2f0550d8267cae"
+    },
+    {
+      "file": "resultados/relectura_lejana/20261021_091515_954571/recursos_computo.json",
+      "sha256": "43edfbb7b051016e790f45a478fd8c390d5aea93c10ce4107f9b34cb8b88f3ea"
+    },
+    {
+      "file": "resultados/relectura_lejana/20261021_091515_954571/resumen.json",
+      "sha256": "7b4b7e4fa192eae401a5c68ba36bba8505aa4500902677b6a72d1858e5530499"
+    },
+    {
+      "file": "resultados/relectura_lejana/20261021_104431_582794/recursos_computo.json",
+      "sha256": "8709c1316d44be852987c1af95bb89992ed41fc55ef869045ee96322d66a5cbb"
+    },
+    {
+      "file": "resultados/relectura_lejana/20261021_104431_582794/resumen.json",
+      "sha256": "cbe55fdc04f53f3b4502a09c702e505aeb8e6a1e37bdd02be6343dd2bc66796f"
+    },
+    {
+      "file": "resultados/relectura_lejana/20261021_104703_885196/evaluacion_humana.json",
+      "sha256": "956986bdc13709b7e1fdddd4feeb5c9fd0100dabc571a852f29a2e555484ff57"
+    },
+    {
+      "file": "resultados/relectura_lejana/20261021_104703_885196/recursos_computo.json",
+      "sha256": "8709c1316d44be852987c1af95bb89992ed41fc55ef869045ee96322d66a5cbb"
+    },
+    {
+      "file": "resultados/relectura_lejana/20261021_104703_885196/resumen.json",
+      "sha256": "cbe55fdc04f53f3b4502a09c702e505aeb8e6a1e37bdd02be6343dd2bc66796f"
+    },
+    {
+      "file": "resultados/relectura_lejana/20261021_115740_472120/recursos_computo.json",
+      "sha256": "970333656a4c0acd9224b9d7098bae9047c296fe7447985e46faf5a0ea5c7d83"
+    },
+    {
+      "file": "resultados/relectura_lejana/20261021_115740_472120/resumen.json",
+      "sha256": "6a8ad50a21e762f09d104c1a0d0d9c7b63ed53d3f90e03771b431f3400654560"
+    },
+    {
+      "file": "resultados/relectura_lejana/20261021_115941_383989/evaluacion_humana.json",
+      "sha256": "ddd985b3b020fc60bcafadbed730705b14482c117ce8facd747427da745b64d1"
+    },
+    {
+      "file": "resultados/relectura_lejana/20261021_115941_383989/recursos_computo.json",
+      "sha256": "970333656a4c0acd9224b9d7098bae9047c296fe7447985e46faf5a0ea5c7d83"
+    },
+    {
+      "file": "resultados/relectura_lejana/20261021_115941_383989/resumen.json",
+      "sha256": "6a8ad50a21e762f09d104c1a0d0d9c7b63ed53d3f90e03771b431f3400654560"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/desviaciones_4s_r1_original.json",
+      "sha256": "55957f3735f5bdd940cae2c6ce3b8a19bd5b9496579e61544258cb76fa2c4972"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/desviaciones_4s_r1_temporal.json",
+      "sha256": "2eb5153ad246654d2e35e41bc454d1001790e7bc2ab3f1258c2a1d6f1fec3397"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/desviaciones_4s_r2_original.json",
+      "sha256": "29f982b08a4796d0f1ecdd46733eac8accca8108959fd3912be219601f2fddc7"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/desviaciones_4s_r2_temporal.json",
+      "sha256": "e245177581e2777149040484236bd42982cce7e47ae6569cf6d3e7b8a9a3cc1c"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/desviaciones_4s_r3_original.json",
+      "sha256": "86a9dea86dee929ed840ba48d55869c1dbf0a72a079879784c6258db62c91299"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/desviaciones_4s_r3_temporal.json",
+      "sha256": "1ac9ce317bd731ef763b94d7cb11378d85a8134779122fb27684ca9a1f671e6d"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/desviaciones_6s_r1_original.json",
+      "sha256": "671ea1d934b6193982534ad7fb34db9161d4a7c45e169c2b2224e6089bc0b6cf"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/desviaciones_6s_r1_temporal.json",
+      "sha256": "21c2d01e64148d6d8109ff70ffe819c7a0d862ed428f54279d96388ded3ab2b3"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/desviaciones_6s_r2_original.json",
+      "sha256": "5bf23344c96f58f72c47b0fb5a2d3e8e256854093571225521b7b65149b06347"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/desviaciones_6s_r2_temporal.json",
+      "sha256": "f32ba6107e2835fd294bab7242ce3d07863b006a37c5d27951634920f43c71a3"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/desviaciones_6s_r3_original.json",
+      "sha256": "187618340fb1624c1965e22bf84c2e12fe900aadcb4e0a2d523f38c3085a1f5c"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/desviaciones_6s_r3_temporal.json",
+      "sha256": "5d25babbb7f4b3c68333ca38b6b4ff2348a612e58e6abf89590e916ede75d0c4"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/desviaciones_8s_r1_original.json",
+      "sha256": "e4f96f0982b760edd9c022d9a0109132c4d70bddb4ce56382bf524a8a560b99b"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/desviaciones_8s_r1_temporal.json",
+      "sha256": "dac82ea7827f144146b65d945bd877f7acc3f2f6f491a26512c09e7432c0a6e2"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/desviaciones_8s_r2_original.json",
+      "sha256": "ed31e442bd7e2c263ff05dc4a56916e3e8af74dfa68a1a699ef9ccc55e9ec102"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/desviaciones_8s_r2_temporal.json",
+      "sha256": "9153b3b78fb0fb7196d7be66a13c43ca7a87ddbeffa9e3b8887424cf78479761"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/desviaciones_8s_r3_original.json",
+      "sha256": "f76a45d81cba5a3b73442b6a7d0fd623aba040a6026f9868a6453d73ecc1cdea"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/desviaciones_8s_r3_temporal.json",
+      "sha256": "dfe1bb763074afd276e19d4e536c21f8a16b3adc0175b495faf0505ccb6d3876"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/lenta_4s_r1_original.json",
+      "sha256": "333fe9ac531ff7e6b49a94f9f7f46912faa9118661a7662585559c893fb3aa85"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/lenta_4s_r1_temporal.json",
+      "sha256": "902b56874524caf9c88d8a35655574cb562db1615f93ddf6be0f955e2382c55a"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/lenta_4s_r2_original.json",
+      "sha256": "27611cdb9109892db9dab0495564bed0f9e16b709afef2301e747ff814fb3848"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/lenta_4s_r2_temporal.json",
+      "sha256": "9af917dd2a409f77f9de330b4b076349d070246d6bf9fa573d91c26eb005f5b1"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/lenta_4s_r3_original.json",
+      "sha256": "f2dc7b7336fd76052bed5f6b09fdc9879f448216966c97bdaaa36c55fe8e15f8"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/lenta_4s_r3_temporal.json",
+      "sha256": "86353724195560926449fc7958d7206b7e5254befa319ddf6e956e522980a8e0"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/lenta_8s_r1_original.json",
+      "sha256": "da1c58c5b31f672069bf8eefa3220da975edff7ea0c25d87e97e041d944661d0"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/lenta_8s_r1_temporal.json",
+      "sha256": "bbb10c73f43d77f67c8ecd8801b90129e3f8aa56a9e67b111e5e6dc3873932d2"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/lenta_8s_r2_original.json",
+      "sha256": "f9460ef390938f4ce51ae865de813d8f12f0dfb01a87be4fb5a089c11ecd764a"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/lenta_8s_r2_temporal.json",
+      "sha256": "84733066ef3f098b852beaaa3e64fc23f9f01326b6e672b88077d7a9c00aaf23"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/lenta_8s_r3_original.json",
+      "sha256": "d52575c539264ac535cb5ea4af226ee0cec3ddc55aea4f8e27936461ba11c2f3"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/lenta_8s_r3_temporal.json",
+      "sha256": "c5ef9a2c73209874a3ee4609581891fb6c3d71ebf831f0e57a36d9206c7aa5da"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/normal_4s_r1_original.json",
+      "sha256": "6022ade7055527e9fb5bef3c10c5b25724444bc197a0ef98f903bb098483a3bf"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/normal_4s_r1_temporal.json",
+      "sha256": "4b0cd6b2caf134da63df8001a5454183c0bca1e69afea090103d6bce9f48927c"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/normal_4s_r2_original.json",
+      "sha256": "02d0d98b68ae63bbe4de5e59f1b21d3ee034d80bbccaed965c5b1c647d53a6b2"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/normal_4s_r2_temporal.json",
+      "sha256": "437993a5b8a475451c2cc0fd3579f8cf46d1d88698b14bd967aac18e343cb8f6"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/normal_4s_r3_original.json",
+      "sha256": "f0c4bf47063f81c80ead7e6d78ee8c0cd56f4cc93bc765d4c4488ec93a5e3903"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/normal_4s_r3_temporal.json",
+      "sha256": "272997a9d14a2b27558e187c69cab0f23fb7536995df4d00dfcdd517457c26e4"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/normal_6s_r1_original.json",
+      "sha256": "fc02ac1dc238e881dccb3c0c8c385d111fc20c93812b214ec9eb5a55f878a1e1"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/normal_6s_r1_temporal.json",
+      "sha256": "8272166ded1f86c443565a4e9440cb13475e9bfa16cc5453005593b16830cbf1"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/normal_6s_r2_original.json",
+      "sha256": "ddfcc63b850fdba09bacd13b277bd5f72166c0596e79b0b2573fe30a71f0e849"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/normal_6s_r2_temporal.json",
+      "sha256": "1835447f80a31ab3f24a27dac4ea6c624d2c948386c3aeaa63b5c29b636ea1f3"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/normal_6s_r3_original.json",
+      "sha256": "b815778a5c9e8aa66459f53fe978861ec82d64dafa5b9f65ace771bbb04ad785"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/normal_6s_r3_temporal.json",
+      "sha256": "594387d7169f617a12ba4350af9f3e4298f5fe114e75f768b7a6f4497584828b"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/normal_8s_r1_original.json",
+      "sha256": "126dc2ecf8e9c7fb35bd71402febc9afff7bfa626919f24a03a4ccccd2007c84"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/normal_8s_r1_temporal.json",
+      "sha256": "53054c51a61eeb30423bfa40af421e932a801dcb661699c0858213b20e009846"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/normal_8s_r2_original.json",
+      "sha256": "4853a4300826859d8cbd2b869bcb9139724177fbccf3e265c35fa8aaa710d764"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/normal_8s_r2_temporal.json",
+      "sha256": "c7b0ff7de2ee744746342368450d1bc9cad66d15d62a47a3e6f4688f52b27b8c"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/normal_8s_r3_original.json",
+      "sha256": "99978c2d0e00dccb2735a3e410f8851663d575ab702cd390fc3c8dd5ef1db124"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/normal_8s_r3_temporal.json",
+      "sha256": "815fe75d2f3e4a1db333d45889921dbe4e00346da530961b0cd66937791a55a6"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/pausa_4s_r1_original.json",
+      "sha256": "e15abc89fd89a84b13a7349edce5195236cd3aabccde31c0599ae5fe566126d1"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/pausa_4s_r1_temporal.json",
+      "sha256": "0b684e834957bb498b33231063f07a445540211882e5d697d6e8dcd875cf5dee"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/pausa_4s_r2_original.json",
+      "sha256": "1599ae18f0cb62ef4e5ef7275a71ce22fe39dc9439a65d2c8f0b8b5379c8e6a2"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/pausa_4s_r2_temporal.json",
+      "sha256": "1639cd741b1b0b4fe0dee02ec504b66cf804c4122952b00788ea7a6bd9a6f512"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/pausa_4s_r3_original.json",
+      "sha256": "25085ed85e8b3cbde9b5b2421b6b381957d1db6a1d7d5712b82b7bdb8a012e83"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/pausa_4s_r3_temporal.json",
+      "sha256": "ac5c30f8be0fcbd769affa3bf31c6a16356da88b759dc07db51f78dcc392e86b"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/pausa_8s_r1_original.json",
+      "sha256": "6d2bd8ebc3fde2a402dd2e5bf80b3ad0fdaec3f42b89aa084cab8b564407c731"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/pausa_8s_r1_temporal.json",
+      "sha256": "da65bdf5b583e8624ffaa719c98677c45de0207ef951c9fcc5b10d825a564dda"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/pausa_8s_r2_original.json",
+      "sha256": "499e4d34c6d8ab60cc9c2a2bfb6d82b504ba00d089832006c7c15055b99acbf3"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/pausa_8s_r2_temporal.json",
+      "sha256": "8db4a774d0c9fb64389554e7ff81d4ba06d9968bbf258895db3245592fb5ab19"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/pausa_8s_r3_original.json",
+      "sha256": "7db129e9b63c8fb9437d475ad3c56bbdf7fe09c0cb0e2ad8b031a06f522fae74"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/pausa_8s_r3_temporal.json",
+      "sha256": "2ccf88d49f76ec1087e78f027bc3e45658b2aeffd5366fdfd22feb8ce12a669a"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/recursos_computo.json",
+      "sha256": "2e7c16652fcce6318b205b9794074425a6ef45c1973950f4988dddba3154ed18"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/relectura_4s_r1_original.json",
+      "sha256": "25328cd6f7d451b1ad9f90c671951ccb4ae54e28ff686e3444ef0c1ad22df613"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/relectura_4s_r1_temporal.json",
+      "sha256": "6a32d7ae74d1df7b08e50849f325073299c5fbb9632e190e6f08936cbcd762ba"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/relectura_4s_r2_original.json",
+      "sha256": "8b9a8283eff1b301725f4eea4e1e837461bbc547aef29963428395e6876025c7"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/relectura_4s_r2_temporal.json",
+      "sha256": "e5e6d0d57b2fba795476a319f3554d883ec7c7ae5d8ab4f111003c0930c105c6"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/relectura_4s_r3_original.json",
+      "sha256": "f64125de24724d623ed1f96e85e571f53df42bf6d3b86ba060e86c149558cd98"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/relectura_4s_r3_temporal.json",
+      "sha256": "0ea71ff46e2966607b4bcf9e96f202c2acfacc7950462d924ceedeed6666a4c3"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/relectura_8s_r1_original.json",
+      "sha256": "e4c8fa72a83db629e35d9b8f89cc3af79bab73a3cee150e1ec9ad86e4c77247d"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/relectura_8s_r1_temporal.json",
+      "sha256": "23d4325d0c28972adee53c99ba1704fbda93708c43126831c9fb46a4243831f4"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/relectura_8s_r2_original.json",
+      "sha256": "0bd3e271e746a461e973a63bb31abf167b8dc48c756d7481d334bbf3f44b3567"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/relectura_8s_r2_temporal.json",
+      "sha256": "1e00813b94b3ea285c5d41ef34e5fb3a7d1c14c814c754ddb4676a2c0f680374"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/relectura_8s_r3_original.json",
+      "sha256": "217932f2717748b4891728c5800f4ed2f82be46ddb8ec5a8405bc14575d323ed"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/relectura_8s_r3_temporal.json",
+      "sha256": "77cab0536096a142b0ecf8495d34e4510fd29622b9342276e9770c9db25bc18d"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_110452_881233/resumen.json",
+      "sha256": "86effaf0321bb1dac9063e696212dff8cb91ef70c20c3dd4802a5f3ccfe1b927"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/desviaciones_4s_r1_original.json",
+      "sha256": "ce709a2d31d744868cc45650aa600ed4205e24f0df2d64dcfd594748b4468a8f"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/desviaciones_4s_r1_temporal.json",
+      "sha256": "b553ea054c6b29a67c9e452fb1c93d2374c50f5be8d96e9f0dc32d1acc860fb7"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/desviaciones_4s_r2_original.json",
+      "sha256": "dcb5acec23729610f5bd0c4c442ad77bffb3b3d73f5da9909040228b80a2810d"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/desviaciones_4s_r2_temporal.json",
+      "sha256": "3d4a953ffce63a2dd4d9d90ea65e1c4ae1f215ec1a0ee03625153fc0bd432955"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/desviaciones_4s_r3_original.json",
+      "sha256": "802f2992c60d27dd329dc1e9672bf4ab65efe16199f61236bedc2a2ca6286d3f"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/desviaciones_4s_r3_temporal.json",
+      "sha256": "07d1cadf6456e3f500b9ca074773e6612f9e210bfc279eea5f143246c8de387d"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/desviaciones_6s_r1_original.json",
+      "sha256": "7cb1131754326d7ba0e2f0973515b859214a6e229fcb769dd800dab001d63c62"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/desviaciones_6s_r1_temporal.json",
+      "sha256": "bc694138f661751eb1a798f9cbf837724c974a2fc50e265b89424a3260571879"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/desviaciones_6s_r2_original.json",
+      "sha256": "8f75848c4849181174ecd9f28b82d72c9e6dfa611834149cd7dd9281da1b6b38"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/desviaciones_6s_r2_temporal.json",
+      "sha256": "2eedd695dd6281cf8e935a8a8fbd85a4b06f42a75100239864809a8183b212dc"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/desviaciones_6s_r3_original.json",
+      "sha256": "9b73732c0fa7a024979c266e222b0e3f93e0694e96749d1aa06a1a8529894398"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/desviaciones_6s_r3_temporal.json",
+      "sha256": "4d4b67e73822760091a0a0bc78d3c3c7324049df3f773f1cca4447d5afee539f"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/desviaciones_8s_r1_original.json",
+      "sha256": "64a389f1fcd2214e6115cc7d05d79036f0f074879b66e88031a5951af473371f"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/desviaciones_8s_r1_temporal.json",
+      "sha256": "9538adf0fd8df7500ae51a5fcdb4ef4fbdf1a014922d669d2df45bbab98bd579"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/desviaciones_8s_r2_original.json",
+      "sha256": "427e486d54e633b51d96458b2c150ed00800388e373901337eb820a29ae9ebf0"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/desviaciones_8s_r2_temporal.json",
+      "sha256": "5c8d31655475fae57e468770feea4c83cc8e3a7bee60ef0b4f60166af754ca23"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/desviaciones_8s_r3_original.json",
+      "sha256": "dd33bb51d8bdfd1143e76cdb340b822ffd833ea0d3bc28c33c9dbcf63bac019d"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/desviaciones_8s_r3_temporal.json",
+      "sha256": "5a30494c95542d42014101be58b811a25f0feae0ba6773ce07f72e64adb3cad0"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/lenta_4s_r1_original.json",
+      "sha256": "c0565740ee71bfbb0752e966bf36bbb4320a5e7175a83a139f09977d22b4ab53"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/lenta_4s_r1_temporal.json",
+      "sha256": "e62733c6ee700b9c3c77213f49575c19d5015601e008582c960455ca7b0c3e25"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/lenta_4s_r2_original.json",
+      "sha256": "8010b4ec2aec0c8972f71dbbe98702905647b578150f28405da88548b6d5822d"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/lenta_4s_r2_temporal.json",
+      "sha256": "c350dec79cbb95d37f51f972312aa3b71de20d71681c6b164783831439a23734"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/lenta_4s_r3_original.json",
+      "sha256": "f04b31444711f507203bf4df9c39af9b98273c76a3c087f9131e743d280a4651"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/lenta_4s_r3_temporal.json",
+      "sha256": "004e9dc48302ff3decf15fe4aca9dfaf65342c350d866e948c733fc8862689e5"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/lenta_8s_r1_original.json",
+      "sha256": "d3c79df690099e543e7b67aa3f8493a01a72e9cc78a99b0cd047f43dc8cdf106"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/lenta_8s_r1_temporal.json",
+      "sha256": "dadf8917b63ba8cf0942dad7de2c100cd6b8ee10c35ffb0694abc4cbf5ecb106"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/lenta_8s_r2_original.json",
+      "sha256": "85efade890d62576a6cbbcc8f0ed79c478949c1318e9e480afabee1cba04fd32"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/lenta_8s_r2_temporal.json",
+      "sha256": "5d64a1f4414af000e68900c7dbe7d98c44fd1c21d0e4bd8b22fbd90635bfc4fa"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/lenta_8s_r3_original.json",
+      "sha256": "c37406a56caa707b9cf076029399678f0e25901f279aa74f0b55964649cddcfb"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/lenta_8s_r3_temporal.json",
+      "sha256": "7c9f5c283cfe7033c699e823aaa368787aa57478a6293a2870505987190b3897"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/normal_4s_r1_original.json",
+      "sha256": "16bec79cf3029c51e9c64053be2d195b9fa9164bc826ce429f38bd57b751ab13"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/normal_4s_r1_temporal.json",
+      "sha256": "4dc50940bf3ad6cc2dfe0958a82a6981beec113b6344e4fde79a1b4c5edcbc5c"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/normal_4s_r2_original.json",
+      "sha256": "8e0ae87a3679d9c9028818b58cc8e7ebcff684a24ac3a240913f1e696663e57b"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/normal_4s_r2_temporal.json",
+      "sha256": "7fcc8140adfab03ec6890bceed7a20f53fc3e27731545ee2016a3a4243fbb11b"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/normal_4s_r3_original.json",
+      "sha256": "2c110bd9cecf163b5f74f5fcc5a1113a7cf51c95213078daf1f18586eddcb72b"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/normal_4s_r3_temporal.json",
+      "sha256": "a7c987f55d7bb763a35087ffc1712d25ce6fe734f3216772668318084dd967fd"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/normal_6s_r1_original.json",
+      "sha256": "f14fdb05b41a1b3bee7625fea56e89745296b4a3b01b327a1027baea794de3a2"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/normal_6s_r1_temporal.json",
+      "sha256": "22f043af4d2646f1096dd5b1de78b80cd7ca0568c57e1ce284f2c84cbbcbe847"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/normal_6s_r2_original.json",
+      "sha256": "39f64c0ad760221e758e5f1750b284a53d09075fbee90f7586b2d0c31dba74df"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/normal_6s_r2_temporal.json",
+      "sha256": "87afa79d0f590f1a2cecfb0788444819ec613b27d21e51c8269fd49888fc9d3c"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/normal_6s_r3_original.json",
+      "sha256": "e17150d2224c80a1ca36aaa1034459949b5540d0bf9a4b5e1a234d72582aa657"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/normal_6s_r3_temporal.json",
+      "sha256": "c8c0171d3f7ffc2f1f5adaa88d178e97c857020f60057aa46a9faba08acb74e9"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/normal_8s_r1_original.json",
+      "sha256": "b1d2791ba744c6888772be3e88e31b55f6f9e79b7396ca199e11a0210c2193fd"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/normal_8s_r1_temporal.json",
+      "sha256": "0031578c14807ad10a8ecc562d31f8ec7972f9721bfb3607c2cf9b63ecdb9799"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/normal_8s_r2_original.json",
+      "sha256": "38a13e9f6a3c3f10cbf9f59ae34b95bc1fa96417c1a3696b8c8b977e7115a69d"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/normal_8s_r2_temporal.json",
+      "sha256": "d1a9675a010a0f259f30624a63a0b6f461f214a52d0b5b0468c70915d553aa4c"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/normal_8s_r3_original.json",
+      "sha256": "ab1cc045ff42919c8c48fa8d32081794d6ba02608aac9fe367d4d4ca37da76e4"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/normal_8s_r3_temporal.json",
+      "sha256": "1b2a9090d6696862221645831c6dc4913459145ac90089d2730dc52bd37b3843"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/pausa_4s_r1_original.json",
+      "sha256": "80df4e5d2bc9def3335908b65de9bf1c70c03e8605cfccc54d7321fa7dd7e65d"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/pausa_4s_r1_temporal.json",
+      "sha256": "f33cd508ee77dd0cd981f8187bde3b7fec20a638bd93f7dfa950c976aa81ac5d"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/pausa_4s_r2_original.json",
+      "sha256": "5ff4826d373ad4190ac2348e76da167f638174404497eaa48dc5550fef63d3c5"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/pausa_4s_r2_temporal.json",
+      "sha256": "3d11483ad5082f5eeabe5aafa3235165f9872ef44ddfa6ea92ef0d162f104e1d"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/pausa_4s_r3_original.json",
+      "sha256": "119195a17c1e16f9f4b2a155005f557d208013e4694ec1d559f8ef70109febea"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/pausa_4s_r3_temporal.json",
+      "sha256": "db2f5fbc4c1553b351ba57ed57e953e952724496470e6c9e525a370b3df869db"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/pausa_8s_r1_original.json",
+      "sha256": "aea6de09f3cdc6e76654da35e33ef60b829fe3e5971ac04340b94ad7a4a20d49"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/pausa_8s_r1_temporal.json",
+      "sha256": "644e4271e6dae7dd606872b16d17975a5c639b618b33924938e155fc7e385d87"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/pausa_8s_r2_original.json",
+      "sha256": "02f85d3c3bc59472b0d345f77282c5897e2edad14fb9ecb6fceda8980ff19c8a"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/pausa_8s_r2_temporal.json",
+      "sha256": "c4cd41e78eeaf96869c4b8f6a54ef1fbf8b4d6b57eabab898a3c0de95f477cde"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/pausa_8s_r3_original.json",
+      "sha256": "b720e107087c36468b3263af6cb4cf78d2399b8733645b477acb2c4e8161847f"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/pausa_8s_r3_temporal.json",
+      "sha256": "a27f75fad87869c8925fb54ad1584066b94a0d51ab63ebf7781bc9b7b096718e"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/recursos_computo.json",
+      "sha256": "2e7c16652fcce6318b205b9794074425a6ef45c1973950f4988dddba3154ed18"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/relectura_4s_r1_original.json",
+      "sha256": "4552449ddc48e8a8fabbd2cf9c970ed581a81bd14c8cfa4aa8bcb349a5e2fdda"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/relectura_4s_r1_temporal.json",
+      "sha256": "4c71ee6eca87412af6a8a31bd44174d5af6210fa483303dc46e2b00f42ef9f2c"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/relectura_4s_r2_original.json",
+      "sha256": "aa1f471bac34bbc42c49f541006be3d5555d5c0993e7790a7407a5ce8f32e9fd"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/relectura_4s_r2_temporal.json",
+      "sha256": "919cf86a3d68017306044b2d5ec6275b11b626820706a21b5279e3b8a0693329"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/relectura_4s_r3_original.json",
+      "sha256": "655e2f1fda847958ac74c3443a43d3b76b857d69532e7c14f2bf6826cf1ff931"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/relectura_4s_r3_temporal.json",
+      "sha256": "18fbdf2ac01e0dda0bc538aef4a004204ab32f4ebd70457e03d61ee04872de09"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/relectura_8s_r1_original.json",
+      "sha256": "1bccb00624b854e829b6effbfeefc7e2f3d8688e684f297d49ea7b552ab36099"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/relectura_8s_r1_temporal.json",
+      "sha256": "4b7c65f3e8b26bda6a0b1a4d2c0986dffb51a5bef5d23cbac56e27c831f60e17"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/relectura_8s_r2_original.json",
+      "sha256": "81113c72a6c811d37003c01217e77760b90e2596c1b2463a62320a91e8384b06"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/relectura_8s_r2_temporal.json",
+      "sha256": "34292c6b27451fb16701cd79a4bb63be47135cd09aa306312582840a1019be5d"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/relectura_8s_r3_original.json",
+      "sha256": "bc9c2902020357f043b1a854f4e92a827ae4cdcbbb23ce8972f178e9106f29e4"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/relectura_8s_r3_temporal.json",
+      "sha256": "6eeaee9c95926157a08229333c1789fb0864783636bf46a60da9619e829b3b5f"
+    },
+    {
+      "file": "resultados/retrocesos/20261019_111048_743268/resumen.json",
+      "sha256": "6fb2aa65eae0cad9b9f24c3cb973e27e662c646e449d853dd6b015dff2cbb35d"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/desviaciones_4s_r1_original.json",
+      "sha256": "3bfb88db96fa8c06143ed586c68dc20aad0b7351b433c4e7290b96cb2ed19d94"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/desviaciones_4s_r1_palabra_aislada.json",
+      "sha256": "083cc3da375a161152244f2e59504e36a1227262ebc493463a174eef8fbd2b85"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/desviaciones_4s_r2_original.json",
+      "sha256": "040c5b9cf16b00863ffcbf28fa3f83e477f7c4090a2c7fe4da27652330283b79"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/desviaciones_4s_r2_palabra_aislada.json",
+      "sha256": "353504d757f0bc210d1648f029b192ad183ba2830f8d035a6a3938564c6f65dc"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/desviaciones_4s_r3_original.json",
+      "sha256": "3a9bc17cbb3a7d5b3e1a77518ee70eddfc8676edd44ce696933abb6f385b3f46"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/desviaciones_4s_r3_palabra_aislada.json",
+      "sha256": "aa71bf8db73b350d9327b46d1e4776ec2b78e316c15ede270dd7609af8d00c9a"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/desviaciones_6s_r1_original.json",
+      "sha256": "66a975c9b0c760f8084fb8e048ee4995e190ceb2f39d154b5c3e452fd99631a5"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/desviaciones_6s_r1_palabra_aislada.json",
+      "sha256": "20f73a985c53ec0ce20dfe3f2d85392e5b8ca0113474ca0f0b78430cfd315c73"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/desviaciones_6s_r2_original.json",
+      "sha256": "23745d712b1fd51d8bed82616474db970da51100e76a3bbb2cc047547d2cc75f"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/desviaciones_6s_r2_palabra_aislada.json",
+      "sha256": "18a9290cf08bb11eef98c6ae5a855fab37531a0f3d684503729994469aed99ea"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/desviaciones_6s_r3_original.json",
+      "sha256": "970ff5f56ab21a8d03c37e01c6e49dd272707f528f808d8c9592a84bcd051eb3"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/desviaciones_6s_r3_palabra_aislada.json",
+      "sha256": "b122b6794b0bf263e1de8eecd1dc868502ba92629743cc00987a84552920c361"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/desviaciones_8s_r1_original.json",
+      "sha256": "7079d1fa9318ac79f3f90efc8eda0ff41e7e83365b8555a31600f6c5f0f69472"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/desviaciones_8s_r1_palabra_aislada.json",
+      "sha256": "455d7320bf64db695dc40908ffa19e6810151338f91d7d38e3e8dfdf0a01403c"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/desviaciones_8s_r2_original.json",
+      "sha256": "349d234cb011d13ab3690111a21aa5144e42917e6bcb02994af4bf6f901df10d"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/desviaciones_8s_r2_palabra_aislada.json",
+      "sha256": "5bc0bf781cf0381d8c9d9fcc6e8b9aae07f7ee962f392d6c5367e550d78c0eef"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/desviaciones_8s_r3_original.json",
+      "sha256": "0d77e4e434f42045554ea95fd7732f38e168bd911724cbd9cbf9e57df5ea76ad"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/desviaciones_8s_r3_palabra_aislada.json",
+      "sha256": "70f3f06f026df5296baf384eeb3f87bab772a85f311eba50309e4943dbe6c3e9"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/lenta_4s_r1_original.json",
+      "sha256": "1a7776161ca1c29e521a8f0e87f5e6b0f9a5e5d7e7ed0b22a17af2f3c1335a00"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/lenta_4s_r1_palabra_aislada.json",
+      "sha256": "1d0ad909442145a3133072df8a4516e351375e263c5d6e62ac46dc19c8fdc1fe"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/lenta_4s_r2_original.json",
+      "sha256": "97b34b138f48f52544613b1b34ba5443dbdd77ed48352c39d0927e2d8f0f8079"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/lenta_4s_r2_palabra_aislada.json",
+      "sha256": "4a115ec8756e516f8c674b1e2656158437d8442f09368100626e8d5fecbe874a"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/lenta_4s_r3_original.json",
+      "sha256": "6f42ceac9ac0a2a9efa8dc297b4f86929eba49f2cc14a976d1987120ec74a81f"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/lenta_4s_r3_palabra_aislada.json",
+      "sha256": "722b78bfd2cac3af180f9dd242d0fbef9f5cee9cf4e61306bd94a7b3479507a2"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/lenta_8s_r1_original.json",
+      "sha256": "4b0363e97a8aff5cf2c96a124748afb8776ddf242358aaf6cc99492e7b2481db"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/lenta_8s_r1_palabra_aislada.json",
+      "sha256": "174aad76e0c90f6808bbeec5302ed00001606fe7b0a3401a0dd9ca7cac5f819e"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/lenta_8s_r2_original.json",
+      "sha256": "379c08d7b3c8811a5a015a11646310d2ee8bf81f02d09522b7df52e7068e76dc"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/lenta_8s_r2_palabra_aislada.json",
+      "sha256": "1f893cfabba86055b4562fded20f3ea95e4ff151f0deb14f92e19b1efe2a8ad3"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/lenta_8s_r3_original.json",
+      "sha256": "f8b26a214800b067c8d110ae2e1b25aff2caf897805a3d7a7063193f8a8a1a12"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/lenta_8s_r3_palabra_aislada.json",
+      "sha256": "8954ea2ffa465099bb2aaa656b86f33edafa87942bd52241d12c7a5b191af486"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/normal_4s_r1_original.json",
+      "sha256": "ddbaa5b68f78999a961e10613ac40e221cb24e8ee055e6aaddc00792dd2d8d6f"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/normal_4s_r1_palabra_aislada.json",
+      "sha256": "5094bfc4389f13a5fe611abbd2c7419670e3c4ebe3408eab6329732dcbbc470b"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/normal_4s_r2_original.json",
+      "sha256": "0d48f5d142f150bee4fff869658dfe40edbf497546b5fd4aab6ebd6bd33727d0"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/normal_4s_r2_palabra_aislada.json",
+      "sha256": "696da4bd7f80c2a0f1a6f180834ee1ac95db3f5180da28c40b118b0ac8746707"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/normal_4s_r3_original.json",
+      "sha256": "18045cc9884d7da9dc3ca715a7dabd583d9078f000c06c38d4888b2d0daaa26b"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/normal_4s_r3_palabra_aislada.json",
+      "sha256": "6963f543805524cbc926a5ea5375e6b3e7189df095ec4e5213172df544c9a318"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/normal_6s_r1_original.json",
+      "sha256": "381a0beff8f0855b4547b401d7d5cd3ec4516e1545f8382e1f1ff4178b090174"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/normal_6s_r1_palabra_aislada.json",
+      "sha256": "077d167c1df7e7be26ad6c53dec68eb946ede9fd9411c55addbad87d10e37a84"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/normal_6s_r2_original.json",
+      "sha256": "27b39b85fe930f7705782424739393e5e3b9c21e21b0e66a9bd62aaf1d426efb"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/normal_6s_r2_palabra_aislada.json",
+      "sha256": "636f35ca7519cfbbc9c317e7e43b240e3c5309df5b52cc5d6f7852302994af83"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/normal_6s_r3_original.json",
+      "sha256": "200812210874752a453881d57fe397751a8b83046580b9c1d1a5e36844d8f3fb"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/normal_6s_r3_palabra_aislada.json",
+      "sha256": "012dc889520cfa6535a27c5f99d88b24f06d124d8db444b96ffb954fcf7a72a3"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/normal_8s_r1_original.json",
+      "sha256": "4fa3aee3eb5769f1d1097c64a538fe775eaa09f128576f040c3babce4715af5d"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/normal_8s_r1_palabra_aislada.json",
+      "sha256": "4e5f28fbeeb49f55e0fc520d06d68314b931bd26755a391e89287dd2707e776f"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/normal_8s_r2_original.json",
+      "sha256": "50d137f418a9490e850ada729603ceabcecb03e38256f20700b6ec303d7083ad"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/normal_8s_r2_palabra_aislada.json",
+      "sha256": "9751ea395b8f9f44ec6ee4ca00831f0570b3ae0b45dd253b85c902e357c8b730"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/normal_8s_r3_original.json",
+      "sha256": "d62a6d7f67e64806df7e345a0969f0df9e2c6f56f83c575969e094ae76a01e06"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/normal_8s_r3_palabra_aislada.json",
+      "sha256": "7d847be18ae05cc91a86516942d2c5a0e227df02319823052c8d692ac7d0a14a"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/pausa_4s_r1_original.json",
+      "sha256": "584641af48b6691a6d00e462f61982dca73638522d83492dc0fb8c906f039345"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/pausa_4s_r1_palabra_aislada.json",
+      "sha256": "8d9a681413d93d15879f0acd71ca956cbef92eb5a7fd38feea1aed84e91f900a"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/pausa_4s_r2_original.json",
+      "sha256": "da264212edf80a90263378119e19dbeff7ed83363e4e5b22c0c89d81c60fb8cf"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/pausa_4s_r2_palabra_aislada.json",
+      "sha256": "d73fa68dfbbf6bedabe7b91ad24354f1c4a344ff1ff5f87f657a9d68c9b7332b"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/pausa_4s_r3_original.json",
+      "sha256": "3dcc36a4a299418a2bdb3f251d8f5aad17d6426aa93fc337882651dc4d5b1e15"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/pausa_4s_r3_palabra_aislada.json",
+      "sha256": "604f03e68c116994985e51874a492d211e5eefe97ff8dddf87874a9fe553c266"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/pausa_8s_r1_original.json",
+      "sha256": "a102c13bea2590f6184d2cd15075ea4a9c4e9aa0099156ae3bdb7b7d46a77da0"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/pausa_8s_r1_palabra_aislada.json",
+      "sha256": "abe0edb4c226489c29d4b0d43fa1700d647bff30234d113dc76ce883db0ed44e"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/pausa_8s_r2_original.json",
+      "sha256": "5bebecf5b8343c46bb421125b2d01e8715118dec5f653a721d51c6f24f79f07c"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/pausa_8s_r2_palabra_aislada.json",
+      "sha256": "99ed9e2e6ed3c9128667d4c88df89031efa384057fa9bdba6acfc2db4c5405fd"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/pausa_8s_r3_original.json",
+      "sha256": "a42321941a7032953cca646a19c0a86f0732e5e3e5319acd7197505c26fbd617"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/pausa_8s_r3_palabra_aislada.json",
+      "sha256": "6633542add7e32902a0d716fd80e58d707f8823812b11d5556a2439fe261e9fd"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/recursos_computo.json",
+      "sha256": "2e7c16652fcce6318b205b9794074425a6ef45c1973950f4988dddba3154ed18"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/relectura_4s_r1_original.json",
+      "sha256": "3a9e07c5bd1d5c2b117ca1fe55a312b30bcbb7e375933d637f8eb4e2ab7027ad"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/relectura_4s_r1_palabra_aislada.json",
+      "sha256": "c6d02f3260f3ba880217401b4c662c99f300398a89c7c800b6b026c36058845f"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/relectura_4s_r2_original.json",
+      "sha256": "e91621ab50ea78a7faa9fa7f89a8ff408618a602582979983e7562967350191b"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/relectura_4s_r2_palabra_aislada.json",
+      "sha256": "fce39996358d72a76d34a59fad5cbc8edf9be3fc956cc42560a3591116949330"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/relectura_4s_r3_original.json",
+      "sha256": "a81f6aa8750c858ad22f3ddf82c6dc984f2f1624b1a27d99e1e7c4a8398713af"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/relectura_4s_r3_palabra_aislada.json",
+      "sha256": "d16cf5a92fecf4af8b8427cece8140c463047b3e706eaa5a109e9cbe27987ed6"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/relectura_8s_r1_original.json",
+      "sha256": "8fbe103c29e44ac1c51c65e1e4c19c3e89c97e3ad914f95d17f584743f1b66cc"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/relectura_8s_r1_palabra_aislada.json",
+      "sha256": "5255ee2382b5f190ffe9b602acffcf76dd0ccd90cee4821fb6e274c1a0128e3d"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/relectura_8s_r2_original.json",
+      "sha256": "eaae6b2357ac95aa33c0c3b243f2d668061d00d25ee0583d498a965e320f6065"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/relectura_8s_r2_palabra_aislada.json",
+      "sha256": "9a0e7b9dd88726d231e12eb0483fad7622c330a26181c0e273f7949b7dd35d69"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/relectura_8s_r3_original.json",
+      "sha256": "da98a40019983f6445a3e4b0f14cfad7effe49e4c377ddbf4a4b62baebcc5f9a"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/relectura_8s_r3_palabra_aislada.json",
+      "sha256": "6f8f5ccb8f0522d1f3499b26d6ad09f3c151a9968237c959aa5118609e435d29"
+    },
+    {
+      "file": "resultados/seguidores/20261019_104824_848649/resumen.json",
+      "sha256": "a304f9d9a0a1a9859322d7374c869b6d39e78aca2ee094ad823e1e5e5edb79f2"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/desviaciones_4s_r1_original.json",
+      "sha256": "1581df095f8f31f87c0d483e319c9be510b2946792efc6f80f55cf6248d3a41a"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/desviaciones_4s_r1_palabra_aislada.json",
+      "sha256": "0257146ef6d058b2b4509a9743e7ae85c5d4dba04f3398bd31d736076ebc594b"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/desviaciones_4s_r2_original.json",
+      "sha256": "c84ab8d505065819a931a75e955a74140211faefcaa0e99b0a8a25c366fc7fcb"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/desviaciones_4s_r2_palabra_aislada.json",
+      "sha256": "20872bc59cca5dab258ec9879ffa036b96ad75f2720412378f38051c53e6ba37"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/desviaciones_4s_r3_original.json",
+      "sha256": "bb4481f222bd03dade44ae295f1f266c15432d3b608df78ff665132377bd19a4"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/desviaciones_4s_r3_palabra_aislada.json",
+      "sha256": "aeef8a3f5c2b377a5824e43818f32c9260ef106575939908ea2745b0d6bfb54c"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/desviaciones_6s_r1_original.json",
+      "sha256": "3ad573f24b80c273ca3e47195a39ba5275186f2e22fa9cc6363bbc1ba7101fe6"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/desviaciones_6s_r1_palabra_aislada.json",
+      "sha256": "d8fd5246d14b918056a0b0aee79bde288fe41526fa869426327f845f217f2241"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/desviaciones_6s_r2_original.json",
+      "sha256": "3e3ee4492725a9f4f0448bf5dbd2165c4ffdfe797048911732104780063840e9"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/desviaciones_6s_r2_palabra_aislada.json",
+      "sha256": "95299431e5daa36adfb40fe67ff8f64f4900dcd07128e416560eadd916d2778b"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/desviaciones_6s_r3_original.json",
+      "sha256": "dccd15126bb69ea9c47d83f61dc23d031bcd0a47dff33952e9dcc2001fc5af65"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/desviaciones_6s_r3_palabra_aislada.json",
+      "sha256": "f39c700820479930210d13c7bfc3e2cd9ff8aabce05fc2835d561c21ae93b766"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/desviaciones_8s_r1_original.json",
+      "sha256": "73a90fd883c31e85d65b9c9b88a40f9557d163c6b9588093fb6f5687e783d920"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/desviaciones_8s_r1_palabra_aislada.json",
+      "sha256": "6869884a5afbe3d1405ea9af409cabb3f025303dbe6617691727da38f41f8313"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/desviaciones_8s_r2_original.json",
+      "sha256": "03cfba5c5dac01e2a03b31541e5d399adce8ea528eb4902b948eda4117e09ea0"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/desviaciones_8s_r2_palabra_aislada.json",
+      "sha256": "fc7c2fc7c67084338999119e1c96583a586d85513368b6f68d5e41b9d69d2229"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/desviaciones_8s_r3_original.json",
+      "sha256": "d39394b1c4237383adf7f28287a98514eb5c3ff2a0cd16a4c6f856685431d33f"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/desviaciones_8s_r3_palabra_aislada.json",
+      "sha256": "230979b1fa68ee09f46f9f65b0c5a1e853fbf587a4c4774f2d9f6bd42f69407d"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/lenta_4s_r1_original.json",
+      "sha256": "080c8c0b4559f15fa681569e4dce263ce83191ed29ce8331cb63aa1278730e4c"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/lenta_4s_r1_palabra_aislada.json",
+      "sha256": "e3fa6027ac747d7127a0d87d692d059d1df2a249500fbc8727f810eaf34ffe62"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/lenta_4s_r2_original.json",
+      "sha256": "37ffbadfafaa82e91edd99cc712fe74768d8602550ef11a5574759e37bcd6404"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/lenta_4s_r2_palabra_aislada.json",
+      "sha256": "9d06795b31f1859873b5039642fe98ac18e8e4ccabb9011f74b9a756fd0d8169"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/lenta_4s_r3_original.json",
+      "sha256": "4fed8205a2872c0cf568f575b06d786d81d08fd380e87c0219354e9bbfc3adaf"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/lenta_4s_r3_palabra_aislada.json",
+      "sha256": "4091897978525e006a72a92979165a466625656a7a7a1c8f185e2caa4e963f8a"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/lenta_8s_r1_original.json",
+      "sha256": "f2ad043964921bc237a88ea6250d2a5dae53b6f65f3edb351b2f6616f7581a51"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/lenta_8s_r1_palabra_aislada.json",
+      "sha256": "bfa20bdf3947309fd93052b11946e8f776216db8fb04bf224b7de03db5705309"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/lenta_8s_r2_original.json",
+      "sha256": "a6a035c211871583dbb6db1449c3a1a0c81c1b7798b9ed3a942039ed756e9ed3"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/lenta_8s_r2_palabra_aislada.json",
+      "sha256": "7ec4a2a1c7141f1f3dfed00753b2e249733dd8892b0c898ff50b8e08c8c68225"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/lenta_8s_r3_original.json",
+      "sha256": "b41da15d35d70b2525359a76e4800841ecfd55677a30e425db1f1760eb6e1d88"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/lenta_8s_r3_palabra_aislada.json",
+      "sha256": "38a222e8881199db4e38db3e9c6cb70d43f10e827512c6a60cb2d3dde1d466ca"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/normal_4s_r1_original.json",
+      "sha256": "bce07be21b2ada93ce2801cf1d626636aab369a18d57f30c6f311fb840311394"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/normal_4s_r1_palabra_aislada.json",
+      "sha256": "431a9f18ec78941e87b96e95af57f716bf23eac7cb8ec8449e64e005a36b348c"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/normal_4s_r2_original.json",
+      "sha256": "78e6b4e9ef7ab48d00d2076d374a858432608abfaec3b8a493b44e05ebc93f5e"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/normal_4s_r2_palabra_aislada.json",
+      "sha256": "b57d23b7cfc02f01acfc4971efd2d04d90fcf54aefa160a181973a74ae6edf47"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/normal_4s_r3_original.json",
+      "sha256": "f6248c4b857ad4568cac108ced6a4d4ba75dafa09d59e33951c45f5dbf2209b6"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/normal_4s_r3_palabra_aislada.json",
+      "sha256": "2abc3970ad0f8f5a4ba98b19e0b798f866c20febeb967bcd166f22f3732ab910"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/normal_6s_r1_original.json",
+      "sha256": "c637e0188fada5502bd5935f01d77392f0623598b25f82a825ab02dfaa1369e6"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/normal_6s_r1_palabra_aislada.json",
+      "sha256": "54ff369e0113989ad72a503b5317a80b7878df49489a71a0bbd9e894a74347ba"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/normal_6s_r2_original.json",
+      "sha256": "affbe0f18973338e3c274a5860fb6bfd6ec55f9364e4dcace5256b933d98d1bc"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/normal_6s_r2_palabra_aislada.json",
+      "sha256": "e898543605be389c6ec18e35573c7c062240d1850dc62d91866618fb40e46784"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/normal_6s_r3_original.json",
+      "sha256": "10eabf3c9ebe943531a670c848b05234a6ed7d76a0bc109a33ce1aa5cb7f696d"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/normal_6s_r3_palabra_aislada.json",
+      "sha256": "3264a2e3479870a1a3d80745baea038550adc24555ea825dd1142676e0e380c5"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/normal_8s_r1_original.json",
+      "sha256": "dc05e139a84354cc01e7854c9921f59ef0bb4a82d63c04ba47bf15f8ef7d605d"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/normal_8s_r1_palabra_aislada.json",
+      "sha256": "e921870713c850c481e7ddc8f3f9117691c7cc53234c4348aca210534dfe739a"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/normal_8s_r2_original.json",
+      "sha256": "ea4e270eb0255e8c6e27e7ba0052ae5615ca519f97a5ec7b621fdcd3a189b60f"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/normal_8s_r2_palabra_aislada.json",
+      "sha256": "4f24ed46f00e57b75c06ab59c43e97bd8ce841dd79daa37931641a4ee59e0e3d"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/normal_8s_r3_original.json",
+      "sha256": "1c90f20cbe1541edfa02c67eb9ae21d78395e748ed6730f322c070eb03a0b20a"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/normal_8s_r3_palabra_aislada.json",
+      "sha256": "ebb75eb9fa489a5eca55f9b3bc205c3c9f367768c1ddc80d8600b0a0d8000d94"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/pausa_4s_r1_original.json",
+      "sha256": "7089019b8a51da4fef4d7107b6a4971252678b42c7b90b743a99582f50f9b295"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/pausa_4s_r1_palabra_aislada.json",
+      "sha256": "ffafbc3d39e59afa327c4c5dcd375f5822ad13e0fab017ccdbb167e91d3848d2"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/pausa_4s_r2_original.json",
+      "sha256": "d39a8fb9dc2d271ef69566ffbac8555322df66743f5034828ee1fa3f81d2c2d4"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/pausa_4s_r2_palabra_aislada.json",
+      "sha256": "0808ea35246eaaa268715a87537a23af0f56254db9d70b15e9cbb817048762b6"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/pausa_4s_r3_original.json",
+      "sha256": "6c78fd69dcd22fb6dae991f0b09b4019c4d7fdcef47acfece0d6987807c59ce6"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/pausa_4s_r3_palabra_aislada.json",
+      "sha256": "4b275e1e49a95654c69baece8fd1056204bd046b0a2764aa07c520f98ef6e688"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/pausa_8s_r1_original.json",
+      "sha256": "630a72a58c534467ef920b2741d23e7edb784dd7944a55044eff993b44005720"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/pausa_8s_r1_palabra_aislada.json",
+      "sha256": "652c884950d073cecf1d161659b226e09863a236543f7dbf1d40f6a4834a8c9a"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/pausa_8s_r2_original.json",
+      "sha256": "b232c43128a67ff7f087e14e630204b4d598862e8503dd0c441c09b1d73aa4d2"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/pausa_8s_r2_palabra_aislada.json",
+      "sha256": "166aa9917e13cc78676f7a332b256d7793b370613502750d080c2dbaf1394b4d"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/pausa_8s_r3_original.json",
+      "sha256": "4788d75244db064334e2f50ffdf747f2d5e16395956473a2ec1dc5bad4096603"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/pausa_8s_r3_palabra_aislada.json",
+      "sha256": "be4c1a283ece84ca09ac359a4e76fbcd790b34dcbf43633edbc0263558831edc"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/recursos_computo.json",
+      "sha256": "2e7c16652fcce6318b205b9794074425a6ef45c1973950f4988dddba3154ed18"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/relectura_4s_r1_original.json",
+      "sha256": "005a37a5fb4d1c786075b2266126eab5dd895094cc0286c82bbadbb0905b1f39"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/relectura_4s_r1_palabra_aislada.json",
+      "sha256": "ba4795d7080d6b547bc9791600935c49cb785267a04c267deb8af3c07749550e"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/relectura_4s_r2_original.json",
+      "sha256": "2fa59cccd548e381d1e87b7183564ca346cecd3f2c146ea753983af3b4e8a477"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/relectura_4s_r2_palabra_aislada.json",
+      "sha256": "3bac1bdb8ef19826b9b1d2d231221482da50d875b58d41310cd889157fb1ab15"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/relectura_4s_r3_original.json",
+      "sha256": "0e4a0fc9d66245ee5cd7ed37d4a1796fa2ca5700abe5b945a3dded2fd2e2cdb8"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/relectura_4s_r3_palabra_aislada.json",
+      "sha256": "997d2e0f62369af91142dc44084872bc6e1e4f0da1b17d4ceed9053f9dd083b9"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/relectura_8s_r1_original.json",
+      "sha256": "fb35813d09231868ebe1f1de326be999a8b2b3d83e539cb6f1aacb479f9948f4"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/relectura_8s_r1_palabra_aislada.json",
+      "sha256": "191eeceb0f3b326611f098f18a27a1ddd45eff17a709fa450d8e422efcaa4a75"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/relectura_8s_r2_original.json",
+      "sha256": "7ceb90a82eb869d7b76c50d87fb7bcdfd40e98edcb4e7dc3a5b37dd9a3eb516a"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/relectura_8s_r2_palabra_aislada.json",
+      "sha256": "e625bb40d1064ec48f0c4d4d13d2c8a9e542fb46b8fb81199c83ed704220283f"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/relectura_8s_r3_original.json",
+      "sha256": "b52db65f142f6a103ec5a05cab8bb364874007b41424e3a1def75939fc58168f"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/relectura_8s_r3_palabra_aislada.json",
+      "sha256": "5f719e481cdfad503256a75c4723c7219f862b10628c1200c6c495921ce97159"
+    },
+    {
+      "file": "resultados/seguidores/20261019_105116_684703/resumen.json",
+      "sha256": "49eb1d72bbf490936e3fd330d7ffd4ff38981683d23885f877f00404c601acd1"
+    },
+    {
+      "file": "resultados/seguimiento/lectura_20261014_081816_009646_20261014_090345_184715_seguimiento.json",
+      "sha256": "5f0693b608b3d12fdebf38fc66cb6b686b1651710b4429ebf9b84f71e5454bb4"
+    },
+    {
+      "file": "resultados/seguimiento/lectura_20261014_082953_219058_20261014_090237_718476_seguimiento.json",
+      "sha256": "7bedcec619a88b62e836a66b06e051fd2d7c07f894f5fc5216b010fb188d8666"
+    },
+    {
+      "file": "resultados/seguimiento/lectura_20261014_082953_219058_20261014_090803_312561_seguimiento.json",
+      "sha256": "103cbdaf6bbbdf000979852f3b114688b8fa00d4f1770455906939ed43f30c01"
+    },
+    {
+      "file": "resultados/verificacion_recursos/verificacion_4s.json",
+      "sha256": "0958d7c1712189737e436c68ec55476a2b7beebcb80f288c04d9e0b87156a5b9"
+    }
+  ],
+  "samples": [
+    {
+      "id": "lectura_20261026_080028_124216",
+      "label": "Lectura normal - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "kind": "normal",
+      "start": 0,
+      "end": 90.0,
+      "human_note": "Consigna/metadatos: Lectura normal - caja del sendero · 26/10/2026. El lector confirma haber seguido la consigna: Lee todo el cuento una sola vez a tu ritmo habitual, sin introducir errores deliberados. Estado de referencia: descripcion_confirmada_por_lector_pendiente_escucha_detallada.",
+      "catalog_record": {
+        "id": "lectura_20261026_080028_124216",
+        "audio_file": "datos/audio/Lectura normal - caja del sendero - lectura_04 - 26-10-2026.wav",
+        "audio_sha256": "a01baf50796a5937ab3fe4b758e1934ac6120fc07bfb961ab1ae5334381a194e",
+        "label": "Lectura normal - caja del sendero · 26/10/2026",
+        "case": "normal",
+        "recorded_date": "2026-10-26",
+        "story_file": "datos/textos/lectura_04.txt",
+        "story_sha256": "c869686736872fb96150ede565d9d0a81ff986e2469f0131dd66cc5e56a2bf8e",
+        "speaker_id": "adulto_01",
+        "partition": "desarrollo",
+        "reference_status": "descripcion_confirmada_por_lector_pendiente_escucha_detallada",
+        "reference_file": null,
+        "reading_events": [
+          {
+            "description": "El lector confirma haber seguido la consigna: Lee todo el cuento una sola vez a tu ritmo habitual, sin introducir errores deliberados.",
+            "source": "confirmacion_lector_chat",
+            "start": null,
+            "end": null
+          }
+        ],
+        "environment_notes": null,
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "sample_width_bytes": 2,
+        "frames": 3969000,
+        "duration_seconds": 90.0,
+        "notice": "Nombre/caso describen la consigna, no validan contenido ni eventos. No es conjunto de prueba reservado por defecto.",
+        "legacy_audio_files": [
+          "datos/audio/lectura_20261026_080028_124216.wav"
+        ],
+        "reader_report_file": "datos/anotaciones/lectura_04_tanda_confirmacion.json"
+      },
+      "source_audio": "datos/audio/Lectura normal - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "source_sha256": "a01baf50796a5937ab3fe4b758e1934ac6120fc07bfb961ab1ae5334381a194e",
+      "array_file": ".descartados/literalidad/20261026_081747_630720_UTC/lectura_20261026_080028_124216.npy",
+      "array_sha256": "c02a3aaee88119e9b7a9868751171bf8957eb25939b21a4f84299ac8a65f2b68",
+      "listen_file": ".descartados/literalidad/20261026_081747_630720_UTC/lectura_20261026_080028_124216.wav",
+      "listen_sha256": "f58830b2462d0a4aa95f83700fa29ff329b62f37bf56440024a96edabfe52ef9",
+      "audio_metrics": {
+        "decoded_peak_abs": 0.94207763671875,
+        "decoded_rms": 0.07973284449053802,
+        "decoded_fraction_abs_ge_0_999": 0.0,
+        "notice": "Métricas de amplitud del array decodificado mono 16 kHz; no miden SNR ni prueban distorsión/saturación del original."
+      }
+    },
+    {
+      "id": "lectura_20261026_080310_194589",
+      "label": "Lectura repeticiones de palabras - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "kind": "disfluencias",
+      "start": 0,
+      "end": 100.0,
+      "human_note": "Consigna/metadatos: Lectura repeticiones de palabras - caja del sendero · 26/10/2026. El lector confirma haber seguido la consigna: Lee todo el cuento. Introduce cuatro repeticiones: una una pequeña caja; Clara Clara abrió; Mateo Mateo probó; junto junto al puente (en la última frase). El resto se lee normalmente. Estado de referencia: descripcion_confirmada_por_lector_pendiente_escucha_detallada.",
+      "catalog_record": {
+        "id": "lectura_20261026_080310_194589",
+        "audio_file": "datos/audio/Lectura repeticiones de palabras - caja del sendero - lectura_04 - 26-10-2026.wav",
+        "audio_sha256": "16a446ea986d06e14805e518f3068f296b643890ac6ecaefc651ae3e04196826",
+        "label": "Lectura repeticiones de palabras - caja del sendero · 26/10/2026",
+        "case": "disfluencias",
+        "recorded_date": "2026-10-26",
+        "story_file": "datos/textos/lectura_04.txt",
+        "story_sha256": "c869686736872fb96150ede565d9d0a81ff986e2469f0131dd66cc5e56a2bf8e",
+        "speaker_id": "adulto_01",
+        "partition": "desarrollo",
+        "reference_status": "descripcion_confirmada_por_lector_pendiente_escucha_detallada",
+        "reference_file": null,
+        "reading_events": [
+          {
+            "description": "El lector confirma haber seguido la consigna: Lee todo el cuento. Introduce cuatro repeticiones: una una pequeña caja; Clara Clara abrió; Mateo Mateo probó; junto junto al puente (en la última frase). El resto se lee normalmente.",
+            "source": "confirmacion_lector_chat",
+            "start": null,
+            "end": null
+          }
+        ],
+        "environment_notes": null,
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "sample_width_bytes": 2,
+        "frames": 4410000,
+        "duration_seconds": 100.0,
+        "notice": "Nombre/caso describen la consigna, no validan contenido ni eventos. No es conjunto de prueba reservado por defecto.",
+        "legacy_audio_files": [
+          "datos/audio/lectura_20261026_080310_194589.wav"
+        ],
+        "reader_report_file": "datos/anotaciones/lectura_04_tanda_confirmacion.json"
+      },
+      "source_audio": "datos/audio/Lectura repeticiones de palabras - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "source_sha256": "16a446ea986d06e14805e518f3068f296b643890ac6ecaefc651ae3e04196826",
+      "array_file": ".descartados/literalidad/20261026_081747_630720_UTC/lectura_20261026_080310_194589.npy",
+      "array_sha256": "ab71799136c541acbe9a20982b4702c8840a607c9fe325ef7127b1cb63bfa6f2",
+      "listen_file": ".descartados/literalidad/20261026_081747_630720_UTC/lectura_20261026_080310_194589.wav",
+      "listen_sha256": "13ba6756d07ee66426d35bb1fb4dfeaf7f2277b0d1bb8694b36d2ec4125e584a",
+      "audio_metrics": {
+        "decoded_peak_abs": 1.0,
+        "decoded_rms": 0.09123392832613528,
+        "decoded_fraction_abs_ge_0_999": 1.25e-05,
+        "notice": "Métricas de amplitud del array decodificado mono 16 kHz; no miden SNR ni prueban distorsión/saturación del original."
+      }
+    },
+    {
+      "id": "lectura_20261026_080612_790344",
+      "label": "Lectura intentos parciales - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "kind": "disfluencias",
+      "start": 0,
+      "end": 120.0,
+      "human_note": "Consigna/metadatos: Lectura intentos parciales - caja del sendero · 26/10/2026. El lector confirma haber seguido la consigna: Lee todo el cuento. En pequeña di pe- pe- pequeña; en descubrieron di des- des- descubrieron; en regresar di regres- re- regresar. Los guiones indican cortar la palabra, no decir guion. Deja salir los intentos sin corregirlos después. El resto se lee normalmente. Estado de referencia: descripcion_confirmada_por_lector_pendiente_escucha_detallada.",
+      "catalog_record": {
+        "id": "lectura_20261026_080612_790344",
+        "audio_file": "datos/audio/Lectura intentos parciales - caja del sendero - lectura_04 - 26-10-2026.wav",
+        "audio_sha256": "be0b3c786d61a0734fd7ce156f13f529ccca07617458edd462edf041bec67d97",
+        "label": "Lectura intentos parciales - caja del sendero · 26/10/2026",
+        "case": "disfluencias",
+        "recorded_date": "2026-10-26",
+        "story_file": "datos/textos/lectura_04.txt",
+        "story_sha256": "c869686736872fb96150ede565d9d0a81ff986e2469f0131dd66cc5e56a2bf8e",
+        "speaker_id": "adulto_01",
+        "partition": "desarrollo",
+        "reference_status": "descripcion_confirmada_por_lector_pendiente_escucha_detallada",
+        "reference_file": null,
+        "reading_events": [
+          {
+            "description": "El lector confirma haber seguido la consigna: Lee todo el cuento. En pequeña di pe- pe- pequeña; en descubrieron di des- des- descubrieron; en regresar di regres- re- regresar. Los guiones indican cortar la palabra, no decir guion. Deja salir los intentos sin corregirlos después. El resto se lee normalmente.",
+            "source": "confirmacion_lector_chat",
+            "start": null,
+            "end": null
+          }
+        ],
+        "environment_notes": null,
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "sample_width_bytes": 2,
+        "frames": 5292000,
+        "duration_seconds": 120.0,
+        "notice": "Nombre/caso describen la consigna, no validan contenido ni eventos. No es conjunto de prueba reservado por defecto.",
+        "legacy_audio_files": [
+          "datos/audio/lectura_20261026_080612_790344.wav"
+        ],
+        "reader_report_file": "datos/anotaciones/lectura_04_tanda_confirmacion.json"
+      },
+      "source_audio": "datos/audio/Lectura intentos parciales - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "source_sha256": "be0b3c786d61a0734fd7ce156f13f529ccca07617458edd462edf041bec67d97",
+      "array_file": ".descartados/literalidad/20261026_081747_630720_UTC/lectura_20261026_080612_790344.npy",
+      "array_sha256": "6a51c3bd18b559b4f7dc39e5b4f2be0a0a2490c30a5340f5f7e54ed6a053cd53",
+      "listen_file": ".descartados/literalidad/20261026_081747_630720_UTC/lectura_20261026_080612_790344.wav",
+      "listen_sha256": "62fd2c8fd1a50c78043b83d4a67f8ad717e278a4b0c39f283915d8f42d90a255",
+      "audio_metrics": {
+        "decoded_peak_abs": 1.0,
+        "decoded_rms": 0.09470350430198356,
+        "decoded_fraction_abs_ge_0_999": 2.8125e-05,
+        "notice": "Métricas de amplitud del array decodificado mono 16 kHz; no miden SNR ni prueban distorsión/saturación del original."
+      }
+    },
+    {
+      "id": "lectura_20261026_080852_827476",
+      "label": "Lectura omisiones y sustituciones - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "kind": "disfluencias",
+      "start": 0,
+      "end": 90.0,
+      "human_note": "Consigna/metadatos: Lectura omisiones y sustituciones - caja del sendero · 26/10/2026. El lector confirma haber seguido la consigna: Lee todo el cuento omitiendo madera y viejo. Sustituye pluma azul por pluma roja y un jardín por un parque. No añadas después las palabras omitidas ni corrijas las sustituciones. Estado de referencia: descripcion_confirmada_por_lector_pendiente_escucha_detallada.",
+      "catalog_record": {
+        "id": "lectura_20261026_080852_827476",
+        "audio_file": "datos/audio/Lectura omisiones y sustituciones - caja del sendero - lectura_04 - 26-10-2026.wav",
+        "audio_sha256": "01824afa5ab8d098b28eba2685fe1bcf9ba20ef1869a03456cf09bdbef9ee944",
+        "label": "Lectura omisiones y sustituciones - caja del sendero · 26/10/2026",
+        "case": "disfluencias",
+        "recorded_date": "2026-10-26",
+        "story_file": "datos/textos/lectura_04.txt",
+        "story_sha256": "c869686736872fb96150ede565d9d0a81ff986e2469f0131dd66cc5e56a2bf8e",
+        "speaker_id": "adulto_01",
+        "partition": "desarrollo",
+        "reference_status": "descripcion_confirmada_por_lector_pendiente_escucha_detallada",
+        "reference_file": null,
+        "reading_events": [
+          {
+            "description": "El lector confirma haber seguido la consigna: Lee todo el cuento omitiendo madera y viejo. Sustituye pluma azul por pluma roja y un jardín por un parque. No añadas después las palabras omitidas ni corrijas las sustituciones.",
+            "source": "confirmacion_lector_chat",
+            "start": null,
+            "end": null
+          }
+        ],
+        "environment_notes": null,
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "sample_width_bytes": 2,
+        "frames": 3969000,
+        "duration_seconds": 90.0,
+        "notice": "Nombre/caso describen la consigna, no validan contenido ni eventos. No es conjunto de prueba reservado por defecto.",
+        "legacy_audio_files": [
+          "datos/audio/lectura_20261026_080852_827476.wav"
+        ],
+        "reader_report_file": "datos/anotaciones/lectura_04_tanda_confirmacion.json"
+      },
+      "source_audio": "datos/audio/Lectura omisiones y sustituciones - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "source_sha256": "01824afa5ab8d098b28eba2685fe1bcf9ba20ef1869a03456cf09bdbef9ee944",
+      "array_file": ".descartados/literalidad/20261026_081747_630720_UTC/lectura_20261026_080852_827476.npy",
+      "array_sha256": "0f44c458a5cec8b132a7febc35249761b6f7752c991ab7db5d1e99d95a2ac5f0",
+      "listen_file": ".descartados/literalidad/20261026_081747_630720_UTC/lectura_20261026_080852_827476.wav",
+      "listen_sha256": "bf38a15c21a9bc0a4e03f65fa2edcfe2a5e68897e81ed2f70d8666857e65e22b",
+      "audio_metrics": {
+        "decoded_peak_abs": 1.0,
+        "decoded_rms": 0.09389389678910548,
+        "decoded_fraction_abs_ge_0_999": 9.027777777777777e-06,
+        "notice": "Métricas de amplitud del array decodificado mono 16 kHz; no miden SNR ni prueban distorsión/saturación del original."
+      }
+    },
+    {
+      "id": "lectura_20261026_081113_354147",
+      "label": "Lectura pausa larga y continuacion - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "kind": "pausa",
+      "start": 0,
+      "end": 120.0,
+      "human_note": "Consigna/metadatos: Lectura pausa larga y continuacion - caja del sendero · 26/10/2026. El lector confirma haber seguido la consigna: Lee hasta y un papel doblado. Haz una pausa aproximada de 8 segundos sin hablar, continúa por Clara abrió el papel y termina el cuento una sola vez. No repitas la frase anterior. Estado de referencia: descripcion_confirmada_por_lector_pendiente_escucha_detallada.",
+      "catalog_record": {
+        "id": "lectura_20261026_081113_354147",
+        "audio_file": "datos/audio/Lectura pausa larga y continuacion - caja del sendero - lectura_04 - 26-10-2026.wav",
+        "audio_sha256": "94a5ef1fdd6f2ee25f5fdda202c434824627d146c6939fa7dfe385e78e4311d7",
+        "label": "Lectura pausa larga y continuacion - caja del sendero · 26/10/2026",
+        "case": "pausa",
+        "recorded_date": "2026-10-26",
+        "story_file": "datos/textos/lectura_04.txt",
+        "story_sha256": "c869686736872fb96150ede565d9d0a81ff986e2469f0131dd66cc5e56a2bf8e",
+        "speaker_id": "adulto_01",
+        "partition": "validacion_reservada_cambios_posteriores",
+        "reference_status": "descripcion_confirmada_por_lector_pendiente_escucha_detallada",
+        "reference_file": null,
+        "reading_events": [
+          {
+            "description": "El lector confirma haber seguido la consigna: Lee hasta y un papel doblado. Haz una pausa aproximada de 8 segundos sin hablar, continúa por Clara abrió el papel y termina el cuento una sola vez. No repitas la frase anterior.",
+            "source": "confirmacion_lector_chat",
+            "start": null,
+            "end": null
+          }
+        ],
+        "environment_notes": null,
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "sample_width_bytes": 2,
+        "frames": 5292000,
+        "duration_seconds": 120.0,
+        "notice": "Nombre/caso describen la consigna, no validan contenido ni eventos. No es conjunto de prueba reservado por defecto.",
+        "legacy_audio_files": [
+          "datos/audio/lectura_20261026_081113_354147.wav"
+        ],
+        "reader_report_file": "datos/anotaciones/lectura_04_tanda_confirmacion.json"
+      },
+      "source_audio": "datos/audio/Lectura pausa larga y continuacion - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "source_sha256": "94a5ef1fdd6f2ee25f5fdda202c434824627d146c6939fa7dfe385e78e4311d7",
+      "array_file": ".descartados/literalidad/20261026_081747_630720_UTC/lectura_20261026_081113_354147.npy",
+      "array_sha256": "782c8a1fd0947b5c7163d0e7a57a3a27ff0cebe86121a84272a2c619ae372238",
+      "listen_file": ".descartados/literalidad/20261026_081747_630720_UTC/lectura_20261026_081113_354147.wav",
+      "listen_sha256": "dc38eea472848459981d58864c69ea785bbed033b8c7b227993d7afd96f5e696",
+      "audio_metrics": {
+        "decoded_peak_abs": 0.998870849609375,
+        "decoded_rms": 0.07279127134730103,
+        "decoded_fraction_abs_ge_0_999": 0.0,
+        "notice": "Métricas de amplitud del array decodificado mono 16 kHz; no miden SNR ni prueban distorsión/saturación del original."
+      }
+    },
+    {
+      "id": "lectura_20261026_081403_297994",
+      "label": "Lectura dificultades mixtas libres - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "kind": "disfluencias",
+      "start": 0,
+      "end": 150.0,
+      "human_note": "Consigna/metadatos: Lectura dificultades mixtas libres - caja del sendero · 26/10/2026. El lector describe confusiones/autocorrecciones, recuerda descubrieron y luego encontraron una caja..., otra autocorrección no recordada, repeticiones parciales y cambios lentos/rápidos. Secuencia literal completa pendiente de escucha. Estado de referencia: descripcion_confirmada_por_lector_pendiente_escucha_detallada.",
+      "catalog_record": {
+        "id": "lectura_20261026_081403_297994",
+        "audio_file": "datos/audio/Lectura dificultades mixtas libres - caja del sendero - lectura_04 - 26-10-2026.wav",
+        "audio_sha256": "aa87fb1af758d64299397995949d0035cf782e88869fdc6e478b1e20700752f2",
+        "label": "Lectura dificultades mixtas libres - caja del sendero · 26/10/2026",
+        "case": "disfluencias",
+        "recorded_date": "2026-10-26",
+        "story_file": "datos/textos/lectura_04.txt",
+        "story_sha256": "c869686736872fb96150ede565d9d0a81ff986e2469f0131dd66cc5e56a2bf8e",
+        "speaker_id": "adulto_01",
+        "partition": "validacion_reservada_cambios_posteriores",
+        "reference_status": "descripcion_confirmada_por_lector_pendiente_escucha_detallada",
+        "reference_file": null,
+        "reading_events": [
+          {
+            "description": "El lector describe confusiones/autocorrecciones, recuerda descubrieron y luego encontraron una caja..., otra autocorrección no recordada, repeticiones parciales y cambios lentos/rápidos. Secuencia literal completa pendiente de escucha.",
+            "source": "confirmacion_lector_chat",
+            "start": null,
+            "end": null
+          }
+        ],
+        "environment_notes": null,
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "sample_width_bytes": 2,
+        "frames": 6615000,
+        "duration_seconds": 150.0,
+        "notice": "Nombre/caso describen la consigna, no validan contenido ni eventos. No es conjunto de prueba reservado por defecto.",
+        "legacy_audio_files": [
+          "datos/audio/lectura_20261026_081403_297994.wav"
+        ],
+        "reader_report_file": "datos/anotaciones/lectura_04_tanda_confirmacion.json"
+      },
+      "source_audio": "datos/audio/Lectura dificultades mixtas libres - caja del sendero - lectura_04 - 26-10-2026.wav",
+      "source_sha256": "aa87fb1af758d64299397995949d0035cf782e88869fdc6e478b1e20700752f2",
+      "array_file": ".descartados/literalidad/20261026_081747_630720_UTC/lectura_20261026_081403_297994.npy",
+      "array_sha256": "6591f80a6358ac36be64fac431a61727c1f8c01a4b202d32f1380b0cba809656",
+      "listen_file": ".descartados/literalidad/20261026_081747_630720_UTC/lectura_20261026_081403_297994.wav",
+      "listen_sha256": "1afc1a313d81be8fc60decfb1be3a7929e62065412372bb47d820894d5f088fa",
+      "audio_metrics": {
+        "decoded_peak_abs": 1.0,
+        "decoded_rms": 0.10031917659698703,
+        "decoded_fraction_abs_ge_0_999": 2.25e-05,
+        "notice": "Métricas de amplitud del array decodificado mono 16 kHz; no miden SNR ni prueban distorsión/saturación del original."
+      }
+    }
+  ],
+  "notice": "Selección exclusiva de grabaciones del cuento datos/textos/lectura_04.txt. Lote de desarrollo, una pasada por motor y WAV completo; un proceso por motor y modelo reutilizado secuencialmente. No se entregan cuento ni notas al ASR. Mismos arrays mono 16 kHz, sin VAD ni limpieza de ruido. Small CT2 CPU int8 frente a CrisperWhisper2.0 Small Transformers CPU float32 literal; cuatro hilos. Candidato >30 s: continuation, bloques 30 s/paso 26 s con contexto generado. Duración incluye silencio; no latencia en directo ni rendimiento de tablet. El seguimiento no cambia. Nombres/consignas y diferencias de texto no validan fidelidad ni permiten calcular tasas humanas. El audio externo no está descargado en el proyecto y no forma parte de este lote."
+}

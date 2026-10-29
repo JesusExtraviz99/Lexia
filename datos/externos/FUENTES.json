@@ -21,6 +21,83 @@
       "selection_manifest": null,
       "selection_policy": "Definir muestra, semilla, grupos de hablantes/textos y particiones antes de evaluar. Guardar IDs originales y versión. Audio externo fuera de Git.",
       "intended_role": "Diversidad de voces para evaluar ASR; no sustituye grabaciones propias con errores/relecturas y referencias temporales."
+    },
+    {
+      "id": "google_fleurs_es_419",
+      "provider": "Google / FLEURS",
+      "name": "FLEURS - Spanish (es_419)",
+      "url": "https://huggingface.co/datasets/google/fleurs",
+      "subset": "es_419",
+      "reviewed_date": "2026-10-28",
+      "license_on_page": "CC-BY-4.0",
+      "status": "importado_y_verificado_localmente",
+      "selection_manifest": null,
+      "intended_role": "Preselección externa de ASR en español con audio/transcripción y particiones oficiales; no referencia exhaustiva de disfluencias.",
+      "selection_policy": "Fijar revisión, partición, IDs, semilla y normalización antes de medir. Auditar posible uso previo por los modelos; conservar transcripción original y normalizada por separado.",
+      "primary_sources": [
+        "https://huggingface.co/datasets/google/fleurs",
+        "https://huggingface.co/datasets/google/fleurs/tree/main/data/es_419"
+      ],
+      "download_attempt_date": "2026-10-28",
+      "download_verified": true,
+      "download_pages": [
+        "https://huggingface.co/datasets/google/fleurs/tree/main/data/es_419/audio",
+        "https://huggingface.co/datasets/google/fleurs/tree/main/data/es_419"
+      ],
+      "expected_files": [
+        "dev.tar.gz",
+        "test.tar.gz",
+        "train.tar.gz",
+        "dev.tsv",
+        "test.tsv",
+        "train.tsv"
+      ],
+      "imported_date": "2026-10-28",
+      "local_root": "datos/externos/fleurs_es_419",
+      "verification_file": "datos/externos/fleurs_es_419_verificacion.json",
+      "verification_sha256": "92624e9a96b2531ec441c63366c32408238a6aa552a3fd8f54351b8992f1ab35",
+      "total_audio_files": 4112,
+      "total_audio_seconds": 47697.59999999992,
+      "local_audio_format": "WAV FLOAT mono 16000 Hz; archivos originales extraídos sin conversión",
+      "verification_scope": "Copias idénticas a Descargas, gzip CRC, rutas seguras, correspondencia TSV/audio, decodificación completa y tamaños temporales. Hashes locales; no cotejados con hashes publicados.",
+      "splits": {
+        "dev": {
+          "audio_files": 408,
+          "audio_seconds": 4871.579999999996
+        },
+        "test": {
+          "audio_files": 908,
+          "audio_seconds": 11126.099999999993
+        },
+        "train": {
+          "audio_files": 2796,
+          "audio_seconds": 31699.91999999993
+        }
+      }
+    },
+    {
+      "id": "multilingual_librispeech_spanish",
+      "provider": "Meta / OpenSLR SLR94",
+      "name": "Multilingual LibriSpeech - Spanish",
+      "url": "https://www.openslr.org/94/",
+      "subset": "spanish",
+      "reviewed_date": "2026-10-28",
+      "license_on_page": "CC-BY-4.0",
+      "status": "descarga_en_curso_segun_usuario_sin_importar",
+      "selection_manifest": null,
+      "intended_role": "Contraste externo con fragmentos de audiolibros en español; particiones train/dev/test. No presentar clips concatenados como lectura natural continua.",
+      "selection_policy": "Seleccionar partición y muestra fijada antes de descargar/evaluar; comprobar entrenamiento previo de cada modelo y evitar comparar medias con muestras distintas.",
+      "primary_sources": [
+        "https://www.openslr.org/94/",
+        "https://huggingface.co/datasets/facebook/multilingual_librispeech"
+      ],
+      "download_attempt_date": "2026-10-28",
+      "download_verified": false,
+      "expected_files": [
+        "mls_spanish.tar.gz"
+      ],
+      "download_page": "https://www.openslr.org/94/",
+      "local_root": "datos/externos/mls_es"
     }
   ]
 }

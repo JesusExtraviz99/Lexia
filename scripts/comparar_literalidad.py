@@ -11,7 +11,7 @@ from time import perf_counter, process_time
 
 from scripts.archivos import write_text_atomic
 from scripts.catalogo import ROOT, resolve_audio_path
-from scripts.recursos import ResourceMonitor
+from scripts.recursos import ResourceMonitor, memory_snapshot
 
 
 def digest(path):
@@ -20,6 +20,22 @@ def digest(path):
         for chunk in iter(lambda:stream.read(1024*1024),b''):
             value.update(chunk)
     return value.hexdigest()
+
+
+def resource_interval(monitor,start,end,cpu_seconds,before,after):
+    """Subintervalo de un único monitor; no crea otro muestreador ni reinicia picos."""
+    samples=[s for s in list(monitor.samples) if start<=s['elapsed_seconds']<=end]
+    gpu=[s for s in list(monitor.gpu_samples) if start<=s['elapsed_seconds']<=end]
+    memory=[s['memory'].get('working_set_bytes') for s in samples]+[
+        before.get('working_set_bytes'),after.get('working_set_bytes')]
+    memory=[v for v in memory if v is not None]
+    duration=end-start
+    return dict(start_seconds_in_monitor=start,end_seconds_in_monitor=end,
+                cpu_percent_one_logical_core=100*cpu_seconds/duration if duration else None,
+                cpu_percent_machine_capacity=100*cpu_seconds/duration/(os.cpu_count() or 1) if duration else None,
+                working_set_max_sampled_bytes=max(memory) if memory else None,
+                memory_before=before,memory_after=after,samples=samples,gpu_global_samples=gpu,
+                notice='Subintervalo de inferencia del mismo proceso con modelo reutilizado; memoria muestreada y extremos, no pico independiente garantizado por audio. PeakWorkingSet de Windows sigue siendo de toda la vida del proceso. CPU incluye muestreo; GPU global no atribuible al ASR. Sin carga, lectura NPY o escritura JSON en el tiempo de inferencia.')
 
 
 def prepare():
@@ -138,6 +154,9 @@ def run(folder,engine):
         output['parameters']=params
         for sample in manifest['samples']:
             clip=np.load(ROOT/sample['array_file'],allow_pickle=False)
+            per_audio=manifest.get('record_per_audio_resources',False)
+            if per_audio:
+                before=memory_snapshot()
             start=perf_counter();cpu=process_time()
             if engine=='baseline':
                 segments,_=model.transcribe(clip.copy(),**params)
@@ -151,9 +170,15 @@ def run(folder,engine):
                 native=model.transcribe(clip.copy(),**params)
                 text=native.text
                 words=[asdict(w) for w in native.words or []]
+            elapsed=perf_counter()-start;cpu_elapsed=process_time()-cpu
             row=dict(id=sample['id'],kind=sample['kind'],raw_text=text,words=words,
-                     processing_seconds=perf_counter()-start,cpu_seconds=process_time()-cpu,
+                     processing_seconds=elapsed,cpu_seconds=cpu_elapsed,
                      word_time_convention='tiempos relativos al recorte; no son marcas humanas')
+            if per_audio:
+                row['resource_interval']=resource_interval(monitor,start-monitor.wall_start,
+                    start-monitor.wall_start+elapsed,cpu_elapsed,before,memory_snapshot())
+                row['audio_seconds']=len(clip)/16000
+                row['rtf_full_audio']=elapsed/row['audio_seconds']
             if native is not None:
                 row['native_result']=asdict(native)
             output['runs'].append(row)

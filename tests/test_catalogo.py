@@ -58,6 +58,8 @@ class AudioCatalogTests(unittest.TestCase):
             self.assertFalse(audio.exists())
             self.assertIn('Lectura normal', renamed.name)
             self.assertIn('21-10-2026', renamed.name)
+            self.assertTrue(renamed.name.endswith('21-10-2026 - lector_01.wav'))
+            self.assertIn('lector_01', identity['label'])
             self.assertEqual(renamed.read_bytes(),original)
             self.assertTrue(same_audio(audio, renamed, root))
             self.assertFalse(same_audio('otro.wav', renamed, root))

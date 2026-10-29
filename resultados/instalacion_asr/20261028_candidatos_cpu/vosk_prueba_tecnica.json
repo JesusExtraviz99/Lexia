@@ -1,0 +1,133 @@
+{
+  "model": "vosk",
+  "date": "2026-10-28",
+  "source_model_sha256": "0c8148e7d2b74cb28f2d3d34d49aeb0758c6c3b86aa3c161e625d98c04c952e9",
+  "device": "cpu",
+  "signal": "un segundo sintético de ceros mono 16 kHz",
+  "audio_source": "generado_en_memoria_sin_microfono",
+  "sample_rate_hz": 16000,
+  "versions": {
+    "numpy": "2.5.4",
+    "torch": "2.14.1+cpu",
+    "transformers": "5.20.2",
+    "huggingface-hub": "2.3.0",
+    "vosk": "0.3.45",
+    "librosa": "1.0.0",
+    "soundfile": "0.14.0"
+  },
+  "notice": "Solo prueba técnica de carga/ejecución, no evaluación de calidad ni benchmark de rendimiento. No usa grabaciones propias o datasets. Recursos incluyen importación/carga y señal sintética.",
+  "model_load_seconds": 0.613197400001809,
+  "synthetic_output": {
+    "text": ""
+  },
+  "technical_total_seconds": 0.79870539996773,
+  "status": "carga_y_ejecucion_correctas",
+  "resources": {
+    "hardware": {
+      "captured_at_utc": "2026-10-28T11:13:45.860181+00:00",
+      "os": "Windows-11-10.0.26200-SP0",
+      "architecture": "AMD64",
+      "python": "3.12.15",
+      "cpu_model": "11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz",
+      "logical_cpus": 16,
+      "memory": {
+        "status": "medido",
+        "working_set_bytes": 42381312,
+        "private_commit_bytes": 533340160,
+        "process_lifetime_peak_working_set_bytes": 42954752,
+        "system_ram_total_bytes": 16866881536,
+        "system_ram_available_bytes": 4817813504
+      },
+      "gpu": {
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 484.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.34,
+            "temperature_celsius": 44.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      }
+    },
+    "wall_seconds": 0.7993652999866754,
+    "process_cpu_seconds": 0.921875,
+    "cpu_average_percent_one_logical_core": 115.32587166535335,
+    "cpu_average_percent_machine_capacity": 7.207866979084584,
+    "samples": [
+      {
+        "elapsed_seconds": 0.00016149994917213917,
+        "cpu_seconds": 0.0,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 42483712,
+          "private_commit_bytes": 533655552,
+          "process_lifetime_peak_working_set_bytes": 42954752,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 4812300288
+        }
+      },
+      {
+        "elapsed_seconds": 0.3388144001364708,
+        "cpu_seconds": 0.375,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 48263168,
+          "private_commit_bytes": 540102656,
+          "process_lifetime_peak_working_set_bytes": 49328128,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 4805980160
+        }
+      },
+      {
+        "elapsed_seconds": 0.5958402999676764,
+        "cpu_seconds": 0.6875,
+        "memory": {
+          "status": "medido",
+          "working_set_bytes": 130445312,
+          "private_commit_bytes": 895692800,
+          "process_lifetime_peak_working_set_bytes": 130445312,
+          "system_ram_total_bytes": 16866881536,
+          "system_ram_available_bytes": 4739981312
+        }
+      }
+    ],
+    "gpu_samples": [
+      {
+        "elapsed_seconds": 0.00016149994917213917,
+        "status": "medido",
+        "gpus": [
+          {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "driver": "595.97",
+            "vram_total_mib": 4096.0,
+            "vram_used_mib": 484.0,
+            "utilization_percent": 0.0,
+            "power_watts": 6.34,
+            "temperature_celsius": 44.0
+          }
+        ],
+        "scope": "GPU completa del equipo; no atribuible exclusivamente al ASR ni a su proceso."
+      }
+    ],
+    "final_memory": {
+      "status": "medido",
+      "working_set_bytes": 158932992,
+      "private_commit_bytes": 922185728,
+      "process_lifetime_peak_working_set_bytes": 158965760,
+      "system_ram_total_bytes": 16866881536,
+      "system_ram_available_bytes": 4714885120
+    },
+    "unavailable": {
+      "asr_energy_joules": null,
+      "cpu_temperature_celsius": null,
+      "asr_flops": null,
+      "tablet_memory_and_battery": null
+    },
+    "notice": "CPU y RAM del proceso completo, incluido muestreo. CPU 100% equivale a un procesador lógico; puede superar 100%. GPU/VRAM/potencia/temperatura son del equipo completo, no del ASR. No se mide energía específica, FLOPs ni rendimiento de tablet. Intervalos reales registrados, máximos muestreados no garantizan pico. Muestreo separado de inferencia; puede influir en la carga."
+  }
+}

@@ -14,8 +14,13 @@ except ImportError:
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def catalog_path(root=ROOT):
+    private = root/'datos/referencias/catalogo_local.json'
+    return private if private.exists() else root/'datos/referencias/catalogo.json'
+
+
 def read_catalog(root=ROOT):
-    path = root/'datos/referencias/catalogo.json'
+    path = catalog_path(root)
     return json.loads(path.read_text(encoding='utf-8')) if path.exists() else {'schema_version': 2, 'recordings': []}
 
 
@@ -62,13 +67,18 @@ def report_stem(audio, root=ROOT):
     return audio_identity(audio, root).get('id') or Path(audio).stem[:70]
 
 
-def descriptive_name(label, date):
+def descriptive_name(label, date, speaker=None):
     clean = re.sub(r'[<>:"/\\|?*\x00-\x1f]', '-', label).strip(' .')[:105]
-    return f'{clean or "Lectura sin clasificar"} - {date[8:10]}-{date[5:7]}-{date[:4]}.wav'
+    reader = re.sub(r'[<>:"/\\|?*\x00-\x1f]', '-', speaker or '').strip(' .')[:32]
+    suffix = f' - {reader}' if reader else ''
+    return f'{clean or "Lectura sin clasificar"} - {date[8:10]}-{date[5:7]}-{date[:4]}{suffix}.wav'
 
 
 def register_recording(audio, story, label=None, case='sin_clasificar', speaker=None, environment=None, root=ROOT):
     """Registrar la consigna/metadatos; nunca dar por validado lo que se leyó."""
+    reader_match = re.fullmatch(r'(?:lector|adulto)_(\d+)', speaker or '')
+    if reader_match:
+        speaker = f'lector_{int(reader_match[1]):02d}'
     catalog = read_catalog(root)
     relative = audio.resolve().relative_to(root.resolve()).as_posix()
     if any(audio.name in audio_names(r) for r in catalog['recordings']):
@@ -79,7 +89,7 @@ def register_recording(audio, story, label=None, case='sin_clasificar', speaker=
     with wave.open(str(audio), 'rb') as wav:
         row = {'id': audio.stem, 'audio_file': relative,
                'audio_sha256': hashlib.sha256(audio.read_bytes()).hexdigest(),
-               'label': f'{label or "Lectura sin clasificar"} · {day}', 'case': case,
+               'label': f'{label or "Lectura sin clasificar"} · {day}' + (f' · {speaker}' if speaker else ''), 'case': case,
                'recorded_date': date, 'story_file': story.resolve().relative_to(root.resolve()).as_posix(),
                'story_sha256': hashlib.sha256(story.read_bytes()).hexdigest(),
                'speaker_id': speaker, 'partition': 'sin_asignar',
@@ -92,7 +102,7 @@ def register_recording(audio, story, label=None, case='sin_clasificar', speaker=
     description = label or {'normal': 'Lectura normal', 'lenta': 'Lectura lenta',
                             'pausa': 'Lectura con pausa', 'relectura': 'Lectura con relectura',
                             'disfluencias': 'Lectura con disfluencias'}.get(case, 'Lectura sin clasificar')
-    target = audio.with_name(descriptive_name(f'{description} - {story.stem}', date))
+    target = audio.with_name(descriptive_name(f'{description} - {story.stem}', date, speaker))
     if target.exists():
         target = target.with_name(f'{target.stem} - {audio.stem.split("_", 2)[-1]}.wav')
     if target.exists():
@@ -102,7 +112,7 @@ def register_recording(audio, story, label=None, case='sin_clasificar', speaker=
     catalog['recordings'].append(row)
     audio.rename(target)
     try:
-        write_text_atomic(root/'datos/referencias/catalogo.json', json.dumps(catalog,ensure_ascii=False,indent=2)+'\n')
+        write_text_atomic(catalog_path(root), json.dumps(catalog,ensure_ascii=False,indent=2)+'\n')
     except OSError:
         target.rename(audio)
         raise
