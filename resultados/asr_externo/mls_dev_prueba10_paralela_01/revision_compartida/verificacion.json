@@ -1,0 +1,944 @@
+{
+  "status": "audited_no_new_inference",
+  "dataset": "MLS dev",
+  "selected": 10,
+  "audio_seconds": 142.08,
+  "reference_words": 372,
+  "metrics_recomputed_from_saved_transcripts": true,
+  "same_inputs": true,
+  "local_audio_hashes_checked": [
+    "133_1378_000042",
+    "1075_567_000050",
+    "6223_5079_000063",
+    "3719_1378_000015",
+    "133_1378_000052",
+    "10367_10282_000004",
+    "3719_1378_000088",
+    "6671_9310_000004",
+    "2592_1378_000079",
+    "3719_1378_000049"
+  ],
+  "source_sha256": {
+    "cohorte.json": "9df5a13409b08c1f15fe7fa5fe8e3cd7bc684351c0107a729660b53cb69b28df",
+    "crisper.log": "1b4bbec6c7e22cfbbdcad3164898b213ecacac41829f2c12efcafb5c0773980f",
+    "parakeet.log": "2509cf89c388e76d6faecc05cfefa9bad603e7d23d360397c09f86d7b672d29d",
+    "vosk.log": "d7744721ae29f045349e7d3ac67e685840bdcc978bf0df95357e58abb2f514f7",
+    "whisper.log": "b925ee4e2aadc4085cdf96597fe00bac3f28e833750daefb5f30fcdf7f2e28b8",
+    "xlsr.log": "52b95449fbe31f7b14f795043bc7cf79c7393f8b4b96742b9c3f910cd1b95d78",
+    "crisper/audios.csv": "869d01286b608cad15400563a2aa2915f9c8a9fba87ab87463c1c7802fd5b988",
+    "crisper/ejecucion.json": "ab67faafd3c0f8895b41a0ce115cd568f1c701af3e2d37432b00ae9e1134c48c",
+    "crisper/resumen.json": "ed4f6139233a7e823a861fe1894dca097175820341a08b5162feec132336570e",
+    "crisper/resumen.md": "b6f0fbfab3756e3c926e34ba2ceecbfe8b5ddf08d1c9f21b87900d2f27416ca4",
+    "parakeet/audios.csv": "ecb03cd88bd7b8b8c8a7308678a142759c4bac2f16ed200fa220ce97b942f24d",
+    "parakeet/ejecucion.json": "c7923d62bd6d4372494120189de073632ede82a5d4cd97568a393a1460f46ae0",
+    "parakeet/resumen.json": "6ce1a2e1e8f77b21c0377585ff4160564f576471f47526632ca580a55b01e9f8",
+    "parakeet/resumen.md": "2015affe217aa5e6e5684de97df1a5fa8161802b3a09ff8bb75c88f5bd791fee",
+    "vosk/audios.csv": "76cc81794e7bd04f705de144950815dd6159531e73d22fd614624c075db908ac",
+    "vosk/ejecucion.json": "aee29d41923ba335e14c69298ee3567b8b8d9a6d379b0fcfc99069929ec04dd2",
+    "vosk/resumen.json": "233f62e02730c94f6af0e1ce29bb0ffc6eb451958ec85656575b916e639ff356",
+    "vosk/resumen.md": "0c42f38ecfe076f18486dc1ac7b0cc920b4628d07d04fcb97790c20b1c72c3bc",
+    "whisper/audios.csv": "d712de7d8c0164926c9b9dfc75ebc7d2c0557891b43e346ed5e0f744439c69d0",
+    "whisper/ejecucion.json": "b3947a59a241eff99adf673217dab950968e4de6ad43e82a6cb88b4eab80dc4f",
+    "whisper/resumen.json": "c3fd8384128abd85398dba38b7378b8ec724a6bb689a50c175cff282cacd5af1",
+    "whisper/resumen.md": "268d2f1a9c4c94f532a3aa4edc4b37288e62508f59afa09daa114978375fa636",
+    "xlsr/audios.csv": "aedd6784a41b0c9a77785627f6c2ed8852ced8613d1b4e81549c444d7d710c55",
+    "xlsr/ejecucion.json": "b3991bfeff14f97557070facbefaa9691bad43b427d30a519ed8f481e482fd82",
+    "xlsr/resumen.json": "7888fcd8a4f55c724e18215af0da5178da7db7b78c9833a29da9d6cce09c0bc0",
+    "xlsr/resumen.md": "51dbbc2a8ae9ad6693cd4da865d86aa3a4fd7522611228c3742e934a0509fefd",
+    "crisper/audios/10367_10282_000004.json": "df0cab75945106c57b429dac0a975d79fe45e706cd05af7979421f11eab4f074",
+    "crisper/audios/1075_567_000050.json": "e3ea6616431edbcad7f147d225f70ab1ec5497d769f6b241d820229a33ca8a4d",
+    "crisper/audios/133_1378_000042.json": "f90c71ef3bc875a0bdb4e0658fe8c1e1d5b42d996e6bb2435f3fd27bc9e58a79",
+    "crisper/audios/133_1378_000052.json": "40d84af660dbace3b9b20bcc1e67a528331ebe9cd9aa7fbdffb9be5d334cfe5e",
+    "crisper/audios/2592_1378_000079.json": "27e3b2baa4555ac11a857a6e0fd3a098e5d8d8dc178ba2fec8129a107f5775ec",
+    "crisper/audios/3719_1378_000015.json": "dbbfe95a4bd50c7ddf5465a311c17ffc46043168a9f35b14431372816e2205a6",
+    "crisper/audios/3719_1378_000049.json": "987e6ee974cb17bf18a957d48c240939f13a21ef083cc187621032e06ceee825",
+    "crisper/audios/3719_1378_000088.json": "06ac9bf9ae8b4e6316407111117249825011b921616415a20dd052dd5785edcd",
+    "crisper/audios/6223_5079_000063.json": "26f13aa52bf30b2708f0d9fd5ef83131fa56a13a57e9543f4987adf25798a70a",
+    "crisper/audios/6671_9310_000004.json": "dd38bf10d755d4e7ececd989226d86dd08b122a54ceb8b71a723af53911e2ca5",
+    "crisper/sesiones/20261104_103855_010673.json": "e7e9f9130b0386c7e192f7d987d2b061880136bd8f43b36b0edaf12e4ee85d27",
+    "crisper/sesiones/20261104_103855_010673.jsonl": "f08f43febc7ee0ba9b5678fcb1d69c842e05b2b241f7ee5de06da54bdc878d4e",
+    "parakeet/audios/10367_10282_000004.json": "468ba8538f6426048c4e91da06b45ebe31fa226503107ab677911724340e40d0",
+    "parakeet/audios/1075_567_000050.json": "3933808063edb4cd5df8e92c7bf638c4f1ac10557f737696138767b2d328929c",
+    "parakeet/audios/133_1378_000042.json": "e181096df19664072671d4c77150a3e7bdb22012da7b877ee9be65585a9b2169",
+    "parakeet/audios/133_1378_000052.json": "a7020437143f84289d829f51571e7f1fe57aefd13e492114b88e33e0559f1d6e",
+    "parakeet/audios/2592_1378_000079.json": "a6341f56d07c626d97056cbba3cc6695b265d4ff9f4b94ec061c9e7ed955f493",
+    "parakeet/audios/3719_1378_000015.json": "35c65cbac4e215602e12d9e48b969db211a06be7a7fbf2d51d2e4965cbfe6b68",
+    "parakeet/audios/3719_1378_000049.json": "c0e5ba18c0ff5471e50a2bb850498e821aff03002c39f034e27b5080464910a6",
+    "parakeet/audios/3719_1378_000088.json": "7dc9dfb4d28a352946da5f4b1ea59e71fde909089efb373304440b62a771b563",
+    "parakeet/audios/6223_5079_000063.json": "3be46ca2f296ba78a8e07f8cc9796d5ba707c6265b3b3b2d8f21ca9e41da290e",
+    "parakeet/audios/6671_9310_000004.json": "994f861b5c1b5d92a31177b90944db22f37ff8591671d2c07a04cb3ef778e8ef",
+    "parakeet/sesiones/20261104_103901_766198.json": "1303811c653205e597355cd7e2fbcace773c387c945a1591e907c32e4043a04e",
+    "parakeet/sesiones/20261104_103901_766198.jsonl": "88a2460cd87d0c1d227e295262e97ddc355d66aa0f4732ae26e91f5939de8364",
+    "vosk/audios/10367_10282_000004.json": "80a01c44cff2c3c4d6faf6cce9e5708fe0f70873e87ab86334927117892ed22a",
+    "vosk/audios/1075_567_000050.json": "60137a5c5282874ba61abae83ff0472dc515dddbd7b14fcdcff426f2eb6c134c",
+    "vosk/audios/133_1378_000042.json": "52831b7ff95cd2e286c0f04076dbba58edb35c3495852b35d97f185a6d88eacc",
+    "vosk/audios/133_1378_000052.json": "7a189da276e6ff5f06274bbc1a1305055895bd80d51169a6ede0887842bfc7c2",
+    "vosk/audios/2592_1378_000079.json": "9a42398611e20df80517262ee8c7ff85f910309884b235fabc945b9f65fc8c85",
+    "vosk/audios/3719_1378_000015.json": "737f5d114c8986bd7fc9fbbc7c367bff98d6fbeb9674f1384124c1aff833cf5a",
+    "vosk/audios/3719_1378_000049.json": "1c77317f5ca1b91258c836665a2a637ed024c3ca6f7c1c281738d7c304aae89d",
+    "vosk/audios/3719_1378_000088.json": "9cebe572ee9c58c1aa6a8fef4b1609b26b7694ddf5448548bf2e550e54d5e6e1",
+    "vosk/audios/6223_5079_000063.json": "c99a25f7b55acf35ef73a678a2f0e58bec64939ea68a279cd7f1745aaf087204",
+    "vosk/audios/6671_9310_000004.json": "ecc995339adcc06da64856c9e29b72242cf9e7464bfd63efdb67c1916df8b2d6",
+    "vosk/sesiones/20261104_103853_023360.json": "f880957cbcdb5480a5c3e56b8cab094a368edd5342ca05c342e13b916b18285b",
+    "vosk/sesiones/20261104_103853_023360.jsonl": "e34a8da093d545322551a233cde833c8acb1c5d030b194c7d1fb795e578446ec",
+    "whisper/audios/10367_10282_000004.json": "299d9680671e93329026b5d9a1c3e6cfe291667d22d8b8f43adb5141743e0594",
+    "whisper/audios/1075_567_000050.json": "fe9171560ee8cf9943d52a462c5e79b1dfb562d8b3579f45c3374541a2e93018",
+    "whisper/audios/133_1378_000042.json": "fcc83db0ee870b0e057ba0ec6ddc952d72c8c8ecacd58d7ee46382c022d4fb2f",
+    "whisper/audios/133_1378_000052.json": "33058f922b68e51ddb3d05a4d04c15c710fa2e80b41f627fbb28a3bc4e6e5b56",
+    "whisper/audios/2592_1378_000079.json": "caa4fd03c126fd1014a0c72fbdd248200743437c94ff0e1e1ccd9b64d7385bdf",
+    "whisper/audios/3719_1378_000015.json": "7ca89fe758432f283fd72c389cbb79a92addcb3c29b4544f74195d751b940fec",
+    "whisper/audios/3719_1378_000049.json": "b06a6ac74e7e972bde84a4cc653f1dcbc27f62b99ff675095ed4c6bcbb973e08",
+    "whisper/audios/3719_1378_000088.json": "2e4dfd0d49e3e81895ff2aab514d26e6717e150c8072a76625108f7b9b38d4ef",
+    "whisper/audios/6223_5079_000063.json": "2e748cdaa5c25536852c5c0c82cb973e8011b7995110834de189d50cefc66b84",
+    "whisper/audios/6671_9310_000004.json": "28010200f45d78a477dac238c598a82a7e9eb0d9ff985d74704bc7d85df349e0",
+    "whisper/sesiones/20261104_103854_697932.json": "14c1d530f0352293173bb7f26301fced95c4f682426a447be19aa86f80fbf0cc",
+    "whisper/sesiones/20261104_103854_697932.jsonl": "829ad52bcaa781a41461d9b9bd2069250d3a05d9ac8da0abf77ddd1caf0ea62e",
+    "xlsr/audios/10367_10282_000004.json": "a01579d973497ab75c906d2524daf1d9a092e8450c917209b18b1d23471ad5bf",
+    "xlsr/audios/1075_567_000050.json": "471d7baf2305d4162229fddf411be00bb24382e8696427cb61c79d6593c1b49b",
+    "xlsr/audios/133_1378_000042.json": "81f8251bc600c996b0d6296257c8d51623dd63624fbf3ded87c1b693f3b30b09",
+    "xlsr/audios/133_1378_000052.json": "98d83e2ef537a2b7d4b710a147a2fb9a905547ed783ce5a240b594bee5bcf765",
+    "xlsr/audios/2592_1378_000079.json": "774c6c9f3e1022250f19926697b17175ac075bf70f46f3b3dde3241dd6036e62",
+    "xlsr/audios/3719_1378_000015.json": "c7c9d338c27eb96d174ae324d2c98bc132447df2567586981fb69d8d7de1e235",
+    "xlsr/audios/3719_1378_000049.json": "c552a1b1157e65bb4398a431ead3539011dafc09dc6240ad481ec7e2ec1b5383",
+    "xlsr/audios/3719_1378_000088.json": "06a076f71b390aed7dcff1c442e0e6dccf792e9ca666215aed9cc03fece46d10",
+    "xlsr/audios/6223_5079_000063.json": "4d59e368765e4dbc0a584603f61e73627ccb1cfbab82ce057ff0e72486374507",
+    "xlsr/audios/6671_9310_000004.json": "059f936fe8bab759ff28bb3b940777b2b75eaef87f7b279e7395a3c2beb2df47",
+    "xlsr/sesiones/20261104_103858_341422.json": "7a4f68c869abb73e5c34439fc6d6baac10367ebd4fe645bab47c85518b45277e",
+    "xlsr/sesiones/20261104_103858_341422.jsonl": "2a6b9814f02e3a48ede75c96a4df7d579bff7b04d12f109ccf16576569146762"
+  },
+  "motors": [
+    {
+      "motor": "vosk",
+      "gpu": null,
+      "completed": 10,
+      "wer": 0.13172043010752688,
+      "cer": 0.03920570264765784,
+      "counts": {
+        "hits": 328,
+        "substitutions": 40,
+        "deletions": 4,
+        "insertions": 5,
+        "reference_words": 372,
+        "character_substitutions": 42,
+        "character_deletions": 15,
+        "character_insertions": 20,
+        "reference_characters": 1964
+      },
+      "asr_seconds": 12.709908617660403,
+      "rtf": 0.0894560009688936,
+      "load_seconds": 0.44086313992738724,
+      "warmup_seconds": 1.5944166835397482,
+      "session_wall_seconds": 15.131674600765109,
+      "ram_rss_max_observed_mib": 200.45703125,
+      "ram_lifetime_peak_mib": 200.8125,
+      "vram_process_max_observed_mib": null,
+      "ram_samples": 60,
+      "gpu_samples": 0,
+      "gpu_statuses": [],
+      "other_compute_process_max": null,
+      "per_audio_gpu_coverage": [
+        {
+          "audio_id": "133_1378_000042",
+          "gpu_samples": 0,
+          "torch_memory": null
+        },
+        {
+          "audio_id": "1075_567_000050",
+          "gpu_samples": 0,
+          "torch_memory": null
+        },
+        {
+          "audio_id": "6223_5079_000063",
+          "gpu_samples": 0,
+          "torch_memory": null
+        },
+        {
+          "audio_id": "3719_1378_000015",
+          "gpu_samples": 0,
+          "torch_memory": null
+        },
+        {
+          "audio_id": "133_1378_000052",
+          "gpu_samples": 0,
+          "torch_memory": null
+        },
+        {
+          "audio_id": "10367_10282_000004",
+          "gpu_samples": 0,
+          "torch_memory": null
+        },
+        {
+          "audio_id": "3719_1378_000088",
+          "gpu_samples": 0,
+          "torch_memory": null
+        },
+        {
+          "audio_id": "6671_9310_000004",
+          "gpu_samples": 0,
+          "torch_memory": null
+        },
+        {
+          "audio_id": "2592_1378_000079",
+          "gpu_samples": 0,
+          "torch_memory": null
+        },
+        {
+          "audio_id": "3719_1378_000049",
+          "gpu_samples": 0,
+          "torch_memory": null
+        }
+      ],
+      "native_word_time_sanity": [
+        {
+          "audio_id": "133_1378_000042",
+          "words": 56,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "1075_567_000050",
+          "words": 24,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "6223_5079_000063",
+          "words": 44,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "3719_1378_000015",
+          "words": 40,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "133_1378_000052",
+          "words": 36,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "10367_10282_000004",
+          "words": 48,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "3719_1378_000088",
+          "words": 32,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "6671_9310_000004",
+          "words": 19,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "2592_1378_000079",
+          "words": 32,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "3719_1378_000049",
+          "words": 42,
+          "invalid_with_100ms_tolerance": 0
+        }
+      ],
+      "gpu_energy_sampled_interval_joules": null,
+      "gpu_energy_coverage_seconds": 0.0,
+      "warnings": [],
+      "source_code_matches_local": true,
+      "adapter_matches_local": true
+    },
+    {
+      "motor": "xlsr",
+      "gpu": 0,
+      "completed": 10,
+      "wer": 0.11290322580645161,
+      "cer": 0.024439918533604887,
+      "counts": {
+        "hits": 331,
+        "substitutions": 34,
+        "deletions": 7,
+        "insertions": 1,
+        "reference_words": 372,
+        "character_substitutions": 29,
+        "character_deletions": 13,
+        "character_insertions": 6,
+        "reference_characters": 1964
+      },
+      "asr_seconds": 1.169375805184245,
+      "rtf": 0.008230404034235958,
+      "load_seconds": 16.85963785275817,
+      "warmup_seconds": 15.92218717560172,
+      "session_wall_seconds": 35.83338871784508,
+      "ram_rss_max_observed_mib": 4116.34765625,
+      "ram_lifetime_peak_mib": 4116.37890625,
+      "vram_process_max_observed_mib": 3110.0,
+      "ram_samples": 130,
+      "gpu_samples": 33,
+      "gpu_statuses": [
+        "medido"
+      ],
+      "other_compute_process_max": 0,
+      "per_audio_gpu_coverage": [
+        {
+          "audio_id": "133_1378_000042",
+          "gpu_samples": 0,
+          "torch_memory": {
+            "peak_allocated_bytes": 1800333824,
+            "peak_reserved_bytes": 1885339648,
+            "scope": "Allocator Torch; incluye modelo residente, no toda VRAM del proceso/dispositivo."
+          }
+        },
+        {
+          "audio_id": "1075_567_000050",
+          "gpu_samples": 0,
+          "torch_memory": {
+            "peak_allocated_bytes": 1566052352,
+            "peak_reserved_bytes": 1887436800,
+            "scope": "Allocator Torch; incluye modelo residente, no toda VRAM del proceso/dispositivo."
+          }
+        },
+        {
+          "audio_id": "6223_5079_000063",
+          "gpu_samples": 0,
+          "torch_memory": {
+            "peak_allocated_bytes": 1669776896,
+            "peak_reserved_bytes": 1887436800,
+            "scope": "Allocator Torch; incluye modelo residente, no toda VRAM del proceso/dispositivo."
+          }
+        },
+        {
+          "audio_id": "3719_1378_000015",
+          "gpu_samples": 0,
+          "torch_memory": {
+            "peak_allocated_bytes": 1540911616,
+            "peak_reserved_bytes": 1887436800,
+            "scope": "Allocator Torch; incluye modelo residente, no toda VRAM del proceso/dispositivo."
+          }
+        },
+        {
+          "audio_id": "133_1378_000052",
+          "gpu_samples": 1,
+          "torch_memory": {
+            "peak_allocated_bytes": 1633174016,
+            "peak_reserved_bytes": 1887436800,
+            "scope": "Allocator Torch; incluye modelo residente, no toda VRAM del proceso/dispositivo."
+          }
+        },
+        {
+          "audio_id": "10367_10282_000004",
+          "gpu_samples": 0,
+          "torch_memory": {
+            "peak_allocated_bytes": 1778128896,
+            "peak_reserved_bytes": 1887436800,
+            "scope": "Allocator Torch; incluye modelo residente, no toda VRAM del proceso/dispositivo."
+          }
+        },
+        {
+          "audio_id": "3719_1378_000088",
+          "gpu_samples": 0,
+          "torch_memory": {
+            "peak_allocated_bytes": 1603788288,
+            "peak_reserved_bytes": 1887436800,
+            "scope": "Allocator Torch; incluye modelo residente, no toda VRAM del proceso/dispositivo."
+          }
+        },
+        {
+          "audio_id": "6671_9310_000004",
+          "gpu_samples": 0,
+          "torch_memory": {
+            "peak_allocated_bytes": 1554592256,
+            "peak_reserved_bytes": 1887436800,
+            "scope": "Allocator Torch; incluye modelo residente, no toda VRAM del proceso/dispositivo."
+          }
+        },
+        {
+          "audio_id": "2592_1378_000079",
+          "gpu_samples": 1,
+          "torch_memory": {
+            "peak_allocated_bytes": 1566284288,
+            "peak_reserved_bytes": 1887436800,
+            "scope": "Allocator Torch; incluye modelo residente, no toda VRAM del proceso/dispositivo."
+          }
+        },
+        {
+          "audio_id": "3719_1378_000049",
+          "gpu_samples": 0,
+          "torch_memory": {
+            "peak_allocated_bytes": 1592578560,
+            "peak_reserved_bytes": 1887436800,
+            "scope": "Allocator Torch; incluye modelo residente, no toda VRAM del proceso/dispositivo."
+          }
+        }
+      ],
+      "native_word_time_sanity": [
+        {
+          "audio_id": "133_1378_000042",
+          "words": 0,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "1075_567_000050",
+          "words": 0,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "6223_5079_000063",
+          "words": 0,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "3719_1378_000015",
+          "words": 0,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "133_1378_000052",
+          "words": 0,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "10367_10282_000004",
+          "words": 0,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "3719_1378_000088",
+          "words": 0,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "6671_9310_000004",
+          "words": 0,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "2592_1378_000079",
+          "words": 0,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "3719_1378_000049",
+          "words": 0,
+          "invalid_with_100ms_tolerance": 0
+        }
+      ],
+      "gpu_energy_sampled_interval_joules": 1276.946494674664,
+      "gpu_energy_coverage_seconds": 35.065660037100315,
+      "warnings": [],
+      "source_code_matches_local": true,
+      "adapter_matches_local": true
+    },
+    {
+      "motor": "parakeet",
+      "gpu": 1,
+      "completed": 10,
+      "wer": 0.06720430107526881,
+      "cer": 0.017311608961303463,
+      "counts": {
+        "hits": 352,
+        "substitutions": 19,
+        "deletions": 1,
+        "insertions": 5,
+        "reference_words": 372,
+        "character_substitutions": 13,
+        "character_deletions": 8,
+        "character_insertions": 13,
+        "reference_characters": 1964
+      },
+      "asr_seconds": 2.5033144429326057,
+      "rtf": 0.017619048725595478,
+      "load_seconds": 17.65860597230494,
+      "warmup_seconds": 15.667194524779916,
+      "session_wall_seconds": 38.45390088297427,
+      "ram_rss_max_observed_mib": 4640.60546875,
+      "ram_lifetime_peak_mib": 4665.890625,
+      "vram_process_max_observed_mib": 4024.0,
+      "ram_samples": 126,
+      "gpu_samples": 33,
+      "gpu_statuses": [
+        "medido"
+      ],
+      "other_compute_process_max": 0,
+      "per_audio_gpu_coverage": [
+        {
+          "audio_id": "133_1378_000042",
+          "gpu_samples": 0,
+          "torch_memory": {
+            "peak_allocated_bytes": 2650194432,
+            "peak_reserved_bytes": 2696937472,
+            "scope": "Allocator Torch; incluye modelo residente, no toda VRAM del proceso/dispositivo."
+          }
+        },
+        {
+          "audio_id": "1075_567_000050",
+          "gpu_samples": 1,
+          "torch_memory": {
+            "peak_allocated_bytes": 2591675392,
+            "peak_reserved_bytes": 2696937472,
+            "scope": "Allocator Torch; incluye modelo residente, no toda VRAM del proceso/dispositivo."
+          }
+        },
+        {
+          "audio_id": "6223_5079_000063",
+          "gpu_samples": 0,
+          "torch_memory": {
+            "peak_allocated_bytes": 2617698304,
+            "peak_reserved_bytes": 2696937472,
+            "scope": "Allocator Torch; incluye modelo residente, no toda VRAM del proceso/dispositivo."
+          }
+        },
+        {
+          "audio_id": "3719_1378_000015",
+          "gpu_samples": 1,
+          "torch_memory": {
+            "peak_allocated_bytes": 2594846208,
+            "peak_reserved_bytes": 2696937472,
+            "scope": "Allocator Torch; incluye modelo residente, no toda VRAM del proceso/dispositivo."
+          }
+        },
+        {
+          "audio_id": "133_1378_000052",
+          "gpu_samples": 0,
+          "torch_memory": {
+            "peak_allocated_bytes": 2621265920,
+            "peak_reserved_bytes": 2696937472,
+            "scope": "Allocator Torch; incluye modelo residente, no toda VRAM del proceso/dispositivo."
+          }
+        },
+        {
+          "audio_id": "10367_10282_000004",
+          "gpu_samples": 1,
+          "torch_memory": {
+            "peak_allocated_bytes": 2644646400,
+            "peak_reserved_bytes": 2696937472,
+            "scope": "Allocator Torch; incluye modelo residente, no toda VRAM del proceso/dispositivo."
+          }
+        },
+        {
+          "audio_id": "3719_1378_000088",
+          "gpu_samples": 0,
+          "torch_memory": {
+            "peak_allocated_bytes": 2600922112,
+            "peak_reserved_bytes": 2696937472,
+            "scope": "Allocator Torch; incluye modelo residente, no toda VRAM del proceso/dispositivo."
+          }
+        },
+        {
+          "audio_id": "6671_9310_000004",
+          "gpu_samples": 1,
+          "torch_memory": {
+            "peak_allocated_bytes": 2588769280,
+            "peak_reserved_bytes": 2696937472,
+            "scope": "Allocator Torch; incluye modelo residente, no toda VRAM del proceso/dispositivo."
+          }
+        },
+        {
+          "audio_id": "2592_1378_000079",
+          "gpu_samples": 0,
+          "torch_memory": {
+            "peak_allocated_bytes": 2602111488,
+            "peak_reserved_bytes": 2696937472,
+            "scope": "Allocator Torch; incluye modelo residente, no toda VRAM del proceso/dispositivo."
+          }
+        },
+        {
+          "audio_id": "3719_1378_000049",
+          "gpu_samples": 1,
+          "torch_memory": {
+            "peak_allocated_bytes": 2609640960,
+            "peak_reserved_bytes": 2699034624,
+            "scope": "Allocator Torch; incluye modelo residente, no toda VRAM del proceso/dispositivo."
+          }
+        }
+      ],
+      "native_word_time_sanity": [
+        {
+          "audio_id": "133_1378_000042",
+          "words": 0,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "1075_567_000050",
+          "words": 0,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "6223_5079_000063",
+          "words": 0,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "3719_1378_000015",
+          "words": 0,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "133_1378_000052",
+          "words": 0,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "10367_10282_000004",
+          "words": 0,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "3719_1378_000088",
+          "words": 0,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "6671_9310_000004",
+          "words": 0,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "2592_1378_000079",
+          "words": 0,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "3719_1378_000049",
+          "words": 0,
+          "invalid_with_100ms_tolerance": 0
+        }
+      ],
+      "gpu_energy_sampled_interval_joules": 1063.2156444773357,
+      "gpu_energy_coverage_seconds": 37.54591201432049,
+      "warnings": [],
+      "source_code_matches_local": true,
+      "adapter_matches_local": true
+    },
+    {
+      "motor": "whisper",
+      "gpu": 2,
+      "completed": 10,
+      "wer": 0.08602150537634409,
+      "cer": 0.021384928716904276,
+      "counts": {
+        "hits": 349,
+        "substitutions": 22,
+        "deletions": 1,
+        "insertions": 9,
+        "reference_words": 372,
+        "character_substitutions": 21,
+        "character_deletions": 5,
+        "character_insertions": 16,
+        "reference_characters": 1964
+      },
+      "asr_seconds": 5.382534774020314,
+      "rtf": 0.03788383146129162,
+      "load_seconds": 2.732071753591299,
+      "warmup_seconds": 5.575317474082112,
+      "session_wall_seconds": 14.90786999464035,
+      "ram_rss_max_observed_mib": 3212.1015625,
+      "ram_lifetime_peak_mib": 3218.8046875,
+      "vram_process_max_observed_mib": 1970.0,
+      "ram_samples": 55,
+      "gpu_samples": 14,
+      "gpu_statuses": [
+        "medido"
+      ],
+      "other_compute_process_max": 0,
+      "per_audio_gpu_coverage": [
+        {
+          "audio_id": "133_1378_000042",
+          "gpu_samples": 1,
+          "torch_memory": null
+        },
+        {
+          "audio_id": "1075_567_000050",
+          "gpu_samples": 0,
+          "torch_memory": null
+        },
+        {
+          "audio_id": "6223_5079_000063",
+          "gpu_samples": 1,
+          "torch_memory": null
+        },
+        {
+          "audio_id": "3719_1378_000015",
+          "gpu_samples": 0,
+          "torch_memory": null
+        },
+        {
+          "audio_id": "133_1378_000052",
+          "gpu_samples": 1,
+          "torch_memory": null
+        },
+        {
+          "audio_id": "10367_10282_000004",
+          "gpu_samples": 1,
+          "torch_memory": null
+        },
+        {
+          "audio_id": "3719_1378_000088",
+          "gpu_samples": 0,
+          "torch_memory": null
+        },
+        {
+          "audio_id": "6671_9310_000004",
+          "gpu_samples": 1,
+          "torch_memory": null
+        },
+        {
+          "audio_id": "2592_1378_000079",
+          "gpu_samples": 0,
+          "torch_memory": null
+        },
+        {
+          "audio_id": "3719_1378_000049",
+          "gpu_samples": 1,
+          "torch_memory": null
+        }
+      ],
+      "native_word_time_sanity": [
+        {
+          "audio_id": "133_1378_000042",
+          "words": 56,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "1075_567_000050",
+          "words": 24,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "6223_5079_000063",
+          "words": 45,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "3719_1378_000015",
+          "words": 41,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "133_1378_000052",
+          "words": 36,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "10367_10282_000004",
+          "words": 48,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "3719_1378_000088",
+          "words": 34,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "6671_9310_000004",
+          "words": 20,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "2592_1378_000079",
+          "words": 35,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "3719_1378_000049",
+          "words": 41,
+          "invalid_with_100ms_tolerance": 0
+        }
+      ],
+      "gpu_energy_sampled_interval_joules": 896.782708528284,
+      "gpu_energy_coverage_seconds": 14.186855068430305,
+      "warnings": [],
+      "source_code_matches_local": true,
+      "adapter_matches_local": true
+    },
+    {
+      "motor": "crisper",
+      "gpu": 3,
+      "completed": 10,
+      "wer": 0.10752688172043011,
+      "cer": 0.026476578411405296,
+      "counts": {
+        "hits": 341,
+        "substitutions": 28,
+        "deletions": 3,
+        "insertions": 9,
+        "reference_words": 372,
+        "character_substitutions": 23,
+        "character_deletions": 11,
+        "character_insertions": 18,
+        "reference_characters": 1964
+      },
+      "asr_seconds": 31.96977588534355,
+      "rtf": 0.22501249919301483,
+      "load_seconds": 19.93183802999556,
+      "warmup_seconds": 20.965978864580393,
+      "session_wall_seconds": 74.85090715624392,
+      "ram_rss_max_observed_mib": 6055.5625,
+      "ram_lifetime_peak_mib": 6057.234375,
+      "vram_process_max_observed_mib": 3928.0,
+      "ram_samples": 273,
+      "gpu_samples": 69,
+      "gpu_statuses": [
+        "medido"
+      ],
+      "other_compute_process_max": 0,
+      "per_audio_gpu_coverage": [
+        {
+          "audio_id": "133_1378_000042",
+          "gpu_samples": 4,
+          "torch_memory": {
+            "peak_allocated_bytes": 2597340160,
+            "peak_reserved_bytes": 2745171968,
+            "scope": "Allocator Torch; incluye modelo residente, no toda VRAM del proceso/dispositivo."
+          }
+        },
+        {
+          "audio_id": "1075_567_000050",
+          "gpu_samples": 2,
+          "torch_memory": {
+            "peak_allocated_bytes": 2539198464,
+            "peak_reserved_bytes": 2745171968,
+            "scope": "Allocator Torch; incluye modelo residente, no toda VRAM del proceso/dispositivo."
+          }
+        },
+        {
+          "audio_id": "6223_5079_000063",
+          "gpu_samples": 3,
+          "torch_memory": {
+            "peak_allocated_bytes": 2578127872,
+            "peak_reserved_bytes": 2745171968,
+            "scope": "Allocator Torch; incluye modelo residente, no toda VRAM del proceso/dispositivo."
+          }
+        },
+        {
+          "audio_id": "3719_1378_000015",
+          "gpu_samples": 2,
+          "torch_memory": {
+            "peak_allocated_bytes": 2559092736,
+            "peak_reserved_bytes": 2745171968,
+            "scope": "Allocator Torch; incluye modelo residente, no toda VRAM del proceso/dispositivo."
+          }
+        },
+        {
+          "audio_id": "133_1378_000052",
+          "gpu_samples": 3,
+          "torch_memory": {
+            "peak_allocated_bytes": 2573876224,
+            "peak_reserved_bytes": 2745171968,
+            "scope": "Allocator Torch; incluye modelo residente, no toda VRAM del proceso/dispositivo."
+          }
+        },
+        {
+          "audio_id": "10367_10282_000004",
+          "gpu_samples": 3,
+          "torch_memory": {
+            "peak_allocated_bytes": 2583442432,
+            "peak_reserved_bytes": 2745171968,
+            "scope": "Allocator Torch; incluye modelo residente, no toda VRAM del proceso/dispositivo."
+          }
+        },
+        {
+          "audio_id": "3719_1378_000088",
+          "gpu_samples": 3,
+          "torch_memory": {
+            "peak_allocated_bytes": 2559092736,
+            "peak_reserved_bytes": 2745171968,
+            "scope": "Allocator Torch; incluye modelo residente, no toda VRAM del proceso/dispositivo."
+          }
+        },
+        {
+          "audio_id": "6671_9310_000004",
+          "gpu_samples": 2,
+          "torch_memory": {
+            "peak_allocated_bytes": 2539198464,
+            "peak_reserved_bytes": 2745171968,
+            "scope": "Allocator Torch; incluye modelo residente, no toda VRAM del proceso/dispositivo."
+          }
+        },
+        {
+          "audio_id": "2592_1378_000079",
+          "gpu_samples": 4,
+          "torch_memory": {
+            "peak_allocated_bytes": 2564359168,
+            "peak_reserved_bytes": 2745171968,
+            "scope": "Allocator Torch; incluye modelo residente, no toda VRAM del proceso/dispositivo."
+          }
+        },
+        {
+          "audio_id": "3719_1378_000049",
+          "gpu_samples": 4,
+          "torch_memory": {
+            "peak_allocated_bytes": 2577064960,
+            "peak_reserved_bytes": 2745171968,
+            "scope": "Allocator Torch; incluye modelo residente, no toda VRAM del proceso/dispositivo."
+          }
+        }
+      ],
+      "native_word_time_sanity": [
+        {
+          "audio_id": "133_1378_000042",
+          "words": 56,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "1075_567_000050",
+          "words": 24,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "6223_5079_000063",
+          "words": 45,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "3719_1378_000015",
+          "words": 41,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "133_1378_000052",
+          "words": 36,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "10367_10282_000004",
+          "words": 48,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "3719_1378_000088",
+          "words": 33,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "6671_9310_000004",
+          "words": 20,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "2592_1378_000079",
+          "words": 35,
+          "invalid_with_100ms_tolerance": 0
+        },
+        {
+          "audio_id": "3719_1378_000049",
+          "words": 40,
+          "invalid_with_100ms_tolerance": 0
+        }
+      ],
+      "gpu_energy_sampled_interval_joules": 2966.665085933768,
+      "gpu_energy_coverage_seconds": 74.3052991963923,
+      "warnings": [
+        "[transformers] `torch_dtype` is deprecated! Use `dtype` instead!",
+        "encoder_blank_head.weight | UNEXPECTED |  | ",
+        "encoder_blank_head.bias   | UNEXPECTED |  | ",
+        "- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.",
+        "[transformers] The following generation flags are not valid and may be ignored: ['output_attentions']. Set `TRANSFORMERS_VERBOSITY=info` for more details.",
+        "[transformers] Passing `generation_config` together with generation-related arguments=({'output_attentions', 'suppress_tokens', 'begin_suppress_tokens'}) is deprecated and will be removed in future versions. Please pass either a `generation_config` object OR all generation parameters explicitly, but not both.",
+        "[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer WhisperTokenizer. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway."
+      ],
+      "source_code_matches_local": true,
+      "adapter_matches_local": true
+    }
+  ],
+  "human_audio_review": false,
+  "notice": "Revisión textual y técnica, no escucha independiente ni prueba de tablet."
+}

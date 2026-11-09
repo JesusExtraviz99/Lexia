@@ -1,0 +1,46 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/479 [00:00<?, ?it/s]Loading weights:  18%|█▊        | 87/479 [00:00<00:00, 778.54it/s]Loading weights:  47%|████▋     | 225/479 [00:00<00:00, 1043.87it/s]Loading weights:  69%|██████▉   | 330/479 [00:00<00:00, 1036.47it/s]Loading weights:  92%|█████████▏| 441/479 [00:00<00:00, 1047.77it/s]Loading weights: 100%|██████████| 479/479 [00:00<00:00, 1048.04it/s]
+[transformers] [1mWhisperForConditionalGeneration LOAD REPORT[0m from: /opt/qaisc/home/jextraviz/lexia/modelos/crisperwhisper2-small
+Key                       | Status     |  | 
+--------------------------+------------+--+-
+encoder_blank_head.weight | UNEXPECTED |  | 
+encoder_blank_head.bias   | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[transformers] The following generation flags are not valid and may be ignored: ['output_attentions']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+[transformers] Passing `generation_config` together with generation-related arguments=({'output_attentions', 'suppress_tokens', 'begin_suppress_tokens'}) is deprecated and will be removed in future versions. Please pass either a `generation_config` object OR all generation parameters explicitly, but not both.
+[transformers] Both `max_new_tokens` (=256) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer WhisperTokenizer. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+[1/10] 133_1378_000042 (19.96 s)
+[transformers] Both `max_new_tokens` (=256) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  WER 0.000; ASR 4.00 s; Advertid, señor caballero, que la condición de nuestra batalla es que el vencido, como otra vez he dicho, ha de quedar a discreción del vencedor. Ya la sé, respondió don Quijote, con tal que lo que se le impusiere y mandare al vencido, han de ser cosas que no salgan de los límites de la caballería.
+[2/10] 1075_567_000050 (11.10 s)
+[transformers] Both `max_new_tokens` (=256) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  WER 0.080; ASR 2.45 s; Sino porque entonces los que en ella vivían ignoraban estas dos palabras de tuyo y mío eran en aquella santidad todas las cosas comunes.
+[3/10] 6223_5079_000063 (15.04 s)
+[transformers] Both `max_new_tokens` (=256) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  WER 0.067; ASR 3.29 s; Efectivamente, dijo otro, nos trae a conocer a una dama y, apenas y con mucha dificultad, se ven los dedos de la mano. Y con todo, hace un frío que no parece sino que estamos en la Siberia, añadió un tercero arregujándose en el capote.
+[4/10] 3719_1378_000015 (11.59 s)
+[transformers] Both `max_new_tokens` (=256) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  WER 0.125; ASR 2.82 s; En la cara, quitadas las narices, era la misma de tomes escial. Como yo se la he visto muchas veces en mi pueblo y paré de en medio de mi misma casa, y el tono de la habla era todo uno.
+[5/10] 133_1378_000052 (15.59 s)
+[transformers] Both `max_new_tokens` (=256) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  WER 0.056; ASR 3.17 s; Todo lo confieso, juzgo y siento como vos lo creéis, juzgáis y sentís, respondió el derringado caballero. Dejadme levantar os ruego, si es que lo permite el golpe de mi caída, que Asad maltrecho me tiene.
+[6/10] 10367_10282_000004 (19.12 s)
+[transformers] Both `max_new_tokens` (=256) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  WER 0.062; ASR 3.46 s; Mas él, herido, fue por nuestras rebeliones, molido por nuestros pecados, el castigo de nuestra paz sobre él, y por su llaga fuimos nosotros curados, todos nosotros nos descariamos como vejas, cada cual se apartó por su camino, mas Jehová cargó en él el pecado de todos nosotros.
+[7/10] 3719_1378_000088 (12.50 s)
+[transformers] Both `max_new_tokens` (=256) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  WER 0.182; ASR 2.94 s; Que quien la sabe tratarla volverá en oro purísimo de un inestimable precio, ala de tener el que la tuviera a Raya o dejando la correr en torpes sátiras ni en desalmados sonetos.
+[8/10] 6671_9310_000004 (10.66 s)
+[transformers] Both `max_new_tokens` (=256) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  WER 0.200; ASR 2.43 s; Añadió después de un silencio prolongado y sólo desde ayer se todo lo que os concierne, sin duda, no ignoráis.
+[9/10] 2592_1378_000079 (12.69 s)
+[transformers] Both `max_new_tokens` (=256) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  WER 0.464; ASR 3.52 s; Calle, señor bueno, replicó el cartero, que no hubo en canto alguno ni mudanza de rostro ninguna, tan la calle o tus hilos entré en la estacada como tus hilos la calle salí de ella.
+[10/10] 3719_1378_000049 (13.83 s)
+[transformers] Both `max_new_tokens` (=256) and `max_length`(=448) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  WER 0.049; ASR 3.88 s; Y cuando los reyes y príncipes ven la milagrosa ciencia de la poesía en sujetos prudentes, virtuosos y graves, los honran, los estiman y los enriquecen, y aún los coronan con las hojas del árbol a quien ofende el rayo.
+Informe: /opt/qaisc/home/jextraviz/lexia/resultados/asr_externo/mls_dev_prueba10_paralela_01/crisper/resumen.md
+Completados 10/10; fallos 0.

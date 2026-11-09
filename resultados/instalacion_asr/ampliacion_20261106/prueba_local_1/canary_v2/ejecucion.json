@@ -1,0 +1,125 @@
+{
+  "created_at_utc": "2026-11-06T09:53:39.567963+00:00",
+  "run_signature": "8d97c4b5909b0a923746e3cf0cd7a4e2e3b624a56fd94c67102b6f51944dd992",
+  "motor": "canary_v2",
+  "model": {
+    "name": "canary_v2",
+    "repo": "nvidia/canary-1b-v2",
+    "revision": "d455706339a6b32e1aa40f82c713a482a0c938e2",
+    "files": [
+      {
+        "file": "README.md",
+        "bytes": 72381,
+        "published_lfs_sha256": null,
+        "sha256": "9a89d0bc0be172d66099b3a9ff3ecfdae72b5eeec3d048efde681c582ccaa047"
+      },
+      {
+        "file": "config.json",
+        "bytes": 1591,
+        "published_lfs_sha256": null,
+        "sha256": "e6818410f7dd0a460a4f09324d5fb4ec76b64410416e1ce172e06658335b2aa2"
+      },
+      {
+        "file": "generation_config.json",
+        "bytes": 252,
+        "published_lfs_sha256": null,
+        "sha256": "e7c62fe7fbc09a036f7a2be62f02491c71720a5557c7d761f18262ed54191cb4"
+      },
+      {
+        "file": "model.safetensors",
+        "bytes": 3916173816,
+        "published_lfs_sha256": "4f6d381f6a939b95e9f8516212148b701e9b3805d26462c4c3e9e34f3d89b6f8",
+        "sha256": "4f6d381f6a939b95e9f8516212148b701e9b3805d26462c4c3e9e34f3d89b6f8"
+      },
+      {
+        "file": "processor_config.json",
+        "bytes": 362,
+        "published_lfs_sha256": null,
+        "sha256": "07936c62f5d52898d05fc0c78b632121413cebc35e194432c7230196f3638e4a"
+      },
+      {
+        "file": "tokenizer.json",
+        "bytes": 2189980,
+        "published_lfs_sha256": null,
+        "sha256": "286dd42a7b27e15332195df556c2df6d383bb4c4869774b055e1666a72e6bc64"
+      },
+      {
+        "file": "tokenizer_config.json",
+        "bytes": 328,
+        "published_lfs_sha256": null,
+        "sha256": "82126b51f23a52cfe5a9be05cf15d9b30e454693a72d1ed6f0a43f9292975843"
+      }
+    ]
+  },
+  "selection": {
+    "schema_version": 1,
+    "dataset": "MLS español",
+    "split": "dev",
+    "seed": 42,
+    "limit": 1,
+    "selection": "sorted IDs then Python random.Random(seed).shuffle; first limit, 0=all",
+    "transcripts_sha256": "90f7ff71010364ae7b94213527d4c7ad2dd6aa21584aa5b2c1c9d1709ab4f809",
+    "total_partition_audio": 2408,
+    "items": [
+      {
+        "id": "133_1378_000042",
+        "speaker_id": "133",
+        "book_id": "1378",
+        "file": "dev/audio/133/1378/133_1378_000042.flac",
+        "sha256": "e557884aa2e7d612a9e87dc5c3f26130aadbc348734c03702707e1ba7de0ad80",
+        "file_bytes": 292989,
+        "frames": 319360,
+        "sample_rate": 16000,
+        "audio_seconds": 19.96,
+        "reference": "advertid señor caballero que la condición de nuestra batalla es que el vencido como otra vez he dicho ha de quedar a discreción del vencedor ya la sé respondió don quijote con tal que lo que se le impusiere y mandare al vencido han de ser cosas que no salgan de los límites de la caballería"
+      }
+    ]
+  },
+  "normalization": "NFC; minúsculas; puntuación Unicode sustituida por espacios; espacios colapsados; conserva tildes, ñ y números. CER incluye espacios.",
+  "script_sha256": "a751f6c0651487fd83d2ad242251ce31326110d9d7a30374ecf982247dfeb620",
+  "adapter_sha256": "2ff64f3f811e365fb6dd56b4b1f7c99288eb04a240b5f005d2155c7bf6522271",
+  "versions": {
+    "numpy": "2.2.6",
+    "soundfile": "0.13.1",
+    "psutil": "7.2.2",
+    "jiwer": "4.0.0",
+    "torch": "2.7.1+cpu",
+    "transformers": "5.20.2",
+    "accelerate": "1.15.0",
+    "librosa": "0.11.0",
+    "huggingface-hub": "2.4.0"
+  },
+  "gpu_physical_index": null,
+  "gpu_info": null,
+  "parameters": {
+    "precision": "float32",
+    "batch_size": 1,
+    "vad": false,
+    "denoise": false,
+    "language": "es",
+    "decoder": "Transformers generate",
+    "beams": 1,
+    "max_new_tokens": 512,
+    "word_timestamps": false,
+    "source_language_conditioning": true,
+    "notice": "Offline por clip completo, sin reglas del seguidor. Whisper usa Transformers y no CT2; tiempos de backend no equivalentes."
+  },
+  "batch_size": 1,
+  "cpu_threads_requested": 4,
+  "thread_notice": "OMP/MKL/OpenBLAS environment limits recorded; Torch explicit threads; Vosk native threads not guaranteed.",
+  "mode": "aislada",
+  "cohort": null,
+  "runtime": {
+    "python": "3.12.15 (main, Oct 14 2026, 01:08:45) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu": "Intel64 Family 6 Model 141 Stepping 1, GenuineIntel",
+    "logical_cpus": 16
+  },
+  "warmup": "first selected audio once per session, excluded",
+  "external_vad": false,
+  "denoise": false,
+  "resample": false,
+  "external_chunking": false,
+  "report_every": 50,
+  "progress_every_audio": true
+}

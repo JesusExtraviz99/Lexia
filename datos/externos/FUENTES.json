@@ -83,8 +83,8 @@
       "subset": "spanish",
       "reviewed_date": "2026-10-28",
       "license_on_page": "CC-BY-4.0",
-      "status": "descarga_en_curso_segun_usuario_sin_importar",
-      "selection_manifest": null,
+      "status": "dev_test_verificados_y_empaquetados_localmente_train_no_verificado",
+      "selection_manifest": "datos/externos/paquetes/mls_es_dev_test_manifest.json",
       "intended_role": "Contraste externo con fragmentos de audiolibros en español; particiones train/dev/test. No presentar clips concatenados como lectura natural continua.",
       "selection_policy": "Seleccionar partición y muestra fijada antes de descargar/evaluar; comprobar entrenamiento previo de cada modelo y evitar comparar medias con muestras distintas.",
       "primary_sources": [
@@ -97,7 +97,24 @@
         "mls_spanish.tar.gz"
       ],
       "download_page": "https://www.openslr.org/94/",
-      "local_root": "datos/externos/mls_es"
+      "local_root": "datos/externos/mls_es",
+      "subset_verification_file": "resultados/preparacion_datasets/mls_dev_test_paquete.json",
+      "subset_verification_scope": "IDs audio/transcripción/segmentos; cabeceras FLAC; SHA256 por archivo y cotejo de bytes dentro del TAR. No decodificación completa ni revisión humana.",
+      "upload_status": "pendiente",
+      "evaluation_splits": {
+        "dev": {
+          "audio_files": 2408,
+          "files": 2410,
+          "duration_seconds": 35959.18131250002,
+          "bytes": 617681141
+        },
+        "test": {
+          "audio_files": 2385,
+          "files": 2387,
+          "duration_seconds": 36013.13637500003,
+          "bytes": 619232906
+        }
+      }
     }
   ]
 }

@@ -1,4 +1,5 @@
 .venv/
+.venvs/
 .tools/
 modelos/
 __pycache__/
@@ -20,3 +21,12 @@ datos/anotaciones/*.tmp
 !/datos/audio/* - lector_01.wav
 !/datos/audio/* - lector_01 - *.wav
 /datos/referencias/catalogo_local.json
+
+# Las sesiones de micrófono pueden contener transcripciones de lectores privados.
+/resultados/directo_local/
+/resultados/android/sesiones/
+
+# Registros externos completos respaldados en archivos TAR.GZ verificados por cohorte.
+# Informes, resúmenes y métricas agregadas siguen directamente visibles.
+/resultados/asr_externo/**/audios/
+/resultados/asr_externo/**/sesiones/

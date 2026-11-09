@@ -1,0 +1,220 @@
+{
+  "created_at_utc": "2026-11-04T10:38:57.100454+00:00",
+  "run_signature": "1a84d21365f59ba5a94b5ec59ca6f359fdb5018f3e61e4ca4f7454074cf8dcb2",
+  "motor": "xlsr",
+  "model": {
+    "name": "xlsr",
+    "repo": "jonatasgrosman/wav2vec2-large-xlsr-53-spanish",
+    "revision": "96d7e9b4e4a78af515a3c6d3cee7c0826045d276",
+    "files": [
+      {
+        "file": "README.md",
+        "sha256": "887069eccb1eb58f6c167dbbf6662727c341956a5f5120d5ab7a4207b5fd4aa9",
+        "bytes": 5629,
+        "published_lfs_sha256": null
+      },
+      {
+        "file": "config.json",
+        "sha256": "39ffe954848d5161270eef4378a17a538bffeefc310482f409ec099f7fceaa5b",
+        "bytes": 1531,
+        "published_lfs_sha256": null
+      },
+      {
+        "file": "preprocessor_config.json",
+        "sha256": "ca5999a45e98bb76ea87a461ba28a23ad32a5bb9f733b8e0f6546ff38b6c612d",
+        "bytes": 262,
+        "published_lfs_sha256": null
+      },
+      {
+        "file": "pytorch_model.bin",
+        "sha256": "41c110e55d2eac8c79486ad87dbe8f9527ed034fe087a6adf03c891eeba914c1",
+        "bytes": 1262101911,
+        "published_lfs_sha256": "41c110e55d2eac8c79486ad87dbe8f9527ed034fe087a6adf03c891eeba914c1"
+      },
+      {
+        "file": "vocab.json",
+        "sha256": "7aea8bcd8ba1c176f12cc96c1e8f45247548f4de3218106f7352e3d833cfafdc",
+        "bytes": 380,
+        "published_lfs_sha256": null
+      },
+      {
+        "file": "special_tokens_map.json",
+        "sha256": "bb7068de1150661a10b55f9e4b12a0e77af8bf91f5e45e1b58afaf1d0e17f675",
+        "bytes": 85,
+        "published_lfs_sha256": null
+      }
+    ]
+  },
+  "selection": {
+    "schema_version": 1,
+    "dataset": "MLS español",
+    "split": "dev",
+    "seed": 42,
+    "limit": 10,
+    "selection": "sorted IDs then Python random.Random(seed).shuffle; first limit, 0=all",
+    "transcripts_sha256": "90f7ff71010364ae7b94213527d4c7ad2dd6aa21584aa5b2c1c9d1709ab4f809",
+    "total_partition_audio": 2408,
+    "items": [
+      {
+        "id": "133_1378_000042",
+        "speaker_id": "133",
+        "book_id": "1378",
+        "file": "dev/audio/133/1378/133_1378_000042.flac",
+        "sha256": "e557884aa2e7d612a9e87dc5c3f26130aadbc348734c03702707e1ba7de0ad80",
+        "file_bytes": 292989,
+        "frames": 319360,
+        "sample_rate": 16000,
+        "audio_seconds": 19.96,
+        "reference": "advertid señor caballero que la condición de nuestra batalla es que el vencido como otra vez he dicho ha de quedar a discreción del vencedor ya la sé respondió don quijote con tal que lo que se le impusiere y mandare al vencido han de ser cosas que no salgan de los límites de la caballería"
+      },
+      {
+        "id": "1075_567_000050",
+        "speaker_id": "1075",
+        "book_id": "567",
+        "file": "dev/audio/1075/567/1075_567_000050.flac",
+        "sha256": "94e63e378c4d333cc936e5a43fce9deaabb5228c427a45325c90dffec817d21b",
+        "file_bytes": 186820,
+        "frames": 177600,
+        "sample_rate": 16000,
+        "audio_seconds": 11.1,
+        "reference": "sino porque entonces los que en ella vivían ignoraban estas dos palabras de tuyo y mío eran en aquella santa edad todas las cosas comunes"
+      },
+      {
+        "id": "6223_5079_000063",
+        "speaker_id": "6223",
+        "book_id": "5079",
+        "file": "dev/audio/6223/5079/6223_5079_000063.flac",
+        "sha256": "0fb8623860dcd1b95fbc0d6b28bfd1f6921f0f1cdf49da027a11c7174cce0855",
+        "file_bytes": 269575,
+        "frames": 240640,
+        "sample_rate": 16000,
+        "audio_seconds": 15.04,
+        "reference": "efectivamente dijo otro nos traes a conocer a una dama y apenas si con mucha dificultad se ven los dedos de la mano y con todo hace un frío que no parece sino que estamos en la siberia añadió un tercero arrebujándose en el capote"
+      },
+      {
+        "id": "3719_1378_000015",
+        "speaker_id": "3719",
+        "book_id": "1378",
+        "file": "dev/audio/3719/1378/3719_1378_000015.flac",
+        "sha256": "12d2e9a270669ad2e8b57603b4b0da7bfc5c5ea01a7e0f4e82c857cb78368969",
+        "file_bytes": 201090,
+        "frames": 185440,
+        "sample_rate": 16000,
+        "audio_seconds": 11.59,
+        "reference": "y la cara quitadas las narices era la misma de tomé cecial como yo se la he visto muchas veces en mi pueblo y pared en medio de mi misma casa y el tono de la habla era todo uno"
+      },
+      {
+        "id": "133_1378_000052",
+        "speaker_id": "133",
+        "book_id": "1378",
+        "file": "dev/audio/133/1378/133_1378_000052.flac",
+        "sha256": "26e203917f6f5f2af178e5db88072129e8419c3caa7a603084c693e598b55f52",
+        "file_bytes": 225202,
+        "frames": 249440,
+        "sample_rate": 16000,
+        "audio_seconds": 15.59,
+        "reference": "todo lo confieso juzgo y siento como vos lo creéis juzgáis y sentís respondió el derrengado caballero dejadme levantar os ruego si es que lo permite el golpe de mi caída que asaz maltrecho me tiene"
+      },
+      {
+        "id": "10367_10282_000004",
+        "speaker_id": "10367",
+        "book_id": "10282",
+        "file": "dev/audio/10367/10282/10367_10282_000004.flac",
+        "sha256": "1f853f014fbfe5cb11d68e04527f5b8f1acd2126abdc2ce200f93ea084adcd53",
+        "file_bytes": 254814,
+        "frames": 305920,
+        "sample_rate": 16000,
+        "audio_seconds": 19.12,
+        "reference": "mas él herido fué por nuestras rebeliones molido por nuestros pecados el castigo de nuestra paz sobre él y por su llaga fuimos nosotros curados todos nosotros nos descarriamos como ovejas cada cual se apartó por su camino mas jehová cargó en él el pecado de todos nosotros"
+      },
+      {
+        "id": "3719_1378_000088",
+        "speaker_id": "3719",
+        "book_id": "1378",
+        "file": "dev/audio/3719/1378/3719_1378_000088.flac",
+        "sha256": "030a75b454c55d1f3de7434289e202e04d47d19dab7069380d1d6a804c992100",
+        "file_bytes": 202827,
+        "frames": 200000,
+        "sample_rate": 16000,
+        "audio_seconds": 12.5,
+        "reference": "que quien la sabe tratar la volverá en oro purísimo de un inestimable precio hala de tener el que la tuviere a raya o dejándola correr en torpes sátiras ni en desalmados sonetos"
+      },
+      {
+        "id": "6671_9310_000004",
+        "speaker_id": "6671",
+        "book_id": "9310",
+        "file": "dev/audio/6671/9310/6671_9310_000004.flac",
+        "sha256": "b5293ff6be905869b50037d524bb13ab12c8446cbbd7a6a5d7884c5ef1e098a8",
+        "file_bytes": 194354,
+        "frames": 170560,
+        "sample_rate": 16000,
+        "audio_seconds": 10.66,
+        "reference": "añadió despues de un silencio prolongado y solo desde ayer sé todo lo que os concierne sin duda no ignorais"
+      },
+      {
+        "id": "2592_1378_000079",
+        "speaker_id": "2592",
+        "book_id": "1378",
+        "file": "dev/audio/2592/1378/2592_1378_000079.flac",
+        "sha256": "1ea116bf1e39a3d93aed416f43ab498138ba4ca1984d98949ea88466837fabd1",
+        "file_bytes": 226102,
+        "frames": 203040,
+        "sample_rate": 16000,
+        "audio_seconds": 12.69,
+        "reference": "calle señor bueno replicó el cartero que no hubo encanto alguno ni mudanza de rostro ninguna tan lacayo tosilos entré en la estacada como tosilos lacayo salí della"
+      },
+      {
+        "id": "3719_1378_000049",
+        "speaker_id": "3719",
+        "book_id": "1378",
+        "file": "dev/audio/3719/1378/3719_1378_000049.flac",
+        "sha256": "89748aa83012affc2dc24494c376ed1f233ca2c148a697dafcaf6d3fe706ed76",
+        "file_bytes": 221480,
+        "frames": 221280,
+        "sample_rate": 16000,
+        "audio_seconds": 13.83,
+        "reference": "y cuando los reyes y príncipes ven la milagrosa ciencia de la poesía en sujetos prudentes virtuosos y graves los honran los estiman y los enriquecen y aun los coronan con las hojas del árbol a quien no ofende el rayo"
+      }
+    ]
+  },
+  "normalization": "NFC; minúsculas; puntuación Unicode sustituida por espacios; espacios colapsados; conserva tildes, ñ y números. CER incluye espacios.",
+  "script_sha256": "790f9a1d552cd332c7a1bca1a8460c2dcec0d4532e54d681a315e6ab0ef7dea3",
+  "adapter_sha256": "5404b70b550f523f30f4d9b0d8393777e56376a43b80c05f7ef15d44bc3eefb9",
+  "versions": {
+    "numpy": "2.2.6",
+    "soundfile": "0.13.1",
+    "psutil": "7.2.2",
+    "jiwer": "4.0.0",
+    "torch": "2.7.1+cu118",
+    "transformers": "5.20.2",
+    "accelerate": "1.15.0",
+    "librosa": "0.11.0",
+    "huggingface-hub": "2.4.0"
+  },
+  "gpu_physical_index": 0,
+  "gpu_info": "GPU-09734892-22e1-02bd-a5e6-fea2cf3214bd, NVIDIA GeForce RTX 3060, 525.147.05, 12288 MiB",
+  "parameters": {
+    "precision": "float32",
+    "batch_size": 1,
+    "vad": false,
+    "denoise": false,
+    "language": "es",
+    "decoder": "CTC greedy without external LM"
+  },
+  "batch_size": 1,
+  "cpu_threads_requested": 4,
+  "thread_notice": "OMP/MKL/OpenBLAS environment limits recorded; Torch explicit threads; Vosk native threads not guaranteed.",
+  "mode": "concurrente",
+  "cohort": "mls_dev_prueba10_paralela_01",
+  "runtime": {
+    "python": "3.12.15 (main, Oct 14 2026, 01:05:27) [Clang 23.1.3 ]",
+    "platform": "Linux-5.4.0-166-generic-x86_64-with-glibc2.31",
+    "cpu": "Intel Xeon Processor (Cascadelake)",
+    "logical_cpus": 14
+  },
+  "warmup": "first selected audio once per session, excluded",
+  "external_vad": false,
+  "denoise": false,
+  "resample": false,
+  "external_chunking": false
+}

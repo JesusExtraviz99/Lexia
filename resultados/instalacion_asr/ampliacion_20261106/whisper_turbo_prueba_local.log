@@ -1,0 +1,21 @@
+Loading weights:   0%|          | 0/587 [00:00<?, ?it/s]Loading weights:   6%|5         | 35/587 [00:00<00:01, 349.95it/s]Loading weights:  12%|#1        | 70/587 [00:00<00:02, 247.37it/s]Loading weights:  17%|#6        | 97/587 [00:00<00:01, 250.86it/s]Loading weights:  21%|##1       | 124/587 [00:00<00:02, 205.32it/s]Loading weights:  25%|##4       | 146/587 [00:00<00:02, 208.49it/s]Loading weights:  29%|##8       | 168/587 [00:00<00:02, 181.37it/s]Loading weights:  32%|###2      | 188/587 [00:00<00:02, 184.22it/s]Loading weights:  35%|###5      | 208/587 [00:01<00:02, 159.17it/s]Loading weights:  39%|###9      | 229/587 [00:01<00:02, 166.89it/s]Loading weights:  43%|####2     | 251/587 [00:01<00:01, 179.39it/s]Loading weights:  46%|####5     | 270/587 [00:01<00:02, 153.68it/s]Loading weights:  49%|####9     | 290/587 [00:01<00:01, 160.02it/s]Loading weights:  52%|#####2    | 307/587 [00:01<00:01, 158.85it/s]Loading weights:  55%|#####5    | 325/587 [00:01<00:01, 161.57it/s]Loading weights:  58%|#####8    | 342/587 [00:01<00:01, 151.75it/s]Loading weights:  61%|######1   | 359/587 [00:02<00:01, 153.41it/s]Loading weights:  64%|######3   | 375/587 [00:02<00:01, 141.88it/s]Loading weights:  67%|######6   | 392/587 [00:02<00:01, 145.78it/s]Loading weights:  70%|######9   | 409/587 [00:02<00:01, 147.83it/s]Loading weights:  73%|#######2  | 428/587 [00:02<00:00, 159.17it/s]Loading weights:  76%|#######5  | 445/587 [00:02<00:00, 156.57it/s]Loading weights:  79%|#######9  | 464/587 [00:02<00:00, 155.51it/s]Loading weights:  82%|########1 | 480/587 [00:02<00:00, 150.02it/s]Loading weights:  86%|########5 | 504/587 [00:02<00:00, 172.92it/s]Loading weights:  89%|########9 | 525/587 [00:03<00:00, 171.82it/s]Loading weights:  94%|#########3| 550/587 [00:03<00:00, 190.50it/s]Loading weights:  97%|#########7| 570/587 [00:03<00:00, 179.15it/s]Loading weights: 100%|##########| 587/587 [00:03<00:00, 175.03it/s]
+Informe: C:\Users\PC\OneDrive\Documentos\ChatGPT\Practicas y TFG\resultados\instalacion_asr\ampliacion_20261106\prueba_local_1\whisper_turbo\resumen.md
+Completados 0/1; fallos 0.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\PC\OneDrive\Documentos\ChatGPT\Practicas y TFG\scripts\evaluar_ampliacion_asr.py", line 12, in <module>
+    evaluator.main()
+  File "C:\Users\PC\OneDrive\Documentos\ChatGPT\Practicas y TFG\scripts\evaluar_asr_externo.py", line 733, in main
+    run(args)
+  File "C:\Users\PC\OneDrive\Documentos\ChatGPT\Practicas y TFG\scripts\evaluar_asr_externo.py", line 623, in run
+    session['warmup'] = dict(audio_id=first['id'], **infer(signal))
+                                                     ^^^^^^^^^^^^^
+  File "C:\Users\PC\OneDrive\Documentos\ChatGPT\Practicas y TFG\scripts\ampliacion_motores.py", line 77, in infer
+    generated=model.generate(**inputs,**options)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\OneDrive\Documentos\ChatGPT\Practicas y TFG\.tools\asr-ampliacion-env\Lib\site-packages\transformers\models\whisper\generation_whisper.py", line 836, in generate
+    self._set_max_new_tokens_and_length(
+  File "C:\Users\PC\OneDrive\Documentos\ChatGPT\Practicas y TFG\.tools\asr-ampliacion-env\Lib\site-packages\transformers\models\whisper\generation_whisper.py", line 1933, in _set_max_new_tokens_and_length
+    raise ValueError(
+ValueError: The length of `decoder_input_ids`, including special start tokens, prompt tokens, and previous tokens, is 4,  and `max_new_tokens` is 448. Thus, the combined length of `decoder_input_ids` and `max_new_tokens` is: 452. This exceeds the `max_target_positions` of the Whisper model: 448. You should either reduce the length of your prompt, or reduce the value of `max_new_tokens`, so that their combined length is less than 448.

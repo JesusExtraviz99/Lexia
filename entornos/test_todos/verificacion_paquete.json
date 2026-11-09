@@ -1,0 +1,61 @@
+{
+  "status": "prepared_not_started",
+  "archive": ".descartados\\servidor\\lexia_mls_test_todos.tar",
+  "sha256": "8dc5157ca7b8e2f0eaf09f4d90560baafc64c9f11418e537b6c5072425bf5718",
+  "bytes": 174080,
+  "files": 13,
+  "checks": [
+    "TAR restringido y cotejado byte a byte",
+    "Plan extraído: doce candidatos, test completo, sin inferencias",
+    "Fuentes delegadas y parámetros cotejados con protocolo dev",
+    "Sintaxis Bash válida",
+    "32 pruebas locales simuladas correctas"
+  ],
+  "plan": {
+    "gpus": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "motors": [
+      "crisper",
+      "qwen_asr_17b",
+      "qwen_asr_06b",
+      "whisper_turbo",
+      "canary_v2",
+      "moonshine_small_es",
+      "moonshine_tiny_es",
+      "granite_turboctc",
+      "parakeet",
+      "xlsr",
+      "whisper",
+      "vosk"
+    ],
+    "audio_count": 0,
+    "partition": "test",
+    "full_dev": false,
+    "full_partition": true,
+    "sequential": false,
+    "selection_seed": 42,
+    "dataset": "C:\\Users\\PC\\OneDrive\\Documentos\\ChatGPT\\Practicas y TFG\\datos\\externos\\mls_es",
+    "output": "C:\\Users\\PC\\OneDrive\\Documentos\\ChatGPT\\Practicas y TFG\\.descartados\\servidor\\comprobacion_test_todos\\experimentos\\test_todos_20261106\\sin_lanzar",
+    "notice": "Un proceso por GPU disponible de la lista; Vosk CPU. Mismos IDs; no inicia tareas."
+  },
+  "source_sha256": {
+    "scripts/evaluar_asr_externo.py": "a751f6c0651487fd83d2ad242251ce31326110d9d7a30374ecf982247dfeb620",
+    "scripts/asr_motores_externos.py": "5404b70b550f523f30f4d9b0d8393777e56376a43b80c05f7ef15d44bc3eefb9",
+    "scripts/ampliacion_motores.py": "2b9d3795d10fd3664f385f22f8d441015ca046c056b4cb115dc255c9be50672a",
+    "scripts/preparar_ampliacion_asr.py": "6a33dd850b931e965a072140a240d268ead402784a12b3c1b238605ab9db11e0",
+    "scripts/lanzar_asr_paralelo.py": "4002b351903efcee5631e62ba150b1af92452a7ef307066e66231ed872e50169",
+    "scripts/motores_test_todos.py": "5794049d58b0ed67d9e329c7d713f53aaeeaa373772b352f61139ea7ea5f3828",
+    "scripts/evaluar_test_todos.py": "721b8f4f7ee8d0a9d2c83ce05fb940babbd684dc73c3e0ff7407b7002e1342a3",
+    "scripts/lanzar_test_todos.py": "a84894444968603eadc496f6042fa40d4cf5fd961599804fe8fb8a0cb94d32f2",
+    "scripts/ejecutar_test_todos.sh": "e33831b43f78d3fa35d0bc871b9e2839db61e4a4b307e09967613f265e274ec8",
+    "scripts/estado_asr_externo.py": "aa2ad3479699e69415f8c6b311f857264163d1c75725974de0485d31f6de536d",
+    "entornos/test_todos/protocolo.json": "d264331fbf10473807dadeda140f43b42bdd43f51232b2a9825543f7136267f6",
+    "entornos/test_todos/LEEME.md": "20894f749b66e3f497a65e7ca52cc5e7e1de1844ae60c5f173999faf7bac24e3",
+    "resultados/instalacion_asr/ampliacion_20261106/checkpoints_fijados.json": "b499cfc9788a0612d1147647b1f5ce265de0313fc6e3004964819ee3988b1d12"
+  },
+  "notice": "Sin conexión SSH autenticada, instalación o arranque remoto. No publica en GitHub."
+}

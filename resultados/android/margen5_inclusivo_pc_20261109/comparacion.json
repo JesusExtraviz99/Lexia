@@ -1,0 +1,166 @@
+{
+  "status": "replay_only_no_new_inference",
+  "configs": {
+    "original": [
+      12,
+      true
+    ],
+    "local5_global": [
+      6,
+      true
+    ],
+    "local5_sin_global": [
+      6,
+      false
+    ]
+  },
+  "sessions": [
+    {
+      "file": "resultados\\directo_local\\c4d75d9e8e760d2ec2ecbe6c.json",
+      "sha256": "1db189847314a8dea94a601a86580a36cfaa8825fa3debe01390de091d074dff",
+      "model": "canary_v2",
+      "updates": 74,
+      "variants": {
+        "original": {
+          "final": 56,
+          "backwards": 1,
+          "forward_jumps_gt1": 8,
+          "changes": []
+        },
+        "local5_global": {
+          "final": 56,
+          "backwards": 1,
+          "forward_jumps_gt1": 8,
+          "changes": []
+        },
+        "local5_sin_global": {
+          "final": 56,
+          "backwards": 1,
+          "forward_jumps_gt1": 8,
+          "changes": []
+        }
+      }
+    },
+    {
+      "file": "resultados\\directo_local\\10a0adb827d75fa893c0fc70.json",
+      "sha256": "f548788cfe551b0356a56d7ab458cf7f02e166bc0abb1c648a826f6ea30db001",
+      "model": "parakeet",
+      "updates": 104,
+      "variants": {
+        "original": {
+          "final": 56,
+          "backwards": 1,
+          "forward_jumps_gt1": 5,
+          "changes": []
+        },
+        "local5_global": {
+          "final": 56,
+          "backwards": 1,
+          "forward_jumps_gt1": 5,
+          "changes": []
+        },
+        "local5_sin_global": {
+          "final": 56,
+          "backwards": 1,
+          "forward_jumps_gt1": 5,
+          "changes": []
+        }
+      }
+    }
+  ],
+  "controls": [
+    {
+      "case": "avance normal",
+      "initial": 10,
+      "hypotheses": [
+        "nueve diez once",
+        "diez once doce"
+      ],
+      "expected_final": 12,
+      "traces": {
+        "original": [
+          11,
+          12
+        ],
+        "local5_global": [
+          11,
+          12
+        ],
+        "local5_sin_global": [
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "case": "relectura corta",
+      "initial": 12,
+      "hypotheses": [
+        "ocho nueve diez",
+        "nueve diez once"
+      ],
+      "expected_final": 11,
+      "traces": {
+        "original": [
+          10,
+          11
+        ],
+        "local5_global": [
+          10,
+          11
+        ],
+        "local5_sin_global": [
+          10,
+          11
+        ]
+      }
+    },
+    {
+      "case": "relectura lejana",
+      "initial": 20,
+      "hypotheses": [
+        "uno dos tres",
+        "uno dos dos tres",
+        "uno uno dos tres"
+      ],
+      "expected_final": 3,
+      "traces": {
+        "original": [
+          20,
+          20,
+          3
+        ],
+        "local5_global": [
+          20,
+          20,
+          3
+        ],
+        "local5_sin_global": [
+          20,
+          20,
+          20
+        ]
+      }
+    },
+    {
+      "case": "ocho palabras antiguas sin avance",
+      "initial": 12,
+      "hypotheses": [
+        "cinco seis siete ocho nueve diez once doce"
+      ],
+      "expected_final": 12,
+      "traces": {
+        "original": [
+          12
+        ],
+        "local5_global": [
+          12
+        ],
+        "local5_sin_global": [
+          12
+        ]
+      }
+    }
+  ],
+  "notice": "Cambios de posición no equivalen a mejoras sin referencia humana. Mismos textos ASR: no mide aceleración del modelo ni nueva latencia. El cuento no se introduce en el ASR."
+}

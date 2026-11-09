@@ -1,0 +1,1151 @@
+{
+  "date": "2026-11-06",
+  "partition": "test",
+  "selected": 2385,
+  "models": {
+    "xlsr": {
+      "model": {
+        "name": "xlsr",
+        "repo": "jonatasgrosman/wav2vec2-large-xlsr-53-spanish",
+        "revision": "96d7e9b4e4a78af515a3c6d3cee7c0826045d276",
+        "files": [
+          {
+            "file": "README.md",
+            "sha256": "887069eccb1eb58f6c167dbbf6662727c341956a5f5120d5ab7a4207b5fd4aa9",
+            "bytes": 5629,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "config.json",
+            "sha256": "39ffe954848d5161270eef4378a17a538bffeefc310482f409ec099f7fceaa5b",
+            "bytes": 1531,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "preprocessor_config.json",
+            "sha256": "ca5999a45e98bb76ea87a461ba28a23ad32a5bb9f733b8e0f6546ff38b6c612d",
+            "bytes": 262,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "pytorch_model.bin",
+            "sha256": "41c110e55d2eac8c79486ad87dbe8f9527ed034fe087a6adf03c891eeba914c1",
+            "bytes": 1262101911,
+            "published_lfs_sha256": "41c110e55d2eac8c79486ad87dbe8f9527ed034fe087a6adf03c891eeba914c1"
+          },
+          {
+            "file": "vocab.json",
+            "sha256": "7aea8bcd8ba1c176f12cc96c1e8f45247548f4de3218106f7352e3d833cfafdc",
+            "bytes": 380,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "special_tokens_map.json",
+            "sha256": "bb7068de1150661a10b55f9e4b12a0e77af8bf91f5e45e1b58afaf1d0e17f675",
+            "bytes": 85,
+            "published_lfs_sha256": null
+          }
+        ]
+      },
+      "parameters": {
+        "precision": "float32",
+        "batch_size": 1,
+        "vad": false,
+        "denoise": false,
+        "language": "es",
+        "decoder": "CTC greedy without external LM"
+      },
+      "versions": {
+        "numpy": "2.2.6",
+        "soundfile": "0.13.1",
+        "psutil": "7.2.2",
+        "jiwer": "4.0.0",
+        "torch": "2.7.1+cu118",
+        "transformers": "5.20.2",
+        "accelerate": "1.15.0",
+        "librosa": "0.11.0",
+        "huggingface-hub": "2.4.0"
+      },
+      "normalization": "NFC; minúsculas; puntuación Unicode sustituida por espacios; espacios colapsados; conserva tildes, ñ y números. CER incluye espacios.",
+      "script_sha256": "a751f6c0651487fd83d2ad242251ce31326110d9d7a30374ecf982247dfeb620",
+      "adapter_sha256": "5404b70b550f523f30f4d9b0d8393777e56376a43b80c05f7ef15d44bc3eefb9",
+      "batch_size": 1,
+      "cpu_threads_requested": 4,
+      "external_vad": false,
+      "denoise": false,
+      "resample": false,
+      "external_chunking": false
+    },
+    "parakeet": {
+      "model": {
+        "name": "parakeet",
+        "repo": "nvidia/parakeet-tdt-0.6b-v3",
+        "revision": "541d1f99c6b0c3cd0b11a95167540bb8edefd82b",
+        "files": [
+          {
+            "file": "README.md",
+            "sha256": "7a4306a43f395e3a716e77f1d81c03db18a0a355d7b566bb1d6307213ba0302b",
+            "bytes": 42888,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "config.json",
+            "sha256": "e747b85e1bdfd300c8b8ac63bac8dd5221f8fe9bc275b48d06c735fcd6971b6e",
+            "bytes": 1153,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "generation_config.json",
+            "sha256": "b141de6ec6d7f982ece13f98f604e3fe1807ea9c0e839185d0ab7064604209d0",
+            "bytes": 289,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "model.safetensors",
+            "sha256": "3a2026366188c8c68598edbbff92f8d11590a08e0ae2e6775544e7b07d6a5e11",
+            "bytes": 2508311120,
+            "published_lfs_sha256": "3a2026366188c8c68598edbbff92f8d11590a08e0ae2e6775544e7b07d6a5e11"
+          },
+          {
+            "file": "processor_config.json",
+            "sha256": "8346a93a3b987fa1dec57a78f045cd0817d21786589a5a096b41a57a446fd1d7",
+            "bytes": 392,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "tokenizer.json",
+            "sha256": "bd321b096832a3f270bd3b2a88823957920f1a5c5ada71114a26ea729d0cbe91",
+            "bytes": 1159960,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "tokenizer_config.json",
+            "sha256": "0b2fe0037599ee335f0b972fa682bf0ece74e4ccfec755cb7daa3405d3d3e874",
+            "bytes": 290,
+            "published_lfs_sha256": null
+          }
+        ]
+      },
+      "parameters": {
+        "precision": "float32",
+        "batch_size": 1,
+        "vad": false,
+        "denoise": false,
+        "language": "multilingual model, automatic",
+        "decoder": "Transformers TDT generate",
+        "max_new_tokens": 512
+      },
+      "versions": {
+        "numpy": "2.2.6",
+        "soundfile": "0.13.1",
+        "psutil": "7.2.2",
+        "jiwer": "4.0.0",
+        "torch": "2.7.1+cu118",
+        "transformers": "5.20.2",
+        "accelerate": "1.15.0",
+        "librosa": "0.11.0",
+        "huggingface-hub": "2.4.0"
+      },
+      "normalization": "NFC; minúsculas; puntuación Unicode sustituida por espacios; espacios colapsados; conserva tildes, ñ y números. CER incluye espacios.",
+      "script_sha256": "a751f6c0651487fd83d2ad242251ce31326110d9d7a30374ecf982247dfeb620",
+      "adapter_sha256": "5404b70b550f523f30f4d9b0d8393777e56376a43b80c05f7ef15d44bc3eefb9",
+      "batch_size": 1,
+      "cpu_threads_requested": 4,
+      "external_vad": false,
+      "denoise": false,
+      "resample": false,
+      "external_chunking": false
+    },
+    "whisper": {
+      "model": {
+        "name": "whisper",
+        "repo": "Systran/faster-whisper-small",
+        "revision": "536b0662742c02347bc0e980a01041f333bce120",
+        "files": [
+          {
+            "file": "README.md",
+            "sha256": "329373481008c7c38654aff8ecdcf0163c211557cc7ba8e2ef6f2f84b4f75ec8",
+            "bytes": 1998,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "config.json",
+            "sha256": "b55496ac7940a7ae47d2c01eab40edfd8701feec1229d9cce3b40014383fb828",
+            "bytes": 2370,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "model.bin",
+            "sha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+            "bytes": 483546902,
+            "published_lfs_sha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671"
+          },
+          {
+            "file": "tokenizer.json",
+            "sha256": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab",
+            "bytes": 2203239,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "vocabulary.txt",
+            "sha256": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913",
+            "bytes": 459861,
+            "published_lfs_sha256": null
+          }
+        ]
+      },
+      "parameters": {
+        "precision": "float32",
+        "batch_size": 1,
+        "vad": false,
+        "denoise": false,
+        "language": "es",
+        "decoder": "CTranslate2 Whisper",
+        "beam_size": 5,
+        "temperature": 0,
+        "condition_on_previous_text": false,
+        "word_timestamps": true
+      },
+      "versions": {
+        "numpy": "2.2.6",
+        "soundfile": "0.13.1",
+        "psutil": "7.2.2",
+        "jiwer": "4.0.0",
+        "faster-whisper": "1.2.1",
+        "ctranslate2": "4.4.0",
+        "av": "16.0.1",
+        "huggingface-hub": "2.4.0"
+      },
+      "normalization": "NFC; minúsculas; puntuación Unicode sustituida por espacios; espacios colapsados; conserva tildes, ñ y números. CER incluye espacios.",
+      "script_sha256": "a751f6c0651487fd83d2ad242251ce31326110d9d7a30374ecf982247dfeb620",
+      "adapter_sha256": "5404b70b550f523f30f4d9b0d8393777e56376a43b80c05f7ef15d44bc3eefb9",
+      "batch_size": 1,
+      "cpu_threads_requested": 4,
+      "external_vad": false,
+      "denoise": false,
+      "resample": false,
+      "external_chunking": false
+    },
+    "crisper": {
+      "model": {
+        "name": "crisper",
+        "repo": "nyralabs/CrisperWhisper2.0_small",
+        "revision": "bcaecf0a584a1f600d8897fe6032b9e2e56429a7",
+        "files": [
+          {
+            "file": "added_tokens.json",
+            "sha256": "54e87fd086baa530e05082c11feacf9df5439453c5fae279611f3099ec844dc5",
+            "bytes": 35275,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "config.json",
+            "sha256": "58cdd5607712143b7c6ed474380627732ab4eadb6dbcf60a85c9b32cba625de2",
+            "bytes": 1344,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "generation_config.json",
+            "sha256": "c8c487bc35b117a94196e9d533def05e83c65c747b19350bc1773f59f3562085",
+            "bytes": 3834,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "LICENSE.md",
+            "sha256": "42f43bf4dc72ef422f91f6ca143f4514e21a68b353940d99091c1addcd0aee79",
+            "bytes": 17784,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "merges.txt",
+            "sha256": "2df2990a395e35e8dfbc7511e08c12d56018d8d04691e0133e5d63b21e154dc6",
+            "bytes": 493869,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "model.safetensors",
+            "sha256": "ecfcbd3d5dddebf9c79cd9ae774b6f6a5d68a500cdbe1b196ce5b2085912ebdf",
+            "bytes": 483575002,
+            "published_lfs_sha256": "ecfcbd3d5dddebf9c79cd9ae774b6f6a5d68a500cdbe1b196ce5b2085912ebdf"
+          },
+          {
+            "file": "normalizer.json",
+            "sha256": "bf1c507dc8724ca9cf9903640dacfb69dae2f00edee4f21ceba106a7392f26dd",
+            "bytes": 52666,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "preprocessor_config.json",
+            "sha256": "994838f1fa6462c8b9b3c90edada831f11f3dd8b4664634e18f4694d005c9dbf",
+            "bytes": 356,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "README.md",
+            "sha256": "ddc82a301a1b59035eefcc1a8b2ec90d56257104df7365b00493c58135a6b029",
+            "bytes": 10974,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "special_tokens_map.json",
+            "sha256": "e67ae3a0aaa99abcd9f187138e12db1f65c16a14761c50ef10eef2c174a7a691",
+            "bytes": 2194,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "tokenizer.json",
+            "sha256": "567da8c8a5b7df02555deecfcb3a7f6acd315844dc5e2fde883fe7ced8467317",
+            "bytes": 3936954,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "tokenizer_config.json",
+            "sha256": "5fa089926c8c2535c622d09a5992fb57c63cbc3514e18cf40bc535bee2a23827",
+            "bytes": 288127,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "vocab.json",
+            "sha256": "8f680bba319e01a653d2e8a5dbc17a9157179e0576e6ce74ce0c06356c6e24f9",
+            "bytes": 835550,
+            "published_lfs_sha256": null
+          }
+        ]
+      },
+      "parameters": {
+        "precision": "float32",
+        "batch_size": 1,
+        "vad": false,
+        "denoise": false,
+        "language": "es",
+        "decoder": "Crisper Transformers verbatim",
+        "mode": "verbatim",
+        "max_new_tokens": 256,
+        "temperature_fallback": true,
+        "hallucination_mitigation": true,
+        "word_timestamps": true,
+        "longform_strategy": "continuation",
+        "chunk_duration": 30.0,
+        "stride": 26.0,
+        "context_words": 12,
+        "drop_words": 2,
+        "timestamp_aware_drop": true,
+        "early_eot_recovery": true
+      },
+      "versions": {
+        "numpy": "2.2.6",
+        "soundfile": "0.13.1",
+        "psutil": "7.2.2",
+        "jiwer": "4.0.0",
+        "torch": "2.7.1+cu118",
+        "transformers": "5.20.2",
+        "crisperwhisper": "2.0.3",
+        "huggingface-hub": "2.4.0"
+      },
+      "normalization": "NFC; minúsculas; puntuación Unicode sustituida por espacios; espacios colapsados; conserva tildes, ñ y números. CER incluye espacios.",
+      "script_sha256": "a751f6c0651487fd83d2ad242251ce31326110d9d7a30374ecf982247dfeb620",
+      "adapter_sha256": "5404b70b550f523f30f4d9b0d8393777e56376a43b80c05f7ef15d44bc3eefb9",
+      "batch_size": 1,
+      "cpu_threads_requested": 4,
+      "external_vad": false,
+      "denoise": false,
+      "resample": false,
+      "external_chunking": false
+    },
+    "vosk": {
+      "model": {
+        "name": "vosk",
+        "url": "https://alphacephei.com/vosk/models/vosk-model-small-es-0.42.zip",
+        "revision": "small-es-0.42",
+        "files": [
+          {
+            "file": "README",
+            "sha256": "94132a6f5334701d8c0b4d25ef6890f74972909d8824c6c5974c41bca0542d88",
+            "bytes": 483,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "am/final.mdl",
+            "sha256": "ff9508e4db01d2e2375da3887973f94ef8057ee85411f4cb10a5c174ce7a4425",
+            "bytes": 16098256,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "conf/mfcc.conf",
+            "sha256": "e3c6cae9faa5da8a5a952cede8729af15166f325bb512789ec1ad6c0fd99e97f",
+            "bytes": 155,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "conf/model.conf",
+            "sha256": "330c1b50575d0c1c0402276c9cdc7a589ebd04de5d3de17695dd7e6db701da54",
+            "bytes": 289,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "graph/Gr.fst",
+            "sha256": "0ddc8aacbc80b2e8d470060a429eb26706b2ae1d32615a499befd60cc86a0304",
+            "bytes": 21818215,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "graph/HCLr.fst",
+            "sha256": "ce42fba42b99076f16bfe2892c3cab0936fb7409edba95c545be81c74f2f59e5",
+            "bytes": 12226498,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "graph/disambig_tid.int",
+            "sha256": "de29a2e1ae927c7207d93e93687e25242f7dcdcc9d7246b092364427aca54c24",
+            "bytes": 50,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "graph/phones/word_boundary.int",
+            "sha256": "581390c44961af08d79afc2b36ac41289b219810c85c049ddf5c6de0442ea92a",
+            "bytes": 1131,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "ivector/final.dubm",
+            "sha256": "71b6830ae8cbef8764ccc9a6c65943a0e80f28b32982ae4e32f2d1ff15fadf14",
+            "bytes": 168048,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "ivector/final.ie",
+            "sha256": "601057024fc8292ed8c8bd82686f254c390868024b20c4978dfc37d82529ba05",
+            "bytes": 9927287,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "ivector/final.mat",
+            "sha256": "81a445f1589de2251562879efd0ca55d2954d937d4ae5f653aa3f11e6fdea5ef",
+            "bytes": 44975,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "ivector/global_cmvn.stats",
+            "sha256": "489e52a6f34fdf3dac2293784e6e096803c5b5387fe8ad9fbdcd03a65be8917c",
+            "bytes": 1081,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "ivector/online_cmvn.conf",
+            "sha256": "a2f3571754b64297cb7efb2e7ca3df61995c5a45fcbb97188f90613552bb2dfe",
+            "bytes": 95,
+            "published_lfs_sha256": null
+          },
+          {
+            "file": "ivector/splice.conf",
+            "sha256": "9f0c5f7c82d18eaf25d8bce470efa9f7741f88411fe428774bc0a9bb69a24756",
+            "bytes": 35,
+            "published_lfs_sha256": null
+          }
+        ]
+      },
+      "parameters": {
+        "precision": "native Kaldi; no user float32 claim",
+        "decoder": "KaldiRecognizer native graph",
+        "batch_size": 1,
+        "endpointing": "native defaults",
+        "words": true,
+        "vad": "native endpointing, no external trimming",
+        "denoise": false,
+        "language": "es",
+        "pcm_conversion": "float32 to clipped rounded signed PCM16",
+        "chunk_samples": 4000
+      },
+      "versions": {
+        "numpy": "2.2.6",
+        "soundfile": "0.13.1",
+        "psutil": "7.2.2",
+        "jiwer": "4.0.0",
+        "vosk": "0.3.45"
+      },
+      "normalization": "NFC; minúsculas; puntuación Unicode sustituida por espacios; espacios colapsados; conserva tildes, ñ y números. CER incluye espacios.",
+      "script_sha256": "a751f6c0651487fd83d2ad242251ce31326110d9d7a30374ecf982247dfeb620",
+      "adapter_sha256": "5404b70b550f523f30f4d9b0d8393777e56376a43b80c05f7ef15d44bc3eefb9",
+      "batch_size": 1,
+      "cpu_threads_requested": 4,
+      "external_vad": false,
+      "denoise": false,
+      "resample": false,
+      "external_chunking": false
+    },
+    "moonshine_tiny_es": {
+      "model": {
+        "name": "moonshine_tiny_es",
+        "repo": "moonshine-ai/moonshine-streaming-tiny-es",
+        "revision": "215dc49e20d2efcfc438cd788b02920639bd85a0",
+        "files": [
+          {
+            "file": "README.md",
+            "bytes": 6762,
+            "published_lfs_sha256": null,
+            "sha256": "7c78d232ddcce04362f50e50cfbe5a78e87e593b09e1ce64a5f2691ee4ecff46"
+          },
+          {
+            "file": "config.json",
+            "bytes": 1495,
+            "published_lfs_sha256": null,
+            "sha256": "6c49ec398e57e1c3146c77772089287746fe3f6209ad2579c70bc8e8eb304424"
+          },
+          {
+            "file": "generation_config.json",
+            "bytes": 246,
+            "published_lfs_sha256": null,
+            "sha256": "3e5f0aa2b32615a4023d0a08cccb7c1ec292aba9a8d8f6f4886df2a769af31b0"
+          },
+          {
+            "file": "model.safetensors",
+            "bytes": 108079716,
+            "published_lfs_sha256": "27b02469b6de2f2ba2f7c6fb6712061a59f00ad1ea3d807d26f60d82bb701ccf",
+            "sha256": "27b02469b6de2f2ba2f7c6fb6712061a59f00ad1ea3d807d26f60d82bb701ccf"
+          },
+          {
+            "file": "preprocessor_config.json",
+            "bytes": 195,
+            "published_lfs_sha256": null,
+            "sha256": "859e62520a4e44be5bf9559205898ec7adfd2952bdc4f4e62ea724ac6ba460eb"
+          },
+          {
+            "file": "processor_config.json",
+            "bytes": 159,
+            "published_lfs_sha256": null,
+            "sha256": "a2325cec2c0f66ba9eadf11b0bc77930b25fa1af57e7c9e4fbbcf0cd3e620bf8"
+          },
+          {
+            "file": "special_tokens_map.json",
+            "bytes": 96,
+            "published_lfs_sha256": null,
+            "sha256": "7755e8a96f77dea5458262fb120decdd6a654be977f3540bc781a0a3443f5974"
+          },
+          {
+            "file": "tokenizer.json",
+            "bytes": 476245,
+            "published_lfs_sha256": null,
+            "sha256": "e8dae7af9c2b6e5a1f413819db1eb70837ff4cf53b5a482a37f2ffc608b8b977"
+          },
+          {
+            "file": "tokenizer_config.json",
+            "bytes": 172,
+            "published_lfs_sha256": null,
+            "sha256": "93bb19c92de5c3d03e4a424ba033b2a81a32bdca6dc6f6dba176934dd8a9c6be"
+          }
+        ]
+      },
+      "parameters": {
+        "precision": "float32",
+        "batch_size": 1,
+        "vad": false,
+        "denoise": false,
+        "language": "es",
+        "decoder": "Transformers generate",
+        "beams": 1,
+        "max_new_tokens": "duration*6.5+2",
+        "word_timestamps": false,
+        "source_language_conditioning": false,
+        "notice": "Offline por clip completo, sin reglas del seguidor. Whisper usa Transformers y no CT2; tiempos de backend no equivalentes."
+      },
+      "versions": {
+        "numpy": "2.2.6",
+        "soundfile": "0.13.1",
+        "psutil": "7.2.2",
+        "jiwer": "4.0.0",
+        "torch": "2.7.1+cu118",
+        "torchaudio": "2.7.1+cu118",
+        "transformers": "5.20.2",
+        "accelerate": "1.15.0",
+        "librosa": "0.11.0",
+        "huggingface-hub": "2.4.0"
+      },
+      "normalization": "NFC; minúsculas; puntuación Unicode sustituida por espacios; espacios colapsados; conserva tildes, ñ y números. CER incluye espacios.",
+      "script_sha256": "a751f6c0651487fd83d2ad242251ce31326110d9d7a30374ecf982247dfeb620",
+      "adapter_sha256": "2b9d3795d10fd3664f385f22f8d441015ca046c056b4cb115dc255c9be50672a",
+      "batch_size": 1,
+      "cpu_threads_requested": 4,
+      "external_vad": false,
+      "denoise": false,
+      "resample": false,
+      "external_chunking": false
+    },
+    "moonshine_small_es": {
+      "model": {
+        "name": "moonshine_small_es",
+        "repo": "moonshine-ai/moonshine-streaming-small-es",
+        "revision": "8cb0974f29ca24d6b645518c430efc8c57cd0073",
+        "files": [
+          {
+            "file": "README.md",
+            "bytes": 6348,
+            "published_lfs_sha256": null,
+            "sha256": "5ecd5cf61d73841f2ef94be72294dd9adba05753201d9d2e36575b2bd2d20db9"
+          },
+          {
+            "file": "config.json",
+            "bytes": 1653,
+            "published_lfs_sha256": null,
+            "sha256": "bfd932c804df9cde662468a8f933763cd5174bfed2c043b2440b4daaa702efbd"
+          },
+          {
+            "file": "generation_config.json",
+            "bytes": 246,
+            "published_lfs_sha256": null,
+            "sha256": "3e5f0aa2b32615a4023d0a08cccb7c1ec292aba9a8d8f6f4886df2a769af31b0"
+          },
+          {
+            "file": "model.safetensors",
+            "bytes": 451519204,
+            "published_lfs_sha256": "1ee1bc5a07ff032114a1842c07cb4f7620270eca555a5369660e35efefa7d653",
+            "sha256": "1ee1bc5a07ff032114a1842c07cb4f7620270eca555a5369660e35efefa7d653"
+          },
+          {
+            "file": "preprocessor_config.json",
+            "bytes": 195,
+            "published_lfs_sha256": null,
+            "sha256": "859e62520a4e44be5bf9559205898ec7adfd2952bdc4f4e62ea724ac6ba460eb"
+          },
+          {
+            "file": "processor_config.json",
+            "bytes": 159,
+            "published_lfs_sha256": null,
+            "sha256": "a2325cec2c0f66ba9eadf11b0bc77930b25fa1af57e7c9e4fbbcf0cd3e620bf8"
+          },
+          {
+            "file": "special_tokens_map.json",
+            "bytes": 96,
+            "published_lfs_sha256": null,
+            "sha256": "7755e8a96f77dea5458262fb120decdd6a654be977f3540bc781a0a3443f5974"
+          },
+          {
+            "file": "tokenizer.json",
+            "bytes": 476245,
+            "published_lfs_sha256": null,
+            "sha256": "e8dae7af9c2b6e5a1f413819db1eb70837ff4cf53b5a482a37f2ffc608b8b977"
+          },
+          {
+            "file": "tokenizer_config.json",
+            "bytes": 172,
+            "published_lfs_sha256": null,
+            "sha256": "93bb19c92de5c3d03e4a424ba033b2a81a32bdca6dc6f6dba176934dd8a9c6be"
+          }
+        ]
+      },
+      "parameters": {
+        "precision": "float32",
+        "batch_size": 1,
+        "vad": false,
+        "denoise": false,
+        "language": "es",
+        "decoder": "Transformers generate",
+        "beams": 1,
+        "max_new_tokens": "duration*6.5+2",
+        "word_timestamps": false,
+        "source_language_conditioning": false,
+        "notice": "Offline por clip completo, sin reglas del seguidor. Whisper usa Transformers y no CT2; tiempos de backend no equivalentes."
+      },
+      "versions": {
+        "numpy": "2.2.6",
+        "soundfile": "0.13.1",
+        "psutil": "7.2.2",
+        "jiwer": "4.0.0",
+        "torch": "2.7.1+cu118",
+        "torchaudio": "2.7.1+cu118",
+        "transformers": "5.20.2",
+        "accelerate": "1.15.0",
+        "librosa": "0.11.0",
+        "huggingface-hub": "2.4.0"
+      },
+      "normalization": "NFC; minúsculas; puntuación Unicode sustituida por espacios; espacios colapsados; conserva tildes, ñ y números. CER incluye espacios.",
+      "script_sha256": "a751f6c0651487fd83d2ad242251ce31326110d9d7a30374ecf982247dfeb620",
+      "adapter_sha256": "2b9d3795d10fd3664f385f22f8d441015ca046c056b4cb115dc255c9be50672a",
+      "batch_size": 1,
+      "cpu_threads_requested": 4,
+      "external_vad": false,
+      "denoise": false,
+      "resample": false,
+      "external_chunking": false
+    },
+    "granite_turboctc": {
+      "model": {
+        "name": "granite_turboctc",
+        "repo": "ibm-granite/granite-speech-5.0-470m-turboctc",
+        "revision": "1dd23f46f6d4e6eae2531982ba2e33220086dd97",
+        "files": [
+          {
+            "file": "README.md",
+            "bytes": 9889,
+            "published_lfs_sha256": null,
+            "sha256": "5a7f12bfee3bb82051df616fe55bae0fd987b43a6106c91c8ce0c006b9c07f62"
+          },
+          {
+            "file": "config.json",
+            "bytes": 921,
+            "published_lfs_sha256": null,
+            "sha256": "aabd64a2da736a1a1c21237c896b71628f6dd7364f1f5ec8a77f5e04b3ef1011"
+          },
+          {
+            "file": "generation_config.json",
+            "bytes": 153,
+            "published_lfs_sha256": null,
+            "sha256": "ad32e8b87734e621ede4a52e64072a90b42b1599973a7c008efc1268541ea034"
+          },
+          {
+            "file": "model.safetensors",
+            "bytes": 946311576,
+            "published_lfs_sha256": "5b569c3744c42a9172ac976881539926b66176d03fbaaa3c51b5d2960067f6fc",
+            "sha256": "5b569c3744c42a9172ac976881539926b66176d03fbaaa3c51b5d2960067f6fc"
+          },
+          {
+            "file": "processor_config.json",
+            "bytes": 430,
+            "published_lfs_sha256": null,
+            "sha256": "3d7c14d3ed7a5218b2fd6797eaa5b3aa615c681938bd1734a510d7a6f8c1b9fb"
+          },
+          {
+            "file": "tokenizer.json",
+            "bytes": 1699784,
+            "published_lfs_sha256": null,
+            "sha256": "a1c3ca763ce0690faf0df3456365358547acfdf766122c9e4a69be8e8708042e"
+          },
+          {
+            "file": "tokenizer_config.json",
+            "bytes": 223,
+            "published_lfs_sha256": null,
+            "sha256": "2f61ece3468bf7ca7a1b6dd3fd5b809814315bea9c298feea035fda4931b9f02"
+          }
+        ]
+      },
+      "parameters": {
+        "precision": "float32",
+        "batch_size": 1,
+        "vad": false,
+        "denoise": false,
+        "language": "es",
+        "decoder": "CTC greedy",
+        "beams": 1,
+        "max_new_tokens": null,
+        "word_timestamps": false,
+        "source_language_conditioning": false,
+        "notice": "Offline por clip completo, sin reglas del seguidor. Whisper usa Transformers y no CT2; tiempos de backend no equivalentes."
+      },
+      "versions": {
+        "numpy": "2.2.6",
+        "soundfile": "0.13.1",
+        "psutil": "7.2.2",
+        "jiwer": "4.0.0",
+        "torch": "2.7.1+cu118",
+        "torchaudio": "2.7.1+cu118",
+        "transformers": "5.20.2",
+        "accelerate": "1.15.0",
+        "librosa": "0.11.0",
+        "huggingface-hub": "2.4.0"
+      },
+      "normalization": "NFC; minúsculas; puntuación Unicode sustituida por espacios; espacios colapsados; conserva tildes, ñ y números. CER incluye espacios.",
+      "script_sha256": "a751f6c0651487fd83d2ad242251ce31326110d9d7a30374ecf982247dfeb620",
+      "adapter_sha256": "2b9d3795d10fd3664f385f22f8d441015ca046c056b4cb115dc255c9be50672a",
+      "batch_size": 1,
+      "cpu_threads_requested": 4,
+      "external_vad": false,
+      "denoise": false,
+      "resample": false,
+      "external_chunking": false
+    },
+    "qwen_asr_06b": {
+      "model": {
+        "name": "qwen_asr_06b",
+        "repo": "Qwen/Qwen3-ASR-0.6B-hf",
+        "revision": "7f1569a48a89f3e3f4dc3a5c9d28bddd903bc76c",
+        "files": [
+          {
+            "file": "README.md",
+            "bytes": 16538,
+            "published_lfs_sha256": null,
+            "sha256": "742006d0f99ce6475b1c5e7b66e4a2f166cce836dd7ce3d7f20707252859195a"
+          },
+          {
+            "file": "chat_template.jinja",
+            "bytes": 1434,
+            "published_lfs_sha256": null,
+            "sha256": "f50e6b694fbf4a683206e37869990d68333fe95d285730f084c838a34b0d98c2"
+          },
+          {
+            "file": "config.json",
+            "bytes": 2398,
+            "published_lfs_sha256": null,
+            "sha256": "9eecf6f1b383e343889c2e6010e632590fa57d4bc678e151c7d6a160a0dfb04a"
+          },
+          {
+            "file": "generation_config.json",
+            "bytes": 165,
+            "published_lfs_sha256": null,
+            "sha256": "9939fc9388b79bd70757f938b87381e817173d6a6158f5af6506c0b73e775c3c"
+          },
+          {
+            "file": "model.safetensors",
+            "bytes": 1564928088,
+            "published_lfs_sha256": "d3f212dd20abecd315d830bc54ae3865e56ebfc3276484e57b771288ba27fd35",
+            "sha256": "d3f212dd20abecd315d830bc54ae3865e56ebfc3276484e57b771288ba27fd35"
+          },
+          {
+            "file": "processor_config.json",
+            "bytes": 487,
+            "published_lfs_sha256": null,
+            "sha256": "bc0b230081b44e629dd5b9045b78495615c1831b4b9f4cffe97bd37e82a6156a"
+          },
+          {
+            "file": "tokenizer.json",
+            "bytes": 11429653,
+            "published_lfs_sha256": "fe1fad59be22a41ee293363fcf95fdedbc7c93f3b49270b1d2e18bd1399a7a05",
+            "sha256": "fe1fad59be22a41ee293363fcf95fdedbc7c93f3b49270b1d2e18bd1399a7a05"
+          },
+          {
+            "file": "tokenizer_config.json",
+            "bytes": 998,
+            "published_lfs_sha256": null,
+            "sha256": "945e980986de2ca7768f3326bfdbb4fbea3406f972b8ae0be233089f2b253c11"
+          }
+        ]
+      },
+      "parameters": {
+        "precision": "float32",
+        "batch_size": 1,
+        "vad": false,
+        "denoise": false,
+        "language": "es",
+        "decoder": "Transformers generate",
+        "beams": 1,
+        "max_new_tokens": 512,
+        "word_timestamps": false,
+        "source_language_conditioning": true,
+        "notice": "Offline por clip completo, sin reglas del seguidor. Whisper usa Transformers y no CT2; tiempos de backend no equivalentes."
+      },
+      "versions": {
+        "numpy": "2.2.6",
+        "soundfile": "0.13.1",
+        "psutil": "7.2.2",
+        "jiwer": "4.0.0",
+        "torch": "2.7.1+cu118",
+        "torchaudio": "2.7.1+cu118",
+        "transformers": "5.20.2",
+        "accelerate": "1.15.0",
+        "librosa": "0.11.0",
+        "huggingface-hub": "2.4.0"
+      },
+      "normalization": "NFC; minúsculas; puntuación Unicode sustituida por espacios; espacios colapsados; conserva tildes, ñ y números. CER incluye espacios.",
+      "script_sha256": "a751f6c0651487fd83d2ad242251ce31326110d9d7a30374ecf982247dfeb620",
+      "adapter_sha256": "2b9d3795d10fd3664f385f22f8d441015ca046c056b4cb115dc255c9be50672a",
+      "batch_size": 1,
+      "cpu_threads_requested": 4,
+      "external_vad": false,
+      "denoise": false,
+      "resample": false,
+      "external_chunking": false
+    },
+    "qwen_asr_17b": {
+      "model": {
+        "name": "qwen_asr_17b",
+        "repo": "Qwen/Qwen3-ASR-1.7B-hf",
+        "revision": "bcd2b5b7f32b480ab5790554cfa8347f246a14f3",
+        "files": [
+          {
+            "file": "README.md",
+            "bytes": 16538,
+            "published_lfs_sha256": null,
+            "sha256": "427b9a6a4a32477e9df8790ef92f5cbcde790ee148ee5dd8c36f77d9556998a2"
+          },
+          {
+            "file": "chat_template.jinja",
+            "bytes": 1434,
+            "published_lfs_sha256": null,
+            "sha256": "f50e6b694fbf4a683206e37869990d68333fe95d285730f084c838a34b0d98c2"
+          },
+          {
+            "file": "config.json",
+            "bytes": 2399,
+            "published_lfs_sha256": null,
+            "sha256": "117ac8e63e2af7cae3665e5a632d6eb03f5f384915519ceb6403c15ec6533f63"
+          },
+          {
+            "file": "generation_config.json",
+            "bytes": 165,
+            "published_lfs_sha256": null,
+            "sha256": "9939fc9388b79bd70757f938b87381e817173d6a6158f5af6506c0b73e775c3c"
+          },
+          {
+            "file": "model.safetensors",
+            "bytes": 4076193080,
+            "published_lfs_sha256": "2db53c7d81bd9b8cbc6a074e89be2c968a0d373fb4ee68bb1b1e14f7042dfee1",
+            "sha256": "2db53c7d81bd9b8cbc6a074e89be2c968a0d373fb4ee68bb1b1e14f7042dfee1"
+          },
+          {
+            "file": "processor_config.json",
+            "bytes": 487,
+            "published_lfs_sha256": null,
+            "sha256": "bc0b230081b44e629dd5b9045b78495615c1831b4b9f4cffe97bd37e82a6156a"
+          },
+          {
+            "file": "tokenizer.json",
+            "bytes": 11429653,
+            "published_lfs_sha256": "fe1fad59be22a41ee293363fcf95fdedbc7c93f3b49270b1d2e18bd1399a7a05",
+            "sha256": "fe1fad59be22a41ee293363fcf95fdedbc7c93f3b49270b1d2e18bd1399a7a05"
+          },
+          {
+            "file": "tokenizer_config.json",
+            "bytes": 998,
+            "published_lfs_sha256": null,
+            "sha256": "945e980986de2ca7768f3326bfdbb4fbea3406f972b8ae0be233089f2b253c11"
+          }
+        ]
+      },
+      "parameters": {
+        "precision": "float32",
+        "batch_size": 1,
+        "vad": false,
+        "denoise": false,
+        "language": "es",
+        "decoder": "Transformers generate",
+        "beams": 1,
+        "max_new_tokens": 512,
+        "word_timestamps": false,
+        "source_language_conditioning": true,
+        "notice": "Offline por clip completo, sin reglas del seguidor. Whisper usa Transformers y no CT2; tiempos de backend no equivalentes."
+      },
+      "versions": {
+        "numpy": "2.2.6",
+        "soundfile": "0.13.1",
+        "psutil": "7.2.2",
+        "jiwer": "4.0.0",
+        "torch": "2.7.1+cu118",
+        "torchaudio": "2.7.1+cu118",
+        "transformers": "5.20.2",
+        "accelerate": "1.15.0",
+        "librosa": "0.11.0",
+        "huggingface-hub": "2.4.0"
+      },
+      "normalization": "NFC; minúsculas; puntuación Unicode sustituida por espacios; espacios colapsados; conserva tildes, ñ y números. CER incluye espacios.",
+      "script_sha256": "a751f6c0651487fd83d2ad242251ce31326110d9d7a30374ecf982247dfeb620",
+      "adapter_sha256": "2b9d3795d10fd3664f385f22f8d441015ca046c056b4cb115dc255c9be50672a",
+      "batch_size": 1,
+      "cpu_threads_requested": 4,
+      "external_vad": false,
+      "denoise": false,
+      "resample": false,
+      "external_chunking": false
+    },
+    "canary_v2": {
+      "model": {
+        "name": "canary_v2",
+        "repo": "nvidia/canary-1b-v2",
+        "revision": "d455706339a6b32e1aa40f82c713a482a0c938e2",
+        "files": [
+          {
+            "file": "README.md",
+            "bytes": 72381,
+            "published_lfs_sha256": null,
+            "sha256": "9a89d0bc0be172d66099b3a9ff3ecfdae72b5eeec3d048efde681c582ccaa047"
+          },
+          {
+            "file": "chat_template.jinja",
+            "bytes": 534,
+            "published_lfs_sha256": null,
+            "sha256": "5c06139c492bc95a9cf6ebe7e37aa4611af525485aeba32310dca560f8f1a78b"
+          },
+          {
+            "file": "config.json",
+            "bytes": 1591,
+            "published_lfs_sha256": null,
+            "sha256": "e6818410f7dd0a460a4f09324d5fb4ec76b64410416e1ce172e06658335b2aa2"
+          },
+          {
+            "file": "generation_config.json",
+            "bytes": 252,
+            "published_lfs_sha256": null,
+            "sha256": "e7c62fe7fbc09a036f7a2be62f02491c71720a5557c7d761f18262ed54191cb4"
+          },
+          {
+            "file": "model.safetensors",
+            "bytes": 3916173816,
+            "published_lfs_sha256": "4f6d381f6a939b95e9f8516212148b701e9b3805d26462c4c3e9e34f3d89b6f8",
+            "sha256": "4f6d381f6a939b95e9f8516212148b701e9b3805d26462c4c3e9e34f3d89b6f8"
+          },
+          {
+            "file": "processor_config.json",
+            "bytes": 362,
+            "published_lfs_sha256": null,
+            "sha256": "07936c62f5d52898d05fc0c78b632121413cebc35e194432c7230196f3638e4a"
+          },
+          {
+            "file": "tokenizer.json",
+            "bytes": 2189980,
+            "published_lfs_sha256": null,
+            "sha256": "286dd42a7b27e15332195df556c2df6d383bb4c4869774b055e1666a72e6bc64"
+          },
+          {
+            "file": "tokenizer_config.json",
+            "bytes": 328,
+            "published_lfs_sha256": null,
+            "sha256": "82126b51f23a52cfe5a9be05cf15d9b30e454693a72d1ed6f0a43f9292975843"
+          }
+        ]
+      },
+      "parameters": {
+        "precision": "float32",
+        "batch_size": 1,
+        "vad": false,
+        "denoise": false,
+        "language": "es",
+        "decoder": "Transformers generate",
+        "beams": 1,
+        "max_new_tokens": 512,
+        "word_timestamps": false,
+        "source_language_conditioning": true,
+        "notice": "Offline por clip completo, sin reglas del seguidor. Whisper usa Transformers y no CT2; tiempos de backend no equivalentes."
+      },
+      "versions": {
+        "numpy": "2.2.6",
+        "soundfile": "0.13.1",
+        "psutil": "7.2.2",
+        "jiwer": "4.0.0",
+        "torch": "2.7.1+cu118",
+        "torchaudio": "2.7.1+cu118",
+        "transformers": "5.20.2",
+        "accelerate": "1.15.0",
+        "librosa": "0.11.0",
+        "huggingface-hub": "2.4.0"
+      },
+      "normalization": "NFC; minúsculas; puntuación Unicode sustituida por espacios; espacios colapsados; conserva tildes, ñ y números. CER incluye espacios.",
+      "script_sha256": "a751f6c0651487fd83d2ad242251ce31326110d9d7a30374ecf982247dfeb620",
+      "adapter_sha256": "2b9d3795d10fd3664f385f22f8d441015ca046c056b4cb115dc255c9be50672a",
+      "batch_size": 1,
+      "cpu_threads_requested": 4,
+      "external_vad": false,
+      "denoise": false,
+      "resample": false,
+      "external_chunking": false
+    },
+    "whisper_turbo": {
+      "model": {
+        "name": "whisper_turbo",
+        "repo": "openai/whisper-large-v3-turbo",
+        "revision": "41f01f3fe87f28c78e2fbf8b568835947dd65ed9",
+        "files": [
+          {
+            "file": "README.md",
+            "bytes": 21196,
+            "published_lfs_sha256": null,
+            "sha256": "aaef74a740faca90fa1899c4233ebe17f2093b9846d0acf16d9131bf650e9585"
+          },
+          {
+            "file": "added_tokens.json",
+            "bytes": 34648,
+            "published_lfs_sha256": null,
+            "sha256": "3c51f66c4c21f9e126970078f11ae77a78c74aee8df606ee9daba86e467108e0"
+          },
+          {
+            "file": "config.json",
+            "bytes": 1256,
+            "published_lfs_sha256": null,
+            "sha256": "c5b526b3e3cd64cd8940dabb45e8ba726629e22d8ed389c29b552f9140daf04a"
+          },
+          {
+            "file": "generation_config.json",
+            "bytes": 3772,
+            "published_lfs_sha256": null,
+            "sha256": "cce11bfe3aaa6ae9e072ea2637caaec8795e68d9b67e655a5af16ee509681a4c"
+          },
+          {
+            "file": "merges.txt",
+            "bytes": 493869,
+            "published_lfs_sha256": null,
+            "sha256": "2df2990a395e35e8dfbc7511e08c12d56018d8d04691e0133e5d63b21e154dc6"
+          },
+          {
+            "file": "model.safetensors",
+            "bytes": 1617824864,
+            "published_lfs_sha256": "542566a422ae4f3fd23f1ba11add198fca01bbf82e66e6a2857b3f608b1eb9d1",
+            "sha256": "542566a422ae4f3fd23f1ba11add198fca01bbf82e66e6a2857b3f608b1eb9d1"
+          },
+          {
+            "file": "normalizer.json",
+            "bytes": 52666,
+            "published_lfs_sha256": null,
+            "sha256": "bf1c507dc8724ca9cf9903640dacfb69dae2f00edee4f21ceba106a7392f26dd"
+          },
+          {
+            "file": "preprocessor_config.json",
+            "bytes": 340,
+            "published_lfs_sha256": null,
+            "sha256": "7ccc62c6f2765af1f3b46c00c9b5894426835a05021c8b9c01eecb6dfb542711"
+          },
+          {
+            "file": "special_tokens_map.json",
+            "bytes": 2186,
+            "published_lfs_sha256": null,
+            "sha256": "baea4ea09372eb4fca86b4e4346139fd73cb807d5087e9de0948e971739c3e74"
+          },
+          {
+            "file": "tokenizer.json",
+            "bytes": 2710337,
+            "published_lfs_sha256": null,
+            "sha256": "297b13372ac43916285644fb9687add3cc62ee2a1adb60da3dc25cc94c1871fd"
+          },
+          {
+            "file": "tokenizer_config.json",
+            "bytes": 282843,
+            "published_lfs_sha256": null,
+            "sha256": "844b642c73a91359722f47b35705f7174686df33d252695d8572cf9ac03a6389"
+          },
+          {
+            "file": "vocab.json",
+            "bytes": 1036558,
+            "published_lfs_sha256": null,
+            "sha256": "e2aa043ef015641d363d8288e7c241c85e36a5c761fb303598e0710233344387"
+          }
+        ]
+      },
+      "parameters": {
+        "precision": "float32",
+        "batch_size": 1,
+        "vad": false,
+        "denoise": false,
+        "language": "es",
+        "decoder": "Transformers generate",
+        "beams": 5,
+        "max_new_tokens": 444,
+        "word_timestamps": false,
+        "source_language_conditioning": true,
+        "notice": "Offline por clip completo, sin reglas del seguidor. Whisper usa Transformers y no CT2; tiempos de backend no equivalentes."
+      },
+      "versions": {
+        "numpy": "2.2.6",
+        "soundfile": "0.13.1",
+        "psutil": "7.2.2",
+        "jiwer": "4.0.0",
+        "torch": "2.7.1+cu118",
+        "torchaudio": "2.7.1+cu118",
+        "transformers": "5.20.2",
+        "accelerate": "1.15.0",
+        "librosa": "0.11.0",
+        "huggingface-hub": "2.4.0"
+      },
+      "normalization": "NFC; minúsculas; puntuación Unicode sustituida por espacios; espacios colapsados; conserva tildes, ñ y números. CER incluye espacios.",
+      "script_sha256": "a751f6c0651487fd83d2ad242251ce31326110d9d7a30374ecf982247dfeb620",
+      "adapter_sha256": "2b9d3795d10fd3664f385f22f8d441015ca046c056b4cb115dc255c9be50672a",
+      "batch_size": 1,
+      "cpu_threads_requested": 4,
+      "external_vad": false,
+      "denoise": false,
+      "resample": false,
+      "external_chunking": false
+    }
+  },
+  "source_sha256": {
+    "scripts/evaluar_asr_externo.py": "a751f6c0651487fd83d2ad242251ce31326110d9d7a30374ecf982247dfeb620",
+    "scripts/asr_motores_externos.py": "5404b70b550f523f30f4d9b0d8393777e56376a43b80c05f7ef15d44bc3eefb9",
+    "scripts/ampliacion_motores.py": "2b9d3795d10fd3664f385f22f8d441015ca046c056b4cb115dc255c9be50672a",
+    "scripts/preparar_ampliacion_asr.py": "6a33dd850b931e965a072140a240d268ead402784a12b3c1b238605ab9db11e0"
+  },
+  "notice": "Mismos pesos/parámetros/entornos de dev; dispatcher conjunto nuevo. Reutilización explícita de test previo idéntico, sin nuevas inferencias para esos casos."
+}

@@ -1,0 +1,1593 @@
+{
+  "created_at_utc": "2026-11-09T12:12:40.899332+00:00",
+  "status": "records_reviewed_no_new_inference",
+  "sessions": [
+    {
+      "file": "resultados/android/sesiones/20261109/lexia_1794225732063.json",
+      "source_name": "lexia_1794225732063.json",
+      "sha256": "fc671a4e0cd23d009dbb297e96177490c39adcdb4fd9b54392139204e929958d",
+      "model": "Tiny",
+      "device": {
+        "manufacturer": "Xiaomi",
+        "model": "23090RA98G",
+        "android": "16",
+        "sdk_int": 36,
+        "abis": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "armeabi"
+        ],
+        "total_ram_bytes": 11939045376,
+        "available_ram_bytes_start": 4788023296
+      },
+      "sdk": "ai.moonshine:moonshine-voice:0.1.5",
+      "runtime": {
+        "sdk": "ai.moonshine:moonshine-voice:0.1.5",
+        "architecture": 2,
+        "language": "es",
+        "native_options": {
+          "transcription_interval": "0.125"
+        },
+        "dependencies": {
+          "groups": [
+            {
+              "base_url": "https://download.moonshine.ai/model/tiny-streaming-es/quantized_26_08_24",
+              "files": [
+                {
+                  "name": "adapter.ort",
+                  "url": "https://download.moonshine.ai/model/tiny-streaming-es/quantized_26_08_24/adapter.ort",
+                  "size": 1318472,
+                  "checksum": "+JOBGg==",
+                  "checksum_type": "crc32c"
+                },
+                {
+                  "name": "cross_kv.ort",
+                  "url": "https://download.moonshine.ai/model/tiny-streaming-es/quantized_26_08_24/cross_kv.ort",
+                  "size": 1288120,
+                  "checksum": "lvRCDw==",
+                  "checksum_type": "crc32c"
+                },
+                {
+                  "name": "decoder_kv.ort",
+                  "url": "https://download.moonshine.ai/model/tiny-streaming-es/quantized_26_08_24/decoder_kv.ort",
+                  "size": 19717336,
+                  "checksum": "KEm/xA==",
+                  "checksum_type": "crc32c"
+                },
+                {
+                  "name": "encoder.ort",
+                  "url": "https://download.moonshine.ai/model/tiny-streaming-es/quantized_26_08_24/encoder.ort",
+                  "size": 7772792,
+                  "checksum": "AAXCVA==",
+                  "checksum_type": "crc32c"
+                },
+                {
+                  "name": "frontend.model.ort",
+                  "url": "https://download.moonshine.ai/model/tiny-streaming-es/quantized_26_08_24/frontend.model.ort",
+                  "size": 23176,
+                  "checksum": "v7nfyQ==",
+                  "checksum_type": "crc32c"
+                },
+                {
+                  "name": "frontend.weights.ort",
+                  "url": "https://download.moonshine.ai/model/tiny-streaming-es/quantized_26_08_24/frontend.weights.ort",
+                  "size": 2093280,
+                  "checksum": "LYbiaA==",
+                  "checksum_type": "crc32c"
+                },
+                {
+                  "name": "streaming_config.json",
+                  "url": "https://download.moonshine.ai/model/tiny-streaming-es/quantized_26_08_24/streaming_config.json",
+                  "size": 509,
+                  "checksum": "wH/VeA==",
+                  "checksum_type": "crc32c"
+                },
+                {
+                  "name": "tokenizer.bin",
+                  "url": "https://download.moonshine.ai/model/tiny-streaming-es/quantized_26_08_24/tokenizer.bin",
+                  "size": 102888,
+                  "checksum": "/7v8NQ==",
+                  "checksum_type": "crc32c"
+                }
+              ]
+            }
+          ]
+        },
+        "files": [
+          {
+            "file": "adapter.ort",
+            "bytes": 1318472,
+            "sha256": "2efd97cd2ee7d89578dd1d429a849be9fe37ac81dd9c4e1d31c8a2e7f85d43e6"
+          },
+          {
+            "file": "cross_kv.ort",
+            "bytes": 1288120,
+            "sha256": "9e268b1b3bb0f9ff79bca6e76055d41298de0a5ba52505ee04907a2642efa3ae"
+          },
+          {
+            "file": "decoder_kv.ort",
+            "bytes": 19717336,
+            "sha256": "7adf56b982df98e385d71823b9a40cf9296ae3a746efcf03f3d7bb4604032db0"
+          },
+          {
+            "file": "encoder.ort",
+            "bytes": 7772792,
+            "sha256": "ec9eb43a01fbfe242a2c6a86050cffe4a31050e1c9f084e98560d6c100004505"
+          },
+          {
+            "file": "frontend.model.ort",
+            "bytes": 23176,
+            "sha256": "9d19434b861de0c1d2aff52556911ae565cf3212ebe6d7f797c76c5c5066c2fc"
+          },
+          {
+            "file": "frontend.weights.ort",
+            "bytes": 2093280,
+            "sha256": "5e4d5471cd5d984d4b94a603d861539ebf1dc72de11b0cf13f38316725d5ce48"
+          },
+          {
+            "file": "streaming_config.json",
+            "bytes": 509,
+            "sha256": "d31afd7c2dd5ee9ae3fa232312c5b42cb3e4fe1c6e9c53d885f2bea63023790a"
+          },
+          {
+            "file": "tokenizer.bin",
+            "bytes": 102888,
+            "sha256": "5fbb7d4314dcb18e03c5f975609e4a4cd572b22b01d2b2accb1b3e6830696f36"
+          }
+        ]
+      },
+      "seconds": 45.485,
+      "cpu_seconds_app": 77.121,
+      "callbacks": 112,
+      "final": 56,
+      "backwards": 0,
+      "guide_words": 2,
+      "historical_guide_policy": "sliding_next_words",
+      "sdk_complete_line_latency_ms": {
+        "count": 13,
+        "minimum": 86,
+        "median": 148,
+        "maximum": 257
+      },
+      "pss_mib": {
+        "count": 42,
+        "minimum": 204.826171875,
+        "median": 221.03759765625,
+        "maximum": 243.095703125
+      },
+      "position_plateaus": [
+        {
+          "position": 19,
+          "start_ms": 15848,
+          "end_ms": 18480,
+          "seconds": 2.632,
+          "callbacks": 3,
+          "distinct_texts": 3,
+          "rejected_evidence": 1,
+          "examples": [
+            {
+              "elapsed_ms": 15848,
+              "tail": "su casa cerca de un árbol encontró una mariposa azul la mariposa",
+              "mode": "local",
+              "evidence": {
+                "reason": "coincidencia_local",
+                "exact_matches": 8,
+                "edit_cost": 0,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 16949,
+              "tail": "un árbol encontró una mariposa azul la mariposa bobosa bobosa bobosa bo",
+              "mode": "local",
+              "evidence": {
+                "reason": "evidencia_incompatible",
+                "exact_matches": 4,
+                "edit_cost": 4,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 18153,
+              "tail": "cerca de un árbol encontró una mariposa azul la mariposa voló despojo",
+              "mode": "avance_rechazado",
+              "evidence": {
+                "reason": "sin_apoyo_final",
+                "exact_matches": 7,
+                "edit_cost": 1,
+                "hypothesis_words": 8
+              }
+            }
+          ]
+        },
+        {
+          "position": 38,
+          "start_ms": 30340,
+          "end_ms": 32064,
+          "seconds": 1.724,
+          "callbacks": 5,
+          "distinct_texts": 5,
+          "rejected_evidence": 0,
+          "examples": [
+            {
+              "elapsed_ms": 30340,
+              "tail": "flor ana llamó a su hermano para que pudiera verla los dos",
+              "mode": "local",
+              "evidence": {
+                "reason": "coincidencia_local",
+                "exact_matches": 8,
+                "edit_cost": 0,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 31254,
+              "tail": "a su hermano para que pudiera verla los dos c que dar",
+              "mode": "local",
+              "evidence": {
+                "reason": "coincidencia_local",
+                "exact_matches": 5,
+                "edit_cost": 3,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 31791,
+              "tail": "llamó a su hermano para que pudiera verla los dos c quedaron",
+              "mode": "avance_rechazado",
+              "evidence": {
+                "reason": "sin_apoyo_final",
+                "exact_matches": 7,
+                "edit_cost": 1,
+                "hypothesis_words": 8
+              }
+            }
+          ]
+        },
+        {
+          "position": 42,
+          "start_ms": 32603,
+          "end_ms": 34341,
+          "seconds": 1.738,
+          "callbacks": 5,
+          "distinct_texts": 4,
+          "rejected_evidence": 0,
+          "examples": [
+            {
+              "elapsed_ms": 32603,
+              "tail": "su hermano para que pudiera verla los dos se quedaron en silencio",
+              "mode": "local",
+              "evidence": {
+                "reason": "coincidencia_local",
+                "exact_matches": 8,
+                "edit_cost": 0,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 34007,
+              "tail": "hermano para que pudiera verla los dos se quedaron en silencio mirad",
+              "mode": "local",
+              "evidence": {
+                "reason": "coincidencia_local",
+                "exact_matches": 7,
+                "edit_cost": 1,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 34173,
+              "tail": "hermano para que pudiera verla los dos se quedaron en silencio miran",
+              "mode": "local",
+              "evidence": {
+                "reason": "coincidencia_local",
+                "exact_matches": 7,
+                "edit_cost": 1,
+                "hypothesis_words": 8
+              }
+            }
+          ]
+        }
+      ],
+      "positions_reproduced": true,
+      "battery_start": {
+        "level": 42,
+        "scale": 100,
+        "temperature_c_battery": 38.1,
+        "plugged": 1
+      },
+      "battery_end": {
+        "level": 42,
+        "scale": 100,
+        "temperature_c_battery": 38.1,
+        "plugged": 1
+      },
+      "reference_words": 56,
+      "rejected_updates": 3,
+      "app_version": "0.4-piloto",
+      "tracker_advance_policy": "terminal_and_recent",
+      "local_search_offset": 12,
+      "native_interval_requested": 0.125,
+      "diagnostic_source": "native_fields_positions_independently_replayed"
+    },
+    {
+      "file": "resultados/android/sesiones/20261109/lexia_1794225791976.json",
+      "source_name": "lexia_1794225791976.json",
+      "sha256": "ae3fe28cec641184d99b58cde9ddfc4da9bebe6a34e51d6dad789cb1d90f5b5f",
+      "model": "Tiny",
+      "device": {
+        "manufacturer": "Xiaomi",
+        "model": "23090RA98G",
+        "android": "16",
+        "sdk_int": 36,
+        "abis": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "armeabi"
+        ],
+        "total_ram_bytes": 11939045376,
+        "available_ram_bytes_start": 4679401472
+      },
+      "sdk": "ai.moonshine:moonshine-voice:0.1.5",
+      "runtime": {
+        "sdk": "ai.moonshine:moonshine-voice:0.1.5",
+        "architecture": 2,
+        "language": "es",
+        "native_options": {
+          "transcription_interval": "0.25"
+        },
+        "dependencies": {
+          "groups": [
+            {
+              "base_url": "https://download.moonshine.ai/model/tiny-streaming-es/quantized_26_08_24",
+              "files": [
+                {
+                  "name": "adapter.ort",
+                  "url": "https://download.moonshine.ai/model/tiny-streaming-es/quantized_26_08_24/adapter.ort",
+                  "size": 1318472,
+                  "checksum": "+JOBGg==",
+                  "checksum_type": "crc32c"
+                },
+                {
+                  "name": "cross_kv.ort",
+                  "url": "https://download.moonshine.ai/model/tiny-streaming-es/quantized_26_08_24/cross_kv.ort",
+                  "size": 1288120,
+                  "checksum": "lvRCDw==",
+                  "checksum_type": "crc32c"
+                },
+                {
+                  "name": "decoder_kv.ort",
+                  "url": "https://download.moonshine.ai/model/tiny-streaming-es/quantized_26_08_24/decoder_kv.ort",
+                  "size": 19717336,
+                  "checksum": "KEm/xA==",
+                  "checksum_type": "crc32c"
+                },
+                {
+                  "name": "encoder.ort",
+                  "url": "https://download.moonshine.ai/model/tiny-streaming-es/quantized_26_08_24/encoder.ort",
+                  "size": 7772792,
+                  "checksum": "AAXCVA==",
+                  "checksum_type": "crc32c"
+                },
+                {
+                  "name": "frontend.model.ort",
+                  "url": "https://download.moonshine.ai/model/tiny-streaming-es/quantized_26_08_24/frontend.model.ort",
+                  "size": 23176,
+                  "checksum": "v7nfyQ==",
+                  "checksum_type": "crc32c"
+                },
+                {
+                  "name": "frontend.weights.ort",
+                  "url": "https://download.moonshine.ai/model/tiny-streaming-es/quantized_26_08_24/frontend.weights.ort",
+                  "size": 2093280,
+                  "checksum": "LYbiaA==",
+                  "checksum_type": "crc32c"
+                },
+                {
+                  "name": "streaming_config.json",
+                  "url": "https://download.moonshine.ai/model/tiny-streaming-es/quantized_26_08_24/streaming_config.json",
+                  "size": 509,
+                  "checksum": "wH/VeA==",
+                  "checksum_type": "crc32c"
+                },
+                {
+                  "name": "tokenizer.bin",
+                  "url": "https://download.moonshine.ai/model/tiny-streaming-es/quantized_26_08_24/tokenizer.bin",
+                  "size": 102888,
+                  "checksum": "/7v8NQ==",
+                  "checksum_type": "crc32c"
+                }
+              ]
+            }
+          ]
+        },
+        "files": [
+          {
+            "file": "adapter.ort",
+            "bytes": 1318472,
+            "sha256": "2efd97cd2ee7d89578dd1d429a849be9fe37ac81dd9c4e1d31c8a2e7f85d43e6"
+          },
+          {
+            "file": "cross_kv.ort",
+            "bytes": 1288120,
+            "sha256": "9e268b1b3bb0f9ff79bca6e76055d41298de0a5ba52505ee04907a2642efa3ae"
+          },
+          {
+            "file": "decoder_kv.ort",
+            "bytes": 19717336,
+            "sha256": "7adf56b982df98e385d71823b9a40cf9296ae3a746efcf03f3d7bb4604032db0"
+          },
+          {
+            "file": "encoder.ort",
+            "bytes": 7772792,
+            "sha256": "ec9eb43a01fbfe242a2c6a86050cffe4a31050e1c9f084e98560d6c100004505"
+          },
+          {
+            "file": "frontend.model.ort",
+            "bytes": 23176,
+            "sha256": "9d19434b861de0c1d2aff52556911ae565cf3212ebe6d7f797c76c5c5066c2fc"
+          },
+          {
+            "file": "frontend.weights.ort",
+            "bytes": 2093280,
+            "sha256": "5e4d5471cd5d984d4b94a603d861539ebf1dc72de11b0cf13f38316725d5ce48"
+          },
+          {
+            "file": "streaming_config.json",
+            "bytes": 509,
+            "sha256": "d31afd7c2dd5ee9ae3fa232312c5b42cb3e4fe1c6e9c53d885f2bea63023790a"
+          },
+          {
+            "file": "tokenizer.bin",
+            "bytes": 102888,
+            "sha256": "5fbb7d4314dcb18e03c5f975609e4a4cd572b22b01d2b2accb1b3e6830696f36"
+          }
+        ]
+      },
+      "seconds": 45.183,
+      "cpu_seconds_app": 70.306,
+      "callbacks": 112,
+      "final": 56,
+      "backwards": 1,
+      "guide_words": 2,
+      "historical_guide_policy": "sliding_next_words",
+      "sdk_complete_line_latency_ms": {
+        "count": 17,
+        "minimum": 67,
+        "median": 127,
+        "maximum": 162
+      },
+      "pss_mib": {
+        "count": 42,
+        "minimum": 214.1923828125,
+        "median": 223.62548828125,
+        "maximum": 233.85546875
+      },
+      "position_plateaus": [
+        {
+          "position": 12,
+          "start_ms": 9020,
+          "end_ms": 10796,
+          "seconds": 1.776,
+          "callbacks": 3,
+          "distinct_texts": 3,
+          "rejected_evidence": 0,
+          "examples": [
+            {
+              "elapsed_ms": 9020,
+              "tail": "una mañana ana salió al jardín de su casa cerca de un",
+              "mode": "local",
+              "evidence": {
+                "reason": "coincidencia_local",
+                "exact_matches": 8,
+                "edit_cost": 0,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 9747,
+              "tail": "mañana ana salió al jardín de su casa cerca de un arbo",
+              "mode": "local",
+              "evidence": {
+                "reason": "coincidencia_local",
+                "exact_matches": 7,
+                "edit_cost": 1,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 10088,
+              "tail": "ana salió al jardín de su casa cerca de un árbol en",
+              "mode": "avance_rechazado",
+              "evidence": {
+                "reason": "sin_apoyo_final",
+                "exact_matches": 7,
+                "edit_cost": 1,
+                "hypothesis_words": 8
+              }
+            }
+          ]
+        },
+        {
+          "position": 38,
+          "start_ms": 28617,
+          "end_ms": 30207,
+          "seconds": 1.59,
+          "callbacks": 6,
+          "distinct_texts": 5,
+          "rejected_evidence": 0,
+          "examples": [
+            {
+              "elapsed_ms": 28617,
+              "tail": "ana llamó a su hermano para que pudiera verla los dos ce",
+              "mode": "local",
+              "evidence": {
+                "reason": "coincidencia_local",
+                "exact_matches": 7,
+                "edit_cost": 1,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 29578,
+              "tail": "llamó a su hermano para que pudiera verla los dos ce quedaron",
+              "mode": "avance_rechazado",
+              "evidence": {
+                "reason": "sin_apoyo_final",
+                "exact_matches": 7,
+                "edit_cost": 1,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 29890,
+              "tail": "su hermano para que pudiera verla los dos ce quedaron en sí",
+              "mode": "avance_rechazado",
+              "evidence": {
+                "reason": "sin_apoyo_final",
+                "exact_matches": 6,
+                "edit_cost": 2,
+                "hypothesis_words": 8
+              }
+            }
+          ]
+        },
+        {
+          "position": 42,
+          "start_ms": 30207,
+          "end_ms": 32209,
+          "seconds": 2.002,
+          "callbacks": 3,
+          "distinct_texts": 2,
+          "rejected_evidence": 0,
+          "examples": [
+            {
+              "elapsed_ms": 30207,
+              "tail": "su hermano para que pudiera verla los dos ce quedaron en silencio",
+              "mode": "local",
+              "evidence": {
+                "reason": "coincidencia_local",
+                "exact_matches": 7,
+                "edit_cost": 1,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 30521,
+              "tail": "su hermano para que pudiera verla los dos ce quedaron en silencio",
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {
+                "reason": "texto_identico",
+                "exact_matches": 0,
+                "edit_cost": 0,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 31626,
+              "tail": "su hermano para que pudiera verla los dos ce quedaron en silencio",
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {
+                "reason": "texto_identico",
+                "exact_matches": 0,
+                "edit_cost": 0,
+                "hypothesis_words": 8
+              }
+            }
+          ]
+        },
+        {
+          "position": 43,
+          "start_ms": 32209,
+          "end_ms": 33766,
+          "seconds": 1.557,
+          "callbacks": 3,
+          "distinct_texts": 2,
+          "rejected_evidence": 0,
+          "examples": [
+            {
+              "elapsed_ms": 32209,
+              "tail": "hermano para que pudiera verla los dos ce quedaron en silencio mirando",
+              "mode": "local",
+              "evidence": {
+                "reason": "coincidencia_local",
+                "exact_matches": 7,
+                "edit_cost": 1,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 32538,
+              "tail": "hermano para que pudiera verla los dos ce quedaron en silencio mirando",
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {
+                "reason": "texto_identico",
+                "exact_matches": 0,
+                "edit_cost": 0,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 33091,
+              "tail": "hermano para que pudiera verla los dos ce quedaron en silencio mirando",
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {
+                "reason": "texto_identico",
+                "exact_matches": 0,
+                "edit_cost": 0,
+                "hypothesis_words": 8
+              }
+            }
+          ]
+        }
+      ],
+      "positions_reproduced": true,
+      "battery_start": {
+        "level": 42,
+        "scale": 100,
+        "temperature_c_battery": 38.1,
+        "plugged": 1
+      },
+      "battery_end": {
+        "level": 43,
+        "scale": 100,
+        "temperature_c_battery": 37.7,
+        "plugged": 1
+      },
+      "reference_words": 56,
+      "rejected_updates": 0,
+      "app_version": "0.4-piloto",
+      "tracker_advance_policy": "terminal_and_recent",
+      "local_search_offset": 12,
+      "native_interval_requested": 0.25,
+      "diagnostic_source": "native_fields_positions_independently_replayed"
+    },
+    {
+      "file": "resultados/android/sesiones/20261109/lexia_1794225885872.json",
+      "source_name": "lexia_1794225885872.json",
+      "sha256": "813949f173b171fe9f2f2db24f98cc0ee340dd86ed3fdc6438b6294b93c3882d",
+      "model": "Small",
+      "device": {
+        "manufacturer": "Xiaomi",
+        "model": "23090RA98G",
+        "android": "16",
+        "sdk_int": 36,
+        "abis": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "armeabi"
+        ],
+        "total_ram_bytes": 11939045376,
+        "available_ram_bytes_start": 4576202752
+      },
+      "sdk": "ai.moonshine:moonshine-voice:0.1.5",
+      "runtime": {
+        "sdk": "ai.moonshine:moonshine-voice:0.1.5",
+        "architecture": 4,
+        "language": "es",
+        "native_options": {
+          "transcription_interval": "0.125"
+        },
+        "dependencies": {
+          "groups": [
+            {
+              "base_url": "https://download.moonshine.ai/model/small-streaming-es/quantized_26_08_24",
+              "files": [
+                {
+                  "name": "adapter.ort",
+                  "url": "https://download.moonshine.ai/model/small-streaming-es/quantized_26_08_24/adapter.ort",
+                  "size": 2869296,
+                  "checksum": "ZCOnJw==",
+                  "checksum_type": "crc32c"
+                },
+                {
+                  "name": "cross_kv.ort",
+                  "url": "https://download.moonshine.ai/model/small-streaming-es/quantized_26_08_24/cross_kv.ort",
+                  "size": 5358752,
+                  "checksum": "B6G3LA==",
+                  "checksum_type": "crc32c"
+                },
+                {
+                  "name": "decoder_kv.ort",
+                  "url": "https://download.moonshine.ai/model/small-streaming-es/quantized_26_08_24/decoder_kv.ort",
+                  "size": 61314512,
+                  "checksum": "Q6TnrQ==",
+                  "checksum_type": "crc32c"
+                },
+                {
+                  "name": "encoder.ort",
+                  "url": "https://download.moonshine.ai/model/small-streaming-es/quantized_26_08_24/encoder.ort",
+                  "size": 44358376,
+                  "checksum": "EYLK1A==",
+                  "checksum_type": "crc32c"
+                },
+                {
+                  "name": "frontend.model.ort",
+                  "url": "https://download.moonshine.ai/model/small-streaming-es/quantized_26_08_24/frontend.model.ort",
+                  "size": 26776,
+                  "checksum": "bvdZXg==",
+                  "checksum_type": "crc32c"
+                },
+                {
+                  "name": "frontend.weights.ort",
+                  "url": "https://download.moonshine.ai/model/small-streaming-es/quantized_26_08_24/frontend.weights.ort",
+                  "size": 7769280,
+                  "checksum": "ITuX4A==",
+                  "checksum_type": "crc32c"
+                },
+                {
+                  "name": "streaming_config.json",
+                  "url": "https://download.moonshine.ai/model/small-streaming-es/quantized_26_08_24/streaming_config.json",
+                  "size": 512,
+                  "checksum": "Y/oEHw==",
+                  "checksum_type": "crc32c"
+                },
+                {
+                  "name": "tokenizer.bin",
+                  "url": "https://download.moonshine.ai/model/small-streaming-es/quantized_26_08_24/tokenizer.bin",
+                  "size": 102888,
+                  "checksum": "/7v8NQ==",
+                  "checksum_type": "crc32c"
+                }
+              ]
+            }
+          ]
+        },
+        "files": [
+          {
+            "file": "adapter.ort",
+            "bytes": 2869296,
+            "sha256": "04b54114c8aab534222922640f7ca0882948ff9f6ed76777f6e184e55a8e8b15"
+          },
+          {
+            "file": "cross_kv.ort",
+            "bytes": 5358752,
+            "sha256": "4bfd0a641d72ccdae22751f86bbb2e25ff70c1fba4f81213f2415a1accff9618"
+          },
+          {
+            "file": "decoder_kv.ort",
+            "bytes": 61314512,
+            "sha256": "5b77c3d6baf801ef925a5bc54d7eb3db0c35ebbb86f8eaf5390d7f5bb42fef37"
+          },
+          {
+            "file": "encoder.ort",
+            "bytes": 44358376,
+            "sha256": "a9b8d6d5d9348d0e319cceffdb0196ef622df8e4e9f3fb4797dcd8dfafd50857"
+          },
+          {
+            "file": "frontend.model.ort",
+            "bytes": 26776,
+            "sha256": "69c76287f49db365aa278d4908ec450e69ca1b4bfb7e836159d963d623ee0c13"
+          },
+          {
+            "file": "frontend.weights.ort",
+            "bytes": 7769280,
+            "sha256": "2f5a0eb5f3004c9447810d74274a352746319a32144e31d95ef410f425b84dda"
+          },
+          {
+            "file": "streaming_config.json",
+            "bytes": 512,
+            "sha256": "12d16c7f5ea6734d197b79baf47914ea7e996d6fca8d303a19aca10d0617cecc"
+          },
+          {
+            "file": "tokenizer.bin",
+            "bytes": 102888,
+            "sha256": "5fbb7d4314dcb18e03c5f975609e4a4cd572b22b01d2b2accb1b3e6830696f36"
+          }
+        ]
+      },
+      "seconds": 55.047,
+      "cpu_seconds_app": 196.909,
+      "callbacks": 165,
+      "final": 56,
+      "backwards": 1,
+      "guide_words": 2,
+      "historical_guide_policy": "sliding_next_words",
+      "sdk_complete_line_latency_ms": {
+        "count": 24,
+        "minimum": 116,
+        "median": 173.0,
+        "maximum": 311
+      },
+      "pss_mib": {
+        "count": 52,
+        "minimum": 400.404296875,
+        "median": 417.68017578125,
+        "maximum": 436.9150390625
+      },
+      "position_plateaus": [
+        {
+          "position": 24,
+          "start_ms": 21097,
+          "end_ms": 22696,
+          "seconds": 1.599,
+          "callbacks": 6,
+          "distinct_texts": 5,
+          "rejected_evidence": 2,
+          "examples": [
+            {
+              "elapsed_ms": 21097,
+              "tail": "árbol encontró una mariposa azul la mariposa voló despacio y se posó",
+              "mode": "local",
+              "evidence": {
+                "reason": "coincidencia_local",
+                "exact_matches": 8,
+                "edit_cost": 0,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 22073,
+              "tail": "encontró una mariposa azul la mariposa voló despacio y se posó solo",
+              "mode": "local",
+              "evidence": {
+                "reason": "coincidencia_local",
+                "exact_matches": 7,
+                "edit_cost": 1,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 22418,
+              "tail": "la mariposa voló despacio y se posó sobre todo sobre el problema",
+              "mode": "local",
+              "evidence": {
+                "reason": "evidencia_incompatible",
+                "exact_matches": 4,
+                "edit_cost": 4,
+                "hypothesis_words": 8
+              }
+            }
+          ]
+        },
+        {
+          "position": 27,
+          "start_ms": 23268,
+          "end_ms": 25066,
+          "seconds": 1.798,
+          "callbacks": 4,
+          "distinct_texts": 3,
+          "rejected_evidence": 1,
+          "examples": [
+            {
+              "elapsed_ms": 23268,
+              "tail": "mariposa azul la mariposa voló despacio y se posó sobre una flor",
+              "mode": "local",
+              "evidence": {
+                "reason": "coincidencia_local",
+                "exact_matches": 8,
+                "edit_cost": 0,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 24514,
+              "tail": "mariposa voló despacio y se posó sobre una flor por lo tanto",
+              "mode": "local",
+              "evidence": {
+                "reason": "coincidencia_local",
+                "exact_matches": 5,
+                "edit_cost": 3,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 24806,
+              "tail": "voló despacio y se posó sobre una flor a la hora de",
+              "mode": "local",
+              "evidence": {
+                "reason": "evidencia_incompatible",
+                "exact_matches": 4,
+                "edit_cost": 4,
+                "hypothesis_words": 8
+              }
+            }
+          ]
+        },
+        {
+          "position": 38,
+          "start_ms": 32767,
+          "end_ms": 41425,
+          "seconds": 8.658,
+          "callbacks": 18,
+          "distinct_texts": 14,
+          "rejected_evidence": 7,
+          "examples": [
+            {
+              "elapsed_ms": 32767,
+              "tail": "flor ana llamó a su hermano para que pudiera verla los dos",
+              "mode": "local",
+              "evidence": {
+                "reason": "coincidencia_local",
+                "exact_matches": 8,
+                "edit_cost": 0,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 40948,
+              "tail": "pudiera verla los dos ce quedaron ce quedaron y lo que se",
+              "mode": "local",
+              "evidence": {
+                "reason": "evidencia_incompatible",
+                "exact_matches": 2,
+                "edit_cost": 6,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 41269,
+              "tail": "verla los dos ce quedaron ce quedaron en el mundo de la",
+              "mode": "local",
+              "evidence": {
+                "reason": "evidencia_incompatible",
+                "exact_matches": 2,
+                "edit_cost": 6,
+                "hypothesis_words": 8
+              }
+            }
+          ]
+        },
+        {
+          "position": 50,
+          "start_ms": 48867,
+          "end_ms": 50404,
+          "seconds": 1.537,
+          "callbacks": 3,
+          "distinct_texts": 3,
+          "rejected_evidence": 0,
+          "examples": [
+            {
+              "elapsed_ms": 48867,
+              "tail": "ce quedaron en silencio mirando sus alas después volvieron a casa y",
+              "mode": "local",
+              "evidence": {
+                "reason": "coincidencia_local",
+                "exact_matches": 8,
+                "edit_cost": 0,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 49834,
+              "tail": "quedaron en silencio mirando sus alas después volvieron a casa y di",
+              "mode": "local",
+              "evidence": {
+                "reason": "coincidencia_local",
+                "exact_matches": 7,
+                "edit_cost": 1,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 50129,
+              "tail": "quedaron en silencio mirando sus alas después volvieron a casa y dibujar",
+              "mode": "local",
+              "evidence": {
+                "reason": "coincidencia_local",
+                "exact_matches": 7,
+                "edit_cost": 1,
+                "hypothesis_words": 8
+              }
+            }
+          ]
+        },
+        {
+          "position": 54,
+          "start_ms": 52140,
+          "end_ms": 53706,
+          "seconds": 1.566,
+          "callbacks": 5,
+          "distinct_texts": 4,
+          "rejected_evidence": 1,
+          "examples": [
+            {
+              "elapsed_ms": 52140,
+              "tail": "mirando sus alas después volvieron a casa y dibujaron la mariposa en",
+              "mode": "local",
+              "evidence": {
+                "reason": "coincidencia_local",
+                "exact_matches": 8,
+                "edit_cost": 0,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 53112,
+              "tail": "después volvieron a casa y dibujaron la mariposa en un buen día",
+              "mode": "avance_rechazado",
+              "evidence": {
+                "reason": "sin_apoyo_final",
+                "exact_matches": 6,
+                "edit_cost": 2,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 53430,
+              "tail": "alas después volvieron a casa y dibujaron la mariposa en un cupcakes",
+              "mode": "avance_rechazado",
+              "evidence": {
+                "reason": "sin_apoyo_final",
+                "exact_matches": 7,
+                "edit_cost": 1,
+                "hypothesis_words": 8
+              }
+            }
+          ]
+        }
+      ],
+      "positions_reproduced": true,
+      "battery_start": {
+        "level": 43,
+        "scale": 100,
+        "temperature_c_battery": 37.7,
+        "plugged": 1
+      },
+      "battery_end": {
+        "level": 43,
+        "scale": 100,
+        "temperature_c_battery": 37.7,
+        "plugged": 1
+      },
+      "reference_words": 56,
+      "rejected_updates": 35,
+      "app_version": "0.4-piloto",
+      "tracker_advance_policy": "terminal_and_recent",
+      "local_search_offset": 12,
+      "native_interval_requested": 0.125,
+      "diagnostic_source": "native_fields_positions_independently_replayed"
+    },
+    {
+      "file": "resultados/android/sesiones/20261109/lexia_1794225951671.json",
+      "source_name": "lexia_1794225951671.json",
+      "sha256": "388b52d26cdd0e62bda879b8a3de4e967133660cb513fa48d5bb2eba3e500705",
+      "model": "Small",
+      "device": {
+        "manufacturer": "Xiaomi",
+        "model": "23090RA98G",
+        "android": "16",
+        "sdk_int": 36,
+        "abis": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "armeabi"
+        ],
+        "total_ram_bytes": 11939045376,
+        "available_ram_bytes_start": 4640747520
+      },
+      "sdk": "ai.moonshine:moonshine-voice:0.1.5",
+      "runtime": {
+        "sdk": "ai.moonshine:moonshine-voice:0.1.5",
+        "architecture": 4,
+        "language": "es",
+        "native_options": {
+          "transcription_interval": "0.25"
+        },
+        "dependencies": {
+          "groups": [
+            {
+              "base_url": "https://download.moonshine.ai/model/small-streaming-es/quantized_26_08_24",
+              "files": [
+                {
+                  "name": "adapter.ort",
+                  "url": "https://download.moonshine.ai/model/small-streaming-es/quantized_26_08_24/adapter.ort",
+                  "size": 2869296,
+                  "checksum": "ZCOnJw==",
+                  "checksum_type": "crc32c"
+                },
+                {
+                  "name": "cross_kv.ort",
+                  "url": "https://download.moonshine.ai/model/small-streaming-es/quantized_26_08_24/cross_kv.ort",
+                  "size": 5358752,
+                  "checksum": "B6G3LA==",
+                  "checksum_type": "crc32c"
+                },
+                {
+                  "name": "decoder_kv.ort",
+                  "url": "https://download.moonshine.ai/model/small-streaming-es/quantized_26_08_24/decoder_kv.ort",
+                  "size": 61314512,
+                  "checksum": "Q6TnrQ==",
+                  "checksum_type": "crc32c"
+                },
+                {
+                  "name": "encoder.ort",
+                  "url": "https://download.moonshine.ai/model/small-streaming-es/quantized_26_08_24/encoder.ort",
+                  "size": 44358376,
+                  "checksum": "EYLK1A==",
+                  "checksum_type": "crc32c"
+                },
+                {
+                  "name": "frontend.model.ort",
+                  "url": "https://download.moonshine.ai/model/small-streaming-es/quantized_26_08_24/frontend.model.ort",
+                  "size": 26776,
+                  "checksum": "bvdZXg==",
+                  "checksum_type": "crc32c"
+                },
+                {
+                  "name": "frontend.weights.ort",
+                  "url": "https://download.moonshine.ai/model/small-streaming-es/quantized_26_08_24/frontend.weights.ort",
+                  "size": 7769280,
+                  "checksum": "ITuX4A==",
+                  "checksum_type": "crc32c"
+                },
+                {
+                  "name": "streaming_config.json",
+                  "url": "https://download.moonshine.ai/model/small-streaming-es/quantized_26_08_24/streaming_config.json",
+                  "size": 512,
+                  "checksum": "Y/oEHw==",
+                  "checksum_type": "crc32c"
+                },
+                {
+                  "name": "tokenizer.bin",
+                  "url": "https://download.moonshine.ai/model/small-streaming-es/quantized_26_08_24/tokenizer.bin",
+                  "size": 102888,
+                  "checksum": "/7v8NQ==",
+                  "checksum_type": "crc32c"
+                }
+              ]
+            }
+          ]
+        },
+        "files": [
+          {
+            "file": "adapter.ort",
+            "bytes": 2869296,
+            "sha256": "04b54114c8aab534222922640f7ca0882948ff9f6ed76777f6e184e55a8e8b15"
+          },
+          {
+            "file": "cross_kv.ort",
+            "bytes": 5358752,
+            "sha256": "4bfd0a641d72ccdae22751f86bbb2e25ff70c1fba4f81213f2415a1accff9618"
+          },
+          {
+            "file": "decoder_kv.ort",
+            "bytes": 61314512,
+            "sha256": "5b77c3d6baf801ef925a5bc54d7eb3db0c35ebbb86f8eaf5390d7f5bb42fef37"
+          },
+          {
+            "file": "encoder.ort",
+            "bytes": 44358376,
+            "sha256": "a9b8d6d5d9348d0e319cceffdb0196ef622df8e4e9f3fb4797dcd8dfafd50857"
+          },
+          {
+            "file": "frontend.model.ort",
+            "bytes": 26776,
+            "sha256": "69c76287f49db365aa278d4908ec450e69ca1b4bfb7e836159d963d623ee0c13"
+          },
+          {
+            "file": "frontend.weights.ort",
+            "bytes": 7769280,
+            "sha256": "2f5a0eb5f3004c9447810d74274a352746319a32144e31d95ef410f425b84dda"
+          },
+          {
+            "file": "streaming_config.json",
+            "bytes": 512,
+            "sha256": "12d16c7f5ea6734d197b79baf47914ea7e996d6fca8d303a19aca10d0617cecc"
+          },
+          {
+            "file": "tokenizer.bin",
+            "bytes": 102888,
+            "sha256": "5fbb7d4314dcb18e03c5f975609e4a4cd572b22b01d2b2accb1b3e6830696f36"
+          }
+        ]
+      },
+      "seconds": 55.429,
+      "cpu_seconds_app": 165.771,
+      "callbacks": 138,
+      "final": 56,
+      "backwards": 0,
+      "guide_words": 2,
+      "historical_guide_policy": "sliding_next_words",
+      "sdk_complete_line_latency_ms": {
+        "count": 22,
+        "minimum": 133,
+        "median": 197.0,
+        "maximum": 308
+      },
+      "pss_mib": {
+        "count": 52,
+        "minimum": 378.076171875,
+        "median": 428.677734375,
+        "maximum": 450.1494140625
+      },
+      "position_plateaus": [
+        {
+          "position": 2,
+          "start_ms": 2748,
+          "end_ms": 4296,
+          "seconds": 1.548,
+          "callbacks": 3,
+          "distinct_texts": 2,
+          "rejected_evidence": 1,
+          "examples": [
+            {
+              "elapsed_ms": 2748,
+              "tail": "una mañana",
+              "mode": "local",
+              "evidence": {
+                "reason": "coincidencia_local",
+                "exact_matches": 2,
+                "edit_cost": 0,
+                "hypothesis_words": 2
+              }
+            },
+            {
+              "elapsed_ms": 3302,
+              "tail": "una mañana",
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {
+                "reason": "texto_identico",
+                "exact_matches": 0,
+                "edit_cost": 0,
+                "hypothesis_words": 2
+              }
+            },
+            {
+              "elapsed_ms": 4041,
+              "tail": "una mañana la gente se lo pide",
+              "mode": "local",
+              "evidence": {
+                "reason": "evidencia_incompatible",
+                "exact_matches": 2,
+                "edit_cost": 5,
+                "hypothesis_words": 7
+              }
+            }
+          ]
+        },
+        {
+          "position": 22,
+          "start_ms": 19812,
+          "end_ms": 24420,
+          "seconds": 4.608,
+          "callbacks": 11,
+          "distinct_texts": 8,
+          "rejected_evidence": 4,
+          "examples": [
+            {
+              "elapsed_ms": 19812,
+              "tail": "de un árbol encontró una mariposa azul la mariposa voló despacio y",
+              "mode": "local",
+              "evidence": {
+                "reason": "coincidencia_local",
+                "exact_matches": 8,
+                "edit_cost": 0,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 21864,
+              "tail": "encontró una mariposa azul la mariposa voló despacio y ce ce pozo",
+              "mode": "hipotesis_sin_cambios",
+              "evidence": {
+                "reason": "texto_identico",
+                "exact_matches": 0,
+                "edit_cost": 0,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 24217,
+              "tail": "mariposa voló despacio y ce ce pozo y lo que se dice",
+              "mode": "local",
+              "evidence": {
+                "reason": "evidencia_incompatible",
+                "exact_matches": 2,
+                "edit_cost": 6,
+                "hypothesis_words": 8
+              }
+            }
+          ]
+        },
+        {
+          "position": 24,
+          "start_ms": 24955,
+          "end_ms": 27127,
+          "seconds": 2.172,
+          "callbacks": 6,
+          "distinct_texts": 5,
+          "rejected_evidence": 4,
+          "examples": [
+            {
+              "elapsed_ms": 24955,
+              "tail": "mariposa azul la mariposa voló despacio y ce ce pozo se posó",
+              "mode": "local",
+              "evidence": {
+                "reason": "coincidencia_local",
+                "exact_matches": 5,
+                "edit_cost": 3,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 26322,
+              "tail": "la mariposa voló despacio y ce ce pozo se posó sobre todo",
+              "mode": "local",
+              "evidence": {
+                "reason": "evidencia_incompatible",
+                "exact_matches": 4,
+                "edit_cost": 4,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 26852,
+              "tail": "despacio y ce ce pozo se posó sobre el sistema de seguridad",
+              "mode": "local",
+              "evidence": {
+                "reason": "evidencia_incompatible",
+                "exact_matches": 3,
+                "edit_cost": 5,
+                "hypothesis_words": 8
+              }
+            }
+          ]
+        },
+        {
+          "position": 38,
+          "start_ms": 36979,
+          "end_ms": 39153,
+          "seconds": 2.174,
+          "callbacks": 6,
+          "distinct_texts": 5,
+          "rejected_evidence": 0,
+          "examples": [
+            {
+              "elapsed_ms": 36979,
+              "tail": "flor ana llamó a su hermano para que pudiera verla los dos",
+              "mode": "local",
+              "evidence": {
+                "reason": "coincidencia_local",
+                "exact_matches": 8,
+                "edit_cost": 0,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 38459,
+              "tail": "llamó a su hermano para que pudiera verla los dos se quieren",
+              "mode": "avance_rechazado",
+              "evidence": {
+                "reason": "sin_apoyo_final",
+                "exact_matches": 7,
+                "edit_cost": 1,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 38883,
+              "tail": "llamó a su hermano para que pudiera verla los dos se quedan",
+              "mode": "avance_rechazado",
+              "evidence": {
+                "reason": "sin_apoyo_final",
+                "exact_matches": 7,
+                "edit_cost": 1,
+                "hypothesis_words": 8
+              }
+            }
+          ]
+        },
+        {
+          "position": 40,
+          "start_ms": 39153,
+          "end_ms": 41618,
+          "seconds": 2.465,
+          "callbacks": 6,
+          "distinct_texts": 5,
+          "rejected_evidence": 1,
+          "examples": [
+            {
+              "elapsed_ms": 39153,
+              "tail": "llamó a su hermano para que pudiera verla los dos se quedaron",
+              "mode": "local",
+              "evidence": {
+                "reason": "coincidencia_local",
+                "exact_matches": 8,
+                "edit_cost": 0,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 41082,
+              "tail": "pudiera verla los dos se quedaron en el caso de la in",
+              "mode": "local",
+              "evidence": {
+                "reason": "evidencia_incompatible",
+                "exact_matches": 3,
+                "edit_cost": 5,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 41318,
+              "tail": "su hermano para que pudiera verla los dos se quedaron en silicona",
+              "mode": "avance_rechazado",
+              "evidence": {
+                "reason": "sin_apoyo_final",
+                "exact_matches": 7,
+                "edit_cost": 1,
+                "hypothesis_words": 8
+              }
+            }
+          ]
+        },
+        {
+          "position": 42,
+          "start_ms": 41618,
+          "end_ms": 43596,
+          "seconds": 1.978,
+          "callbacks": 6,
+          "distinct_texts": 5,
+          "rejected_evidence": 0,
+          "examples": [
+            {
+              "elapsed_ms": 41618,
+              "tail": "su hermano para que pudiera verla los dos se quedaron en silencio",
+              "mode": "local",
+              "evidence": {
+                "reason": "coincidencia_local",
+                "exact_matches": 8,
+                "edit_cost": 0,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 43097,
+              "tail": "para que pudiera verla los dos se quedaron en silencio me gusta",
+              "mode": "local",
+              "evidence": {
+                "reason": "coincidencia_local",
+                "exact_matches": 6,
+                "edit_cost": 2,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 43390,
+              "tail": "que pudiera verla los dos se quedaron en silencio me dan miedo",
+              "mode": "local",
+              "evidence": {
+                "reason": "coincidencia_local",
+                "exact_matches": 5,
+                "edit_cost": 3,
+                "hypothesis_words": 8
+              }
+            }
+          ]
+        },
+        {
+          "position": 50,
+          "start_ms": 48892,
+          "end_ms": 50432,
+          "seconds": 1.54,
+          "callbacks": 5,
+          "distinct_texts": 4,
+          "rejected_evidence": 0,
+          "examples": [
+            {
+              "elapsed_ms": 48892,
+              "tail": "se quedaron en silencio mirando sus alas después volvieron a casa y",
+              "mode": "local",
+              "evidence": {
+                "reason": "coincidencia_local",
+                "exact_matches": 8,
+                "edit_cost": 0,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 49606,
+              "tail": "quedaron en silencio mirando sus alas después volvieron a casa y digo",
+              "mode": "local",
+              "evidence": {
+                "reason": "coincidencia_local",
+                "exact_matches": 7,
+                "edit_cost": 1,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 50111,
+              "tail": "quedaron en silencio mirando sus alas después volvieron a casa y dibujar",
+              "mode": "local",
+              "evidence": {
+                "reason": "coincidencia_local",
+                "exact_matches": 7,
+                "edit_cost": 1,
+                "hypothesis_words": 8
+              }
+            }
+          ]
+        },
+        {
+          "position": 54,
+          "start_ms": 52056,
+          "end_ms": 53677,
+          "seconds": 1.621,
+          "callbacks": 5,
+          "distinct_texts": 4,
+          "rejected_evidence": 1,
+          "examples": [
+            {
+              "elapsed_ms": 52056,
+              "tail": "mirando sus alas después volvieron a casa y dibujaron la mariposa en",
+              "mode": "local",
+              "evidence": {
+                "reason": "coincidencia_local",
+                "exact_matches": 8,
+                "edit_cost": 0,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 53128,
+              "tail": "volvieron a casa y dibujaron la mariposa en un poco de agua",
+              "mode": "avance_rechazado",
+              "evidence": {
+                "reason": "sin_apoyo_final",
+                "exact_matches": 5,
+                "edit_cost": 3,
+                "hypothesis_words": 8
+              }
+            },
+            {
+              "elapsed_ms": 53398,
+              "tail": "alas después volvieron a casa y dibujaron la mariposa en un cojuelo",
+              "mode": "avance_rechazado",
+              "evidence": {
+                "reason": "sin_apoyo_final",
+                "exact_matches": 7,
+                "edit_cost": 1,
+                "hypothesis_words": 8
+              }
+            }
+          ]
+        }
+      ],
+      "positions_reproduced": true,
+      "battery_start": {
+        "level": 44,
+        "scale": 100,
+        "temperature_c_battery": 37.9,
+        "plugged": 1
+      },
+      "battery_end": {
+        "level": 44,
+        "scale": 100,
+        "temperature_c_battery": 37.9,
+        "plugged": 1
+      },
+      "reference_words": 56,
+      "rejected_updates": 19,
+      "app_version": "0.4-piloto",
+      "tracker_advance_policy": "terminal_and_recent",
+      "local_search_offset": 12,
+      "native_interval_requested": 0.25,
+      "diagnostic_source": "native_fields_positions_independently_replayed"
+    }
+  ],
+  "all_positions_reproduced": true,
+  "no_independent_audio_review": true,
+  "notice": "Mesetas de posición no son por sí solas bloqueos de cómputo o errores lectores. Sin audio/anclas humanas no se miden demoras por palabra ni se atribuyen discrepancias a invenciones. SDK nativo y PC son configuraciones distintas; los tiempos de sus métricas no son directamente equivalentes."
+}

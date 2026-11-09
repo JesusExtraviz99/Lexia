@@ -1,0 +1,35 @@
+Informe: C:\Users\PC\OneDrive\Documentos\ChatGPT\Practicas y TFG\resultados\instalacion_asr\ampliacion_20261106\prueba_local_1\granite_turboctc\resumen.md
+Completados 0/1; fallos 0.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\PC\OneDrive\Documentos\ChatGPT\Practicas y TFG\scripts\evaluar_ampliacion_asr.py", line 12, in <module>
+    evaluator.main()
+  File "C:\Users\PC\OneDrive\Documentos\ChatGPT\Practicas y TFG\scripts\evaluar_asr_externo.py", line 733, in main
+    run(args)
+  File "C:\Users\PC\OneDrive\Documentos\ChatGPT\Practicas y TFG\scripts\evaluar_asr_externo.py", line 614, in run
+    else motors.load(motor, args.modelo, args.gpu, args.hilos))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\OneDrive\Documentos\ChatGPT\Practicas y TFG\scripts\ampliacion_motores.py", line 48, in load
+    processor=AutoProcessor.from_pretrained(folder,local_files_only=True,trust_remote_code=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\OneDrive\Documentos\ChatGPT\Practicas y TFG\.tools\asr-ampliacion-env\Lib\site-packages\transformers\models\auto\processing_auto.py", line 346, in from_pretrained
+    return processor_class.from_pretrained(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\OneDrive\Documentos\ChatGPT\Practicas y TFG\.tools\asr-ampliacion-env\Lib\site-packages\transformers\processing_utils.py", line 1754, in from_pretrained
+    args = cls._get_arguments_from_pretrained(pretrained_model_name_or_path, processor_dict, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\OneDrive\Documentos\ChatGPT\Practicas y TFG\.tools\asr-ampliacion-env\Lib\site-packages\transformers\processing_utils.py", line 1894, in _get_arguments_from_pretrained
+    sub_processor = auto_processor_class.from_pretrained(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\OneDrive\Documentos\ChatGPT\Practicas y TFG\.tools\asr-ampliacion-env\Lib\site-packages\transformers\models\auto\feature_extraction_auto.py", line 368, in from_pretrained
+    return feature_extractor_class.from_pretrained(pretrained_model_name_or_path, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\OneDrive\Documentos\ChatGPT\Practicas y TFG\.tools\asr-ampliacion-env\Lib\site-packages\transformers\utils\import_utils.py", line 2424, in __getattribute__
+    requires_backends(cls, cls._backends)
+  File "C:\Users\PC\OneDrive\Documentos\ChatGPT\Practicas y TFG\.tools\asr-ampliacion-env\Lib\site-packages\transformers\utils\import_utils.py", line 2410, in requires_backends
+    raise ImportError("".join(failed))
+ImportError: 
+GraniteSpeech5FeatureExtractor requires the torchaudio library but it was not found in your environment. Please install it and restart your
+runtime.
+

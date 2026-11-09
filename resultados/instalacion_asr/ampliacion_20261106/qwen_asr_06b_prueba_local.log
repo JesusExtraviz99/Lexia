@@ -1,0 +1,22 @@
+Loading weights:   0%|          | 0/611 [00:00<?, ?it/s]Loading weights:  11%|#         | 65/611 [00:00<00:00, 649.80it/s]Loading weights:  21%|##1       | 130/611 [00:00<00:00, 622.06it/s]Loading weights:  32%|###1      | 193/611 [00:00<00:00, 556.03it/s]Loading weights:  41%|####      | 250/611 [00:00<00:00, 552.53it/s]Loading weights:  50%|#####     | 306/611 [00:01<00:01, 201.08it/s]Loading weights:  57%|#####6    | 347/611 [00:01<00:01, 230.73it/s]Loading weights:  63%|######3   | 387/611 [00:01<00:00, 231.16it/s]Loading weights:  69%|######8   | 421/611 [00:01<00:00, 239.09it/s]Loading weights:  74%|#######4  | 453/611 [00:01<00:00, 235.64it/s]Loading weights:  79%|#######8  | 482/611 [00:01<00:00, 238.94it/s]Loading weights:  83%|########3 | 510/611 [00:01<00:00, 218.44it/s]Loading weights:  88%|########7 | 535/611 [00:02<00:00, 215.07it/s]Loading weights:  91%|#########1| 559/611 [00:02<00:00, 205.55it/s]Loading weights:  95%|#########5| 581/611 [00:02<00:00, 208.09it/s]Loading weights:  99%|#########9| 605/611 [00:02<00:00, 214.39it/s]Loading weights: 100%|##########| 611/611 [00:02<00:00, 260.73it/s]
+Informe: C:\Users\PC\OneDrive\Documentos\ChatGPT\Practicas y TFG\resultados\instalacion_asr\ampliacion_20261106\prueba_local_1\qwen_asr_06b\resumen.md
+Completados 0/1; fallos 0.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\PC\OneDrive\Documentos\ChatGPT\Practicas y TFG\scripts\evaluar_ampliacion_asr.py", line 12, in <module>
+    evaluator.main()
+  File "C:\Users\PC\OneDrive\Documentos\ChatGPT\Practicas y TFG\scripts\evaluar_asr_externo.py", line 733, in main
+    run(args)
+  File "C:\Users\PC\OneDrive\Documentos\ChatGPT\Practicas y TFG\scripts\evaluar_asr_externo.py", line 623, in run
+    session['warmup'] = dict(audio_id=first['id'], **infer(signal))
+                                                     ^^^^^^^^^^^^^
+  File "C:\Users\PC\OneDrive\Documentos\ChatGPT\Practicas y TFG\scripts\ampliacion_motores.py", line 61, in infer
+    inputs=processor.apply_transcription_request(signal,language='Spanish',sampling_rate=16000,return_tensors='pt')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\OneDrive\Documentos\ChatGPT\Practicas y TFG\.tools\asr-ampliacion-env\Lib\site-packages\transformers\models\qwen3_asr\processing_qwen3_asr.py", line 495, in apply_transcription_request
+    return self.apply_chat_template(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\OneDrive\Documentos\ChatGPT\Practicas y TFG\.tools\asr-ampliacion-env\Lib\site-packages\transformers\processing_utils.py", line 2054, in apply_chat_template
+    raise ValueError(
+ValueError: Cannot use apply_chat_template because this processor does not have a chat template.

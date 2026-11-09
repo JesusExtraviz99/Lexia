@@ -1,0 +1,131 @@
+{
+  "created_at_utc": "2026-11-06T09:56:05.010596+00:00",
+  "run_signature": "36fe6ca5ce54430d27106e5179092f7d2b282842be7774c0ae92ba25649a3d9f",
+  "motor": "qwen_asr_06b",
+  "model": {
+    "name": "qwen_asr_06b",
+    "repo": "Qwen/Qwen3-ASR-0.6B-hf",
+    "revision": "7f1569a48a89f3e3f4dc3a5c9d28bddd903bc76c",
+    "files": [
+      {
+        "file": "README.md",
+        "bytes": 16538,
+        "published_lfs_sha256": null,
+        "sha256": "742006d0f99ce6475b1c5e7b66e4a2f166cce836dd7ce3d7f20707252859195a"
+      },
+      {
+        "file": "chat_template.jinja",
+        "bytes": 1434,
+        "published_lfs_sha256": null,
+        "sha256": "f50e6b694fbf4a683206e37869990d68333fe95d285730f084c838a34b0d98c2"
+      },
+      {
+        "file": "config.json",
+        "bytes": 2398,
+        "published_lfs_sha256": null,
+        "sha256": "9eecf6f1b383e343889c2e6010e632590fa57d4bc678e151c7d6a160a0dfb04a"
+      },
+      {
+        "file": "generation_config.json",
+        "bytes": 165,
+        "published_lfs_sha256": null,
+        "sha256": "9939fc9388b79bd70757f938b87381e817173d6a6158f5af6506c0b73e775c3c"
+      },
+      {
+        "file": "model.safetensors",
+        "bytes": 1564928088,
+        "published_lfs_sha256": "d3f212dd20abecd315d830bc54ae3865e56ebfc3276484e57b771288ba27fd35",
+        "sha256": "d3f212dd20abecd315d830bc54ae3865e56ebfc3276484e57b771288ba27fd35"
+      },
+      {
+        "file": "processor_config.json",
+        "bytes": 487,
+        "published_lfs_sha256": null,
+        "sha256": "bc0b230081b44e629dd5b9045b78495615c1831b4b9f4cffe97bd37e82a6156a"
+      },
+      {
+        "file": "tokenizer.json",
+        "bytes": 11429653,
+        "published_lfs_sha256": "fe1fad59be22a41ee293363fcf95fdedbc7c93f3b49270b1d2e18bd1399a7a05",
+        "sha256": "fe1fad59be22a41ee293363fcf95fdedbc7c93f3b49270b1d2e18bd1399a7a05"
+      },
+      {
+        "file": "tokenizer_config.json",
+        "bytes": 998,
+        "published_lfs_sha256": null,
+        "sha256": "945e980986de2ca7768f3326bfdbb4fbea3406f972b8ae0be233089f2b253c11"
+      }
+    ]
+  },
+  "selection": {
+    "schema_version": 1,
+    "dataset": "MLS español",
+    "split": "dev",
+    "seed": 42,
+    "limit": 1,
+    "selection": "sorted IDs then Python random.Random(seed).shuffle; first limit, 0=all",
+    "transcripts_sha256": "90f7ff71010364ae7b94213527d4c7ad2dd6aa21584aa5b2c1c9d1709ab4f809",
+    "total_partition_audio": 2408,
+    "items": [
+      {
+        "id": "133_1378_000042",
+        "speaker_id": "133",
+        "book_id": "1378",
+        "file": "dev/audio/133/1378/133_1378_000042.flac",
+        "sha256": "e557884aa2e7d612a9e87dc5c3f26130aadbc348734c03702707e1ba7de0ad80",
+        "file_bytes": 292989,
+        "frames": 319360,
+        "sample_rate": 16000,
+        "audio_seconds": 19.96,
+        "reference": "advertid señor caballero que la condición de nuestra batalla es que el vencido como otra vez he dicho ha de quedar a discreción del vencedor ya la sé respondió don quijote con tal que lo que se le impusiere y mandare al vencido han de ser cosas que no salgan de los límites de la caballería"
+      }
+    ]
+  },
+  "normalization": "NFC; minúsculas; puntuación Unicode sustituida por espacios; espacios colapsados; conserva tildes, ñ y números. CER incluye espacios.",
+  "script_sha256": "a751f6c0651487fd83d2ad242251ce31326110d9d7a30374ecf982247dfeb620",
+  "adapter_sha256": "b9e6ff851149a3b8aecf2ea8ac49f7c760cbe6e459c987712e9e788231808bb3",
+  "versions": {
+    "numpy": "2.2.6",
+    "soundfile": "0.13.1",
+    "psutil": "7.2.2",
+    "jiwer": "4.0.0",
+    "torch": "2.7.1+cpu",
+    "transformers": "5.20.2",
+    "accelerate": "1.15.0",
+    "librosa": "0.11.0",
+    "huggingface-hub": "2.4.0"
+  },
+  "gpu_physical_index": null,
+  "gpu_info": null,
+  "parameters": {
+    "precision": "float32",
+    "batch_size": 1,
+    "vad": false,
+    "denoise": false,
+    "language": "es",
+    "decoder": "Transformers generate",
+    "beams": 1,
+    "max_new_tokens": 512,
+    "word_timestamps": false,
+    "source_language_conditioning": true,
+    "notice": "Offline por clip completo, sin reglas del seguidor. Whisper usa Transformers y no CT2; tiempos de backend no equivalentes."
+  },
+  "batch_size": 1,
+  "cpu_threads_requested": 4,
+  "thread_notice": "OMP/MKL/OpenBLAS environment limits recorded; Torch explicit threads; Vosk native threads not guaranteed.",
+  "mode": "aislada",
+  "cohort": null,
+  "runtime": {
+    "python": "3.12.15 (main, Oct 14 2026, 01:08:45) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu": "Intel64 Family 6 Model 141 Stepping 1, GenuineIntel",
+    "logical_cpus": 16
+  },
+  "warmup": "first selected audio once per session, excluded",
+  "external_vad": false,
+  "denoise": false,
+  "resample": false,
+  "external_chunking": false,
+  "report_every": 50,
+  "progress_every_audio": true
+}

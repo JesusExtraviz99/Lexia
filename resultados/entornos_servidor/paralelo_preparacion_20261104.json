@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-04",
+  "status": "prepared_locally_remote_inference_pending",
+  "tests": 13,
+  "test_scope": "Synthetic FLAC, simulated ASR/modules/processes; no actual recognition",
+  "bash_syntax": "passed Git Bash -n",
+  "archive_bytes": 194560,
+  "archive_sha256": "621a3f9d97e704ddc5db5168e3a28f3ef2f862711a520b730f3f6c1afe9f22af",
+  "files": [
+    {
+      "file": "scripts/setup_env.sh",
+      "sha256": "99068ef3beaabe89027df780851c642b3960f8d678e66a0bd93942ac14afa839"
+    },
+    {
+      "file": "scripts/comprobar_entorno_servidor.py",
+      "sha256": "d3860881e71fcf0b1334193f062e7786073af252fdaf6439dc113c9c6d681e03"
+    },
+    {
+      "file": "scripts/evaluar_asr_externo.py",
+      "sha256": "790f9a1d552cd332c7a1bca1a8460c2dcec0d4532e54d681a315e6ab0ef7dea3"
+    },
+    {
+      "file": "scripts/asr_motores_externos.py",
+      "sha256": "5404b70b550f523f30f4d9b0d8393777e56376a43b80c05f7ef15d44bc3eefb9"
+    },
+    {
+      "file": "scripts/lanzar_asr_paralelo.py",
+      "sha256": "8942195ed4b8b0d316cd9ed0c926950accb5e5703c3ee72bfc04e98a22b88320"
+    },
+    {
+      "file": "scripts/preparar_asr_paralelo.sh",
+      "sha256": "029338ab48d24e873c139f9fe4d8214514560487be4392f88ad9fe95e2feb08a"
+    },
+    {
+      "file": "entornos/servidor/pyproject.toml",
+      "sha256": "9a2c05a0d8a5c706cd7d2c20d1f021d366c59cc84efc69c99d5a86159179cdda"
+    },
+    {
+      "file": "entornos/servidor/uv.lock",
+      "sha256": "aa13acff81ad6ef05004157b1a26a4e714bde4501c71500f844f8930d63d6381"
+    },
+    {
+      "file": "entornos/servidor/LEEME.md",
+      "sha256": "27579d979f7bf4810d1be10a6e2a764726403e7c03e1b99eb595ec2b203b4546"
+    },
+    {
+      "file": "entornos/servidor/EVALUAR_MLS.md",
+      "sha256": "169c50b8d240df0c99f93a4d8c819b7f0d6cf026bff72689bee72b97c84d392f"
+    },
+    {
+      "file": "entornos/servidor/PRUEBA_PARALELA.md",
+      "sha256": "207d61f85b84c5f05bfad9ff950eed3194a0e245362c7a987175d8143603145b"
+    }
+  ],
+  "weights_new_metadata": {
+    "Systran/faster-whisper-small": "536b0662742c02347bc0e980a01041f333bce120"
+  },
+  "remote_evidence": "User confirms XLSR download verified; no other model installation/inference confirmed"
+}
