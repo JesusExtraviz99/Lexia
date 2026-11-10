@@ -9,6 +9,7 @@ El objetivo final es la lectura asistida en grupo: la profesora selecciona al le
 - Grabación local por texto/lector y banco propio con referencias y revisión manual.
 - Experimentos de transcripción posterior, disfluencias, alineamiento y seguimiento sobre ventanas de audio; referencias humanas y métricas con sus límites explícitos.
 - Comparación de doce candidatos en MLS español dev/test, ejecución reproducible en servidor y registro de calidad, tiempos y recursos.
+- Banco externo actual: MLS y FLEURS. Common Voice se ha retirado por decisión del usuario; las fichas históricas indican su estado.
 - Prototipo de seguimiento por micrófono en PC y piloto Android con Moonshine Tiny/Small español ejecutado dentro del dispositivo, sin servidor.
 - Guía visual móvil de dos palabras ensayada; opción de tres palabras preparada en APK0.5 y pendiente de revisión humana. Variante experimental de apoyo de avances y recuperación reciente, seleccionable frente al seguidor original.
 - Las estadísticas literales se plantean como procesamiento posterior separado del seguimiento. No hay todavía evaluación lectora validada ni demostración de rendimiento en una población infantil.
